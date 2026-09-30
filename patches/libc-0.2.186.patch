@@ -1,0 +1,13 @@
+diff --git a/src/unix/linux_like/emscripten/mod.rs b/src/unix/linux_like/emscripten/mod.rs
+index 711ed8f..b62b6ca 100644
+--- a/src/unix/linux_like/emscripten/mod.rs
++++ b/src/unix/linux_like/emscripten/mod.rs
+@@ -1329,6 +1329,8 @@ safe_f! {
+ }
+ 
+ extern "C" {
++    pub fn pthread_sigmask(how: c_int, set: *const crate::sigset_t, oldset: *mut crate::sigset_t) -> c_int;
++    pub fn sigwait(set: *const crate::sigset_t, sig: *mut c_int) -> c_int;
+     pub fn getrlimit(resource: c_int, rlim: *mut crate::rlimit) -> c_int;
+     pub fn setrlimit(resource: c_int, rlim: *const crate::rlimit) -> c_int;
+     pub fn strerror_r(errnum: c_int, buf: *mut c_char, buflen: size_t) -> c_int;

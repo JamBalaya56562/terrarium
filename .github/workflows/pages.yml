@@ -1,0 +1,181 @@
+# Build aube for the browser terminal and publish it on GitHub Pages.
+#
+# - Run it by hand with a ref (a branch, a tag, a commit, or pr-<n>) to build
+#   that aube and add it to the page as ?ref=<name>. Without a ref it only
+#   redeploys the page.
+# - Every day it builds aube's main, when main has moved.
+# - Every push to main redeploys the page with the builds already published.
+#   There is no `paths` filter on purpose: main is rewritten by force pushes
+#   whose before and after commits share no ancestor, so GitHub cannot diff
+#   them, and a `paths` filter then never matches.
+#
+# gh-pages is rewritten as a single commit on every deploy, so old builds do
+# not pile up in its history.
+name: Pages
+
+on:
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: "aube ref to build: branch, tag, commit, or pr-<number>. Empty: only redeploy the page."
+        required: false
+        default: ""
+      force:
+        description: "Build even if this ref's commit is already published."
+        type: boolean
+        default: false
+  schedule:
+    - cron: "17 3 * * *"
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  resolve:
+    runs-on: ubuntu-latest
+    outputs:
+      build: ${{ steps.check.outputs.build }}
+      name: ${{ steps.resolve.outputs.name }}
+      ref: ${{ steps.resolve.outputs.ref }}
+      commit: ${{ steps.resolve.outputs.commit }}
+      pr: ${{ steps.resolve.outputs.pr }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - id: resolve
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REF: ${{ github.event_name == 'schedule' && 'main' || inputs.ref }}
+        run: |
+          if [ -n "$REF" ]; then scripts/resolve-aube-ref.sh "$REF" | tee -a "$GITHUB_OUTPUT"; fi
+      - id: check
+        env:
+          NAME: ${{ steps.resolve.outputs.name }}
+          COMMIT: ${{ steps.resolve.outputs.commit }}
+          FORCE: ${{ inputs.force && 'true' || 'false' }}
+        run: |
+          if [ -z "$NAME" ]; then echo build=false >>"$GITHUB_OUTPUT"; exit 0; fi
+          published=""
+          if git fetch --depth=1 origin gh-pages 2>/dev/null; then
+            published=$(git show FETCH_HEAD:web/dist/builds.json 2>/dev/null |
+              jq -r --arg n "$NAME" '.builds.aube[$n].source.commit // empty' || true)
+          fi
+          if [ "$published" = "$COMMIT" ] && [ "$FORCE" != true ]; then
+            echo "$NAME is already published at $COMMIT"
+            echo build=false >>"$GITHUB_OUTPUT"
+          else
+            echo build=true >>"$GITHUB_OUTPUT"
+          fi
+
+  build:
+    needs: resolve
+    if: needs.resolve.outputs.build == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    env:
+      EMSDK: ${{ github.workspace }}/../emsdk
+      EMSDK_VERSION: "6.0.10"
+      CARGO_TARGET_DIR: ${{ github.workspace }}/../target
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Install Ninja
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ninja-build
+      - name: Cache emsdk
+        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: ${{ env.EMSDK }}
+          key: emsdk-${{ runner.os }}-${{ env.EMSDK_VERSION }}
+      - name: Install emsdk
+        run: |
+          [ -d "$EMSDK" ] || git clone --depth 1 https://github.com/emscripten-core/emsdk "$EMSDK"
+          "$EMSDK/emsdk" install "$EMSDK_VERSION"
+          "$EMSDK/emsdk" activate "$EMSDK_VERSION"
+      - name: Install the Rust toolchain
+        run: |
+          toolchain=$(basename patches/toolchain/rust-std-*.patch .patch)
+          # The prebuilt std is not linked (build-std replaces it), but build scripts
+          # such as indexmap 1.x probe for std with it.
+          rustup toolchain install "${toolchain#rust-std-}" --profile minimal --component rust-src --target wasm32-unknown-emscripten
+      - name: Download aube ${{ needs.resolve.outputs.ref }}
+        env:
+          COMMIT: ${{ needs.resolve.outputs.commit }}
+        run: |
+          mkdir -p ../aube
+          curl -fsSL "https://codeload.github.com/aubepkg/aube/tar.gz/$COMMIT" | tar -xz -C ../aube --strip-components=1
+      # Restored and saved separately, so that a failed build still saves the
+      # compiled dependencies for the next attempt.
+      - name: Restore cargo cache
+        uses: actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: |
+            ~/.cargo/registry
+            ${{ env.CARGO_TARGET_DIR }}
+          key: cargo-${{ runner.os }}-${{ hashFiles('patches/**') }}-${{ needs.resolve.outputs.commit }}
+          restore-keys: cargo-${{ runner.os }}-${{ hashFiles('patches/**') }}-
+      - name: Build
+        run: scripts/build-aube.sh ../aube "$RUNNER_TEMP/out"
+      - name: Save cargo cache
+        if: always()
+        uses: actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: |
+            ~/.cargo/registry
+            ${{ env.CARGO_TARGET_DIR }}
+          key: cargo-${{ runner.os }}-${{ hashFiles('patches/**') }}-${{ needs.resolve.outputs.commit }}-${{ github.run_id }}-${{ github.run_attempt }}
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: aube-${{ needs.resolve.outputs.name }}
+          path: ${{ runner.temp }}/out/
+          retention-days: 7
+
+  deploy:
+    needs: [resolve, build]
+    if: always() && needs.resolve.result == 'success' && (needs.build.result == 'success' || needs.build.result == 'skipped')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - if: needs.build.result == 'success'
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        with:
+          name: aube-${{ needs.resolve.outputs.name }}
+          path: ${{ runner.temp }}/out
+      - name: Publish to gh-pages
+        env:
+          BUILT: ${{ needs.build.result == 'success' }}
+          NAME: ${{ needs.resolve.outputs.name }}
+          TERRARIUM_REF: ${{ needs.resolve.outputs.ref }}
+          TERRARIUM_COMMIT: ${{ needs.resolve.outputs.commit }}
+          TERRARIUM_PR: ${{ needs.resolve.outputs.pr }}
+          TERRARIUM_SOURCE_URL: https://github.com/aubepkg/aube
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898233+github-actions[bot]@users.noreply.github.com"
+          # Another run may publish in between: start again from its gh-pages.
+          for attempt in 1 2 3 4 5; do
+            base=""
+            rm -rf web/dist && mkdir -p web/dist
+            if git fetch --depth=1 origin gh-pages; then
+              base=$(git rev-parse FETCH_HEAD)
+              git archive "$base" web/dist | tar -x
+            fi
+            if [ "$BUILT" = true ]; then
+              scripts/stage-web.sh aube "$NAME" "$RUNNER_TEMP/out"
+            else
+              scripts/stage-web.sh
+            fi
+            scripts/assemble-pages.sh ../site
+            export GIT_INDEX_FILE=$RUNNER_TEMP/pages-index
+            rm -f "$GIT_INDEX_FILE"
+            git --work-tree=../site add --all
+            tree=$(git write-tree)
+            unset GIT_INDEX_FILE
+            message="Deploy terrarium ${GITHUB_SHA::8}"
+            [ "$BUILT" = true ] && message="$message with aube $NAME (${TERRARIUM_COMMIT::8})"
+            commit=$(git commit-tree "$tree" -m "$message")
+            if git push --force-with-lease="gh-pages:$base" origin "$commit:refs/heads/gh-pages"; then
+              exit 0
+            fi
+            sleep $((attempt * 10))
+          done
+          exit 1

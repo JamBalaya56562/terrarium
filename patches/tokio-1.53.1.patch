@@ -1,0 +1,49 @@
+diff --git a/Cargo.toml b/Cargo.toml
+index 33f5a7a..fdb3cd7 100644
+--- a/Cargo.toml
++++ b/Cargo.toml
+@@ -910,7 +910,7 @@ optional = true
+ [target.'cfg(all(tokio_unstable, target_os = "linux"))'.dev-dependencies.backtrace]
+ version = "0.3.58"
+ 
+-[target.'cfg(any(not(target_family = "wasm"), all(target_os = "wasi", not(target_env = "p1"))))'.dependencies.socket2]
++[target.'cfg(any(not(target_family = "wasm"), target_os = "emscripten", all(target_os = "wasi", not(target_env = "p1"))))'.dependencies.socket2]
+ version = "0.6.3"
+ features = ["all"]
+ optional = true
+diff --git a/src/lib.rs b/src/lib.rs
+index efa5276..37d754c 100644
+--- a/src/lib.rs
++++ b/src/lib.rs
+@@ -467,6 +467,7 @@ compile_error! {
+ #[cfg(all(
+     not(tokio_unstable),
+     target_family = "wasm",
++    not(target_os = "emscripten"),
+     any(
+         feature = "fs",
+         feature = "io-std",
+diff --git a/src/net/unix/ucred.rs b/src/net/unix/ucred.rs
+index 3be73ee..1387c0f 100644
+--- a/src/net/unix/ucred.rs
++++ b/src/net/unix/ucred.rs
+@@ -71,7 +71,8 @@ pub(crate) use self::impl_aix::get_peer_cred;
+     target_os = "espidf",
+     target_os = "nuttx",
+     target_os = "vita",
+-    target_os = "hurd"
++    target_os = "hurd",
++    target_os = "emscripten"
+ ))]
+ pub(crate) use self::impl_noproc::get_peer_cred;
+ 
+@@ -402,7 +403,8 @@ pub(crate) mod impl_aix {
+     target_os = "espidf",
+     target_os = "nuttx",
+     target_os = "vita",
+-    target_os = "hurd"
++    target_os = "hurd",
++    target_os = "emscripten"
+ ))]
+ pub(crate) mod impl_noproc {
+     use crate::net::unix::UnixStream;

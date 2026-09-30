@@ -1,0 +1,121 @@
+diff --git a/src/lib.rs b/src/lib.rs
+index 7a84cc0..9adde12 100644
+--- a/src/lib.rs
++++ b/src/lib.rs
+@@ -40,7 +40,7 @@
+ //!
+ //! The available features are described in the [`features`] module.
+ 
+-#[cfg(all(target_family = "wasm", not(target_os = "wasi")))]
++#[cfg(all(target_family = "wasm", not(any(target_os = "wasi", target_os = "emscripten"))))]
+ compile_error!("This wasm target is unsupported by mio. If using Tokio, disable the net feature.");
+ 
+ // macros used internally
+diff --git a/src/poll.rs b/src/poll.rs
+index 7dc0237..e1371b6 100644
+--- a/src/poll.rs
++++ b/src/poll.rs
+@@ -12,6 +12,7 @@
+         target_os = "nto",
+         target_os = "vita",
+         target_os = "cygwin",
++        target_os = "emscripten",
+         target_os = "horizon"
+     )),
+ ))]
+@@ -454,6 +455,7 @@ impl Poll {
+         target_os = "nto",
+         target_os = "vita",
+         target_os = "cygwin",
++        target_os = "emscripten",
+         target_os = "horizon"
+     )),
+ ))]
+@@ -758,6 +760,7 @@ impl fmt::Debug for Registry {
+         target_os = "nto",
+         target_os = "vita",
+         target_os = "cygwin",
++        target_os = "emscripten",
+         target_os = "horizon"
+     )),
+ ))]
+@@ -781,6 +784,7 @@ impl AsFd for Registry {
+         target_os = "nto",
+         target_os = "vita",
+         target_os = "cygwin",
++        target_os = "emscripten",
+         target_os = "horizon"
+     )),
+ ))]
+@@ -803,6 +807,7 @@ cfg_os_poll! {
+             target_os = "nto",
+             target_os = "vita",
+             target_os = "cygwin",
++            target_os = "emscripten",
+             target_os = "horizon"
+         )),
+     ))]
+diff --git a/src/sys/unix/mod.rs b/src/sys/unix/mod.rs
+index c7d66e0..b1dd40a 100644
+--- a/src/sys/unix/mod.rs
++++ b/src/sys/unix/mod.rs
+@@ -54,6 +54,7 @@ cfg_os_poll! {
+         target_os = "nto",
+         target_os = "vita",
+         target_os = "cygwin",
++        target_os = "emscripten",
+         target_os = "wasi",
+         target_os = "horizon"
+     ), path = "selector/poll.rs")]
+@@ -113,6 +114,7 @@ cfg_os_poll! {
+         target_os = "redox",
+         all(mio_unsupported_force_poll_poll, target_os = "solaris"),
+         target_os = "vita",
++        target_os = "emscripten",
+         target_os = "cygwin",
+         all(target_os = "wasi", target_env = "p1")
+     ), path = "waker/pipe.rs")]
+@@ -167,6 +169,7 @@ cfg_os_poll! {
+             all(mio_unsupported_force_poll_poll, target_os = "solaris"),
+             target_os = "vita",
+             target_os = "cygwin",
++            target_os = "emscripten",
+         ),
+         not(target_os = "hermit"),
+         not(target_os = "wasi"),
+diff --git a/src/sys/unix/net.rs b/src/sys/unix/net.rs
+index 6862674..ac9de65 100644
+--- a/src/sys/unix/net.rs
++++ b/src/sys/unix/net.rs
+@@ -25,6 +25,7 @@ pub(crate) fn new_socket(domain: libc::c_int, socket_type: libc::c_int) -> io::R
+         target_os = "solaris",
+         target_os = "hermit",
+         target_os = "cygwin",
++        target_os = "emscripten",
+     ))]
+     let socket_type = socket_type | libc::SOCK_NONBLOCK | libc::SOCK_CLOEXEC;
+     // WASI doesn't have the concept of `fork`ing or `exec`ing processes, so
+diff --git a/src/sys/unix/pipe.rs b/src/sys/unix/pipe.rs
+index 52953a3..7254fbe 100644
+--- a/src/sys/unix/pipe.rs
++++ b/src/sys/unix/pipe.rs
+@@ -23,6 +23,7 @@ pub(crate) fn new_raw() -> io::Result<[RawFd; 2]> {
+         target_os = "solaris",
+         target_os = "vita",
+         target_os = "cygwin",
++        target_os = "emscripten",
+         target_os = "nuttx",
+     ))]
+     unsafe {
+diff --git a/src/sys/unix/tcp.rs b/src/sys/unix/tcp.rs
+index 5b9f078..cf000ec 100644
+--- a/src/sys/unix/tcp.rs
++++ b/src/sys/unix/tcp.rs
+@@ -74,6 +74,7 @@ pub(crate) fn accept(listener: &net::TcpListener) -> io::Result<(net::TcpStream,
+         target_os = "openbsd",
+         target_os = "solaris",
+         target_os = "cygwin",
++        target_os = "emscripten",
+         target_os = "nuttx",
+     ))]
+     let stream = {

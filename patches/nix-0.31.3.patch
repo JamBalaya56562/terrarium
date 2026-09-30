@@ -1,0 +1,187 @@
+diff --git a/src/sys/socket/addr.rs b/src/sys/socket/addr.rs
+index 09be1d6..b979e47 100644
+--- a/src/sys/socket/addr.rs
++++ b/src/sys/socket/addr.rs
+@@ -66,7 +66,7 @@ pub enum AddressFamily {
+     #[cfg(linux_android)]
+     Netlink = libc::AF_NETLINK,
+     /// Kernel interface for interacting with the routing table
+-    #[cfg(not(any(linux_android, target_os = "redox", target_os = "cygwin")))]
++    #[cfg(not(any(linux_android, target_os = "redox", target_os = "cygwin", target_os = "emscripten")))]
+     Route = libc::PF_ROUTE,
+     /// Low level packet interface (see [`packet(7)`](https://man7.org/linux/man-pages/man7/packet.7.html))
+     #[cfg(any(linux_android, solarish, target_os = "fuchsia"))]
+@@ -78,7 +78,7 @@ pub enum AddressFamily {
+     #[cfg(linux_android)]
+     Ax25 = libc::AF_AX25,
+     /// IPX - Novell protocols
+-    #[cfg(not(any(target_os = "aix", target_os = "redox", target_os = "cygwin")))]
++    #[cfg(not(any(target_os = "aix", target_os = "redox", target_os = "cygwin", target_os = "emscripten")))]
+     Ipx = libc::AF_IPX,
+     /// AppleTalk
+     #[cfg(not(target_os = "redox"))]
+@@ -164,7 +164,7 @@ pub enum AddressFamily {
+         apple_targets,
+         target_os = "hurd",
+         target_os = "redox",
+-        target_os = "cygwin",
++        target_os = "cygwin", target_os = "emscripten",
+     )))]
+     Bluetooth = libc::AF_BLUETOOTH,
+     /// IUCV (inter-user communication vehicle) z/VM protocol for
+@@ -181,7 +181,7 @@ pub enum AddressFamily {
+         target_os = "haiku",
+         target_os = "hurd",
+         target_os = "redox",
+-        target_os = "cygwin",
++        target_os = "cygwin", target_os = "emscripten",
+     )))]
+     Isdn = libc::AF_ISDN,
+     /// Nokia cellular modem IPC/RPC interface
+@@ -265,7 +265,7 @@ impl AddressFamily {
+             libc::AF_NETLINK => Some(AddressFamily::Netlink),
+             #[cfg(apple_targets)]
+             libc::AF_SYSTEM => Some(AddressFamily::System),
+-            #[cfg(not(any(linux_android, target_os = "redox", target_os = "cygwin")))]
++            #[cfg(not(any(linux_android, target_os = "redox", target_os = "cygwin", target_os = "emscripten")))]
+             libc::PF_ROUTE => Some(AddressFamily::Route),
+             #[cfg(linux_android)]
+             libc::AF_PACKET => Some(AddressFamily::Packet),
+@@ -448,7 +448,7 @@ impl UnixAddr {
+                      target_os = "fuchsia",
+                      solarish,
+                      target_os = "redox",
+-                     target_os = "cygwin",
++                     target_os = "cygwin", target_os = "emscripten",
+                 ))]
+             {
+                 UnixAddr { sun, sun_len }
+@@ -513,7 +513,7 @@ impl UnixAddr {
+                      target_os = "fuchsia",
+                      solarish,
+                      target_os = "redox",
+-                     target_os = "cygwin",
++                     target_os = "cygwin", target_os = "emscripten",
+                 ))]
+             {
+                 self.sun_len
+@@ -531,7 +531,7 @@ impl SockaddrLike for UnixAddr {
+         target_os = "fuchsia",
+         solarish,
+         target_os = "redox",
+-        target_os = "cygwin",
++        target_os = "cygwin", target_os = "emscripten",
+     ))]
+     fn len(&self) -> libc::socklen_t {
+         self.sun_len.into()
+@@ -561,7 +561,7 @@ impl SockaddrLike for UnixAddr {
+                          target_os = "fuchsia",
+                          solarish,
+                          target_os = "redox",
+-                         target_os = "cygwin",
++                         target_os = "cygwin", target_os = "emscripten",
+                 ))] {
+                 let su_len = len.unwrap_or(
+                     mem::size_of::<libc::sockaddr_un>() as libc::socklen_t
+@@ -1128,7 +1128,7 @@ pub union SockaddrStorage {
+     alg: AlgAddr,
+     #[cfg(all(
+         feature = "net",
+-        not(any(target_os = "hurd", target_os = "redox", target_os = "cygwin"))
++        not(any(target_os = "hurd", target_os = "redox", target_os = "cygwin", target_os = "emscripten"))
+     ))]
+     #[cfg_attr(docsrs, doc(cfg(feature = "net")))]
+     dl: LinkAddr,
+@@ -1172,7 +1172,7 @@ impl SockaddrLike for SockaddrStorage {
+                     linux_android,
+                     target_os = "fuchsia",
+                     solarish,
+-                    target_os = "cygwin",
++                    target_os = "cygwin", target_os = "emscripten",
+                 ))]
+                 if i32::from(ss.ss_family) == libc::AF_UNIX {
+                     // Safe because we UnixAddr is strictly smaller than
+@@ -1229,7 +1229,7 @@ impl SockaddrLike for SockaddrStorage {
+         }
+     }
+ 
+-    #[cfg(any(linux_android, target_os = "fuchsia", solarish, target_os = "cygwin"))]
++    #[cfg(any(linux_android, target_os = "fuchsia", solarish, target_os = "cygwin", target_os = "emscripten"))]
+     fn len(&self) -> libc::socklen_t {
+         match self.as_unix_addr() {
+             // The UnixAddr type knows its own length
+@@ -1291,7 +1291,7 @@ impl SockaddrStorage {
+             if #[cfg(any(linux_android,
+                      target_os = "fuchsia",
+                      solarish,
+-                     target_os = "cygwin",
++                     target_os = "cygwin", target_os = "emscripten",
+                 ))]
+             {
+                 let p = unsafe{ &self.ss as *const libc::sockaddr_storage };
+@@ -1321,7 +1321,7 @@ impl SockaddrStorage {
+             if #[cfg(any(linux_android,
+                      target_os = "fuchsia",
+                      solarish,
+-                     target_os = "cygwin",
++                     target_os = "cygwin", target_os = "emscripten",
+                 ))]
+             {
+                 let p = unsafe{ &self.ss as *const libc::sockaddr_storage };
+@@ -2197,7 +2197,7 @@ mod tests {
+         }
+     }
+ 
+-    #[cfg(not(any(target_os = "hurd", target_os = "redox", target_os = "cygwin")))]
++    #[cfg(not(any(target_os = "hurd", target_os = "redox", target_os = "cygwin", target_os = "emscripten")))]
+     #[allow(clippy::cast_ptr_alignment)]
+     mod link {
+         #[cfg(any(apple_targets, solarish))]
+diff --git a/src/sys/socket/mod.rs b/src/sys/socket/mod.rs
+index 4faa301..8b19456 100644
+--- a/src/sys/socket/mod.rs
++++ b/src/sys/socket/mod.rs
+@@ -44,7 +44,7 @@ pub use self::addr::{AddressFamily, UnixAddr};
+     target_os = "haiku",
+     target_os = "hurd",
+     target_os = "redox",
+-    target_os = "cygwin",
++    target_os = "cygwin", target_os = "emscripten",
+ )))]
+ #[cfg(feature = "net")]
+ pub use self::addr::{LinkAddr, SockaddrIn, SockaddrIn6};
+@@ -53,7 +53,7 @@ pub use self::addr::{LinkAddr, SockaddrIn, SockaddrIn6};
+     target_os = "haiku",
+     target_os = "hurd",
+     target_os = "redox",
+-    target_os = "cygwin",
++    target_os = "cygwin", target_os = "emscripten",
+ ))]
+ #[cfg(feature = "net")]
+ pub use self::addr::{SockaddrIn, SockaddrIn6};
+@@ -1027,7 +1027,7 @@ impl ControlMessageOwned {
+                 let cred: libc::cmsgcred = unsafe { ptr::read_unaligned(p as *const _) };
+                 ControlMessageOwned::ScmCreds(cred.into())
+             }
+-            #[cfg(not(any(target_os = "aix", target_os = "haiku", target_os = "cygwin")))]
++            #[cfg(not(any(target_os = "aix", target_os = "haiku", target_os = "cygwin", target_os = "emscripten")))]
+             (libc::SOL_SOCKET, libc::SCM_TIMESTAMP) => {
+                 let tv: libc::timeval = unsafe { ptr::read_unaligned(p as *const _) };
+                 ControlMessageOwned::ScmTimestamp(TimeVal::from(tv))
+@@ -1380,14 +1380,14 @@ impl ControlMessage<'_> {
+     /// Safe because CMSG_LEN is always safe
+     #[cfg(any(target_os = "android",
+               all(target_os = "linux", not(any(target_env = "musl", target_env = "ohos"))),
+-              target_os = "cygwin"))]
++              target_os = "cygwin", target_os = "emscripten"))]
+     fn cmsg_len(&self) -> usize {
+         unsafe{CMSG_LEN(self.len() as libc::c_uint) as usize}
+     }
+ 
+     #[cfg(not(any(target_os = "android",
+               all(target_os = "linux", not(any(target_env = "musl", target_env = "ohos"))),
+-              target_os = "cygwin")))]
++              target_os = "cygwin", target_os = "emscripten")))]
+     fn cmsg_len(&self) -> libc::c_uint {
+         unsafe{CMSG_LEN(self.len() as libc::c_uint)}
+     }

@@ -1,0 +1,5 @@
+# aubepkg/aube#1645: file: and link: deps read from the lockfile show as 0.0.0
+$ aube install
+$ rm -rf node_modules
+$ aube install --frozen-lockfile
+$ aube list

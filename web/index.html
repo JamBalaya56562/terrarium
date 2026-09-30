@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>terrarium</title>
+    <!-- Must load first: on a host that cannot send COOP/COEP headers it
+         installs a service worker that adds them, then reloads once. -->
+    <script src="coi-serviceworker.js"></script>
+    <style>
+      :root { color-scheme: dark; }
+      html, body { margin: 0; height: 100%; overflow: hidden; background: #0d1117; color: #c9d1d9; font: 14px/1.5 system-ui, sans-serif; }
+      body { display: flex; flex-direction: column; }
+      header { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; padding: 10px 16px; border-bottom: 1px solid #30363d; }
+      header h1 { font-size: 15px; margin: 0; font-weight: 600; }
+      header select { background: #161b22; color: inherit; border: 1px solid #30363d; border-radius: 6px; padding: 4px 8px; font: inherit; }
+      header a { color: #58a6ff; font-size: 13px; text-decoration: none; }
+      header a:hover { text-decoration: underline; }
+      header .status { margin-left: auto; color: #8b949e; font-size: 13px; }
+      body.embed header { display: none; }
+      #term { flex: 1; min-height: 0; display: flex; }
+      terrarium-terminal { flex: 1; height: auto; min-width: 0; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1 id="title">terrarium</h1>
+      <select id="build" aria-label="Build" hidden></select>
+      <a id="source" target="_blank" rel="noopener" hidden></a>
+      <span class="status" id="status">Loading…</span>
+    </header>
+    <main id="term"></main>
+    <script type="module" src="terminal.mjs"></script>
+  </body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "aube": {
+    "label": "aube",
+    "repository": "https://github.com/aubepkg/aube",
+    "default": "main",
+    "fixture": "aube-local-deps",
+    "cwd": "/work/app"
+  }
+}

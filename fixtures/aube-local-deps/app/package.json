@@ -1,0 +1,8 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "dependencies": {
+    "filedep": "file:./filedep",
+    "linked": "link:../outside/linked"
+  }
+}
