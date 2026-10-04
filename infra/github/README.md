@@ -39,6 +39,7 @@ Create a Fine-grained personal access token at
 - **Resource owner**: the organization that owns this repository
 - **Repository access**: this repository only
 - **Repository permissions**: Administration (RW), Contents (RW), Metadata (R),
+  Pages (RW),
   Issues (RW), Pull requests (RW), Actions (RW), Workflows (RW),
   Secrets (RW), Variables (RW), Environments (RW), Webhooks (RW),
   Dependabot alerts (RW), Code scanning alerts (RW)
