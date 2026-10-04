@@ -1,0 +1,53 @@
+name: Feature request
+description: Propose a new feature or capability.
+title: "feat: "
+type: Feature
+labels:
+  - "type: feature"
+  - "status: triage"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for proposing a feature. This form asks for the structured
+        information needed to evaluate fit with terrarium's scope: running a
+        CLI in the browser, from a terminal, with only the system calls it
+        needs.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: |
+        What can a user not do today with a CLI in the browser terminal?
+        Keep the framing problem-centred — describe what they try and what
+        happens, not the technology you imagine solving it.
+      placeholder: |
+        Users want to run `X` in the terminal but currently cannot because `Y`.
+    validations:
+      required: true
+
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Desired outcome
+      description: What does a visitor see after this feature ships?
+      placeholder: |
+        A visitor can open the terminal and see `X` print what it prints natively.
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope boundary
+      description: What this Issue is *not* trying to do. Protects against drift.
+      placeholder: |
+        This is not support for every CLI — only `X`. Other tools are
+        separate Issues.
+
+  - type: textarea
+    id: hints
+    attributes:
+      label: Hints
+      description: File paths, prior art, related Issues.

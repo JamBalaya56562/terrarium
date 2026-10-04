@@ -1,0 +1,55 @@
+"scope: ci":
+  - changed-files:
+      - any-glob-to-any-file:
+          - ".github/workflows/**"
+          - ".github/dependabot.yml"
+          - ".github/labeler.yml"
+          - ".github/release.yml"
+          - ".github/ISSUE_TEMPLATE/**"
+          - ".github/PULL_REQUEST_TEMPLATE.md"
+          - "mise.toml"
+          - "mise-tasks/**"
+          - "scripts/**"
+          - ".gitignore"
+          - ".editorconfig"
+          - ".gitattributes"
+
+"scope: docs":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "aidlc/spaces/*/knowledge/**"
+          - "docs/**"
+
+"scope: rust":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "**/*.rs"
+          - "**/Cargo.toml"
+          - "**/Cargo.lock"
+          - "**/rust-toolchain*"
+          - "patches/**"
+
+"scope: js":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "**/*.{js,jsx,ts,tsx,mjs,cjs}"
+          - "**/package.json"
+          - "**/bun.lock"
+          - "**/tsconfig*.json"
+          - "**/*.css"
+          - "**/jsr.json"
+
+"scope: wasm":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "**/*.wasm"
+          - "**/*.wat"
+          - "runtime/**"
+          - "scripts/emscripten-env.sh"
+          - "scripts/build-*.sh"
+
+"type: docs":
+  - changed-files:
+      - any-glob-to-all-files:
+          - "**/*.md"
+          - "LICENSE"

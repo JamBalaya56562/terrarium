@@ -1,0 +1,50 @@
+name: Task
+description: Work that is neither a bug nor a feature — documentation, chore, refactor, test, infrastructure.
+title: "chore: "
+type: Task
+labels:
+  - "status: triage"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form for: documentation, chore, refactor, test, and
+        infrastructure work. If you are not sure, start here.
+
+        The project uses Conventional Commits. Please prefix the title with
+        one of: `docs:`, `chore:`, `refactor:`, `test:`, `build:`, `ci:`,
+        `perf:`. Scope is optional: `docs(ci): add workflow`.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: |
+        What is the current state that needs to change, or the missing
+        artefact that needs to exist?
+      placeholder: |
+        The workflow in X does not pin actions by SHA.
+    validations:
+      required: true
+
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Desired outcome
+      description: The post-condition that indicates the task is done.
+      placeholder: |
+        Every `uses:` line in the workflow references a commit SHA.
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope boundary
+      description: What this Issue is *not* trying to do.
+
+  - type: textarea
+    id: hints
+    attributes:
+      label: Hints
+      description: File paths, prior art, related Issues, relevant ADRs.
