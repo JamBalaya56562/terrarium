@@ -125,6 +125,14 @@ Run the matching task before pushing; the ruleset requires these checks.
 | `ci:terrarium` | `test-terrarium.yml` (type-check, unit tests, build) |
 | `ci:e2e` | `test-e2e.yml` (E2E in Chromium, Firefox, WebKit) |
 
+`lint-autofix.yml` runs `lint:all:fix` on every PR and
+`lint-autofix-apply.yml` pushes the result back to the PR's branch with
+`TF_TOKEN_GITHUB`. The patch is untrusted (it comes from running the PR's
+own `mise.toml`), so the apply stage accepts only content edits to existing
+files of a type the fixers handle, outside `.github/workflows/`. That token only
+reaches this repository, so the push needs the branch to live here; for a
+PR from a fork, run `mise run lint:all:fix` locally.
+
 ### 4.8 Builds, Pages and publishing
 
 - **aube builds** are made by `.github/workflows/pages.yml` (by hand with
