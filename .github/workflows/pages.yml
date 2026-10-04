@@ -217,6 +217,9 @@ jobs:
 
   deploy:
     needs: site
+    # Without always(), a job is skipped when any job upstream of it was, and
+    # build and store are skipped whenever no aube is built.
+    if: always() && github.repository_owner == 'aletheia-works' && needs.site.result == 'success'
     runs-on: ubuntu-latest
     permissions:
       pages: write
