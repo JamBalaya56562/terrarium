@@ -49,13 +49,13 @@ jobs:
           # outside .github/workflows/. (rumdl also formats the PR template
           # under .github/; the extension list keeps the rest of .github/ out.)
           fail() { echo "::error::Autofix patch rejected: $1"; exit 1; }
-          if grep -qE '^(new file mode|deleted file mode|old mode|new mode|rename from|rename to|copy from|copy to|similarity index|dissimilarity index|Binary files|GIT binary patch)' "${patch}"; then
-            fail "it creates, deletes, renames, copies or re-modes a file, or is binary"
+          if grep -qE '^(index [0-9a-f]+\.\.[0-9a-f]+ (120000|160000)|new file mode|deleted file mode|old mode|new mode|rename from|rename to|copy from|copy to|similarity index|dissimilarity index|Binary files|GIT binary patch)' "${patch}"; then
+            fail "it creates, deletes, renames, copies or re-modes a file, edits a symlink or submodule, or is binary"
           fi
           allowed='\.(js|mjs|cjs|jsx|ts|mts|cts|tsx|json|jsonc|css|html|toml|md)$'
           check_path() {
             case "$1" in
-              .github/workflows/* | *..* | /*) fail "path not allowed: $1" ;;
+              .github/workflows/* | ../* | */../* | */.. | /*) fail "path not allowed: $1" ;;
             esac
             [[ "$1" =~ ${allowed} ]] || fail "not a file type the fixers touch: $1"
           }
