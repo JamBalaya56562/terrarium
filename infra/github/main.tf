@@ -43,6 +43,9 @@ locals {
     "check / Commitlint",
     "Polyglot lint",
     "Test terrarium package",
+    "E2E (chromium)",
+    "E2E (firefox)",
+    "E2E (webkit)",
   ]
 }
 
