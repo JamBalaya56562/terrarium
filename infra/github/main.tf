@@ -34,6 +34,17 @@ import {
   id = var.repository_name
 }
 
+# Pages is deployed by .github/workflows/pages.yml with actions/deploy-pages.
+resource "github_repository_pages" "this" {
+  repository = github_repository.this.name
+  build_type = "workflow"
+}
+
+import {
+  to = github_repository_pages.this
+  id = var.repository_name
+}
+
 resource "github_repository_vulnerability_alerts" "this" {
   repository = github_repository.this.name
 }

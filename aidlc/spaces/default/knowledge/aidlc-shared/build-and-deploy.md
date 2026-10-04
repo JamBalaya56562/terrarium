@@ -35,17 +35,25 @@ things bit on the first try:
 
 ## Deployment
 
-GitHub Pages serves the `gh-pages` branch: `web/`, the `web/terrarium.mjs`
-that `scripts/assemble-pages.sh` bundles from `packages/terrarium`
-and the staged `web/dist/` (builds, `builds.json` and fixtures), which
-are build output and stay out of `main`. `.github/workflows/pages.yml`
-writes it: run by hand with a `ref` it builds that aube; every day it
-builds `main` if `main` has moved; every push to `main` redeploys the
-page. That trigger has no `paths` filter: `main` is rewritten by force
-pushes whose before and after commits share no ancestor, GitHub cannot
-diff them, and a `paths` filter then never matched (2026-10-04). Each deploy keeps the builds already published and
-rewrites `gh-pages` as a single commit, so old builds do not pile up in
-its history. `scripts/assemble-pages.sh` lays out the site.
+`.github/workflows/pages.yml` deploys the site with `actions/deploy-pages`
+(the Pages source is "GitHub Actions", set in `infra/github/main.tf`). The
+site is `web/`, the `web/terrarium.mjs` that `scripts/assemble-pages.sh`
+bundles from `packages/terrarium`, the fixtures, and the builds. Run by
+hand with a `ref` the workflow builds that aube; every day it builds
+`main` if `main` has moved; a push to `main` that touches the site
+redeploys it.
+
+The builds are build output and stay out of `main`: they live on the
+`builds` branch (`builds.json` and `<tool>/<name>/`), which the workflow
+rewrites as a single commit whenever it adds one, so old builds do not
+pile up in its history. `scripts/load-builds.sh` puts them in `web/dist/`.
+Until 2026-10-04 the site and the builds were both the `gh-pages` branch;
+`load-builds.sh` falls back to it while `builds` does not exist.
+
+From 2026-10-04 until the move to pull requests the push trigger had no
+`paths` filter: `main` was then rewritten by force pushes whose before and
+after commits share no ancestor, which GitHub cannot diff, so a `paths`
+filter never matched.
 
 GitHub Pages lets browsers cache every file for 10 minutes, so right
 after a deploy a page could load a new `index.html` with a cached old

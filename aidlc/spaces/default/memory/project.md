@@ -33,8 +33,8 @@
 
 <!-- Project-specific specialisation. -->
 
-- 公開先は GitHub Pages の `gh-pages` ブランチ（`web/`、`packages/terrarium` から作るバンドル `web/terrarium.mjs`、ステージ済みの `web/dist/`）。`web/dist/` はビルド成果物であり `main` にはコミットしない。
-- `gh-pages` は `.github/workflows/pages.yml` が書き込む。手動実行で任意の ref（ブランチ、タグ、コミット、`pr-<n>`）をビルドし、毎日 aube の `main` をビルドする。デプロイのたびに `gh-pages` を 1 コミットに書き換える。
+- 公開は GitHub Pages（公開元は GitHub Actions、`actions/deploy-pages`）。サイトは `web/`、`packages/terrarium` から作るバンドル `web/terrarium.mjs`、fixture、ビルドで構成する。ビルドは成果物であり `main` にはコミットせず、`builds` ブランチに置く。
+- `.github/workflows/pages.yml` が、手動実行で任意の ref（ブランチ、タグ、コミット、`pr-<n>`）をビルドし、毎日 aube の `main` をビルドする。ビルドを追加するたびに `builds` ブランチを 1 コミットに書き換える。
 - COOP/COEP ヘッダーは `web/coi-serviceworker.js` が付与する。ヘッダーを設定できないホストでも動くことが前提。
 - 詳細: `aidlc/spaces/default/knowledge/aidlc-shared/build-and-deploy.md`
 
