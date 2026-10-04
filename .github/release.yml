@@ -1,0 +1,27 @@
+changelog:
+  categories:
+    - title: Features
+      labels:
+        - "type: feature"
+    - title: Bug Fixes
+      labels:
+        - "type: bug"
+    - title: Refactoring
+      labels:
+        - "type: refactor"
+    - title: Documentation
+      labels:
+        - "type: docs"
+    - title: Tests
+      labels:
+        - "type: test"
+    - title: Infrastructure & CI
+      labels:
+        - "scope: infra"
+        - "scope: ci"
+    - title: Maintenance
+      labels:
+        - "type: chore"
+    - title: Other changes
+      labels:
+        - "*"

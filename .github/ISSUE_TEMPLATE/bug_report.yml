@@ -1,0 +1,51 @@
+name: Bug report
+description: Report a bug in an existing feature, workflow, or piece of documentation.
+title: "bug: "
+type: Bug
+labels:
+  - "type: bug"
+  - "status: triage"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for filing a bug report. This form asks for the structured
+        information Claude Code and the human maintainer need to act on
+        the report without a round-trip.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: |
+        What observable behaviour is wrong or missing? State it in
+        bug-reproduction terms — something a script could check.
+      placeholder: |
+        When I run `foo bar`, the output is `X` but I expected `Y`.
+    validations:
+      required: true
+
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Desired outcome
+      description: The post-condition that indicates the bug is fixed.
+      placeholder: |
+        `foo bar` should return `Y` for the same input.
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope boundary
+      description: What this Issue is *not* trying to do. Helps prevent scope creep.
+      placeholder: |
+        This is not about the broader refactor of `foo`, only the
+        observable behaviour of `foo bar` on this input.
+
+  - type: textarea
+    id: hints
+    attributes:
+      label: Hints
+      description: File paths, prior art, related Issues, reproduction URLs.

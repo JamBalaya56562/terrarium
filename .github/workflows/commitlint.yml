@@ -1,0 +1,16 @@
+name: Check Conventional Commit
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  check:
+    uses: aletheia-works/.github/.github/workflows/commitlint.yml@4f9b6d6865f083952f13557c91eaf839045e55e1 # v1.0.0
