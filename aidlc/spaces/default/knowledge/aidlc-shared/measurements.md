@@ -26,4 +26,3 @@ wire) and sends no COOP/COEP headers, the page was ready in 1.27 s, of
 which 0.94 s was the wasm download. The commands then took 2.66 / 1.29 /
 0.60 s, while a release build was running on the same machine, so read
 those as an upper bound.
-

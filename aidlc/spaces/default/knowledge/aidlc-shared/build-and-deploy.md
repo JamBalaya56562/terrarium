@@ -60,4 +60,3 @@ headers because `web/coi-serviceworker.js` adds COOP/COEP from a service
 worker and reloads once on the first visit. With every dependency already compiled,
 the release build still took 26 minutes on this machine: optimising the
 aube crate and running `wasm-opt` over the linked module.
-

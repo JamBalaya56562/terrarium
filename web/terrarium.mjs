@@ -21,11 +21,12 @@
 // The tool uses threads, so the page must be cross-origin isolated
 // (COOP/COEP headers, or a service worker such as coi-serviceworker.js).
 
-import { Terminal } from 'https://cdn.jsdelivr.net/npm/@xterm/xterm@6.0.0/lib/xterm.mjs';
 import { FitAddon } from 'https://cdn.jsdelivr.net/npm/@xterm/addon-fit@0.11.0/lib/addon-fit.mjs';
+import { Terminal } from 'https://cdn.jsdelivr.net/npm/@xterm/xterm@6.0.0/lib/xterm.mjs';
 import { Session } from '../runtime/session.mjs';
 
-const XTERM_CSS = 'https://cdn.jsdelivr.net/npm/@xterm/xterm@6.0.0/css/xterm.css';
+const XTERM_CSS =
+  'https://cdn.jsdelivr.net/npm/@xterm/xterm@6.0.0/css/xterm.css';
 const DEFAULT_BASE = new URL('./', import.meta.url).href;
 
 // Set by scripts/assemble-pages.sh to the deploy's version. GitHub Pages lets
@@ -66,18 +67,29 @@ export async function catalog(base = DEFAULT_BASE) {
 
 // Pick a tool and a build, falling back to the defaults. `names` lists the
 // tool's builds, its default first.
-export async function chooseBuild({ base = DEFAULT_BASE, tool: toolName, ref } = {}) {
+export async function chooseBuild({
+  base = DEFAULT_BASE,
+  tool: toolName,
+  ref,
+} = {}) {
   const { tools, builds: allBuilds } = await catalog(base);
   toolName ??= Object.keys(tools)[0];
   const tool = tools[toolName];
-  if (!tool) throw new Error(`unknown tool "${toolName}"; known: ${Object.keys(tools).join(', ')}`);
+  if (!tool)
+    throw new Error(
+      `unknown tool "${toolName}"; known: ${Object.keys(tools).join(', ')}`,
+    );
   const builds = allBuilds[toolName] ?? {};
   const names = Object.keys(builds).sort((a, b) =>
     a === tool.default ? -1 : b === tool.default ? 1 : a.localeCompare(b),
   );
-  if (!names.length) throw new Error(`no builds of ${toolName} are published yet`);
+  if (!names.length)
+    throw new Error(`no builds of ${toolName} are published yet`);
   ref ??= names[0];
-  if (!builds[ref]) throw new Error(`no build "${ref}" of ${toolName}; published: ${names.join(', ')}`);
+  if (!builds[ref])
+    throw new Error(
+      `no build "${ref}" of ${toolName}; published: ${names.join(', ')}`,
+    );
   return { toolName, tool, ref, build: builds[ref], builds, names };
 }
 
@@ -115,14 +127,23 @@ function loadTool(base, toolName, ref, build) {
       key,
       (async () => {
         const [wasmModule, source] = await Promise.all([
-          WebAssembly.compileStreaming(fetch(versioned(new URL(`${toolName}.wasm`, dir), version))),
-          fetch(versioned(new URL(`${toolName}.js`, dir), version)).then((response) => {
-            if (!response.ok) throw new Error(`${response.url}: HTTP ${response.status}`);
-            return response.text();
-          }),
+          WebAssembly.compileStreaming(
+            fetch(versioned(new URL(`${toolName}.wasm`, dir), version)),
+          ),
+          fetch(versioned(new URL(`${toolName}.js`, dir), version)).then(
+            (response) => {
+              if (!response.ok)
+                throw new Error(`${response.url}: HTTP ${response.status}`);
+              return response.text();
+            },
+          ),
         ]);
-        const url = URL.createObjectURL(new Blob([source], { type: 'text/javascript' }));
-        const factory = scriptQueue.then(() => loadScript(url)).then(() => globalThis.Module);
+        const url = URL.createObjectURL(
+          new Blob([source], { type: 'text/javascript' }),
+        );
+        const factory = scriptQueue
+          .then(() => loadScript(url))
+          .then(() => globalThis.Module);
         scriptQueue = factory.catch(() => {});
         return { name: toolName, factory: await factory, wasmModule };
       })(),
@@ -149,7 +170,10 @@ export class TerrariumTerminal extends HTMLElement {
   #output = '';
 
   get ready() {
-    return this.#ready ?? Promise.reject(new Error('the element is not connected yet'));
+    return (
+      this.#ready ??
+      Promise.reject(new Error('the element is not connected yet'))
+    );
   }
 
   get transcript() {
@@ -191,29 +215,43 @@ export class TerrariumTerminal extends HTMLElement {
   }
 
   #emit(type, detail) {
-    this.dispatchEvent(new CustomEvent(type, { detail, bubbles: true, composed: true }));
+    this.dispatchEvent(
+      new CustomEvent(type, { detail, bubbles: true, composed: true }),
+    );
   }
 
   async #boot() {
     const term = this.#term;
     try {
       if (!globalThis.crossOriginIsolated) {
-        throw new Error('this page is not cross-origin isolated (COOP/COEP), which the tool needs for its threads');
+        throw new Error(
+          'this page is not cross-origin isolated (COOP/COEP), which the tool needs for its threads',
+        );
       }
       const started = performance.now();
-      const base = new URL(this.getAttribute('base') ?? DEFAULT_BASE, document.baseURI).href;
+      const base = new URL(
+        this.getAttribute('base') ?? DEFAULT_BASE,
+        document.baseURI,
+      ).href;
       const { toolName, tool, ref, build } = await chooseBuild({
         base,
         tool: this.getAttribute('tool') ?? undefined,
         ref: this.getAttribute('ref') ?? undefined,
       });
       term.write(`\x1b[2mLoading ${toolName} ${describe(ref, build)}…\x1b[0m`);
-      const fixture = this.hasAttribute('fixture') ? this.getAttribute('fixture') : tool.fixture;
+      const fixture = this.hasAttribute('fixture')
+        ? this.getAttribute('fixture')
+        : tool.fixture;
       const [loaded, files] = await Promise.all([
         loadTool(base, toolName, ref, build),
-        fixture ? fetchJson(versioned(new URL(`dist/fixtures/${fixture}.json`, base))).then(Object.entries) : [],
+        fixture
+          ? fetchJson(
+              versioned(new URL(`dist/fixtures/${fixture}.json`, base)),
+            ).then(Object.entries)
+          : [],
       ]);
-      const cwd = this.getAttribute('cwd') ?? (fixture ? tool.cwd : null) ?? '/work';
+      const cwd =
+        this.getAttribute('cwd') ?? (fixture ? tool.cwd : null) ?? '/work';
       this.#session = new Session({
         tool: loaded,
         write: (text) => {
@@ -226,7 +264,9 @@ export class TerrariumTerminal extends HTMLElement {
       this.#session.seed(files);
 
       term.write('\x1b[2K\r');
-      term.writeln(`${toolName} ${describe(ref, build)}, compiled to WebAssembly and running in this tab.`);
+      term.writeln(
+        `${toolName} ${describe(ref, build)}, compiled to WebAssembly and running in this tab.`,
+      );
       if (files.length) term.writeln(`A sample project is in ${cwd}.`);
       term.writeln('');
       this.#prompt();
@@ -251,7 +291,9 @@ export class TerrariumTerminal extends HTMLElement {
   }
 
   #prompt() {
-    this.#term.write(`\x1b[32mweb_user\x1b[0m:\x1b[34m${this.#session.cwd}\x1b[0m$ `);
+    this.#term.write(
+      `\x1b[32mweb_user\x1b[0m:\x1b[34m${this.#session.cwd}\x1b[0m$ `,
+    );
   }
 
   async #execute(command) {
@@ -300,9 +342,11 @@ export class TerrariumTerminal extends HTMLElement {
         this.#term.write('\b \b');
       }
     } else if (data === '\x1b[A') {
-      if (this.#historyIndex > 0) this.#replaceLine(this.#history[--this.#historyIndex]);
+      if (this.#historyIndex > 0)
+        this.#replaceLine(this.#history[--this.#historyIndex]);
     } else if (data === '\x1b[B') {
-      if (this.#historyIndex < this.#history.length) this.#replaceLine(this.#history[++this.#historyIndex] ?? '');
+      if (this.#historyIndex < this.#history.length)
+        this.#replaceLine(this.#history[++this.#historyIndex] ?? '');
     } else if (data === '\x03') {
       this.#line = '';
       this.#term.write('^C\r\n');

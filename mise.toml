@@ -1,0 +1,46 @@
+[tools]
+actionlint = "latest"
+biome = "latest"
+jq = "latest"
+rumdl = "latest"
+shellcheck = "latest"
+tombi = "latest"
+
+[settings]
+experimental = true
+
+# ── Lint ──────────────────────────────────────────────────────────────
+# Read-only `<area>:check` and in-place `<area>:check:fix`, as in vivarium.
+# Tasks with loops or conditionals live in mise-tasks/.
+
+[tasks."js:check"]
+description = "Biome — format + lint + import order for JS/JSON (read-only)"
+run = "biome check ."
+
+[tasks."js:check:fix"]
+description = "Biome — apply safe + unsafe autofixes (in-place)"
+run = "biome check --write --unsafe ."
+
+[tasks."toml:check"]
+description = "Tombi — TOML format check + lint (read-only)"
+run = "tombi format --check && tombi lint"
+
+[tasks."toml:check:fix"]
+description = "Tombi — apply TOML format (in-place)"
+run = "tombi format"
+
+[tasks."markdown:check"]
+description = "rumdl — Markdown lint (read-only)"
+run = "rumdl check ."
+
+[tasks."markdown:check:fix"]
+description = "rumdl — apply Markdown autofix (in-place)"
+run = "rumdl fmt ."
+
+[tasks."lint:all"]
+description = "Run all formatters/linters (read-only) — Biome + Tombi + rumdl + ShellCheck + actionlint"
+depends = ["js:check", "toml:check", "markdown:check", "shell:check", "actions:check"]
+
+[tasks."lint:all:fix"]
+description = "Apply all autofixes (in-place)"
+depends = ["js:check:fix", "toml:check:fix", "markdown:check:fix"]

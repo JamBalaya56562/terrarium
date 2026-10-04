@@ -62,4 +62,3 @@ processes in the runtime, not a cfg change.
 linking (whether Emscripten's libc provides every symbol), or about
 running: threads need `SharedArrayBuffer`, blocking calls need a worker
 or Asyncify, and aube's linker needs symlinks and hard links.
-

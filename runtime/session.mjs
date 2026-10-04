@@ -58,10 +58,15 @@ export class Session {
     const encoder = new TextEncoder();
     for (const [rel, content] of files) {
       const p = posix.resolve('/work', rel);
-      for (let d = posix.dirname(p); d !== '/' && !this.disk.has(d); d = posix.dirname(d)) {
+      for (
+        let d = posix.dirname(p);
+        d !== '/' && !this.disk.has(d);
+        d = posix.dirname(d)
+      ) {
         this.disk.set(d, { kind: 'dir' });
       }
-      const data = typeof content === 'string' ? encoder.encode(content) : content;
+      const data =
+        typeof content === 'string' ? encoder.encode(content) : content;
       this.disk.set(p, { kind: 'file', data, inode: this.nextInode++ });
     }
   }
@@ -112,7 +117,11 @@ export class Session {
         } else {
           const node = FS.lookupPath(p, { follow: false }).node;
           if (!inodes.has(node)) inodes.set(node, this.nextInode++);
-          disk.set(p, { kind: 'file', data: FS.readFile(p), inode: inodes.get(node) });
+          disk.set(p, {
+            kind: 'file',
+            data: FS.readFile(p),
+            inode: inodes.get(node),
+          });
         }
       }
     };
@@ -124,7 +133,9 @@ export class Session {
     const decoders = { out: new TextDecoder(), err: new TextDecoder() };
     const sink = (stream) => (byte) => {
       if (byte !== null) {
-        this.write(decoders[stream].decode(new Uint8Array([byte]), { stream: true }));
+        this.write(
+          decoders[stream].decode(new Uint8Array([byte]), { stream: true }),
+        );
       }
     };
     return new Promise((resolve) => {
@@ -135,7 +146,8 @@ export class Session {
         stderr: sink('err'),
         preRun: [
           () => {
-            if (Object.keys(this.env).length) Object.assign(instance.ENV, this.env);
+            if (Object.keys(this.env).length)
+              Object.assign(instance.ENV, this.env);
             this.#load(instance.FS);
             instance.FS.chdir(this.cwd);
           },
@@ -154,7 +166,8 @@ export class Session {
         };
       }
       if (this.tool.locateFile) instance.locateFile = this.tool.locateFile;
-      if (this.tool.mainScriptUrlOrBlob) instance.mainScriptUrlOrBlob = this.tool.mainScriptUrlOrBlob;
+      if (this.tool.mainScriptUrlOrBlob)
+        instance.mainScriptUrlOrBlob = this.tool.mainScriptUrlOrBlob;
       this.tool.factory(instance);
     });
   }
@@ -207,7 +220,9 @@ export class Session {
         return 0;
       }
       default:
-        print(`${command}: command not found — this terminal runs ${this.tool.name} and cd, ls, cat, rm, pwd`);
+        print(
+          `${command}: command not found — this terminal runs ${this.tool.name} and cd, ls, cat, rm, pwd`,
+        );
         return 127;
     }
   }

@@ -39,17 +39,24 @@ function parentOrigin() {
   }
 }
 const targetOrigin = embedded ? parentOrigin() : null;
-if (embedded && !targetOrigin) console.warn('[terrarium] parent origin unknown; pass ?origin= to talk to it');
+if (embedded && !targetOrigin)
+  console.warn(
+    '[terrarium] parent origin unknown; pass ?origin= to talk to it',
+  );
 const notifyParent = (message) => {
   if (targetOrigin) window.parent.postMessage(message, targetOrigin);
 };
 
 function showHeader({ toolName, tool, ref, build, builds, names }) {
   document.title = `terrarium · ${toolName} ${ref}`;
-  document.getElementById('title').textContent = `terrarium · ${tool.label ?? toolName}`;
+  document.getElementById('title').textContent =
+    `terrarium · ${tool.label ?? toolName}`;
 
   const select = document.getElementById('build');
-  for (const name of names) select.append(new Option(describe(name, builds[name]), name, false, name === ref));
+  for (const name of names)
+    select.append(
+      new Option(describe(name, builds[name]), name, false, name === ref),
+    );
   select.hidden = false;
   select.addEventListener('change', () => {
     params.set('ref', select.value);
@@ -58,8 +65,12 @@ function showHeader({ toolName, tool, ref, build, builds, names }) {
 
   const link = document.getElementById('source');
   const repo = build.source?.url ?? tool.repository;
-  link.href = build.upstream_pr ?? (build.source?.commit ? `${repo}/commit/${build.source.commit}` : repo);
-  link.textContent = build.upstream_pr ? `PR #${build.upstream_pr.split('/').pop()}` : 'source';
+  link.href =
+    build.upstream_pr ??
+    (build.source?.commit ? `${repo}/commit/${build.source.commit}` : repo);
+  link.textContent = build.upstream_pr
+    ? `PR #${build.upstream_pr.split('/').pop()}`
+    : 'source';
   link.hidden = false;
 }
 
@@ -67,10 +78,13 @@ const terminal = document.createElement('terrarium-terminal');
 for (const name of ['tool', 'ref', 'fixture', 'cwd']) {
   if (params.has(name)) terminal.setAttribute(name, params.get(name));
 }
-if (params.has('run')) terminal.setAttribute('run', params.getAll('run').join('\n'));
+if (params.has('run'))
+  terminal.setAttribute('run', params.getAll('run').join('\n'));
 
 // Everything the session prints, for tests that read it back.
-Object.defineProperty(globalThis, 'terrariumTranscript', { get: () => terminal.transcript });
+Object.defineProperty(globalThis, 'terrariumTranscript', {
+  get: () => terminal.transcript,
+});
 
 terminal.addEventListener('terrarium-ready', (event) => {
   const { tool, ref, commit, seconds } = event.detail;
@@ -80,7 +94,9 @@ terminal.addEventListener('terrarium-ready', (event) => {
   terminal.focus();
 });
 terminal.addEventListener('terrarium-exit', (event) => {
-  console.info(`[terrarium] ${event.detail.command}: exit ${event.detail.code}`);
+  console.info(
+    `[terrarium] ${event.detail.command}: exit ${event.detail.code}`,
+  );
   notifyParent({ type: 'terrarium:exit', ...event.detail });
 });
 terminal.addEventListener('terrarium-error', (event) => {
@@ -88,18 +104,31 @@ terminal.addEventListener('terrarium-error', (event) => {
   notifyParent({ type: 'terrarium:error', message: event.detail.message });
 });
 addEventListener('message', (event) => {
-  if (!targetOrigin || event.source !== window.parent || event.origin !== targetOrigin) return;
-  if (event.data?.type === 'terrarium:run' && typeof event.data.command === 'string') {
+  if (
+    !targetOrigin ||
+    event.source !== window.parent ||
+    event.origin !== targetOrigin
+  )
+    return;
+  if (
+    event.data?.type === 'terrarium:run' &&
+    typeof event.data.command === 'string'
+  ) {
     terminal.run(event.data.command);
   }
 });
 
 if (!crossOriginIsolated) {
   // coi-serviceworker reloads the page once it controls it.
-  status('Not cross-origin isolated yet — waiting for the service worker to reload the page…');
+  status(
+    'Not cross-origin isolated yet — waiting for the service worker to reload the page…',
+  );
 } else {
   status('Downloading and compiling…');
-  chooseBuild({ tool: params.get('tool') ?? undefined, ref: params.get('ref') ?? undefined })
+  chooseBuild({
+    tool: params.get('tool') ?? undefined,
+    ref: params.get('ref') ?? undefined,
+  })
     .then(showHeader)
     .catch(() => {}); // the terminal reports the same error
   document.getElementById('term').append(terminal);

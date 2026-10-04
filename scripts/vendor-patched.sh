@@ -7,7 +7,7 @@
 set -euo pipefail
 root=$(cd "$(dirname "$0")/.." && pwd)
 lock="$1/Cargo.lock"
-registry=$(ls -d "${CARGO_HOME:-$HOME/.cargo}"/registry/src/index.crates.io-* | head -1)
+registry=$(find "${CARGO_HOME:-$HOME/.cargo}/registry/src" -maxdepth 1 -name 'index.crates.io-*' | head -1)
 native() { if command -v cygpath >/dev/null; then cygpath -m "$1"; else echo "$1"; fi; }
 mkdir -p "$root/.vendor"
 echo "[patch.crates-io]"
