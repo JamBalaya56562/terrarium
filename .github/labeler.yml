@@ -20,6 +20,11 @@
           - "aidlc/spaces/*/knowledge/**"
           - "docs/**"
 
+"scope: infra":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "infra/**"
+
 "scope: rust":
   - changed-files:
       - any-glob-to-any-file:
