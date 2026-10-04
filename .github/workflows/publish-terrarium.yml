@@ -1,0 +1,109 @@
+name: publish-terrarium
+
+on:
+  push:
+    tags:
+      - 'terrarium-v*.*.*'
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Tag-style label, informational only (e.g. terrarium-v0.1.0). Version is read from package.json.'
+        required: false
+
+permissions:
+  contents: read
+  id-token: write   # OIDC for both npm provenance and JSR
+
+jobs:
+  publish:
+    name: Publish to JSR + npm
+    if: github.repository_owner == 'aletheia-works'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    defaults:
+      run:
+        working-directory: packages/terrarium
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Setup mise (bun, jq)
+        uses: jdx/mise-action@7a4e45a543138629540c9a1616d08632b893e492 # v5.0.1
+        with:
+          install: true
+          cache: true
+          experimental: true
+          install_args: bun jq
+
+      - name: Install + build + test
+        run: |
+          bun install --frozen-lockfile
+          bun run build
+          bun run test
+
+      - name: Read package version
+        id: pkg
+        run: |
+          version=$(jq -r .version package.json)
+          jsr_version=$(jq -r .version jsr.json)
+          if [ "$version" != "$jsr_version" ]; then
+            echo "::error::package.json ($version) and jsr.json ($jsr_version) disagree on the version"
+            exit 1
+          fi
+          {
+            echo "version=$version"
+            echo "npm_name=$(jq -r .name package.json)"
+            echo "jsr_name=$(jq -r .name jsr.json)"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Check if npm version is already published
+        id: npm-check
+        env:
+          NAME: ${{ steps.pkg.outputs.npm_name }}
+          VERSION: ${{ steps.pkg.outputs.version }}
+        run: |
+          if curl -fsSL -o /dev/null "https://registry.npmjs.org/$NAME/$VERSION"; then
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+            echo "::notice::npm $VERSION already published — skipping npm step"
+          else
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Publish to npm (provenance via OIDC trusted publishing, npm CLI run through bunx)
+        if: steps.npm-check.outputs.skip == 'false'
+        # Bun cannot publish over OIDC (oven-sh/bun#15601), and older npm
+        # minors mask trusted-publishing failures as ENEEDAUTH (npm/cli#9088).
+        run: bunx npm@latest publish --provenance --access public
+        env:
+          NPM_CONFIG_REGISTRY: 'https://registry.npmjs.org/'
+
+      - name: Check if JSR version is already published
+        id: jsr-check
+        env:
+          NAME: ${{ steps.pkg.outputs.jsr_name }}
+          VERSION: ${{ steps.pkg.outputs.version }}
+        run: |
+          if curl -fsSL "https://jsr.io/$NAME/meta.json" | jq -e --arg v "$VERSION" '.versions[$v]' >/dev/null; then
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+            echo "::notice::JSR $VERSION already published — skipping JSR step"
+          else
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Publish to JSR (provenance via OIDC)
+        if: steps.jsr-check.outputs.skip == 'false'
+        run: bunx jsr publish
+
+      - name: Summary
+        run: |
+          {
+            echo "## Published"
+            echo ""
+            echo "* **npm**: https://www.npmjs.com/package/@aletheia-works/terrarium"
+            echo "* **JSR**: https://jsr.io/@aletheia-works/terrarium"
+            echo ""
+            echo "Provenance is recorded in the public Sigstore Rekor"
+            echo "transparency log for both registries."
+          } >> "$GITHUB_STEP_SUMMARY"

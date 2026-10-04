@@ -15,17 +15,18 @@
   "type": "module",
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "default": "./dist/index.js"
+      "types": "./dist/npm.d.ts",
+      "default": "./dist/npm.js"
     },
     "./session": {
       "types": "./dist/session.d.ts",
       "default": "./dist/session.js"
     }
   },
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "dist/npm.js",
+  "types": "dist/npm.d.ts",
   "sideEffects": [
+    "./dist/npm.js",
     "./dist/index.js",
     "./dist/terminal.js"
   ],

@@ -69,3 +69,17 @@ headers because `web/coi-serviceworker.js` adds COOP/COEP from a service
 worker and reloads once on the first visit. With every dependency already compiled,
 the release build still took 26 minutes on this machine: optimising the
 aube crate and running `wasm-opt` over the linked module.
+
+## Publishing the package
+
+`packages/terrarium` is published as `@aletheia-works/terrarium` to npm
+and JSR by `.github/workflows/publish-terrarium.yml`, as vivarium
+publishes its MCP server: OIDC trusted publishing with provenance, no
+registry tokens. Bump `version` in both `package.json` and `jsr.json`,
+merge, then push a tag `terrarium-v<version>`. The workflow builds, tests,
+and skips a registry that already has that version.
+
+npm's `"."` is `src/npm.ts`, which adds the global types for the element's
+tag and events; JSR's `"."` is `src/index.ts` without them, because JSR
+rejects global augmentation. The generated `src/generated/xterm-css.ts` is
+gitignored, so `jsr.json` un-excludes it.

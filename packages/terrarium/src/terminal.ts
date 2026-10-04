@@ -58,17 +58,6 @@ export interface ErrorDetail {
   message: string;
 }
 
-declare global {
-  interface HTMLElementTagNameMap {
-    'terrarium-terminal': TerrariumTerminal;
-  }
-  interface HTMLElementEventMap {
-    'terrarium-ready': CustomEvent<ReadyDetail>;
-    'terrarium-exit': CustomEvent<ExitDetail>;
-    'terrarium-error': CustomEvent<ErrorDetail>;
-  }
-}
-
 function defaultBase(): string {
   // The site's own bundle is served from terrarium's web/ directory.
   return VERSION ? new URL('./', import.meta.url).href : DEFAULT_BASE;

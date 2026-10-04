@@ -8,6 +8,16 @@ it. The builds of the CLI (one `.wasm` of about 20 MB each) are not in the
 package: the element loads them from terrarium's GitHub Pages site, or from
 another copy of it named by `base`.
 
+## Install
+
+```sh
+npm install @aletheia-works/terrarium   # or bun add, pnpm add
+npx jsr add @aletheia-works/terrarium   # or deno add jsr:@aletheia-works/terrarium
+```
+
+The package root is for browsers: it defines the element, and xterm.js
+needs a DOM. Under Node.js or Bun, import `@aletheia-works/terrarium/session`.
+
 ## The element
 
 ```js
