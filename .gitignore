@@ -96,3 +96,7 @@ aidlc/diagnostics/
 
 # rumdl's local cache.
 .rumdl_cache/
+
+# Playwright output.
+test-results/
+playwright-report/

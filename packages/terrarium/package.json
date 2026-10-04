@@ -38,14 +38,16 @@
     "gen": "bun scripts/gen-css.ts",
     "build": "bun run gen && tsc -p tsconfig.json",
     "typecheck": "bun run gen && tsc -p tsconfig.json --noEmit && tsc -p tests/tsconfig.json",
-    "test": "bun run gen && bun test",
-    "prepublishOnly": "bun run build"
+    "test": "bun run gen && bun test tests",
+    "prepublishOnly": "bun run build",
+    "test:e2e": "playwright test"
   },
   "dependencies": {
     "@xterm/addon-fit": "^0.11.0",
     "@xterm/xterm": "^6.0.0"
   },
   "devDependencies": {
+    "@playwright/test": "^1.63.0",
     "@types/bun": "^1.4.2",
     "typescript": "^7.0.2"
   },

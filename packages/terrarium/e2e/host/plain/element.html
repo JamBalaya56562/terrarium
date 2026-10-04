@@ -1,0 +1,12 @@
+<!doctype html>
+<meta charset="utf-8" />
+<title>terrarium element without cross-origin isolation</title>
+<!-- A page on another origin that uses the element from the site. -->
+<script type="module" src="http://localhost:8780/web/terrarium.mjs"></script>
+<script>
+  window.events = [];
+  for (const type of ['terrarium-ready', 'terrarium-exit', 'terrarium-error']) {
+    document.addEventListener(type, (e) => events.push({ type, ...e.detail }));
+  }
+</script>
+<terrarium-terminal id="terminal" ref="v2.6.1"></terrarium-terminal>

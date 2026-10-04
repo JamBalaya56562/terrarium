@@ -1,0 +1,21 @@
+<!doctype html>
+<meta charset="utf-8" />
+<title>terrarium iframe on another origin</title>
+<!-- credentialless: the site sends no Cross-Origin-Resource-Policy, which a
+     cross-origin isolated page otherwise needs from an iframe's document. -->
+<iframe
+  id="frame"
+  title="terrarium"
+  credentialless
+  allow="cross-origin-isolated"
+  src="http://localhost:8780/web/?embed&ref=v2.6.1"
+  style="width: 800px; height: 400px; border: 0"
+></iframe>
+<script>
+  window.messages = [];
+  addEventListener('message', (e) => messages.push({ origin: e.origin, ...e.data }));
+  window.runInFrame = (command) =>
+    document
+      .getElementById('frame')
+      .contentWindow.postMessage({ type: 'terrarium:run', command }, 'http://localhost:8780');
+</script>

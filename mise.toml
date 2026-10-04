@@ -75,9 +75,23 @@ description = "Type-check the package and its tests"
 dir = "packages/terrarium"
 run = "bun run typecheck"
 
+[tasks."terrarium:e2e"]
+description = "Browser tests against .site (run site:build first, with a build in web/dist)"
+dir = "packages/terrarium"
+run = "bun run test:e2e"
+
 [tasks."site:build"]
 description = "Assemble the GitHub Pages site into .site/ with the staged web/dist/"
 run = "bash scripts/assemble-pages.sh .site"
+
+[tasks."ci:e2e"]
+description = "Local equivalent of test-e2e.yml: fetch v2.6.1, stage the fixtures, assemble the site, run the browser tests"
+run = [
+  "bash scripts/fetch-builds.sh v2.6.1",
+  "bash scripts/stage-web.sh",
+  "bash scripts/assemble-pages.sh .site",
+  "cd packages/terrarium && bun run test:e2e",
+]
 
 [tasks."ci:terrarium"]
 description = "Local equivalent of test-terrarium.yml"

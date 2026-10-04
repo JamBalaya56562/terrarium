@@ -1,0 +1,79 @@
+name: Test E2E
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: test-e2e-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  e2e:
+    name: E2E (${{ matrix.browser }})
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        browser: [chromium, firefox, webkit]
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Setup mise (bun, jq)
+        uses: jdx/mise-action@7a4e45a543138629540c9a1616d08632b893e492 # v5.0.1
+        with:
+          install: true
+          cache: true
+          experimental: true
+          install_args: bun jq
+
+      - name: Install dependencies
+        working-directory: packages/terrarium
+        run: bun install --frozen-lockfile
+
+      # The tests run the published v2.6.1 build of aube, a tag that never
+      # moves, against this pull request's page, element, Session and
+      # fixtures (staged into web/dist/fixtures by stage-web.sh).
+      - name: Fetch the v2.6.1 build and assemble the site
+        run: |
+          bash scripts/fetch-builds.sh v2.6.1
+          bash scripts/stage-web.sh
+          mise run site:build
+
+      - name: Cache Playwright system packages (${{ matrix.browser }})
+        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: ~/.cache/terrarium-pw-apt
+          key: pw-apt-${{ runner.os }}-${{ env.ImageOS }}-${{ matrix.browser }}-${{ hashFiles('packages/terrarium/bun.lock') }}
+
+      - name: Install Playwright browser (${{ matrix.browser }})
+        working-directory: packages/terrarium
+        run: |
+          set -euo pipefail
+          cache_dir="$HOME/.cache/terrarium-pw-apt"
+          mkdir -p "$cache_dir/partial"
+          chmod -R a+rwX "$cache_dir"
+          printf 'Dir::Cache::archives "%s";\n' "$cache_dir" \
+            | sudo tee /etc/apt/apt.conf.d/99-terrarium-pw-cache > /dev/null
+
+          bunx playwright install --with-deps ${{ matrix.browser }}
+
+          sudo chown -R "$(id -u):$(id -g)" "$cache_dir"
+          rm -rf "$cache_dir/partial" "$cache_dir/lock"
+          echo "Cached $(find "$cache_dir" -maxdepth 1 -name '*.deb' | wc -l) .deb(s)."
+
+      - name: Run Playwright suite (${{ matrix.browser }})
+        working-directory: packages/terrarium
+        run: bun run test:e2e -- --project=${{ matrix.browser }}
+
+      - name: Upload Playwright report on failure
+        if: failure()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: playwright-report-${{ matrix.browser }}
+          path: packages/terrarium/playwright-report/
+          retention-days: 7
