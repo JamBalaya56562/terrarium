@@ -69,6 +69,11 @@ parameters, `run` repeated for several commands:
 aube list"></terrarium-terminal>
 ```
 
+The same element is packaged as
+[`@aletheia-works/terrarium`](packages/terrarium) (`import
+'@aletheia-works/terrarium'`, not published to npm yet), which loads the
+builds from the site above.
+
 The settings are attributes (`run` has one command per line), read when
 the element is added to the page. `base` points it at another copy of
 terrarium's `web/` directory, for a site that serves the builds itself.

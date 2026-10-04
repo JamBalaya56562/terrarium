@@ -20,7 +20,10 @@
       "!**/playwright-report",
       "!fixtures",
       "!web/coi-serviceworker.js",
-      "!runtime/libterrarium.js"
+      "!runtime/libterrarium.js",
+      "!**/generated",
+      "!.site",
+      "!.rumdl_cache"
     ]
   },
   "formatter": {

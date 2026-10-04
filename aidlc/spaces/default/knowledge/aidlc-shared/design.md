@@ -42,7 +42,9 @@ to reproduce aubepkg/aube#1645 and #1643.
   and driven from its parent. Putting a baseline next to a fix, and
   telling the reader what to look for, is Vivarium's job.
 - **Several ways in, one implementation.** The terminal is a custom
-  element, `<terrarium-terminal>` in `web/terrarium.mjs`; the page at
+  element, `<terrarium-terminal>` in `packages/terrarium/src/terminal.ts`
+  (published as `@aletheia-works/terrarium`, and bundled with xterm.js into
+  the site's `web/terrarium.mjs`); the page at
   `web/` is one such element configured from its URL, and the iframe
   entry is that page. Another page can use the element directly, without
   an iframe: in a cross-origin isolated page a cross-origin iframe needs
@@ -104,7 +106,7 @@ runs on a worker, so blocking calls never block the page.
 disk. Each command the reader types starts a fresh instance of the tool
 — a new process — whose in-memory filesystem is seeded from the disk and
 written back when it exits, symlinks and hard links included.
-`runtime/session.mjs` implements this once; `runtime/run-node.mjs` runs
+`packages/terrarium/src/session.ts` implements this once; `runtime/run-node.mjs` runs
 it under Node.js and `web/terminal.mjs` in the browser.
 
 If startup or size measurements show Emscripten's runtime is the

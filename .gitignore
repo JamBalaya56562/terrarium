@@ -90,3 +90,9 @@ aidlc/diagnostics/
 # aidlc/spaces/*/intents/*/<phase>/<stage>/*.md (artifacts + diary).
 .claude/settings.local.json
 # END AI-DLC:gitignore
+
+# Site assembled by `mise run site:build`.
+/.site/
+
+# rumdl's local cache.
+.rumdl_cache/

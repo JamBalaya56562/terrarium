@@ -10,7 +10,7 @@
 import { readdirSync, readFileSync } from 'node:fs';
 import { createRequire } from 'node:module';
 import path from 'node:path';
-import { Session } from './session.mjs';
+import { Session } from '../packages/terrarium/src/session.ts';
 
 const [toolPath, fixtureDir, sessionFile] = process.argv.slice(2);
 const require = createRequire(import.meta.url);

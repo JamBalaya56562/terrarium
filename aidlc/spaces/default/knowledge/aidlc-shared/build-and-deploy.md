@@ -35,7 +35,8 @@ things bit on the first try:
 
 ## Deployment
 
-GitHub Pages serves the `gh-pages` branch: `web/`, `runtime/session.mjs`
+GitHub Pages serves the `gh-pages` branch: `web/`, the `web/terrarium.mjs`
+that `scripts/assemble-pages.sh` bundles from `packages/terrarium`
 and the staged `web/dist/` (builds, `builds.json` and fixtures), which
 are build output and stay out of `main`. `.github/workflows/pages.yml`
 writes it: run by hand with a `ref` it builds that aube; every day it
@@ -50,8 +51,8 @@ GitHub Pages lets browsers cache every file for 10 minutes, so right
 after a deploy a page could load a new `index.html` with a cached old
 `terminal.mjs`; that broke the page once (2026-10-04). `assemble-pages.sh`
 therefore stamps the deploy's version into the page's own URLs
-(`terminal.mjs?v=…`, `terrarium.mjs?v=…`, `session.mjs?v=…`, and the
-`VERSION` that `terrarium.mjs` appends to `tools.json`, `builds.json` and
+(`terminal.mjs?v=…`, `terrarium.mjs?v=…`, and the version that the bundle,
+built with `--define __TERRARIUM_VERSION__`, appends to `tools.json`, `builds.json` and
 fixtures). A build's `.js` and `.wasm` are versioned by its `built_at`
 instead, so they stay cached across deploys and a rebuild never pairs a
 new `.wasm` with an old `.js`. `coi-serviceworker.js` keeps its URL, since

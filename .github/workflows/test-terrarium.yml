@@ -1,0 +1,37 @@
+name: Test terrarium package
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: test-terrarium-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    name: Test terrarium package
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: packages/terrarium
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Setup mise (bun)
+        uses: jdx/mise-action@9149ea85001c7435d5a66bb127d6a1b6227cb0a5 # v5.0.0
+        with:
+          install: true
+          cache: true
+          experimental: true
+          install_args: bun
+
+      - name: Install, type-check, test and build
+        run: |
+          bun install --frozen-lockfile
+          bun run typecheck
+          bun run test
+          bun run build
