@@ -1,0 +1,27 @@
+# Copy this file to terraform.tfvars and fill in the values.
+# terraform.tfvars itself is gitignored and must not be committed.
+#
+# Local usage:
+#   cp terraform.tfvars.example terraform.tfvars
+#   # edit terraform.tfvars
+#   export GITHUB_TOKEN=github_pat_xxxxxxxxxxxx
+#   tofu init
+#   tofu plan
+#   tofu apply
+#
+# In GitHub Actions, tfvars are not used — values are injected via
+# environment variables and workflow inputs.
+
+# ─── Required ────────────────────────────────────────────────────────
+#
+# Set this to your own GitHub user or org if you forked the repo.
+# The upstream value is "aletheia-works".
+github_owner = "aletheia-works"
+
+
+# ─── Optional ────────────────────────────────────────────────────────
+#
+# Defaults are usually fine. Override only when needed.
+#
+# repository_name        = "terrarium"
+# repository_visibility  = "public"

@@ -1,0 +1,28 @@
+name: Terraform State Backup
+
+on:
+  schedule:
+    - cron: '0 3 * * 1'
+
+  workflow_run:
+    workflows: ["Terraform Apply"]
+    types:
+      - completed
+
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+jobs:
+  backup:
+    if: |
+      github.repository_owner == 'aletheia-works' &&
+      (github.event_name != 'workflow_run' ||
+       github.event.workflow_run.conclusion == 'success')
+    uses: aletheia-works/.github/.github/workflows/terraform-state-backup.yml@4f9b6d6865f083952f13557c91eaf839045e55e1 # v1.0.0
+    with:
+      working_directory: infra/github
+    secrets:
+      TF_TOKEN_GITHUB: ${{ secrets.TF_TOKEN_GITHUB }}

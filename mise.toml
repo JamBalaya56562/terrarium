@@ -3,6 +3,7 @@ actionlint = "latest"
 biome = "latest"
 bun = "latest"
 jq = "latest"
+opentofu = "latest"
 rumdl = "latest"
 shellcheck = "latest"
 tombi = "latest"
@@ -82,3 +83,19 @@ run = "bash scripts/assemble-pages.sh .site"
 description = "Local equivalent of test-terrarium.yml"
 dir = "packages/terrarium"
 run = ["bun install --frozen-lockfile", "bun run typecheck", "bun run test", "bun run build"]
+
+# ── Infra ─────────────────────────────────────────────────────────────
+
+[tasks."infra:init"]
+description = "Initialise OpenTofu working directory for infra/github"
+dir = "infra/github"
+run = "tofu init"
+
+[tasks."infra:plan"]
+description = "OpenTofu plan for infra/github (needs GITHUB_TOKEN and the state; see infra/github/README.md)"
+dir = "infra/github"
+run = "tofu plan"
+
+[tasks."infra:fmt"]
+description = "Format the OpenTofu files (in-place)"
+run = "tofu fmt -recursive infra"
