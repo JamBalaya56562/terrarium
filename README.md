@@ -29,7 +29,7 @@ the browser.
 
 aube builds for `wasm32-unknown-emscripten` without changes to its own
 code, and its CLI runs in a browser terminal at
-https://aletheia-works.github.io/terrarium/. Builds are made by GitHub
+<https://aletheia-works.github.io/terrarium/>. Builds are made by GitHub
 Actions: aube's `main` every day, and any branch, tag, commit or pull
 request on demand.
 
@@ -56,7 +56,7 @@ The tool uses threads, so every way needs a cross-origin isolated page
 
 ### A link
 
-https://aletheia-works.github.io/terrarium/ with the settings as query
+<https://aletheia-works.github.io/terrarium/> with the settings as query
 parameters, `run` repeated for several commands:
 `?ref=pr-1645&run=aube%20install&run=aube%20list`.
 

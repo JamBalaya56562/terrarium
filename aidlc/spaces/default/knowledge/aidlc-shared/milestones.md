@@ -22,7 +22,7 @@
    tab with the same output as under Node.js. Served by a plain static
    server that sends no COOP/COEP headers; coi-serviceworker made the
    page cross-origin isolated, so pthreads have `SharedArrayBuffer`.
-   Confirmed on GitHub Pages the same day: https://aletheia-works.github.io/terrarium/web/
+   Confirmed on GitHub Pages the same day: <https://aletheia-works.github.io/terrarium/web/>
    is cross-origin isolated and reproduces #1645.*
 4. **Any build, embeddable.** The page runs whichever aube build the
    URL names (`?ref=main`, `?ref=pr-1645`, …), and GitHub Actions builds
@@ -53,4 +53,3 @@
    `credentialless` iframe.*
 6. **Vivarium.** A Vivarium page reproduces #1645 by embedding two
    terrarium terminals, baseline and fix. Done in Vivarium, not here.
-
