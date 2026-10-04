@@ -1,0 +1,68 @@
+{
+  "name": "@aletheia-works/terrarium",
+  "version": "0.1.0",
+  "description": "A browser terminal that runs one CLI compiled to WebAssembly, on only the system calls it needs: the <terrarium-terminal> element and the Session behind it.",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/aletheia-works/terrarium/tree/main/packages/terrarium",
+  "bugs": {
+    "url": "https://github.com/aletheia-works/terrarium/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aletheia-works/terrarium.git",
+    "directory": "packages/terrarium"
+  },
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./session": {
+      "types": "./dist/session.d.ts",
+      "default": "./dist/session.js"
+    }
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "sideEffects": [
+    "./dist/index.js",
+    "./dist/terminal.js"
+  ],
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "gen": "bun scripts/gen-css.ts",
+    "build": "bun run gen && tsc -p tsconfig.json",
+    "typecheck": "bun run gen && tsc -p tsconfig.json --noEmit && tsc -p tests/tsconfig.json",
+    "test": "bun run gen && bun test",
+    "prepublishOnly": "bun run build"
+  },
+  "dependencies": {
+    "@xterm/addon-fit": "^0.11.0",
+    "@xterm/xterm": "^6.0.0"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.4.2",
+    "typescript": "^7.0.2"
+  },
+  "engines": {
+    "node": ">=24",
+    "bun": ">=1.2.0"
+  },
+  "keywords": [
+    "terminal",
+    "webassembly",
+    "emscripten",
+    "web-component",
+    "cli",
+    "xterm"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  }
+}

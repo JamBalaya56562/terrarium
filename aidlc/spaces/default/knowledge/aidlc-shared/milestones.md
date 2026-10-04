@@ -51,5 +51,14 @@
    the iframe entry: from another origin it needs
    `allow="cross-origin-isolated"` plus CORP headers or a
    `credentialless` iframe.*
-6. **Vivarium.** A Vivarium page reproduces #1645 by embedding two
+6. **A package.** The element and the Session move to
+   `packages/terrarium` in TypeScript, as `@aletheia-works/terrarium`
+   (the element, and `/session` without the DOM), with xterm.js as a
+   dependency and its stylesheet built in instead of fetched from a CDN.
+   *2026-10-04: 25 unit tests under `bun test` (the Session against a fake
+   Emscripten FS, the catalog against a fake `fetch`), each Session test
+   shown to fail when the hard-link or `/tmp` handling is broken; the
+   bundled page and the cross-origin element test give the same #1645
+   results as before.*
+7. **Vivarium.** A Vivarium page reproduces #1645 by embedding two
    terrarium terminals, baseline and fix. Done in Vivarium, not here.

@@ -14,3 +14,17 @@ updates:
         patterns:
           - "*"
     open-pull-requests-limit: 5
+
+  - package-ecosystem: "bun"
+    directory: "/packages/terrarium"
+    schedule:
+      interval: "daily"
+    labels:
+      - "type: chore"
+      - "scope: js"
+    commit-message:
+      prefix: "chore(deps)"
+    groups:
+      terrarium-deps:
+        patterns:
+          - "*"

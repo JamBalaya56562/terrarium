@@ -33,7 +33,7 @@
 
 <!-- Project-specific specialisation. -->
 
-- 公開先は GitHub Pages の `gh-pages` ブランチ（`web/`、`runtime/session.mjs`、ステージ済みの `web/dist/`）。`web/dist/` はビルド成果物であり `main` にはコミットしない。
+- 公開先は GitHub Pages の `gh-pages` ブランチ（`web/`、`packages/terrarium` から作るバンドル `web/terrarium.mjs`、ステージ済みの `web/dist/`）。`web/dist/` はビルド成果物であり `main` にはコミットしない。
 - `gh-pages` は `.github/workflows/pages.yml` が書き込む。手動実行で任意の ref（ブランチ、タグ、コミット、`pr-<n>`）をビルドし、毎日 aube の `main` をビルドする。デプロイのたびに `gh-pages` を 1 コミットに書き換える。
 - COOP/COEP ヘッダーは `web/coi-serviceworker.js` が付与する。ヘッダーを設定できないホストでも動くことが前提。
 - 詳細: `aidlc/spaces/default/knowledge/aidlc-shared/build-and-deploy.md`
@@ -50,7 +50,7 @@
 - ランタイムは Emscripten 自身の JavaScript ランタイム。不足分は `runtime/`（`syscalls.c`、`libterrarium.js`）で補う。
 - スレッドは Emscripten pthreads（nightly Rust、`-Zbuild-std`、`+atomics`、`-sPROXY_TO_PTHREAD`）。
 - 依存クレートへの変更は `patches/` のパッチとして持ち、`scripts/vendor-patched.sh` で適用する。対象ツール自身のコードは変更しない。
-- ブラウザ端末は xterm.js。Node.js 実行（`runtime/run-node.mjs`）とブラウザ（`web/terminal.mjs`）は同じ `runtime/session.mjs` を共有する。
+- ブラウザ端末は xterm.js。端末要素と Session は `packages/terrarium`（TypeScript、npm パッケージ `@aletheia-works/terrarium`）にあり、Node.js 実行（`runtime/run-node.mjs`）とブラウザは同じ Session を共有する。
 
 ## Decided
 

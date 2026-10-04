@@ -140,6 +140,16 @@ jobs:
         with:
           name: aube-${{ needs.resolve.outputs.name }}
           path: ${{ runner.temp }}/out
+      - name: Setup mise (bun)
+        uses: jdx/mise-action@9149ea85001c7435d5a66bb127d6a1b6227cb0a5 # v5.0.0
+        with:
+          install: true
+          cache: true
+          experimental: true
+          install_args: bun
+      - name: Install the package's dependencies
+        working-directory: packages/terrarium
+        run: bun install --frozen-lockfile
       - name: Publish to gh-pages
         env:
           BUILT: ${{ needs.build.result == 'success' }}

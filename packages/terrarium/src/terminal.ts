@@ -1,7 +1,6 @@
 // <terrarium-terminal>: a terminal running one build of a CLI, as an HTML
 // element that any page can use without an iframe.
 //
-//   <script type="module" src="https://aletheia-works.github.io/terrarium/web/terrarium.mjs"></script>
 //   <terrarium-terminal tool="aube" ref="pr-1645" run="aube install"></terrarium-terminal>
 //
 // Attributes, read when the element is connected:
@@ -10,107 +9,97 @@
 //   fixture  the project preloaded into /work (default: the tool's; "" for none)
 //   cwd      the starting directory (default: the tool's, or /work)
 //   run      commands to type once ready, one per line
-//   base     where terrarium is served from (default: next to this module)
-//
-// Properties and methods: `ready` (a promise of { tool, ref, commit }),
-// `run(command)` (a promise of { command, code, output }), `transcript`.
-// Events, which bubble out of shadow roots: `terrarium-ready`,
-// `terrarium-exit` ({ command, code, output }) and `terrarium-error`
-// ({ message }), all with the details in `event.detail`.
+//   base     where terrarium's web/ directory is served from (default: the
+//            GitHub Pages site, or next to this module when it is served there)
 //
 // The tool uses threads, so the page must be cross-origin isolated
 // (COOP/COEP headers, or a service worker such as coi-serviceworker.js).
 
-import { FitAddon } from 'https://cdn.jsdelivr.net/npm/@xterm/addon-fit@0.11.0/lib/addon-fit.mjs';
-import { Terminal } from 'https://cdn.jsdelivr.net/npm/@xterm/xterm@6.0.0/lib/xterm.mjs';
-import { Session } from '../runtime/session.mjs';
+import { FitAddon } from '@xterm/addon-fit';
+import { Terminal } from '@xterm/xterm';
+import {
+  type BuildInfo,
+  type Choice,
+  catalog,
+  choose,
+  describe,
+  fetchJson,
+  versioned,
+} from './catalog.ts';
+import xtermCss from './generated/xterm-css.ts';
+import { Session, type Tool } from './session.ts';
 
-const XTERM_CSS =
-  'https://cdn.jsdelivr.net/npm/@xterm/xterm@6.0.0/css/xterm.css';
-const DEFAULT_BASE = new URL('./', import.meta.url).href;
+/** Where terrarium is published. */
+export const DEFAULT_BASE = 'https://aletheia-works.github.io/terrarium/web/';
 
-// Set by scripts/assemble-pages.sh to the deploy's version. GitHub Pages lets
-// browsers cache files for 10 minutes, so right after a deploy a page could
-// mix new files with cached old ones; the version in each URL keeps the files
-// of one deploy together. Null when serving web/ straight from the repository.
-const VERSION = null;
+// Replaced with the deploy's version when the site's bundle is built (see
+// scripts/assemble-pages.sh). GitHub Pages lets browsers cache files for 10
+// minutes, so the version in each URL keeps the files of one deploy together.
+declare const __TERRARIUM_VERSION__: string | undefined;
+const VERSION =
+  typeof __TERRARIUM_VERSION__ === 'string' ? __TERRARIUM_VERSION__ : null;
 
-// `url` with `?v=<version>`, when there is a version.
-function versioned(url, version = VERSION) {
-  const u = new URL(url);
-  if (version) u.searchParams.set('v', version);
-  return u.href;
+export interface ReadyDetail {
+  tool: string;
+  ref: string;
+  commit: string | null;
+  /** Seconds from connecting the element to the prompt. */
+  seconds: number;
 }
 
-const jsonCache = new Map();
-function fetchJson(url) {
-  if (!jsonCache.has(url)) {
-    jsonCache.set(
-      url,
-      fetch(url).then((response) => {
-        if (!response.ok) throw new Error(`${url}: HTTP ${response.status}`);
-        return response.json();
-      }),
-    );
+export interface ExitDetail {
+  command: string;
+  code: number;
+  /** Everything the command printed. */
+  output: string;
+}
+
+export interface ErrorDetail {
+  message: string;
+}
+
+declare global {
+  interface HTMLElementTagNameMap {
+    'terrarium-terminal': TerrariumTerminal;
   }
-  return jsonCache.get(url);
+  interface HTMLElementEventMap {
+    'terrarium-ready': CustomEvent<ReadyDetail>;
+    'terrarium-exit': CustomEvent<ExitDetail>;
+    'terrarium-error': CustomEvent<ErrorDetail>;
+  }
 }
 
-// The tools terrarium knows and the builds published for them.
-export async function catalog(base = DEFAULT_BASE) {
-  const [tools, manifest] = await Promise.all([
-    fetchJson(versioned(new URL('tools.json', base))),
-    fetchJson(versioned(new URL('dist/builds.json', base))),
-  ]);
-  return { tools, builds: manifest.builds ?? {} };
+function defaultBase(): string {
+  // The site's own bundle is served from terrarium's web/ directory.
+  return VERSION ? new URL('./', import.meta.url).href : DEFAULT_BASE;
 }
 
-// Pick a tool and a build, falling back to the defaults. `names` lists the
-// tool's builds, its default first.
+/** Pick a tool and a build at `base`, falling back to the defaults. */
 export async function chooseBuild({
-  base = DEFAULT_BASE,
-  tool: toolName,
+  base = defaultBase(),
+  tool,
   ref,
-} = {}) {
-  const { tools, builds: allBuilds } = await catalog(base);
-  toolName ??= Object.keys(tools)[0];
-  const tool = tools[toolName];
-  if (!tool)
-    throw new Error(
-      `unknown tool "${toolName}"; known: ${Object.keys(tools).join(', ')}`,
-    );
-  const builds = allBuilds[toolName] ?? {};
-  const names = Object.keys(builds).sort((a, b) =>
-    a === tool.default ? -1 : b === tool.default ? 1 : a.localeCompare(b),
-  );
-  if (!names.length)
-    throw new Error(`no builds of ${toolName} are published yet`);
-  ref ??= names[0];
-  if (!builds[ref])
-    throw new Error(
-      `no build "${ref}" of ${toolName}; published: ${names.join(', ')}`,
-    );
-  return { toolName, tool, ref, build: builds[ref], builds, names };
+}: {
+  base?: string;
+  tool?: string;
+  ref?: string;
+} = {}): Promise<Choice> {
+  return choose(await catalog(base, VERSION), { tool, ref });
 }
 
-export function describe(name, build) {
-  const commit = build.source?.commit?.slice(0, 8);
-  return commit ? `${name} (${commit})` : name;
-}
-
-function loadScript(src) {
+function loadScript(src: string): Promise<void> {
   return new Promise((resolve, reject) => {
     const script = document.createElement('script');
     script.src = src;
-    script.onload = resolve;
+    script.onload = () => resolve();
     script.onerror = () => reject(new Error(`failed to load ${src}`));
     document.head.append(script);
   });
 }
 
 // Every build's script assigns the same global, `Module`: load one at a time.
-let scriptQueue = Promise.resolve();
-const toolCache = new Map();
+let scriptQueue: Promise<unknown> = Promise.resolve();
+const toolCache = new Map<string, Promise<Tool>>();
 
 // The tool's script runs from a blob: URL. Its pthread workers load the URL
 // the script was loaded from, and a worker cannot start from another origin's
@@ -118,38 +107,46 @@ const toolCache = new Map();
 // The build's files are versioned by when it was built, not by the deploy, so
 // a deploy that does not rebuild it keeps them cached, and a rebuild never
 // pairs a new .wasm with an old .js.
-function loadTool(base, toolName, ref, build) {
+function loadTool(
+  base: string,
+  toolName: string,
+  ref: string,
+  build: BuildInfo,
+): Promise<Tool> {
   const dir = new URL(`dist/${toolName}/${ref}/`, base);
   const version = build.built_at ?? build.source?.commit ?? VERSION;
   const key = versioned(dir, version);
-  if (!toolCache.has(key)) {
-    toolCache.set(
-      key,
-      (async () => {
-        const [wasmModule, source] = await Promise.all([
-          WebAssembly.compileStreaming(
-            fetch(versioned(new URL(`${toolName}.wasm`, dir), version)),
-          ),
-          fetch(versioned(new URL(`${toolName}.js`, dir), version)).then(
-            (response) => {
-              if (!response.ok)
-                throw new Error(`${response.url}: HTTP ${response.status}`);
-              return response.text();
-            },
-          ),
-        ]);
-        const url = URL.createObjectURL(
-          new Blob([source], { type: 'text/javascript' }),
-        );
-        const factory = scriptQueue
-          .then(() => loadScript(url))
-          .then(() => globalThis.Module);
-        scriptQueue = factory.catch(() => {});
-        return { name: toolName, factory: await factory, wasmModule };
-      })(),
-    );
+  let pending = toolCache.get(key);
+  if (!pending) {
+    pending = (async () => {
+      const [wasmModule, source] = await Promise.all([
+        WebAssembly.compileStreaming(
+          fetch(versioned(new URL(`${toolName}.wasm`, dir), version)),
+        ),
+        fetch(versioned(new URL(`${toolName}.js`, dir), version)).then(
+          (response) => {
+            if (!response.ok) {
+              throw new Error(`${response.url}: HTTP ${response.status}`);
+            }
+            return response.text();
+          },
+        ),
+      ]);
+      const url = URL.createObjectURL(
+        new Blob([source], { type: 'text/javascript' }),
+      );
+      const factory = scriptQueue
+        .then(() => loadScript(url))
+        .then(() => (globalThis as { Module?: Tool['factory'] }).Module);
+      scriptQueue = factory.catch(() => {});
+      const loaded = await factory;
+      if (!loaded) throw new Error(`${toolName}.js did not define Module`);
+      return { name: toolName, factory: loaded, wasmModule };
+    })();
+    toolCache.set(key, pending);
+    pending.catch(() => toolCache.delete(key));
   }
-  return toolCache.get(key);
+  return pending;
 }
 
 const STYLE = `
@@ -157,33 +154,40 @@ const STYLE = `
   .term { height: 100%; box-sizing: border-box; overflow: hidden; padding: 8px 0 8px 12px; }
 `;
 
+/**
+ * A terminal running one build of a CLI. See the attributes above; use
+ * `ready`, `run()` and `transcript`, or listen for `terrarium-ready`,
+ * `terrarium-exit` and `terrarium-error`.
+ */
 export class TerrariumTerminal extends HTMLElement {
-  #ready = null;
-  #term = null;
-  #session = null;
+  #ready: Promise<ReadyDetail> | null = null;
+  #term: Terminal | null = null;
+  #session: Session | null = null;
   #line = '';
   #busy = false;
-  #chain = Promise.resolve();
-  #history = [];
+  #chain: Promise<unknown> = Promise.resolve();
+  #history: string[] = [];
   #historyIndex = 0;
   #transcript = '';
   #output = '';
 
-  get ready() {
+  /** Resolves once the tool is loaded and the prompt is shown. */
+  get ready(): Promise<ReadyDetail> {
     return (
       this.#ready ??
       Promise.reject(new Error('the element is not connected yet'))
     );
   }
 
-  get transcript() {
+  /** Everything printed so far. */
+  get transcript(): string {
     return this.#transcript;
   }
 
-  connectedCallback() {
+  connectedCallback(): void {
     if (this.#ready) return;
     const root = this.attachShadow({ mode: 'open' });
-    root.innerHTML = `<link rel="stylesheet" href="${XTERM_CSS}" crossorigin="anonymous"><style>${STYLE}</style><div class="term"></div>`;
+    root.innerHTML = `<style>${xtermCss}${STYLE}</style><div class="term"></div>`;
     const term = new Terminal({
       convertEol: true,
       cursorBlink: true,
@@ -193,20 +197,22 @@ export class TerrariumTerminal extends HTMLElement {
     });
     const fit = new FitAddon();
     term.loadAddon(fit);
-    const container = root.querySelector('.term');
+    const container = root.querySelector('.term') as HTMLElement;
     term.open(container);
     new ResizeObserver(() => {
       if (container.clientWidth && container.clientHeight) fit.fit();
     }).observe(container);
-    term.onData((data) => this.#onData(data));
+    term.onData((data) => {
+      this.#onData(data);
+    });
     this.#term = term;
 
-    this.#ready = this.#boot();
+    this.#ready = this.#boot(term);
     this.#ready.catch(() => {});
   }
 
-  // Type a command into the terminal and run it, after the ones before it.
-  run(command) {
+  /** Type a command into the terminal and run it, after the ones before it. */
+  run(command: string): Promise<ExitDetail> {
     return this.ready.then(() => {
       const result = this.#chain.then(() => this.#type(command));
       this.#chain = result.catch(() => {});
@@ -214,14 +220,17 @@ export class TerrariumTerminal extends HTMLElement {
     });
   }
 
-  #emit(type, detail) {
+  override focus(): void {
+    this.#term?.focus();
+  }
+
+  #emit<T>(type: string, detail: T): void {
     this.dispatchEvent(
       new CustomEvent(type, { detail, bubbles: true, composed: true }),
     );
   }
 
-  async #boot() {
-    const term = this.#term;
+  async #boot(term: Terminal): Promise<ReadyDetail> {
     try {
       if (!globalThis.crossOriginIsolated) {
         throw new Error(
@@ -230,7 +239,7 @@ export class TerrariumTerminal extends HTMLElement {
       }
       const started = performance.now();
       const base = new URL(
-        this.getAttribute('base') ?? DEFAULT_BASE,
+        this.getAttribute('base') ?? defaultBase(),
         document.baseURI,
       ).href;
       const { toolName, tool, ref, build } = await chooseBuild({
@@ -245,14 +254,17 @@ export class TerrariumTerminal extends HTMLElement {
       const [loaded, files] = await Promise.all([
         loadTool(base, toolName, ref, build),
         fixture
-          ? fetchJson(
-              versioned(new URL(`dist/fixtures/${fixture}.json`, base)),
+          ? fetchJson<Record<string, string>>(
+              versioned(
+                new URL(`dist/fixtures/${fixture}.json`, base),
+                VERSION,
+              ),
             ).then(Object.entries)
           : [],
       ]);
       const cwd =
         this.getAttribute('cwd') ?? (fixture ? tool.cwd : null) ?? '/work';
-      this.#session = new Session({
+      const session = new Session({
         tool: loaded,
         write: (text) => {
           this.#transcript += text;
@@ -261,7 +273,8 @@ export class TerrariumTerminal extends HTMLElement {
         },
         cwd,
       });
-      this.#session.seed(files);
+      session.seed(files);
+      this.#session = session;
 
       term.write('\x1b[2K\r');
       term.writeln(
@@ -271,7 +284,7 @@ export class TerrariumTerminal extends HTMLElement {
       term.writeln('');
       this.#prompt();
 
-      const info = {
+      const info: ReadyDetail = {
         tool: toolName,
         ref,
         commit: build.source?.commit ?? null,
@@ -279,28 +292,28 @@ export class TerrariumTerminal extends HTMLElement {
       };
       this.#emit('terrarium-ready', info);
       for (const command of (this.getAttribute('run') ?? '').split('\n')) {
-        if (command.trim()) this.run(command.trim());
+        if (command.trim()) void this.run(command.trim());
       }
       return info;
     } catch (error) {
-      const message = String(error?.message ?? error);
+      const message = String((error as Error)?.message ?? error);
       term.write(`\x1b[2K\r\x1b[31m${message}\x1b[0m\r\n`);
-      this.#emit('terrarium-error', { message });
+      this.#emit<ErrorDetail>('terrarium-error', { message });
       throw error;
     }
   }
 
-  #prompt() {
-    this.#term.write(
-      `\x1b[32mweb_user\x1b[0m:\x1b[34m${this.#session.cwd}\x1b[0m$ `,
+  #prompt(): void {
+    this.#term?.write(
+      `\x1b[32mweb_user\x1b[0m:\x1b[34m${this.#session?.cwd}\x1b[0m$ `,
     );
   }
 
-  async #execute(command) {
+  async #execute(command: string): Promise<ExitDetail> {
     this.#busy = true;
-    this.#term.write('\r\n');
-    let result = { command, code: 0, output: '' };
-    if (command.trim()) {
+    this.#term?.write('\r\n');
+    let result: ExitDetail = { command, code: 0, output: '' };
+    if (command.trim() && this.#session) {
       this.#history.push(command);
       this.#historyIndex = this.#history.length;
       this.#output = '';
@@ -313,25 +326,26 @@ export class TerrariumTerminal extends HTMLElement {
     return result;
   }
 
-  async #type(command) {
+  async #type(command: string): Promise<ExitDetail> {
     while (this.#busy) await new Promise((r) => setTimeout(r, 50));
     this.#busy = true;
     this.#replaceLine('');
     for (const ch of command) {
-      this.#term.write(ch);
+      this.#term?.write(ch);
       await new Promise((r) => setTimeout(r, 25));
     }
     return this.#execute(command);
   }
 
-  #replaceLine(text) {
-    this.#term.write('\b \b'.repeat(this.#line.length));
+  #replaceLine(text: string): void {
+    this.#term?.write('\b \b'.repeat(this.#line.length));
     this.#line = text;
-    this.#term.write(text);
+    this.#term?.write(text);
   }
 
-  async #onData(data) {
-    if (this.#busy || !this.#session) return;
+  async #onData(data: string): Promise<void> {
+    const term = this.#term;
+    if (this.#busy || !this.#session || !term) return;
     if (data === '\r') {
       const command = this.#line;
       this.#line = '';
@@ -339,29 +353,30 @@ export class TerrariumTerminal extends HTMLElement {
     } else if (data === '\x7f') {
       if (this.#line.length) {
         this.#line = this.#line.slice(0, -1);
-        this.#term.write('\b \b');
+        term.write('\b \b');
       }
     } else if (data === '\x1b[A') {
-      if (this.#historyIndex > 0)
-        this.#replaceLine(this.#history[--this.#historyIndex]);
+      if (this.#historyIndex > 0) {
+        this.#replaceLine(this.#history[--this.#historyIndex] ?? '');
+      }
     } else if (data === '\x1b[B') {
-      if (this.#historyIndex < this.#history.length)
+      if (this.#historyIndex < this.#history.length) {
         this.#replaceLine(this.#history[++this.#historyIndex] ?? '');
+      }
     } else if (data === '\x03') {
       this.#line = '';
-      this.#term.write('^C\r\n');
+      term.write('^C\r\n');
       this.#prompt();
     } else if (!data.startsWith('\x1b')) {
       this.#line += data;
-      this.#term.write(data);
+      term.write(data);
     }
-  }
-
-  focus() {
-    this.#term?.focus();
   }
 }
 
-if (!customElements.get('terrarium-terminal')) {
+if (
+  typeof customElements !== 'undefined' &&
+  !customElements.get('terrarium-terminal')
+) {
   customElements.define('terrarium-terminal', TerrariumTerminal);
 }
