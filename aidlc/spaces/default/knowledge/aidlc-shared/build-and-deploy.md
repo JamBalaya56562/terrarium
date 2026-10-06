@@ -17,9 +17,9 @@ it appends `scripts/vendor-patched.sh`'s `[patch]` block to its
 `Cargo.toml`, patches the toolchain's std, and builds release with
 threads. `scripts/stage-web.sh aube <name> <out>` then copies the build
 to `web/dist/aube/<name>/` and records it in `web/dist/builds.json`;
-`scripts/resolve-aube-ref.sh <ref>` turns a branch, tag, commit or
-`pr-<n>` into the name and the commit. CI runs the same scripts. Two
-things bit on the first try:
+`scripts/resolve-ref.sh <tool> [<ref>]` turns a branch, tag, commit or
+`pr-<n>` of a tool in `web/tools.json` into the name and the commit. CI
+runs the same scripts. Two things bit on the first try:
 
 - **Sharing the target directory** between the baseline and the fix
   reuses the dependencies, but cargo also reused the baseline's compiled
@@ -33,15 +33,32 @@ things bit on the first try:
   with `0xC0000142` and the build is lost. On this machine a release
   build of aube takes 26–41 minutes; run it where nothing will kill it.
 
+## Building pitchfork
+
+`scripts/build-pitchfork.sh <pitchfork source> <out>` does the same for
+pitchfork, after applying the newest `patches/tools/pitchfork-*.patch` to
+the source. That patch is written against a release (`v2.29.0`, the
+default build in `web/tools.json`); another ref may need it updated. It
+skips `build.rs`'s check for the web UI's files, which the browser build
+never serves, and gives Emscripten the stubs pitchfork already has for
+platforms without `initgroups`, interface lookup or boot registration.
+The crates it pulls in needed their own patches: `ring` (getrandom),
+`if-addrs` (as on illumos), `interprocess` (`SO_PEERCRED`), `dirs` (the
+home directory, which the wasm32 stub left empty) and `reqwest` (the
+native backend, as its 0.13.5 does for every non-browser wasm32 target).
+`vendor-patched.sh` patches two locked versions of one crate (`dirs` 6
+and 7) under a second key with `package`.
+
 ## Deployment
 
 `.github/workflows/pages.yml` deploys the site with `actions/deploy-pages`
 (the Pages source is "GitHub Actions", set in `infra/github/main.tf`). The
 site is `web/`, the `web/terrarium.mjs` that `scripts/assemble-pages.sh`
 bundles from `packages/terrarium`, the fixtures, and the builds. Run by
-hand with a `ref` the workflow builds that aube; every day it builds
-`main` if `main` has moved; a push to `main` that touches the site
-redeploys it.
+hand with a tool and a `ref` the workflow builds that ref; every day it
+builds each tool's `default` from `web/tools.json` if it has moved; a push
+to `main` that touches the site redeploys it. Builds run as a matrix, and
+one that fails does not keep the others off the `builds` branch.
 
 The builds are build output and stay out of `main`: they live on the
 `builds` branch (`builds.json` and `<tool>/<name>/`), which the workflow

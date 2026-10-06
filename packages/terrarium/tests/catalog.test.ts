@@ -26,11 +26,39 @@ const CATALOG: Catalog = {
 };
 
 describe('choose', () => {
+  test('selects pitchfork with its own default, fixture and build', () => {
+    const all: Catalog = {
+      tools: {
+        ...CATALOG.tools,
+        pitchfork: {
+          default: 'v2.29.0',
+          fixture: 'pitchfork-basic',
+          cwd: '/work/app',
+        },
+      },
+      builds: {
+        ...CATALOG.builds,
+        pitchfork: { 'v2.29.0': { source: { commit: 'pitchfork-commit' } } },
+      },
+    };
+    const choice = choose(all, { tool: 'pitchfork' });
+    expect(choice.toolName).toBe('pitchfork');
+    expect(choice.ref).toBe('v2.29.0');
+    expect(choice.tool.fixture).toBe('pitchfork-basic');
+    expect(choice.tool.cwd).toBe('/work/app');
+    expect(choice.build.source?.commit).toBe('pitchfork-commit');
+    expect(() => choose(all, { tool: 'pitchfork', ref: 'main' })).toThrow(
+      'no build "main" of pitchfork; published: v2.29.0',
+    );
+    expect(choose(all, { tool: 'aube' }).ref).toBe('main');
+  });
+
   test('defaults to the first tool and its default build, listed first', () => {
     const choice = choose(CATALOG);
     expect(choice.toolName).toBe('aube');
     expect(choice.ref).toBe('main');
     expect(choice.names).toEqual(['main', 'pr-1645', 'v2.6.1']);
+    expect(choice.catalog).toBe(CATALOG);
   });
 
   test('picks the build asked for', () => {

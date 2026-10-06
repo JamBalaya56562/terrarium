@@ -47,10 +47,25 @@ const notifyParent = (message) => {
   if (targetOrigin) window.parent.postMessage(message, targetOrigin);
 };
 
-function showHeader({ toolName, tool, ref, build, builds, names }) {
+function showHeader({ catalog, toolName, tool, ref, build, builds, names }) {
   document.title = `terrarium · ${toolName} ${ref}`;
   document.getElementById('title').textContent =
     `terrarium · ${tool.label ?? toolName}`;
+
+  // The tools with a published build; another one starts at its default.
+  const tools = document.getElementById('tool');
+  for (const [name, info] of Object.entries(catalog.tools)) {
+    if (!Object.keys(catalog.builds[name] ?? {}).length) continue;
+    tools.append(
+      new Option(info.label ?? name, name, false, name === toolName),
+    );
+  }
+  tools.hidden = tools.options.length < 2;
+  tools.addEventListener('change', () => {
+    params.set('tool', tools.value);
+    for (const name of ['ref', 'fixture', 'cwd', 'run']) params.delete(name);
+    location.search = params.toString();
+  });
 
   const select = document.getElementById('build');
   for (const name of names)

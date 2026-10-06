@@ -14,7 +14,9 @@
 
 **terrarium** runs one CLI tool in the browser, from a terminal, compiled
 to WebAssembly on top of only the system calls that tool needs — no
-emulator, no kernel. The first tool is [aube](https://github.com/aubepkg/aube).
+emulator, no kernel. The tools are [aube](https://github.com/aubepkg/aube)
+and [pitchfork](https://github.com/jdx/pitchfork) (only its commands that need
+no supervisor), listed in [`web/tools.json`](web/tools.json).
 
 - **A CLI on the web, nothing more.** terrarium makes the CLI usable on a
   page: one terminal running one build. Comparing a build with a fix, and
@@ -67,7 +69,7 @@ If unsure whether an action crosses the line, stop and ask.
 | `packages/terrarium/` | The npm/JSR package: the element, the Session, unit tests (`tests/`), browser tests (`e2e/`) |
 | `web/` | The standalone page (also the iframe entry) |
 | `runtime/` | Emscripten additions (`syscalls.c`, `libterrarium.js`) and the Node.js runner |
-| `patches/` | Patches to crates and to Rust's std that let the tools build for Emscripten |
+| `patches/` | Patches to crates, to Rust's std (`toolchain/`) and to the tools themselves (`tools/`) that let the tools build for Emscripten |
 | `scripts/` | Build, staging and site assembly scripts, called by CI and mise |
 | `fixtures/` | Projects preloaded into the terminal, and recorded sessions |
 | `infra/github/` | OpenTofu for this repository's settings, ruleset and labels |
@@ -135,9 +137,12 @@ PR from a fork, run `mise run lint:all:fix` locally.
 
 ### 4.8 Builds, Pages and publishing
 
-- **aube builds** are made by `.github/workflows/pages.yml` (by hand with
-  a ref, or daily for aube's `main`) and stored on the `builds` branch,
-  rewritten as one commit. They never go on `main`.
+- **Builds** of each tool in `web/tools.json` are made by
+  `.github/workflows/pages.yml` with `scripts/build-<tool>.sh` (by hand
+  with a tool and a ref, or daily for each tool's `default`) and stored on
+  the `builds` branch, rewritten as one commit. They never go on `main`.
+- **A change to a tool's own code** is a patch in `patches/tools/`, rather than
+  an upstream change; its build script applies the newest one.
 - **The site** is assembled from `main` plus those builds and deployed
   with `actions/deploy-pages`.
 - **The package** is published to npm and JSR by

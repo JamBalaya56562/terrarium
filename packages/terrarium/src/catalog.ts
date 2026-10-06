@@ -31,6 +31,8 @@ export interface Catalog {
 }
 
 export interface Choice {
+  /** Every tool in tools.json, and the builds published for each. */
+  catalog: Catalog;
   toolName: string;
   tool: ToolInfo;
   ref: string;
@@ -81,9 +83,10 @@ export async function catalog(
 
 /** Pick a tool and a build from a catalog, falling back to the defaults. */
 export function choose(
-  { tools, builds: allBuilds }: Catalog,
+  all: Catalog,
   { tool: wanted, ref: wantedRef }: { tool?: string; ref?: string } = {},
 ): Choice {
+  const { tools, builds: allBuilds } = all;
   const toolName = wanted ?? Object.keys(tools)[0];
   const tool = toolName === undefined ? undefined : tools[toolName];
   if (toolName === undefined || !tool) {
@@ -105,7 +108,7 @@ export function choose(
       `no build "${ref}" of ${toolName}; published: ${names.join(', ')}`,
     );
   }
-  return { toolName, tool, ref, build, builds, names };
+  return { catalog: all, toolName, tool, ref, build, builds, names };
 }
 
 /** `main (259cd05f)`: a build's name and short commit. */

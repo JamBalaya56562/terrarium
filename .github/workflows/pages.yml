@@ -1,9 +1,12 @@
-# Build aube for the browser terminal and publish the site on GitHub Pages.
+# Build the tools for the browser terminal and publish the site on GitHub
+# Pages. The tools are the keys of web/tools.json; each is built by
+# scripts/build-<tool>.sh.
 #
-# - Run it by hand with a ref (a branch, a tag, a commit, or pr-<n>) to build
-#   that aube and add it to the page as ?ref=<name>. Without a ref it only
-#   redeploys the site.
-# - Every day it builds aube's main, when main has moved.
+# - Run it by hand with a tool and a ref (a branch, a tag, a commit, or
+#   pr-<n>) to build that ref and add it to the page as ?tool=<tool>&ref=<name>.
+#   Without a ref it only redeploys the site.
+# - Every day it builds each tool's default ref (its `default` in tools.json),
+#   when that has moved.
 # - A push to main that changes the site redeploys it.
 #
 # Builds live on the `builds` branch (builds.json and <tool>/<name>/),
@@ -15,8 +18,13 @@ name: Pages
 on:
   workflow_dispatch:
     inputs:
+      tool:
+        description: "Tool to build, a key of web/tools.json."
+        type: choice
+        options: [aube, pitchfork]
+        default: aube
       ref:
-        description: "aube ref to build: branch, tag, commit, or pr-<number>. Empty: only redeploy the site."
+        description: "Ref to build: branch, tag, commit, or pr-<number>. Empty: only redeploy the site."
         required: false
         default: ""
       force:
@@ -44,15 +52,13 @@ permissions:
   contents: read
 
 jobs:
+  # The builds to make, as a JSON list of resolve-ref.sh outputs, leaving out
+  # the ones already published at the same commit.
   resolve:
     if: github.repository_owner == 'aletheia-works'
     runs-on: ubuntu-latest
     outputs:
-      build: ${{ steps.check.outputs.build }}
-      name: ${{ steps.resolve.outputs.name }}
-      ref: ${{ steps.resolve.outputs.ref }}
-      commit: ${{ steps.resolve.outputs.commit }}
-      pr: ${{ steps.resolve.outputs.pr }}
+      builds: ${{ steps.resolve.outputs.builds }}
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
@@ -60,36 +66,53 @@ jobs:
       - id: resolve
         env:
           GH_TOKEN: ${{ github.token }}
-          REF: ${{ github.event_name == 'schedule' && 'main' || inputs.ref }}
-        run: |
-          if [ -n "$REF" ]; then scripts/resolve-aube-ref.sh "$REF" | tee -a "$GITHUB_OUTPUT"; fi
-      - id: check
-        env:
-          NAME: ${{ steps.resolve.outputs.name }}
-          COMMIT: ${{ steps.resolve.outputs.commit }}
+          EVENT: ${{ github.event_name }}
+          TOOL: ${{ inputs.tool }}
+          REF: ${{ inputs.ref }}
           FORCE: ${{ inputs.force && 'true' || 'false' }}
         run: |
-          if [ -z "$NAME" ]; then echo build=false >>"$GITHUB_OUTPUT"; exit 0; fi
-          scripts/load-builds.sh >/dev/null
-          published=$(jq -r --arg n "$NAME" '.builds.aube[$n].source.commit // empty' web/dist/builds.json 2>/dev/null || true)
-          if [ "$published" = "$COMMIT" ] && [ "$FORCE" != true ]; then
-            echo "$NAME is already published at $COMMIT"
-            echo build=false >>"$GITHUB_OUTPUT"
+          if [ "$EVENT" = schedule ]; then
+            wanted=$(jq -r 'keys[]' web/tools.json)
+          elif [ -n "$REF" ]; then
+            wanted="$TOOL"
           else
-            echo build=true >>"$GITHUB_OUTPUT"
+            wanted=
           fi
+          scripts/load-builds.sh >/dev/null
+          builds='[]'
+          for tool in $wanted; do
+            # Without a ref, resolve-ref.sh takes the tool's default.
+            build=$(scripts/resolve-ref.sh "$tool" ${REF:+"$REF"} |
+              jq -Rn '[inputs | capture("^(?<key>[^=]+)=(?<value>.*)$")] | from_entries')
+            name=$(jq -r .name <<<"$build")
+            commit=$(jq -r .commit <<<"$build")
+            published=$(jq -r --arg t "$tool" --arg n "$name" '.builds[$t][$n].source.commit // empty' web/dist/builds.json 2>/dev/null || true)
+            if [ "$published" = "$commit" ] && [ "$FORCE" != true ]; then
+              echo "$tool $name is already published at $commit"
+            else
+              builds=$(jq -c --argjson b "$build" '. + [$b]' <<<"$builds")
+            fi
+          done
+          echo "builds=$builds" | tee -a "$GITHUB_OUTPUT"
 
   build:
     needs: resolve
-    if: needs.resolve.outputs.build == 'true'
+    if: needs.resolve.outputs.builds != '[]'
+    name: build (${{ matrix.tool }} ${{ matrix.name }})
     runs-on: ubuntu-latest
     timeout-minutes: 240
+    strategy:
+      fail-fast: false
+      matrix:
+        include: ${{ fromJSON(needs.resolve.outputs.builds) }}
     env:
       EMSDK: ${{ github.workspace }}/../emsdk
       EMSDK_VERSION: "6.0.10"
       CARGO_TARGET_DIR: ${{ github.workspace }}/../target
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
       - name: Install Ninja
         run: sudo apt-get update -qq && sudo apt-get install -y -qq ninja-build
       - name: Cache emsdk
@@ -108,12 +131,13 @@ jobs:
           # The prebuilt std is not linked (build-std replaces it), but build scripts
           # such as indexmap 1.x probe for std with it.
           rustup toolchain install "${toolchain#rust-std-}" --profile minimal --component rust-src --target wasm32-unknown-emscripten
-      - name: Download aube ${{ needs.resolve.outputs.ref }}
+      - name: Download ${{ matrix.tool }} ${{ matrix.ref }}
         env:
-          COMMIT: ${{ needs.resolve.outputs.commit }}
+          REPO: ${{ matrix.repo }}
+          COMMIT: ${{ matrix.commit }}
         run: |
-          mkdir -p ../aube
-          curl -fsSL "https://codeload.github.com/aubepkg/aube/tar.gz/$COMMIT" | tar -xz -C ../aube --strip-components=1
+          mkdir -p ../src
+          curl -fsSL "https://codeload.github.com/$REPO/tar.gz/$COMMIT" | tar -xz -C ../src --strip-components=1
       # Restored and saved separately, so that a failed build still saves the
       # compiled dependencies for the next attempt.
       - name: Restore cargo cache
@@ -122,10 +146,12 @@ jobs:
           path: |
             ~/.cargo/registry
             ${{ env.CARGO_TARGET_DIR }}
-          key: cargo-${{ runner.os }}-${{ hashFiles('patches/**') }}-${{ needs.resolve.outputs.commit }}
-          restore-keys: cargo-${{ runner.os }}-${{ hashFiles('patches/**') }}-
+          key: cargo-${{ matrix.tool }}-${{ runner.os }}-${{ hashFiles('patches/**') }}-${{ matrix.commit }}
+          restore-keys: cargo-${{ matrix.tool }}-${{ runner.os }}-${{ hashFiles('patches/**') }}-
       - name: Build
-        run: scripts/build-aube.sh ../aube "$RUNNER_TEMP/out"
+        env:
+          TOOL: ${{ matrix.tool }}
+        run: '"scripts/build-$TOOL.sh" ../src "$RUNNER_TEMP/out"'
       - name: Save cargo cache
         if: always()
         uses: actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
@@ -133,18 +159,25 @@ jobs:
           path: |
             ~/.cargo/registry
             ${{ env.CARGO_TARGET_DIR }}
-          key: cargo-${{ runner.os }}-${{ hashFiles('patches/**') }}-${{ needs.resolve.outputs.commit }}-${{ github.run_id }}-${{ github.run_attempt }}
+          key: cargo-${{ matrix.tool }}-${{ runner.os }}-${{ hashFiles('patches/**') }}-${{ matrix.commit }}-${{ github.run_id }}-${{ github.run_attempt }}
+      - name: Record what was built
+        env:
+          BUILD: ${{ toJSON(matrix) }}
+        run: jq . <<<"$BUILD" >"$RUNNER_TEMP/out/build.json"
       - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
-          name: aube-${{ needs.resolve.outputs.name }}
+          name: build-${{ matrix.tool }}-${{ matrix.name }}
           path: ${{ runner.temp }}/out/
           retention-days: 7
 
-  # Add the new build to the `builds` branch, starting again from the branch
-  # if another run stored a build in between.
+  # Add the new builds to the `builds` branch, starting again from the branch
+  # if another run stored a build in between. A build that failed is left
+  # out; the others are still stored.
   store:
     needs: [resolve, build]
-    if: github.repository_owner == 'aletheia-works' && needs.build.result == 'success'
+    if: >-
+      always() && github.repository_owner == 'aletheia-works' &&
+      (needs.build.result == 'success' || needs.build.result == 'failure')
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -155,28 +188,39 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
         with:
-          name: aube-${{ needs.resolve.outputs.name }}
-          path: ${{ runner.temp }}/out
-      - name: Store the build on the builds branch
-        env:
-          NAME: ${{ needs.resolve.outputs.name }}
-          TERRARIUM_REF: ${{ needs.resolve.outputs.ref }}
-          TERRARIUM_COMMIT: ${{ needs.resolve.outputs.commit }}
-          TERRARIUM_PR: ${{ needs.resolve.outputs.pr }}
-          TERRARIUM_SOURCE_URL: https://github.com/aubepkg/aube
+          pattern: build-*
+          path: ${{ runner.temp }}/builds
+      - name: Store the builds on the builds branch
         run: |
+          shopt -s nullglob
+          dirs=("$RUNNER_TEMP"/builds/*/)
+          if [ ${#dirs[@]} -eq 0 ]; then echo "no build succeeded"; exit 0; fi
           git config user.name "github-actions[bot]"
           git config user.email "41898233+github-actions[bot]@users.noreply.github.com"
           for attempt in 1 2 3 4 5; do
             base=$(scripts/load-builds.sh | sed -n 's/^base=//p')
-            scripts/stage-web.sh aube "$NAME" "$RUNNER_TEMP/out"
+            stored=()
+            for dir in "${dirs[@]}"; do
+              build=$dir/build.json
+              tool=$(jq -r .tool "$build")
+              name=$(jq -r .name "$build")
+              commit=$(jq -r .commit "$build")
+              TERRARIUM_REF=$(jq -r .ref "$build") \
+                TERRARIUM_COMMIT=$commit \
+                TERRARIUM_PR=$(jq -r .pr "$build") \
+                TERRARIUM_SOURCE_URL=https://github.com/$(jq -r .repo "$build") \
+                scripts/stage-web.sh "$tool" "$name" "$dir"
+              stored+=("$tool $name (${commit::8})")
+            done
             rm -rf web/dist/fixtures
             export GIT_INDEX_FILE=$RUNNER_TEMP/builds-index
             rm -f "$GIT_INDEX_FILE"
             git --work-tree=web/dist add --all
             tree=$(git write-tree)
             unset GIT_INDEX_FILE
-            commit=$(git commit-tree "$tree" -m "Store aube $NAME (${TERRARIUM_COMMIT::8})")
+            stored_summary=$(IFS=,; echo "${stored[*]}")
+            message="Store ${stored_summary//,/, }"
+            commit=$(git commit-tree "$tree" -m "$message")
             if git push --force-with-lease="builds:$base" origin "$commit:refs/heads/builds"; then
               exit 0
             fi
@@ -188,7 +232,7 @@ jobs:
     needs: [resolve, build, store]
     if: >-
       always() && needs.resolve.result == 'success' &&
-      (needs.build.result == 'success' || needs.build.result == 'skipped') &&
+      needs.build.result != 'cancelled' &&
       (needs.store.result == 'success' || needs.store.result == 'skipped')
     runs-on: ubuntu-latest
     steps:
@@ -218,7 +262,7 @@ jobs:
   deploy:
     needs: site
     # Without always(), a job is skipped when any job upstream of it was, and
-    # build and store are skipped whenever no aube is built.
+    # build and store are skipped whenever nothing is built.
     if: always() && github.repository_owner == 'aletheia-works' && needs.site.result == 'success'
     runs-on: ubuntu-latest
     permissions:

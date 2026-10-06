@@ -1,0 +1,33 @@
+diff --git a/src/platform_check.rs b/src/platform_check.rs
+--- a/src/platform_check.rs
++++ b/src/platform_check.rs
+@@ -1,4 +1,4 @@
+-#[cfg(any(not(any(windows, unix)), target_os = "emscripten"))]
++#[cfg(not(any(windows, unix)))]
+ compile_error!(
+     "Your target operating system is not supported by interprocess – check if yours is in the list \
+ of supported systems, and if not, please open an issue on the GitHub repository if you think that \
+diff --git a/src/os/unix/local_socket/peer_creds.rs b/src/os/unix/local_socket/peer_creds.rs
+--- a/src/os/unix/local_socket/peer_creds.rs
++++ b/src/os/unix/local_socket/peer_creds.rs
+@@ -161,5 +161,20 @@
+     SOL_LOCAL_LIBC_CRATE_DOESNT_HAVE_IT as CRED_OPTLEVEL,
+ };
+ 
++// Emscripten's musl has `struct ucred` and SO_PEERCRED; the libc crate does not.
++#[cfg(target_os = "emscripten")]
++#[derive(Copy, Clone, Debug)]
++#[repr(C)]
++#[allow(dead_code)]
++struct Inner {
++    pid: pid_t,
++    uid: uid_t,
++    gid: gid_t,
++}
++#[cfg(target_os = "emscripten")]
++use libc::SOL_SOCKET as CRED_OPTLEVEL;
++#[cfg(target_os = "emscripten")]
++const CRED_OPTNAME: c_int = 17;
++
+ #[allow(unused)]
+ const SOL_LOCAL_LIBC_CRATE_DOESNT_HAVE_IT: c_int = 0;

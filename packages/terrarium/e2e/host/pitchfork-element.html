@@ -1,0 +1,11 @@
+<!doctype html>
+<meta charset="utf-8" />
+<title>pitchfork element</title>
+<script type="module" src="http://localhost:8780/web/terrarium.mjs"></script>
+<script>
+  window.events = [];
+  for (const type of ['terrarium-ready', 'terrarium-exit', 'terrarium-error']) {
+    document.addEventListener(type, (event) => events.push({ type, ...event.detail }));
+  }
+</script>
+<terrarium-terminal tool="pitchfork" ref="v2.29.0"></terrarium-terminal>

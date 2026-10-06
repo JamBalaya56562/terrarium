@@ -10,10 +10,21 @@
 set -euo pipefail
 root=$(cd "$(dirname "$0")/.." && pwd)
 dist="$root/web/dist"
-mkdir -p "$dist/fixtures"
-if [ $# -ge 3 ]; then
+[[ $# -eq 0 || $# -eq 3 ]] ||
+  { echo 'usage: stage-web.sh [<tool> <name> <build dir>]' >&2; exit 1; }
+if [ $# -eq 3 ]; then
   tool=$1 name=$2
-  [[ $name =~ ^[A-Za-z0-9._-]+$ ]] || { echo "bad build name: $name" >&2; exit 1; }
+  jq -e --arg t "$tool" '.[$t] != null' "$root/web/tools.json" >/dev/null ||
+    { echo "unknown tool: $tool" >&2; exit 1; }
+  [[ $name =~ ^[A-Za-z0-9._-]+$ && $name != . && $name != .. ]] ||
+    { echo "bad build name: $name" >&2; exit 1; }
+  for extension in js wasm; do
+    [[ -f "$3/$tool.$extension" ]] ||
+      { echo "missing build artifact: $3/$tool.$extension" >&2; exit 1; }
+  done
+fi
+mkdir -p "$dist/fixtures"
+if [ $# -eq 3 ]; then
   mkdir -p "$dist/$tool/$name"
   cp "$3/$tool.js" "$3/$tool.wasm" "$dist/$tool/$name/"
 fi

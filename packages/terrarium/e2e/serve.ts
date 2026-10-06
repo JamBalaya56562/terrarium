@@ -21,7 +21,11 @@ Bun.serve({
     const headers: Record<string, string> = {
       'access-control-allow-origin': '*',
     };
-    const body = file(path);
+    // Serve the iframe host on the site's origin without browser interception.
+    const body =
+      pathname === '/pitchfork-iframe.html'
+        ? file(new URL('./host/pitchfork-iframe.html', import.meta.url))
+        : file(path);
     if (!(await body.exists())) {
       return new Response('not found', { status: 404, headers });
     }

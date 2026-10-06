@@ -1,0 +1,10 @@
+# pitchfork without its supervisor: version, the daemons in pitchfork.toml,
+# editing them, status and settings
+$ pitchfork --version
+$ pitchfork daemons
+$ pitchfork daemons add db --run "postgres -D data"
+$ pitchfork daemons remove worker
+$ cat pitchfork.toml
+$ pitchfork status api
+$ pitchfork settings set general.interval 5s
+$ pitchfork settings get general.interval

@@ -22,16 +22,17 @@ start faster and ship smaller than a general one.
 
 ## Status
 
-The first target is [aube](https://github.com/aubepkg/aube), a Node.js
-package manager written in Rust: an offline `aube install` of a project
-with only local (`file:` / `link:`) dependencies, run from a terminal in
-the browser.
+The tools are [aube](https://github.com/aubepkg/aube), a Node.js package
+manager written in Rust, and [pitchfork](https://github.com/jdx/pitchfork)
+v2.29.0. aube runs an offline `install` with local (`file:` / `link:`)
+dependencies. pitchfork supports the commands that need no supervisor:
+version, daemon configuration and status, and settings.
 
 aube builds for `wasm32-unknown-emscripten` without changes to its own
-code, and its CLI runs in a browser terminal at
-<https://aletheia-works.github.io/terrarium/>. Builds are made by GitHub
-Actions: aube's `main` every day, and any branch, tag, commit or pull
-request on demand.
+code; pitchfork uses the patch in `patches/tools/`. The browser terminal
+is at <https://aletheia-works.github.io/terrarium/>. GitHub Actions checks
+each tool's default ref daily (`main` for aube, `v2.29.0` for pitchfork),
+and builds branches, tags, commits or pull requests on demand.
 
 Showing a bug next to its fix is [Vivarium](https://github.com/aletheia-works/vivarium)'s
 job, not terrarium's: Vivarium embeds two terrarium terminals, one per build.
@@ -43,11 +44,11 @@ page, or the page in an iframe. All three take the same settings:
 
 | Setting | Meaning | Default |
 | ------- | ------- | ------- |
-| `ref` | the build: `main`, a tag such as `v2.6.1`, `pr-<number>`, or a commit's first 12 characters | `main` |
+| `ref` | the build: `main`, a tag such as `v2.6.1`, `pr-<number>`, or a commit's first 12 characters | the tool's default: `main` for aube, `v2.29.0` for pitchfork |
 | `run` | commands to type once the terminal is ready | none |
-| `fixture` | the sample project preloaded into `/work`; empty for none | `aube-local-deps` |
-| `cwd` | the starting directory | `/work/app` with the fixture, `/work` without |
-| `tool` | the CLI | `aube` |
+| `fixture` | the sample project preloaded into `/work`; empty for none | `aube-local-deps` for aube, `pitchfork-basic` for pitchfork |
+| `cwd` | the starting directory | the tool's default, or `/work` without a fixture |
+| `tool` | the CLI: `aube` or `pitchfork` | `aube` |
 
 The published builds are listed in
 [`web/dist/builds.json`](https://aletheia-works.github.io/terrarium/web/dist/builds.json).
@@ -59,6 +60,10 @@ The tool uses threads, so every way needs a cross-origin isolated page
 <https://aletheia-works.github.io/terrarium/> with the settings as query
 parameters, `run` repeated for several commands:
 `?ref=pr-1645&run=aube%20install&run=aube%20list`.
+
+Use `?tool=pitchfork` for its default build and fixture. The page's tool
+selector starts a new terminal and clears `ref`, `fixture`, `cwd` and
+queued `run` commands when switching tools.
 
 ### An element
 
@@ -111,9 +116,10 @@ In a cross-origin isolated page an iframe from another origin needs
 it) or be a `credentialless` iframe, which only Chromium supports so
 far. The element has neither limit.
 
-To build another aube, run the **Pages** workflow with a `ref` (a branch,
-a tag, a commit, or `pr-<number>`). The build appears as `?ref=<name>`
-when the workflow finishes.
+To build another ref, run the **Pages** workflow with `tool` and `ref`
+(a branch, a tag, a commit, or `pr-<number>`). The build appears as
+`?tool=<tool>&ref=<name>` when the workflow finishes. A pitchfork ref
+must remain compatible with its versioned Emscripten patch.
 
 See [the design notes](aidlc/spaces/default/knowledge/aidlc-shared/design.md) for the plan and the open
 questions.

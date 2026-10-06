@@ -34,7 +34,7 @@
 <!-- Project-specific specialisation. -->
 
 - 公開は GitHub Pages（公開元は GitHub Actions、`actions/deploy-pages`）。サイトは `web/`、`packages/terrarium` から作るバンドル `web/terrarium.mjs`、fixture、ビルドで構成する。ビルドは成果物であり `main` にはコミットせず、`builds` ブランチに置く。
-- `.github/workflows/pages.yml` が、手動実行で任意の ref（ブランチ、タグ、コミット、`pr-<n>`）をビルドし、毎日 aube の `main` をビルドする。ビルドを追加するたびに `builds` ブランチを 1 コミットに書き換える。
+- `.github/workflows/pages.yml` が、手動実行で任意の ref（ブランチ、タグ、コミット、`pr-<n>`）をビルドし、毎日 `web/tools.json` の各ツールの `default`（aube は `main`、pitchfork は `v2.29.0`）をビルドする。ビルドを追加するたびに `builds` ブランチを 1 コミットに書き換える。
 - COOP/COEP ヘッダーは `web/coi-serviceworker.js` が付与する。ヘッダーを設定できないホストでも動くことが前提。
 - 詳細: `aidlc/spaces/default/knowledge/aidlc-shared/build-and-deploy.md`
 
@@ -49,7 +49,7 @@
 - 対象 CLI はソースから `wasm32-unknown-emscripten` 向けにコンパイルする（WASI ではなく Emscripten を選んだ理由は `knowledge/aidlc-shared/portability.md`）。
 - ランタイムは Emscripten 自身の JavaScript ランタイム。不足分は `runtime/`（`syscalls.c`、`libterrarium.js`）で補う。
 - スレッドは Emscripten pthreads（nightly Rust、`-Zbuild-std`、`+atomics`、`-sPROXY_TO_PTHREAD`）。
-- 依存クレートへの変更は `patches/` のパッチとして持ち、`scripts/vendor-patched.sh` で適用する。対象ツール自身のコードは変更しない。
+- 依存クレートへの変更は `patches/` のパッチとして持ち、`scripts/vendor-patched.sh` で適用する。対象ツール自身への変更が必要なときは、上流に入れるのではなく `patches/tools/<tool>-<version>.patch` として terrarium 側で持ち、`scripts/build-<tool>.sh` が適用する。
 - ブラウザ端末は xterm.js。端末要素と Session は `packages/terrarium`（TypeScript、npm パッケージ `@aletheia-works/terrarium`）にあり、Node.js 実行（`runtime/run-node.mjs`）とブラウザは同じ Session を共有する。
 
 ## Decided
@@ -64,7 +64,8 @@
 - DECIDED: terrarium の目的は CLI をウェブ上で使えるようにすることだけ。ページは 1 つの端末で 1 つのビルドを動かし、ビルドは URL（`?ref=`）で選ぶ。修正前後の並列表示やバグ再現の説明は Vivarium の役目で、terrarium には置かない (user correction, 2026-10-04)
 - DECIDED: 提供方法は複数用意する（リンク、カスタム要素 `<terrarium-terminal>`、iframe）。実装は要素 1 つにまとめ、ページと iframe はその上に作る。iframe の入口は残す (user decision, 2026-10-04)
 - DECIDED: 1 コマンド 1 プロセス、1 セッション 1 ディスク。各コマンドは新しいインスタンスで起動し、ディスクから初期化して終了時に書き戻す (design discussion, 2026-10-02)
-- DECIDED: 当面の非ゴールはネットワークアクセス、Node.js の実行（ライフサイクルスクリプト含む）、aube 以外のツール (design discussion, 2026-10-02)
+- DECIDED: 当面の非ゴールはネットワークアクセス、Node.js の実行（ライフサイクルスクリプト含む） (design discussion, 2026-10-02)
+- DECIDED: 2 つ目のツールとして pitchfork を入れる。対象はスーパーバイザーを要しないコマンド（`--version`、`daemons add`、`status`、`settings`、`config` など）で、デーモンの起動・監視は対象外。pitchfork 自身への変更は terrarium 側のパッチで持つ (user decision, 2026-10-04)
 - 未決事項は `knowledge/aidlc-shared/design.md` の Open questions を参照。議論ではなく計測で決める。
 
 ## Scope Overrides

@@ -31,12 +31,16 @@ aube list"></terrarium-terminal>
 
 | Attribute | Meaning | Default |
 | --------- | ------- | ------- |
-| `ref` | the build: `main`, a tag such as `v2.6.1`, `pr-<number>`, or a commit's first 12 characters | the tool's default, `main` for aube |
+| `ref` | the build: `main`, a tag such as `v2.6.1`, `pr-<number>`, or a commit's first 12 characters | the tool's default: `main` for aube, `v2.29.0` for pitchfork |
 | `run` | commands to type once the terminal is ready, one per line | none |
 | `fixture` | the sample project preloaded into `/work`; empty for none | the tool's |
 | `cwd` | the starting directory | the tool's, or `/work` |
-| `tool` | the CLI | `aube` |
+| `tool` | the CLI: `aube` or `pitchfork` | `aube` |
 | `base` | where terrarium's `web/` directory is served from | `https://aletheia-works.github.io/terrarium/web/` |
+
+For pitchfork v2.29.0, use `<terrarium-terminal tool="pitchfork">`.
+Its `pitchfork-basic` fixture starts in `/work/app`; version, daemon
+configuration and status, and settings work without a supervisor.
 
 ```js
 const terminal = document.querySelector('terrarium-terminal');

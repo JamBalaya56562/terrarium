@@ -1,0 +1,71 @@
+diff --git a/src/lib.rs b/src/lib.rs
+--- a/src/lib.rs
++++ b/src/lib.rs
+@@ -26,7 +26,8 @@
+     not(target_os = "freebsd"),
+     not(target_os = "netbsd"),
+     not(target_os = "openbsd"),
+-    not(target_os = "illumos")
++    not(target_os = "illumos"),
++    not(target_os = "emscripten")
+ ))]
+ mod posix_not_apple;
+ mod sockaddr;
+@@ -527,7 +528,8 @@
+     target_os = "freebsd",
+     target_os = "netbsd",
+     target_os = "openbsd",
+-    target_os = "illumos"
++    target_os = "illumos",
++    target_os = "emscripten"
+ )))]
+ #[cfg_attr(
+     docsrs,
+@@ -536,7 +538,8 @@
+         not(target_os = "freebsd"),
+         not(target_os = "netbsd"),
+         not(target_os = "openbsd"),
+-        not(target_os = "illumos")
++        not(target_os = "illumos"),
++        not(target_os = "emscripten")
+     )))
+ )]
+ mod if_change_notifier {
+@@ -629,7 +632,8 @@
+     target_os = "freebsd",
+     target_os = "netbsd",
+     target_os = "openbsd",
+-    target_os = "illumos"
++    target_os = "illumos",
++    target_os = "emscripten"
+ )))]
+ #[cfg_attr(
+     docsrs,
+@@ -638,7 +642,8 @@
+         not(target_os = "freebsd"),
+         not(target_os = "netbsd"),
+         not(target_os = "openbsd"),
+-        not(target_os = "illumos")
++        not(target_os = "illumos"),
++        not(target_os = "emscripten")
+     )))
+ )]
+ pub use if_change_notifier::{IfChangeNotifier, IfChangeType};
+@@ -820,6 +825,7 @@
+         target_os = "netbsd",
+         target_os = "openbsd",
+         target_os = "illumos",
++        target_os = "emscripten",
+         all(
+             target_vendor = "apple",
+             any(
+@@ -959,7 +965,8 @@
+         target_os = "freebsd",
+         target_os = "netbsd",
+         target_os = "openbsd",
+-        target_os = "illumos"
++        target_os = "illumos",
++        target_os = "emscripten"
+     )))]
+     #[test]
+     fn test_if_notifier() {

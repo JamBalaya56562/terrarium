@@ -11,6 +11,7 @@ registry=$(find "${CARGO_HOME:-$HOME/.cargo}/registry/src" -maxdepth 1 -name 'in
 native() { if command -v cygpath >/dev/null; then cygpath -m "$1"; else echo "$1"; fi; }
 mkdir -p "$root/.vendor"
 echo "[patch.crates-io]"
+seen=" "
 for patch in "$root"/patches/*.patch; do
   crate=$(basename "$patch" .patch)
   name=${crate%-*}
@@ -18,8 +19,18 @@ for patch in "$root"/patches/*.patch; do
   grep -A1 "^name = \"$name\"$" "$lock" | grep -qx "version = \"$version\"" || continue
   dest="$root/.vendor/$crate"
   if [ ! -d "$dest" ]; then
-    cp -r "$registry/$crate" "$dest"
-    (cd "$dest" && patch -p1 --quiet --binary) <"$patch"
+    staging=$(mktemp -d "$root/.vendor/.${crate}.XXXXXX")
+    trap 'rm -rf "$staging"' EXIT
+    cp -r "$registry/$crate/." "$staging/"
+    (cd "$staging" && patch -p1 --quiet --binary) <"$patch"
+    mv "$staging" "$dest"
+    trap - EXIT
   fi
-  echo "$name = { path = \"$(native "$dest")\" }"
+  # A project can lock two versions of one crate; [patch] needs a distinct
+  # key for the second, naming the crate with `package`.
+  case $seen in
+    *" $name "*) echo "$name-${version//./-} = { package = \"$name\", path = \"$(native "$dest")\" }" ;;
+    *) echo "$name = { path = \"$(native "$dest")\" }" ;;
+  esac
+  seen="$seen$name "
 done

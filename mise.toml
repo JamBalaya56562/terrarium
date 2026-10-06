@@ -85,9 +85,10 @@ description = "Assemble the GitHub Pages site into .site/ with the staged web/di
 run = "bash scripts/assemble-pages.sh .site"
 
 [tasks."ci:e2e"]
-description = "Local equivalent of test-e2e.yml: fetch v2.6.1, stage the fixtures, assemble the site, run the browser tests"
+description = "Test aube v2.6.1 and a staged pitchfork v2.29.0 build in all browsers"
 run = [
   "bash scripts/fetch-builds.sh v2.6.1",
+  "bash scripts/prepare-pitchfork-e2e.sh",
   "bash scripts/stage-web.sh",
   "bash scripts/assemble-pages.sh .site",
   "cd packages/terrarium && bun run test:e2e",

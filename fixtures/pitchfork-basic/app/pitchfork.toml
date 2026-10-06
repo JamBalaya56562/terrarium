@@ -1,0 +1,6 @@
+[daemons.api]
+run = "bun run server/index.ts"
+
+[daemons.worker]
+run = "python3 worker.py"
+depends = ["api"]
