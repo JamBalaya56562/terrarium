@@ -14,6 +14,8 @@
       "!web/dist",
       "!.vendor",
       "!.claude",
+      "!.codex",
+      "!.agents/skills",
       "!aidlc",
       "!**/bun.lock",
       "!**/test-results",

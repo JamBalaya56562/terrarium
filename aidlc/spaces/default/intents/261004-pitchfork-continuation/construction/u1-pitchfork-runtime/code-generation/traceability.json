@@ -1,0 +1,15 @@
+{
+  "stage": "code-generation",
+  "unit": "u1-pitchfork-runtime",
+  "upstream_ids": ["FR1", "FR1.1", "FR1.2", "FR2", "FR2.1", "FR2.2", "NFR1", "NFR3"],
+  "coverage": [
+    { "id": "FR1", "status": "OK", "target": "scripts/build-pitchfork.sh" },
+    { "id": "FR1.1", "status": "OK", "target": "scripts/vendor-patched.sh" },
+    { "id": "FR1.2", "status": "OK", "target": "packages/terrarium/tests/pitchfork-runtime.test.ts" },
+    { "id": "FR2", "status": "OK", "target": "scripts/check-pitchfork-runtime.mjs" },
+    { "id": "FR2.1", "status": "OK", "target": "fixtures/sessions/pitchfork-basic.txt" },
+    { "id": "FR2.2", "status": "OK", "target": "scripts/check-pitchfork-runtime.mjs" },
+    { "id": "NFR1", "status": "OK", "target": "scripts/check-pitchfork-runtime.mjs" },
+    { "id": "NFR3", "status": "OK", "target": "packages/terrarium/tests/pitchfork-runtime.test.ts" }
+  ]
+}

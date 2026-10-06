@@ -1,0 +1,25 @@
+{
+  "stage": "code-generation",
+  "unit": "u1-pitchfork-runtime",
+  "version": 1,
+  "writes": [
+    { "path": "scripts/build-pitchfork.sh" },
+    { "path": "scripts/check-pitchfork-runtime.mjs" },
+    { "path": "scripts/resolve-aube-ref.sh" },
+    { "path": "scripts/resolve-ref.sh" },
+    { "path": "scripts/stage-web.sh" },
+    { "path": "scripts/vendor-patched.sh" },
+    { "path": "patches/dirs-6.0.0.patch" },
+    { "path": "patches/dirs-7.0.0.patch" },
+    { "path": "patches/if-addrs-0.15.0.patch" },
+    { "path": "patches/interprocess-2.4.4.patch" },
+    { "path": "patches/reqwest-0.13.1.patch" },
+    { "path": "patches/ring-0.17.14.patch" },
+    { "path": "patches/tools/pitchfork-2.29.0.patch" },
+    { "path": "fixtures/pitchfork-basic/app/pitchfork.toml" },
+    { "path": "fixtures/sessions/pitchfork-basic.txt" },
+    { "path": "web/tools.json" },
+    { "path": "packages/terrarium/tests/pitchfork-runtime.test.ts" },
+    { "path": "packages/terrarium/src/generated/" }
+  ]
+}
