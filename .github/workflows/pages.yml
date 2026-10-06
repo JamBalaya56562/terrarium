@@ -197,7 +197,12 @@ jobs:
       - name: Store the builds on the builds branch
         run: |
           shopt -s nullglob
-          dirs=("$RUNNER_TEMP"/builds/*/)
+          # download-artifact extracts a single match directly into path.
+          if [ -f "$RUNNER_TEMP/builds/build.json" ]; then
+            dirs=("$RUNNER_TEMP/builds/")
+          else
+            dirs=("$RUNNER_TEMP"/builds/*/)
+          fi
           if [ ${#dirs[@]} -eq 0 ]; then echo "no build succeeded"; exit 0; fi
           git config user.name "github-actions[bot]"
           git config user.email "41898233+github-actions[bot]@users.noreply.github.com"
