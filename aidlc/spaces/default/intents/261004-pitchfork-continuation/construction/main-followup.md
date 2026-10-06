@@ -29,3 +29,28 @@
 検証済み: buildログには`Invalid pattern .../../target`と`Invalid pattern .../../emsdk`、`Relative pathing '.' and '..' is not allowed`があり、SDKとCargo targetのキャッシュ保存が拒否された。
 
 `codex/pages-cache-directories`はこの問題だけを変更する。SDKとツール別targetを`RUNNER_TEMP`の下へ置き、前stepから`GITHUB_ENV`へ設定する。差分はPages workflowの1ファイルだけで、ローカル`mise run lint:all`はexit0（`.vendor/u1-pf/pages-cache-lint.log`）。修正済みPagesジョブでの実キャッシュ保存はマージ後のビルドまで未検証。
+
+## 修正マージ後の公開確認（2026-10-06）
+
+上記の未検証項目を、PR #22・#23のマージ後に実行した。以前の失敗記録は初回runの観測として残す。
+
+- 検証済み: `gh pr view`でPR #22は`d4f92c08ab8313a0e5f4c7f8c25acd7e0253a14b`、PR #23は`77e805dd72566fe2eb49bdc1f8204d22944f873f`へMERGED。`jj git fetch --all-remotes`と`jj new main@upstream`で後者を親とする新しい変更へ移った。fetch前の監査ログは`.vendor/u1-pf/audit-before-pages-merge-fetch.md`へ保全し、旧変更の競合をmainへ持ち込んでいない。
+- 検証済み: `gh workflow run pages.yml --ref main -f tool=pitchfork -f ref=v2.29.0 -f force=false`で起動した[Pages run 37421669980](https://github.com/aletheia-works/terrarium/actions/runs/37421669980)は、resolve・build・store・site・deployがすべてsuccess。
+- 検証済み: [build job 112132231083](https://github.com/aletheia-works/terrarium/actions/runs/37421669980/job/112132231083)に`Cache saved with key: cargo-pitchfork-Linux-1907b7810a52262ecbf13f2e6d1dfbd968df08053fc0996beaa4bd119e3342a7-cfdea79f1d52b8449c0b99b29a03d9e771cd8ec3-37421669980-1`と`Cache saved with key: emsdk-Linux-6.0.10`を観測した。両キャッシュの保存が成功した。
+- 検証済み: [store job 112133793409](https://github.com/aletheia-works/terrarium/actions/runs/37421669980/job/112133793409)は`a6f854124a6ba54f8e9781a307d5798967bd5228 -> builds (forced update)`まで実行した。GitHub APIで取得した[builds.json](https://github.com/aletheia-works/terrarium/blob/a6f854124a6ba54f8e9781a307d5798967bd5228/builds.json)にはpitchfork `v2.29.0`、source commit `cfdea79f1d52b8449c0b99b29a03d9e771cd8ec3`があり、既存aubeの`v2.6.1`・`pr-1645`・`main`も残っていた。
+- 検証済み: `bun .vendor/u1-pf/verify-published-pitchfork.mjs`はexit0。Chromiumで[公開ページ](https://aletheia-works.github.io/terrarium/web/?tool=pitchfork&ref=v2.29.0)のmanifestと端末のsource commitを上記SHAと照合し、`crossOriginIsolated`を確認してからfixtureの8コマンドを順に実行した。ログは`.vendor/u1-pf/published-pitchfork-after-merge.log`、出力原文は`.vendor/u1-pf/published-pitchfork-results.json`に保管した。
+
+| コマンド | 終了コード | 観測した出力 |
+| --- | --- | --- |
+| `pitchfork --version` | 0 | `pitchfork 2.29.0` |
+| `pitchfork daemons` | 0 | `app/api`と`app/worker` |
+| `pitchfork daemons add db --run "postgres -D data"` | 0 | `added app/db to /work/app/pitchfork.toml` |
+| `pitchfork daemons remove worker` | 0 | `removed app/worker from /work/app/pitchfork.toml` |
+| `cat pitchfork.toml` | 0 | apiとdbを保持し、dbのrunは`postgres -D data`、workerはなし |
+| `pitchfork status api` | 0 | `Name: app/api`、`Status: available` |
+| `pitchfork settings set general.interval 5s` | 0 | `set general.interval = 5s in /work/app/pitchfork.toml` |
+| `pitchfork settings get general.interval` | 0 | `5s` |
+
+検証済み: 同じブラウザでツール選択をaubeへ変更し、URLの`ref`が除去されたことと端末がaube `main`へ切り替わったことを確認した。`aube --version`は終了コード0、`2.6.1 emscripten-wasm32 (2026-10-05)`を返した。設定保持の確認範囲は同一セッション内の連続コマンドであり、ページ再読み込み後の永続化はこの確認に含めない。
+
+通常レビュー・CIで進めるユーザー指示を継続し、AI-DLCのstage完了や承認記録は代作していない。この追記は公開検証の実測記録である。
