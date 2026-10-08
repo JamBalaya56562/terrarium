@@ -1,0 +1,7 @@
+{
+  "verdict": "PASS",
+  "covered": 18,
+  "missing": [],
+  "traceabilitySha256": "498bdbec16d4ae95d5377e0e80f289a987072e6b64d353f8cef3d4d8bfebc82d",
+  "historicalFailurePreserved": "construction/build-and-test/cross-unit-traceability.md"
+}

@@ -1,0 +1,15 @@
+{
+  "status": "verified",
+  "ref": "v2.30.1",
+  "commit": "1054549e85470b08d9507e2c82c850959a4b3914",
+  "guestSha256": "f30395a418e526e939350cc87e03d43c92d1aa0a0b0b104130761a8b8daa841e",
+  "guestBytes": 39689200,
+  "build": {"exitCode": 0, "observedLog": "Finished `release` profile [optimized] target(s) in 38m 36s", "path": ".artifacts/u2-release-inputs/pitchfork-v2.30.1-build.log"},
+  "approvedMuslPatchSha256": "1e307ed8c3009ead22a08c5615fda5b30ac42cdc79726bbb722e10b5426dbac6",
+  "uiNode": "v24.18.1",
+  "native": {"command": "/Applications/Docker.app/Contents/Resources/bin/docker run --rm --platform linux/amd64 --network none -v /Users/mutoakio/Documents/formicarium/dist/guests:/inputs:ro rust:alpine /inputs/pitchfork --version", "exitCode": 0, "stdout": "pitchfork 2.30.1\n", "stderr": ""},
+  "worker": {"command": "/Users/mutoakio/.local/share/mise/installs/node/24/bin/node /tmp/formicarium-u2-aube-version.mjs dist/guests/pitchfork", "exitCode": 0, "stdout": "pitchfork 2.30.1\n", "stderr": ""},
+  "distribution": ".artifacts/u3-guest-distribution/site-v3",
+  "aubeRebuilt": false,
+  "browser": "initial Chromium and Firefox real terminal version cases passed; complete suite pending"
+}

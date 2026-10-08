@@ -1,0 +1,69 @@
+{
+  "stage": "code-generation",
+  "version": 1,
+  "writes": [
+    {
+      "path": "scripts/prepare-formicarium.mjs"
+    },
+    {
+      "path": "integration/formicarium-inputs.json"
+    },
+    {
+      "path": "packages/terrarium/tests/formicarium-inputs.test.ts"
+    },
+    {
+      "path": "packages/terrarium/package.json"
+    },
+    {
+      "path": "packages/terrarium/bun.lock"
+    },
+    {
+      "path": "mise.toml"
+    },
+    {
+      "path": "scripts/stage-formicarium.mjs"
+    },
+    {
+      "path": "scripts/assemble-pages.sh"
+    },
+    {
+      "path": "packages/terrarium/playwright.config.ts"
+    },
+    {
+      "path": "packages/terrarium/playwright.formicarium.config.ts"
+    },
+    {
+      "path": "packages/terrarium/src/catalog.ts"
+    },
+    {
+      "path": "packages/terrarium/src/formicarium-session.ts"
+    },
+    {
+      "path": "packages/terrarium/src/terminal.ts"
+    },
+    {
+      "path": "packages/terrarium/tests/formicarium-assets.test.ts"
+    },
+    {
+      "path": "packages/terrarium/tests/formicarium-catalog.test.ts"
+    },
+    {
+      "path": "packages/terrarium/README.md"
+    },
+    {
+      "path": ".github/workflows/test-terrarium.yml"
+    },
+    {
+      "path": ".github/workflows/test-e2e.yml"
+    },
+    {
+      "path": "packages/terrarium/src/generated/"
+    },
+    {
+      "path": "packages/terrarium/dist/"
+    },
+    {
+      "path": "web/dist/"
+    }
+  ]
+}

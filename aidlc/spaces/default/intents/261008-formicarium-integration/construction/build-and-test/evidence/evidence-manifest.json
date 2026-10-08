@@ -1,0 +1,222 @@
+[
+  {
+    "path": "build-and-test-summary.md",
+    "sha256": "77a6c89c3c23c634e9f991f6bbd9af71a1371aceb238e3bffc44057231beef29",
+    "size": 5561
+  },
+  {
+    "path": "build-instructions.md",
+    "sha256": "a9559746e3b1381a6c6bc804e157cc143a9d206cf243094a580a67edb7a19e2e",
+    "size": 1195
+  },
+  {
+    "path": "cross-unit-traceability.md",
+    "sha256": "76cab2b45f8de8af12f80c9a6732a31c0d09882ef157391d786b0a23bfd7f339",
+    "size": 3410
+  },
+  {
+    "path": "evidence/actionlint.txt",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "size": 0
+  },
+  {
+    "path": "evidence/assemble-dedicated.txt",
+    "sha256": "461d15dbf21db3966a08141ed920d01ce5c074a975512d147830edede5c0a6c5",
+    "size": 5994
+  },
+  {
+    "path": "evidence/assemble-legacy.txt",
+    "sha256": "f60b39cb3a7604b3fe45394b4f12d29b0626d05de4e502988d803656354dd20c",
+    "size": 117
+  },
+  {
+    "path": "evidence/browser-commands.json",
+    "sha256": "46049fff25722b1c53d600b1e896e8472cbe86059338c8e01795a0ec6f24c617",
+    "size": 1536
+  },
+  {
+    "path": "evidence/browser-env.json",
+    "sha256": "fbe5141c338a7dab182818d86880ee0eaa2fa320d323dd937cfbb93e11b5d5c9",
+    "size": 272
+  },
+  {
+    "path": "evidence/browser-formicarium.txt",
+    "sha256": "890d4bc539f7fbb6ee5d2c5f21904a92d7b170ea67d982046916ed2df183de72",
+    "size": 6937
+  },
+  {
+    "path": "evidence/browser-legacy.txt",
+    "sha256": "482f9a33f8af33485cebbb0acb23e023157c97a449ff59f85464ec9df666dc8e",
+    "size": 5286
+  },
+  {
+    "path": "evidence/browser-results.json",
+    "sha256": "c0969ec571a38459252e3b28fe8c9cd339587dab81dc3121951f4d0525d353ad",
+    "size": 636
+  },
+  {
+    "path": "evidence/build.txt",
+    "sha256": "6ddd422a8451e34060c2f46a10c7c8493071f8a813ea17d1f53c96f1ae57da25",
+    "size": 63
+  },
+  {
+    "path": "evidence/commands.json",
+    "sha256": "d581ec1f49618b3b42cde6017085f08fba5e9bf6959934d5e97ea1887e9ec9fb",
+    "size": 6591
+  },
+  {
+    "path": "evidence/formicarium-candidate.json",
+    "sha256": "e13640c8bc36a0c966d037f360b81b57a37c4116ba52382b6424cecb15f6ac7e",
+    "size": 9287
+  },
+  {
+    "path": "evidence/install.txt",
+    "sha256": "5f8aa54ada8ea1afaec03752c40f761991a39aba6905719554d89b8d8214d25a",
+    "size": 176
+  },
+  {
+    "path": "evidence/isolated-assemble.txt",
+    "sha256": "101d85a539e35feddb7891338fb21d23e733b26256e181ce01aafba216ff468f",
+    "size": 5994
+  },
+  {
+    "path": "evidence/isolated-commands.json",
+    "sha256": "b23aaf5e1d73b6bd5f0026dc78ad971d09940d46af7c89d74c73178c79433736",
+    "size": 864
+  },
+  {
+    "path": "evidence/isolated-prepare.txt",
+    "sha256": "c638335430342b9ba51330e1f7da8e8f2c4964bd543cb41c24edeb7610ad6605",
+    "size": 3014
+  },
+  {
+    "path": "evidence/legacy-candidate.json",
+    "sha256": "1972f9ee45c2051b9f0e6092de319bdcb24fd0402d4d70657e03deb7d9199c86",
+    "size": 2457
+  },
+  {
+    "path": "evidence/old-bytes-verification.json",
+    "sha256": "ee4a6012156560db8a7f230b356cf4a65aa7e8cf081daa48d48b3c8f42d83cea",
+    "size": 7718
+  },
+  {
+    "path": "evidence/personal-path-scan.json",
+    "sha256": "1d30fccb36c09fdb68dd297f124905f6c5f7700c320fb8af81cce4e6dc0e5cbc",
+    "size": 34
+  },
+  {
+    "path": "evidence/post-browser-binding.json",
+    "sha256": "883bb45875d6dda272a034183d4063b1501272fc1ddad35adb313ef3721c228d",
+    "size": 126
+  },
+  {
+    "path": "evidence/prepare.txt",
+    "sha256": "d19fd744ec580a1d8feac5001a463598f53e4f3031d30ee2f1162b028305fcf3",
+    "size": 3007
+  },
+  {
+    "path": "evidence/preservation-after.json",
+    "sha256": "dd5d6382ba33fa6582e407b5d59dbb446506aed413f1b540881df5b71e333036",
+    "size": 500
+  },
+  {
+    "path": "evidence/preservation-before.json",
+    "sha256": "a7d96396d000a3f644329ac13d2de1a1890f34df13d887b2d8bbb5692bf86caa",
+    "size": 21464
+  },
+  {
+    "path": "evidence/requirement-evidence-map.json",
+    "sha256": "04fcbd46a0d0a3a30104205ed6606ce25d318236785475856cdb84ec21b7dc6d",
+    "size": 895
+  },
+  {
+    "path": "evidence/shellcheck-canonical.txt",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "size": 0
+  },
+  {
+    "path": "evidence/shellcheck.txt",
+    "sha256": "bd7bda3b8582b29e4e2e7db8bdbadf3ff6124f207ecf235cab68b958c6e3eedc",
+    "size": 332
+  },
+  {
+    "path": "evidence/source-binding.json",
+    "sha256": "b86df88a24fb72538a48490814b6be73190c65e395b2bda26056cf77da6b9f3f",
+    "size": 5390
+  },
+  {
+    "path": "evidence/source-inventory.json",
+    "sha256": "7e5af1e20ff87222cf51b0467791441b0e5ba3144eec742763feaab788274fdb",
+    "size": 11657
+  },
+  {
+    "path": "evidence/standalone-binding.json",
+    "sha256": "d3d6b9c2dd188709a2568066a4fb4cd221d8f3951575e05641915de5c7616b79",
+    "size": 2081
+  },
+  {
+    "path": "evidence/tool-versions.json",
+    "sha256": "396513ebcb9025f033fee15c9af39deceda4ed5562fad58f7fab6569f18b2462",
+    "size": 150
+  },
+  {
+    "path": "evidence/traceability-check.json",
+    "sha256": "9e88d0781141cfa17bdcc8a2c335edf008db85f240501d7f8eb5bab7456ba59f",
+    "size": 426
+  },
+  {
+    "path": "evidence/typecheck.txt",
+    "sha256": "8f095098e23e2741c41618f8e64d86cc7ee2edfe464a4cecffb499493d3ddcae",
+    "size": 102
+  },
+  {
+    "path": "evidence/unit-all.txt",
+    "sha256": "ea6618bbb0712b0774c338bb2c827fd0800197624ba0dc0e57baa671ac6631de",
+    "size": 8299
+  },
+  {
+    "path": "evidence/unit-assets.txt",
+    "sha256": "bd3490b1675315c5afc3a46b38cd7e43c05655c4eef33b431708260efde51911",
+    "size": 973
+  },
+  {
+    "path": "evidence/unit-boundaries.txt",
+    "sha256": "748f6a4e653349dd1504240a4ba455a18a07628e7e219ed8faaeb604c94a82f0",
+    "size": 2276
+  },
+  {
+    "path": "evidence/unit-formicarium.txt",
+    "sha256": "3adc5d2566e72b55d5144a979c02d93eb5c3d538f48359d314774d6ad0fd4d29",
+    "size": 3152
+  },
+  {
+    "path": "evidence/unit-inputs.txt",
+    "sha256": "381cc8ed3b919e1f2f8b6e52e6c707a03d5aa72a1b2b5bff78052ade00f387bc",
+    "size": 908
+  },
+  {
+    "path": "evidence/unit-shell.txt",
+    "sha256": "8ac09af4b38dbc32f60a641dc5bff22bbf298d601649e1374b3b3ab05a59a142",
+    "size": 2059
+  },
+  {
+    "path": "integration-test-instructions.md",
+    "sha256": "d28700baa1fc763314c4e202a658d00fc71adc9bf33dcefac78215ef028d07ad",
+    "size": 976
+  },
+  {
+    "path": "performance-test-instructions.md",
+    "sha256": "0bdfb43900bfa18b2dcecef5794f3d193a74389647fea3261235e5e909e8a45e",
+    "size": 369
+  },
+  {
+    "path": "security-test-instructions.md",
+    "sha256": "72b65c9b0f442228882304650a03951181bc3c698d6a3093b4c095895437af05",
+    "size": 1010
+  },
+  {
+    "path": "test-results.md",
+    "sha256": "d74f183d59a62b9f65b485a1ef6b96a91d0921713902ed8550e82825630397c8",
+    "size": 4794
+  }
+]

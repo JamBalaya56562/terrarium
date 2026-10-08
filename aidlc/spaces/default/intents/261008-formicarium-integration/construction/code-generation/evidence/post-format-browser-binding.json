@@ -1,0 +1,26 @@
+{
+  "command": [
+    "mise",
+    "exec",
+    "--",
+    "bun",
+    "build",
+    "packages/terrarium/src/index.ts",
+    "--outfile",
+    ".vendor/postformat-terrarium.mjs",
+    "--format",
+    "esm",
+    "--target",
+    "browser",
+    "--minify",
+    "--define",
+    "__TERRARIUM_VERSION__=\"20261008015915\""
+  ],
+  "exitCode": 0,
+  "version": "20261008015915",
+  "beforeSha256": "305631566914a1b99da8ce8f31f0f7298db5329cec0cc4763b08a9153fb3ff42",
+  "afterSha256": "5ab9efdcef1cd46b9841222b5a1415e7731439d48a0e22802632a2d49a999d8d",
+  "identicalBundle": false,
+  "stdout": "Bundled 18 modules in 14ms\n\n  postformat-terrarium.mjs  0.40 MB  (entry point)\n\n",
+  "stderr": ""
+}

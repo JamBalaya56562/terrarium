@@ -1,0 +1,100 @@
+
+Running 45 tests using 1 worker
+
+(node:50305) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [chromium] › e2e/formicarium-iframe.spec.ts:39:3 › iframe condition same-origin: exact origins and guest marker oracle (3.0s)
+  ✘   2 [chromium] › e2e/formicarium-iframe.spec.ts:39:3 › iframe condition cross-origin: exact origins and guest marker oracle (3.0s)
+(node:51078) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   3 [chromium] › e2e/formicarium-iframe.spec.ts:39:3 › iframe condition missing-isolation: exact origins and guest marker oracle (168ms)
+  ✓   4 [chromium] › e2e/formicarium-iframe.spec.ts:87:1 › invalid opaque wildcard and unknown parent origins never connect or notify (501ms)
+  ✓   5 [chromium] › e2e/formicarium-iframe.spec.ts:102:1 › unapproved parent origin cannot run or receive notifications even when syntax is valid (1.6s)
+  ✓   6 [chromium] › e2e/formicarium-terminal.spec.ts:17:1 › latest aube ready fields, events and actual Worker version (1.0s)
+  ✓   7 [chromium] › e2e/formicarium-terminal.spec.ts:29:1 › latest pitchfork uses common runtime actual Worker version (1.1s)
+  ✓   8 [chromium] › e2e/formicarium-terminal.spec.ts:34:1 › nested cwd keeps /work sibling before and after actual guest (2.9s)
+  ✓   9 [chromium] › e2e/formicarium-terminal.spec.ts:42:1 › empty fixture and empty command have no added exit event (485ms)
+  ✓  10 [chromium] › e2e/formicarium-terminal.spec.ts:50:1 › normal nonzero exit and unsupported syntax error once; queue recovers (1.1s)
+  ✓  11 [chromium] › e2e/formicarium-terminal.spec.ts:62:1 › run attributes and concurrent calls retain serial command order (926ms)
+  ✓  12 [chromium] › e2e/formicarium-terminal.spec.ts:71:1 › keyboard focus deletion arrows history and Ctrl-C preserve terminal controls (318ms)
+  ✓  13 [chromium] › e2e/formicarium-terminal.spec.ts:85:1 › tool switch resets attributes and suppresses prior queued run notifications (511ms)
+  ✓  14 [chromium] › e2e/formicarium-terminal.spec.ts:100:1 › disconnect invalidates old work and reconnect creates independent session (308ms)
+  ✓  15 [chromium] › e2e/formicarium-terminal.spec.ts:111:1 › boot error rejects ready once without creating any guest Worker (175ms)
+(node:51777) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  16 [firefox] › e2e/formicarium-iframe.spec.ts:39:3 › iframe condition same-origin: exact origins and guest marker oracle (4.3s)
+  ✓  17 [firefox] › e2e/formicarium-iframe.spec.ts:39:3 › iframe condition cross-origin: exact origins and guest marker oracle (378ms)
+  ✓  18 [firefox] › e2e/formicarium-iframe.spec.ts:39:3 › iframe condition missing-isolation: exact origins and guest marker oracle (321ms)
+  ✓  19 [firefox] › e2e/formicarium-iframe.spec.ts:87:1 › invalid opaque wildcard and unknown parent origins never connect or notify (732ms)
+  ✓  20 [firefox] › e2e/formicarium-iframe.spec.ts:102:1 › unapproved parent origin cannot run or receive notifications even when syntax is valid (505ms)
+  ✓  21 [firefox] › e2e/formicarium-terminal.spec.ts:17:1 › latest aube ready fields, events and actual Worker version (1.2s)
+  ✓  22 [firefox] › e2e/formicarium-terminal.spec.ts:29:1 › latest pitchfork uses common runtime actual Worker version (2.3s)
+  ✓  23 [firefox] › e2e/formicarium-terminal.spec.ts:34:1 › nested cwd keeps /work sibling before and after actual guest (3.2s)
+  ✓  24 [firefox] › e2e/formicarium-terminal.spec.ts:42:1 › empty fixture and empty command have no added exit event (701ms)
+  ✓  25 [firefox] › e2e/formicarium-terminal.spec.ts:50:1 › normal nonzero exit and unsupported syntax error once; queue recovers (1.7s)
+  ✓  26 [firefox] › e2e/formicarium-terminal.spec.ts:62:1 › run attributes and concurrent calls retain serial command order (1.3s)
+  ✓  27 [firefox] › e2e/formicarium-terminal.spec.ts:71:1 › keyboard focus deletion arrows history and Ctrl-C preserve terminal controls (601ms)
+  ✓  28 [firefox] › e2e/formicarium-terminal.spec.ts:85:1 › tool switch resets attributes and suppresses prior queued run notifications (901ms)
+  ✓  29 [firefox] › e2e/formicarium-terminal.spec.ts:100:1 › disconnect invalidates old work and reconnect creates independent session (674ms)
+  ✓  30 [firefox] › e2e/formicarium-terminal.spec.ts:111:1 › boot error rejects ready once without creating any guest Worker (411ms)
+(node:53493) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  31 [webkit] › e2e/formicarium-iframe.spec.ts:39:3 › iframe condition same-origin: exact origins and guest marker oracle (4.2s)
+(node:53535) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  32 [webkit] › e2e/formicarium-iframe.spec.ts:39:3 › iframe condition cross-origin: exact origins and guest marker oracle (804ms)
+  ✓  33 [webkit] › e2e/formicarium-iframe.spec.ts:39:3 › iframe condition missing-isolation: exact origins and guest marker oracle (403ms)
+  ✓  34 [webkit] › e2e/formicarium-iframe.spec.ts:87:1 › invalid opaque wildcard and unknown parent origins never connect or notify (904ms)
+  ✓  35 [webkit] › e2e/formicarium-iframe.spec.ts:102:1 › unapproved parent origin cannot run or receive notifications even when syntax is valid (534ms)
+  ✓  36 [webkit] › e2e/formicarium-terminal.spec.ts:17:1 › latest aube ready fields, events and actual Worker version (1.8s)
+  ✓  37 [webkit] › e2e/formicarium-terminal.spec.ts:29:1 › latest pitchfork uses common runtime actual Worker version (1.4s)
+  ✓  38 [webkit] › e2e/formicarium-terminal.spec.ts:34:1 › nested cwd keeps /work sibling before and after actual guest (3.7s)
+  ✓  39 [webkit] › e2e/formicarium-terminal.spec.ts:42:1 › empty fixture and empty command have no added exit event (1.3s)
+  ✓  40 [webkit] › e2e/formicarium-terminal.spec.ts:50:1 › normal nonzero exit and unsupported syntax error once; queue recovers (1.8s)
+  ✓  41 [webkit] › e2e/formicarium-terminal.spec.ts:62:1 › run attributes and concurrent calls retain serial command order (1.3s)
+  ✓  42 [webkit] › e2e/formicarium-terminal.spec.ts:71:1 › keyboard focus deletion arrows history and Ctrl-C preserve terminal controls (952ms)
+  ✓  43 [webkit] › e2e/formicarium-terminal.spec.ts:85:1 › tool switch resets attributes and suppresses prior queued run notifications (1.1s)
+  ✓  44 [webkit] › e2e/formicarium-terminal.spec.ts:100:1 › disconnect invalidates old work and reconnect creates independent session (1.4s)
+  ✓  45 [webkit] › e2e/formicarium-terminal.spec.ts:111:1 › boot error rejects ready once without creating any guest Worker (515ms)
+
+
+  1) [chromium] › e2e/formicarium-iframe.spec.ts:39:3 › iframe condition cross-origin: exact origins and guest marker oracle 
+
+    Error: browserContext.close: ENOENT: no such file or directory, open '/private/tmp/terrarium-standalone-s00po458/packages/terrarium/test-results/.playwright-artifacts-0/traces/2995fcb64c3f9c796c6d-0c3380666b6755c316f1-recording2.trace'
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/formicarium-iframe-iframe--60d07-ins-and-guest-marker-oracle-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/formicarium-iframe-iframe--60d07-ins-and-guest-marker-oracle-chromium/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/formicarium-iframe-iframe--60d07-ins-and-guest-marker-oracle-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/formicarium-iframe-iframe--60d07-ins-and-guest-marker-oracle-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [webkit] › e2e/formicarium-iframe.spec.ts:39:3 › iframe condition same-origin: exact origins and guest marker oracle 
+
+    Error: browserContext.close: ENOENT: no such file or directory, open '/private/tmp/terrarium-standalone-s00po458/packages/terrarium/test-results/.playwright-artifacts-3/traces/2995fcb64c3f9c796c6d-5330eb1aebf2307d3967.trace'
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/formicarium-iframe-iframe--4c6f5-ins-and-guest-marker-oracle-webkit/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/formicarium-iframe-iframe--4c6f5-ins-and-guest-marker-oracle-webkit/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/formicarium-iframe-iframe--4c6f5-ins-and-guest-marker-oracle-webkit/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/formicarium-iframe-iframe--4c6f5-ins-and-guest-marker-oracle-webkit/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2 failed
+    [chromium] › e2e/formicarium-iframe.spec.ts:39:3 › iframe condition cross-origin: exact origins and guest marker oracle 
+    [webkit] › e2e/formicarium-iframe.spec.ts:39:3 › iframe condition same-origin: exact origins and guest marker oracle 
+  43 passed (1.0m)

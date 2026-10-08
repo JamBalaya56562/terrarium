@@ -1,0 +1,94 @@
+{
+  "root": "/private/tmp/terrarium-standalone-s00po458",
+  "checks": [
+    {
+      "path": "scripts/prepare-formicarium.mjs",
+      "match": true
+    },
+    {
+      "path": "integration/formicarium-inputs.json",
+      "match": true
+    },
+    {
+      "path": "packages/terrarium/tests/formicarium-inputs.test.ts",
+      "match": true
+    },
+    {
+      "path": "packages/terrarium/package.json",
+      "match": true
+    },
+    {
+      "path": "packages/terrarium/bun.lock",
+      "match": true
+    },
+    {
+      "path": "mise.toml",
+      "match": true
+    },
+    {
+      "path": "scripts/stage-formicarium.mjs",
+      "match": true
+    },
+    {
+      "path": "scripts/assemble-pages.sh",
+      "match": true
+    },
+    {
+      "path": "packages/terrarium/playwright.config.ts",
+      "match": true
+    },
+    {
+      "path": "packages/terrarium/playwright.formicarium.config.ts",
+      "match": true
+    },
+    {
+      "path": "packages/terrarium/src/catalog.ts",
+      "match": true
+    },
+    {
+      "path": "packages/terrarium/src/formicarium-session.ts",
+      "match": true
+    },
+    {
+      "path": "packages/terrarium/src/terminal.ts",
+      "match": true
+    },
+    {
+      "path": "packages/terrarium/tests/formicarium-assets.test.ts",
+      "match": true
+    },
+    {
+      "path": "packages/terrarium/tests/formicarium-catalog.test.ts",
+      "match": true
+    },
+    {
+      "path": "packages/terrarium/README.md",
+      "match": true
+    },
+    {
+      "path": ".github/workflows/test-terrarium.yml",
+      "match": true
+    },
+    {
+      "path": ".github/workflows/test-e2e.yml",
+      "match": true
+    },
+    {
+      "path": "scripts/resolve-ref.sh",
+      "match": true
+    },
+    {
+      "path": "scripts/build-pitchfork.sh",
+      "match": true
+    },
+    {
+      "path": "packages/terrarium/tests/pitchfork-runtime.test.ts",
+      "match": true
+    },
+    {
+      "path": "packages/terrarium/tests/pitchfork-build-retry.test.ts",
+      "match": true
+    }
+  ],
+  "previousResults": "../../code-generation/evidence/additional-standalone-unit-final.json"
+}

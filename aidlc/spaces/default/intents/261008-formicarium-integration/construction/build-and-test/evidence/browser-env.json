@@ -1,0 +1,7 @@
+{
+  "TERRARIUM_BUN": "/Users/mutoakio/.local/share/mise/installs/bun/latest/bin/bun",
+  "sites": {
+    "formicarium": "/Users/mutoakio/Documents/terrarium/.vendor/build-test-formicarium",
+    "legacy": "/Users/mutoakio/Documents/terrarium/.vendor/build-test-legacy"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "builds": {
+    "aube": {
+      "v2.6.1": {
+        "source": {
+          "type": "git",
+          "url": "https://github.com/aubepkg/aube",
+          "ref": "v2.6.1",
+          "commit": "bd94e42f54d3b5e3dd102716b7197f316cb5f4ed"
+        },
+        "upstream_pr": null,
+        "built_at": "2026-10-03T16:51:24.741Z"
+      },
+      "pr-1645": {
+        "source": {
+          "type": "git",
+          "url": "https://github.com/aubepkg/aube",
+          "ref": "refs/pull/1645/head",
+          "commit": "07178c51d8c3158adf6c09366e186db508b32138"
+        },
+        "upstream_pr": "https://github.com/aubepkg/aube/pull/1645",
+        "built_at": "2026-10-06T12:24:49.389Z"
+      },
+      "main": {
+        "source": {
+          "type": "git",
+          "url": "https://github.com/aubepkg/aube",
+          "ref": "main",
+          "commit": "cbd74e025e71795529661dfd5faeca2394245b03"
+        },
+        "upstream_pr": null,
+        "built_at": "2026-10-06T10:35:41.294Z"
+      }
+    },
+    "pitchfork": {
+      "v2.29.0": {
+        "source": {
+          "type": "git",
+          "url": "https://github.com/jdx/pitchfork",
+          "ref": "v2.29.0",
+          "commit": "cfdea79f1d52b8449c0b99b29a03d9e771cd8ec3"
+        },
+        "upstream_pr": null,
+        "built_at": "2026-10-06T06:09:28.141Z"
+      }
+    }
+  }
+}

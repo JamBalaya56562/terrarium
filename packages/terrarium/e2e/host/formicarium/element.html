@@ -1,0 +1,21 @@
+<!doctype html>
+<meta charset="utf-8" />
+<title>common runtime terminal consumer</title>
+<style>terrarium-terminal { width: 800px; height: 400px; }</style>
+<script type="module">
+  import '/web/terrarium.mjs';
+
+  globalThis.u3Events = [];
+  for (const type of ['terrarium-ready', 'terrarium-exit', 'terrarium-error']) {
+    document.addEventListener(type, event => globalThis.u3Events.push({
+      type, detail: event.detail, bubbles: event.bubbles, composed: event.composed,
+    }));
+  }
+  const params = new URLSearchParams(location.search);
+  const terminal = document.createElement('terrarium-terminal');
+  terminal.setAttribute('base', new URL('/web/', location.href).href);
+  for (const name of ['tool', 'ref', 'fixture', 'cwd', 'run']) {
+    if (params.has(name)) terminal.setAttribute(name, params.getAll(name).join(name === 'run' ? '\n' : ''));
+  }
+  document.body.append(terminal);
+</script>

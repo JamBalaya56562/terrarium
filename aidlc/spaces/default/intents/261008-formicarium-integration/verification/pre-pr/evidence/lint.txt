@@ -1,0 +1,16 @@
+[markdown:check] $ rumdl check .
+[actions:check] $ ~/Documents/terrarium/mise-tasks/actions/check.sh
+[shell:check] $ ~/Documents/terrarium/mise-tasks/shell/check.sh
+[js:check] $ biome check .
+[toml:check] $ tombi format --check && tombi lint
+[markdown:check] 
+[markdown:check] Success: No issues found in 55 files (32ms)
+[markdown:check] Finished in 134.3ms
+[toml:check] 21 files did not need formatting
+[js:check] Checked 46 files in 133ms. No fixes applied.
+[js:check] Finished in 233.9ms
+[toml:check] 21 files linted successfully
+[toml:check] Finished in 294.7ms
+[actions:check] Finished in 376.8ms
+[shell:check] Finished in 759.5ms
+Finished in 784.5ms

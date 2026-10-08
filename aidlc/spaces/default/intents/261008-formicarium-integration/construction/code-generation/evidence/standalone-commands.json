@@ -1,0 +1,95 @@
+[
+  {
+    "command": [
+      "mise",
+      "exec",
+      "node@26",
+      "--",
+      "bun",
+      "scripts/prepare-formicarium.mjs",
+      "--archive",
+      "inputs.tar.gz"
+    ],
+    "cwd": "/private/tmp/terrarium-standalone-s00po458",
+    "exitCode": 0
+  },
+  {
+    "command": [
+      "mise",
+      "exec",
+      "node@26",
+      "--",
+      "bun",
+      "install",
+      "--frozen-lockfile"
+    ],
+    "cwd": "/private/tmp/terrarium-standalone-s00po458/packages/terrarium",
+    "exitCode": 0
+  },
+  {
+    "command": [
+      "mise",
+      "exec",
+      "node@26",
+      "--",
+      "bun",
+      "run",
+      "typecheck"
+    ],
+    "cwd": "/private/tmp/terrarium-standalone-s00po458/packages/terrarium",
+    "exitCode": 0
+  },
+  {
+    "command": [
+      "mise",
+      "exec",
+      "node@26",
+      "--",
+      "bun",
+      "test",
+      "./tests"
+    ],
+    "cwd": "/private/tmp/terrarium-standalone-s00po458/packages/terrarium",
+    "exitCode": 1
+  },
+  {
+    "command": [
+      "mise",
+      "exec",
+      "node@26",
+      "--",
+      "bun",
+      "run",
+      "build"
+    ],
+    "cwd": "/private/tmp/terrarium-standalone-s00po458/packages/terrarium",
+    "exitCode": 0
+  },
+  {
+    "command": [
+      "mise",
+      "exec",
+      "node@26",
+      "--",
+      "bash",
+      "scripts/assemble-pages.sh",
+      ".vendor/site-formicarium"
+    ],
+    "cwd": "/private/tmp/terrarium-standalone-s00po458",
+    "exitCode": 0
+  },
+  {
+    "command": [
+      "mise",
+      "exec",
+      "node@26",
+      "--",
+      "bash",
+      "scripts/assemble-pages.sh",
+      ".vendor/site-legacy",
+      "legacy"
+    ],
+    "cwd": "/private/tmp/terrarium-standalone-s00po458",
+    "exitCode": 0
+  }
+]

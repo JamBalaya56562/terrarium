@@ -1,0 +1,47 @@
+{
+  "handoff_sha256": "66191d0bda010510b7add11b658eb92aa84c685631c90eee0aff95745c9d9c88",
+  "snapshot": {
+    "repo": "terrarium",
+    "store": "aidlc/spaces/default/codekb/terrarium/",
+    "paths": [
+      "packages/terrarium/src/formicarium-session.ts",
+      "packages/terrarium/src/catalog.ts",
+      "packages/terrarium/src/terminal.ts",
+      "packages/terrarium/src/index.ts",
+      "packages/terrarium/src/npm.ts",
+      "packages/terrarium/package.json",
+      "packages/terrarium/bun.lock",
+      "packages/terrarium/jsr.json",
+      "packages/terrarium/tsconfig.json",
+      "packages/terrarium/tests/tsconfig.json",
+      "packages/terrarium/tests/formicarium-session.test.ts",
+      "packages/terrarium/tests/formicarium-catalog.test.ts",
+      "packages/terrarium/tests/formicarium-assets.test.ts",
+      "packages/terrarium/playwright.formicarium.config.ts",
+      "packages/terrarium/e2e/formicarium-terminal.spec.ts",
+      "packages/terrarium/e2e/formicarium-iframe.spec.ts",
+      "packages/terrarium/e2e/formicarium-serve.ts",
+      "packages/terrarium/e2e/host/formicarium/element.html",
+      "packages/terrarium/e2e/host/formicarium/iframe.html",
+      "scripts/stage-formicarium.mjs",
+      "scripts/assemble-pages.sh",
+      "web/terminal.mjs",
+      "mise.toml",
+      ".github/workflows/test-terrarium.yml",
+      ".github/workflows/test-e2e.yml"
+    ],
+    "store_generation": "sha256:4d205ab2d1234dbeede10c16e16d6bf03e1d4fbbe712587d2d897ec310f57a21",
+    "source_fingerprint": "tree:2ed309925418cce2a885b5828323813c57cd3d3921f04b29140b5bc8ea31d998"
+  },
+  "files": {
+    "api-documentation.md": "9f5f863f4b97771fc60fc48c9820a0e31160193c6b3fc574a423f10e91b8b492",
+    "architecture.md": "ca56d6cae2689a1353330d079a9b12166a3b1e28fc661980c00376aa4e7a5689",
+    "business-overview.md": "ecf0bde93ce78f7b153f3c97622be71a325360349c5b0e6ef9ea843a6bf3d054",
+    "code-quality-assessment.md": "9bc7506fd4567a60214d2120f1b759921715c8271c204506a10c831e3b1e1fbb",
+    "code-structure.md": "4d4730dca6b283feaa094c4837dfc00f79e7c60cdf5be944daa82151c7bc2518",
+    "component-inventory.md": "22f7fda53ee72a1c54947ebac4a287543326c6787a31edc98859fbcbb43455ec",
+    "dependencies.md": "a64f08faf04b6c0595afabdc7f6a907e3b521f1246190aff88cebccde76e6cd8",
+    "reverse-engineering-timestamp.md": "2b4bee7575940e5a3e0ddef7f92151b75fba460c59db45db1b171950ba191f63",
+    "technology-stack.md": "ae9e5d0a9101b4b48cd56f51e1a54be90fd9386103b05f399eba6543817ff387"
+  }
+}

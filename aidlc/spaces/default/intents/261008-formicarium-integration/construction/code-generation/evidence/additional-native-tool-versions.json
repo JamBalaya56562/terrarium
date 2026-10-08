@@ -1,0 +1,10 @@
+{
+  "bash": {
+    "path": "/bin/bash",
+    "output": "GNU bash, version 3.2.57(1)-release (arm64-apple-darwin26)\nCopyright (C) 2007 Free Software Foundation, Inc.\n"
+  },
+  "patch": {
+    "path": "/usr/bin/patch",
+    "output": "patch 2.0-12u11-Apple\n"
+  }
+}

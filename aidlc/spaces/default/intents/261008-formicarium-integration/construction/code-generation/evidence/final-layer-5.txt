@@ -1,0 +1,3 @@
+Warning: failed to save to cache: /Users/mutoakio/.cache/tombi/https/www.schemastore.org/api/json/catalog.json, reason: Operation not permitted (os error 1)
+Warning: failed to save to cache: /Users/mutoakio/.cache/tombi/https/mise.jdx.dev/schema/mise.json, reason: Operation not permitted (os error 1)
+1 file did not need formatting

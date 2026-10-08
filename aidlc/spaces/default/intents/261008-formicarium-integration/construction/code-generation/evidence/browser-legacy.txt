@@ -1,0 +1,134 @@
+
+Running 36 tests using 1 worker
+
+(node:49958) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   1 [chromium] › e2e/pitchfork.spec.ts:51:1 › public page selects pitchfork and preserves the complete session (8.7s)
+(node:50732) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   2 [chromium] › e2e/pitchfork.spec.ts:64:1 › tool switch clears pitchfork ref, fixture, cwd and queued commands (10.6s)
+  ✓   3 [chromium] › e2e/pitchfork.spec.ts:89:1 › unknown tool and pitchfork ref fail without falling back (218ms)
+  ✘   4 [chromium] › e2e/pitchfork.spec.ts:100:1 › cross-origin element returns all exit events and resets a new fixture (9.1s)
+(node:52166) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   5 [chromium] › e2e/pitchfork.spec.ts:132:1 › element reports the existing isolation error (157ms)
+  ✓   6 [chromium] › e2e/pitchfork.spec.ts:144:1 › same-origin iframe works across browsers and rejects wrong source/origin (12.4s)
+  ✘   7 [chromium] › e2e/terminal.spec.ts:17:3 › the page › runs the build in ?ref and types the commands in ?run (2.2s)
+(node:53506) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   8 [chromium] › e2e/terminal.spec.ts:38:3 › the page › names the published builds when ?ref asks for a missing one (264ms)
+  ✓   9 [chromium] › e2e/terminal.spec.ts:47:3 › the page › starts in /work with no fixture when ?fixture is empty (335ms)
+  ✓  10 [chromium] › e2e/terminal.spec.ts:56:3 › the element on another origin › loads the build, runs commands and reports them (962ms)
+  ✓  11 [chromium] › e2e/terminal.spec.ts:86:3 › the element on another origin › reports an error on a page that is not cross-origin isolated (131ms)
+  ✓  12 [chromium] › e2e/terminal.spec.ts:102:3 › the iframe on another origin › talks to its parent with postMessage (1.2s)
+(node:53532) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  13 [firefox] › e2e/pitchfork.spec.ts:51:1 › public page selects pitchfork and preserves the complete session (10.9s)
+  ✘  14 [firefox] › e2e/pitchfork.spec.ts:64:1 › tool switch clears pitchfork ref, fixture, cwd and queued commands (11.5s)
+(node:55667) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  15 [firefox] › e2e/pitchfork.spec.ts:89:1 › unknown tool and pitchfork ref fail without falling back (1.1s)
+  ✓  16 [firefox] › e2e/pitchfork.spec.ts:100:1 › cross-origin element returns all exit events and resets a new fixture (10.2s)
+  ✓  17 [firefox] › e2e/pitchfork.spec.ts:132:1 › element reports the existing isolation error (223ms)
+  ✓  18 [firefox] › e2e/pitchfork.spec.ts:144:1 › same-origin iframe works across browsers and rejects wrong source/origin (12.9s)
+  ✓  19 [firefox] › e2e/terminal.spec.ts:17:3 › the page › runs the build in ?ref and types the commands in ?run (2.3s)
+  ✓  20 [firefox] › e2e/terminal.spec.ts:38:3 › the page › names the published builds when ?ref asks for a missing one (329ms)
+  ✓  21 [firefox] › e2e/terminal.spec.ts:47:3 › the page › starts in /work with no fixture when ?fixture is empty (689ms)
+  ✓  22 [firefox] › e2e/terminal.spec.ts:56:3 › the element on another origin › loads the build, runs commands and reports them (1.4s)
+  ✓  23 [firefox] › e2e/terminal.spec.ts:86:3 › the element on another origin › reports an error on a page that is not cross-origin isolated (217ms)
+  -  24 [firefox] › e2e/terminal.spec.ts:102:3 › the iframe on another origin › talks to its parent with postMessage
+(node:56657) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  25 [webkit] › e2e/pitchfork.spec.ts:51:1 › public page selects pitchfork and preserves the complete session (9.6s)
+  ✓  26 [webkit] › e2e/pitchfork.spec.ts:64:1 › tool switch clears pitchfork ref, fixture, cwd and queued commands (11.2s)
+  ✓  27 [webkit] › e2e/pitchfork.spec.ts:89:1 › unknown tool and pitchfork ref fail without falling back (577ms)
+  ✓  28 [webkit] › e2e/pitchfork.spec.ts:100:1 › cross-origin element returns all exit events and resets a new fixture (9.7s)
+  ✓  29 [webkit] › e2e/pitchfork.spec.ts:132:1 › element reports the existing isolation error (290ms)
+  ✓  30 [webkit] › e2e/pitchfork.spec.ts:144:1 › same-origin iframe works across browsers and rejects wrong source/origin (13.8s)
+  ✓  31 [webkit] › e2e/terminal.spec.ts:17:3 › the page › runs the build in ?ref and types the commands in ?run (2.6s)
+  ✓  32 [webkit] › e2e/terminal.spec.ts:38:3 › the page › names the published builds when ?ref asks for a missing one (461ms)
+  ✓  33 [webkit] › e2e/terminal.spec.ts:47:3 › the page › starts in /work with no fixture when ?fixture is empty (692ms)
+  ✓  34 [webkit] › e2e/terminal.spec.ts:56:3 › the element on another origin › loads the build, runs commands and reports them (1.5s)
+  ✓  35 [webkit] › e2e/terminal.spec.ts:86:3 › the element on another origin › reports an error on a page that is not cross-origin isolated (274ms)
+  -  36 [webkit] › e2e/terminal.spec.ts:102:3 › the iframe on another origin › talks to its parent with postMessage
+
+
+  1) [chromium] › e2e/pitchfork.spec.ts:51:1 › public page selects pitchfork and preserves the complete session 
+
+    Error: browserContext.close: ENOENT: no such file or directory, open '/private/tmp/terrarium-standalone-s00po458/packages/terrarium/test-results/.playwright-artifacts-0/traces/86738875fc2266dbafc9-106658f47f874e1904ea.trace'
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/pitchfork-public-page-sele-6081f-serves-the-complete-session-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/pitchfork-public-page-sele-6081f-serves-the-complete-session-chromium/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/pitchfork-public-page-sele-6081f-serves-the-complete-session-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/pitchfork-public-page-sele-6081f-serves-the-complete-session-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [chromium] › e2e/pitchfork.spec.ts:100:1 › cross-origin element returns all exit events and resets a new fixture 
+
+    Error: browserContext.close: ENOENT: no such file or directory, open '/private/tmp/terrarium-standalone-s00po458/packages/terrarium/test-results/.playwright-artifacts-1/traces/86738875fc2266dbafc9-068a2d3efada42f83333-recording4.network'
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/pitchfork-cross-origin-ele-44ec8-ts-and-resets-a-new-fixture-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/pitchfork-cross-origin-ele-44ec8-ts-and-resets-a-new-fixture-chromium/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/pitchfork-cross-origin-ele-44ec8-ts-and-resets-a-new-fixture-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/pitchfork-cross-origin-ele-44ec8-ts-and-resets-a-new-fixture-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) [chromium] › e2e/terminal.spec.ts:17:3 › the page › runs the build in ?ref and types the commands in ?run 
+
+    Error: browserContext.close: ENOENT: no such file or directory, open '/private/tmp/terrarium-standalone-s00po458/packages/terrarium/test-results/.playwright-artifacts-2/traces/8f9206fb64e745a9d86f-daa5a79b27257d242593-recording4.trace'
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/terminal-the-page-runs-the-2cce9-d-types-the-commands-in-run-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/terminal-the-page-runs-the-2cce9-d-types-the-commands-in-run-chromium/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/terminal-the-page-runs-the-2cce9-d-types-the-commands-in-run-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/terminal-the-page-runs-the-2cce9-d-types-the-commands-in-run-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) [firefox] › e2e/pitchfork.spec.ts:64:1 › tool switch clears pitchfork ref, fixture, cwd and queued commands 
+
+    Error: browserContext.close: ENOENT: no such file or directory, open '/private/tmp/terrarium-standalone-s00po458/packages/terrarium/test-results/.playwright-artifacts-4/traces/86738875fc2266dbafc9-258b1433e3abddb1cdcb-recording2.trace'
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/pitchfork-tool-switch-clea-d2d79-ure-cwd-and-queued-commands-firefox/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/pitchfork-tool-switch-clea-d2d79-ure-cwd-and-queued-commands-firefox/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/pitchfork-tool-switch-clea-d2d79-ure-cwd-and-queued-commands-firefox/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/pitchfork-tool-switch-clea-d2d79-ure-cwd-and-queued-commands-firefox/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4 failed
+    [chromium] › e2e/pitchfork.spec.ts:51:1 › public page selects pitchfork and preserves the complete session 
+    [chromium] › e2e/pitchfork.spec.ts:100:1 › cross-origin element returns all exit events and resets a new fixture 
+    [chromium] › e2e/terminal.spec.ts:17:3 › the page › runs the build in ?ref and types the commands in ?run 
+    [firefox] › e2e/pitchfork.spec.ts:64:1 › tool switch clears pitchfork ref, fixture, cwd and queued commands 
+  2 skipped
+  30 passed (2.6m)

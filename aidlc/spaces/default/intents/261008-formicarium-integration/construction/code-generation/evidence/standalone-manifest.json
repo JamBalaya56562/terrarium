@@ -1,0 +1,377 @@
+{
+  "root": "/private/tmp/terrarium-standalone-s00po458",
+  "files": [
+    {
+      "path": "LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "fixtures/aube-local-deps/app/filedep/package.json",
+      "sha256": "fd0dd9186e1edd64b224ba729204d44fe10d3fd7a439433d7975958517d0c5d5"
+    },
+    {
+      "path": "fixtures/aube-local-deps/app/package.json",
+      "sha256": "703fd9925a0bd8d5d38ff85bad0c5e180d9a7de1fdf33d036b2f54d36b565544"
+    },
+    {
+      "path": "fixtures/aube-local-deps/outside/linked/package.json",
+      "sha256": "3610e5defdfc32858a4f5e6937635f43a758ed7aeff89fcd6baeb195a5756e61"
+    },
+    {
+      "path": "fixtures/pitchfork-basic/app/pitchfork.toml",
+      "sha256": "5d0d6648c26fec6701325e5e8aea32ce72e507ac1fbf9683286990f727888a8c"
+    },
+    {
+      "path": "fixtures/sessions/aube-1645.txt",
+      "sha256": "5eefa02f680d4a3e30249aad55f07675cced08c794e6a44d7e60197026dbeb2f"
+    },
+    {
+      "path": "fixtures/sessions/pitchfork-basic.txt",
+      "sha256": "810e62e86d0c51944b1cb0b55c448315b97609a961d6d0a49545f441723e34f8"
+    },
+    {
+      "path": "inputs.tar.gz",
+      "sha256": "00abfc608106c8b4a17bd973b4a948b0aa1fa23c713ac22ad62e5a4571c75d01"
+    },
+    {
+      "path": "integration/formicarium-inputs.json",
+      "sha256": "24ff31a8c69aae32ada473fb5b5e9e7c3b1078cff582056ebefbbc7436f7f348"
+    },
+    {
+      "path": "mise.toml",
+      "sha256": "b28d81a6b593037c0a2b771957cd8c93b00ba3531d6642cb7883309034fec73a"
+    },
+    {
+      "path": "packages/terrarium/.gitignore",
+      "sha256": "aa3fd385b6781910b1c0be8bfc8108330ae1fe085ad3b9d6693e70040dc0dd54"
+    },
+    {
+      "path": "packages/terrarium/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "packages/terrarium/README.md",
+      "sha256": "d58eef52b44dff0ad9769f3554f339aa211034f9cb12edb24f130cdc3b3aef54"
+    },
+    {
+      "path": "packages/terrarium/bun.lock",
+      "sha256": "8ab0766fa259eebbc980a5551011f9942bbe59b954d31df814c6a3482860eb8f"
+    },
+    {
+      "path": "packages/terrarium/e2e/formicarium-iframe.spec.ts",
+      "sha256": "d52934333e9cf53f8a11b510f6777534e246f258a8de2695107912bff572b3fd"
+    },
+    {
+      "path": "packages/terrarium/e2e/formicarium-serve.ts",
+      "sha256": "0624d98c99a661029119c2f7c4030364d17b63f1d48f8bcb13606e5b9b53bc88"
+    },
+    {
+      "path": "packages/terrarium/e2e/formicarium-terminal.spec.ts",
+      "sha256": "8794f0c8a599ee996eb5fe937f6a24f9c3fd2303a664a002457d78839b5f5474"
+    },
+    {
+      "path": "packages/terrarium/e2e/host/element.html",
+      "sha256": "cdab89367d41f7aba1ef1256bca92d721880eaf42d9f90d44c139c96a286aa36"
+    },
+    {
+      "path": "packages/terrarium/e2e/host/formicarium/element.html",
+      "sha256": "ccba37e0560ee9fe97ea88d7ac56d0d69cf6ef38442fec4f971421965657bf34"
+    },
+    {
+      "path": "packages/terrarium/e2e/host/formicarium/iframe.html",
+      "sha256": "ee60eac343b45113f00e1a66aac0d09194852ecaadfdef1aa2191b19d39174de"
+    },
+    {
+      "path": "packages/terrarium/e2e/host/iframe.html",
+      "sha256": "b43fd3b3359817824f67b16133b23aee66be51e3b9a3258e70731adac0949438"
+    },
+    {
+      "path": "packages/terrarium/e2e/host/pitchfork-element.html",
+      "sha256": "e85f5be15b2cd1cd2198dd709ff15fd2884cbecaca6ee27e0ce25ed7d9dff22b"
+    },
+    {
+      "path": "packages/terrarium/e2e/host/pitchfork-iframe.html",
+      "sha256": "9846e2d7a27be2b256c4ebba64b5fc1ffd098ab7c145018b9d508c49be35daa7"
+    },
+    {
+      "path": "packages/terrarium/e2e/host/plain/element.html",
+      "sha256": "e3a5d6656347cdda1cdb4c5e4f1788a87ef8006824563b3f6f75229dacd00c1a"
+    },
+    {
+      "path": "packages/terrarium/e2e/host/plain/pitchfork-element.html",
+      "sha256": "893f9703f95c6e2356dac197a3a1043f35451c20e02ed887204e88bb6fa7a4bb"
+    },
+    {
+      "path": "packages/terrarium/e2e/pitchfork.spec.ts",
+      "sha256": "811c6389436d78291977fa14e08ad4a7f937fc8bf500c0df164cfb8b6683b4d3"
+    },
+    {
+      "path": "packages/terrarium/e2e/serve.ts",
+      "sha256": "85f78b90e31a2f52dc399c31aeb7584139a318fe820e1e21ff2b5a6ef1f76682"
+    },
+    {
+      "path": "packages/terrarium/e2e/terminal.spec.ts",
+      "sha256": "98d4b2813efe8a4dd090f4626f4cd094403f8c9fe4df13e1c44f60dea9b02bb3"
+    },
+    {
+      "path": "packages/terrarium/jsr.json",
+      "sha256": "03d82272cae9431dbe13307aad044c9b8ab64406129b66799e4964977b4abf10"
+    },
+    {
+      "path": "packages/terrarium/package.json",
+      "sha256": "d21fa37bac3640c86e7af86e990f1bec5773a3aa41cc079e7e0333d2856eebc8"
+    },
+    {
+      "path": "packages/terrarium/playwright.config.ts",
+      "sha256": "fcae5bfb12f46bc3624afa918080da8dc301d467122267bf727c4044831df63f"
+    },
+    {
+      "path": "packages/terrarium/playwright.formicarium.config.ts",
+      "sha256": "07def8366f606089c95cebb2c4e1a503456caee560ae38fe9b8a5d4fe54844b1"
+    },
+    {
+      "path": "packages/terrarium/scripts/gen-css.ts",
+      "sha256": "ddb4b51592c89de7cd6d2ec3db07dcfc35e7fb57ae25bd2c9b9099431e6de42e"
+    },
+    {
+      "path": "packages/terrarium/src/catalog.ts",
+      "sha256": "452b007bd46c51f9ca3ac1a11557a09a3bb15cbd1235973a75018e243c430904"
+    },
+    {
+      "path": "packages/terrarium/src/formicarium-session.ts",
+      "sha256": "945a384d0597abbe67188a9655062e0dfb02164abb41eddc7e5cb10320cc9ba6"
+    },
+    {
+      "path": "packages/terrarium/src/generated/xterm-css.ts",
+      "sha256": "0fc1b01494f328cdbb3ef38d7d3374433d1fbe5a7563f361a68e89a743762ea8"
+    },
+    {
+      "path": "packages/terrarium/src/index.ts",
+      "sha256": "893f931912430ad3459a76ccf2fe66f511112c6274409092616efce4ddb78c47"
+    },
+    {
+      "path": "packages/terrarium/src/npm.ts",
+      "sha256": "8d8e7549b8eaf08404f48cb40edf73fbf5fcd99b1de8f13ce7cf47922f4a5aff"
+    },
+    {
+      "path": "packages/terrarium/src/session.ts",
+      "sha256": "39f0d1800ecc391633fbf68cc37b0134dce0fe6d2ff34d92561105dee8bb1d9c"
+    },
+    {
+      "path": "packages/terrarium/src/terminal.ts",
+      "sha256": "188843d3c201970110445165fe600f5fe028c40460283a60a35f796bcdcaf7c7"
+    },
+    {
+      "path": "packages/terrarium/tests/catalog.test.ts",
+      "sha256": "8e96bc4bbcb4a6bf7ff60bbb82cbe7f0e08321b87632003be020b62a60ac4f8c"
+    },
+    {
+      "path": "packages/terrarium/tests/fake-tool.ts",
+      "sha256": "59956ac303ec4fb64b482d884050ef2b4246d5b8be11be22b0f2ca8acab99ab0"
+    },
+    {
+      "path": "packages/terrarium/tests/formicarium-assets.test.ts",
+      "sha256": "9004554e7f3c2fa18c707427b1033eefe7ba20b034cb75bf2f189165d19430c2"
+    },
+    {
+      "path": "packages/terrarium/tests/formicarium-catalog.test.ts",
+      "sha256": "3ab23f79183b3396885312d6f772c603edd284a3c46a63d9702e54213442c538"
+    },
+    {
+      "path": "packages/terrarium/tests/formicarium-inputs.test.ts",
+      "sha256": "9a8ed0c2f4b36ad653367b682f49426669611c7b5ba48fb595effcc1a03ea55e"
+    },
+    {
+      "path": "packages/terrarium/tests/formicarium-session.test.ts",
+      "sha256": "9488531d76de3593a7edd7bf19501eb4d5bdc3020eca8dc775a1b60ad73d8b32"
+    },
+    {
+      "path": "packages/terrarium/tests/pages-build-artifacts.test.ts",
+      "sha256": "9c354876128ce4824cf8937d3edcafd1454fceb77d97f3343dcc4de2474ccce8"
+    },
+    {
+      "path": "packages/terrarium/tests/pitchfork-build-retry.test.ts",
+      "sha256": "8545c27702064a3b814d6a9de1bc1c3d51d6a606800b024af3ef2c1521646c57"
+    },
+    {
+      "path": "packages/terrarium/tests/pitchfork-runtime.test.ts",
+      "sha256": "6e515c8e723b3dcfc646b23c48a82b5a64b4c24a937eca14aa95b764262dec34"
+    },
+    {
+      "path": "packages/terrarium/tests/session.test.ts",
+      "sha256": "c5ea1ab23c1a32043269b6b293b3a6ebf3505ea1602376ae11ad3884ed335216"
+    },
+    {
+      "path": "packages/terrarium/tests/tsconfig.json",
+      "sha256": "5bf6fd0243b94250276ef3950299a3ae7966096d69b483b19c419552e3c8e5f6"
+    },
+    {
+      "path": "packages/terrarium/tsconfig.json",
+      "sha256": "9d8d458cf9eca294df1f0302fa85f74aacb7534327c1dbbf8250dc58c81906b8"
+    },
+    {
+      "path": "patches/dirs-6.0.0.patch",
+      "sha256": "756233c6e816f80d28b39eee8740860d2758e0419bf76091cdc3b4e7e459fe91"
+    },
+    {
+      "path": "patches/dirs-7.0.0.patch",
+      "sha256": "756233c6e816f80d28b39eee8740860d2758e0419bf76091cdc3b4e7e459fe91"
+    },
+    {
+      "path": "patches/if-addrs-0.15.0.patch",
+      "sha256": "0f904427c112a1570b66b65c7e13a9d8a4a2fba92b1d62520188464808f551c1"
+    },
+    {
+      "path": "patches/interprocess-2.4.4.patch",
+      "sha256": "44677204b871ae17d99c7b9edfb6f59f3b0a040287aa2704746323aca79b4f79"
+    },
+    {
+      "path": "patches/libc-0.2.186.patch",
+      "sha256": "fa486bb083a4b54876eb27551bc8e998bf8fd09c82e5595cd83ef86caf81f947"
+    },
+    {
+      "path": "patches/mio-1.2.2.patch",
+      "sha256": "27ffa87d10fe3544bf9c8906d39a7667b0f57cce3befd1999d80b92830906912"
+    },
+    {
+      "path": "patches/mio-1.2.3.patch",
+      "sha256": "f70de650d5e86405a55012e708f348ad170775f53abb52a74119e29d203f0580"
+    },
+    {
+      "path": "patches/nix-0.31.3.patch",
+      "sha256": "9920dbe063564940bfe2469f3525d96f7b7bf622f0322cee2a91663f39ee49c0"
+    },
+    {
+      "path": "patches/reqwest-0.13.1.patch",
+      "sha256": "ea187a47e4f6021435b1f0e996516c91f33368f47d527903f7a5cc08fdde8de4"
+    },
+    {
+      "path": "patches/ring-0.17.14.patch",
+      "sha256": "3fe27a91913a073ffe4ada65aca834f2a53aaed68f732c25c906446d5e99108e"
+    },
+    {
+      "path": "patches/tokio-1.53.1.patch",
+      "sha256": "7321b0675e4232c3da8fbf5ce188506efde4008cec69c351d480e0c498b3a33d"
+    },
+    {
+      "path": "patches/toolchain/rust-std-nightly-2026-10-01.patch",
+      "sha256": "1b2a6c6435157d716ed4f3ab847a928f110fde945da9a6b6aa374995a8548e32"
+    },
+    {
+      "path": "patches/tools/pitchfork-2.29.0.patch",
+      "sha256": "036ddcc934f02696f944d53f7b1556c94e4a92872f9cf29c4342fd12b7f959a1"
+    },
+    {
+      "path": "runtime/libterrarium.js",
+      "sha256": "e7a4d7a1b4d0cbf2a0f8001c4172fba2ed8b6957f94f84281f91ce4d1ab36176"
+    },
+    {
+      "path": "runtime/run-node.mjs",
+      "sha256": "7202f7ce8ce84dddc00000c727328035e9acb117422bde24bf4fd64f451be8d8"
+    },
+    {
+      "path": "runtime/syscalls.c",
+      "sha256": "913690d72f737e80eca0da3c8014cd65b148c03af4c77e4144d77334f1db3007"
+    },
+    {
+      "path": "scripts/assemble-pages.sh",
+      "sha256": "181f5f8495e19632d79b853438bb0f960c048b94ce060ab538be1c1a2a43850a"
+    },
+    {
+      "path": "scripts/build-aube.sh",
+      "sha256": "a9228be2bada3d1ab901876f172723a6e06f93b9afa32b1e6721db4c4bacf3fc"
+    },
+    {
+      "path": "scripts/build-pitchfork.sh",
+      "sha256": "860167c19be18c2a4bea0235652d49c60daa1b914e81aa69c2b24b6efd40becf"
+    },
+    {
+      "path": "scripts/check-pitchfork-runtime.mjs",
+      "sha256": "0300e13217ac3971ea598c4f91eefd30171f3791d91ad400d2d057cfbbd3de1c"
+    },
+    {
+      "path": "scripts/emscripten-env.sh",
+      "sha256": "b66716ee0c14c27489b6336bccc95b3ed4704524ca82cf5dc6166658037c540d"
+    },
+    {
+      "path": "scripts/fetch-builds.sh",
+      "sha256": "45ce211279cbecba3a8bbf99803ab9f8e418e2ad3a76f3c89234d160660ffdce"
+    },
+    {
+      "path": "scripts/load-builds.sh",
+      "sha256": "bdd41b27b87dfd2f7a70cb1966e1a0eeb44835c2025092dc8b2444a2c8caf514"
+    },
+    {
+      "path": "scripts/patch-rust-src.sh",
+      "sha256": "ba86bf22ee435160c96f5a5a2590b8170ba6d5385708ff05d8074a7002ab4404"
+    },
+    {
+      "path": "scripts/prepare-formicarium.mjs",
+      "sha256": "5c990a3f8181e17737ccfbe11f57af459299c39ebd0e9d5826df991f0977fe66"
+    },
+    {
+      "path": "scripts/prepare-pitchfork-e2e.sh",
+      "sha256": "178e4b7a9b68d3930750514ce6c1fd8872565669b464c378f92a82b28ab46fb2"
+    },
+    {
+      "path": "scripts/resolve-ref.sh",
+      "sha256": "9e938232d8b71028c0dacfeb7e76e492e501f33d2ab536184b073680ca5a20eb"
+    },
+    {
+      "path": "scripts/stage-formicarium.mjs",
+      "sha256": "3b45cec05f43a25ec2dfaa0d8fed3810bb7f235fac2b029ef72827bd7c749988"
+    },
+    {
+      "path": "scripts/stage-web.sh",
+      "sha256": "ba8b7e95baa3b9bbaef7878d572bbc142412d23525613e2a852d534dca9c089f"
+    },
+    {
+      "path": "scripts/vendor-patched.sh",
+      "sha256": "18a1622522ce95d13f79799ce9b0e6befd26b0875638f870c50af2712f3c8d34"
+    },
+    {
+      "path": "web/coi-serviceworker.js",
+      "sha256": "d12bd536e27e39a773d7dc7adb1a1167d24002293e97ac81c995fb00cf8d4d5a"
+    },
+    {
+      "path": "web/dist/aube/v2.6.1/aube.js",
+      "sha256": "efac1c643527f2229dbe801929dbd9693bdad321150474e0e6023f54841db3ab"
+    },
+    {
+      "path": "web/dist/aube/v2.6.1/aube.wasm",
+      "sha256": "c167246a005f50b72fcad44ab6b67b4f520179428bb3f46463691f5fe7b00981"
+    },
+    {
+      "path": "web/dist/builds.json",
+      "sha256": "cc38b05de0aaaa5228fa987300cfef643c178d9ed5c960569b19b72b5aa5c5b2"
+    },
+    {
+      "path": "web/dist/fixtures/aube-local-deps.json",
+      "sha256": "2a2b3bbf5995be2f20fb8fe7a5e29b0ca1c733db9b491bfef991a408a7a7bc44"
+    },
+    {
+      "path": "web/dist/fixtures/pitchfork-basic.json",
+      "sha256": "081abc73542d06df09d28cdad88bfda1628634ab5482a3f8238134a25951583a"
+    },
+    {
+      "path": "web/dist/pitchfork/v2.29.0/pitchfork.js",
+      "sha256": "4bf0ea2764e2ba3c5650cb577f5c66156af5a76cd682691d1d8f4e07875b8fb1"
+    },
+    {
+      "path": "web/dist/pitchfork/v2.29.0/pitchfork.wasm",
+      "sha256": "16f335ef529b2fa7815cc6201030b01538ef76d9b52478746dc4df62161b8cee"
+    },
+    {
+      "path": "web/index.html",
+      "sha256": "76090d04749bed484b8323807cf3d850014b68e7bd7077e4888a7a036b018a23"
+    },
+    {
+      "path": "web/terminal.mjs",
+      "sha256": "d9fb0170d977587e9a658e4ed50f14aa8b5121d7322cdb9f072345c93b515e86"
+    },
+    {
+      "path": "web/tools.json",
+      "sha256": "eb5afc893a0ca1d4cbf282bd98b675184836bb1dcef1f2d9c81c6a51b96da112"
+    }
+  ]
+}

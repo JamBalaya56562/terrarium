@@ -1,0 +1,131 @@
+[tools]
+actionlint = "latest"
+biome = "latest"
+bun = "latest"
+jq = "latest"
+opentofu = "latest"
+rumdl = "latest"
+shellcheck = "latest"
+tombi = "latest"
+
+[settings]
+experimental = true
+
+# Install a package's dependencies when its manifest or lockfile changes.
+[deps.bun-terrarium]
+auto = true
+sources = ["package.json", "bun.lock"]
+outputs = ["node_modules"]
+run = "bun install --frozen-lockfile"
+dir = "packages/terrarium"
+
+[hooks]
+enter = ["mise deps -q"]
+
+# ── Lint ──────────────────────────────────────────────────────────────
+# Read-only `<area>:check` and in-place `<area>:check:fix`, as in vivarium.
+# Tasks with loops or conditionals live in mise-tasks/.
+
+[tasks."js:check"]
+description = "Biome — format + lint + import order for JS/JSON (read-only)"
+run = "biome check ."
+
+[tasks."js:check:fix"]
+description = "Biome — apply safe + unsafe autofixes (in-place)"
+run = "biome check --write --unsafe ."
+
+[tasks."toml:check"]
+description = "Tombi — TOML format check + lint (read-only)"
+run = "tombi format --check && tombi lint"
+
+[tasks."toml:check:fix"]
+description = "Tombi — apply TOML format (in-place)"
+run = "tombi format"
+
+[tasks."markdown:check"]
+description = "rumdl — Markdown lint (read-only)"
+run = "rumdl check ."
+
+[tasks."markdown:check:fix"]
+description = "rumdl — apply Markdown autofix (in-place)"
+run = "rumdl fmt ."
+
+[tasks."lint:all"]
+description = "Run all formatters/linters (read-only) — Biome + Tombi + rumdl + ShellCheck + actionlint"
+depends = ["js:check", "toml:check", "markdown:check", "shell:check", "actions:check"]
+
+[tasks."lint:all:fix"]
+description = "Apply all autofixes (in-place)"
+depends = ["js:check:fix", "toml:check:fix", "markdown:check:fix"]
+
+# ── Package ───────────────────────────────────────────────────────────
+
+[tasks."terrarium:build"]
+description = "Build the @aletheia-works/terrarium package into dist/"
+dir = "packages/terrarium"
+run = "bun run build"
+
+[tasks."terrarium:test"]
+description = "Unit-test the @aletheia-works/terrarium package"
+dir = "packages/terrarium"
+run = "bun run test"
+
+[tasks."terrarium:typecheck"]
+description = "Type-check the package and its tests"
+dir = "packages/terrarium"
+run = "bun run typecheck"
+
+[tasks."terrarium:e2e"]
+description = "Browser tests against .site (run site:build first, with a build in web/dist)"
+dir = "packages/terrarium"
+run = "bun run test:e2e"
+
+[tasks."site:build"]
+description = "Assemble the GitHub Pages site into .site/ with the staged web/dist/"
+run = "bash scripts/assemble-pages.sh .site"
+
+[tasks."ci:e2e"]
+description = "Test aube v2.6.1 and a staged pitchfork v2.29.0 build in all browsers"
+run = [
+  "bash scripts/fetch-builds.sh v2.6.1",
+  "bash scripts/prepare-pitchfork-e2e.sh",
+  "bash scripts/stage-web.sh",
+  "bash scripts/assemble-pages.sh .site",
+  "cd packages/terrarium && bun run test:e2e",
+]
+
+[tasks."ci:terrarium"]
+description = "Local equivalent of test-terrarium.yml"
+dir = "packages/terrarium"
+run = ["bun install --frozen-lockfile", "bun run typecheck", "bun run test", "bun run build"]
+
+# ── Infra ─────────────────────────────────────────────────────────────
+
+[tasks."infra:init"]
+description = "Initialise OpenTofu working directory for infra/github"
+dir = "infra/github"
+run = "tofu init"
+
+[tasks."infra:plan"]
+description = "OpenTofu plan for infra/github (needs GITHUB_TOKEN and the state; see infra/github/README.md)"
+dir = "infra/github"
+run = "tofu plan"
+
+[tasks."infra:fmt"]
+description = "Format the OpenTofu files (in-place)"
+run = "tofu fmt -recursive infra"
+
+# Unit-scoped common runtime integration. Local pack is not a published RC.
+[tasks."terrarium:formicarium-unit"]
+description = "Test the public formicarium adapter and distribution boundaries"
+dir = "packages/terrarium"
+run = "bun test tests/formicarium-session.test.ts tests/formicarium-catalog.test.ts tests/formicarium-assets.test.ts"
+
+[tasks."terrarium:formicarium-build"]
+description = "Type-check and stage the installed common runtime package"
+run = ["cd packages/terrarium && bun run typecheck", "bash scripts/assemble-pages.sh .site"]
+
+[tasks."terrarium:formicarium-e2e"]
+description = "Verify common runtime terminal and iframe in all three browsers"
+dir = "packages/terrarium"
+run = "bun x playwright test --config playwright.formicarium.config.ts e2e/formicarium-terminal.spec.ts e2e/formicarium-iframe.spec.ts --workers=1 --retries=0"

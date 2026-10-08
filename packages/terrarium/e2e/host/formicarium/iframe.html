@@ -1,0 +1,26 @@
+<!doctype html>
+<meta charset="utf-8" />
+<title>common runtime iframe parent</title>
+<script>
+  globalThis.u3Messages = [];
+  addEventListener('message', event => {
+    if (event.source === document.getElementById('terminal-frame')?.contentWindow) {
+      u3Messages.push({ origin: event.origin, ...event.data });
+    }
+  });
+  const params = new URLSearchParams(location.search);
+  const source = params.get('source') ?? location.origin;
+  const url = new URL(params.get('plain') === '1' ? '/plain/web/' : '/web/', source);
+  url.searchParams.set('embed', '');
+  url.searchParams.set('fixture', '');
+  url.searchParams.set('origin', params.get('origin') ?? location.origin);
+  if (params.has('run')) url.searchParams.set('run', params.get('run'));
+  const frame = document.createElement('iframe');
+  frame.id = 'terminal-frame';
+  frame.dataset.testid = 'terrarium-iframe';
+  frame.setAttribute('credentialless', '');
+  frame.allow = 'cross-origin-isolated';
+  frame.style = 'width:800px;height:400px';
+  frame.src = url.href;
+  addEventListener('DOMContentLoaded', () => document.body.append(frame));
+</script>

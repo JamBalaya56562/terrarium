@@ -3,6 +3,16 @@ import { resolve } from 'node:path';
 import { expect, type Page, test } from '@playwright/test';
 import { HOST, SITE } from '../playwright.config.ts';
 
+const pitchforkRef =
+  process.env.TERRARIUM_PITCHFORK_REF ??
+  JSON.parse(
+    readFileSync(
+      resolve(process.env.TERRARIUM_SITE_DIR ?? '', 'web/tools.json'),
+      'utf8',
+    ),
+  ).pitchfork.default;
+const pitchforkVersion = pitchforkRef.replace(/^v/, '');
+
 const commands = readFileSync(
   resolve('../../fixtures/sessions/pitchfork-basic.txt'),
   'utf8',
@@ -13,7 +23,7 @@ const commands = readFileSync(
 
 function checkOutputs(outputs: string[]) {
   expect(commands).toHaveLength(8);
-  expect(outputs[0]).toContain('2.29.0');
+  expect(outputs[0]).toContain(pitchforkVersion);
   expect(outputs[1]).toContain('api');
   expect(outputs[1]).toContain('worker');
   expect(outputs[4]).toContain('[daemons.api]');
@@ -54,10 +64,10 @@ test('public page selects pitchfork and preserves the complete session', async (
   await page.goto(`${SITE}/web/?tool=pitchfork`);
   expect(await ready(page)).toMatchObject({
     tool: 'pitchfork',
-    ref: 'v2.29.0',
+    ref: pitchforkRef,
   });
   await expect(page.locator('#tool')).toHaveValue('pitchfork');
-  await expect(page.locator('#build')).toHaveValue('v2.29.0');
+  await expect(page.locator('#build')).toHaveValue(pitchforkRef);
   await runSession(page);
 });
 
@@ -65,7 +75,7 @@ test('tool switch clears pitchfork ref, fixture, cwd and queued commands', async
   page,
 }) => {
   await page.goto(
-    `${SITE}/web/?tool=pitchfork&ref=v2.29.0&fixture=pitchfork-basic&cwd=/work/app&run=pitchfork%20--version`,
+    `${SITE}/web/?tool=pitchfork&ref=${encodeURIComponent(pitchforkRef)}&fixture=pitchfork-basic&cwd=/work/app&run=pitchfork%20--version`,
   );
   await ready(page);
   await runSession(page);
@@ -118,7 +128,6 @@ test('cross-origin element returns all exit events and resets a new fixture', as
     const fresh = document.createElement('terrarium-terminal');
     fresh.setAttribute('base', 'http://localhost:8780/web/');
     fresh.setAttribute('tool', 'pitchfork');
-    fresh.setAttribute('ref', 'v2.29.0');
     document.body.replaceChildren(fresh);
   });
   await ready(page);

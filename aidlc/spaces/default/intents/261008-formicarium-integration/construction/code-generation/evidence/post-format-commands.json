@@ -1,0 +1,66 @@
+[
+  {
+    "command": [
+      "mise",
+      "exec",
+      "node@26",
+      "--",
+      "bun",
+      "run",
+      "typecheck"
+    ],
+    "cwd": "packages/terrarium",
+    "exitCode": 0
+  },
+  {
+    "command": [
+      "mise",
+      "exec",
+      "node@26",
+      "--",
+      "bun",
+      "test",
+      "./tests/formicarium-inputs.test.ts",
+      "./tests/formicarium-session.test.ts",
+      "./tests/formicarium-catalog.test.ts",
+      "./tests/formicarium-assets.test.ts"
+    ],
+    "cwd": "packages/terrarium",
+    "exitCode": 0
+  },
+  {
+    "command": [
+      "mise",
+      "exec",
+      "node@26",
+      "--",
+      "bun",
+      "run",
+      "build"
+    ],
+    "cwd": "packages/terrarium",
+    "exitCode": 0
+  },
+  {
+    "command": [
+      "mise",
+      "exec",
+      "--",
+      "biome",
+      "check",
+      "scripts/prepare-formicarium.mjs",
+      "scripts/stage-formicarium.mjs",
+      "integration/formicarium-inputs.json",
+      "packages/terrarium/src/catalog.ts",
+      "packages/terrarium/src/formicarium-session.ts",
+      "packages/terrarium/src/terminal.ts",
+      "packages/terrarium/playwright.config.ts",
+      "packages/terrarium/playwright.formicarium.config.ts",
+      "packages/terrarium/tests/formicarium-inputs.test.ts",
+      "packages/terrarium/tests/formicarium-assets.test.ts",
+      "packages/terrarium/tests/formicarium-catalog.test.ts"
+    ],
+    "cwd": ".",
+    "exitCode": 0
+  }
+]

@@ -1,0 +1,80 @@
+[
+  {
+    "command": [
+      "mise",
+      "exec",
+      "node@26",
+      "--",
+      "bun",
+      "run",
+      "test"
+    ],
+    "cwd": "/Users/mutoakio/Documents/terrarium/packages/terrarium",
+    "exitCode": 0
+  },
+  {
+    "command": [
+      "mise",
+      "exec",
+      "node@26",
+      "--",
+      "bun",
+      "run",
+      "typecheck"
+    ],
+    "cwd": "/Users/mutoakio/Documents/terrarium/packages/terrarium",
+    "exitCode": 0
+  },
+  {
+    "command": [
+      "mise",
+      "exec",
+      "node@26",
+      "--",
+      "bun",
+      "run",
+      "build"
+    ],
+    "cwd": "/Users/mutoakio/Documents/terrarium/packages/terrarium",
+    "exitCode": 0
+  },
+  {
+    "command": [
+      "mise",
+      "exec",
+      "--",
+      "shellcheck",
+      "-x",
+      "scripts/resolve-ref.sh",
+      "scripts/build-pitchfork.sh"
+    ],
+    "cwd": "/Users/mutoakio/Documents/terrarium",
+    "exitCode": 0
+  },
+  {
+    "command": [
+      "mise",
+      "exec",
+      "--",
+      "biome",
+      "check",
+      "packages/terrarium/tests/pitchfork-runtime.test.ts",
+      "packages/terrarium/tests/pitchfork-build-retry.test.ts"
+    ],
+    "cwd": "/Users/mutoakio/Documents/terrarium",
+    "exitCode": 0
+  },
+  {
+    "command": [
+      "mise",
+      "exec",
+      "node@26",
+      "--",
+      "bun",
+      "run",
+      "test"
+    ],
+    "cwd": "/private/tmp/terrarium-standalone-s00po458/packages/terrarium",
+    "exitCode": 1
+  }
+]

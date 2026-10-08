@@ -1,0 +1,109 @@
+diff --git a/build.rs b/build.rs
+--- a/build.rs
++++ b/build.rs
+@@ -34,7 +34,10 @@
+     if index.is_file() && !placeholder {
+         return;
+     }
+-    if std::env::var("PROFILE").as_deref() == Ok("release") {
++    // terrarium: the browser build never serves the web UI.
++    if std::env::var("PROFILE").as_deref() == Ok("release")
++        && std::env::var("CARGO_CFG_TARGET_OS").as_deref() != Ok("emscripten")
++    {
+         panic!(
+             "the web UI has not been built: ui/dist/index.html is {}. \
+              Run `mise run build:ui` first; release builds embed it.",
+diff --git a/src/proxy/lan_ip.rs b/src/proxy/lan_ip.rs
+--- a/src/proxy/lan_ip.rs
++++ b/src/proxy/lan_ip.rs
+@@ -80,7 +80,7 @@
+ 
+ // -- Unix: interface enumeration via nix::ifaddrs ----------------------------
+ 
+-#[cfg(unix)]
++#[cfg(all(unix, not(target_os = "emscripten")))]
+ fn find_interface_for_ip(target: &Ipv4Addr) -> Option<InterfaceInfo> {
+     let addrs = nix::ifaddrs::getifaddrs().ok()?;
+     for iface in addrs {
+@@ -105,7 +105,7 @@
+     None
+ }
+ 
+-#[cfg(unix)]
++#[cfg(all(unix, not(target_os = "emscripten")))]
+ fn is_virtual_interface(iface: &InterfaceInfo) -> bool {
+     if iface.is_loopback {
+         return true;
+@@ -129,7 +129,7 @@
+     false
+ }
+ 
+-#[cfg(unix)]
++#[cfg(all(unix, not(target_os = "emscripten")))]
+ fn fallback_interface_ip() -> Option<Ipv4Addr> {
+     let addrs = nix::ifaddrs::getifaddrs().ok()?;
+     for iface in addrs {
+@@ -165,17 +165,17 @@
+ 
+ // -- Windows: no nix::ifaddrs, skip interface enumeration --------------------
+ 
+-#[cfg(not(unix))]
++#[cfg(any(not(unix), target_os = "emscripten"))]
+ fn find_interface_for_ip(_target: &Ipv4Addr) -> Option<InterfaceInfo> {
+     None
+ }
+ 
+-#[cfg(not(unix))]
++#[cfg(any(not(unix), target_os = "emscripten"))]
+ fn is_virtual_interface(_iface: &InterfaceInfo) -> bool {
+     false
+ }
+ 
+-#[cfg(not(unix))]
++#[cfg(any(not(unix), target_os = "emscripten"))]
+ fn fallback_interface_ip() -> Option<Ipv4Addr> {
+     None
+ }
+diff --git a/src/supervisor/lifecycle.rs b/src/supervisor/lifecycle.rs
+--- a/src/supervisor/lifecycle.rs
++++ b/src/supervisor/lifecycle.rs
+@@ -2806,9 +2806,9 @@
+ #[cfg(unix)]
+ fn setgroups_to_primary(gid: nix::unistd::Gid) -> std::io::Result<()> {
+     let groups = [gid.as_raw() as libc::gid_t];
+-    #[cfg(any(target_os = "linux", target_os = "android"))]
++    #[cfg(any(target_os = "linux", target_os = "android", target_os = "emscripten"))]
+     let group_count = groups.len();
+-    #[cfg(not(any(target_os = "linux", target_os = "android")))]
++    #[cfg(not(any(target_os = "linux", target_os = "android", target_os = "emscripten")))]
+     let group_count = groups.len() as libc::c_int;
+     let rc = unsafe { libc::setgroups(group_count, groups.as_ptr()) };
+     if rc == -1 {
+@@ -2840,7 +2840,14 @@
+ 
+     // SAFETY: `username` is a valid nul-terminated C string and `base_gid`
+     // is derived from a resolved system account or sudo-provided gid.
++    #[cfg(not(target_os = "emscripten"))]
+     let rc = unsafe { libc::initgroups(username.as_ptr(), base_gid) };
++    // terrarium: Emscripten's libc has no initgroups, and no other users.
++    #[cfg(target_os = "emscripten")]
++    let rc: libc::c_int = {
++        let _ = (username, base_gid);
++        return Err(std::io::Error::from(std::io::ErrorKind::Unsupported));
++    };
+     if rc == -1 {
+         Err(std::io::Error::last_os_error())
+     } else {
+diff --git a/src/boot_manager.rs b/src/boot_manager.rs
+--- a/src/boot_manager.rs
++++ b/src/boot_manager.rs
+@@ -554,6 +554,9 @@
+     pub struct BootManager;
+ 
+     impl BootManager {
++        // terrarium: the other platforms have this; the supervisor calls it.
++        pub fn check_and_reregister_if_stale(&self) {}
++
+         pub fn new() -> Result<Self> {
+             miette::bail!(
+                 "boot management is not supported on this platform; \

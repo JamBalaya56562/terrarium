@@ -5,5 +5,12 @@
     "dirName": "261004-pitchfork-continuation",
     "scope": "pitchfork-continuation",
     "status": "in-flight"
+  },
+  {
+    "uuid": "01a11910-8ce7-7ef0-8d2d-4afb40b934d5",
+    "slug": "formicarium-integration",
+    "dirName": "261008-formicarium-integration",
+    "scope": "express",
+    "status": "complete"
   }
 ]

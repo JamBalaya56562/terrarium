@@ -1,0 +1,47 @@
+Listing tests:
+  [chromium] › formicarium-iframe.spec.ts:39:3 › iframe condition same-origin: exact origins and guest marker oracle
+  [chromium] › formicarium-iframe.spec.ts:39:3 › iframe condition cross-origin: exact origins and guest marker oracle
+  [chromium] › formicarium-iframe.spec.ts:39:3 › iframe condition missing-isolation: exact origins and guest marker oracle
+  [chromium] › formicarium-iframe.spec.ts:87:1 › invalid opaque wildcard and unknown parent origins never connect or notify
+  [chromium] › formicarium-iframe.spec.ts:102:1 › unapproved parent origin cannot run or receive notifications even when syntax is valid
+  [chromium] › formicarium-terminal.spec.ts:17:1 › latest aube ready fields, events and actual Worker version
+  [chromium] › formicarium-terminal.spec.ts:29:1 › latest pitchfork uses common runtime actual Worker version
+  [chromium] › formicarium-terminal.spec.ts:34:1 › nested cwd keeps /work sibling before and after actual guest
+  [chromium] › formicarium-terminal.spec.ts:42:1 › empty fixture and empty command have no added exit event
+  [chromium] › formicarium-terminal.spec.ts:50:1 › normal nonzero exit and unsupported syntax error once; queue recovers
+  [chromium] › formicarium-terminal.spec.ts:62:1 › run attributes and concurrent calls retain serial command order
+  [chromium] › formicarium-terminal.spec.ts:71:1 › keyboard focus deletion arrows history and Ctrl-C preserve terminal controls
+  [chromium] › formicarium-terminal.spec.ts:85:1 › tool switch resets attributes and suppresses prior queued run notifications
+  [chromium] › formicarium-terminal.spec.ts:100:1 › disconnect invalidates old work and reconnect creates independent session
+  [chromium] › formicarium-terminal.spec.ts:111:1 › boot error rejects ready once without creating any guest Worker
+  [firefox] › formicarium-iframe.spec.ts:39:3 › iframe condition same-origin: exact origins and guest marker oracle
+  [firefox] › formicarium-iframe.spec.ts:39:3 › iframe condition cross-origin: exact origins and guest marker oracle
+  [firefox] › formicarium-iframe.spec.ts:39:3 › iframe condition missing-isolation: exact origins and guest marker oracle
+  [firefox] › formicarium-iframe.spec.ts:87:1 › invalid opaque wildcard and unknown parent origins never connect or notify
+  [firefox] › formicarium-iframe.spec.ts:102:1 › unapproved parent origin cannot run or receive notifications even when syntax is valid
+  [firefox] › formicarium-terminal.spec.ts:17:1 › latest aube ready fields, events and actual Worker version
+  [firefox] › formicarium-terminal.spec.ts:29:1 › latest pitchfork uses common runtime actual Worker version
+  [firefox] › formicarium-terminal.spec.ts:34:1 › nested cwd keeps /work sibling before and after actual guest
+  [firefox] › formicarium-terminal.spec.ts:42:1 › empty fixture and empty command have no added exit event
+  [firefox] › formicarium-terminal.spec.ts:50:1 › normal nonzero exit and unsupported syntax error once; queue recovers
+  [firefox] › formicarium-terminal.spec.ts:62:1 › run attributes and concurrent calls retain serial command order
+  [firefox] › formicarium-terminal.spec.ts:71:1 › keyboard focus deletion arrows history and Ctrl-C preserve terminal controls
+  [firefox] › formicarium-terminal.spec.ts:85:1 › tool switch resets attributes and suppresses prior queued run notifications
+  [firefox] › formicarium-terminal.spec.ts:100:1 › disconnect invalidates old work and reconnect creates independent session
+  [firefox] › formicarium-terminal.spec.ts:111:1 › boot error rejects ready once without creating any guest Worker
+  [webkit] › formicarium-iframe.spec.ts:39:3 › iframe condition same-origin: exact origins and guest marker oracle
+  [webkit] › formicarium-iframe.spec.ts:39:3 › iframe condition cross-origin: exact origins and guest marker oracle
+  [webkit] › formicarium-iframe.spec.ts:39:3 › iframe condition missing-isolation: exact origins and guest marker oracle
+  [webkit] › formicarium-iframe.spec.ts:87:1 › invalid opaque wildcard and unknown parent origins never connect or notify
+  [webkit] › formicarium-iframe.spec.ts:102:1 › unapproved parent origin cannot run or receive notifications even when syntax is valid
+  [webkit] › formicarium-terminal.spec.ts:17:1 › latest aube ready fields, events and actual Worker version
+  [webkit] › formicarium-terminal.spec.ts:29:1 › latest pitchfork uses common runtime actual Worker version
+  [webkit] › formicarium-terminal.spec.ts:34:1 › nested cwd keeps /work sibling before and after actual guest
+  [webkit] › formicarium-terminal.spec.ts:42:1 › empty fixture and empty command have no added exit event
+  [webkit] › formicarium-terminal.spec.ts:50:1 › normal nonzero exit and unsupported syntax error once; queue recovers
+  [webkit] › formicarium-terminal.spec.ts:62:1 › run attributes and concurrent calls retain serial command order
+  [webkit] › formicarium-terminal.spec.ts:71:1 › keyboard focus deletion arrows history and Ctrl-C preserve terminal controls
+  [webkit] › formicarium-terminal.spec.ts:85:1 › tool switch resets attributes and suppresses prior queued run notifications
+  [webkit] › formicarium-terminal.spec.ts:100:1 › disconnect invalidates old work and reconnect creates independent session
+  [webkit] › formicarium-terminal.spec.ts:111:1 › boot error rejects ready once without creating any guest Worker
+Total: 45 tests in 2 files

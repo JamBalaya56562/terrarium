@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "scope": "observed main-session commands; not complete U3 acceptance",
+  "externalRepository": "/Users/mutoakio/Documents/terrarium",
+  "baselineCommit": "60dd0dc448f3a67d226dc8a3c6b3afcf4709823d",
+  "initialWorkingCopy": "tysyuvwr 9e0c65b1 (empty)",
+  "initialParent": "8cd2624e main",
+  "existingBaselineDifference": [".github/workflows/claude-review.yml"],
+  "tarball": {
+    "path": ".artifacts/u3-package-v1/aletheia-works-formicarium-0.1.0-rc.1.tgz",
+    "sha256": "969e9fab854d4499da1d38087bd601b65042b6d50b086c8fc8ddaefd0752f810",
+    "published": false,
+    "packChecks": {"passed": 6, "failed": 0, "skipped": 0}
+  },
+  "commands": [
+    {"cwd": "/Users/mutoakio/Documents/terrarium/packages/terrarium", "command": "/Users/mutoakio/.local/share/mise/installs/bun/1.4.2/bin/bun test tests/catalog.test.ts", "passed": 12, "failed": 0, "exitCode": 0},
+    {"cwd": "/Users/mutoakio/Documents/terrarium/packages/terrarium", "command": "/Users/mutoakio/.local/share/mise/installs/bun/1.4.2/bin/bun install", "result": "installed local tarball; updated bun.lock", "exitCode": 0},
+    {"cwd": "/Users/mutoakio/Documents/terrarium/packages/terrarium", "command": "/Users/mutoakio/.local/share/mise/installs/bun/1.4.2/bin/bun test tests/formicarium-session.test.ts", "passed": 10, "failed": 0, "exitCode": 0},
+    {"cwd": "/Users/mutoakio/Documents/terrarium/packages/terrarium", "command": "/Users/mutoakio/.local/share/mise/installs/bun/1.4.2/bin/bun node_modules/typescript/bin/tsc -p tsconfig.json --noEmit", "result": "initial TS2307: missing generated/xterm-css.ts", "exitCode": 1},
+    {"cwd": "/Users/mutoakio/Documents/terrarium/packages/terrarium", "command": "/Users/mutoakio/.local/share/mise/installs/bun/1.4.2/bin/bun run gen", "result": "generated src/generated/xterm-css.ts", "exitCode": 0},
+    {"cwd": "/Users/mutoakio/Documents/terrarium/packages/terrarium", "command": "/Users/mutoakio/.local/share/mise/installs/bun/1.4.2/bin/bun node_modules/typescript/bin/tsc -p tsconfig.json --noEmit", "result": "after existing generator", "exitCode": 0},
+    {"cwd": "/Users/mutoakio/Documents/terrarium/packages/terrarium", "command": "/Users/mutoakio/.local/share/mise/installs/bun/1.4.2/bin/bun test tests/formicarium-session.test.ts tests/formicarium-catalog.test.ts tests/formicarium-assets.test.ts", "passed": 25, "failed": 0, "expects": 134, "exitCode": 0},
+    {"cwd": "/Users/mutoakio/Documents/terrarium/packages/terrarium", "command": "/Users/mutoakio/.local/share/mise/installs/bun/1.4.2/bin/bun node_modules/typescript/bin/tsc -p tsconfig.json --noEmit", "result": "after layer2", "exitCode": 0}
+  ],
+  "unverified": ["actual U3 browser/iframe acceptance", "pitchfork v2.30.1 compilation and runtime", "complete coverage and CI", "published RC acceptance", "real Safari"]
+}

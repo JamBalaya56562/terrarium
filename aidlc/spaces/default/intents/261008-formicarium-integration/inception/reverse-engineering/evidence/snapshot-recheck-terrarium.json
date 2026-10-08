@@ -1,0 +1,14 @@
+{
+  "repo": "terrarium",
+  "paths": [
+    "packages/terrarium",
+    "web",
+    "scripts",
+    "mise.toml",
+    "runtime",
+    "fixtures",
+    ".github/workflows"
+  ],
+  "store_generation": "sha256:4d205ab2d1234dbeede10c16e16d6bf03e1d4fbbe712587d2d897ec310f57a21",
+  "source_fingerprint": "tree:76efb44aefed2e76a08d778719bb86e84c822aaf9fc6261de591e000fb3e8423"
+}

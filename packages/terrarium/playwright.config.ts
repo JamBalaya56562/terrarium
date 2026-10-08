@@ -6,7 +6,14 @@ import { defineConfig, devices } from '@playwright/test';
 export const SITE = 'http://localhost:8780';
 export const HOST = 'http://localhost:8781';
 
+const bun = process.env.TERRARIUM_BUN;
+const site = process.env.TERRARIUM_SITE_DIR;
+if (!bun || !site)
+  throw new Error('set TERRARIUM_BUN and TERRARIUM_SITE_DIR explicitly');
+
 export default defineConfig({
+  outputDir: 'test-results/legacy',
+  testMatch: ['terminal.spec.ts', 'pitchfork.spec.ts'],
   testDir: 'e2e',
   timeout: 180_000,
   expect: { timeout: 120_000 },
@@ -24,12 +31,12 @@ export default defineConfig({
   ],
   webServer: [
     {
-      command: 'bun e2e/serve.ts ../../.site 8780',
+      command: `"${bun}" e2e/serve.ts "${site}" 8780`,
       url: `${SITE}/web/`,
       reuseExistingServer: !process.env.CI,
     },
     {
-      command: 'bun e2e/serve.ts e2e/host 8781',
+      command: `"${bun}" e2e/serve.ts e2e/host 8781`,
       url: `${HOST}/element.html`,
       reuseExistingServer: !process.env.CI,
     },

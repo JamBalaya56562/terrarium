@@ -1,0 +1,125 @@
+{
+  "stage": "code-generation",
+  "upstream_ids": [
+    "FR1",
+    "FR2",
+    "FR3",
+    "FR4",
+    "NFR1",
+    "NFR2",
+    "NFR3",
+    "NFR4",
+    "FR1.1",
+    "FR1.2",
+    "FR2.1",
+    "FR2.2",
+    "FR2.3",
+    "FR3.1",
+    "FR3.2",
+    "FR3.3",
+    "FR4.1",
+    "FR4.2"
+  ],
+  "coverage": [
+    {
+      "id": "FR1",
+      "status": "OK",
+      "target": "scripts/prepare-formicarium.mjs"
+    },
+    {
+      "id": "FR2",
+      "status": "OK",
+      "target": "scripts/stage-formicarium.mjs"
+    },
+    {
+      "id": "FR3",
+      "status": "OK",
+      "target": ".github/workflows/test-e2e.yml"
+    },
+    {
+      "id": "FR4",
+      "status": "OK",
+      "target": "packages/terrarium/README.md"
+    },
+    {
+      "id": "NFR1",
+      "status": "OK",
+      "target": "integration/formicarium-inputs.json"
+    },
+    {
+      "id": "NFR2",
+      "status": "OK",
+      "target": "packages/terrarium/playwright.formicarium.config.ts"
+    },
+    {
+      "id": "NFR3",
+      "status": "OK",
+      "target": "packages/terrarium/src/formicarium-session.ts"
+    },
+    {
+      "id": "NFR4",
+      "status": "OK",
+      "target": "scripts/assemble-pages.sh"
+    },
+    {
+      "id": "FR1.1",
+      "status": "OK",
+      "target": "aidlc/spaces/default/intents/261008-formicarium-integration/construction/build-and-test/evidence/requirement-evidence-map.json",
+      "evidence": "old-bytes-verification.json / preservation-after.json"
+    },
+    {
+      "id": "FR1.2",
+      "status": "OK",
+      "target": "aidlc/spaces/default/intents/261008-formicarium-integration/construction/build-and-test/evidence/requirement-evidence-map.json",
+      "evidence": "source-inventory.json / formicarium-candidate.json / commands.json"
+    },
+    {
+      "id": "FR2.1",
+      "status": "OK",
+      "target": "aidlc/spaces/default/intents/261008-formicarium-integration/construction/build-and-test/evidence/requirement-evidence-map.json",
+      "evidence": "personal-path-scan.json / install.txt"
+    },
+    {
+      "id": "FR2.2",
+      "status": "OK",
+      "target": "aidlc/spaces/default/intents/261008-formicarium-integration/construction/build-and-test/evidence/requirement-evidence-map.json",
+      "evidence": "isolated-commands.json / standalone-binding.json"
+    },
+    {
+      "id": "FR2.3",
+      "status": "OK",
+      "target": "aidlc/spaces/default/intents/261008-formicarium-integration/construction/build-and-test/evidence/requirement-evidence-map.json",
+      "evidence": "unit-assets.txt / unit-inputs.txt"
+    },
+    {
+      "id": "FR3.1",
+      "status": "OK",
+      "target": "aidlc/spaces/default/intents/261008-formicarium-integration/construction/build-and-test/evidence/requirement-evidence-map.json",
+      "evidence": "prepare.txt / unit-inputs.txt"
+    },
+    {
+      "id": "FR3.2",
+      "status": "OK",
+      "target": "aidlc/spaces/default/intents/261008-formicarium-integration/construction/build-and-test/evidence/requirement-evidence-map.json",
+      "evidence": "browser-commands.json / browser-formicarium.txt / browser-legacy.txt"
+    },
+    {
+      "id": "FR3.3",
+      "status": "OK",
+      "target": "aidlc/spaces/default/intents/261008-formicarium-integration/construction/build-and-test/evidence/requirement-evidence-map.json",
+      "evidence": "unit-inputs.txt / browser-commands.json"
+    },
+    {
+      "id": "FR4.1",
+      "status": "OK",
+      "target": "aidlc/spaces/default/intents/261008-formicarium-integration/construction/build-and-test/evidence/requirement-evidence-map.json",
+      "evidence": "commands.json / source-binding.json / browser-commands.json"
+    },
+    {
+      "id": "FR4.2",
+      "status": "OK",
+      "target": "aidlc/spaces/default/intents/261008-formicarium-integration/construction/build-and-test/evidence/requirement-evidence-map.json",
+      "evidence": "../../code-generation/handoff.md"
+    }
+  ]
+}

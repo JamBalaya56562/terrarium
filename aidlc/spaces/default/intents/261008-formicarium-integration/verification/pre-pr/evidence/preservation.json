@@ -1,0 +1,14 @@
+[
+  {
+    "name": "original",
+    "sameFileSetAndBytes": true
+  },
+  {
+    "name": "dedicated",
+    "sameFileSetAndBytes": true
+  },
+  {
+    "name": "legacy",
+    "sameFileSetAndBytes": true
+  }
+]

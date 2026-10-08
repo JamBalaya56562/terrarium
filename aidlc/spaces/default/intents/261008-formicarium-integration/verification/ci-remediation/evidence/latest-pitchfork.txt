@@ -1,0 +1,6 @@
+tool=pitchfork
+repo=jdx/pitchfork
+name=v2.30.1
+ref=v2.30.1
+commit=1054549e85470b08d9507e2c82c850959a4b3914
+pr=

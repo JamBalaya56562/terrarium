@@ -1,0 +1,189 @@
+{
+  "status": "draft inventory; not native source-manifest substitute",
+  "files": [
+    {
+      "absolutePath": "/Users/mutoakio/Documents/formicarium/docs/terrarium-integration.md",
+      "sha256": "a9300577beb955e72a180e47b629fac616fbacc9ed65decd59e5e566eddb8430",
+      "repositoryIdentity": "workspace-main",
+      "role": "source-or-config"
+    },
+    {
+      "absolutePath": "/Users/mutoakio/Documents/formicarium/scripts/terrarium/coverage.mjs",
+      "sha256": "872bc75bf349f545e0c439032176a7d2100636ec53f87eb0a4eb438a6251167a",
+      "repositoryIdentity": "workspace-main",
+      "role": "source-or-config"
+    },
+    {
+      "absolutePath": "/Users/mutoakio/Documents/formicarium/scripts/terrarium/evidence.mjs",
+      "sha256": "87c1d7ef4e902ded980ae7247d9cd0d6ea80f2d9255111a825a11ba5b7a140d4",
+      "repositoryIdentity": "workspace-main",
+      "role": "source-or-config"
+    },
+    {
+      "absolutePath": "/Users/mutoakio/Documents/formicarium/scripts/terrarium/prepare.mjs",
+      "sha256": "284c9619d2375d01f6a843e87880f90c48e74490a9656c77f7237ba47f7c99c5",
+      "repositoryIdentity": "workspace-main",
+      "role": "source-or-config"
+    },
+    {
+      "absolutePath": "/Users/mutoakio/Documents/formicarium/tests/terrarium/adapter.test.mjs",
+      "sha256": "38b8e31d910aa0ce49f67a51ecf16271610b772da9bc392c4707843c4362df9d",
+      "repositoryIdentity": "workspace-main",
+      "role": "test"
+    },
+    {
+      "absolutePath": "/Users/mutoakio/Documents/formicarium/tests/terrarium/assets.test.mjs",
+      "sha256": "b6bb36775a11322fec744aab77f7b0d20ad97f3deab19c72bc942b091c62225d",
+      "repositoryIdentity": "workspace-main",
+      "role": "test"
+    },
+    {
+      "absolutePath": "/Users/mutoakio/Documents/formicarium/tests/terrarium/consumer.spec.mjs",
+      "sha256": "723f161c8c071cb87d3bebd80987571f0a32f4ba0496718a7e8676a61a4d848e",
+      "repositoryIdentity": "workspace-main",
+      "role": "test"
+    },
+    {
+      "absolutePath": "/Users/mutoakio/Documents/formicarium/tests/terrarium/coverage.test.mjs",
+      "sha256": "65c43d0727c97b404e49c1c61213721fad548d41b6be7491ac24f46eab3a087a",
+      "repositoryIdentity": "workspace-main",
+      "role": "test"
+    },
+    {
+      "absolutePath": "/Users/mutoakio/Documents/formicarium/tests/terrarium/playwright.config.mjs",
+      "sha256": "1f123a6ad1595ff782ffb76e961f2c280fa806ad93bf66e37734d900c9eddd56",
+      "repositoryIdentity": "workspace-main",
+      "role": "test"
+    },
+    {
+      "absolutePath": "/Users/mutoakio/Documents/formicarium/tests/terrarium/serve.mjs",
+      "sha256": "56c316d2691d611b7c6b8a1a759261da3db3e7555ee1b1ade04216c58e6947a7",
+      "repositoryIdentity": "workspace-main",
+      "role": "test"
+    },
+    {
+      "absolutePath": "/Users/mutoakio/Documents/terrarium/mise.toml",
+      "sha256": "29b08b1aa7c5b28bc15d53d5e0c549a55adb2fc5e95cd8d6047d85ec6491375e",
+      "repositoryIdentity": "pending-native-binding",
+      "role": "source-or-config"
+    },
+    {
+      "absolutePath": "/Users/mutoakio/Documents/terrarium/packages/terrarium/README.md",
+      "sha256": "d58eef52b44dff0ad9769f3554f339aa211034f9cb12edb24f130cdc3b3aef54",
+      "repositoryIdentity": "pending-native-binding",
+      "role": "source-or-config"
+    },
+    {
+      "absolutePath": "/Users/mutoakio/Documents/terrarium/packages/terrarium/e2e/formicarium-iframe.spec.ts",
+      "sha256": "d52934333e9cf53f8a11b510f6777534e246f258a8de2695107912bff572b3fd",
+      "repositoryIdentity": "pending-native-binding",
+      "role": "test"
+    },
+    {
+      "absolutePath": "/Users/mutoakio/Documents/terrarium/packages/terrarium/e2e/formicarium-serve.ts",
+      "sha256": "0624d98c99a661029119c2f7c4030364d17b63f1d48f8bcb13606e5b9b53bc88",
+      "repositoryIdentity": "pending-native-binding",
+      "role": "test"
+    },
+    {
+      "absolutePath": "/Users/mutoakio/Documents/terrarium/packages/terrarium/e2e/formicarium-terminal.spec.ts",
+      "sha256": "8794f0c8a599ee996eb5fe937f6a24f9c3fd2303a664a002457d78839b5f5474",
+      "repositoryIdentity": "pending-native-binding",
+      "role": "test"
+    },
+    {
+      "absolutePath": "/Users/mutoakio/Documents/terrarium/packages/terrarium/e2e/host/formicarium/element.html",
+      "sha256": "ccba37e0560ee9fe97ea88d7ac56d0d69cf6ef38442fec4f971421965657bf34",
+      "repositoryIdentity": "pending-native-binding",
+      "role": "test"
+    },
+    {
+      "absolutePath": "/Users/mutoakio/Documents/terrarium/packages/terrarium/e2e/host/formicarium/iframe.html",
+      "sha256": "ee60eac343b45113f00e1a66aac0d09194852ecaadfdef1aa2191b19d39174de",
+      "repositoryIdentity": "pending-native-binding",
+      "role": "test"
+    },
+    {
+      "absolutePath": "/Users/mutoakio/Documents/terrarium/packages/terrarium/package.json",
+      "sha256": "c42914d9cc3532f1f4033eb911627a5adcee3ca309af3fdb0373614a84659bb3",
+      "repositoryIdentity": "pending-native-binding",
+      "role": "source-or-config"
+    },
+    {
+      "absolutePath": "/Users/mutoakio/Documents/terrarium/packages/terrarium/playwright.formicarium.config.ts",
+      "sha256": "dbad6a2b91d8916a18c7ede260cbb2049e2ed728ebdaa72d4737837f83ac5775",
+      "repositoryIdentity": "pending-native-binding",
+      "role": "test"
+    },
+    {
+      "absolutePath": "/Users/mutoakio/Documents/terrarium/packages/terrarium/src/formicarium-session.ts",
+      "sha256": "c7470b3dee713952f4a1255644d3034ce36391ae0eb61a9bb22fb554ff185cf9",
+      "repositoryIdentity": "pending-native-binding",
+      "role": "source-or-config"
+    },
+    {
+      "absolutePath": "/Users/mutoakio/Documents/terrarium/packages/terrarium/src/generated/xterm-css.ts",
+      "sha256": "0fc1b01494f328cdbb3ef38d7d3374433d1fbe5a7563f361a68e89a743762ea8",
+      "repositoryIdentity": "pending-native-binding",
+      "role": "generated"
+    },
+    {
+      "absolutePath": "/Users/mutoakio/Documents/terrarium/packages/terrarium/src/terminal.ts",
+      "sha256": "492a31374236087c0163e6d9cba0094a33a20fcb960773ac9c56864053677df2",
+      "repositoryIdentity": "pending-native-binding",
+      "role": "source-or-config"
+    },
+    {
+      "absolutePath": "/Users/mutoakio/Documents/terrarium/packages/terrarium/tests/formicarium-assets.test.ts",
+      "sha256": "7fb123eb761380ac2b624f9d121da33883d7e8c1d14b003e9f96c087e0e5fbf5",
+      "repositoryIdentity": "pending-native-binding",
+      "role": "test"
+    },
+    {
+      "absolutePath": "/Users/mutoakio/Documents/terrarium/packages/terrarium/tests/formicarium-catalog.test.ts",
+      "sha256": "16cd04d3f0f02e95b85492bd2954c81b6185070aec97206d1ffa94d99e274c9a",
+      "repositoryIdentity": "pending-native-binding",
+      "role": "test"
+    },
+    {
+      "absolutePath": "/Users/mutoakio/Documents/terrarium/packages/terrarium/tests/formicarium-session.test.ts",
+      "sha256": "9488531d76de3593a7edd7bf19501eb4d5bdc3020eca8dc775a1b60ad73d8b32",
+      "repositoryIdentity": "pending-native-binding",
+      "role": "test"
+    },
+    {
+      "absolutePath": "/Users/mutoakio/Documents/terrarium/scripts/assemble-pages.sh",
+      "sha256": "bd044bf66bd5729a15cbe9486c2ce45ecab14dbd2394f6d62648337974d4954d",
+      "repositoryIdentity": "pending-native-binding",
+      "role": "source-or-config"
+    },
+    {
+      "absolutePath": "/Users/mutoakio/Documents/terrarium/scripts/stage-formicarium.mjs",
+      "sha256": "42a475d0ba6aca4b04e5c713697a0e024ff90085b236093b720a7c20d6c8bd15",
+      "repositoryIdentity": "pending-native-binding",
+      "role": "source-or-config"
+    },
+    {
+      "absolutePath": "/Users/mutoakio/Documents/terrarium/web/terminal.mjs",
+      "sha256": "d9fb0170d977587e9a658e4ed50f14aa8b5121d7322cdb9f072345c93b515e86",
+      "repositoryIdentity": "pending-native-binding",
+      "role": "source-or-config"
+    },
+    {
+      "absolutePath": "/Users/mutoakio/Documents/terrarium/packages/terrarium/bun.lock",
+      "sha256": "53bc3cac94f293d06ae422ec7bfb178eed52b84f7dc5ffb0d145e7e000e9ddda",
+      "repositoryIdentity": "pending-native-binding",
+      "role": "dependency-lock"
+    }
+  ],
+  "evidence": [
+    ".artifacts/u3-package-v1.manifest.json",
+    ".artifacts/u3-coverage-v1/inventory.json",
+    ".artifacts/u3-coverage-v1/report.json",
+    ".artifacts/u3-coverage-v1/coverage-final.json",
+    ".artifacts/u3-coverage-v1/receipts/node.json",
+    ".artifacts/u3-coverage-v1/node-raw.json",
+    ".artifacts/u3-coverage-v1/browser-results",
+    "aidlc/spaces/default/intents/261006-npm-terrarium-release/construction/u3-terrarium-integration/code-generation/verification"
+  ]
+}

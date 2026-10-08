@@ -1,0 +1,15 @@
+NARROWER: the incoming scope no longer claims verified deep coverage for:
+  - packages/terrarium/src/session.ts
+  - packages/terrarium/playwright.config.ts
+  - web/tools.json
+  - scripts/build-pitchfork.sh
+  - scripts/resolve-ref.sh
+  - scripts/vendor-patched.sh
+  - scripts/stage-web.sh
+  - runtime/run-node.mjs
+  - patches/tools/pitchfork-2.29.0.patch
+  - fixtures/sessions/pitchfork-basic.txt
+  - .github/workflows/pages.yml
+  - biome.json
+  components: Session, Build Distribution, Node Runner
+(store intent: 261004-pitchfork-continuation; incoming intent: 261008-formicarium-integration)

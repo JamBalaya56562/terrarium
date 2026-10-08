@@ -6,13 +6,38 @@
 # (`bun install` in packages/terrarium).
 set -euo pipefail
 root=$(cd "$(dirname "$0")/.." && pwd)
-site=$1
+site=${1:?usage: assemble-pages.sh <site dir> [formicarium|legacy]}
+mode=${2:-formicarium}
+case "$mode" in
+  formicarium) node "$root/scripts/stage-formicarium.mjs" --check ;;
+  legacy)
+    test -s "$root/web/dist/builds.json"
+    if [[ -n ${TERRARIUM_PITCHFORK_REF:-} ]]; then
+      jq -e --arg ref "$TERRARIUM_PITCHFORK_REF" '.builds.pitchfork[$ref] != null' "$root/web/dist/builds.json" >/dev/null
+    fi
+    ;;
+  *) echo "unknown assembly mode: $mode" >&2; exit 1 ;;
+esac
+# The caller may protect a preserved candidate; always refuse the source root.
+case "$(cd "$(dirname "$site")" && pwd)/$(basename "$site")" in
+  "$root"|"${TERRARIUM_PROTECTED_SITE:-$root}") echo 'choose a separate site output directory' >&2; exit 1 ;;
+esac
 package=$root/packages/terrarium
 rm -rf "$site"
 mkdir -p "$site"
 cp -r "$root/web" "$site/web"
+if [[ $mode == legacy && -n ${TERRARIUM_PITCHFORK_REF:-} ]]; then
+  jq --arg ref "$TERRARIUM_PITCHFORK_REF" '.pitchfork.default = $ref' "$site/web/tools.json" > "$site/web/tools.json.tmp"
+  mv "$site/web/tools.json.tmp" "$site/web/tools.json"
+fi
 cp "$root/LICENSE" "$site/"
 touch "$site/.nojekyll"
+
+# Stage the exact installed local pack and complete guest catalogue as one set.
+# The caller supplies the validated candidate explicitly; never fetch an old guest.
+if [[ "$mode" == formicarium ]]; then
+  node "$root/scripts/stage-formicarium.mjs" "$site/web"
+fi
 
 # This deploy's version. The bundle appends it to the data it fetches
 # (tools.json, builds.json, fixtures), and the page's own URLs carry it, so a

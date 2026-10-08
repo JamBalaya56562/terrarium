@@ -1,0 +1,115 @@
+{
+  "root": "/private/tmp/terrarium-standalone-s00po458",
+  "sourceFiles": [
+    {
+      "path": "scripts/prepare-formicarium.mjs",
+      "currentSha256": "51c3c2ee098b341ef5a15ce0c33dab7c3b8b282e496afd6b0a64bbe9022a1fbb",
+      "tempSha256": "51c3c2ee098b341ef5a15ce0c33dab7c3b8b282e496afd6b0a64bbe9022a1fbb",
+      "identical": true
+    },
+    {
+      "path": "integration/formicarium-inputs.json",
+      "currentSha256": "24ff31a8c69aae32ada473fb5b5e9e7c3b1078cff582056ebefbbc7436f7f348",
+      "tempSha256": "24ff31a8c69aae32ada473fb5b5e9e7c3b1078cff582056ebefbbc7436f7f348",
+      "identical": true
+    },
+    {
+      "path": "packages/terrarium/tests/formicarium-inputs.test.ts",
+      "currentSha256": "75bf3bb43306a2e699af4517f5d0929b2e1ec7ddc0f245f043b92e0e59ee0eba",
+      "tempSha256": "75bf3bb43306a2e699af4517f5d0929b2e1ec7ddc0f245f043b92e0e59ee0eba",
+      "identical": true
+    },
+    {
+      "path": "packages/terrarium/package.json",
+      "currentSha256": "d21fa37bac3640c86e7af86e990f1bec5773a3aa41cc079e7e0333d2856eebc8",
+      "tempSha256": "d21fa37bac3640c86e7af86e990f1bec5773a3aa41cc079e7e0333d2856eebc8",
+      "identical": true
+    },
+    {
+      "path": "packages/terrarium/bun.lock",
+      "currentSha256": "8ab0766fa259eebbc980a5551011f9942bbe59b954d31df814c6a3482860eb8f",
+      "tempSha256": "8ab0766fa259eebbc980a5551011f9942bbe59b954d31df814c6a3482860eb8f",
+      "identical": true
+    },
+    {
+      "path": "mise.toml",
+      "currentSha256": "74cc26ac5a2f93ff55cb396de003d21c724a003983484efaca074887568ccdc9",
+      "tempSha256": "74cc26ac5a2f93ff55cb396de003d21c724a003983484efaca074887568ccdc9",
+      "identical": true
+    },
+    {
+      "path": "scripts/stage-formicarium.mjs",
+      "currentSha256": "6962b14e5de42b1b28af1759686cc4160e3e74f60850e51d9ea52543f1743dec",
+      "tempSha256": "6962b14e5de42b1b28af1759686cc4160e3e74f60850e51d9ea52543f1743dec",
+      "identical": true
+    },
+    {
+      "path": "scripts/assemble-pages.sh",
+      "currentSha256": "181f5f8495e19632d79b853438bb0f960c048b94ce060ab538be1c1a2a43850a",
+      "tempSha256": "181f5f8495e19632d79b853438bb0f960c048b94ce060ab538be1c1a2a43850a",
+      "identical": true
+    },
+    {
+      "path": "packages/terrarium/playwright.config.ts",
+      "currentSha256": "1cf519301eae5ff7f565bb8f70266ca71fded90e40c4b90839d2e41f6e8beaf1",
+      "tempSha256": "1cf519301eae5ff7f565bb8f70266ca71fded90e40c4b90839d2e41f6e8beaf1",
+      "identical": true
+    },
+    {
+      "path": "packages/terrarium/playwright.formicarium.config.ts",
+      "currentSha256": "6bf3a0bbfe327536efee30f83db75a189febac83466af79d4b1136a98832f9a1",
+      "tempSha256": "6bf3a0bbfe327536efee30f83db75a189febac83466af79d4b1136a98832f9a1",
+      "identical": true
+    },
+    {
+      "path": "packages/terrarium/src/catalog.ts",
+      "currentSha256": "452b007bd46c51f9ca3ac1a11557a09a3bb15cbd1235973a75018e243c430904",
+      "tempSha256": "452b007bd46c51f9ca3ac1a11557a09a3bb15cbd1235973a75018e243c430904",
+      "identical": true
+    },
+    {
+      "path": "packages/terrarium/src/formicarium-session.ts",
+      "currentSha256": "c4b85c57526f18a7d83dbbc91856b6e421d5af19d4ad86d116de83e2d9f4b104",
+      "tempSha256": "c4b85c57526f18a7d83dbbc91856b6e421d5af19d4ad86d116de83e2d9f4b104",
+      "identical": true
+    },
+    {
+      "path": "packages/terrarium/src/terminal.ts",
+      "currentSha256": "1f22e8081a647fb9abe4b4fbb58114b9841c3df16c3fa7cb206fa7c902cef8a7",
+      "tempSha256": "1f22e8081a647fb9abe4b4fbb58114b9841c3df16c3fa7cb206fa7c902cef8a7",
+      "identical": true
+    },
+    {
+      "path": "packages/terrarium/tests/formicarium-assets.test.ts",
+      "currentSha256": "67ad8fa275d875106ad98001aa35fd03b2b7e9a4bfa1686195637f167d5cc9f4",
+      "tempSha256": "67ad8fa275d875106ad98001aa35fd03b2b7e9a4bfa1686195637f167d5cc9f4",
+      "identical": true
+    },
+    {
+      "path": "packages/terrarium/tests/formicarium-catalog.test.ts",
+      "currentSha256": "e8da7dc1cf83f1dde3938460253a106ed8a56e32f771b83ed58e6d71747976b9",
+      "tempSha256": "e8da7dc1cf83f1dde3938460253a106ed8a56e32f771b83ed58e6d71747976b9",
+      "identical": true
+    },
+    {
+      "path": "packages/terrarium/README.md",
+      "currentSha256": "121d0c99644e2c5cd16b3292462ca1a6fdfb78b07426d2e35fcc16639b069320",
+      "tempSha256": "121d0c99644e2c5cd16b3292462ca1a6fdfb78b07426d2e35fcc16639b069320",
+      "identical": true
+    },
+    {
+      "path": ".github/workflows/test-terrarium.yml",
+      "currentSha256": "5c59e63bd525548e6e899488df76ed3dd462ad3251b7927a234f1de41d96eb38",
+      "tempSha256": "5c59e63bd525548e6e899488df76ed3dd462ad3251b7927a234f1de41d96eb38",
+      "identical": true
+    },
+    {
+      "path": ".github/workflows/test-e2e.yml",
+      "currentSha256": "6acc3919bdce23e723da5df977a709f7e591a755e6d0bb7f1ea09b79aa3326ce",
+      "tempSha256": "6acc3919bdce23e723da5df977a709f7e591a755e6d0bb7f1ea09b79aa3326ce",
+      "identical": true
+    }
+  ],
+  "allSourceBytesIdentical": true,
+  "lastConfigSync": "mechanical formatting only after final browser run; same settings and tests, checked by list and lint"
+}

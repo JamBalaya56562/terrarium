@@ -1,0 +1,16 @@
+bun test v1.4.2 (744846f84)
+
+tests/formicarium-assets.test.ts:
+(pass) candidate assets staging > copies exact installed package worker loader wasm build-info and all advertised refs [33.74ms]
+(pass) candidate assets staging > preserves unrelated tools and legacy source/upstream_pr/built_at metadata [21.75ms]
+(pass) candidate assets staging > missing installed worker rejects before staged output exists [9.42ms]
+(pass) candidate assets staging > changed installed package digest rejects [7.96ms]
+(pass) candidate assets staging > missing retained ref asset rejects rather than advertise a broken old ref [9.65ms]
+(pass) candidate assets staging > guest hash mismatch rejects before output [10.13ms]
+(pass) candidate assets staging > dirty package and mismatched installed version reject [9.51ms]
+(pass) candidate assets staging > copied resolver modules retain exact frozen source bytes [18.11ms]
+
+ 8 pass
+ 0 fail
+ 49 expect() calls
+Ran 8 tests across 1 file. [139.00ms]

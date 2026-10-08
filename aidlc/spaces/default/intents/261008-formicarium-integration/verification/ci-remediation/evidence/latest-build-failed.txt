@@ -1,0 +1,1042 @@
+Build latest stable pitchfork	Build	﻿2026-10-08T03:15:04.5785495Z ##[group]Run scripts/build-pitchfork.sh ../src "$RUNNER_TEMP/out"
+Build latest stable pitchfork	Build	2026-10-08T03:15:04.5786075Z ^[[36;1mscripts/build-pitchfork.sh ../src "$RUNNER_TEMP/out"^[[0m
+Build latest stable pitchfork	Build	2026-10-08T03:15:04.5826121Z shell: /usr/bin/bash -e {0}
+Build latest stable pitchfork	Build	2026-10-08T03:15:04.5826574Z env:
+Build latest stable pitchfork	Build	2026-10-08T03:15:04.5826893Z   EMSDK_VERSION: 6.0.10
+Build latest stable pitchfork	Build	2026-10-08T03:15:04.5827259Z   EMSDK: /home/runner/work/_temp/emsdk
+Build latest stable pitchfork	Build	2026-10-08T03:15:04.5827711Z   CARGO_TARGET_DIR: /home/runner/work/_temp/pitchfork-target
+Build latest stable pitchfork	Build	2026-10-08T03:15:04.5828159Z ##[endgroup]
+Build latest stable pitchfork	Build	2026-10-08T03:15:04.6238712Z applied: nightly-2026-10-01 — cargo does not notice rust-src changes; delete
+Build latest stable pitchfork	Build	2026-10-08T03:15:04.6239563Z   <target-dir>/wasm32-unknown-emscripten/<profile>/build/std to rebuild std
+Build latest stable pitchfork	Build	2026-10-08T03:15:04.6261381Z applying pitchfork-2.30.1.patch
+Build latest stable pitchfork	Build	2026-10-08T03:15:04.6270954Z 1 out of 1 hunk FAILED
+Build latest stable pitchfork	Build	2026-10-08T03:15:04.6272224Z 4 out of 4 hunks FAILED
+Build latest stable pitchfork	Build	2026-10-08T03:15:04.6279979Z 2 out of 2 hunks FAILED
+Build latest stable pitchfork	Build	2026-10-08T03:15:04.6281737Z 1 out of 1 hunk FAILED
+Build latest stable pitchfork	Build	2026-10-08T03:15:04.6292262Z patching file build.rs
+Build latest stable pitchfork	Build	2026-10-08T03:15:04.6292872Z Hunk #1 succeeded at 35 (offset 1 line).
+Build latest stable pitchfork	Build	2026-10-08T03:15:04.6293261Z patching file src/proxy/lan_ip.rs
+Build latest stable pitchfork	Build	2026-10-08T03:15:04.6296348Z patching file src/supervisor/lifecycle.rs
+Build latest stable pitchfork	Build	2026-10-08T03:15:04.6298169Z Hunk #1 succeeded at 3074 (offset 268 lines).
+Build latest stable pitchfork	Build	2026-10-08T03:15:04.6298555Z Hunk #2 succeeded at 3108 (offset 268 lines).
+Build latest stable pitchfork	Build	2026-10-08T03:15:04.6299764Z patching file src/boot_manager.rs
+Build latest stable pitchfork	Build	2026-10-08T03:15:04.6300262Z Hunk #1 succeeded at 616 (offset 62 lines).
+Build latest stable pitchfork	Build	2026-10-08T03:15:04.6441952Z warning: `package.homepage` is redundant with `package.documentation`
+Build latest stable pitchfork	Build	2026-10-08T03:15:04.6442801Z   --> Cargo.toml:9:12
+Build latest stable pitchfork	Build	2026-10-08T03:15:04.6443168Z    |
+Build latest stable pitchfork	Build	2026-10-08T03:15:04.6443599Z  9 | homepage = "https://pitchfork.jdx.dev"
+Build latest stable pitchfork	Build	2026-10-08T03:15:04.6444216Z    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Build latest stable pitchfork	Build	2026-10-08T03:15:04.6444685Z 10 | repository = "https://github.com/jdx/pitchfork"
+Build latest stable pitchfork	Build	2026-10-08T03:15:04.6445174Z 11 | documentation = "https://pitchfork.jdx.dev"
+Build latest stable pitchfork	Build	2026-10-08T03:15:04.6445630Z    |                 ---------------------------
+Build latest stable pitchfork	Build	2026-10-08T03:15:04.6445988Z    |
+Build latest stable pitchfork	Build	2026-10-08T03:15:04.6450605Z    = note: `cargo::redundant_homepage` is set to `warn` by default
+Build latest stable pitchfork	Build	2026-10-08T03:15:04.6451064Z help: consider removing `package.homepage`
+Build latest stable pitchfork	Build	2026-10-08T03:15:04.6451533Z warning: `pitchfork-cli` (manifest) generated 1 warning
+Build latest stable pitchfork	Build	2026-10-08T03:15:04.6511666Z     Updating crates.io index
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.7216870Z  Downloading crates ...
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.8280561Z   Downloaded wasm-bindgen-shared v0.2.129
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.8452444Z   Downloaded wasm-bindgen-macro v0.2.129
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.8461725Z   Downloaded http-body-util v0.1.5
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.8497965Z   Downloaded fslock v0.2.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.8519212Z   Downloaded http-range-header v0.4.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.8638272Z   Downloaded futures-core v0.3.34
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.8650714Z   Downloaded memoffset v0.9.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.8748991Z   Downloaded yoke-derive v0.8.4
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.8792955Z   Downloaded http-body v1.1.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.8804720Z   Downloaded slab v0.4.12
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.8813712Z   Downloaded tinystr v0.8.4
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.8828367Z   Downloaded http v1.5.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.9066883Z   Downloaded getrandom v0.4.3
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.9091421Z   Downloaded futures-macro v0.3.34
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.9097340Z   Downloaded is_ci v1.2.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.9105661Z   Downloaded adler2 v2.0.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.9112933Z   Downloaded utf8_iter v1.0.4
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.9142011Z   Downloaded form_urlencoded v1.2.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.9158660Z   Downloaded writeable v0.6.4
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.9175694Z   Downloaded strum v0.28.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.9182503Z   Downloaded openssl-probe v0.2.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.9190891Z   Downloaded winapi-util v0.1.11
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.9199119Z   Downloaded shell-words v1.1.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.9204549Z   Downloaded iana-time-zone-haiku v0.1.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.9213359Z   Downloaded pin-project-lite v0.2.17
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.9246789Z   Downloaded windows-collections v0.2.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.9254979Z   Downloaded terminal_size v0.4.4
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.9262042Z   Downloaded windows-link v0.1.3
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.9266764Z   Downloaded futures-sink v0.3.34
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.9271528Z   Downloaded futures-io v0.3.34
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.9276408Z   Downloaded icu_locale_fallback_data v2.3.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.9281694Z   Downloaded supports-hyperlinks v3.2.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.9287539Z   Downloaded windows-numerics v0.2.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.9293241Z   Downloaded supports-color v3.0.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.9305159Z   Downloaded windows-implement v0.60.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.9313129Z   Downloaded futures-task v0.3.34
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.9323765Z   Downloaded windows-targets v0.53.5
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.9332164Z   Downloaded windows-result v0.3.4
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.9343177Z   Downloaded itoa v1.0.18
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.9354164Z   Downloaded addr2line v0.25.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.9365841Z   Downloaded try-lock v0.2.5
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.9383188Z   Downloaded zerofrom v0.1.8
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.9394907Z   Downloaded serde_derive v1.0.229
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.9423395Z   Downloaded supports-unicode v3.0.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.9429615Z   Downloaded stable_deref_trait v1.2.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.9436225Z   Downloaded windows-link v0.2.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.9441909Z   Downloaded zerofrom-derive v0.1.8
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.9447976Z   Downloaded backtrace-ext v0.2.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.9455424Z   Downloaded windows-strings v0.4.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.9464757Z   Downloaded cfg_aliases v0.2.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.9473103Z   Downloaded windows-future v0.2.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.9486311Z   Downloaded potential_utf v0.1.6
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.9495690Z   Downloaded zmij v1.0.23
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.9511264Z   Downloaded dyn-clone v1.0.20
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.9524029Z   Downloaded rustls-native-certs v0.8.4
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.9532056Z   Downloaded simdutf8 v0.1.5
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.9551422Z   Downloaded ipnet v2.12.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.9569718Z   Downloaded block2 v0.6.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.9587414Z   Downloaded pest_derive v2.9.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.9603047Z   Downloaded windows-core v0.62.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.9623488Z   Downloaded windows-interface v0.59.3
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.9629724Z   Downloaded icu_locale_fallback v2.3.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.9637599Z   Downloaded synstructure v0.14.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.9645837Z   Downloaded windows-threading v0.1.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.9652033Z   Downloaded bit-set v0.5.3
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.9659023Z   Downloaded wasm-bindgen v0.2.129
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.9680852Z   Downloaded errno v0.3.14
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.9690189Z   Downloaded miette-derive v7.6.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.9698851Z   Downloaded autocfg v1.5.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.9710488Z   Downloaded rustc-demangle v0.1.28
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.9724146Z   Downloaded homedir v0.3.6
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.9737484Z   Downloaded signal-hook-mio v0.2.5
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.9753406Z   Downloaded once_cell v1.21.4
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.9777330Z   Downloaded litemap v0.8.3
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.9793019Z   Downloaded android_system_properties v0.1.6
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.9799439Z   Downloaded jni-sys v0.4.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.9808940Z   Downloaded rust-embed-utils v8.12.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.9817387Z   Downloaded want v0.3.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.9825135Z   Downloaded fnv v1.0.7
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.9832061Z   Downloaded windows-result v0.4.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.9843038Z   Downloaded tempfile v3.27.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.9865204Z   Downloaded objc2-open-directory v0.3.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.9900403Z   Downloaded rustls-platform-verifier v0.7.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.9924912Z   Downloaded owo-colors v4.4.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.9937842Z   Downloaded termios v0.3.3
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.9948634Z   Downloaded futures-channel v0.3.34
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.9960368Z   Downloaded textwrap v0.16.4
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.9977727Z   Downloaded bit-vec v0.6.3
+Build latest stable pitchfork	Build	2026-10-08T03:15:05.9987064Z   Downloaded xx v2.6.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.0010822Z   Downloaded chacha20 v0.10.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.0028036Z   Downloaded zerovec-derive v0.11.6
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.0039799Z   Downloaded yoke v0.8.3
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.0053339Z   Downloaded windows-core v0.61.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.0070977Z   Downloaded socket-pktinfo v0.4.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.0083004Z   Downloaded rustversion v1.0.23
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.0101664Z   Downloaded smallvec v1.16.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.0111993Z   Downloaded serde_core v1.0.229
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.0130012Z   Downloaded icu_provider v2.3.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.0155073Z   Downloaded r-efi v6.0.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.0179581Z   Downloaded wasm-bindgen-macro-support v0.2.129
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.0206477Z   Downloaded bumpalo v3.20.3
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.0226369Z   Downloaded windows-strings v0.5.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.0236198Z   Downloaded windows-registry v0.6.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.0244663Z   Downloaded windows-collections v0.3.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.0252031Z   Downloaded jni-sys-macros v0.4.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.0256589Z   Downloaded serde_urlencoded v0.7.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.0266846Z   Downloaded subtle v2.6.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.0274766Z   Downloaded system-configuration-sys v0.6.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.0281999Z   Downloaded atomic-waker v1.1.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.0289382Z   Downloaded windows-numerics v0.3.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.0297010Z   Downloaded num-derive v0.4.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.0307186Z   Downloaded ref-cast v1.0.27
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.0323082Z   Downloaded heck v0.5.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.0330986Z   Downloaded rustc_version v0.4.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.0338665Z   Downloaded objc2-encode v4.1.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.0354000Z   Downloaded bitflags v2.13.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.0389228Z   Downloaded log v0.4.34
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.0406531Z   Downloaded urlencoding v2.1.3
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.0421227Z   Downloaded displaydoc v0.2.7
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.0440320Z   Downloaded cpufeatures v0.3.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.0451246Z   Downloaded objc2-user-notifications v0.3.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.0463789Z   Downloaded icu_locale_core v2.3.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.0503165Z   Downloaded dirs v7.0.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.0513707Z   Downloaded dirs-sys v0.5.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.0524836Z   Downloaded dirs v6.0.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.0534809Z   Downloaded icu_collections v2.3.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.0580199Z   Downloaded wezterm-bidi v0.2.3
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.0596392Z   Downloaded defmt v1.1.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.0622916Z   Downloaded hifijson v0.5.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.0635680Z   Downloaded exponential-backoff v2.1.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.0644680Z   Downloaded zerotrie v0.2.5
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.0669438Z   Downloaded miniz_oxide v0.8.9
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.0695782Z   Downloaded plist v1.10.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.0722813Z   Downloaded block-buffer v0.12.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.0738696Z   Downloaded errno v0.2.8
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.0749875Z   Downloaded tracing-core v0.1.36
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.0770691Z   Downloaded serde_path_to_error v0.1.20
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.0783476Z   Downloaded fixedbitset v0.4.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.0792046Z   Downloaded jni-macros v0.22.4
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.0808423Z   Downloaded windows-threading v0.2.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.0815452Z   Downloaded serde_derive_internals v0.30.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.0825889Z   Downloaded typed-arena v2.0.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.0833802Z   Downloaded same-file v1.0.6
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.0841429Z   Downloaded rust-embed-impl v8.12.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.0850188Z   Downloaded inotify-sys v0.1.8
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.0856671Z   Downloaded ref-cast-impl v1.0.27
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.0861934Z   Downloaded core-foundation v0.10.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.0875699Z   Downloaded system-configuration v0.7.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.0887776Z   Downloaded core-foundation v0.9.4
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.0900238Z   Downloaded humanbyte-derive v0.4.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.0905309Z   Downloaded strsim v0.11.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.0913351Z   Downloaded fastrand v2.5.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.0922320Z   Downloaded windows-future v0.3.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.0931549Z   Downloaded strum_macros v0.28.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.0946180Z   Downloaded security-framework-sys v2.17.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.0960584Z   Downloaded walkdir v2.5.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.0971412Z   Downloaded rustls-pemfile v2.2.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.0984478Z   Downloaded tokio-rustls v0.26.6
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.0994655Z   Downloaded schemars_derive v1.2.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.1006441Z   Downloaded rustls-platform-verifier-android v0.2.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.1011736Z   Downloaded redox_users v0.5.3
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.1019886Z   Downloaded serde v1.0.229
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.1043829Z   Downloaded backtrace v0.3.76
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.1076530Z   Downloaded widestring v1.2.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.1101950Z   Downloaded time-core v0.1.9
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.1110035Z   Downloaded windows-targets v0.52.6
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.1116913Z   Downloaded objc2-core-data v0.3.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.1148089Z   Downloaded js-sys v0.3.106
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.1172849Z   Downloaded comfy-table v8.0.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.1206861Z   Downloaded objc2-cloud-kit v0.3.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.1240375Z   Downloaded miette v7.6.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.1272390Z   Downloaded zerovec v0.11.8
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.1313654Z   Downloaded schannel v0.1.29
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.1326602Z   Downloaded rustls-webpki v0.103.15
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.1351091Z   Downloaded security-framework v3.7.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.1391303Z   Downloaded globset v0.4.20
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.1402157Z   Downloaded tower-service v0.3.3
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.1408252Z   Downloaded rustls-pki-types v1.15.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.1425862Z   Downloaded iana-time-zone v0.1.65
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.1446570Z   Downloaded core-foundation-sys v0.8.7
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.1467016Z   Downloaded semver v1.0.28
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.1481967Z   Downloaded tracing-attributes v0.1.31
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.1507269Z   Downloaded sync_wrapper v1.0.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.1516206Z   Downloaded ryu v1.0.23
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.1540244Z   Downloaded matchit v0.8.4
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.1555380Z   Downloaded httparse v1.10.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.1579259Z   Downloaded wezterm-dynamic-derive v0.1.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.1585556Z   Downloaded wezterm-color-types v0.3.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.1593024Z   Downloaded foldhash v0.1.5
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.1604270Z   Downloaded find-msvc-tools v0.1.14
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.1618360Z   Downloaded toml_writer v1.1.2+spec-1.1.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.1631088Z   Downloaded tokio-stream v0.1.19
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.1666171Z   Downloaded zeroize v1.9.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.1682999Z   Downloaded dispatch2 v0.3.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.1702457Z   Downloaded time-macros v0.2.32
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.1719090Z   Downloaded regex-bites v0.1.6
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.1749996Z   Downloaded futures-util v0.3.34
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.1831046Z   Downloaded asn1-rs v0.7.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.1874191Z   Downloaded unicase v2.9.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.1884460Z   Downloaded jni-sys v0.3.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.1891070Z   Downloaded cesu8 v1.1.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.1898328Z   Downloaded mdns-sd v0.21.5
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.1934399Z   Downloaded axum-core v0.5.6
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.1950190Z   Downloaded rmcp-macros v3.5.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.1960015Z   Downloaded futures-executor v0.3.34
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.1975749Z   Downloaded num-bigint v0.4.8
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.2061100Z   Downloaded ratatui-crossterm v0.1.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.2069536Z   Downloaded arrayvec v0.7.8
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.2089189Z   Downloaded unicode-truncate v2.0.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.2118144Z   Downloaded either v1.18.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.2127572Z   Downloaded static_assertions v1.1.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.2141146Z   Downloaded bitflags v1.3.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.2159927Z   Downloaded proc-macro2 v1.0.107
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.2178888Z   Downloaded uuid v1.27.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.2202868Z   Downloaded toml v1.1.6+spec-1.1.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.2228812Z   Downloaded parking_lot_core v0.9.12
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.2245725Z   Downloaded schemars v1.2.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.2363363Z   Downloaded tower v0.5.3
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.2422245Z   Downloaded darling v0.24.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.2461978Z   Downloaded futures v0.3.34
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.2494039Z   Downloaded phf_generator v0.11.3
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.2503763Z   Downloaded generic-array v0.14.7
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.2512475Z   Downloaded vtparse v0.6.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.2528297Z   Downloaded aho-corasick v1.1.5
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.2567417Z   Downloaded winnow v0.7.15
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.2630541Z   Downloaded unicode-width v0.2.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.2679814Z   Downloaded atomic v0.6.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.2689105Z   Downloaded mio v1.2.4
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.2727290Z   Downloaded percent-encoding v2.3.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.2732768Z   Downloaded base64 v0.23.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.2758586Z   Downloaded url v2.5.8
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.2778599Z   Downloaded jni v0.21.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.2819032Z   Downloaded wezterm-blob-leases v0.1.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.2826398Z   Downloaded version_check v0.9.5
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.2834345Z   Downloaded utf8parse v0.2.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.2840383Z   Downloaded ucd-trie v0.1.7
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.2851572Z   Downloaded document-features v0.2.12
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.2859447Z   Downloaded quick-xml v0.42.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.2930961Z   Downloaded if-addrs v0.15.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.2941998Z   Downloaded jiff-static v0.2.37
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.2948519Z   Downloaded unicode-width v0.1.14
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.2994906Z   Downloaded syn v2.0.119
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.3066938Z   Downloaded gimli v0.32.3
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.3117743Z   Downloaded duct v1.1.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.3130794Z   Downloaded shared_thread v0.2.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.3136719Z   Downloaded errno-dragonfly v0.1.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.3141064Z   Downloaded usage-rs v6.12.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.3149039Z   Downloaded usage-test v6.12.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.3153489Z   Downloaded wit-bindgen v0.57.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.3175308Z   Downloaded r-efi v5.3.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.3202434Z   Downloaded portable-atomic-util v0.2.8
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.3216309Z   Downloaded scopeguard v1.2.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.3224067Z   Downloaded async-stream v0.3.6
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.3235220Z   Downloaded derive_more-impl v2.1.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.3266912Z   Downloaded humantime v2.4.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.3277033Z   Downloaded rand_core v0.10.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.3286566Z   Downloaded smappservice-rs v0.1.3
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.3291603Z   Downloaded object v0.37.3
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.3362777Z   Downloaded ntapi v0.4.3
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.3391169Z   Downloaded serde_json v1.0.151
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.3434791Z   Downloaded webpki-root-certs v1.0.9
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.3456817Z   Downloaded combine v4.6.8
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.3482306Z   Downloaded axum v0.8.9
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.3534508Z   Downloaded hyper-util v0.1.21
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.3575812Z   Downloaded h2 v0.4.19
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.3615620Z   Downloaded fallible-streaming-iterator v0.1.9
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.3620835Z   Downloaded thiserror v1.0.69
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.3647026Z   Downloaded idna v1.1.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.3673459Z   Downloaded by_address v1.2.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.3678815Z   Downloaded jaq-core v3.1.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.3695849Z   Downloaded unicode-ident v1.0.26
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.3712289Z   Downloaded nix v0.30.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.3785323Z   Downloaded x509-parser v0.18.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.3816889Z   Downloaded vte v0.15.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.3830633Z   Downloaded bytemuck v1.25.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.3848954Z   Downloaded bytes v1.12.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.3870454Z   Downloaded hyper v1.11.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.3913700Z   Downloaded wasip2 v1.0.4+wasi-0.2.12
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.3942715Z   Downloaded crossterm v0.29.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.3982104Z   Downloaded byteorder v1.5.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.3991790Z   Downloaded jiff-core v0.1.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.4016285Z   Downloaded thiserror-impl v2.0.21
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.4025341Z   Downloaded dunce v1.0.5
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.4030968Z   Downloaded rustix v1.1.5
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.4179862Z   Downloaded cc v1.6.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.4204387Z   Downloaded tera v2.4.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.4394485Z   Downloaded vcpkg v0.2.15
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.4644182Z   Downloaded jiff-tzdb v0.1.8
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.4655475Z   Downloaded defmt-macros v1.1.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.4673743Z   Downloaded digest v0.11.3
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.4687619Z   Downloaded crypto-common v0.2.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.4695293Z   Downloaded libredox v0.1.25
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.4700994Z   Downloaded windows_x86_64_gnullvm v0.42.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.4760080Z   Downloaded encode_unicode v1.0.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.4777336Z   Downloaded powerfmt v0.2.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.4784714Z   Downloaded untrusted v0.9.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.4793398Z   Downloaded objc2-core-foundation v0.3.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.4839851Z   Downloaded rev_lines v0.3.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.4847551Z   Downloaded itertools v0.14.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.4889287Z   Downloaded castaway v0.2.4
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.4897421Z   Downloaded line-clipping v0.3.8
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.4906806Z   Downloaded siphasher v1.0.4
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.4915798Z   Downloaded file-id v0.2.3
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.4921710Z   Downloaded critical-section v1.2.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.4934920Z   Downloaded defmt-parser v1.0.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.4944704Z   Downloaded option-ext v0.2.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.4945317Z   Downloaded console v0.16.6
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.4954283Z   Downloaded os_info v3.15.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.4971478Z   Downloaded palette_math v0.7.7
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.4979869Z   Downloaded approx v0.5.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.4989359Z   Downloaded kasuari v0.4.12
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.5002179Z   Downloaded phf_codegen v0.11.3
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.5008100Z   Downloaded lru v0.18.5
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.5015474Z   Downloaded indoc v2.0.7
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.5030240Z   Downloaded notify-types v2.1.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.5047813Z   Downloaded windows_i686_gnullvm v0.52.6
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.5118390Z   Downloaded terminfo v0.9.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.5133764Z   Downloaded notify-debouncer-full v0.7.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.5152029Z   Downloaded nix v0.31.3
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.5226258Z   Downloaded getrandom v0.3.4
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.5245956Z   Downloaded objc2-quartz-core v0.3.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.5264201Z   Downloaded shared_child v1.1.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.5272896Z   Downloaded time v0.3.55
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.5358378Z   Downloaded rusticata-macros v4.1.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.5366584Z   Downloaded signal-hook v0.3.18
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.5382968Z   Downloaded notify v8.2.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.5394713Z   Downloaded objc2-ui-kit v0.3.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.5605970Z   Downloaded winnow v1.0.4
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.5663212Z   Downloaded phf v0.11.3
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.5671264Z   Downloaded usage-argv v6.12.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.5708535Z   Downloaded phf_shared v0.11.3
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.5714514Z   Downloaded num-conv v0.2.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.5719629Z   Downloaded num_threads v0.1.7
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.5725335Z   Downloaded tower-http v0.7.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.5786196Z   Downloaded jni v0.22.4
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.5830684Z   Downloaded rsqlite-vfs v0.1.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.5837357Z   Downloaded thread_local v1.1.10
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.5844558Z   Downloaded windows_aarch64_gnullvm v0.42.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.5899972Z   Downloaded ratatui-termwiz v0.1.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.5907007Z   Downloaded ansi-str v0.9.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.5915088Z   Downloaded jiff-tzdb-platform v0.1.3
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.5919258Z   Downloaded synstructure v0.13.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.5926103Z   Downloaded mime_guess v2.0.5
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.5936216Z   Downloaded pest_generator v2.9.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.5944176Z   Downloaded recvmsg v1.0.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.5964477Z   Downloaded pem v4.0.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.5972501Z   Downloaded humanbyte v0.4.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.5977429Z   Downloaded windows_x86_64_gnullvm v0.52.6
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.6043466Z   Downloaded mime v0.3.17
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.6051403Z   Downloaded icu_normalizer_data v2.3.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.6066291Z   Downloaded rustls-platform-verifier v0.6.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.6088553Z   Downloaded rcgen v0.14.10
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.6104725Z   Downloaded ratatui v0.30.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.6128043Z   Downloaded portable-atomic v1.15.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.6175771Z   Downloaded kqueue-sys v1.1.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.6183684Z   Downloaded spin v0.9.9
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.6197337Z   Downloaded demand v2.4.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.6225541Z   Downloaded windows_x86_64_msvc v0.42.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.6313289Z   Downloaded memchr v2.8.3
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.6344882Z   Downloaded bit-vec v0.9.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.6355172Z   Downloaded const-oid v0.10.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.6371591Z   Downloaded instability v0.3.14
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.6380375Z   Downloaded phf_macros v0.11.3
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.6387436Z   Downloaded rand_core v0.6.4
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.6395921Z   Downloaded filetime v0.2.29
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.6405320Z   Downloaded windows_aarch64_gnullvm v0.53.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.6509384Z   Downloaded windows-targets v0.42.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.6514579Z   Downloaded equivalent v1.0.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.6519972Z   Downloaded windows_x86_64_gnullvm v0.53.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.6623118Z   Downloaded shlex v2.0.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.6630980Z   Downloaded rustls-platform-verifier-android v0.1.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.6636935Z   Downloaded inotify v0.11.5
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.6648189Z   Downloaded signal-hook v0.4.5
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.6663268Z   Downloaded ident_case v1.0.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.6668089Z   Downloaded yasna v0.6.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.6681160Z   Downloaded ratatui-core v0.1.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.6725722Z   Downloaded csscolorparser v0.6.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.6733147Z   Downloaded windows_x86_64_gnu v0.42.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.6855296Z   Downloaded deranged v0.5.8
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.6866775Z   Downloaded wasi v0.11.1+wasi-snapshot-preview1
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.6877249Z   Downloaded windows_aarch64_msvc v0.53.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.6984982Z   Downloaded usage-derive v6.12.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.7015282Z   Downloaded hashbrown v0.17.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.7050708Z   Downloaded windows_x86_64_msvc v0.53.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.7158293Z   Downloaded lab v0.11.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.7165781Z   Downloaded windows_i686_gnullvm v0.53.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.7276747Z   Downloaded pest_meta v2.9.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.7290422Z   Downloaded exec v0.3.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.7296209Z   Downloaded bstr v1.13.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.7353118Z   Downloaded objc2-service-management v0.3.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.7361723Z   Downloaded tower-layer v0.3.3
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.7368129Z   Downloaded hashlink v0.12.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.7381413Z   Downloaded darling_macro v0.24.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.7385203Z   Downloaded reqwest v0.13.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.7422927Z   Downloaded termcolor v1.4.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.7430852Z   Downloaded self_cell v1.3.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.7437600Z   Downloaded pkg-config v0.3.34
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.7445959Z   Downloaded unicode-xid v0.2.6
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.7453128Z   Downloaded quote v1.0.47
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.7468615Z   Downloaded ansitok v0.3.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.7479756Z   Downloaded data-encoding v2.11.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.7486455Z   Downloaded foldhash v0.2.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.7494490Z   Downloaded fallible-iterator v0.3.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.7501625Z   Downloaded idna_adapter v1.2.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.7506817Z   Downloaded crypto-common v0.1.7
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.7512196Z   Downloaded block-buffer v0.10.4
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.7517865Z   Downloaded cpufeatures v0.2.17
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.7525339Z   Downloaded crossterm_winapi v0.9.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.7537577Z   Downloaded jaq-std v3.0.3
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.7546769Z   Downloaded thiserror v2.0.21
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.7577543Z   Downloaded objc2-core-text v0.3.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.7601659Z   Downloaded pastey v0.2.3
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.7609711Z   Downloaded digest v0.10.7
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.7619860Z   Downloaded interprocess v2.4.4
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.7690520Z   Downloaded signal-hook-registry v1.4.8
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.7698278Z   Downloaded sha2 v0.10.9
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.7712772Z   Downloaded sha2 v0.11.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.7731888Z   Downloaded os_pipe v1.2.3
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.7739522Z   Downloaded sysinfo v0.39.6
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.7809801Z   Downloaded jaq-json v2.0.3
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.7819770Z   Downloaded cron v0.17.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.7831782Z   Downloaded oid-registry v0.8.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.7839216Z   Downloaded toml_parser v1.1.3+spec-1.1.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.7853533Z   Downloaded hashbrown v0.16.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.7887778Z   Downloaded libm v0.2.16
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.7946070Z   Downloaded ordered-float v4.6.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.7955356Z   Downloaded listeners v0.6.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.7976793Z   Downloaded wezterm-input-types v0.1.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.7982381Z   Downloaded filedescriptor v0.8.3
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.7988003Z   Downloaded ratatui-macros v0.7.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.7996979Z   Downloaded convert_case v0.10.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.8007120Z   Downloaded fuzzy-matcher v0.3.7
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.8015157Z   Downloaded getrandom v0.2.17
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.8032515Z   Downloaded chrono v0.4.45
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.8079974Z   Downloaded thiserror-impl v1.0.69
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.8087996Z   Downloaded unicode-segmentation v1.13.3
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.8108812Z   Downloaded flume v0.12.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.8129591Z   Downloaded hybrid-array v0.4.15
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.8143102Z   Downloaded rand v0.10.3
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.8167432Z   Downloaded vte v0.14.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.8181737Z   Downloaded objc2-core-image v0.3.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.8209015Z   Downloaded windows_i686_msvc v0.53.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.8322711Z   Downloaded der-parser v10.0.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.8343598Z   Downloaded serde_spanned v1.1.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.8351202Z   Downloaded base64 v0.22.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.8374257Z   Downloaded typenum v1.20.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.8397851Z   Downloaded windows_x86_64_gnu v0.53.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.8548734Z   Downloaded windows_i686_gnu v0.53.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.8706454Z   Downloaded windows_x86_64_gnu v0.52.6
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.8850588Z   Downloaded num-traits v0.2.19
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.8867658Z   Downloaded wasm-bindgen-futures v0.4.79
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.8874536Z   Downloaded ratatui-termina v0.1.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.8881778Z   Downloaded litrs v1.0.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.8898956Z   Downloaded tower-http v0.6.11
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.8955151Z   Downloaded compact_str v0.9.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.8978502Z   Downloaded async-stream-impl v0.3.6
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.8983034Z   Downloaded sigchld v0.2.5
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.8989243Z   Downloaded objc2-io-kit v0.3.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.9040001Z   Downloaded rand v0.8.8
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.9061644Z   Downloaded termina v0.3.3
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.9085048Z   Downloaded clx v3.0.4
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.9102004Z   Downloaded minimal-lexical v0.2.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.9129950Z   Downloaded windows_i686_msvc v0.52.6
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.9242562Z   Downloaded toml_datetime v1.1.1+spec-1.1.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.9252772Z   Downloaded allocator-api2 v0.2.21
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.9269952Z   Downloaded httpdate v1.0.3
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.9276806Z   Downloaded objc2 v0.6.4
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.9341138Z   Downloaded darling_core v0.24.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.9374683Z   Downloaded icu_properties v2.3.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.9397867Z   Downloaded palette_derive v0.7.7
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.9408882Z   Downloaded euclid v0.22.14
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.9432165Z   Downloaded derive_more v2.1.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.9497631Z   Downloaded nom v7.1.3
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.9530319Z   Downloaded usage-config v6.12.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.9549044Z   Downloaded objc2-foundation v0.3.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.9664044Z   Downloaded simd_cesu8 v1.2.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.9696487Z   Downloaded wezterm-dynamic v0.2.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.9704431Z   Downloaded anyhow v1.0.104
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.9726666Z   Downloaded doctest-file v1.1.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.9735372Z   Downloaded auto-launcher v1.1.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.9745397Z   Downloaded objc2-core-graphics v0.3.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.9777626Z   Downloaded hyper-rustls v0.27.10
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.9787919Z   Downloaded indexmap v2.14.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.9815716Z   Downloaded tokio-util v0.7.19
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.9865367Z   Downloaded rusqlite v0.40.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.9910643Z   Downloaded itertools v0.15.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:06.9957150Z   Downloaded icu_properties_data v2.3.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:07.0019255Z   Downloaded palette v0.7.7
+Build latest stable pitchfork	Build	2026-10-08T03:15:07.0091679Z   Downloaded rustls v0.23.45
+Build latest stable pitchfork	Build	2026-10-08T03:15:07.0170115Z   Downloaded lock_api v0.4.14
+Build latest stable pitchfork	Build	2026-10-08T03:15:07.0178889Z   Downloaded windows_i686_gnu v0.52.6
+Build latest stable pitchfork	Build	2026-10-08T03:15:07.0330390Z   Downloaded syn v1.0.109
+Build latest stable pitchfork	Build	2026-10-08T03:15:07.0392067Z   Downloaded tracing v0.1.44
+Build latest stable pitchfork	Build	2026-10-08T03:15:07.0498198Z   Downloaded syn v3.0.6
+Build latest stable pitchfork	Build	2026-10-08T03:15:07.0568247Z   Downloaded objc2-security v0.3.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:07.0632842Z   Downloaded socket2 v0.6.5
+Build latest stable pitchfork	Build	2026-10-08T03:15:07.0646228Z   Downloaded nix v0.29.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:07.0717258Z   Downloaded memmem v0.1.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:07.0723051Z   Downloaded asn1-rs-derive v0.6.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:07.0729457Z   Downloaded hex v0.4.3
+Build latest stable pitchfork	Build	2026-10-08T03:15:07.0738175Z   Downloaded objc2-io-surface v0.3.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:07.0748480Z   Downloaded objc2-core-location v0.3.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:07.0764468Z   Downloaded windows_x86_64_msvc v0.52.6
+Build latest stable pitchfork	Build	2026-10-08T03:15:07.1034905Z   Downloaded windows_aarch64_msvc v0.52.6
+Build latest stable pitchfork	Build	2026-10-08T03:15:07.1035535Z   Downloaded icu_normalizer v2.3.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:07.1106111Z   Downloaded parking_lot v0.12.5
+Build latest stable pitchfork	Build	2026-10-08T03:15:07.1122593Z   Downloaded kqueue v1.2.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:07.1138068Z   Downloaded asn1-rs-impl v0.2.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:07.1142403Z   Downloaded num-integer v0.1.47
+Build latest stable pitchfork	Build	2026-10-08T03:15:07.1151996Z   Downloaded termwiz v0.23.3
+Build latest stable pitchfork	Build	2026-10-08T03:15:07.1244943Z   Downloaded fsevent-sys v4.1.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:07.1250237Z   Downloaded fancy-regex v0.11.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:07.1271728Z   Downloaded regex-automata v0.4.18
+Build latest stable pitchfork	Build	2026-10-08T03:15:07.1374646Z   Downloaded windows_aarch64_gnullvm v0.52.6
+Build latest stable pitchfork	Build	2026-10-08T03:15:07.1439598Z   Downloaded regex v1.13.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:07.1478106Z   Downloaded lazy_static v1.5.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:07.3037914Z   Downloaded finl_unicode v1.5.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:07.3647522Z   Downloaded cfg-if v1.0.5
+Build latest stable pitchfork	Build	2026-10-08T03:15:07.3650713Z   Downloaded pest v2.9.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:07.3683376Z   Downloaded web-sys v0.3.106
+Build latest stable pitchfork	Build	2026-10-08T03:15:07.4283259Z   Downloaded ratatui-widgets v0.3.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:07.4336262Z   Downloaded rmcp v3.5.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:07.4467896Z   Downloaded windows_i686_msvc v0.42.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:07.4561782Z   Downloaded rust-embed v8.12.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:07.4634703Z   Downloaded windows_aarch64_msvc v0.42.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:07.4722346Z   Downloaded regex-syntax v0.8.11
+Build latest stable pitchfork	Build	2026-10-08T03:15:07.4777185Z   Downloaded libc v0.2.190
+Build latest stable pitchfork	Build	2026-10-08T03:15:07.5034965Z   Downloaded jiff v0.2.37
+Build latest stable pitchfork	Build	2026-10-08T03:15:07.5150195Z   Downloaded winapi v0.3.9
+Build latest stable pitchfork	Build	2026-10-08T03:15:07.5404403Z   Downloaded windows_i686_gnu v0.42.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:07.5534912Z   Downloaded tokio-macros v2.7.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:07.5541503Z   Downloaded mac_address v1.2.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:07.5551033Z   Downloaded redox_syscall v0.5.18
+Build latest stable pitchfork	Build	2026-10-08T03:15:07.5565437Z   Downloaded tokio v1.53.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:07.5827724Z   Downloaded windows-sys v0.60.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:07.6285448Z   Downloaded ring v0.17.14
+Build latest stable pitchfork	Build	2026-10-08T03:15:07.6574482Z   Downloaded linux-raw-sys v0.12.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:07.7055016Z   Downloaded windows-sys v0.45.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:07.7599116Z   Downloaded icu_segmenter_data v2.3.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:07.8011584Z   Downloaded deltae v0.3.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:07.8124440Z   Downloaded winapi-x86_64-pc-windows-gnu v0.4.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:07.9229114Z   Downloaded icu_segmenter v2.3.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:07.9764920Z   Downloaded windows-sys v0.61.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:08.0219032Z   Downloaded windows-sys v0.52.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:08.0679022Z   Downloaded winapi-i686-pc-windows-gnu v0.4.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:08.1875961Z   Downloaded windows v0.61.3
+Build latest stable pitchfork	Build	2026-10-08T03:15:08.3683347Z   Downloaded sqlite-wasm-rs v0.5.5
+Build latest stable pitchfork	Build	2026-10-08T03:15:08.4381963Z   Downloaded libsqlite3-sys v0.38.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:08.4995688Z   Downloaded windows v0.62.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:09.0687359Z # terrarium-patches
+Build latest stable pitchfork	Build	2026-10-08T03:15:09.0687888Z [patch.crates-io]
+Build latest stable pitchfork	Build	2026-10-08T03:15:09.0688456Z dirs = { path = "/home/runner/work/terrarium/terrarium/.vendor/dirs-6.0.0" }
+Build latest stable pitchfork	Build	2026-10-08T03:15:09.0689444Z dirs-7-0-0 = { package = "dirs", path = "/home/runner/work/terrarium/terrarium/.vendor/dirs-7.0.0" }
+Build latest stable pitchfork	Build	2026-10-08T03:15:09.0690040Z if-addrs = { path = "/home/runner/work/terrarium/terrarium/.vendor/if-addrs-0.15.0" }
+Build latest stable pitchfork	Build	2026-10-08T03:15:09.0690596Z interprocess = { path = "/home/runner/work/terrarium/terrarium/.vendor/interprocess-2.4.4" }
+Build latest stable pitchfork	Build	2026-10-08T03:15:09.0691392Z nix = { path = "/home/runner/work/terrarium/terrarium/.vendor/nix-0.31.3" }
+Build latest stable pitchfork	Build	2026-10-08T03:15:09.0691878Z reqwest = { path = "/home/runner/work/terrarium/terrarium/.vendor/reqwest-0.13.1" }
+Build latest stable pitchfork	Build	2026-10-08T03:15:09.0692384Z ring = { path = "/home/runner/work/terrarium/terrarium/.vendor/ring-0.17.14" }
+Build latest stable pitchfork	Build	2026-10-08T03:15:09.0832035Z warning: `package.homepage` is redundant with `package.documentation`
+Build latest stable pitchfork	Build	2026-10-08T03:15:09.0832672Z   --> Cargo.toml:9:12
+Build latest stable pitchfork	Build	2026-10-08T03:15:09.0833020Z    |
+Build latest stable pitchfork	Build	2026-10-08T03:15:09.0833286Z  9 | homepage = "https://pitchfork.jdx.dev"
+Build latest stable pitchfork	Build	2026-10-08T03:15:09.0833594Z    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Build latest stable pitchfork	Build	2026-10-08T03:15:09.0834051Z 10 | repository = "https://github.com/jdx/pitchfork"
+Build latest stable pitchfork	Build	2026-10-08T03:15:09.0834526Z 11 | documentation = "https://pitchfork.jdx.dev"
+Build latest stable pitchfork	Build	2026-10-08T03:15:09.0834842Z    |                 ---------------------------
+Build latest stable pitchfork	Build	2026-10-08T03:15:09.0835098Z    |
+Build latest stable pitchfork	Build	2026-10-08T03:15:09.0835407Z    = note: `cargo::redundant_homepage` is set to `warn` by default
+Build latest stable pitchfork	Build	2026-10-08T03:15:09.0835786Z help: consider removing `package.homepage`
+Build latest stable pitchfork	Build	2026-10-08T03:15:09.0836122Z warning: `pitchfork-cli` (manifest) generated 1 warning
+Build latest stable pitchfork	Build	2026-10-08T03:15:09.1920043Z      Locking 7 packages to highest Rust 1.95 compatible versions
+Build latest stable pitchfork	Build	2026-10-08T03:15:09.1920761Z       Adding dirs v6.0.0 (/home/runner/work/terrarium/terrarium/.vendor/dirs-6.0.0)
+Build latest stable pitchfork	Build	2026-10-08T03:15:09.1921297Z       Adding dirs v7.0.0 (/home/runner/work/terrarium/terrarium/.vendor/dirs-7.0.0)
+Build latest stable pitchfork	Build	2026-10-08T03:15:09.1921850Z       Adding if-addrs v0.15.0 (/home/runner/work/terrarium/terrarium/.vendor/if-addrs-0.15.0)
+Build latest stable pitchfork	Build	2026-10-08T03:15:09.1922447Z       Adding interprocess v2.4.4 (/home/runner/work/terrarium/terrarium/.vendor/interprocess-2.4.4)
+Build latest stable pitchfork	Build	2026-10-08T03:15:09.1923041Z       Adding nix v0.31.3 (/home/runner/work/terrarium/terrarium/.vendor/nix-0.31.3)
+Build latest stable pitchfork	Build	2026-10-08T03:15:09.1923588Z       Adding reqwest v0.13.1 (/home/runner/work/terrarium/terrarium/.vendor/reqwest-0.13.1)
+Build latest stable pitchfork	Build	2026-10-08T03:15:09.1924347Z       Adding ring v0.17.14 (/home/runner/work/terrarium/terrarium/.vendor/ring-0.17.14)
+Build latest stable pitchfork	Build	2026-10-08T03:15:09.2802483Z     Updating crates.io index
+Build latest stable pitchfork	Build	2026-10-08T03:15:09.3795245Z  Downloading crates ...
+Build latest stable pitchfork	Build	2026-10-08T03:15:09.4519913Z   Downloaded cfg-if v1.0.4
+Build latest stable pitchfork	Build	2026-10-08T03:15:09.4704048Z   Downloaded getopts v0.2.24
+Build latest stable pitchfork	Build	2026-10-08T03:15:09.4934719Z   Downloaded rustc-literal-escaper v0.0.8
+Build latest stable pitchfork	Build	2026-10-08T03:15:09.5058848Z   Downloaded addr2line v0.27.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:09.5208592Z   Downloaded miniz_oxide v0.9.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:09.5566824Z   Downloaded gimli v0.34.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:09.5708572Z   Downloaded object v0.39.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:09.5787455Z   Downloaded libc v0.2.189
+Build latest stable pitchfork	Build	2026-10-08T03:15:09.8752146Z    Compiling compiler_builtins v0.1.160 (/home/runner/.rustup/toolchains/nightly-2026-10-01-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/compiler-builtins/compiler-builtins)
+Build latest stable pitchfork	Build	2026-10-08T03:15:09.8754355Z    Compiling core v0.0.0 (/home/runner/.rustup/toolchains/nightly-2026-10-01-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core)
+Build latest stable pitchfork	Build	2026-10-08T03:15:09.8755446Z    Compiling libc v0.2.189
+Build latest stable pitchfork	Build	2026-10-08T03:15:09.8784805Z    Compiling object v0.39.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:11.1685567Z    Compiling std v0.0.0 (/home/runner/.rustup/toolchains/nightly-2026-10-01-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std)
+Build latest stable pitchfork	Build	2026-10-08T03:15:11.1785550Z    Compiling proc-macro2 v1.0.107
+Build latest stable pitchfork	Build	2026-10-08T03:15:11.2754236Z    Compiling quote v1.0.47
+Build latest stable pitchfork	Build	2026-10-08T03:15:11.3175218Z    Compiling unicode-ident v1.0.26
+Build latest stable pitchfork	Build	2026-10-08T03:15:11.3906370Z    Compiling libc v0.2.190
+Build latest stable pitchfork	Build	2026-10-08T03:15:11.3968049Z    Compiling serde_core v1.0.229
+Build latest stable pitchfork	Build	2026-10-08T03:15:11.5365329Z    Compiling parking_lot_core v0.9.12
+Build latest stable pitchfork	Build	2026-10-08T03:15:11.6205084Z    Compiling autocfg v1.5.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:11.8842455Z    Compiling find-msvc-tools v0.1.14
+Build latest stable pitchfork	Build	2026-10-08T03:15:11.8890779Z    Compiling shlex v2.0.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:11.9324780Z    Compiling syn v3.0.6
+Build latest stable pitchfork	Build	2026-10-08T03:15:11.9848013Z    Compiling syn v2.0.119
+Build latest stable pitchfork	Build	2026-10-08T03:15:12.0284875Z    Compiling cc v1.6.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:13.4779225Z    Compiling thiserror v2.0.21
+Build latest stable pitchfork	Build	2026-10-08T03:15:13.6705065Z    Compiling num-traits v0.2.19
+Build latest stable pitchfork	Build	2026-10-08T03:15:13.8055004Z    Compiling serde v1.0.229
+Build latest stable pitchfork	Build	2026-10-08T03:15:13.9255503Z    Compiling zmij v1.0.23
+Build latest stable pitchfork	Build	2026-10-08T03:15:14.0466080Z    Compiling ring v0.17.14 (/home/runner/work/terrarium/terrarium/.vendor/ring-0.17.14)
+Build latest stable pitchfork	Build	2026-10-08T03:15:16.3905270Z    Compiling synstructure v0.14.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:16.4665344Z    Compiling displaydoc v0.2.7
+Build latest stable pitchfork	Build	2026-10-08T03:15:16.8625459Z    Compiling zerofrom-derive v0.1.8
+Build latest stable pitchfork	Build	2026-10-08T03:15:16.9715167Z    Compiling yoke-derive v0.8.4
+Build latest stable pitchfork	Build	2026-10-08T03:15:17.7115413Z    Compiling zerovec-derive v0.11.6
+Build latest stable pitchfork	Build	2026-10-08T03:15:17.8089739Z    Compiling thiserror-impl v2.0.21
+Build latest stable pitchfork	Build	2026-10-08T03:15:18.5345273Z    Compiling tokio-macros v2.7.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:18.7605547Z    Compiling futures-macro v0.3.34
+Build latest stable pitchfork	Build	2026-10-08T03:15:18.9744951Z    Compiling tracing-attributes v0.1.31
+Build latest stable pitchfork	Build	2026-10-08T03:15:19.3100422Z    Compiling serde_derive v1.0.229
+Build latest stable pitchfork	Build	2026-10-08T03:15:19.9815256Z    Compiling num-conv v0.2.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:20.0714917Z    Compiling time-core v0.1.9
+Build latest stable pitchfork	Build	2026-10-08T03:15:20.1945112Z    Compiling time-macros v0.2.32
+Build latest stable pitchfork	Build	2026-10-08T03:15:20.9535290Z    Compiling strsim v0.11.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:21.1549695Z    Compiling ident_case v1.0.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:21.2055492Z    Compiling darling_core v0.24.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:21.2365017Z    Compiling rustix v1.1.5
+Build latest stable pitchfork	Build	2026-10-08T03:15:21.3990993Z    Compiling rustversion v1.0.23
+Build latest stable pitchfork	Build	2026-10-08T03:15:23.8566047Z    Compiling rustc-std-workspace-core v1.99.0 (/home/runner/.rustup/toolchains/nightly-2026-10-01-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/rustc-std-workspace-core)
+Build latest stable pitchfork	Build	2026-10-08T03:15:23.8915612Z    Compiling alloc v0.0.0 (/home/runner/.rustup/toolchains/nightly-2026-10-01-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc)
+Build latest stable pitchfork	Build	2026-10-08T03:15:24.5146003Z    Compiling unwind v0.0.0 (/home/runner/.rustup/toolchains/nightly-2026-10-01-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/unwind)
+Build latest stable pitchfork	Build	2026-10-08T03:15:24.5504916Z    Compiling adler2 v2.0.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:24.6305437Z    Compiling memchr v2.8.3
+Build latest stable pitchfork	Build	2026-10-08T03:15:24.9744921Z    Compiling cfg-if v1.0.4
+Build latest stable pitchfork	Build	2026-10-08T03:15:25.0027542Z    Compiling rustc-demangle v0.1.28
+Build latest stable pitchfork	Build	2026-10-08T03:15:25.0374997Z    Compiling rustc-literal-escaper v0.0.8
+Build latest stable pitchfork	Build	2026-10-08T03:15:25.1295597Z    Compiling darling_macro v0.24.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:25.1790547Z    Compiling icu_normalizer_data v2.3.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:25.2515415Z    Compiling unicase v2.9.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:25.2995123Z    Compiling icu_properties_data v2.3.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:25.3615505Z    Compiling serde_json v1.0.151
+Build latest stable pitchfork	Build	2026-10-08T03:15:25.3644934Z    Compiling heck v0.5.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:25.4235192Z    Compiling typenum v1.20.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:25.4825093Z    Compiling httparse v1.10.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:25.6425263Z    Compiling strum_macros v0.28.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:26.0435073Z    Compiling mime_guess v2.0.5
+Build latest stable pitchfork	Build	2026-10-08T03:15:26.3495891Z    Compiling darling v0.24.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:26.6135715Z    Compiling hybrid-array v0.4.15
+Build latest stable pitchfork	Build	2026-10-08T03:15:26.7186412Z    Compiling icu_locale_fallback_data v2.3.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:26.7826734Z    Compiling signal-hook v0.3.18
+Build latest stable pitchfork	Build	2026-10-08T03:15:26.8505481Z    Compiling unicode-segmentation v1.13.3
+Build latest stable pitchfork	Build	2026-10-08T03:15:27.1635536Z    Compiling rustls v0.23.45
+Build latest stable pitchfork	Build	2026-10-08T03:15:27.1914984Z    Compiling convert_case v0.10.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:27.2407492Z    Compiling synstructure v0.13.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:27.2825223Z    Compiling icu_segmenter_data v2.3.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:27.3515675Z    Compiling rustc-std-workspace-alloc v1.99.0 (/home/runner/.rustup/toolchains/nightly-2026-10-01-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/rustc-std-workspace-alloc)
+Build latest stable pitchfork	Build	2026-10-08T03:15:27.3880320Z    Compiling gimli v0.34.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:27.3913548Z    Compiling hashbrown v0.17.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:27.7105757Z    Compiling std_detect v0.1.5 (/home/runner/.rustup/toolchains/nightly-2026-10-01-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std_detect)
+Build latest stable pitchfork	Build	2026-10-08T03:15:28.1415290Z    Compiling miniz_oxide v0.9.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:28.1766151Z    Compiling panic_unwind v0.0.0 (/home/runner/.rustup/toolchains/nightly-2026-10-01-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/panic_unwind)
+Build latest stable pitchfork	Build	2026-10-08T03:15:28.2315695Z    Compiling panic_abort v0.0.0 (/home/runner/.rustup/toolchains/nightly-2026-10-01-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/panic_abort)
+Build latest stable pitchfork	Build	2026-10-08T03:15:28.2654933Z    Compiling object v0.37.3
+Build latest stable pitchfork	Build	2026-10-08T03:15:28.3725479Z    Compiling getrandom v0.4.3
+Build latest stable pitchfork	Build	2026-10-08T03:15:28.4645113Z    Compiling unicode-xid v0.2.6
+Build latest stable pitchfork	Build	2026-10-08T03:15:28.5075331Z    Compiling signal-hook v0.4.5
+Build latest stable pitchfork	Build	2026-10-08T03:15:28.5744552Z    Compiling derive_more-impl v2.1.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:28.6954951Z    Compiling asn1-rs-derive v0.6.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:29.2075299Z    Compiling crypto-common v0.2.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:30.0345611Z    Compiling addr2line v0.27.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:30.4695598Z    Compiling block-buffer v0.12.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:30.5569382Z    Compiling asn1-rs-impl v0.2.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:30.6245076Z    Compiling memoffset v0.9.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:30.7005119Z    Compiling ref-cast v1.0.27
+Build latest stable pitchfork	Build	2026-10-08T03:15:30.7345131Z    Compiling indoc v2.0.7
+Build latest stable pitchfork	Build	2026-10-08T03:15:30.8263550Z    Compiling siphasher v1.0.4
+Build latest stable pitchfork	Build	2026-10-08T03:15:30.9443784Z    Compiling cfg_aliases v0.2.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:30.9492035Z    Compiling const-oid v0.10.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:30.9719541Z    Compiling rand_core v0.6.4
+Build latest stable pitchfork	Build	2026-10-08T03:15:31.0591828Z    Compiling litrs v1.0.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:31.0764737Z    Compiling digest v0.11.3
+Build latest stable pitchfork	Build	2026-10-08T03:15:31.1684884Z    Compiling rand v0.8.8
+Build latest stable pitchfork	Build	2026-10-08T03:15:31.2675127Z    Compiling nix v0.31.3 (/home/runner/work/terrarium/terrarium/.vendor/nix-0.31.3)
+Build latest stable pitchfork	Build	2026-10-08T03:15:31.4737405Z    Compiling document-features v0.2.12
+Build latest stable pitchfork	Build	2026-10-08T03:15:31.6515291Z    Compiling instability v0.3.14
+Build latest stable pitchfork	Build	2026-10-08T03:15:31.8001344Z    Compiling phf_shared v0.11.3
+Build latest stable pitchfork	Build	2026-10-08T03:15:31.9519151Z    Compiling ref-cast-impl v1.0.27
+Build latest stable pitchfork	Build	2026-10-08T03:15:32.0225228Z    Compiling serde_derive_internals v0.30.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:32.2354996Z    Compiling cpufeatures v0.3.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:32.2595213Z    Compiling pkg-config v0.3.34
+Build latest stable pitchfork	Build	2026-10-08T03:15:32.2631944Z    Compiling equivalent v1.0.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:32.2965057Z    Compiling vcpkg v0.2.15
+Build latest stable pitchfork	Build	2026-10-08T03:15:32.6365265Z    Compiling oid-registry v0.8.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:32.8184831Z    Compiling winnow v1.0.4
+Build latest stable pitchfork	Build	2026-10-08T03:15:32.8186205Z    Compiling same-file v1.0.6
+Build latest stable pitchfork	Build	2026-10-08T03:15:32.9495291Z    Compiling libm v0.2.16
+Build latest stable pitchfork	Build	2026-10-08T03:15:33.0715614Z    Compiling cfg-if v1.0.5
+Build latest stable pitchfork	Build	2026-10-08T03:15:33.0989445Z    Compiling sha2 v0.11.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:33.1013409Z    Compiling toml_parser v1.1.3+spec-1.1.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:33.3475524Z    Compiling indexmap v2.14.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:33.6070385Z    Compiling walkdir v2.5.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:33.7154304Z    Compiling schemars_derive v1.2.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:33.8135142Z    Compiling libsqlite3-sys v0.38.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:33.9839363Z    Compiling phf_generator v0.11.3
+Build latest stable pitchfork	Build	2026-10-08T03:15:34.1025107Z    Compiling serde_spanned v1.1.1
+Build latest stable pitchfork	Build	2026-10-08T03:15:34.1635181Z    Compiling toml_datetime v1.1.1+spec-1.1.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:34.1899176Z    Compiling itoa v1.0.18
+Build latest stable pitchfork	Build	2026-10-08T03:15:34.3545133Z    Compiling mime v0.3.17
+Build latest stable pitchfork	Build	2026-10-08T03:15:34.5335627Z    Compiling thiserror v1.0.69
+Build latest stable pitchfork	Build	2026-10-08T03:15:34.7835801Z    Compiling proc_macro v0.0.0 (/home/runner/.rustup/toolchains/nightly-2026-10-01-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/proc_macro)
+Build latest stable pitchfork	Build	2026-10-08T03:15:35.0085405Z    Compiling toml v1.1.6+spec-1.1.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:36.9909027Z    Compiling smallvec v1.16.2
+Build latest stable pitchfork	Build	2026-10-08T03:15:37.1865171Z    Compiling errno v0.2.8
+Build latest stable pitchfork	Build	2026-10-08T03:15:37.2825416Z    Compiling foldhash v0.2.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:37.4565146Z    Compiling allocator-api2 v0.2.21
+Build latest stable pitchfork	Build	2026-10-08T03:15:37.8305286Z    Compiling signal-hook-registry v1.4.8
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.2464382Z    Compiling log v0.4.34
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.4276986Z    Compiling scopeguard v1.2.0
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.4775094Z    Compiling lock_api v0.4.14
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.6895753Z    Compiling futures-core v0.3.34
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.7674897Z    Compiling pin-project-lite v0.2.17
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.8053655Z    Compiling mio v1.2.4
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.8295096Z error: This wasm target is unsupported by mio. If using Tokio, disable the net feature.
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.8325718Z   --> /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/mio-1.2.4/src/lib.rs:44:1
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.8374619Z    |
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.8405003Z 44 | compile_error!("This wasm target is unsupported by mio. If using Tokio, disable the net feature.");
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.8434614Z    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.8435035Z 
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.8435255Z error[E0583]: file not found for module `selector`
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.8464944Z   --> /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/mio-1.2.4/src/sys/unix/mod.rs:60:5
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.8494580Z    |
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.8524544Z 60 |     mod selector;
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.8524976Z    |     ^^^^^^^^^^^^^
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.8525320Z    |
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.8526737Z    = help: to create the module `selector`, create file "/home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/mio-1.2.4/src/sys/unix/selector.rs" or "/home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/mio-1.2.4/src/sys/unix/selector/mod.rs"
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.8529217Z    = note: if there is a `mod selector` elsewhere in the crate already, import it with `use crate::...` instead
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.8529783Z 
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.8529995Z error[E0583]: file not found for module `waker`
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.8530831Z    --> /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/mio-1.2.4/src/sys/unix/mod.rs:120:5
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.8531545Z     |
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.8531859Z 120 |     mod waker;
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.8532201Z     |     ^^^^^^^^^^
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.8532528Z     |
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.8534120Z     = help: to create the module `waker`, create file "/home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/mio-1.2.4/src/sys/unix/waker.rs" or "/home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/mio-1.2.4/src/sys/unix/waker/mod.rs"
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.8564874Z     = note: if there is a `mod waker` elsewhere in the crate already, import it with `use crate::...` instead
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.8594205Z 
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.8624658Z error[E0432]: unresolved import `crate::sys::IoSourceState`
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.8645019Z   --> /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/mio-1.2.4/src/io_source.rs:14:5
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.8684450Z    |
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.8714525Z 14 | use crate::sys::IoSourceState;
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.8744434Z    |     ^^^^^^^^^^^^-------------
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.8774765Z    |                 |
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.8804525Z    |                 no `IoSourceState` in `sys`
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.8834223Z 
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.8864613Z error[E0433]: cannot find `Selector` in `sys`
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.8894874Z    --> /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/mio-1.2.4/src/poll.rs:322:18
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.8924431Z     |
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.8954639Z 322 |             sys::Selector::new().map(|selector| Poll {
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.8984605Z     |                  ^^^^^^^^ could not find `Selector` in `sys`
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.9014226Z 
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.9044558Z error[E0433]: cannot find `event` in `sys`
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.9074889Z   --> /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/mio-1.2.4/src/event/event.rs:24:14
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.9104456Z    |
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.9134577Z 24 |         sys::event::token(&self.inner)
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.9154561Z    |              ^^^^^ could not find `event` in `sys`
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.9164240Z 
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.9194676Z error[E0433]: cannot find `event` in `sys`
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.9224857Z   --> /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/mio-1.2.4/src/event/event.rs:38:14
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.9244548Z    |
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.9254573Z 38 |         sys::event::is_readable(&self.inner)
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.9284561Z    |              ^^^^^ could not find `event` in `sys`
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.9304356Z 
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.9314521Z error[E0433]: cannot find `event` in `sys`
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.9335169Z   --> /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/mio-1.2.4/src/event/event.rs:43:14
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.9335910Z    |
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.9336260Z 43 |         sys::event::is_writable(&self.inner)
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.9336750Z    |              ^^^^^ could not find `event` in `sys`
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.9337055Z 
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.9337225Z error[E0433]: cannot find `event` in `sys`
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.9337946Z   --> /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/mio-1.2.4/src/event/event.rs:68:14
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.9338617Z    |
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.9338931Z 68 |         sys::event::is_error(&self.inner)
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.9339397Z    |              ^^^^^ could not find `event` in `sys`
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.9339690Z 
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.9339846Z error[E0433]: cannot find `event` in `sys`
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.9340552Z   --> /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/mio-1.2.4/src/event/event.rs:99:14
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.9341285Z    |
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.9341646Z 99 |         sys::event::is_read_closed(&self.inner)
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.9364661Z    |              ^^^^^ could not find `event` in `sys`
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.9394405Z 
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.9404532Z error[E0433]: cannot find `event` in `sys`
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.9434423Z    --> /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/mio-1.2.4/src/event/event.rs:129:14
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.9456208Z     |
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.9484752Z 129 |         sys::event::is_write_closed(&self.inner)
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.9494619Z     |              ^^^^^ could not find `event` in `sys`
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.9524237Z 
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.9544787Z error[E0433]: cannot find `event` in `sys`
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.9554876Z    --> /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/mio-1.2.4/src/event/event.rs:151:14
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.9584569Z     |
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.9604758Z 151 |         sys::event::is_priority(&self.inner)
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.9634707Z     |              ^^^^^ could not find `event` in `sys`
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.9644228Z 
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.9674591Z error[E0433]: cannot find `event` in `sys`
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.9695002Z    --> /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/mio-1.2.4/src/event/event.rs:173:14
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.9704447Z     |
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.9734566Z 173 |         sys::event::is_aio(&self.inner)
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.9764566Z     |              ^^^^^ could not find `event` in `sys`
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.9784316Z 
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.9794573Z error[E0433]: cannot find `event` in `sys`
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.9824854Z    --> /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/mio-1.2.4/src/event/event.rs:183:14
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.9844572Z     |
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.9854550Z 183 |         sys::event::is_lio(&self.inner)
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.9884580Z     |              ^^^^^ could not find `event` in `sys`
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.9904349Z 
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.9934632Z error[E0433]: cannot find `event` in `sys`
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.9944807Z    --> /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/mio-1.2.4/src/event/event.rs:221:26
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.9974448Z     |
+Build latest stable pitchfork	Build	2026-10-08T03:15:38.9994817Z 221 |                     sys::event::debug_details(f, self.0)
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0004547Z     |                          ^^^^^ could not find `event` in `sys`
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0034234Z 
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0064649Z error[E0425]: cannot find type `Selector` in module `sys`
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0094909Z    --> /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/mio-1.2.4/src/poll.rs:277:20
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0124455Z     |
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0154557Z 277 |     selector: sys::Selector,
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0184605Z     |                    ^^^^^^^^ not found in `sys`
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0205824Z 
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0244642Z error[E0425]: cannot find type `Selector` in module `sys`
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0274889Z    --> /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/mio-1.2.4/src/poll.rs:736:44
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0304469Z     |
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0334980Z 736 |     pub(crate) fn selector(&self) -> &sys::Selector {
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0364835Z     |                                            ^^^^^^^^ not found in `sys`
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0394383Z 
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0424917Z error[E0425]: cannot find value `stream` in this scope
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0426236Z    --> /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/mio-1.2.4/src/sys/unix/tcp.rs:138:58
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0427300Z     |
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0427880Z 138 |     unsafe { to_socket_addr(addr.as_ptr()) }.map(|addr| (stream, addr))
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0440387Z     |                                                          ^^^^^^ not found in this scope
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0440959Z 
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0441310Z error[E0425]: cannot find type `Waker` in module `sys`
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0442219Z    --> /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/mio-1.2.4/src/waker.rs:79:17
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0443043Z     |
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0443441Z  79 |     inner: sys::Waker,
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0444123Z     |                 ^^^^^ not found in `sys`
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0444868Z     |
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0445296Z note: found an item that was configured out
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0446095Z    --> /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/mio-1.2.4/src/sys/unix/mod.rs:122:33
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0446888Z     |
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0447409Z 121 |     #[cfg(all(not(mio_unsupported_force_poll_poll), target_os = "solaris"))]
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0448275Z     |                                                     --------------------- the item is gated behind the `solaris` feature
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0448999Z 122 |     pub(crate) use self::waker::Waker;
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0449513Z     |                                 ^^^^^
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0449977Z help: consider importing one of these structs
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0450494Z     |
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0450839Z   1 + use crate::Waker;
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0451228Z     |
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0451580Z   1 + use std::task::Waker;
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0451992Z     |
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0452391Z help: if you import `Waker`, refer to it directly
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0452882Z     |
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0453233Z  79 -     inner: sys::Waker,
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0453665Z  79 +     inner: Waker,
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0454361Z     |
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0454691Z 
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0454912Z error[E0433]: cannot find `Waker` in `sys`
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0455730Z    --> /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/mio-1.2.4/src/waker.rs:87:14
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0456501Z     |
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0457015Z  87 |         sys::Waker::new(registry.selector(), token).map(|inner| Waker { inner })
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0457771Z     |              ^^^^^ could not find `Waker` in `sys`
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0458257Z     |
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0458959Z note: found an item that was configured out
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0459788Z    --> /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/mio-1.2.4/src/sys/unix/mod.rs:122:33
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0460613Z     |
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0461148Z 121 |     #[cfg(all(not(mio_unsupported_force_poll_poll), target_os = "solaris"))]
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0462080Z     |                                                     --------------------- the item is gated behind the `solaris` feature
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0462823Z 122 |     pub(crate) use self::waker::Waker;
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0463337Z     |                                 ^^^^^
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0463823Z help: consider importing one of these structs
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0464556Z     |
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0464907Z   1 + use crate::Waker;
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0465321Z     |
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0465713Z   1 + use std::task::Waker;
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0466145Z     |
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0466548Z help: if you import `Waker`, refer to it directly
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0467280Z     |
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0467799Z  87 -         sys::Waker::new(registry.selector(), token).map(|inner| Waker { inner })
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0468677Z  87 +         Waker::new(registry.selector(), token).map(|inner| Waker { inner })
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0469344Z     |
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0469590Z 
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0469873Z error[E0425]: cannot find type `Event` in module `sys`
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0470870Z   --> /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/mio-1.2.4/src/event/event.rs:18:17
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0471754Z    |
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0472321Z 18 |     inner: sys::Event,
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0479221Z    |                 ^^^^^ not found in `sys`
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0479769Z    |
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0480297Z help: consider importing this struct through its public re-export
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0480871Z    |
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0481263Z  1 + use crate::event::Event;
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0481676Z    |
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0482117Z help: if you import `Event`, refer to it directly
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0482635Z    |
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0483017Z 18 -     inner: sys::Event,
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0483444Z 18 +     inner: Event,
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0483842Z    |
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0484307Z 
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0484636Z error[E0425]: cannot find type `Event` in module `sys`
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0485502Z    --> /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/mio-1.2.4/src/event/event.rs:187:55
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0486330Z     |
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0486857Z 187 |     pub(crate) fn from_sys_event_ref(sys_event: &sys::Event) -> &Event {
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0487578Z     |                                                       ^^^^^ not found in `sys`
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0488112Z     |
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0488639Z help: consider importing this struct through its public re-export
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0489221Z     |
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0489608Z   1 + use crate::event::Event;
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0490031Z     |
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0490453Z help: if you import `Event`, refer to it directly
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0490962Z     |
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0491502Z 187 -     pub(crate) fn from_sys_event_ref(sys_event: &sys::Event) -> &Event {
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0492262Z 187 +     pub(crate) fn from_sys_event_ref(sys_event: &Event) -> &Event {
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0492872Z     |
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0493093Z 
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0493374Z error[E0425]: cannot find type `Event` in module `sys`
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0494415Z    --> /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/mio-1.2.4/src/event/event.rs:191:41
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0495175Z     |
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0495593Z 191 |             &*(sys_event as *const sys::Event as *const Event)
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0496216Z     |                                         ^^^^^ not found in `sys`
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0496691Z     |
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0497189Z help: consider importing this struct through its public re-export
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0497733Z     |
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0498125Z   1 + use crate::event::Event;
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0498824Z     |
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0499229Z help: if you import `Event`, refer to it directly
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0499687Z     |
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0500157Z 191 -             &*(sys_event as *const sys::Event as *const Event)
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0500760Z 191 +             &*(sys_event as *const Event as *const Event)
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0501277Z     |
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0501482Z 
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0501767Z error[E0425]: cannot find type `Event` in module `sys`
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0502621Z    --> /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/mio-1.2.4/src/event/event.rs:217:46
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0503402Z     |
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0503844Z 217 |             struct EventDetails<'a>(&'a sys::Event);
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0505214Z     |                                              ^^^^^ not found in `sys`
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0505763Z     |
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0506302Z help: consider importing this struct through its public re-export
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0506938Z     |
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0507625Z   1 + use crate::event::Event;
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0508058Z     |
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0508547Z help: if you import `Event`, refer to it directly
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0509121Z     |
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0509614Z 217 -             struct EventDetails<'a>(&'a sys::Event);
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0510238Z 217 +             struct EventDetails<'a>(&'a Event);
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0510786Z     |
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0511008Z 
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0511333Z error[E0425]: cannot find type `Events` in module `sys`
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0512267Z   --> /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/mio-1.2.4/src/event/events.rs:43:17
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0513130Z    |
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0513563Z 43 |     inner: sys::Events,
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0514696Z    |                 ^^^^^^ not found in `sys`
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0515270Z    |
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0515805Z help: consider importing this struct through its public re-export
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0516416Z    |
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0516791Z  1 + use crate::Events;
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0517188Z    |
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0517624Z help: if you import `Events`, refer to it directly
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0518121Z    |
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0518449Z 43 -     inner: sys::Events,
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0518871Z 43 +     inner: Events,
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0519240Z    |
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0519424Z 
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0519626Z error[E0433]: cannot find `Events` in `sys`
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0520533Z   --> /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/mio-1.2.4/src/event/events.rs:94:25
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0521230Z    |
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0521587Z 94 |             inner: sys::Events::with_capacity(capacity),
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0522126Z    |                         ^^^^^^ could not find `Events` in `sys`
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0522552Z    |
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0522968Z help: consider importing this struct through its public re-export
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0523447Z    |
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0523792Z  1 + use crate::Events;
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0524291Z    |
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0524658Z help: if you import `Events`, refer to it directly
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0525115Z    |
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0525513Z 94 -             inner: sys::Events::with_capacity(capacity),
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0526089Z 94 +             inner: Events::with_capacity(capacity),
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0526530Z    |
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0526672Z 
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0526874Z error[E0425]: cannot find type `Events` in module `sys`
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0527667Z    --> /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/mio-1.2.4/src/event/events.rs:189:47
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0528444Z     |
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0528821Z 189 |     pub(crate) fn sys(&mut self) -> &mut sys::Events {
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0529359Z     |                                               ^^^^^^ not found in `sys`
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0529806Z     |
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0530239Z help: consider importing this struct through its public re-export
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0530745Z     |
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0531037Z   1 + use crate::Events;
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0531666Z     |
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0532027Z help: if you import `Events`, refer to it directly
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0532468Z     |
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0532847Z 189 -     pub(crate) fn sys(&mut self) -> &mut sys::Events {
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0533395Z 189 +     pub(crate) fn sys(&mut self) -> &mut Events {
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0533835Z     |
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0534116Z 
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0534386Z Some errors have detailed explanations: E0425, E0432, E0433, E0583.
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0535017Z For more information about an error, try `rustc --explain E0425`.
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0535644Z error: could not compile `mio` (lib) due to 27 previous errors
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.0536256Z warning: build failed, waiting for other jobs to finish...
+Build latest stable pitchfork	Build	2026-10-08T03:15:39.7608540Z ##[error]Process completed with exit code 101.

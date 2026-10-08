@@ -1,0 +1,1 @@
+{"command":"mise exec -- bun test ./packages/terrarium/tests/formicarium-session.test.ts ./packages/terrarium/tests/formicarium-catalog.test.ts ./packages/terrarium/tests/formicarium-assets.test.ts","exitCode":0,"passed":26,"failed":0,"expects":142,"bun":"1.4.2"}

@@ -1,0 +1,6 @@
+{
+  "root": "/private/tmp/terrarium-prechange-x3vnrb5g",
+  "baselineOverlay": "/Users/mutoakio/Documents/terrarium/aidlc/spaces/default/intents/261008-formicarium-integration/construction/code-generation/evidence/baseline/source",
+  "exitCode": 1,
+  "limitation": "Four independent scripts/tests were outside original baseline; unchanged this task and compared raw hashes in baseline-existing-failures.json"
+}

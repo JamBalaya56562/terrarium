@@ -10,7 +10,7 @@
     if (event.source === frame.contentWindow && event.origin === location.origin)
       messages.push({ origin: event.origin, ...event.data });
   });
-  frame.src = `/web/?embed&tool=pitchfork&ref=v2.29.0&origin=${encodeURIComponent(location.origin)}`;
+  frame.src = `/web/?embed&tool=pitchfork&origin=${encodeURIComponent(location.origin)}`;
   window.runInFrame = (command) =>
     frame.contentWindow.postMessage({ type: 'terrarium:run', command }, location.origin);
 </script>

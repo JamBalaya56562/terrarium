@@ -1,0 +1,12 @@
+{
+  "status": "verified-red-green",
+  "defect": "Permitted adjacent literal quoted arguments must retain existing splitArgs token boundaries.",
+  "example": {"input": "cat \"file\"tail", "baseline": ["cat", "file", "tail"], "before": ["cat", "filetail"]},
+  "cwd": "/Users/mutoakio/Documents/terrarium/packages/terrarium",
+  "red": {"command": "/Users/mutoakio/.local/share/mise/installs/bun/1.4.2/bin/bun test tests/formicarium-session.test.ts", "passed": 10, "failed": 1, "expects": 52, "exitCode": 1},
+  "green": {"command": "/Users/mutoakio/.local/share/mise/installs/bun/1.4.2/bin/bun test tests/formicarium-session.test.ts", "passed": 11, "failed": 0, "expects": 59, "exitCode": 0},
+  "regression": {"command": "/Users/mutoakio/.local/share/mise/installs/bun/1.4.2/bin/bun test tests/formicarium-session.test.ts tests/formicarium-catalog.test.ts tests/formicarium-assets.test.ts", "passed": 26, "failed": 0, "expects": 142, "exitCode": 0},
+  "typecheck": {"command": "/Users/mutoakio/.local/share/mise/installs/bun/1.4.2/bin/bun node_modules/typescript/bin/tsc -p tsconfig.json --noEmit", "exitCode": 0},
+  "implementationSha256": "c7470b3dee713952f4a1255644d3034ce36391ae0eb61a9bb22fb554ff185cf9",
+  "browserAcceptance": "pending"
+}

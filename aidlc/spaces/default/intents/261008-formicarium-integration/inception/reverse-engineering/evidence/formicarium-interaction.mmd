@@ -1,0 +1,21 @@
+sequenceDiagram
+    participant U as User or Parent
+    participant P as Page Adapter
+    participant T as Terminal Element
+    participant C as Catalog
+    participant A as Formicarium Session
+    participant R as Guest Resolver
+    participant F as Public Browser Session
+    U->>P: run line with exact parent origin
+    P->>T: run line
+    T->>C: choose tool and ref
+    T->>A: create from choice
+    A->>R: resolve tool ref and source commit
+    R-->>A: guest bytes and fixture
+    A->>F: createSession then seed and setCwd
+    T->>A: queued run line
+    A->>F: run guest args env timeout and signal
+    F-->>A: sequenced output callbacks
+    A-->>T: decoded output and exit code
+    T-->>P: transcript and exit event
+    P-->>U: exact origin exit message

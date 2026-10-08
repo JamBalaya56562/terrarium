@@ -1,0 +1,17 @@
+bun test v1.4.2 (744846f84)
+
+tests/formicarium-inputs.test.ts:
+(pass) explicit input happy path is reproducible and retains verified bytes [6.31ms]
+(pass) missing explicit input refuses without creating an output [1.35ms]
+(pass) tarball manifest and resolver digest corruption refuse before output [5.13ms]
+(pass) missing advertised asset and unexpected file fail the exact file set [2.46ms]
+(pass) input symlink cannot escape the supplied directory [1.54ms]
+(pass) archive path traversal links duplicates and corrupted headers are rejected without extraction [4.43ms]
+(pass) plain ustar archive happy path reads only regular files [0.20ms]
+(pass) assembly preflight preserves an existing output when fixed inputs are missing [86.58ms]
+(pass) CI verifies fixed inputs before install and retains separate three-browser suites [7.03ms]
+
+ 9 pass
+ 0 fail
+ 33 expect() calls
+Ran 9 tests across 1 file. [124.00ms]

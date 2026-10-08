@@ -26,6 +26,12 @@ import {
   fetchJson,
   versioned,
 } from './catalog.ts';
+import {
+  FormicariumSession,
+  formicariumAssets,
+  isFormicariumBuild,
+  resolveChoice,
+} from './formicarium-session.ts';
 import xtermCss from './generated/xterm-css.ts';
 import { Session, type Tool } from './session.ts';
 
@@ -151,7 +157,9 @@ const STYLE = `
 export class TerrariumTerminal extends HTMLElement {
   #ready: Promise<ReadyDetail> | null = null;
   #term: Terminal | null = null;
-  #session: Session | null = null;
+  #session: Session | FormicariumSession | null = null;
+  #generation = 0;
+  #resize: ResizeObserver | null = null;
   #line = '';
   #busy = false;
   #chain: Promise<unknown> = Promise.resolve();
@@ -175,8 +183,9 @@ export class TerrariumTerminal extends HTMLElement {
 
   connectedCallback(): void {
     if (this.#ready) return;
-    const root = this.attachShadow({ mode: 'open' });
-    root.innerHTML = `<style>${xtermCss}${STYLE}</style><div class="term"></div>`;
+    const generation = ++this.#generation;
+    const root = this.shadowRoot ?? this.attachShadow({ mode: 'open' });
+    root.innerHTML = `<style>${xtermCss}${STYLE}</style><div class="term" data-testid="terrarium-terminal-surface"></div>`;
     const term = new Terminal({
       convertEol: true,
       cursorBlink: true,
@@ -188,25 +197,86 @@ export class TerrariumTerminal extends HTMLElement {
     term.loadAddon(fit);
     const container = root.querySelector('.term') as HTMLElement;
     term.open(container);
-    new ResizeObserver(() => {
+    this.#resize = new ResizeObserver(() => {
       if (container.clientWidth && container.clientHeight) fit.fit();
-    }).observe(container);
+    });
+    this.#resize.observe(container);
     term.onData((data) => {
       this.#onData(data);
     });
     this.#term = term;
 
-    this.#ready = this.#boot(term);
+    this.#ready = this.#boot(term, generation);
     this.#ready.catch(() => {});
   }
 
-  /** Type a command into the terminal and run it, after the ones before it. */
+  static get observedAttributes(): string[] {
+    return ['tool'];
+  }
+
+  attributeChangedCallback(
+    name: string,
+    previous: string | null,
+    next: string | null,
+  ): void {
+    if (
+      name !== 'tool' ||
+      previous === next ||
+      !this.#ready ||
+      !this.isConnected
+    )
+      return;
+    for (const attribute of ['ref', 'fixture', 'cwd', 'run'])
+      this.removeAttribute(attribute);
+    this.disconnectedCallback();
+    this.connectedCallback();
+  }
+
+  disconnectedCallback(): void {
+    ++this.#generation;
+    const session = this.#session;
+    this.#session = null;
+    if (session instanceof FormicariumSession)
+      void session.dispose().catch(() => {});
+    this.#resize?.disconnect();
+    this.#resize = null;
+    this.#term?.dispose();
+    this.#term = null;
+    this.#ready = null;
+    this.#chain = Promise.resolve();
+    this.#busy = false;
+    this.#line = '';
+    this.#history = [];
+    this.#historyIndex = 0;
+    this.#transcript = this.#output = '';
+  }
+
+  /** Type one command after earlier runs; failures leave the queue reusable. */
   run(command: string): Promise<ExitDetail> {
+    const generation = this.#generation;
     return this.ready.then(() => {
-      const result = this.#chain.then(() => this.#type(command));
+      this.#current(generation);
+      const result = this.#chain.then(async () => {
+        try {
+          if (typeof command !== 'string')
+            throw new Error('command must be a string');
+          return await this.#type(command, generation);
+        } catch (error) {
+          if (generation === this.#generation)
+            this.#emit<ErrorDetail>('terrarium-error', {
+              message: String((error as Error)?.message ?? error),
+            });
+          throw error;
+        }
+      });
       this.#chain = result.catch(() => {});
       return result;
     });
+  }
+
+  #current(generation: number): void {
+    if (generation !== this.#generation || !this.isConnected)
+      throw new Error('terminal was disconnected or replaced');
   }
 
   override focus(): void {
@@ -219,7 +289,7 @@ export class TerrariumTerminal extends HTMLElement {
     );
   }
 
-  async #boot(term: Terminal): Promise<ReadyDetail> {
+  async #boot(term: Terminal, generation: number): Promise<ReadyDetail> {
     try {
       if (!globalThis.crossOriginIsolated) {
         throw new Error(
@@ -231,45 +301,76 @@ export class TerrariumTerminal extends HTMLElement {
         this.getAttribute('base') ?? defaultBase(),
         document.baseURI,
       ).href;
-      const { toolName, tool, ref, build } = await chooseBuild({
+      const choice = await chooseBuild({
         base,
         tool: this.getAttribute('tool') ?? undefined,
         ref: this.getAttribute('ref') ?? undefined,
       });
+      this.#current(generation);
+      const { toolName, tool, ref, build } = choice;
       term.write(`\x1b[2mLoading ${toolName} ${describe(ref, build)}…\x1b[0m`);
       const fixture = this.hasAttribute('fixture')
         ? this.getAttribute('fixture')
         : tool.fixture;
-      const [loaded, files] = await Promise.all([
-        loadTool(base, toolName, ref, build),
-        fixture
-          ? fetchJson<Record<string, string>>(
-              versioned(
-                new URL(`dist/fixtures/${fixture}.json`, base),
-                VERSION,
-              ),
-            ).then(Object.entries)
-          : [],
-      ]);
-      const cwd =
-        this.getAttribute('cwd') ?? (fixture ? tool.cwd : null) ?? '/work';
-      const session = new Session({
-        tool: loaded,
-        write: (text) => {
-          this.#transcript += text;
-          this.#output += text;
-          term.write(text);
-        },
-        cwd,
-      });
-      session.seed(files);
+      const write = (text: string) => {
+        if (generation !== this.#generation) return;
+        this.#transcript += text;
+        this.#output += text;
+        term.write(text);
+      };
+      let session: Session | FormicariumSession;
+      let filesCount: number;
+      if (isFormicariumBuild(toolName, build)) {
+        const selected = await resolveChoice(choice, {
+          base,
+          fixture: this.hasAttribute('fixture')
+            ? (this.getAttribute('fixture') ?? '')
+            : undefined,
+          cwd: this.getAttribute('cwd') ?? undefined,
+        });
+        this.#current(generation);
+        session = await FormicariumSession.create({
+          tool: toolName,
+          guest: selected.guest,
+          entries: selected.entries,
+          cwd: selected.cwd,
+          assets: formicariumAssets(base),
+          write,
+        });
+        if (generation !== this.#generation || !this.isConnected) {
+          await session.dispose();
+          this.#current(generation);
+        }
+        filesCount = selected.entries.length;
+      } else {
+        const [loaded, files] = await Promise.all([
+          loadTool(base, toolName, ref, build),
+          fixture
+            ? fetchJson<Record<string, string>>(
+                versioned(
+                  new URL(`dist/fixtures/${fixture}.json`, base),
+                  VERSION,
+                ),
+              ).then(Object.entries)
+            : [],
+        ]);
+        this.#current(generation);
+        session = new Session({
+          tool: loaded,
+          write,
+          cwd:
+            this.getAttribute('cwd') ?? (fixture ? tool.cwd : null) ?? '/work',
+        });
+        session.seed(files);
+        filesCount = files.length;
+      }
       this.#session = session;
 
       term.write('\x1b[2K\r');
       term.writeln(
         `${toolName} ${describe(ref, build)}, compiled to WebAssembly and running in this tab.`,
       );
-      if (files.length) term.writeln(`A sample project is in ${cwd}.`);
+      if (filesCount) term.writeln(`A sample project is in ${session.cwd}.`);
       term.writeln('');
       this.#prompt();
 
@@ -281,10 +382,11 @@ export class TerrariumTerminal extends HTMLElement {
       };
       this.#emit('terrarium-ready', info);
       for (const command of (this.getAttribute('run') ?? '').split('\n')) {
-        if (command.trim()) void this.run(command.trim());
+        if (command.trim()) void this.run(command.trim()).catch(() => {});
       }
       return info;
     } catch (error) {
+      if (generation !== this.#generation) throw error;
       const message = String((error as Error)?.message ?? error);
       term.write(`\x1b[2K\r\x1b[31m${message}\x1b[0m\r\n`);
       this.#emit<ErrorDetail>('terrarium-error', { message });
@@ -298,32 +400,55 @@ export class TerrariumTerminal extends HTMLElement {
     );
   }
 
-  async #execute(command: string): Promise<ExitDetail> {
+  async #execute(
+    command: string,
+    generation = this.#generation,
+  ): Promise<ExitDetail> {
+    this.#current(generation);
     this.#busy = true;
     this.#term?.write('\r\n');
-    let result: ExitDetail = { command, code: 0, output: '' };
-    if (command.trim() && this.#session) {
+    try {
+      if (!command.trim()) return { command, code: 0, output: '' };
+      const session = this.#session;
+      if (!session) throw new Error('terminal session is unavailable');
       this.#history.push(command);
       this.#historyIndex = this.#history.length;
       this.#output = '';
-      const code = await this.#session.run(command);
-      result = { command, code, output: this.#output };
+      const response = await session.run(command);
+      this.#current(generation);
+      const result = {
+        command,
+        code: typeof response === 'number' ? response : response.code,
+        output: typeof response === 'number' ? this.#output : response.output,
+      };
       this.#emit('terrarium-exit', result);
+      return result;
+    } finally {
+      if (generation === this.#generation) {
+        this.#busy = false;
+        this.#prompt();
+      }
     }
-    this.#busy = false;
-    this.#prompt();
-    return result;
   }
 
-  async #type(command: string): Promise<ExitDetail> {
-    while (this.#busy) await new Promise((r) => setTimeout(r, 50));
-    this.#busy = true;
-    this.#replaceLine('');
-    for (const ch of command) {
-      this.#term?.write(ch);
-      await new Promise((r) => setTimeout(r, 25));
+  async #type(command: string, generation: number): Promise<ExitDetail> {
+    while (this.#busy) {
+      await new Promise((resolve) => setTimeout(resolve, 50));
+      this.#current(generation);
     }
-    return this.#execute(command);
+    this.#current(generation);
+    this.#busy = true;
+    try {
+      this.#replaceLine('');
+      for (const character of command) {
+        this.#current(generation);
+        this.#term?.write(character);
+        await new Promise((resolve) => setTimeout(resolve, 25));
+      }
+      return await this.#execute(command, generation);
+    } finally {
+      if (generation === this.#generation) this.#busy = false;
+    }
   }
 
   #replaceLine(text: string): void {
@@ -338,7 +463,15 @@ export class TerrariumTerminal extends HTMLElement {
     if (data === '\r') {
       const command = this.#line;
       this.#line = '';
-      await this.#execute(command);
+      const generation = this.#generation;
+      try {
+        await this.#execute(command, generation);
+      } catch (error) {
+        if (generation === this.#generation)
+          this.#emit<ErrorDetail>('terrarium-error', {
+            message: String((error as Error)?.message ?? error),
+          });
+      }
     } else if (data === '\x7f') {
       if (this.#line.length) {
         this.#line = this.#line.slice(0, -1);

@@ -1,0 +1,6 @@
+{
+  "bun": "1.4.2",
+  "node": "v26.9.0",
+  "bash": "GNU bash, version 3.2.57(1)-release (arm64-apple-darwin26)",
+  "patch": "patch 2.0-12u11-Apple"
+}

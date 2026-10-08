@@ -1,0 +1,16 @@
+{
+  "FR1.1": "old-bytes-verification.json / preservation-after.json",
+  "FR1.2": "source-inventory.json / formicarium-candidate.json / commands.json",
+  "FR2.1": "personal-path-scan.json / install.txt",
+  "FR2.2": "isolated-commands.json / standalone-binding.json",
+  "FR2.3": "unit-assets.txt / unit-inputs.txt",
+  "FR3.1": "prepare.txt / unit-inputs.txt",
+  "FR3.2": "browser-commands.json / browser-formicarium.txt / browser-legacy.txt",
+  "FR3.3": "unit-inputs.txt / browser-commands.json",
+  "FR4.1": "commands.json / source-binding.json / browser-commands.json",
+  "FR4.2": "../../code-generation/handoff.md",
+  "NFR1": "personal-path-scan.json / isolated-commands.json",
+  "NFR2": "unit-all.txt / browser-commands.json",
+  "NFR3": "unit-boundaries.txt / unit-inputs.txt / browser-formicarium.txt",
+  "NFR4": "preservation-after.json / source-binding.json / old-bytes-verification.json"
+}

@@ -1,0 +1,48 @@
+
+Running 36 tests using 1 worker
+
+(node:25975) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [chromium] › e2e/pitchfork.spec.ts:51:1 › public page selects pitchfork and preserves the complete session (8.8s)
+  ✓   2 [chromium] › e2e/pitchfork.spec.ts:64:1 › tool switch clears pitchfork ref, fixture, cwd and queued commands (10.1s)
+  ✓   3 [chromium] › e2e/pitchfork.spec.ts:89:1 › unknown tool and pitchfork ref fail without falling back (235ms)
+  ✓   4 [chromium] › e2e/pitchfork.spec.ts:100:1 › cross-origin element returns all exit events and resets a new fixture (9.2s)
+  ✓   5 [chromium] › e2e/pitchfork.spec.ts:132:1 › element reports the existing isolation error (129ms)
+  ✓   6 [chromium] › e2e/pitchfork.spec.ts:144:1 › same-origin iframe works across browsers and rejects wrong source/origin (12.4s)
+  ✓   7 [chromium] › e2e/terminal.spec.ts:17:3 › the page › runs the build in ?ref and types the commands in ?run (2.2s)
+  ✓   8 [chromium] › e2e/terminal.spec.ts:38:3 › the page › names the published builds when ?ref asks for a missing one (181ms)
+  ✓   9 [chromium] › e2e/terminal.spec.ts:47:3 › the page › starts in /work with no fixture when ?fixture is empty (559ms)
+  ✓  10 [chromium] › e2e/terminal.spec.ts:56:3 › the element on another origin › loads the build, runs commands and reports them (930ms)
+  ✓  11 [chromium] › e2e/terminal.spec.ts:86:3 › the element on another origin › reports an error on a page that is not cross-origin isolated (126ms)
+  ✓  12 [chromium] › e2e/terminal.spec.ts:102:3 › the iframe on another origin › talks to its parent with postMessage (1.2s)
+(node:28619) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  13 [firefox] › e2e/pitchfork.spec.ts:51:1 › public page selects pitchfork and preserves the complete session (10.0s)
+  ✓  14 [firefox] › e2e/pitchfork.spec.ts:64:1 › tool switch clears pitchfork ref, fixture, cwd and queued commands (11.5s)
+  ✓  15 [firefox] › e2e/pitchfork.spec.ts:89:1 › unknown tool and pitchfork ref fail without falling back (388ms)
+  ✓  16 [firefox] › e2e/pitchfork.spec.ts:100:1 › cross-origin element returns all exit events and resets a new fixture (10.2s)
+  ✓  17 [firefox] › e2e/pitchfork.spec.ts:132:1 › element reports the existing isolation error (296ms)
+  ✓  18 [firefox] › e2e/pitchfork.spec.ts:144:1 › same-origin iframe works across browsers and rejects wrong source/origin (13.5s)
+  ✓  19 [firefox] › e2e/terminal.spec.ts:17:3 › the page › runs the build in ?ref and types the commands in ?run (2.3s)
+  ✓  20 [firefox] › e2e/terminal.spec.ts:38:3 › the page › names the published builds when ?ref asks for a missing one (359ms)
+  ✓  21 [firefox] › e2e/terminal.spec.ts:47:3 › the page › starts in /work with no fixture when ?fixture is empty (683ms)
+  ✓  22 [firefox] › e2e/terminal.spec.ts:56:3 › the element on another origin › loads the build, runs commands and reports them (1.7s)
+  ✓  23 [firefox] › e2e/terminal.spec.ts:86:3 › the element on another origin › reports an error on a page that is not cross-origin isolated (240ms)
+  -  24 [firefox] › e2e/terminal.spec.ts:102:3 › the iframe on another origin › talks to its parent with postMessage
+(node:29344) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  25 [webkit] › e2e/pitchfork.spec.ts:51:1 › public page selects pitchfork and preserves the complete session (9.6s)
+  ✓  26 [webkit] › e2e/pitchfork.spec.ts:64:1 › tool switch clears pitchfork ref, fixture, cwd and queued commands (11.0s)
+  ✓  27 [webkit] › e2e/pitchfork.spec.ts:89:1 › unknown tool and pitchfork ref fail without falling back (580ms)
+  ✓  28 [webkit] › e2e/pitchfork.spec.ts:100:1 › cross-origin element returns all exit events and resets a new fixture (9.7s)
+  ✓  29 [webkit] › e2e/pitchfork.spec.ts:132:1 › element reports the existing isolation error (302ms)
+  ✓  30 [webkit] › e2e/pitchfork.spec.ts:144:1 › same-origin iframe works across browsers and rejects wrong source/origin (14.0s)
+  ✓  31 [webkit] › e2e/terminal.spec.ts:17:3 › the page › runs the build in ?ref and types the commands in ?run (2.6s)
+  ✓  32 [webkit] › e2e/terminal.spec.ts:38:3 › the page › names the published builds when ?ref asks for a missing one (518ms)
+  ✓  33 [webkit] › e2e/terminal.spec.ts:47:3 › the page › starts in /work with no fixture when ?fixture is empty (823ms)
+  ✓  34 [webkit] › e2e/terminal.spec.ts:56:3 › the element on another origin › loads the build, runs commands and reports them (1.5s)
+  ✓  35 [webkit] › e2e/terminal.spec.ts:86:3 › the element on another origin › reports an error on a page that is not cross-origin isolated (305ms)
+  -  36 [webkit] › e2e/terminal.spec.ts:102:3 › the iframe on another origin › talks to its parent with postMessage
+
+  2 skipped
+  34 passed (2.5m)

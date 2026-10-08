@@ -1,0 +1,29 @@
+{
+  "exitCode": 1,
+  "files": [
+    {
+      "path": "scripts/build-pitchfork.sh",
+      "baselineAvailable": false,
+      "currentSha256": "860167c19be18c2a4bea0235652d49c60daa1b914e81aa69c2b24b6efd40becf",
+      "tempSha256": "860167c19be18c2a4bea0235652d49c60daa1b914e81aa69c2b24b6efd40becf"
+    },
+    {
+      "path": "scripts/resolve-ref.sh",
+      "baselineAvailable": false,
+      "currentSha256": "9e938232d8b71028c0dacfeb7e76e492e501f33d2ab536184b073680ca5a20eb",
+      "tempSha256": "9e938232d8b71028c0dacfeb7e76e492e501f33d2ab536184b073680ca5a20eb"
+    },
+    {
+      "path": "packages/terrarium/tests/pitchfork-build-retry.test.ts",
+      "baselineAvailable": false,
+      "currentSha256": "8545c27702064a3b814d6a9de1bc1c3d51d6a606800b024af3ef2c1521646c57",
+      "tempSha256": "8545c27702064a3b814d6a9de1bc1c3d51d6a606800b024af3ef2c1521646c57"
+    },
+    {
+      "path": "packages/terrarium/tests/pitchfork-runtime.test.ts",
+      "baselineAvailable": false,
+      "currentSha256": "6e515c8e723b3dcfc646b23c48a82b5a64b4c24a937eca14aa95b764262dec34",
+      "tempSha256": "6e515c8e723b3dcfc646b23c48a82b5a64b4c24a937eca14aa95b764262dec34"
+    }
+  ]
+}

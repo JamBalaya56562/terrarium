@@ -90,6 +90,7 @@ beforeEach(() => {
   for (const script of [
     'resolve-ref.sh',
     'stage-web.sh',
+    'prepare-pitchfork-e2e.sh',
     'vendor-patched.sh',
   ]) {
     cpSync(join(workspace, 'scripts', script), join(root, 'scripts', script));
@@ -105,9 +106,9 @@ beforeEach(() => {
   write(
     'bin/gh',
     `#!/usr/bin/env bash
-printf '%s\\n' "$@" > "$GH_CALLS"
+printf '%s\\n' "$@" >> "$GH_CALLS"
 if [[ "$GH_FAIL" == 1 ]]; then echo 'API failure' >&2; exit 1; fi
-echo '${sha}'
+if [[ "$2" == */releases/latest ]]; then echo "$GH_LATEST_TAG"; else echo '${sha}'; fi
 `,
   );
   environment = {
@@ -123,6 +124,10 @@ echo '${sha}'
       .join(delimiter),
     GH_CALLS: join(root, 'gh-calls').replaceAll('\\', '/'),
     GH_FAIL: '0',
+    GH_LATEST_TAG: 'v2.30.1',
+    TERRARIUM_PITCHFORK_REF: '',
+    TERRARIUM_PITCHFORK_COMMIT: '',
+    TERRARIUM_PITCHFORK_BUILD: '',
     CARGO_HOME: join(root, 'cargo').replaceAll('\\', '/'),
   };
   // Windows may retain an inherited Path instead of the supplied PATH key.
@@ -155,6 +160,27 @@ describe('pitchfork ref resolution', () => {
     );
   });
 
+  test('resolves the latest stable release to a full commit without using the old default', () => {
+    const result = run('resolve-ref.sh', ['pitchfork', 'latest']);
+    expect(result.code).toBe(0);
+    expect(metadata(result.stdout)).toMatchObject({
+      name: 'v2.30.1',
+      ref: 'v2.30.1',
+      commit: sha,
+    });
+    const calls = readFileSync(join(root, 'gh-calls'), 'utf8');
+    expect(calls).toContain('repos/jdx/pitchfork/releases/latest');
+    expect(calls).toContain('repos/jdx/pitchfork/commits/v2.30.1');
+    expect(calls).not.toContain('commits/v2.29.0');
+  });
+
+  test('refuses an invalid latest release rather than falling back to the old version', () => {
+    environment.GH_LATEST_TAG = 'main';
+    const result = run('resolve-ref.sh', ['pitchfork', 'latest']);
+    expect(result.code).not.toBe(0);
+    expect(result.stderr).toContain('invalid latest stable release');
+  });
+
   test('resolves an explicit branch and names its directory safely', () => {
     const result = run('resolve-ref.sh', ['pitchfork', 'feature/one']);
     expect(result.code).toBe(0);
@@ -173,18 +199,24 @@ describe('pitchfork ref resolution', () => {
     });
   });
 
-  test('resolves a pull request through its head endpoint', () => {
-    const result = run('resolve-ref.sh', ['pitchfork', 'pr-42']);
-    expect(result.code).toBe(0);
-    expect(metadata(result.stdout)).toMatchObject({
-      name: 'pr-42',
-      ref: 'refs/pull/42/head',
-      pr: 'https://github.com/jdx/pitchfork/pull/42',
+  for (const ref of [
+    'pr-42',
+    '#42',
+    'https://github.com/jdx/pitchfork/pull/42',
+  ]) {
+    test(`resolves ${ref} through its head endpoint`, () => {
+      const result = run('resolve-ref.sh', ['pitchfork', ref]);
+      expect(result.code).toBe(0);
+      expect(metadata(result.stdout)).toMatchObject({
+        name: 'pr-42',
+        ref: 'refs/pull/42/head',
+        pr: 'https://github.com/jdx/pitchfork/pull/42',
+      });
+      expect(readFileSync(join(root, 'gh-calls'), 'utf8')).toContain(
+        'repos/jdx/pitchfork/pulls/42',
+      );
     });
-    expect(readFileSync(join(root, 'gh-calls'), 'utf8')).toContain(
-      'repos/jdx/pitchfork/pulls/42',
-    );
-  });
+  }
 
   test('rejects unknown tools without invoking the API', () => {
     const result = run('resolve-ref.sh', ['unknown']);
@@ -291,6 +323,38 @@ describe('pitchfork staging', () => {
     expect(result.stderr).toContain('missing build artifact');
     expect(existsSync(join(root, 'web/dist'))).toBe(false);
     expect(run('stage-web.sh', ['pitchfork']).code).not.toBe(0);
+  });
+});
+
+describe('latest pitchfork E2E staging', () => {
+  test('stages the resolved latest identity and records it for local CI without resolving again', () => {
+    write('out/pitchfork.js', 'javascript');
+    write('out/pitchfork.wasm', 'wasm');
+    environment.TERRARIUM_PITCHFORK_REF = 'v2.30.1';
+    environment.TERRARIUM_PITCHFORK_COMMIT = sha;
+    environment.TERRARIUM_PITCHFORK_BUILD = join(root, 'out');
+    const result = run('prepare-pitchfork-e2e.sh');
+    expect(result.code).toBe(0);
+    expect(existsSync(join(root, 'gh-calls'))).toBe(false);
+    expect(
+      JSON.parse(
+        readFileSync(join(root, '.vendor/pitchfork-e2e.json'), 'utf8'),
+      ),
+    ).toEqual({ ref: 'v2.30.1', commit: sha });
+    const manifest = JSON.parse(
+      readFileSync(join(root, 'web/dist/builds.json'), 'utf8'),
+    );
+    expect(manifest.builds.pitchfork['v2.30.1'].source.commit).toBe(sha);
+    expect(manifest.builds.pitchfork['v2.29.0']).toBeUndefined();
+  });
+
+  test('does not accept an older staged build as the latest release', () => {
+    write('web/dist/pitchfork/v2.29.0/pitchfork.js', 'javascript');
+    write('web/dist/pitchfork/v2.29.0/pitchfork.wasm', 'wasm');
+    const result = run('prepare-pitchfork-e2e.sh');
+    expect(result.code).not.toBe(0);
+    expect(result.stderr).toContain('Build pitchfork v2.30.1');
+    expect(existsSync(join(root, '.vendor/pitchfork-e2e.json'))).toBe(false);
   });
 });
 

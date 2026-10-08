@@ -1,0 +1,8 @@
+{
+  "path": ".vendor/formicarium-inputs.tar.gz",
+  "sha256": "00abfc608106c8b4a17bd973b4a948b0aa1fa23c713ac22ad62e5a4571c75d01",
+  "bytes": 58634416,
+  "descriptor": "integration/formicarium-inputs.json",
+  "fileCount": 16,
+  "uploaded": false
+}

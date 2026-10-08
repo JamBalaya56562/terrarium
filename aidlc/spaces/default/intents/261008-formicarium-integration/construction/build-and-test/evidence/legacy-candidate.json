@@ -1,0 +1,80 @@
+{
+  "root": "/Users/mutoakio/Documents/terrarium/.vendor/build-test-legacy",
+  "files": [
+    {
+      "path": ".nojekyll",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "LICENSE",
+      "size": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "index.html",
+      "size": 208,
+      "sha256": "8445d22d6898ed00ce4263042f187aba69815ffe09f7416a8af7e8f841dea04d"
+    },
+    {
+      "path": "web/coi-serviceworker.js",
+      "size": 4678,
+      "sha256": "d12bd536e27e39a773d7dc7adb1a1167d24002293e97ac81c995fb00cf8d4d5a"
+    },
+    {
+      "path": "web/dist/aube/v2.6.1/aube.js",
+      "size": 119914,
+      "sha256": "efac1c643527f2229dbe801929dbd9693bdad321150474e0e6023f54841db3ab"
+    },
+    {
+      "path": "web/dist/aube/v2.6.1/aube.wasm",
+      "size": 19856043,
+      "sha256": "c167246a005f50b72fcad44ab6b67b4f520179428bb3f46463691f5fe7b00981"
+    },
+    {
+      "path": "web/dist/builds.json",
+      "size": 694,
+      "sha256": "cc38b05de0aaaa5228fa987300cfef643c178d9ed5c960569b19b72b5aa5c5b2"
+    },
+    {
+      "path": "web/dist/fixtures/aube-local-deps.json",
+      "size": 366,
+      "sha256": "2a2b3bbf5995be2f20fb8fe7a5e29b0ca1c733db9b491bfef991a408a7a7bc44"
+    },
+    {
+      "path": "web/dist/fixtures/pitchfork-basic.json",
+      "size": 151,
+      "sha256": "081abc73542d06df09d28cdad88bfda1628634ab5482a3f8238134a25951583a"
+    },
+    {
+      "path": "web/dist/pitchfork/v2.29.0/pitchfork.js",
+      "size": 126047,
+      "sha256": "4bf0ea2764e2ba3c5650cb577f5c66156af5a76cd682691d1d8f4e07875b8fb1"
+    },
+    {
+      "path": "web/dist/pitchfork/v2.29.0/pitchfork.wasm",
+      "size": 20389228,
+      "sha256": "16f335ef529b2fa7815cc6201030b01538ef76d9b52478746dc4df62161b8cee"
+    },
+    {
+      "path": "web/index.html",
+      "size": 1793,
+      "sha256": "aabe42dc529838c2d254a93bf1c4d1d67b76ad49599372da91655c5992637239"
+    },
+    {
+      "path": "web/terminal.mjs",
+      "size": 6310,
+      "sha256": "bccd218f4a3af236f8d650eee150afd4d58cb0ad07eaa3093eb2e900e3d7507d"
+    },
+    {
+      "path": "web/terrarium.mjs",
+      "size": 398258,
+      "sha256": "dc6d6e72c18843f0b3982988c41488ca701447b255202f1c65fb38ddd989c88e"
+    },
+    {
+      "path": "web/tools.json",
+      "size": 359,
+      "sha256": "eb5afc893a0ca1d4cbf282bd98b675184836bb1dcef1f2d9c81c6a51b96da112"
+    }
+  ]
+}

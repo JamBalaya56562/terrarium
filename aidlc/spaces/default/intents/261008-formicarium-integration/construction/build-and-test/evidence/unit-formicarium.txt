@@ -1,0 +1,39 @@
+bun test v1.4.2 (744846f84)
+
+tests/formicarium-session.test.ts:
+(pass) public C1 command adapter > permitted literal quote adjacency preserves baseline splitArgs tokens [1.56ms]
+(pass) public C1 command adapter > seeds /work before selected nested cwd and preserves sibling and modes [3.09ms]
+(pass) public C1 command adapter > passes guest args env timeout and retains raw result without duplicate display [0.17ms]
+(pass) public C1 command adapter > decodes split UTF8 separately in callback sequence [0.98ms]
+(pass) public C1 command adapter > failed-run partial output appears once and queue accepts next command [1.12ms]
+(pass) public C1 command adapter > empty unknown literal quoting and unsupported shell syntax [0.22ms]
+(pass) public C1 command adapter > ls default option path empty direct children file symlink and missing [0.72ms]
+(pass) public C1 command adapter > rm removes dir recursively and link only, preserves hardlink peer, rejects roots [0.43ms]
+(pass) public C1 command adapter > cd/cat missing failures retain baseline output and keep cwd synchronized [0.70ms]
+(pass) public C1 command adapter > copy changes are isolated reset restores seed and selected cwd sessions independent [0.46ms]
+(pass) public C1 command adapter > legacy exported Session and Tool remain usable [0.36ms]
+
+tests/formicarium-catalog.test.ts:
+(pass) catalogue to C3 boundary > default-first latest choices preserve Choice fields and old metadata [0.33ms]
+(pass) catalogue to C3 boundary > latest pitchfork and explicit old aube ref retain identity [0.08ms]
+(pass) catalogue to C3 boundary > explicit unknown ref and unknown tool fail without fallback [0.64ms]
+(pass) catalogue to C3 boundary > undefined and empty fixture stay distinct; explicit cwd overrides only cwd [0.32ms]
+(pass) catalogue to C3 boundary > guest/ref/commit mismatch and resolver failure propagate [0.17ms]
+(pass) catalogue to C3 boundary > legacy tools stay available without forced migration and invalid base fails [0.10ms]
+(pass) catalogue to C3 boundary > public assets reference actual same-site worker and a coherent installed package [0.04ms]
+(pass) legacy builds retain Session and declared guest formats fail closed [0.05ms]
+
+tests/formicarium-assets.test.ts:
+(pass) candidate assets staging > copies exact installed package worker loader wasm build-info and all advertised refs [30.67ms]
+(pass) candidate assets staging > preserves unrelated tools and legacy source/upstream_pr/built_at metadata [18.93ms]
+(pass) candidate assets staging > missing installed worker rejects before staged output exists [8.69ms]
+(pass) candidate assets staging > changed installed package digest rejects [8.72ms]
+(pass) candidate assets staging > missing retained ref asset rejects rather than advertise a broken old ref [10.69ms]
+(pass) candidate assets staging > guest hash mismatch rejects before output [10.53ms]
+(pass) candidate assets staging > dirty package and mismatched installed version reject [10.03ms]
+(pass) candidate assets staging > copied resolver modules retain exact frozen source bytes [17.73ms]
+
+ 27 pass
+ 0 fail
+ 148 expect() calls
+Ran 27 tests across 3 files. [147.00ms]

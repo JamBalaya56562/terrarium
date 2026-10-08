@@ -1,0 +1,6 @@
+{
+  "path": ".github/workflows/pages.yml",
+  "sha256": "f30cd75c9a27ea1b372f043b4bea63a36f2ac341c525eb2d3181d0d36899aeb8",
+  "role": "read-only existing pages-build-artifacts unit fixture; missing in previous temp snapshot",
+  "sourceEdited": false
+}

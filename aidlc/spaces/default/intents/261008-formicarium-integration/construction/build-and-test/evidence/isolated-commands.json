@@ -1,0 +1,38 @@
+[
+  {
+    "name": "prepare",
+    "cwd": "/private/tmp/terrarium-standalone-s00po458",
+    "argv": [
+      "mise",
+      "exec",
+      "node@26",
+      "--",
+      "bun",
+      "scripts/prepare-formicarium.mjs",
+      "--from",
+      ".vendor/formicarium-inputs"
+    ],
+    "exitCode": 0,
+    "log": "isolated-prepare.txt",
+    "seconds": 0.207,
+    "sha256": "c638335430342b9ba51330e1f7da8e8f2c4964bd543cb41c24edeb7610ad6605"
+  },
+  {
+    "name": "assemble",
+    "cwd": "/private/tmp/terrarium-standalone-s00po458",
+    "argv": [
+      "mise",
+      "exec",
+      "node@26",
+      "--",
+      "bash",
+      "scripts/assemble-pages.sh",
+      ".vendor/build-test-isolated",
+      "formicarium"
+    ],
+    "exitCode": 0,
+    "log": "isolated-assemble.txt",
+    "seconds": 1.159,
+    "sha256": "101d85a539e35feddb7891338fb21d23e733b26256e181ce01aafba216ff468f"
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "path": "scripts/stage-formicarium.mjs",
+    "beforeSha256": "3b45cec05f43a25ec2dfaa0d8fed3810bb7f235fac2b029ef72827bd7c749988",
+    "afterSha256": "6962b14e5de42b1b28af1759686cc4160e3e74f60850e51d9ea52543f1743dec",
+    "change": "mechanical formatting/import organization only"
+  },
+  {
+    "path": "scripts/prepare-formicarium.mjs",
+    "beforeSha256": "51c3c2ee098b341ef5a15ce0c33dab7c3b8b282e496afd6b0a64bbe9022a1fbb",
+    "afterSha256": "51c3c2ee098b341ef5a15ce0c33dab7c3b8b282e496afd6b0a64bbe9022a1fbb",
+    "change": "mechanical formatting/import organization only"
+  },
+  {
+    "path": "packages/terrarium/src/catalog.ts",
+    "beforeSha256": "452b007bd46c51f9ca3ac1a11557a09a3bb15cbd1235973a75018e243c430904",
+    "afterSha256": "452b007bd46c51f9ca3ac1a11557a09a3bb15cbd1235973a75018e243c430904",
+    "change": "mechanical formatting/import organization only"
+  },
+  {
+    "path": "packages/terrarium/src/formicarium-session.ts",
+    "beforeSha256": "945a384d0597abbe67188a9655062e0dfb02164abb41eddc7e5cb10320cc9ba6",
+    "afterSha256": "c4b85c57526f18a7d83dbbc91856b6e421d5af19d4ad86d116de83e2d9f4b104",
+    "change": "mechanical formatting/import organization only"
+  },
+  {
+    "path": "packages/terrarium/src/terminal.ts",
+    "beforeSha256": "188843d3c201970110445165fe600f5fe028c40460283a60a35f796bcdcaf7c7",
+    "afterSha256": "1f22e8081a647fb9abe4b4fbb58114b9841c3df16c3fa7cb206fa7c902cef8a7",
+    "change": "mechanical formatting/import organization only"
+  },
+  {
+    "path": "packages/terrarium/tests/formicarium-assets.test.ts",
+    "beforeSha256": "9004554e7f3c2fa18c707427b1033eefe7ba20b034cb75bf2f189165d19430c2",
+    "afterSha256": "67ad8fa275d875106ad98001aa35fd03b2b7e9a4bfa1686195637f167d5cc9f4",
+    "change": "mechanical formatting/import organization only"
+  },
+  {
+    "path": "packages/terrarium/tests/formicarium-catalog.test.ts",
+    "beforeSha256": "3ab23f79183b3396885312d6f772c603edd284a3c46a63d9702e54213442c538",
+    "afterSha256": "e8da7dc1cf83f1dde3938460253a106ed8a56e32f771b83ed58e6d71747976b9",
+    "change": "mechanical formatting/import organization only"
+  }
+]

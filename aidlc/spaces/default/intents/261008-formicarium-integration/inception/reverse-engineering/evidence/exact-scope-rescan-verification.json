@@ -1,0 +1,812 @@
+{
+  "verifiedUtc": "2026-10-08T01:25:31.732906+00:00",
+  "exactSnapshot": {
+    "repo": "terrarium",
+    "store": "aidlc/spaces/default/codekb/terrarium/",
+    "paths": [
+      "packages/terrarium/src/formicarium-session.ts",
+      "packages/terrarium/src/catalog.ts",
+      "packages/terrarium/src/terminal.ts",
+      "packages/terrarium/src/index.ts",
+      "packages/terrarium/src/npm.ts",
+      "packages/terrarium/package.json",
+      "packages/terrarium/bun.lock",
+      "packages/terrarium/jsr.json",
+      "packages/terrarium/tsconfig.json",
+      "packages/terrarium/tests/tsconfig.json",
+      "packages/terrarium/tests/formicarium-session.test.ts",
+      "packages/terrarium/tests/formicarium-catalog.test.ts",
+      "packages/terrarium/tests/formicarium-assets.test.ts",
+      "packages/terrarium/playwright.formicarium.config.ts",
+      "packages/terrarium/e2e/formicarium-terminal.spec.ts",
+      "packages/terrarium/e2e/formicarium-iframe.spec.ts",
+      "packages/terrarium/e2e/formicarium-serve.ts",
+      "packages/terrarium/e2e/host/formicarium/element.html",
+      "packages/terrarium/e2e/host/formicarium/iframe.html",
+      "scripts/stage-formicarium.mjs",
+      "scripts/assemble-pages.sh",
+      "web/terminal.mjs",
+      "mise.toml",
+      ".github/workflows/test-terrarium.yml",
+      ".github/workflows/test-e2e.yml"
+    ],
+    "store_generation": "sha256:4d205ab2d1234dbeede10c16e16d6bf03e1d4fbbe712587d2d897ec310f57a21",
+    "source_fingerprint": "tree:2ed309925418cce2a885b5828323813c57cd3d3921f04b29140b5bc8ea31d998"
+  },
+  "files": [
+    {
+      "path": "packages/terrarium/src/formicarium-session.ts",
+      "currentSha256": "c7470b3dee713952f4a1255644d3034ce36391ae0eb61a9bb22fb554ff185cf9",
+      "beforeSha256": "c7470b3dee713952f4a1255644d3034ce36391ae0eb61a9bb22fb554ff185cf9",
+      "afterSha256": "c7470b3dee713952f4a1255644d3034ce36391ae0eb61a9bb22fb554ff185cf9",
+      "matchesBoth": true
+    },
+    {
+      "path": "packages/terrarium/src/catalog.ts",
+      "currentSha256": "bb2110ecb7b26ade9e90483172eaf8b0a9c91a1d43e0dd4d02a3dc4e0dc2cc02",
+      "beforeSha256": "bb2110ecb7b26ade9e90483172eaf8b0a9c91a1d43e0dd4d02a3dc4e0dc2cc02",
+      "afterSha256": "bb2110ecb7b26ade9e90483172eaf8b0a9c91a1d43e0dd4d02a3dc4e0dc2cc02",
+      "matchesBoth": true
+    },
+    {
+      "path": "packages/terrarium/src/terminal.ts",
+      "currentSha256": "492a31374236087c0163e6d9cba0094a33a20fcb960773ac9c56864053677df2",
+      "beforeSha256": "492a31374236087c0163e6d9cba0094a33a20fcb960773ac9c56864053677df2",
+      "afterSha256": "492a31374236087c0163e6d9cba0094a33a20fcb960773ac9c56864053677df2",
+      "matchesBoth": true
+    },
+    {
+      "path": "packages/terrarium/src/index.ts",
+      "currentSha256": "893f931912430ad3459a76ccf2fe66f511112c6274409092616efce4ddb78c47",
+      "beforeSha256": "893f931912430ad3459a76ccf2fe66f511112c6274409092616efce4ddb78c47",
+      "afterSha256": "893f931912430ad3459a76ccf2fe66f511112c6274409092616efce4ddb78c47",
+      "matchesBoth": true
+    },
+    {
+      "path": "packages/terrarium/src/npm.ts",
+      "currentSha256": "8d8e7549b8eaf08404f48cb40edf73fbf5fcd99b1de8f13ce7cf47922f4a5aff",
+      "beforeSha256": "8d8e7549b8eaf08404f48cb40edf73fbf5fcd99b1de8f13ce7cf47922f4a5aff",
+      "afterSha256": "8d8e7549b8eaf08404f48cb40edf73fbf5fcd99b1de8f13ce7cf47922f4a5aff",
+      "matchesBoth": true
+    },
+    {
+      "path": "packages/terrarium/package.json",
+      "currentSha256": "c42914d9cc3532f1f4033eb911627a5adcee3ca309af3fdb0373614a84659bb3",
+      "beforeSha256": "c42914d9cc3532f1f4033eb911627a5adcee3ca309af3fdb0373614a84659bb3",
+      "afterSha256": "c42914d9cc3532f1f4033eb911627a5adcee3ca309af3fdb0373614a84659bb3",
+      "matchesBoth": true
+    },
+    {
+      "path": "packages/terrarium/bun.lock",
+      "currentSha256": "53bc3cac94f293d06ae422ec7bfb178eed52b84f7dc5ffb0d145e7e000e9ddda",
+      "beforeSha256": "53bc3cac94f293d06ae422ec7bfb178eed52b84f7dc5ffb0d145e7e000e9ddda",
+      "afterSha256": "53bc3cac94f293d06ae422ec7bfb178eed52b84f7dc5ffb0d145e7e000e9ddda",
+      "matchesBoth": true
+    },
+    {
+      "path": "packages/terrarium/jsr.json",
+      "currentSha256": "03d82272cae9431dbe13307aad044c9b8ab64406129b66799e4964977b4abf10",
+      "beforeSha256": "03d82272cae9431dbe13307aad044c9b8ab64406129b66799e4964977b4abf10",
+      "afterSha256": "03d82272cae9431dbe13307aad044c9b8ab64406129b66799e4964977b4abf10",
+      "matchesBoth": true
+    },
+    {
+      "path": "packages/terrarium/tsconfig.json",
+      "currentSha256": "9d8d458cf9eca294df1f0302fa85f74aacb7534327c1dbbf8250dc58c81906b8",
+      "beforeSha256": "9d8d458cf9eca294df1f0302fa85f74aacb7534327c1dbbf8250dc58c81906b8",
+      "afterSha256": "9d8d458cf9eca294df1f0302fa85f74aacb7534327c1dbbf8250dc58c81906b8",
+      "matchesBoth": true
+    },
+    {
+      "path": "packages/terrarium/tests/tsconfig.json",
+      "currentSha256": "5bf6fd0243b94250276ef3950299a3ae7966096d69b483b19c419552e3c8e5f6",
+      "beforeSha256": "5bf6fd0243b94250276ef3950299a3ae7966096d69b483b19c419552e3c8e5f6",
+      "afterSha256": "5bf6fd0243b94250276ef3950299a3ae7966096d69b483b19c419552e3c8e5f6",
+      "matchesBoth": true
+    },
+    {
+      "path": "packages/terrarium/tests/formicarium-session.test.ts",
+      "currentSha256": "9488531d76de3593a7edd7bf19501eb4d5bdc3020eca8dc775a1b60ad73d8b32",
+      "beforeSha256": "9488531d76de3593a7edd7bf19501eb4d5bdc3020eca8dc775a1b60ad73d8b32",
+      "afterSha256": "9488531d76de3593a7edd7bf19501eb4d5bdc3020eca8dc775a1b60ad73d8b32",
+      "matchesBoth": true
+    },
+    {
+      "path": "packages/terrarium/tests/formicarium-catalog.test.ts",
+      "currentSha256": "16cd04d3f0f02e95b85492bd2954c81b6185070aec97206d1ffa94d99e274c9a",
+      "beforeSha256": "16cd04d3f0f02e95b85492bd2954c81b6185070aec97206d1ffa94d99e274c9a",
+      "afterSha256": "16cd04d3f0f02e95b85492bd2954c81b6185070aec97206d1ffa94d99e274c9a",
+      "matchesBoth": true
+    },
+    {
+      "path": "packages/terrarium/tests/formicarium-assets.test.ts",
+      "currentSha256": "7fb123eb761380ac2b624f9d121da33883d7e8c1d14b003e9f96c087e0e5fbf5",
+      "beforeSha256": "7fb123eb761380ac2b624f9d121da33883d7e8c1d14b003e9f96c087e0e5fbf5",
+      "afterSha256": "7fb123eb761380ac2b624f9d121da33883d7e8c1d14b003e9f96c087e0e5fbf5",
+      "matchesBoth": true
+    },
+    {
+      "path": "packages/terrarium/playwright.formicarium.config.ts",
+      "currentSha256": "dbad6a2b91d8916a18c7ede260cbb2049e2ed728ebdaa72d4737837f83ac5775",
+      "beforeSha256": "dbad6a2b91d8916a18c7ede260cbb2049e2ed728ebdaa72d4737837f83ac5775",
+      "afterSha256": "dbad6a2b91d8916a18c7ede260cbb2049e2ed728ebdaa72d4737837f83ac5775",
+      "matchesBoth": true
+    },
+    {
+      "path": "packages/terrarium/e2e/formicarium-terminal.spec.ts",
+      "currentSha256": "8794f0c8a599ee996eb5fe937f6a24f9c3fd2303a664a002457d78839b5f5474",
+      "beforeSha256": "8794f0c8a599ee996eb5fe937f6a24f9c3fd2303a664a002457d78839b5f5474",
+      "afterSha256": "8794f0c8a599ee996eb5fe937f6a24f9c3fd2303a664a002457d78839b5f5474",
+      "matchesBoth": true
+    },
+    {
+      "path": "packages/terrarium/e2e/formicarium-iframe.spec.ts",
+      "currentSha256": "d52934333e9cf53f8a11b510f6777534e246f258a8de2695107912bff572b3fd",
+      "beforeSha256": "d52934333e9cf53f8a11b510f6777534e246f258a8de2695107912bff572b3fd",
+      "afterSha256": "d52934333e9cf53f8a11b510f6777534e246f258a8de2695107912bff572b3fd",
+      "matchesBoth": true
+    },
+    {
+      "path": "packages/terrarium/e2e/formicarium-serve.ts",
+      "currentSha256": "0624d98c99a661029119c2f7c4030364d17b63f1d48f8bcb13606e5b9b53bc88",
+      "beforeSha256": "0624d98c99a661029119c2f7c4030364d17b63f1d48f8bcb13606e5b9b53bc88",
+      "afterSha256": "0624d98c99a661029119c2f7c4030364d17b63f1d48f8bcb13606e5b9b53bc88",
+      "matchesBoth": true
+    },
+    {
+      "path": "packages/terrarium/e2e/host/formicarium/element.html",
+      "currentSha256": "ccba37e0560ee9fe97ea88d7ac56d0d69cf6ef38442fec4f971421965657bf34",
+      "beforeSha256": "ccba37e0560ee9fe97ea88d7ac56d0d69cf6ef38442fec4f971421965657bf34",
+      "afterSha256": "ccba37e0560ee9fe97ea88d7ac56d0d69cf6ef38442fec4f971421965657bf34",
+      "matchesBoth": true
+    },
+    {
+      "path": "packages/terrarium/e2e/host/formicarium/iframe.html",
+      "currentSha256": "ee60eac343b45113f00e1a66aac0d09194852ecaadfdef1aa2191b19d39174de",
+      "beforeSha256": "ee60eac343b45113f00e1a66aac0d09194852ecaadfdef1aa2191b19d39174de",
+      "afterSha256": "ee60eac343b45113f00e1a66aac0d09194852ecaadfdef1aa2191b19d39174de",
+      "matchesBoth": true
+    },
+    {
+      "path": "scripts/stage-formicarium.mjs",
+      "currentSha256": "42a475d0ba6aca4b04e5c713697a0e024ff90085b236093b720a7c20d6c8bd15",
+      "beforeSha256": "42a475d0ba6aca4b04e5c713697a0e024ff90085b236093b720a7c20d6c8bd15",
+      "afterSha256": "42a475d0ba6aca4b04e5c713697a0e024ff90085b236093b720a7c20d6c8bd15",
+      "matchesBoth": true
+    },
+    {
+      "path": "scripts/assemble-pages.sh",
+      "currentSha256": "bd044bf66bd5729a15cbe9486c2ce45ecab14dbd2394f6d62648337974d4954d",
+      "beforeSha256": "bd044bf66bd5729a15cbe9486c2ce45ecab14dbd2394f6d62648337974d4954d",
+      "afterSha256": "bd044bf66bd5729a15cbe9486c2ce45ecab14dbd2394f6d62648337974d4954d",
+      "matchesBoth": true
+    },
+    {
+      "path": "web/terminal.mjs",
+      "currentSha256": "d9fb0170d977587e9a658e4ed50f14aa8b5121d7322cdb9f072345c93b515e86",
+      "beforeSha256": "d9fb0170d977587e9a658e4ed50f14aa8b5121d7322cdb9f072345c93b515e86",
+      "afterSha256": "d9fb0170d977587e9a658e4ed50f14aa8b5121d7322cdb9f072345c93b515e86",
+      "matchesBoth": true
+    },
+    {
+      "path": "mise.toml",
+      "currentSha256": "29b08b1aa7c5b28bc15d53d5e0c549a55adb2fc5e95cd8d6047d85ec6491375e",
+      "beforeSha256": "29b08b1aa7c5b28bc15d53d5e0c549a55adb2fc5e95cd8d6047d85ec6491375e",
+      "afterSha256": "29b08b1aa7c5b28bc15d53d5e0c549a55adb2fc5e95cd8d6047d85ec6491375e",
+      "matchesBoth": true
+    },
+    {
+      "path": ".github/workflows/test-terrarium.yml",
+      "currentSha256": "d900640ddd1f78cd7d76e9f9235e9fa796bbaf3824d9bc33d2559e136f2eefd0",
+      "beforeSha256": "d900640ddd1f78cd7d76e9f9235e9fa796bbaf3824d9bc33d2559e136f2eefd0",
+      "afterSha256": "d900640ddd1f78cd7d76e9f9235e9fa796bbaf3824d9bc33d2559e136f2eefd0",
+      "matchesBoth": true
+    },
+    {
+      "path": ".github/workflows/test-e2e.yml",
+      "currentSha256": "25b3bca6e7335bf68f69fd4610c71a213aaee9703b3151b84c25cb20bb8bfdb4",
+      "beforeSha256": "25b3bca6e7335bf68f69fd4610c71a213aaee9703b3151b84c25cb20bb8bfdb4",
+      "afterSha256": "25b3bca6e7335bf68f69fd4610c71a213aaee9703b3151b84c25cb20bb8bfdb4",
+      "matchesBoth": true
+    }
+  ],
+  "historicalCurrentComparisons": [
+    {
+      "absolutePath": "/Users/mutoakio/Documents/terrarium/mise.toml",
+      "sha256": "29b08b1aa7c5b28bc15d53d5e0c549a55adb2fc5e95cd8d6047d85ec6491375e",
+      "repositoryIdentity": "pending-native-binding",
+      "role": "source-or-config",
+      "currentSha256": "29b08b1aa7c5b28bc15d53d5e0c549a55adb2fc5e95cd8d6047d85ec6491375e",
+      "matches": true,
+      "refreshedCurrentSha256": "29b08b1aa7c5b28bc15d53d5e0c549a55adb2fc5e95cd8d6047d85ec6491375e",
+      "refreshedMatches": true
+    },
+    {
+      "absolutePath": "/Users/mutoakio/Documents/terrarium/packages/terrarium/README.md",
+      "sha256": "d58eef52b44dff0ad9769f3554f339aa211034f9cb12edb24f130cdc3b3aef54",
+      "repositoryIdentity": "pending-native-binding",
+      "role": "source-or-config",
+      "currentSha256": "d58eef52b44dff0ad9769f3554f339aa211034f9cb12edb24f130cdc3b3aef54",
+      "matches": true,
+      "refreshedCurrentSha256": "d58eef52b44dff0ad9769f3554f339aa211034f9cb12edb24f130cdc3b3aef54",
+      "refreshedMatches": true
+    },
+    {
+      "absolutePath": "/Users/mutoakio/Documents/terrarium/packages/terrarium/e2e/formicarium-iframe.spec.ts",
+      "sha256": "d52934333e9cf53f8a11b510f6777534e246f258a8de2695107912bff572b3fd",
+      "repositoryIdentity": "pending-native-binding",
+      "role": "test",
+      "currentSha256": "d52934333e9cf53f8a11b510f6777534e246f258a8de2695107912bff572b3fd",
+      "matches": true,
+      "refreshedCurrentSha256": "d52934333e9cf53f8a11b510f6777534e246f258a8de2695107912bff572b3fd",
+      "refreshedMatches": true
+    },
+    {
+      "absolutePath": "/Users/mutoakio/Documents/terrarium/packages/terrarium/e2e/formicarium-serve.ts",
+      "sha256": "0624d98c99a661029119c2f7c4030364d17b63f1d48f8bcb13606e5b9b53bc88",
+      "repositoryIdentity": "pending-native-binding",
+      "role": "test",
+      "currentSha256": "0624d98c99a661029119c2f7c4030364d17b63f1d48f8bcb13606e5b9b53bc88",
+      "matches": true,
+      "refreshedCurrentSha256": "0624d98c99a661029119c2f7c4030364d17b63f1d48f8bcb13606e5b9b53bc88",
+      "refreshedMatches": true
+    },
+    {
+      "absolutePath": "/Users/mutoakio/Documents/terrarium/packages/terrarium/e2e/formicarium-terminal.spec.ts",
+      "sha256": "8794f0c8a599ee996eb5fe937f6a24f9c3fd2303a664a002457d78839b5f5474",
+      "repositoryIdentity": "pending-native-binding",
+      "role": "test",
+      "currentSha256": "8794f0c8a599ee996eb5fe937f6a24f9c3fd2303a664a002457d78839b5f5474",
+      "matches": true,
+      "refreshedCurrentSha256": "8794f0c8a599ee996eb5fe937f6a24f9c3fd2303a664a002457d78839b5f5474",
+      "refreshedMatches": true
+    },
+    {
+      "absolutePath": "/Users/mutoakio/Documents/terrarium/packages/terrarium/e2e/host/formicarium/element.html",
+      "sha256": "ccba37e0560ee9fe97ea88d7ac56d0d69cf6ef38442fec4f971421965657bf34",
+      "repositoryIdentity": "pending-native-binding",
+      "role": "test",
+      "currentSha256": "ccba37e0560ee9fe97ea88d7ac56d0d69cf6ef38442fec4f971421965657bf34",
+      "matches": true,
+      "refreshedCurrentSha256": "ccba37e0560ee9fe97ea88d7ac56d0d69cf6ef38442fec4f971421965657bf34",
+      "refreshedMatches": true
+    },
+    {
+      "absolutePath": "/Users/mutoakio/Documents/terrarium/packages/terrarium/e2e/host/formicarium/iframe.html",
+      "sha256": "ee60eac343b45113f00e1a66aac0d09194852ecaadfdef1aa2191b19d39174de",
+      "repositoryIdentity": "pending-native-binding",
+      "role": "test",
+      "currentSha256": "ee60eac343b45113f00e1a66aac0d09194852ecaadfdef1aa2191b19d39174de",
+      "matches": true,
+      "refreshedCurrentSha256": "ee60eac343b45113f00e1a66aac0d09194852ecaadfdef1aa2191b19d39174de",
+      "refreshedMatches": true
+    },
+    {
+      "absolutePath": "/Users/mutoakio/Documents/terrarium/packages/terrarium/package.json",
+      "sha256": "c42914d9cc3532f1f4033eb911627a5adcee3ca309af3fdb0373614a84659bb3",
+      "repositoryIdentity": "pending-native-binding",
+      "role": "source-or-config",
+      "currentSha256": "c42914d9cc3532f1f4033eb911627a5adcee3ca309af3fdb0373614a84659bb3",
+      "matches": true,
+      "refreshedCurrentSha256": "c42914d9cc3532f1f4033eb911627a5adcee3ca309af3fdb0373614a84659bb3",
+      "refreshedMatches": true
+    },
+    {
+      "absolutePath": "/Users/mutoakio/Documents/terrarium/packages/terrarium/playwright.formicarium.config.ts",
+      "sha256": "dbad6a2b91d8916a18c7ede260cbb2049e2ed728ebdaa72d4737837f83ac5775",
+      "repositoryIdentity": "pending-native-binding",
+      "role": "test",
+      "currentSha256": "dbad6a2b91d8916a18c7ede260cbb2049e2ed728ebdaa72d4737837f83ac5775",
+      "matches": true,
+      "refreshedCurrentSha256": "dbad6a2b91d8916a18c7ede260cbb2049e2ed728ebdaa72d4737837f83ac5775",
+      "refreshedMatches": true
+    },
+    {
+      "absolutePath": "/Users/mutoakio/Documents/terrarium/packages/terrarium/src/formicarium-session.ts",
+      "sha256": "c7470b3dee713952f4a1255644d3034ce36391ae0eb61a9bb22fb554ff185cf9",
+      "repositoryIdentity": "pending-native-binding",
+      "role": "source-or-config",
+      "currentSha256": "c7470b3dee713952f4a1255644d3034ce36391ae0eb61a9bb22fb554ff185cf9",
+      "matches": true,
+      "refreshedCurrentSha256": "c7470b3dee713952f4a1255644d3034ce36391ae0eb61a9bb22fb554ff185cf9",
+      "refreshedMatches": true
+    },
+    {
+      "absolutePath": "/Users/mutoakio/Documents/terrarium/packages/terrarium/src/generated/xterm-css.ts",
+      "sha256": "0fc1b01494f328cdbb3ef38d7d3374433d1fbe5a7563f361a68e89a743762ea8",
+      "repositoryIdentity": "pending-native-binding",
+      "role": "generated",
+      "currentSha256": "0fc1b01494f328cdbb3ef38d7d3374433d1fbe5a7563f361a68e89a743762ea8",
+      "matches": true,
+      "refreshedCurrentSha256": "0fc1b01494f328cdbb3ef38d7d3374433d1fbe5a7563f361a68e89a743762ea8",
+      "refreshedMatches": true
+    },
+    {
+      "absolutePath": "/Users/mutoakio/Documents/terrarium/packages/terrarium/src/terminal.ts",
+      "sha256": "492a31374236087c0163e6d9cba0094a33a20fcb960773ac9c56864053677df2",
+      "repositoryIdentity": "pending-native-binding",
+      "role": "source-or-config",
+      "currentSha256": "492a31374236087c0163e6d9cba0094a33a20fcb960773ac9c56864053677df2",
+      "matches": true,
+      "refreshedCurrentSha256": "492a31374236087c0163e6d9cba0094a33a20fcb960773ac9c56864053677df2",
+      "refreshedMatches": true
+    },
+    {
+      "absolutePath": "/Users/mutoakio/Documents/terrarium/packages/terrarium/tests/formicarium-assets.test.ts",
+      "sha256": "7fb123eb761380ac2b624f9d121da33883d7e8c1d14b003e9f96c087e0e5fbf5",
+      "repositoryIdentity": "pending-native-binding",
+      "role": "test",
+      "currentSha256": "7fb123eb761380ac2b624f9d121da33883d7e8c1d14b003e9f96c087e0e5fbf5",
+      "matches": true,
+      "refreshedCurrentSha256": "7fb123eb761380ac2b624f9d121da33883d7e8c1d14b003e9f96c087e0e5fbf5",
+      "refreshedMatches": true
+    },
+    {
+      "absolutePath": "/Users/mutoakio/Documents/terrarium/packages/terrarium/tests/formicarium-catalog.test.ts",
+      "sha256": "16cd04d3f0f02e95b85492bd2954c81b6185070aec97206d1ffa94d99e274c9a",
+      "repositoryIdentity": "pending-native-binding",
+      "role": "test",
+      "currentSha256": "16cd04d3f0f02e95b85492bd2954c81b6185070aec97206d1ffa94d99e274c9a",
+      "matches": true,
+      "refreshedCurrentSha256": "16cd04d3f0f02e95b85492bd2954c81b6185070aec97206d1ffa94d99e274c9a",
+      "refreshedMatches": true
+    },
+    {
+      "absolutePath": "/Users/mutoakio/Documents/terrarium/packages/terrarium/tests/formicarium-session.test.ts",
+      "sha256": "9488531d76de3593a7edd7bf19501eb4d5bdc3020eca8dc775a1b60ad73d8b32",
+      "repositoryIdentity": "pending-native-binding",
+      "role": "test",
+      "currentSha256": "9488531d76de3593a7edd7bf19501eb4d5bdc3020eca8dc775a1b60ad73d8b32",
+      "matches": true,
+      "refreshedCurrentSha256": "9488531d76de3593a7edd7bf19501eb4d5bdc3020eca8dc775a1b60ad73d8b32",
+      "refreshedMatches": true
+    },
+    {
+      "absolutePath": "/Users/mutoakio/Documents/terrarium/scripts/assemble-pages.sh",
+      "sha256": "bd044bf66bd5729a15cbe9486c2ce45ecab14dbd2394f6d62648337974d4954d",
+      "repositoryIdentity": "pending-native-binding",
+      "role": "source-or-config",
+      "currentSha256": "bd044bf66bd5729a15cbe9486c2ce45ecab14dbd2394f6d62648337974d4954d",
+      "matches": true,
+      "refreshedCurrentSha256": "bd044bf66bd5729a15cbe9486c2ce45ecab14dbd2394f6d62648337974d4954d",
+      "refreshedMatches": true
+    },
+    {
+      "absolutePath": "/Users/mutoakio/Documents/terrarium/scripts/stage-formicarium.mjs",
+      "sha256": "42a475d0ba6aca4b04e5c713697a0e024ff90085b236093b720a7c20d6c8bd15",
+      "repositoryIdentity": "pending-native-binding",
+      "role": "source-or-config",
+      "currentSha256": "42a475d0ba6aca4b04e5c713697a0e024ff90085b236093b720a7c20d6c8bd15",
+      "matches": true,
+      "refreshedCurrentSha256": "42a475d0ba6aca4b04e5c713697a0e024ff90085b236093b720a7c20d6c8bd15",
+      "refreshedMatches": true
+    },
+    {
+      "absolutePath": "/Users/mutoakio/Documents/terrarium/web/terminal.mjs",
+      "sha256": "d9fb0170d977587e9a658e4ed50f14aa8b5121d7322cdb9f072345c93b515e86",
+      "repositoryIdentity": "pending-native-binding",
+      "role": "source-or-config",
+      "currentSha256": "d9fb0170d977587e9a658e4ed50f14aa8b5121d7322cdb9f072345c93b515e86",
+      "matches": true,
+      "refreshedCurrentSha256": "d9fb0170d977587e9a658e4ed50f14aa8b5121d7322cdb9f072345c93b515e86",
+      "refreshedMatches": true
+    },
+    {
+      "absolutePath": "/Users/mutoakio/Documents/terrarium/packages/terrarium/bun.lock",
+      "sha256": "53bc3cac94f293d06ae422ec7bfb178eed52b84f7dc5ffb0d145e7e000e9ddda",
+      "repositoryIdentity": "pending-native-binding",
+      "role": "dependency-lock",
+      "currentSha256": "53bc3cac94f293d06ae422ec7bfb178eed52b84f7dc5ffb0d145e7e000e9ddda",
+      "matches": true,
+      "refreshedCurrentSha256": "53bc3cac94f293d06ae422ec7bfb178eed52b84f7dc5ffb0d145e7e000e9ddda",
+      "refreshedMatches": true
+    },
+    {
+      "role": "candidate",
+      "path": "/Users/mutoakio/Documents/terrarium/.site/.nojekyll",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "currentSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "matches": true,
+      "refreshedCurrentSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "refreshedMatches": true
+    },
+    {
+      "role": "candidate",
+      "path": "/Users/mutoakio/Documents/terrarium/.site/index.html",
+      "sha256": "8445d22d6898ed00ce4263042f187aba69815ffe09f7416a8af7e8f841dea04d",
+      "currentSha256": "8445d22d6898ed00ce4263042f187aba69815ffe09f7416a8af7e8f841dea04d",
+      "matches": true,
+      "refreshedCurrentSha256": "8445d22d6898ed00ce4263042f187aba69815ffe09f7416a8af7e8f841dea04d",
+      "refreshedMatches": true
+    },
+    {
+      "role": "candidate",
+      "path": "/Users/mutoakio/Documents/terrarium/.site/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "currentSha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "matches": true,
+      "refreshedCurrentSha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "refreshedMatches": true
+    },
+    {
+      "role": "candidate",
+      "path": "/Users/mutoakio/Documents/terrarium/.site/web/coi-serviceworker.js",
+      "sha256": "d12bd536e27e39a773d7dc7adb1a1167d24002293e97ac81c995fb00cf8d4d5a",
+      "currentSha256": "d12bd536e27e39a773d7dc7adb1a1167d24002293e97ac81c995fb00cf8d4d5a",
+      "matches": true,
+      "refreshedCurrentSha256": "d12bd536e27e39a773d7dc7adb1a1167d24002293e97ac81c995fb00cf8d4d5a",
+      "refreshedMatches": true
+    },
+    {
+      "role": "candidate",
+      "path": "/Users/mutoakio/Documents/terrarium/.site/web/dist/aube/5a75abb5b2ff53ed9b89f85a9695e29fa8dae3a4fda6f25046f39ac04a413d92/build-info.json",
+      "sha256": "994ad5923dcd8383c887228987b3cf656a541bc658747d4ce76e6f219b90f5fd",
+      "currentSha256": "994ad5923dcd8383c887228987b3cf656a541bc658747d4ce76e6f219b90f5fd",
+      "matches": true,
+      "refreshedCurrentSha256": "994ad5923dcd8383c887228987b3cf656a541bc658747d4ce76e6f219b90f5fd",
+      "refreshedMatches": true
+    },
+    {
+      "role": "candidate",
+      "path": "/Users/mutoakio/Documents/terrarium/.site/web/dist/aube/5a75abb5b2ff53ed9b89f85a9695e29fa8dae3a4fda6f25046f39ac04a413d92/fixture-e6149f95eadefc92a559dd4f39b4836064a087b2f95c954bf13b6b786c8798f3.json",
+      "sha256": "17e2c1f140570536c0fd73f9d91cc12b9b4aaa76361c2396b611005966989454",
+      "currentSha256": "17e2c1f140570536c0fd73f9d91cc12b9b4aaa76361c2396b611005966989454",
+      "matches": true,
+      "refreshedCurrentSha256": "17e2c1f140570536c0fd73f9d91cc12b9b4aaa76361c2396b611005966989454",
+      "refreshedMatches": true
+    },
+    {
+      "role": "candidate",
+      "path": "/Users/mutoakio/Documents/terrarium/.site/web/dist/aube/5a75abb5b2ff53ed9b89f85a9695e29fa8dae3a4fda6f25046f39ac04a413d92/guest",
+      "sha256": "d973c97da25ed13e49943b0836c88fd5d9e51ac422faa5b38a3df997ad1ceef9",
+      "currentSha256": "d973c97da25ed13e49943b0836c88fd5d9e51ac422faa5b38a3df997ad1ceef9",
+      "matches": true,
+      "refreshedCurrentSha256": "d973c97da25ed13e49943b0836c88fd5d9e51ac422faa5b38a3df997ad1ceef9",
+      "refreshedMatches": true
+    },
+    {
+      "role": "candidate",
+      "path": "/Users/mutoakio/Documents/terrarium/.site/web/dist/aube/83a42e281acf38e98fbbddf590e77746dcb9dfdb12cce4b27d1eb1926e1e5b5d/build-info.json",
+      "sha256": "18248d1d2cfdd3933b5608ea795bc78473e2d400791c8d5204d63be9755102d5",
+      "currentSha256": "18248d1d2cfdd3933b5608ea795bc78473e2d400791c8d5204d63be9755102d5",
+      "matches": true,
+      "refreshedCurrentSha256": "18248d1d2cfdd3933b5608ea795bc78473e2d400791c8d5204d63be9755102d5",
+      "refreshedMatches": true
+    },
+    {
+      "role": "candidate",
+      "path": "/Users/mutoakio/Documents/terrarium/.site/web/dist/aube/83a42e281acf38e98fbbddf590e77746dcb9dfdb12cce4b27d1eb1926e1e5b5d/fixture-e6149f95eadefc92a559dd4f39b4836064a087b2f95c954bf13b6b786c8798f3.json",
+      "sha256": "17e2c1f140570536c0fd73f9d91cc12b9b4aaa76361c2396b611005966989454",
+      "currentSha256": "17e2c1f140570536c0fd73f9d91cc12b9b4aaa76361c2396b611005966989454",
+      "matches": true,
+      "refreshedCurrentSha256": "17e2c1f140570536c0fd73f9d91cc12b9b4aaa76361c2396b611005966989454",
+      "refreshedMatches": true
+    },
+    {
+      "role": "candidate",
+      "path": "/Users/mutoakio/Documents/terrarium/.site/web/dist/aube/83a42e281acf38e98fbbddf590e77746dcb9dfdb12cce4b27d1eb1926e1e5b5d/guest",
+      "sha256": "c7d7d13692d01c5f6adc5511c40adc6b3769080b7c433b44c411a3e52ebcd99e",
+      "currentSha256": "c7d7d13692d01c5f6adc5511c40adc6b3769080b7c433b44c411a3e52ebcd99e",
+      "matches": true,
+      "refreshedCurrentSha256": "c7d7d13692d01c5f6adc5511c40adc6b3769080b7c433b44c411a3e52ebcd99e",
+      "refreshedMatches": true
+    },
+    {
+      "role": "candidate",
+      "path": "/Users/mutoakio/Documents/terrarium/.site/web/dist/builds.json",
+      "sha256": "bbbd4ee2e8bf19a8bd24f639018f4519a6be42a6c40caf489f630fe7b63f0be3",
+      "currentSha256": "bbbd4ee2e8bf19a8bd24f639018f4519a6be42a6c40caf489f630fe7b63f0be3",
+      "matches": true,
+      "refreshedCurrentSha256": "bbbd4ee2e8bf19a8bd24f639018f4519a6be42a6c40caf489f630fe7b63f0be3",
+      "refreshedMatches": true
+    },
+    {
+      "role": "candidate",
+      "path": "/Users/mutoakio/Documents/terrarium/.site/web/dist/pitchfork/65f9a59988b5d3b353880d9109a73e3666bdd58fda9b0ccc8b18d1c1340c915b/build-info.json",
+      "sha256": "29e1adac2ee1308ed31a1903b9796ceae16431239733a325aa918051b77515b8",
+      "currentSha256": "29e1adac2ee1308ed31a1903b9796ceae16431239733a325aa918051b77515b8",
+      "matches": true,
+      "refreshedCurrentSha256": "29e1adac2ee1308ed31a1903b9796ceae16431239733a325aa918051b77515b8",
+      "refreshedMatches": true
+    },
+    {
+      "role": "candidate",
+      "path": "/Users/mutoakio/Documents/terrarium/.site/web/dist/pitchfork/65f9a59988b5d3b353880d9109a73e3666bdd58fda9b0ccc8b18d1c1340c915b/fixture-70fa4ab004890168522fa83941f86a1e0a28818246b6a065e4b0ef685e8035b3.json",
+      "sha256": "081abc73542d06df09d28cdad88bfda1628634ab5482a3f8238134a25951583a",
+      "currentSha256": "081abc73542d06df09d28cdad88bfda1628634ab5482a3f8238134a25951583a",
+      "matches": true,
+      "refreshedCurrentSha256": "081abc73542d06df09d28cdad88bfda1628634ab5482a3f8238134a25951583a",
+      "refreshedMatches": true
+    },
+    {
+      "role": "candidate",
+      "path": "/Users/mutoakio/Documents/terrarium/.site/web/dist/pitchfork/65f9a59988b5d3b353880d9109a73e3666bdd58fda9b0ccc8b18d1c1340c915b/guest",
+      "sha256": "f30395a418e526e939350cc87e03d43c92d1aa0a0b0b104130761a8b8daa841e",
+      "currentSha256": "f30395a418e526e939350cc87e03d43c92d1aa0a0b0b104130761a8b8daa841e",
+      "matches": true,
+      "refreshedCurrentSha256": "f30395a418e526e939350cc87e03d43c92d1aa0a0b0b104130761a8b8daa841e",
+      "refreshedMatches": true
+    },
+    {
+      "role": "candidate",
+      "path": "/Users/mutoakio/Documents/terrarium/.site/web/formicarium-guest-distribution/fixtures.mjs",
+      "sha256": "3ae3a6e923afe3514294991965d2cef9502c3d8388ec1932f8394c95897292ce",
+      "currentSha256": "3ae3a6e923afe3514294991965d2cef9502c3d8388ec1932f8394c95897292ce",
+      "matches": true,
+      "refreshedCurrentSha256": "3ae3a6e923afe3514294991965d2cef9502c3d8388ec1932f8394c95897292ce",
+      "refreshedMatches": true
+    },
+    {
+      "role": "candidate",
+      "path": "/Users/mutoakio/Documents/terrarium/.site/web/formicarium-guest-distribution/manifest.mjs",
+      "sha256": "e03ee62d8b438806a2ca50e687ed66562c4415a571edc9a71717e9b5784f2bf5",
+      "currentSha256": "e03ee62d8b438806a2ca50e687ed66562c4415a571edc9a71717e9b5784f2bf5",
+      "matches": true,
+      "refreshedCurrentSha256": "e03ee62d8b438806a2ca50e687ed66562c4415a571edc9a71717e9b5784f2bf5",
+      "refreshedMatches": true
+    },
+    {
+      "role": "candidate",
+      "path": "/Users/mutoakio/Documents/terrarium/.site/web/formicarium-guest-distribution/resolver.mjs",
+      "sha256": "aab15f45b4e355d453c39532393728221299d656b8dfd47826380dc6a070feec",
+      "currentSha256": "aab15f45b4e355d453c39532393728221299d656b8dfd47826380dc6a070feec",
+      "matches": true,
+      "refreshedCurrentSha256": "aab15f45b4e355d453c39532393728221299d656b8dfd47826380dc6a070feec",
+      "refreshedMatches": true
+    },
+    {
+      "role": "candidate",
+      "path": "/Users/mutoakio/Documents/terrarium/.site/web/formicarium-stage.json",
+      "sha256": "eeeeb8be793c71d34234f710d5aab4348c6d989d6a72862e4482354c17c34119",
+      "currentSha256": "eeeeb8be793c71d34234f710d5aab4348c6d989d6a72862e4482354c17c34119",
+      "matches": true,
+      "refreshedCurrentSha256": "eeeeb8be793c71d34234f710d5aab4348c6d989d6a72862e4482354c17c34119",
+      "refreshedMatches": true
+    },
+    {
+      "role": "candidate",
+      "path": "/Users/mutoakio/Documents/terrarium/.site/web/formicarium/assets/blink.mjs",
+      "sha256": "cc321bca8c33c074421fd8b41ad5e7a6ce088fb4b7d50dc8204d23b97a53764e",
+      "currentSha256": "cc321bca8c33c074421fd8b41ad5e7a6ce088fb4b7d50dc8204d23b97a53764e",
+      "matches": true,
+      "refreshedCurrentSha256": "cc321bca8c33c074421fd8b41ad5e7a6ce088fb4b7d50dc8204d23b97a53764e",
+      "refreshedMatches": true
+    },
+    {
+      "role": "candidate",
+      "path": "/Users/mutoakio/Documents/terrarium/.site/web/formicarium/assets/blink.wasm",
+      "sha256": "a6cadd6a988f7dc8ba7e43dbfe527cc77a6dbd58567eba9c55ba4e3c433982a2",
+      "currentSha256": "a6cadd6a988f7dc8ba7e43dbfe527cc77a6dbd58567eba9c55ba4e3c433982a2",
+      "matches": true,
+      "refreshedCurrentSha256": "a6cadd6a988f7dc8ba7e43dbfe527cc77a6dbd58567eba9c55ba4e3c433982a2",
+      "refreshedMatches": true
+    },
+    {
+      "role": "candidate",
+      "path": "/Users/mutoakio/Documents/terrarium/.site/web/formicarium/assets/build-info.json",
+      "sha256": "58ce693eaf3b8f7f963b0e547fa738f45fdc6d9057f9b328b76e271b2a5514d5",
+      "currentSha256": "58ce693eaf3b8f7f963b0e547fa738f45fdc6d9057f9b328b76e271b2a5514d5",
+      "matches": true,
+      "refreshedCurrentSha256": "58ce693eaf3b8f7f963b0e547fa738f45fdc6d9057f9b328b76e271b2a5514d5",
+      "refreshedMatches": true
+    },
+    {
+      "role": "candidate",
+      "path": "/Users/mutoakio/Documents/terrarium/.site/web/formicarium/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "currentSha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "matches": true,
+      "refreshedCurrentSha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "refreshedMatches": true
+    },
+    {
+      "role": "candidate",
+      "path": "/Users/mutoakio/Documents/terrarium/.site/web/formicarium/package.json",
+      "sha256": "1b951b0aa38cf78fa491d73a0fcaf572a074d4cca26a2729e081bf4993341168",
+      "currentSha256": "1b951b0aa38cf78fa491d73a0fcaf572a074d4cca26a2729e081bf4993341168",
+      "matches": true,
+      "refreshedCurrentSha256": "1b951b0aa38cf78fa491d73a0fcaf572a074d4cca26a2729e081bf4993341168",
+      "refreshedMatches": true
+    },
+    {
+      "role": "candidate",
+      "path": "/Users/mutoakio/Documents/terrarium/.site/web/formicarium/README.md",
+      "sha256": "0b1d91657d7463d8f195ca936f66ec856cfce8b1ab606589ffa80b59421d8df7",
+      "currentSha256": "0b1d91657d7463d8f195ca936f66ec856cfce8b1ab606589ffa80b59421d8df7",
+      "matches": true,
+      "refreshedCurrentSha256": "0b1d91657d7463d8f195ca936f66ec856cfce8b1ab606589ffa80b59421d8df7",
+      "refreshedMatches": true
+    },
+    {
+      "role": "candidate",
+      "path": "/Users/mutoakio/Documents/terrarium/.site/web/formicarium/runtime/core.mjs",
+      "sha256": "a56a15e9a252840bc2730fd08d80bdc9b4bb6822dca0381382b679274b1ff00e",
+      "currentSha256": "a56a15e9a252840bc2730fd08d80bdc9b4bb6822dca0381382b679274b1ff00e",
+      "matches": true,
+      "refreshedCurrentSha256": "a56a15e9a252840bc2730fd08d80bdc9b4bb6822dca0381382b679274b1ff00e",
+      "refreshedMatches": true
+    },
+    {
+      "role": "candidate",
+      "path": "/Users/mutoakio/Documents/terrarium/.site/web/formicarium/runtime/errors.mjs",
+      "sha256": "4ed0522cc14f5e161784c895a501f531f367d23e5ed4eb05e9ea4fd2c0e2621d",
+      "currentSha256": "4ed0522cc14f5e161784c895a501f531f367d23e5ed4eb05e9ea4fd2c0e2621d",
+      "matches": true,
+      "refreshedCurrentSha256": "4ed0522cc14f5e161784c895a501f531f367d23e5ed4eb05e9ea4fd2c0e2621d",
+      "refreshedMatches": true
+    },
+    {
+      "role": "candidate",
+      "path": "/Users/mutoakio/Documents/terrarium/.site/web/formicarium/runtime/guest-io.mjs",
+      "sha256": "8128d730bafb00b2458247bd11db3637d99609b3135c99dc36ea962dd09b03b8",
+      "currentSha256": "8128d730bafb00b2458247bd11db3637d99609b3135c99dc36ea962dd09b03b8",
+      "matches": true,
+      "refreshedCurrentSha256": "8128d730bafb00b2458247bd11db3637d99609b3135c99dc36ea962dd09b03b8",
+      "refreshedMatches": true
+    },
+    {
+      "role": "candidate",
+      "path": "/Users/mutoakio/Documents/terrarium/.site/web/formicarium/runtime/lifecycle.mjs",
+      "sha256": "561812cde35035ca9027c62451e09e083984b2f0271656845a43ae9078c01bad",
+      "currentSha256": "561812cde35035ca9027c62451e09e083984b2f0271656845a43ae9078c01bad",
+      "matches": true,
+      "refreshedCurrentSha256": "561812cde35035ca9027c62451e09e083984b2f0271656845a43ae9078c01bad",
+      "refreshedMatches": true
+    },
+    {
+      "role": "candidate",
+      "path": "/Users/mutoakio/Documents/terrarium/.site/web/formicarium/runtime/node/api.mjs",
+      "sha256": "6f596bd3d16e7af52a672ebecc0fb8928f5738add2ed0817bd7fd884996df36d",
+      "currentSha256": "6f596bd3d16e7af52a672ebecc0fb8928f5738add2ed0817bd7fd884996df36d",
+      "matches": true,
+      "refreshedCurrentSha256": "6f596bd3d16e7af52a672ebecc0fb8928f5738add2ed0817bd7fd884996df36d",
+      "refreshedMatches": true
+    },
+    {
+      "role": "candidate",
+      "path": "/Users/mutoakio/Documents/terrarium/.site/web/formicarium/runtime/node/package-worker.mjs",
+      "sha256": "2d68061931c5f5947b8fb9754198286de36a84ab57ea33ea09b2146deede61fa",
+      "currentSha256": "2d68061931c5f5947b8fb9754198286de36a84ab57ea33ea09b2146deede61fa",
+      "matches": true,
+      "refreshedCurrentSha256": "2d68061931c5f5947b8fb9754198286de36a84ab57ea33ea09b2146deede61fa",
+      "refreshedMatches": true
+    },
+    {
+      "role": "candidate",
+      "path": "/Users/mutoakio/Documents/terrarium/.site/web/formicarium/runtime/protocol.mjs",
+      "sha256": "06766e64cb94b1e9f1d125de3f1714eb175246971110b5cb87a23eb16899b88d",
+      "currentSha256": "06766e64cb94b1e9f1d125de3f1714eb175246971110b5cb87a23eb16899b88d",
+      "matches": true,
+      "refreshedCurrentSha256": "06766e64cb94b1e9f1d125de3f1714eb175246971110b5cb87a23eb16899b88d",
+      "refreshedMatches": true
+    },
+    {
+      "role": "candidate",
+      "path": "/Users/mutoakio/Documents/terrarium/.site/web/formicarium/runtime/public.mjs",
+      "sha256": "cdbd19fc4411300f7baf1c1a4f90313a6b8fac3f458bc0d1a27b0fc8c0cf545d",
+      "currentSha256": "cdbd19fc4411300f7baf1c1a4f90313a6b8fac3f458bc0d1a27b0fc8c0cf545d",
+      "matches": true,
+      "refreshedCurrentSha256": "cdbd19fc4411300f7baf1c1a4f90313a6b8fac3f458bc0d1a27b0fc8c0cf545d",
+      "refreshedMatches": true
+    },
+    {
+      "role": "candidate",
+      "path": "/Users/mutoakio/Documents/terrarium/.site/web/formicarium/runtime/state.mjs",
+      "sha256": "208fade0d46a4f62e8d5f8f4a58bc34d0357f21649efb8e5033a73f7b19fefa1",
+      "currentSha256": "208fade0d46a4f62e8d5f8f4a58bc34d0357f21649efb8e5033a73f7b19fefa1",
+      "matches": true,
+      "refreshedCurrentSha256": "208fade0d46a4f62e8d5f8f4a58bc34d0357f21649efb8e5033a73f7b19fefa1",
+      "refreshedMatches": true
+    },
+    {
+      "role": "candidate",
+      "path": "/Users/mutoakio/Documents/terrarium/.site/web/formicarium/runtime/validation.mjs",
+      "sha256": "c63ad4af63f8b414181e5f6158d00076c621803cbc445648d50750bacbdcd1c3",
+      "currentSha256": "c63ad4af63f8b414181e5f6158d00076c621803cbc445648d50750bacbdcd1c3",
+      "matches": true,
+      "refreshedCurrentSha256": "c63ad4af63f8b414181e5f6158d00076c621803cbc445648d50750bacbdcd1c3",
+      "refreshedMatches": true
+    },
+    {
+      "role": "candidate",
+      "path": "/Users/mutoakio/Documents/terrarium/.site/web/formicarium/runtime/web/api.mjs",
+      "sha256": "d26834f3248d9eaa53a059ee7cb62ce49f4899d8c953d318909a0b36699d897a",
+      "currentSha256": "d26834f3248d9eaa53a059ee7cb62ce49f4899d8c953d318909a0b36699d897a",
+      "matches": true,
+      "refreshedCurrentSha256": "d26834f3248d9eaa53a059ee7cb62ce49f4899d8c953d318909a0b36699d897a",
+      "refreshedMatches": true
+    },
+    {
+      "role": "candidate",
+      "path": "/Users/mutoakio/Documents/terrarium/.site/web/formicarium/runtime/web/package-worker.mjs",
+      "sha256": "1003b52247dc7672ba97579ce5c4938c432a32078f9a088942306bdb7e751992",
+      "currentSha256": "1003b52247dc7672ba97579ce5c4938c432a32078f9a088942306bdb7e751992",
+      "matches": true,
+      "refreshedCurrentSha256": "1003b52247dc7672ba97579ce5c4938c432a32078f9a088942306bdb7e751992",
+      "refreshedMatches": true
+    },
+    {
+      "role": "candidate",
+      "path": "/Users/mutoakio/Documents/terrarium/.site/web/formicarium/runtime/worker-execution.mjs",
+      "sha256": "840f521128df443ce1b0a89199c007e1b60c8fc7b52643b8eb02859564650814",
+      "currentSha256": "840f521128df443ce1b0a89199c007e1b60c8fc7b52643b8eb02859564650814",
+      "matches": true,
+      "refreshedCurrentSha256": "840f521128df443ce1b0a89199c007e1b60c8fc7b52643b8eb02859564650814",
+      "refreshedMatches": true
+    },
+    {
+      "role": "candidate",
+      "path": "/Users/mutoakio/Documents/terrarium/.site/web/formicarium/THIRD_PARTY_NOTICES.md",
+      "sha256": "d32c992ea64eceb5112ddb82669f57a2545dabe2b8e8fa0fe0ec1e7a1f14a840",
+      "currentSha256": "d32c992ea64eceb5112ddb82669f57a2545dabe2b8e8fa0fe0ec1e7a1f14a840",
+      "matches": true,
+      "refreshedCurrentSha256": "d32c992ea64eceb5112ddb82669f57a2545dabe2b8e8fa0fe0ec1e7a1f14a840",
+      "refreshedMatches": true
+    },
+    {
+      "role": "candidate",
+      "path": "/Users/mutoakio/Documents/terrarium/.site/web/formicarium/types/browser.d.ts",
+      "sha256": "eb4d20af4024dd1df109896d469076e209ee125d3d9b91f72c0f92f1481b97ba",
+      "currentSha256": "eb4d20af4024dd1df109896d469076e209ee125d3d9b91f72c0f92f1481b97ba",
+      "matches": true,
+      "refreshedCurrentSha256": "eb4d20af4024dd1df109896d469076e209ee125d3d9b91f72c0f92f1481b97ba",
+      "refreshedMatches": true
+    },
+    {
+      "role": "candidate",
+      "path": "/Users/mutoakio/Documents/terrarium/.site/web/formicarium/types/index.d.ts",
+      "sha256": "b01c5cf786ef69d40d3a253ab13000da0141a31548c29c54a3f561530b5107fa",
+      "currentSha256": "b01c5cf786ef69d40d3a253ab13000da0141a31548c29c54a3f561530b5107fa",
+      "matches": true,
+      "refreshedCurrentSha256": "b01c5cf786ef69d40d3a253ab13000da0141a31548c29c54a3f561530b5107fa",
+      "refreshedMatches": true
+    },
+    {
+      "role": "candidate",
+      "path": "/Users/mutoakio/Documents/terrarium/.site/web/formicarium/types/node.d.ts",
+      "sha256": "eb4d20af4024dd1df109896d469076e209ee125d3d9b91f72c0f92f1481b97ba",
+      "currentSha256": "eb4d20af4024dd1df109896d469076e209ee125d3d9b91f72c0f92f1481b97ba",
+      "matches": true,
+      "refreshedCurrentSha256": "eb4d20af4024dd1df109896d469076e209ee125d3d9b91f72c0f92f1481b97ba",
+      "refreshedMatches": true
+    },
+    {
+      "role": "candidate",
+      "path": "/Users/mutoakio/Documents/terrarium/.site/web/index.html",
+      "sha256": "d780c69c53f0d5f1877a8923c608af6d78f7de9e3b725c29fb10cc6ee11164b9",
+      "currentSha256": "d780c69c53f0d5f1877a8923c608af6d78f7de9e3b725c29fb10cc6ee11164b9",
+      "matches": true,
+      "refreshedCurrentSha256": "d780c69c53f0d5f1877a8923c608af6d78f7de9e3b725c29fb10cc6ee11164b9",
+      "refreshedMatches": true
+    },
+    {
+      "role": "candidate",
+      "path": "/Users/mutoakio/Documents/terrarium/.site/web/terminal.mjs",
+      "sha256": "2e7d2dae3d60ddcde3b91b64de6791de30ef0e39dc12be68c486e0a0cbb71e46",
+      "currentSha256": "2e7d2dae3d60ddcde3b91b64de6791de30ef0e39dc12be68c486e0a0cbb71e46",
+      "matches": true,
+      "refreshedCurrentSha256": "2e7d2dae3d60ddcde3b91b64de6791de30ef0e39dc12be68c486e0a0cbb71e46",
+      "refreshedMatches": true
+    },
+    {
+      "role": "candidate",
+      "path": "/Users/mutoakio/Documents/terrarium/.site/web/terrarium.mjs",
+      "sha256": "c1e52a9d934c6f15926adea65369604e9e92a85dfe2e52a85f353aa6bf32f540",
+      "currentSha256": "c1e52a9d934c6f15926adea65369604e9e92a85dfe2e52a85f353aa6bf32f540",
+      "matches": true,
+      "refreshedCurrentSha256": "c1e52a9d934c6f15926adea65369604e9e92a85dfe2e52a85f353aa6bf32f540",
+      "refreshedMatches": true
+    },
+    {
+      "role": "candidate",
+      "path": "/Users/mutoakio/Documents/terrarium/.site/web/tools.json",
+      "sha256": "a5c43898b08be774f136a0a7243614e278d2949d9183ee2070bb5b70adb3d82d",
+      "currentSha256": "a5c43898b08be774f136a0a7243614e278d2949d9183ee2070bb5b70adb3d82d",
+      "matches": true,
+      "refreshedCurrentSha256": "a5c43898b08be774f136a0a7243614e278d2949d9183ee2070bb5b70adb3d82d",
+      "refreshedMatches": true
+    }
+  ],
+  "newTestExecution": false,
+  "sourceChanged": false
+}

@@ -23,29 +23,65 @@ import { chooseBuild, describe } from './terrarium.mjs';
 const params = new URLSearchParams(location.search);
 if (params.has('embed')) document.body.classList.add('embed');
 
+for (const name of ['tool', 'build', 'source'])
+  document.getElementById(name).dataset.testid = `terrarium-${name}`;
 const statusEl = document.getElementById('status');
 const status = (text) => {
   statusEl.textContent = text;
 };
 
 const embedded = window.parent !== window;
-function parentOrigin() {
-  if (params.has('origin')) return params.get('origin');
-  if (location.ancestorOrigins?.length) return location.ancestorOrigins[0];
+function exactOrigin(value) {
+  if (typeof value !== 'string' || !value || value === 'null' || value === '*')
+    return null;
   try {
-    return document.referrer ? new URL(document.referrer).origin : null;
+    const url = new URL(value);
+    if (
+      !['http:', 'https:'].includes(url.protocol) ||
+      url.username ||
+      url.password ||
+      url.pathname !== '/' ||
+      url.search ||
+      url.hash ||
+      url.origin === 'null'
+    )
+      return null;
+    return url.origin;
+  } catch {
+    return null;
+  }
+}
+function parentOrigin() {
+  if (params.has('origin')) return exactOrigin(params.get('origin'));
+  if (location.ancestorOrigins?.length)
+    return exactOrigin(location.ancestorOrigins[0]);
+  try {
+    return document.referrer
+      ? exactOrigin(new URL(document.referrer).origin)
+      : null;
   } catch {
     return null;
   }
 }
 const targetOrigin = embedded ? parentOrigin() : null;
-if (embedded && !targetOrigin)
-  console.warn(
-    '[terrarium] parent origin unknown; pass ?origin= to talk to it',
-  );
 const notifyParent = (message) => {
   if (targetOrigin) window.parent.postMessage(message, targetOrigin);
 };
+function preflightFailure() {
+  if (embedded && !targetOrigin)
+    return 'parent origin is unknown or invalid; no guest will run';
+  if (
+    embedded &&
+    targetOrigin !== location.origin &&
+    !('credentialless' in HTMLIFrameElement.prototype)
+  ) {
+    return 'cross-origin credentialless iframe is unsupported in this browser; no guest will run';
+  }
+  if (!crossOriginIsolated)
+    return 'this page is not cross-origin isolated (COOP/COEP); no guest will run';
+  return null;
+}
+const blocked = preflightFailure();
 
 function showHeader({ catalog, toolName, tool, ref, build, builds, names }) {
   document.title = `terrarium · ${toolName} ${ref}`;
@@ -120,6 +156,7 @@ terminal.addEventListener('terrarium-error', (event) => {
 });
 addEventListener('message', (event) => {
   if (
+    blocked ||
     !targetOrigin ||
     event.source !== window.parent ||
     event.origin !== targetOrigin
@@ -129,15 +166,13 @@ addEventListener('message', (event) => {
     event.data?.type === 'terrarium:run' &&
     typeof event.data.command === 'string'
   ) {
-    terminal.run(event.data.command);
+    void terminal.run(event.data.command).catch(() => {});
   }
 });
 
-if (!crossOriginIsolated) {
-  // coi-serviceworker reloads the page once it controls it.
-  status(
-    'Not cross-origin isolated yet — waiting for the service worker to reload the page…',
-  );
+if (blocked) {
+  status(blocked);
+  notifyParent({ type: 'terrarium:error', message: blocked });
 } else {
   status('Downloading and compiling…');
   chooseBuild({

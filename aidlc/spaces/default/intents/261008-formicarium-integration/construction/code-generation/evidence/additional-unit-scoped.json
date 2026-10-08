@@ -1,0 +1,1 @@
+{"command": "mise exec node@26 -- bun test ./tests/pitchfork-runtime.test.ts ./tests/pitchfork-build-retry.test.ts", "cwd": "packages/terrarium", "exitCode": 0}

@@ -1,0 +1,32 @@
+{
+  "result": "success",
+  "testingContract": "sha256:bb76c1b22f8307be6e5780d50cabab891684449d5b164bd0e825e9e4e5c61e5b",
+  "scoped": {
+    "tests": 20,
+    "pass": 20,
+    "fail": 0,
+    "log": "additional-validation-0.txt",
+    "note": "The final full-suite output includes all 20 cases in the two related files; earlier dedicated scoped execution is preserved in additional-unit-scoped.txt."
+  },
+  "allNative": {
+    "tests": 85,
+    "pass": 85,
+    "fail": 0,
+    "log": "additional-validation-0.txt",
+    "bash": "/bin/bash 3.2.57",
+    "patch": "/usr/bin/patch 2.0-12u11-Apple"
+  },
+  "allStandalone": {
+    "tests": 85,
+    "pass": 85,
+    "fail": 0,
+    "log": "additional-standalone-unit-final.txt"
+  },
+  "sourceInventory": "source-shell-fix-final.json",
+  "sourceInventorySha256": "92702945be1be824ed84fb84f159338160d505d06869d90d9f3929e92e7736fd",
+  "previousBrowserBinding": "results-final.json",
+  "browserBundleUnchangedProof": "additional-preservation-browser-binding.json",
+  "GNUExecution": "unverified; no GNU/Linux run",
+  "remoteCI": "unverified; no input upload or variable configuration",
+  "priorFailuresPreserved": true
+}

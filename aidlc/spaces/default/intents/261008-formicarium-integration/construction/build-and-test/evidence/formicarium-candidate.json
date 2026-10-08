@@ -1,0 +1,260 @@
+{
+  "root": "/Users/mutoakio/Documents/terrarium/.vendor/build-test-formicarium",
+  "files": [
+    {
+      "path": ".nojekyll",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "LICENSE",
+      "size": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "index.html",
+      "size": 208,
+      "sha256": "8445d22d6898ed00ce4263042f187aba69815ffe09f7416a8af7e8f841dea04d"
+    },
+    {
+      "path": "web/coi-serviceworker.js",
+      "size": 4678,
+      "sha256": "d12bd536e27e39a773d7dc7adb1a1167d24002293e97ac81c995fb00cf8d4d5a"
+    },
+    {
+      "path": "web/dist/aube/5a75abb5b2ff53ed9b89f85a9695e29fa8dae3a4fda6f25046f39ac04a413d92/build-info.json",
+      "size": 1112,
+      "sha256": "994ad5923dcd8383c887228987b3cf656a541bc658747d4ce76e6f219b90f5fd"
+    },
+    {
+      "path": "web/dist/aube/5a75abb5b2ff53ed9b89f85a9695e29fa8dae3a4fda6f25046f39ac04a413d92/fixture-e6149f95eadefc92a559dd4f39b4836064a087b2f95c954bf13b6b786c8798f3.json",
+      "size": 366,
+      "sha256": "17e2c1f140570536c0fd73f9d91cc12b9b4aaa76361c2396b611005966989454"
+    },
+    {
+      "path": "web/dist/aube/5a75abb5b2ff53ed9b89f85a9695e29fa8dae3a4fda6f25046f39ac04a413d92/guest",
+      "size": 36497472,
+      "sha256": "d973c97da25ed13e49943b0836c88fd5d9e51ac422faa5b38a3df997ad1ceef9"
+    },
+    {
+      "path": "web/dist/aube/83a42e281acf38e98fbbddf590e77746dcb9dfdb12cce4b27d1eb1926e1e5b5d/build-info.json",
+      "size": 1112,
+      "sha256": "18248d1d2cfdd3933b5608ea795bc78473e2d400791c8d5204d63be9755102d5"
+    },
+    {
+      "path": "web/dist/aube/83a42e281acf38e98fbbddf590e77746dcb9dfdb12cce4b27d1eb1926e1e5b5d/fixture-e6149f95eadefc92a559dd4f39b4836064a087b2f95c954bf13b6b786c8798f3.json",
+      "size": 366,
+      "sha256": "17e2c1f140570536c0fd73f9d91cc12b9b4aaa76361c2396b611005966989454"
+    },
+    {
+      "path": "web/dist/aube/83a42e281acf38e98fbbddf590e77746dcb9dfdb12cce4b27d1eb1926e1e5b5d/guest",
+      "size": 36948544,
+      "sha256": "c7d7d13692d01c5f6adc5511c40adc6b3769080b7c433b44c411a3e52ebcd99e"
+    },
+    {
+      "path": "web/dist/aube/v2.6.1/aube.js",
+      "size": 119914,
+      "sha256": "efac1c643527f2229dbe801929dbd9693bdad321150474e0e6023f54841db3ab"
+    },
+    {
+      "path": "web/dist/aube/v2.6.1/aube.wasm",
+      "size": 19856043,
+      "sha256": "c167246a005f50b72fcad44ab6b67b4f520179428bb3f46463691f5fe7b00981"
+    },
+    {
+      "path": "web/dist/builds.json",
+      "size": 3581,
+      "sha256": "5f56971fed7fe59d0ba3f3a792afd0230bb8c4aaffbe47faef1244b869c6760f"
+    },
+    {
+      "path": "web/dist/fixtures/aube-local-deps.json",
+      "size": 366,
+      "sha256": "2a2b3bbf5995be2f20fb8fe7a5e29b0ca1c733db9b491bfef991a408a7a7bc44"
+    },
+    {
+      "path": "web/dist/fixtures/pitchfork-basic.json",
+      "size": 151,
+      "sha256": "081abc73542d06df09d28cdad88bfda1628634ab5482a3f8238134a25951583a"
+    },
+    {
+      "path": "web/dist/pitchfork/65f9a59988b5d3b353880d9109a73e3666bdd58fda9b0ccc8b18d1c1340c915b/build-info.json",
+      "size": 1048,
+      "sha256": "29e1adac2ee1308ed31a1903b9796ceae16431239733a325aa918051b77515b8"
+    },
+    {
+      "path": "web/dist/pitchfork/65f9a59988b5d3b353880d9109a73e3666bdd58fda9b0ccc8b18d1c1340c915b/fixture-70fa4ab004890168522fa83941f86a1e0a28818246b6a065e4b0ef685e8035b3.json",
+      "size": 151,
+      "sha256": "081abc73542d06df09d28cdad88bfda1628634ab5482a3f8238134a25951583a"
+    },
+    {
+      "path": "web/dist/pitchfork/65f9a59988b5d3b353880d9109a73e3666bdd58fda9b0ccc8b18d1c1340c915b/guest",
+      "size": 39689200,
+      "sha256": "f30395a418e526e939350cc87e03d43c92d1aa0a0b0b104130761a8b8daa841e"
+    },
+    {
+      "path": "web/dist/pitchfork/v2.29.0/pitchfork.js",
+      "size": 126047,
+      "sha256": "4bf0ea2764e2ba3c5650cb577f5c66156af5a76cd682691d1d8f4e07875b8fb1"
+    },
+    {
+      "path": "web/dist/pitchfork/v2.29.0/pitchfork.wasm",
+      "size": 20389228,
+      "sha256": "16f335ef529b2fa7815cc6201030b01538ef76d9b52478746dc4df62161b8cee"
+    },
+    {
+      "path": "web/formicarium/LICENSE",
+      "size": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "web/formicarium/README.md",
+      "size": 20079,
+      "sha256": "0b1d91657d7463d8f195ca936f66ec856cfce8b1ab606589ffa80b59421d8df7"
+    },
+    {
+      "path": "web/formicarium/THIRD_PARTY_NOTICES.md",
+      "size": 13724,
+      "sha256": "d32c992ea64eceb5112ddb82669f57a2545dabe2b8e8fa0fe0ec1e7a1f14a840"
+    },
+    {
+      "path": "web/formicarium/assets/blink.mjs",
+      "size": 132512,
+      "sha256": "cc321bca8c33c074421fd8b41ad5e7a6ce088fb4b7d50dc8204d23b97a53764e"
+    },
+    {
+      "path": "web/formicarium/assets/blink.wasm",
+      "size": 455584,
+      "sha256": "a6cadd6a988f7dc8ba7e43dbfe527cc77a6dbd58567eba9c55ba4e3c433982a2"
+    },
+    {
+      "path": "web/formicarium/assets/build-info.json",
+      "size": 861,
+      "sha256": "58ce693eaf3b8f7f963b0e547fa738f45fdc6d9057f9b328b76e271b2a5514d5"
+    },
+    {
+      "path": "web/formicarium/package.json",
+      "size": 1256,
+      "sha256": "1b951b0aa38cf78fa491d73a0fcaf572a074d4cca26a2729e081bf4993341168"
+    },
+    {
+      "path": "web/formicarium/runtime/core.mjs",
+      "size": 10578,
+      "sha256": "a56a15e9a252840bc2730fd08d80bdc9b4bb6822dca0381382b679274b1ff00e"
+    },
+    {
+      "path": "web/formicarium/runtime/errors.mjs",
+      "size": 1230,
+      "sha256": "4ed0522cc14f5e161784c895a501f531f367d23e5ed4eb05e9ea4fd2c0e2621d"
+    },
+    {
+      "path": "web/formicarium/runtime/guest-io.mjs",
+      "size": 15707,
+      "sha256": "8128d730bafb00b2458247bd11db3637d99609b3135c99dc36ea962dd09b03b8"
+    },
+    {
+      "path": "web/formicarium/runtime/lifecycle.mjs",
+      "size": 6635,
+      "sha256": "561812cde35035ca9027c62451e09e083984b2f0271656845a43ae9078c01bad"
+    },
+    {
+      "path": "web/formicarium/runtime/node/api.mjs",
+      "size": 2792,
+      "sha256": "6f596bd3d16e7af52a672ebecc0fb8928f5738add2ed0817bd7fd884996df36d"
+    },
+    {
+      "path": "web/formicarium/runtime/node/package-worker.mjs",
+      "size": 1921,
+      "sha256": "2d68061931c5f5947b8fb9754198286de36a84ab57ea33ea09b2146deede61fa"
+    },
+    {
+      "path": "web/formicarium/runtime/protocol.mjs",
+      "size": 2842,
+      "sha256": "06766e64cb94b1e9f1d125de3f1714eb175246971110b5cb87a23eb16899b88d"
+    },
+    {
+      "path": "web/formicarium/runtime/public.mjs",
+      "size": 320,
+      "sha256": "cdbd19fc4411300f7baf1c1a4f90313a6b8fac3f458bc0d1a27b0fc8c0cf545d"
+    },
+    {
+      "path": "web/formicarium/runtime/state.mjs",
+      "size": 3113,
+      "sha256": "208fade0d46a4f62e8d5f8f4a58bc34d0357f21649efb8e5033a73f7b19fefa1"
+    },
+    {
+      "path": "web/formicarium/runtime/validation.mjs",
+      "size": 8227,
+      "sha256": "c63ad4af63f8b414181e5f6158d00076c621803cbc445648d50750bacbdcd1c3"
+    },
+    {
+      "path": "web/formicarium/runtime/web/api.mjs",
+      "size": 6844,
+      "sha256": "d26834f3248d9eaa53a059ee7cb62ce49f4899d8c953d318909a0b36699d897a"
+    },
+    {
+      "path": "web/formicarium/runtime/web/package-worker.mjs",
+      "size": 2365,
+      "sha256": "1003b52247dc7672ba97579ce5c4938c432a32078f9a088942306bdb7e751992"
+    },
+    {
+      "path": "web/formicarium/runtime/worker-execution.mjs",
+      "size": 1881,
+      "sha256": "840f521128df443ce1b0a89199c007e1b60c8fc7b52643b8eb02859564650814"
+    },
+    {
+      "path": "web/formicarium/types/browser.d.ts",
+      "size": 134,
+      "sha256": "eb4d20af4024dd1df109896d469076e209ee125d3d9b91f72c0f92f1481b97ba"
+    },
+    {
+      "path": "web/formicarium/types/index.d.ts",
+      "size": 1800,
+      "sha256": "b01c5cf786ef69d40d3a253ab13000da0141a31548c29c54a3f561530b5107fa"
+    },
+    {
+      "path": "web/formicarium/types/node.d.ts",
+      "size": 134,
+      "sha256": "eb4d20af4024dd1df109896d469076e209ee125d3d9b91f72c0f92f1481b97ba"
+    },
+    {
+      "path": "web/formicarium-guest-distribution/fixtures.mjs",
+      "size": 5027,
+      "sha256": "3ae3a6e923afe3514294991965d2cef9502c3d8388ec1932f8394c95897292ce"
+    },
+    {
+      "path": "web/formicarium-guest-distribution/manifest.mjs",
+      "size": 5415,
+      "sha256": "e03ee62d8b438806a2ca50e687ed66562c4415a571edc9a71717e9b5784f2bf5"
+    },
+    {
+      "path": "web/formicarium-guest-distribution/resolver.mjs",
+      "size": 5323,
+      "sha256": "aab15f45b4e355d453c39532393728221299d656b8dfd47826380dc6a070feec"
+    },
+    {
+      "path": "web/formicarium-stage.json",
+      "size": 6946,
+      "sha256": "f99b763cf07883c864ad962d045426ccf2d923384a754989b46c635226d43320"
+    },
+    {
+      "path": "web/index.html",
+      "size": 1793,
+      "sha256": "aabe42dc529838c2d254a93bf1c4d1d67b76ad49599372da91655c5992637239"
+    },
+    {
+      "path": "web/terminal.mjs",
+      "size": 6310,
+      "sha256": "bccd218f4a3af236f8d650eee150afd4d58cb0ad07eaa3093eb2e900e3d7507d"
+    },
+    {
+      "path": "web/terrarium.mjs",
+      "size": 398258,
+      "sha256": "dc6d6e72c18843f0b3982988c41488ca701447b255202f1c65fb38ddd989c88e"
+    },
+    {
+      "path": "web/tools.json",
+      "size": 361,
+      "sha256": "a5c43898b08be774f136a0a7243614e278d2949d9183ee2070bb5b70adb3d82d"
+    }
+  ]
+}

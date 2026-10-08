@@ -1,0 +1,10 @@
+bun install v1.4.2 (744846f84)
+
++ @playwright/test@1.63.0
++ @types/bun@1.4.2
++ typescript@7.0.2
++ @aletheia-works/formicarium@../../.vendor/formicarium-inputs/package/aletheia-works-formicarium-0.1.0-rc.1.tgz
++ @xterm/addon-fit@0.11.0
++ @xterm/xterm@6.0.0
+
+12 packages installed [149.00ms]

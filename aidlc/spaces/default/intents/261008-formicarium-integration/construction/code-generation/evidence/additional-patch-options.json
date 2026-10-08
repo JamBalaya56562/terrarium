@@ -1,0 +1,104 @@
+[
+  {
+    "option": "--force",
+    "value": "before\n",
+    "command": [
+      "/usr/bin/patch",
+      "-p1",
+      "--binary",
+      "--force",
+      "--reverse",
+      "--dry-run",
+      "--quiet"
+    ],
+    "exitCode": 1,
+    "stdout": "1 out of 1 hunks failed while patching value.txt\n",
+    "stderr": "",
+    "unchanged": true
+  },
+  {
+    "option": "--force",
+    "value": "after\n",
+    "command": [
+      "/usr/bin/patch",
+      "-p1",
+      "--binary",
+      "--force",
+      "--reverse",
+      "--dry-run",
+      "--quiet"
+    ],
+    "exitCode": 0,
+    "stdout": "",
+    "stderr": "",
+    "unchanged": true
+  },
+  {
+    "option": "--force",
+    "value": "different\n",
+    "command": [
+      "/usr/bin/patch",
+      "-p1",
+      "--binary",
+      "--force",
+      "--reverse",
+      "--dry-run",
+      "--quiet"
+    ],
+    "exitCode": 1,
+    "stdout": "1 out of 1 hunks failed while patching value.txt\n",
+    "stderr": "",
+    "unchanged": true
+  },
+  {
+    "option": "--batch",
+    "value": "before\n",
+    "command": [
+      "/usr/bin/patch",
+      "-p1",
+      "--binary",
+      "--batch",
+      "--reverse",
+      "--dry-run",
+      "--quiet"
+    ],
+    "exitCode": 0,
+    "stdout": "",
+    "stderr": "",
+    "unchanged": true
+  },
+  {
+    "option": "--batch",
+    "value": "after\n",
+    "command": [
+      "/usr/bin/patch",
+      "-p1",
+      "--binary",
+      "--batch",
+      "--reverse",
+      "--dry-run",
+      "--quiet"
+    ],
+    "exitCode": 0,
+    "stdout": "",
+    "stderr": "",
+    "unchanged": true
+  },
+  {
+    "option": "--batch",
+    "value": "different\n",
+    "command": [
+      "/usr/bin/patch",
+      "-p1",
+      "--binary",
+      "--batch",
+      "--reverse",
+      "--dry-run",
+      "--quiet"
+    ],
+    "exitCode": 1,
+    "stdout": "1 out of 1 hunks failed while patching value.txt\n",
+    "stderr": "",
+    "unchanged": true
+  }
+]

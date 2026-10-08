@@ -13,6 +13,8 @@ exclude = [
   "aidlc/spaces/*/memory/**",
   "aidlc/spaces/*/intents/*/aidlc-state.md",
   "aidlc/spaces/*/intents/*/audit/**",
+  # Immutable source snapshots and raw tool output retain their original bytes.
+  "aidlc/spaces/*/intents/*/**/evidence/**",
   "aidlc/spaces/*/intents/*/**/memory.md",
   "aidlc/spaces/*/intents/*/**/*-questions.md",
   "aidlc/spaces/*/intents/*/verification/**",

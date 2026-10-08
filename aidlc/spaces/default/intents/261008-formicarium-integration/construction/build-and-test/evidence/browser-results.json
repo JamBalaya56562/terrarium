@@ -1,0 +1,44 @@
+[
+  {
+    "suite": "formicarium",
+    "browser": "chromium",
+    "pass": 15,
+    "fail": 0,
+    "skip": 0
+  },
+  {
+    "suite": "formicarium",
+    "browser": "firefox",
+    "pass": 15,
+    "fail": 0,
+    "skip": 0
+  },
+  {
+    "suite": "formicarium",
+    "browser": "webkit",
+    "pass": 15,
+    "fail": 0,
+    "skip": 0
+  },
+  {
+    "suite": "legacy",
+    "browser": "chromium",
+    "pass": 12,
+    "fail": 0,
+    "skip": 0
+  },
+  {
+    "suite": "legacy",
+    "browser": "firefox",
+    "pass": 11,
+    "fail": 0,
+    "skip": 1
+  },
+  {
+    "suite": "legacy",
+    "browser": "webkit",
+    "pass": 11,
+    "fail": 0,
+    "skip": 1
+  }
+]

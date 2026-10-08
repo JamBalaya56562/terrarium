@@ -1,0 +1,27 @@
+[
+  {
+    "command": [
+      "/usr/bin/patch",
+      "-p1",
+      "--binary",
+      "--reverse",
+      "--dry-run",
+      "--quiet"
+    ],
+    "exitCode": 0,
+    "stdout": "Unreversed (or previously applied) patch detected!  Ignore -R? [y] \n",
+    "stderr": "",
+    "valueAfter": "before\n"
+  },
+  {
+    "command": [
+      "bash",
+      "-c",
+      "[[ pr-42 =~ ^(pr-|#)([0-9]+)$ ]]; printf \"%s\\n\" \"${BASH_REMATCH[-1]}\""
+    ],
+    "exitCode": 0,
+    "stdout": "\n",
+    "stderr": "bash: BASH_REMATCH: bad array subscript\n",
+    "valueAfter": "before\n"
+  }
+]

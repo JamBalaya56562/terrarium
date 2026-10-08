@@ -1,0 +1,176 @@
+{
+  "stage": "code-generation",
+  "unit": "u3-terrarium-integration",
+  "upstream_ids": [
+    "AC4.1.1",
+    "AC4.1.2",
+    "AC4.1.3",
+    "AC4.2.1",
+    "AC4.2.2",
+    "AC4.2.3",
+    "AC4.2.4",
+    "AC5.1.1",
+    "AC5.1.2",
+    "AC5.1.3",
+    "AC5.2.1",
+    "AC5.2.2",
+    "AC5.2.3",
+    "AC6.1.1",
+    "AC6.1.2",
+    "AC6.1.3",
+    "AC6.2.1",
+    "AC6.2.2",
+    "AC6.2.3",
+    "AC6.3.1",
+    "AC6.3.2",
+    "AC6.3.3",
+    "AC6.4.1",
+    "AC6.4.2",
+    "AC6.4.3"
+  ],
+  "coverage": [
+    {
+      "id": "AC4.1.1",
+      "status": "OK",
+      "target": "tests/terrarium/consumer.spec.mjs"
+    },
+    {
+      "id": "AC4.1.2",
+      "status": "OK",
+      "target": "tests/terrarium/consumer.spec.mjs"
+    },
+    {
+      "id": "AC4.1.3",
+      "status": "OK",
+      "target": "tests/terrarium/consumer.spec.mjs"
+    },
+    {
+      "id": "AC4.2.1",
+      "status": "OK",
+      "target": "tests/terrarium/coverage.test.mjs"
+    },
+    {
+      "id": "AC4.2.2",
+      "status": "OK",
+      "target": "tests/terrarium/coverage.test.mjs"
+    },
+    {
+      "id": "AC4.2.3",
+      "status": "OK",
+      "target": "tests/terrarium/coverage.test.mjs"
+    },
+    {
+      "id": "AC4.2.4",
+      "status": "OK",
+      "target": "tests/terrarium/coverage.test.mjs"
+    },
+    {
+      "id": "AC5.1.1",
+      "status": "Deferred",
+      "target": "aidlc/spaces/default/intents/261006-npm-terrarium-release/inception/units-generation/unit-of-work-story-map.md",
+      "reason": "Primary implementation and release/CI/RC/stable judgment owned by U4; U3 provides local integration evidence only."
+    },
+    {
+      "id": "AC5.1.2",
+      "status": "Deferred",
+      "target": "aidlc/spaces/default/intents/261006-npm-terrarium-release/inception/units-generation/unit-of-work-story-map.md",
+      "reason": "Primary implementation and release/CI/RC/stable judgment owned by U4; U3 provides local integration evidence only."
+    },
+    {
+      "id": "AC5.1.3",
+      "status": "Deferred",
+      "target": "aidlc/spaces/default/intents/261006-npm-terrarium-release/inception/units-generation/unit-of-work-story-map.md",
+      "reason": "Primary implementation and release/CI/RC/stable judgment owned by U4; U3 provides local integration evidence only."
+    },
+    {
+      "id": "AC5.2.1",
+      "status": "Deferred",
+      "target": "aidlc/spaces/default/intents/261006-npm-terrarium-release/inception/units-generation/unit-of-work-story-map.md",
+      "reason": "Primary implementation and release/CI/RC/stable judgment owned by U4; U3 provides local integration evidence only."
+    },
+    {
+      "id": "AC5.2.2",
+      "status": "Deferred",
+      "target": "aidlc/spaces/default/intents/261006-npm-terrarium-release/inception/units-generation/unit-of-work-story-map.md",
+      "reason": "Primary implementation and release/CI/RC/stable judgment owned by U4; U3 provides local integration evidence only."
+    },
+    {
+      "id": "AC5.2.3",
+      "status": "Deferred",
+      "target": "aidlc/spaces/default/intents/261006-npm-terrarium-release/inception/units-generation/unit-of-work-story-map.md",
+      "reason": "Primary implementation and release/CI/RC/stable judgment owned by U4; U3 provides local integration evidence only."
+    },
+    {
+      "id": "AC6.1.1",
+      "status": "Deferred",
+      "target": "aidlc/spaces/default/intents/261006-npm-terrarium-release/inception/units-generation/unit-of-work-story-map.md",
+      "reason": "Primary implementation and release/CI/RC/stable judgment owned by U4; U3 provides local integration evidence only."
+    },
+    {
+      "id": "AC6.1.2",
+      "status": "Deferred",
+      "target": "aidlc/spaces/default/intents/261006-npm-terrarium-release/inception/units-generation/unit-of-work-story-map.md",
+      "reason": "Primary implementation and release/CI/RC/stable judgment owned by U4; U3 provides local integration evidence only."
+    },
+    {
+      "id": "AC6.1.3",
+      "status": "Deferred",
+      "target": "aidlc/spaces/default/intents/261006-npm-terrarium-release/inception/units-generation/unit-of-work-story-map.md",
+      "reason": "Primary implementation and release/CI/RC/stable judgment owned by U4; U3 provides local integration evidence only."
+    },
+    {
+      "id": "AC6.2.1",
+      "status": "Deferred",
+      "target": "aidlc/spaces/default/intents/261006-npm-terrarium-release/inception/units-generation/unit-of-work-story-map.md",
+      "reason": "Primary implementation and release/CI/RC/stable judgment owned by U4; U3 provides local integration evidence only."
+    },
+    {
+      "id": "AC6.2.2",
+      "status": "Deferred",
+      "target": "aidlc/spaces/default/intents/261006-npm-terrarium-release/inception/units-generation/unit-of-work-story-map.md",
+      "reason": "Primary implementation and release/CI/RC/stable judgment owned by U4; U3 provides local integration evidence only."
+    },
+    {
+      "id": "AC6.2.3",
+      "status": "Deferred",
+      "target": "aidlc/spaces/default/intents/261006-npm-terrarium-release/inception/units-generation/unit-of-work-story-map.md",
+      "reason": "Primary implementation and release/CI/RC/stable judgment owned by U4; U3 provides local integration evidence only."
+    },
+    {
+      "id": "AC6.3.1",
+      "status": "Deferred",
+      "target": "aidlc/spaces/default/intents/261006-npm-terrarium-release/inception/units-generation/unit-of-work-story-map.md",
+      "reason": "Primary implementation and release/CI/RC/stable judgment owned by U4; U3 provides local integration evidence only."
+    },
+    {
+      "id": "AC6.3.2",
+      "status": "Deferred",
+      "target": "aidlc/spaces/default/intents/261006-npm-terrarium-release/inception/units-generation/unit-of-work-story-map.md",
+      "reason": "Primary implementation and release/CI/RC/stable judgment owned by U4; U3 provides local integration evidence only."
+    },
+    {
+      "id": "AC6.3.3",
+      "status": "Deferred",
+      "target": "aidlc/spaces/default/intents/261006-npm-terrarium-release/inception/units-generation/unit-of-work-story-map.md",
+      "reason": "Primary implementation and release/CI/RC/stable judgment owned by U4; U3 provides local integration evidence only."
+    },
+    {
+      "id": "AC6.4.1",
+      "status": "Deferred",
+      "target": "aidlc/spaces/default/intents/261006-npm-terrarium-release/inception/units-generation/unit-of-work-story-map.md",
+      "reason": "Primary implementation and release/CI/RC/stable judgment owned by U4; U3 provides local integration evidence only."
+    },
+    {
+      "id": "AC6.4.2",
+      "status": "Deferred",
+      "target": "aidlc/spaces/default/intents/261006-npm-terrarium-release/inception/units-generation/unit-of-work-story-map.md",
+      "reason": "Primary implementation and release/CI/RC/stable judgment owned by U4; U3 provides local integration evidence only."
+    },
+    {
+      "id": "AC6.4.3",
+      "status": "Deferred",
+      "target": "aidlc/spaces/default/intents/261006-npm-terrarium-release/inception/units-generation/unit-of-work-story-map.md",
+      "reason": "Primary implementation and release/CI/RC/stable judgment owned by U4; U3 provides local integration evidence only."
+    }
+  ]
+}

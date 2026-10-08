@@ -9,7 +9,7 @@
 #   repo=    the GitHub repository, owner/name
 #   pr=      the pull request URL, for a pull request
 # <ref> is a branch, a tag or a commit, or a pull request as pr-<n>, #<n> or
-# its URL; without one, the tool's default build. Needs `gh` (GH_TOKEN in CI)
+# its URL, or latest for the latest stable release; without one, the tool's default build. Needs `gh` (GH_TOKEN in CI)
 # and jq.
 set -euo pipefail
 root=$(cd "$(dirname "$0")/.." && pwd)
@@ -20,10 +20,16 @@ entry=$(jq -e --arg t "$tool" '.[$t]' "$root/web/tools.json") ||
 url=$(jq -r .repository <<<"$entry")
 repo=${url#https://github.com/}
 ref=${2:-$(jq -r .default <<<"$entry")}
+if [[ $ref == latest ]]; then
+  ref=$(gh api "repos/$repo/releases/latest" --jq .tag_name)
+  [[ $ref =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]] ||
+    { echo "invalid latest stable release: $ref" >&2; exit 1; }
+fi
 echo "tool=$tool"
 echo "repo=$repo"
 if [[ $ref =~ ^(pr-|#)([0-9]+)$ || $ref =~ /pull/([0-9]+)/?$ ]]; then
-  n=${BASH_REMATCH[-1]}
+  match_index=$((${#BASH_REMATCH[@]} - 1))
+  n=${BASH_REMATCH[match_index]}
   commit=$(gh api "repos/$repo/pulls/$n" --jq .head.sha)
   echo "name=pr-$n"
   echo "ref=refs/pull/$n/head"

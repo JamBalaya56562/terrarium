@@ -1,0 +1,1 @@
+COVERS: the incoming scan covers everything the store analyzed.

@@ -1,0 +1,14 @@
+[
+  {
+    "path": "packages/terrarium/tests/formicarium-inputs.test.ts",
+    "oldSha256": "fb7d05938ecc39c9c1a4ac0c630bb3000176ad7b4a38effdcb3b1bda1f28f24f",
+    "newSha256": "75bf3bb43306a2e699af4517f5d0929b2e1ec7ddc0f245f043b92e0e59ee0eba",
+    "browserRuntimeEffect": false
+  },
+  {
+    "path": ".github/workflows/test-e2e.yml",
+    "oldSha256": "2e384ed4c81e54bb610f670338b84d6f44b535066a45745e19191bd234899609",
+    "newSha256": "6acc3919bdce23e723da5df977a709f7e591a755e6d0bb7f1ea09b79aa3326ce",
+    "browserRuntimeEffect": false
+  }
+]

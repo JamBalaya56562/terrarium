@@ -15,6 +15,7 @@ export interface ToolInfo {
 
 /** An entry of dist/builds.json. */
 export interface BuildInfo {
+  guest?: { format?: string };
   source?: {
     type?: string;
     url?: string;

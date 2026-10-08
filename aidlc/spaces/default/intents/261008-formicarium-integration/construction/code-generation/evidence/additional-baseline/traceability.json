@@ -1,0 +1,55 @@
+{
+  "stage": "code-generation",
+  "upstream_ids": [
+    "FR1",
+    "FR2",
+    "FR3",
+    "FR4",
+    "NFR1",
+    "NFR2",
+    "NFR3",
+    "NFR4"
+  ],
+  "coverage": [
+    {
+      "id": "FR1",
+      "status": "OK",
+      "target": "scripts/prepare-formicarium.mjs"
+    },
+    {
+      "id": "FR2",
+      "status": "OK",
+      "target": "scripts/stage-formicarium.mjs"
+    },
+    {
+      "id": "FR3",
+      "status": "PARTIAL",
+      "target": ".github/workflows/test-e2e.yml"
+    },
+    {
+      "id": "FR4",
+      "status": "OK",
+      "target": "packages/terrarium/README.md"
+    },
+    {
+      "id": "NFR1",
+      "status": "OK",
+      "target": "integration/formicarium-inputs.json"
+    },
+    {
+      "id": "NFR2",
+      "status": "PARTIAL",
+      "target": "packages/terrarium/playwright.formicarium.config.ts"
+    },
+    {
+      "id": "NFR3",
+      "status": "OK",
+      "target": "packages/terrarium/src/formicarium-session.ts"
+    },
+    {
+      "id": "NFR4",
+      "status": "OK",
+      "target": "scripts/assemble-pages.sh"
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+bun test v1.4.2 (744846f84)
+$ bun run gen && bun test tests
+$ bun scripts/gen-css.ts
+
+tests/pitchfork-build-retry.test.ts:
+(pass) vendor failure leaves no Cargo marker and retries an already applied tool patch [187.87ms]
+(pass) fresh tool patch is applied once before a successful build [154.27ms]
+(pass) mismatched tool patch fails without vendor Cargo marker or build output [62.88ms]
+
+tests/formicarium-inputs.test.ts:
+(pass) explicit input happy path is reproducible and retains verified bytes [6.16ms]
+(pass) missing explicit input refuses without creating an output [1.34ms]
+(pass) tarball manifest and resolver digest corruption refuse before output [5.42ms]
+(pass) missing advertised asset and unexpected file fail the exact file set [2.43ms]
+(pass) input symlink cannot escape the supplied directory [1.50ms]
+(pass) archive path traversal links duplicates and corrupted headers are rejected without extraction [1.80ms]
+(pass) plain ustar archive happy path reads only regular files [0.14ms]
+(pass) assembly preflight preserves an existing output when fixed inputs are missing [57.20ms]
+(pass) CI verifies fixed inputs before install and retains separate three-browser suites [1.32ms]
+
+tests/catalog.test.ts:
+(pass) choose > selects pitchfork with its own default, fixture and build [0.38ms]
+(pass) choose > defaults to the first tool and its default build, listed first [0.03ms]
+(pass) choose > picks the build asked for
+(pass) choose > falls back to the first build when the default is not published [0.02ms]
+(pass) choose > names the published builds when the one asked for is missing [0.02ms]
+(pass) choose > refuses an unknown tool [0.02ms]
+(pass) choose > says so when a tool has no builds yet [0.01ms]
+(pass) describe > adds the short commit when there is one [0.02ms]
+(pass) versioned > adds ?v= only when there is a version [0.03ms]
+(pass) catalog > reads tools.json and dist/builds.json under base, with the version [0.24ms]
+(pass) catalog > fetches each URL once [0.04ms]
+(pass) catalog > reports a failed fetch, and tries again next time [0.09ms]
+
+tests/formicarium-catalog.test.ts:
+(pass) catalogue to C3 boundary > default-first latest choices preserve Choice fields and old metadata [0.21ms]
+(pass) catalogue to C3 boundary > latest pitchfork and explicit old aube ref retain identity [0.09ms]
+(pass) catalogue to C3 boundary > explicit unknown ref and unknown tool fail without fallback [0.03ms]
+(pass) catalogue to C3 boundary > undefined and empty fixture stay distinct; explicit cwd overrides only cwd [0.14ms]
+(pass) catalogue to C3 boundary > guest/ref/commit mismatch and resolver failure propagate [0.17ms]
+(pass) catalogue to C3 boundary > legacy tools stay available without forced migration and invalid base fails [0.09ms]
+(pass) catalogue to C3 boundary > public assets reference actual same-site worker and a coherent installed package [0.03ms]
+(pass) legacy builds retain Session and declared guest formats fail closed [0.04ms]
+
+tests/pages-build-artifacts.test.ts:
+
+# Unhandled error between tests
+-------------------------------
+ 8 | } from 'node:fs';
+ 9 | import { tmpdir } from 'node:os';
+10 | import { dirname, join, resolve } from 'node:path';
+11 | 
+12 | const workspace = resolve(import.meta.dir, '../../..');
+13 | const workflow = readFileSync(
+                      ^
+ENOENT: no such file or directory, open '/private/tmp/terrarium-standalone-s00po458/.github/workflows/pages.yml'
+    path: "/private/tmp/terrarium-standalone-s00po458/.github/workflows/pages.yml",
+ syscall: "open",
+   errno: -2,
+    code: "ENOENT"
+
+      at /private/tmp/terrarium-standalone-s00po458/packages/terrarium/tests/pages-build-artifacts.test.ts:13:18
+-------------------------------
+
+
+tests/formicarium-assets.test.ts:
+(pass) candidate assets staging > copies exact installed package worker loader wasm build-info and all advertised refs [27.06ms]
+(pass) candidate assets staging > preserves unrelated tools and legacy source/upstream_pr/built_at metadata [29.74ms]
+(pass) candidate assets staging > missing installed worker rejects before staged output exists [10.80ms]
+(pass) candidate assets staging > changed installed package digest rejects [10.69ms]
+(pass) candidate assets staging > missing retained ref asset rejects rather than advertise a broken old ref [12.51ms]
+(pass) candidate assets staging > guest hash mismatch rejects before output [12.61ms]
+(pass) candidate assets staging > dirty package and mismatched installed version reject [12.68ms]
+(pass) candidate assets staging > copied resolver modules retain exact frozen source bytes [21.45ms]
+
+tests/pitchfork-runtime.test.ts:
+(pass) pitchfork ref resolution > resolves the registered default version [58.58ms]
+(pass) pitchfork ref resolution > resolves an explicit branch and names its directory safely [58.47ms]
+(pass) pitchfork ref resolution > uses the full resolved commit and a short SHA directory [51.22ms]
+(pass) pitchfork ref resolution > resolves pr-42 through its head endpoint [52.19ms]
+(pass) pitchfork ref resolution > resolves #42 through its head endpoint [55.98ms]
+(pass) pitchfork ref resolution > resolves https://github.com/jdx/pitchfork/pull/42 through its head endpoint [54.18ms]
+(pass) pitchfork ref resolution > rejects unknown tools without invoking the API [13.51ms]
+(pass) pitchfork ref resolution > rejects unsafe names and reports API failures [78.40ms]
+(pass) pitchfork staging > stages both artifacts and fixture metadata while preserving aube [58.58ms]
+(pass) pitchfork staging > stages fixtures alone without a build argument [47.57ms]
+(pass) pitchfork staging > rejects an unknown tool before creating distribution output [12.35ms]
+(pass) pitchfork staging > rejects path traversal names before writing [30.33ms]
+(pass) pitchfork staging > rejects missing artifacts and incomplete input without partial output [17.22ms]
+(pass) locked crate patching > applies the locked version and emits its Cargo reference [30.02ms]
+(pass) locked crate patching > applies both locked versions with distinct Cargo keys [47.04ms]
+(pass) locked crate patching > does not cache a failed patch and applies it on retry [56.76ms]
+(pass) locked crate patching > does not apply a version absent from the lockfile and can rerun [55.79ms]
+
+tests/formicarium-session.test.ts:
+(pass) public C1 command adapter > permitted literal quote adjacency preserves baseline splitArgs tokens [0.22ms]
+(pass) public C1 command adapter > seeds /work before selected nested cwd and preserves sibling and modes [0.82ms]
+(pass) public C1 command adapter > passes guest args env timeout and retains raw result without duplicate display [0.11ms]
+(pass) public C1 command adapter > decodes split UTF8 separately in callback sequence [0.13ms]
+(pass) public C1 command adapter > failed-run partial output appears once and queue accepts next command [0.15ms]
+(pass) public C1 command adapter > empty unknown literal quoting and unsupported shell syntax [0.14ms]
+(pass) public C1 command adapter > ls default option path empty direct children file symlink and missing [0.26ms]
+(pass) public C1 command adapter > rm removes dir recursively and link only, preserves hardlink peer, rejects roots [0.17ms]
+(pass) public C1 command adapter > cd/cat missing failures retain baseline output and keep cwd synchronized [0.10ms]
+(pass) public C1 command adapter > copy changes are isolated reset restores seed and selected cwd sessions independent [0.22ms]
+(pass) public C1 command adapter > legacy exported Session and Tool remain usable [0.13ms]
+
+tests/session.test.ts:
+(pass) splitArgs > splits on whitespace and keeps quoted arguments whole
+(pass) splitArgs > returns nothing for a blank line
+(pass) splitArgs > keeps an empty quoted argument
+(pass) built-in commands > seed creates the parent directories [0.12ms]
+(pass) built-in commands > ls lists a directory, sorted, with a slash after directories [0.11ms]
+(pass) built-in commands > cat prints a file, and fails on a missing one [0.05ms]
+(pass) built-in commands > cd and pwd move around, and cd refuses a missing directory [0.05ms]
+(pass) built-in commands > rm -rf removes a directory and everything under it [0.05ms]
+(pass) built-in commands > an unknown command exits 127 and names the commands there are [0.04ms]
+(pass) built-in commands > a blank line does nothing [0.03ms]
+(pass) running the tool > passes the arguments, the cwd and the environment, and returns the exit code [0.38ms]
+(pass) running the tool > streams output byte by byte without breaking multi-byte characters [0.13ms]
+(pass) running the tool > loads the disk into the tool and saves what the tool leaves [0.27ms]
+(pass) running the tool > each run starts from the disk, not from the previous run [0.10ms]
+
+1 tests failed:
+
+ 82 pass
+ 1 fail
+ 1 error
+ 339 expect() calls
+Ran 83 tests across 9 files. [1426.00ms]
+error: script "test" exited with code 1

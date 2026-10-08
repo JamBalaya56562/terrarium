@@ -1,0 +1,25 @@
+{
+  "url": "https://aletheia-works.github.io/terrarium/web/dist/",
+  "entry": {
+    "source": {
+      "type": "git",
+      "url": "https://github.com/jdx/pitchfork",
+      "ref": "v2.29.0",
+      "commit": "cfdea79f1d52b8449c0b99b29a03d9e771cd8ec3"
+    },
+    "upstream_pr": null,
+    "built_at": "2026-10-06T06:09:28.141Z"
+  },
+  "files": [
+    {
+      "path": ".vendor/legacy-pitchfork/pitchfork.js",
+      "sha256": "4bf0ea2764e2ba3c5650cb577f5c66156af5a76cd682691d1d8f4e07875b8fb1",
+      "size": 126047
+    },
+    {
+      "path": ".vendor/legacy-pitchfork/pitchfork.wasm",
+      "sha256": "16f335ef529b2fa7815cc6201030b01538ef76d9b52478746dc4df62161b8cee",
+      "size": 20389228
+    }
+  ]
+}

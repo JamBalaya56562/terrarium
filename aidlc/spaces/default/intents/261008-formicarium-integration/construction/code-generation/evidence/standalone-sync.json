@@ -1,0 +1,56 @@
+[
+  {
+    "path": "scripts/prepare-formicarium.mjs",
+    "beforeSha256": "5c990a3f8181e17737ccfbe11f57af459299c39ebd0e9d5826df991f0977fe66",
+    "afterSha256": "51c3c2ee098b341ef5a15ce0c33dab7c3b8b282e496afd6b0a64bbe9022a1fbb",
+    "browserBehaviorChange": false
+  },
+  {
+    "path": "packages/terrarium/playwright.config.ts",
+    "beforeSha256": "fcae5bfb12f46bc3624afa918080da8dc301d467122267bf727c4044831df63f",
+    "afterSha256": "5d0cf100932a314c986ab50eede0b1d9ac2618a2e40b5ee76366ae513f2095f6",
+    "browserBehaviorChange": "results directory separation only"
+  },
+  {
+    "path": "packages/terrarium/playwright.formicarium.config.ts",
+    "beforeSha256": "07def8366f606089c95cebb2c4e1a503456caee560ae38fe9b8a5d4fe54844b1",
+    "afterSha256": "91e43cbcfc942166a0def1b11c41356ced2c0b97db24d1416f23a57e71fdb2c6",
+    "browserBehaviorChange": "results directory separation only"
+  },
+  {
+    "path": "packages/terrarium/tests/formicarium-inputs.test.ts",
+    "beforeSha256": "9a8ed0c2f4b36ad653367b682f49426669611c7b5ba48fb595effcc1a03ea55e",
+    "afterSha256": "fb7d05938ecc39c9c1a4ac0c630bb3000176ad7b4a38effdcb3b1bda1f28f24f",
+    "browserBehaviorChange": false
+  },
+  {
+    "path": "integration/formicarium-inputs.json",
+    "beforeSha256": "24ff31a8c69aae32ada473fb5b5e9e7c3b1078cff582056ebefbbc7436f7f348",
+    "afterSha256": "24ff31a8c69aae32ada473fb5b5e9e7c3b1078cff582056ebefbbc7436f7f348",
+    "browserBehaviorChange": false
+  },
+  {
+    "path": "mise.toml",
+    "beforeSha256": "b28d81a6b593037c0a2b771957cd8c93b00ba3531d6642cb7883309034fec73a",
+    "afterSha256": "74cc26ac5a2f93ff55cb396de003d21c724a003983484efaca074887568ccdc9",
+    "browserBehaviorChange": false
+  },
+  {
+    "path": ".github/workflows/test-e2e.yml",
+    "beforeSha256": "e170daf9bec5daf279745d1c49f4587e412862ff285756b71ffb5d85993e4cac",
+    "afterSha256": "2e384ed4c81e54bb610f670338b84d6f44b535066a45745e19191bd234899609",
+    "browserBehaviorChange": false
+  },
+  {
+    "path": ".github/workflows/test-terrarium.yml",
+    "beforeSha256": "5c59e63bd525548e6e899488df76ed3dd462ad3251b7927a234f1de41d96eb38",
+    "afterSha256": "5c59e63bd525548e6e899488df76ed3dd462ad3251b7927a234f1de41d96eb38",
+    "browserBehaviorChange": false
+  },
+  {
+    "path": "packages/terrarium/README.md",
+    "beforeSha256": "d58eef52b44dff0ad9769f3554f339aa211034f9cb12edb24f130cdc3b3aef54",
+    "afterSha256": "87095999c1dcaf58bb6f39d125ad3c4ef3d7011ef3d1a91c5f8d9c431cf40d52",
+    "browserBehaviorChange": false
+  }
+]

@@ -1,0 +1,56 @@
+bun test v1.4.2 (744846f84)
+
+tests/pitchfork-build-retry.test.ts:
+163 |     } else {
+164 |       failure = error;
+165 |       hasFailure = true;
+166 |     }
+167 |   }
+168 |   if (hasFailure) throw failure;
+                              ^
+error: expect(received).toBe(expected)
+
+- "after
++ "before
+  "
+
+- Expected  - 1
++ Received  + 1
+
+      at <anonymous> (/private/tmp/terrarium-standalone-s00po458/packages/terrarium/tests/pitchfork-build-retry.test.ts:168:25)
+(fail) vendor failure leaves no Cargo marker and retries an already applied tool patch [169.60ms]
+
+tests/pitchfork-runtime.test.ts:
+(pass) pitchfork ref resolution > resolves the registered default version [61.55ms]
+(pass) pitchfork ref resolution > resolves an explicit branch and names its directory safely [59.84ms]
+(pass) pitchfork ref resolution > uses the full resolved commit and a short SHA directory [59.36ms]
+173 |     });
+174 |   });
+175 | 
+176 |   test('resolves a pull request through its head endpoint', () => {
+177 |     const result = run('resolve-ref.sh', ['pitchfork', 'pr-42']);
+178 |     expect(result.code).toBe(0);
+                              ^
+error: expect(received).toBe(expected)
+
+Expected: 0
+Received: 1
+
+      at <anonymous> (/private/tmp/terrarium-standalone-s00po458/packages/terrarium/tests/pitchfork-runtime.test.ts:178:25)
+(fail) pitchfork ref resolution > resolves a pull request through its head endpoint [22.30ms]
+(pass) pitchfork ref resolution > rejects unknown tools without invoking the API [14.57ms]
+(pass) pitchfork ref resolution > rejects unsafe names and reports API failures [73.41ms]
+(pass) pitchfork staging > stages both artifacts and fixture metadata while preserving aube [72.39ms]
+(pass) pitchfork staging > stages fixtures alone without a build argument [55.26ms]
+(pass) pitchfork staging > rejects an unknown tool before creating distribution output [14.45ms]
+(pass) pitchfork staging > rejects path traversal names before writing [39.51ms]
+(pass) pitchfork staging > rejects missing artifacts and incomplete input without partial output [28.10ms]
+(pass) locked crate patching > applies the locked version and emits its Cargo reference [64.60ms]
+(pass) locked crate patching > applies both locked versions with distinct Cargo keys [93.11ms]
+(pass) locked crate patching > does not cache a failed patch and applies it on retry [131.00ms]
+(pass) locked crate patching > does not apply a version absent from the lockfile and can rerun [83.82ms]
+
+ 14 pass
+ 2 fail
+ 60 expect() calls
+Ran 16 tests across 2 files. [1050.00ms]

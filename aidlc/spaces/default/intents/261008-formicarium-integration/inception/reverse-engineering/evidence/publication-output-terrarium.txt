@@ -1,0 +1,1 @@
+{"error":"codekb-publish: snapshot paths do not cover candidate analyzed path \"packages/terrarium/src/formicarium-session.ts\"; take a fresh codekb-snapshot over the complete candidate scope"}

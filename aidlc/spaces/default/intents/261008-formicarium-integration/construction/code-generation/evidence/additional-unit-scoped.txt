@@ -1,0 +1,30 @@
+bun test v1.4.2 (744846f84)
+
+tests/pitchfork-runtime.test.ts:
+(pass) pitchfork ref resolution > resolves the registered default version [111.37ms]
+(pass) pitchfork ref resolution > resolves an explicit branch and names its directory safely [55.97ms]
+(pass) pitchfork ref resolution > uses the full resolved commit and a short SHA directory [47.48ms]
+(pass) pitchfork ref resolution > resolves pr-42 through its head endpoint [53.66ms]
+(pass) pitchfork ref resolution > resolves #42 through its head endpoint [52.43ms]
+(pass) pitchfork ref resolution > resolves https://github.com/jdx/pitchfork/pull/42 through its head endpoint [53.33ms]
+(pass) pitchfork ref resolution > rejects unknown tools without invoking the API [12.77ms]
+(pass) pitchfork ref resolution > rejects unsafe names and reports API failures [76.54ms]
+(pass) pitchfork staging > stages both artifacts and fixture metadata while preserving aube [57.73ms]
+(pass) pitchfork staging > stages fixtures alone without a build argument [47.45ms]
+(pass) pitchfork staging > rejects an unknown tool before creating distribution output [11.78ms]
+(pass) pitchfork staging > rejects path traversal names before writing [30.15ms]
+(pass) pitchfork staging > rejects missing artifacts and incomplete input without partial output [16.77ms]
+(pass) locked crate patching > applies the locked version and emits its Cargo reference [30.64ms]
+(pass) locked crate patching > applies both locked versions with distinct Cargo keys [46.07ms]
+(pass) locked crate patching > does not cache a failed patch and applies it on retry [55.01ms]
+(pass) locked crate patching > does not apply a version absent from the lockfile and can rerun [56.13ms]
+
+tests/pitchfork-build-retry.test.ts:
+(pass) vendor failure leaves no Cargo marker and retries an already applied tool patch [206.33ms]
+(pass) fresh tool patch is applied once before a successful build [161.15ms]
+(pass) mismatched tool patch fails without vendor Cargo marker or build output [68.41ms]
+
+ 20 pass
+ 0 fail
+ 91 expect() calls
+Ran 20 tests across 2 files. [1261.00ms]

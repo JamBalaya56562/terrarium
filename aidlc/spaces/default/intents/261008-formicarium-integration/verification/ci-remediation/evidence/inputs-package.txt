@@ -1,0 +1,132 @@
+[ci:terrarium] $ bun ../../scripts/prepare-formicarium.mjs --from "$FORMICARIUM_INPUTS_DIR"
+{"root":"/Users/mutoakio/Documents/terrarium/.vendor/formicarium-inputs","normalizedDescriptorSha256":"d361959bd0a319452eac6f9bec2ec00ffea91a46d284a7420bda06c0c294cf83","files":[{"path":"guests/dist/aube/5a75abb5b2ff53ed9b89f85a9695e29fa8dae3a4fda6f25046f39ac04a413d92/build-info.json","size":1112,"sha256":"994ad5923dcd8383c887228987b3cf656a541bc658747d4ce76e6f219b90f5fd"},{"path":"guests/dist/aube/5a75abb5b2ff53ed9b89f85a9695e29fa8dae3a4fda6f25046f39ac04a413d92/fixture-e6149f95eadefc92a559dd4f39b4836064a087b2f95c954bf13b6b786c8798f3.json","size":366,"sha256":"17e2c1f140570536c0fd73f9d91cc12b9b4aaa76361c2396b611005966989454"},{"path":"guests/dist/aube/5a75abb5b2ff53ed9b89f85a9695e29fa8dae3a4fda6f25046f39ac04a413d92/guest","size":36497472,"sha256":"d973c97da25ed13e49943b0836c88fd5d9e51ac422faa5b38a3df997ad1ceef9"},{"path":"guests/dist/aube/83a42e281acf38e98fbbddf590e77746dcb9dfdb12cce4b27d1eb1926e1e5b5d/build-info.json","size":1112,"sha256":"18248d1d2cfdd3933b5608ea795bc78473e2d400791c8d5204d63be9755102d5"},{"path":"guests/dist/aube/83a42e281acf38e98fbbddf590e77746dcb9dfdb12cce4b27d1eb1926e1e5b5d/fixture-e6149f95eadefc92a559dd4f39b4836064a087b2f95c954bf13b6b786c8798f3.json","size":366,"sha256":"17e2c1f140570536c0fd73f9d91cc12b9b4aaa76361c2396b611005966989454"},{"path":"guests/dist/aube/83a42e281acf38e98fbbddf590e77746dcb9dfdb12cce4b27d1eb1926e1e5b5d/guest","size":36948544,"sha256":"c7d7d13692d01c5f6adc5511c40adc6b3769080b7c433b44c411a3e52ebcd99e"},{"path":"guests/dist/builds.json","size":3558,"sha256":"bbbd4ee2e8bf19a8bd24f639018f4519a6be42a6c40caf489f630fe7b63f0be3"},{"path":"guests/dist/pitchfork/65f9a59988b5d3b353880d9109a73e3666bdd58fda9b0ccc8b18d1c1340c915b/build-info.json","size":1048,"sha256":"29e1adac2ee1308ed31a1903b9796ceae16431239733a325aa918051b77515b8"},{"path":"guests/dist/pitchfork/65f9a59988b5d3b353880d9109a73e3666bdd58fda9b0ccc8b18d1c1340c915b/fixture-70fa4ab004890168522fa83941f86a1e0a28818246b6a065e4b0ef685e8035b3.json","size":151,"sha256":"081abc73542d06df09d28cdad88bfda1628634ab5482a3f8238134a25951583a"},{"path":"guests/dist/pitchfork/65f9a59988b5d3b353880d9109a73e3666bdd58fda9b0ccc8b18d1c1340c915b/guest","size":39689200,"sha256":"f30395a418e526e939350cc87e03d43c92d1aa0a0b0b104130761a8b8daa841e"},{"path":"guests/tools.json","size":361,"sha256":"a5c43898b08be774f136a0a7243614e278d2949d9183ee2070bb5b70adb3d82d"},{"path":"package/aletheia-works-formicarium-0.1.0-rc.1.tgz","size":232440,"sha256":"969e9fab854d4499da1d38087bd601b65042b6d50b086c8fc8ddaefd0752f810"},{"path":"package/manifest.json","size":5353,"sha256":"ba2f4ced257067a4c2aa64c9841b04a04f332e4812bcd369bab0d2807b310aef"},{"path":"resolver/fixtures.mjs","size":5027,"sha256":"3ae3a6e923afe3514294991965d2cef9502c3d8388ec1932f8394c95897292ce"},{"path":"resolver/manifest.mjs","size":5415,"sha256":"e03ee62d8b438806a2ca50e687ed66562c4415a571edc9a71717e9b5784f2bf5"},{"path":"resolver/resolver.mjs","size":5323,"sha256":"aab15f45b4e355d453c39532393728221299d656b8dfd47826380dc6a070feec"}]}
+[ci:terrarium] $ bun install --frozen-lockfile
+bun install v1.4.2 (744846f84)
+
++ @aletheia-works/formicarium@../../.vendor/formicarium-inputs/package/aletheia-works-formicarium-0.1.0-rc.1.tgz
+
+1 package installed [13.00ms]
+[ci:terrarium] $ bun run typecheck
+$ bun run gen && tsc -p tsconfig.json --noEmit && tsc -p tests/tsconfig.json
+$ bun scripts/gen-css.ts
+[ci:terrarium] $ bun run test
+$ bun run gen && bun test tests
+$ bun scripts/gen-css.ts
+bun test v1.4.2 (744846f84)
+
+tests/pitchfork-build-retry.test.ts:
+(pass) vendor failure leaves no Cargo marker and retries an already applied tool patch [273.69ms]
+(pass) fresh tool patch is applied once before a successful build [154.30ms]
+(pass) mismatched tool patch fails without vendor Cargo marker or build output [88.74ms]
+
+tests/formicarium-inputs.test.ts:
+(pass) explicit input happy path is reproducible and retains verified bytes [7.37ms]
+(pass) missing explicit input refuses without creating an output [1.77ms]
+(pass) tarball manifest and resolver digest corruption refuse before output [5.84ms]
+(pass) missing advertised asset and unexpected file fail the exact file set [2.60ms]
+(pass) input symlink cannot escape the supplied directory [1.77ms]
+(pass) archive path traversal links duplicates and corrupted headers are rejected without extraction [3.39ms]
+(pass) plain ustar archive happy path reads only regular files [0.15ms]
+(pass) assembly preflight preserves an existing output when fixed inputs are missing [55.11ms]
+(pass) a supplied archive with a different compressed digest is refused before placement [1.80ms]
+(pass) the CI archive is pinned to an immutable commit and matches the verified fixed inputs [0.42ms]
+(pass) CI verifies fixed inputs before install and retains separate three-browser suites [0.22ms]
+
+tests/catalog.test.ts:
+(pass) choose > selects pitchfork with its own default, fixture and build [2.17ms]
+(pass) choose > defaults to the first tool and its default build, listed first [0.06ms]
+(pass) choose > picks the build asked for [0.02ms]
+(pass) choose > falls back to the first build when the default is not published [0.28ms]
+(pass) choose > names the published builds when the one asked for is missing [0.04ms]
+(pass) choose > refuses an unknown tool [0.01ms]
+(pass) choose > says so when a tool has no builds yet [0.02ms]
+(pass) describe > adds the short commit when there is one [0.03ms]
+(pass) versioned > adds ?v= only when there is a version [0.66ms]
+(pass) catalog > reads tools.json and dist/builds.json under base, with the version [1.33ms]
+(pass) catalog > fetches each URL once [0.04ms]
+(pass) catalog > reports a failed fetch, and tries again next time [0.05ms]
+
+tests/formicarium-catalog.test.ts:
+(pass) catalogue to C3 boundary > default-first latest choices preserve Choice fields and old metadata [0.17ms]
+(pass) catalogue to C3 boundary > latest pitchfork and explicit old aube ref retain identity [0.08ms]
+(pass) catalogue to C3 boundary > explicit unknown ref and unknown tool fail without fallback [0.03ms]
+(pass) catalogue to C3 boundary > undefined and empty fixture stay distinct; explicit cwd overrides only cwd [0.29ms]
+(pass) catalogue to C3 boundary > guest/ref/commit mismatch and resolver failure propagate [0.17ms]
+(pass) catalogue to C3 boundary > legacy tools stay available without forced migration and invalid base fails [0.08ms]
+(pass) catalogue to C3 boundary > public assets reference actual same-site worker and a coherent installed package [0.04ms]
+(pass) legacy builds retain Session and declared guest formats fail closed [0.04ms]
+
+tests/pages-build-artifacts.test.ts:
+(pass) Pages store finds single downloaded build artifacts [4.11ms]
+(pass) Pages store finds multiple downloaded build artifacts [3.87ms]
+(pass) Pages store finds none downloaded build artifacts [2.55ms]
+
+tests/formicarium-assets.test.ts:
+(pass) candidate assets staging > copies exact installed package worker loader wasm build-info and all advertised refs [25.94ms]
+(pass) candidate assets staging > preserves unrelated tools and legacy source/upstream_pr/built_at metadata [19.34ms]
+(pass) candidate assets staging > missing installed worker rejects before staged output exists [9.83ms]
+(pass) candidate assets staging > changed installed package digest rejects [11.24ms]
+(pass) candidate assets staging > missing retained ref asset rejects rather than advertise a broken old ref [10.01ms]
+(pass) candidate assets staging > guest hash mismatch rejects before output [10.38ms]
+(pass) candidate assets staging > dirty package and mismatched installed version reject [9.55ms]
+(pass) candidate assets staging > copied resolver modules retain exact frozen source bytes [18.92ms]
+
+tests/pitchfork-runtime.test.ts:
+(pass) pitchfork ref resolution > resolves the registered default version [77.37ms]
+(pass) pitchfork ref resolution > resolves the latest stable release to a full commit without using the old default [57.69ms]
+(pass) pitchfork ref resolution > refuses an invalid latest release rather than falling back to the old version [49.95ms]
+(pass) pitchfork ref resolution > resolves an explicit branch and names its directory safely [48.89ms]
+(pass) pitchfork ref resolution > uses the full resolved commit and a short SHA directory [51.86ms]
+(pass) pitchfork ref resolution > resolves pr-42 through its head endpoint [53.72ms]
+(pass) pitchfork ref resolution > resolves #42 through its head endpoint [48.98ms]
+(pass) pitchfork ref resolution > resolves https://github.com/jdx/pitchfork/pull/42 through its head endpoint [50.72ms]
+(pass) pitchfork ref resolution > rejects unknown tools without invoking the API [14.17ms]
+(pass) pitchfork ref resolution > rejects unsafe names and reports API failures [74.90ms]
+(pass) pitchfork staging > stages both artifacts and fixture metadata while preserving aube [69.03ms]
+(pass) pitchfork staging > stages fixtures alone without a build argument [49.74ms]
+(pass) pitchfork staging > rejects an unknown tool before creating distribution output [12.52ms]
+(pass) pitchfork staging > rejects path traversal names before writing [31.87ms]
+(pass) pitchfork staging > rejects missing artifacts and incomplete input without partial output [17.83ms]
+(pass) latest pitchfork E2E staging > stages the resolved latest identity and records it for local CI without resolving again [80.64ms]
+(pass) latest pitchfork E2E staging > does not accept an older staged build as the latest release [72.43ms]
+(pass) locked crate patching > applies the locked version and emits its Cargo reference [33.67ms]
+(pass) locked crate patching > applies both locked versions with distinct Cargo keys [48.81ms]
+(pass) locked crate patching > does not cache a failed patch and applies it on retry [58.21ms]
+(pass) locked crate patching > does not apply a version absent from the lockfile and can rerun [58.39ms]
+
+tests/formicarium-session.test.ts:
+(pass) public C1 command adapter > permitted literal quote adjacency preserves baseline splitArgs tokens [0.42ms]
+(pass) public C1 command adapter > seeds /work before selected nested cwd and preserves sibling and modes [1.17ms]
+(pass) public C1 command adapter > passes guest args env timeout and retains raw result without duplicate display [0.10ms]
+(pass) public C1 command adapter > decodes split UTF8 separately in callback sequence [0.46ms]
+(pass) public C1 command adapter > failed-run partial output appears once and queue accepts next command [0.14ms]
+(pass) public C1 command adapter > empty unknown literal quoting and unsupported shell syntax [0.15ms]
+(pass) public C1 command adapter > ls default option path empty direct children file symlink and missing [0.27ms]
+(pass) public C1 command adapter > rm removes dir recursively and link only, preserves hardlink peer, rejects roots [0.17ms]
+(pass) public C1 command adapter > cd/cat missing failures retain baseline output and keep cwd synchronized [0.10ms]
+(pass) public C1 command adapter > copy changes are isolated reset restores seed and selected cwd sessions independent [0.25ms]
+(pass) public C1 command adapter > legacy exported Session and Tool remain usable [0.13ms]
+
+tests/session.test.ts:
+(pass) splitArgs > splits on whitespace and keeps quoted arguments whole [0.01ms]
+(pass) splitArgs > returns nothing for a blank line
+(pass) splitArgs > keeps an empty quoted argument
+(pass) built-in commands > seed creates the parent directories [0.13ms]
+(pass) built-in commands > ls lists a directory, sorted, with a slash after directories [0.11ms]
+(pass) built-in commands > cat prints a file, and fails on a missing one [0.05ms]
+(pass) built-in commands > cd and pwd move around, and cd refuses a missing directory [0.05ms]
+(pass) built-in commands > rm -rf removes a directory and everything under it [0.06ms]
+(pass) built-in commands > an unknown command exits 127 and names the commands there are [0.03ms]
+(pass) built-in commands > a blank line does nothing [0.03ms]
+(pass) running the tool > passes the arguments, the cwd and the environment, and returns the exit code [0.39ms]
+(pass) running the tool > streams output byte by byte without breaking multi-byte characters [0.14ms]
+(pass) running the tool > loads the disk into the tool and saves what the tool leaves [0.28ms]
+(pass) running the tool > each run starts from the disk, not from the previous run [0.10ms]
+
+ 91 pass
+ 0 fail
+ 373 expect() calls
+Ran 91 tests across 9 files. [1.82s]
+[ci:terrarium] $ bun run build
+$ bun run gen && tsc -p tsconfig.json
+$ bun scripts/gen-css.ts

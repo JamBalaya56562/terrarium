@@ -1,0 +1,7 @@
+
+In scripts/build-pitchfork.sh line 21:
+TERRARIUM_THREADS=1 . "$root/scripts/emscripten-env.sh"
+                      ^-- SC1091 (info): Not following: ./scripts/emscripten-env.sh was not specified as input (see shellcheck -x).
+
+For more information:
+  https://www.shellcheck.net/wiki/SC1091 -- Not following: ./scripts/emscript...

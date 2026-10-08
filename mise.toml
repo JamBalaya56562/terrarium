@@ -3,6 +3,7 @@ actionlint = "latest"
 biome = "latest"
 bun = "latest"
 jq = "latest"
+node = "26.9.0"
 opentofu = "latest"
 rumdl = "latest"
 shellcheck = "latest"
@@ -11,16 +12,16 @@ tombi = "latest"
 [settings]
 experimental = true
 
-# Install a package's dependencies when its manifest or lockfile changes.
+# Dependencies are explicit: verify fixed inputs before frozen installation.
 [deps.bun-terrarium]
-auto = true
+auto = false
 sources = ["package.json", "bun.lock"]
 outputs = ["node_modules"]
 run = "bun install --frozen-lockfile"
 dir = "packages/terrarium"
 
 [hooks]
-enter = ["mise deps -q"]
+enter = []
 
 # ── Lint ──────────────────────────────────────────────────────────────
 # Read-only `<area>:check` and in-place `<area>:check:fix`, as in vivarium.
@@ -78,26 +79,30 @@ run = "bun run typecheck"
 [tasks."terrarium:e2e"]
 description = "Browser tests against .site (run site:build first, with a build in web/dist)"
 dir = "packages/terrarium"
-run = "bun run test:e2e"
+run = "TERRARIUM_BUN=$(command -v bun) TERRARIUM_SITE_DIR=$(pwd)/../../.vendor/site-legacy bun run test:e2e"
 
 [tasks."site:build"]
 description = "Assemble the GitHub Pages site into .site/ with the staged web/dist/"
 run = "bash scripts/assemble-pages.sh .site"
 
 [tasks."ci:e2e"]
-description = "Test aube v2.6.1 and a staged pitchfork v2.29.0 build in all browsers"
+description = "Test aube v2.6.1 and the latest stable pitchfork build in all browsers"
 run = [
+  'bun scripts/prepare-formicarium.mjs --from "$FORMICARIUM_INPUTS_DIR"',
+  "cd packages/terrarium && bun install --frozen-lockfile",
   "bash scripts/fetch-builds.sh v2.6.1",
   "bash scripts/prepare-pitchfork-e2e.sh",
   "bash scripts/stage-web.sh",
-  "bash scripts/assemble-pages.sh .site",
-  "cd packages/terrarium && bun run test:e2e",
+  "TERRARIUM_PITCHFORK_REF=$(jq -r .ref .vendor/pitchfork-e2e.json) bash scripts/assemble-pages.sh .vendor/site-legacy legacy",
+  "cd packages/terrarium && TERRARIUM_BUN=$(command -v bun) TERRARIUM_SITE_DIR=$(pwd)/../../.vendor/site-legacy bun run test:e2e",
+  "bash scripts/assemble-pages.sh .vendor/site-formicarium",
+  "cd packages/terrarium && TERRARIUM_BUN=$(command -v bun) TERRARIUM_SITE_DIR=$(pwd)/../../.vendor/site-formicarium bun x playwright test --config playwright.formicarium.config.ts --workers=1 --retries=0",
 ]
 
 [tasks."ci:terrarium"]
 description = "Local equivalent of test-terrarium.yml"
 dir = "packages/terrarium"
-run = ["bun install --frozen-lockfile", "bun run typecheck", "bun run test", "bun run build"]
+run = ["bun ../../scripts/prepare-formicarium.mjs --from \"$FORMICARIUM_INPUTS_DIR\"", "bun install --frozen-lockfile", "bun run typecheck", "bun run test", "bun run build"]
 
 # ── Infra ─────────────────────────────────────────────────────────────
 
@@ -114,3 +119,22 @@ run = "tofu plan"
 [tasks."infra:fmt"]
 description = "Format the OpenTofu files (in-place)"
 run = "tofu fmt -recursive infra"
+
+# Unit-scoped common runtime integration. Local pack is not a published RC.
+[tasks."terrarium:formicarium-unit"]
+description = "Test the public formicarium adapter and distribution boundaries"
+dir = "packages/terrarium"
+run = "bun test tests/formicarium-session.test.ts tests/formicarium-catalog.test.ts tests/formicarium-assets.test.ts"
+
+[tasks."terrarium:formicarium-build"]
+description = "Type-check and stage the installed common runtime package"
+run = ["cd packages/terrarium && bun run typecheck", "bash scripts/assemble-pages.sh .vendor/site-formicarium"]
+
+[tasks."terrarium:formicarium-e2e"]
+description = "Verify common runtime terminal and iframe in all three browsers"
+dir = "packages/terrarium"
+run = "TERRARIUM_BUN=$(command -v bun) TERRARIUM_SITE_DIR=$(pwd)/../../.vendor/site-formicarium bun x playwright test --config playwright.formicarium.config.ts e2e/formicarium-terminal.spec.ts e2e/formicarium-iframe.spec.ts --workers=1 --retries=0"
+
+[tasks."terrarium:inputs"]
+description = "Verify an explicit fixed formicarium input directory before installation"
+run = 'bun scripts/prepare-formicarium.mjs --from "$FORMICARIUM_INPUTS_DIR"'

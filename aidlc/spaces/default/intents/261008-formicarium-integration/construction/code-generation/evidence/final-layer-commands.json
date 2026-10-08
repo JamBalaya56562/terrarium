@@ -1,0 +1,81 @@
+[
+  {
+    "command": [
+      "mise",
+      "exec",
+      "node@26",
+      "--",
+      "bun",
+      "run",
+      "typecheck"
+    ],
+    "cwd": "packages/terrarium",
+    "exitCode": 0
+  },
+  {
+    "command": [
+      "mise",
+      "exec",
+      "node@26",
+      "--",
+      "bun",
+      "test",
+      "./tests/formicarium-inputs.test.ts",
+      "./tests/formicarium-session.test.ts",
+      "./tests/formicarium-catalog.test.ts",
+      "./tests/formicarium-assets.test.ts"
+    ],
+    "cwd": "packages/terrarium",
+    "exitCode": 0
+  },
+  {
+    "command": [
+      "mise",
+      "exec",
+      "--",
+      "biome",
+      "check",
+      "scripts/prepare-formicarium.mjs",
+      "integration/formicarium-inputs.json",
+      "packages/terrarium/tests/formicarium-inputs.test.ts"
+    ],
+    "cwd": ".",
+    "exitCode": 0
+  },
+  {
+    "command": [
+      "mise",
+      "exec",
+      "--",
+      "actionlint",
+      ".github/workflows/test-terrarium.yml",
+      ".github/workflows/test-e2e.yml"
+    ],
+    "cwd": ".",
+    "exitCode": 0
+  },
+  {
+    "command": [
+      "mise",
+      "exec",
+      "--",
+      "shellcheck",
+      "scripts/assemble-pages.sh"
+    ],
+    "cwd": ".",
+    "exitCode": 0
+  },
+  {
+    "command": [
+      "mise",
+      "exec",
+      "--",
+      "tombi",
+      "format",
+      "--check",
+      "mise.toml"
+    ],
+    "cwd": ".",
+    "exitCode": 0
+  }
+]

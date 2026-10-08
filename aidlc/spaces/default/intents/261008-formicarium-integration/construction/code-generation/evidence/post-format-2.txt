@@ -1,0 +1,2 @@
+$ bun run gen && tsc -p tsconfig.json
+$ bun scripts/gen-css.ts

@@ -1,0 +1,1066 @@
+{
+  "schemaVersion": 1,
+  "hashMethod": "raw SHA-256; excludes itself; previous evidence-manifest-final.json retained unchanged",
+  "files": [
+    {
+      "path": "evidence/additional-baseline/candidate-final.json",
+      "sha256": "e36f94b0b6f3ccbde1252e0e1e5cb14eee5e4bc11220115ba5be4f1bdfec8f41",
+      "size": 21371
+    },
+    {
+      "path": "evidence/additional-baseline/code-summary.md",
+      "sha256": "e0ed4d28020ae0910f5bbc3b598c3b12dfa4f3a47d21f82210bdbce7bf7ec239",
+      "size": 5262
+    },
+    {
+      "path": "evidence/additional-baseline/evidence-manifest-final.json",
+      "sha256": "89fdedde6ac8a340fbd3511505dd8ce06d23b979679a4ea00473feeaec97f5d2",
+      "size": 37396
+    },
+    {
+      "path": "evidence/additional-baseline/execution-brief.txt",
+      "sha256": "93ad78033af5d6e077aad1ffdc983e990ec822c337cac6c15fbfd41dfde7d1fb",
+      "size": 19255
+    },
+    {
+      "path": "evidence/additional-baseline/handoff.md",
+      "sha256": "ef06a373f724a61b1dac5aa2c2ef0945f7cd9dea493e495e4bb43a38a376d085",
+      "size": 2944
+    },
+    {
+      "path": "evidence/additional-baseline/results-final.json",
+      "sha256": "44606bd08c83f87745d34a12efcf0fac17c681068b63fc0c222ba0f2735ee4c8",
+      "size": 2040
+    },
+    {
+      "path": "evidence/additional-baseline/source/packages/terrarium/tests/pitchfork-build-retry.test.ts",
+      "sha256": "8545c27702064a3b814d6a9de1bc1c3d51d6a606800b024af3ef2c1521646c57",
+      "size": 5726
+    },
+    {
+      "path": "evidence/additional-baseline/source/packages/terrarium/tests/pitchfork-runtime.test.ts",
+      "sha256": "6e515c8e723b3dcfc646b23c48a82b5a64b4c24a937eca14aa95b764262dec34",
+      "size": 11765
+    },
+    {
+      "path": "evidence/additional-baseline/source/scripts/build-pitchfork.sh",
+      "sha256": "860167c19be18c2a4bea0235652d49c60daa1b914e81aa69c2b24b6efd40becf",
+      "size": 1912
+    },
+    {
+      "path": "evidence/additional-baseline/source/scripts/resolve-ref.sh",
+      "sha256": "9e938232d8b71028c0dacfeb7e76e492e501f33d2ab536184b073680ca5a20eb",
+      "size": 1718
+    },
+    {
+      "path": "evidence/additional-baseline/source-final.json",
+      "sha256": "e85d8ef4dfbba4fee42916442f298563ec2182848cfa1034df8e5a54c5e89536",
+      "size": 4990
+    },
+    {
+      "path": "evidence/additional-baseline/source-manifest.json",
+      "sha256": "1e812ada0bb6e5c285e0385a6e633b2bb5885b60410111cbdf22acaa745b207b",
+      "size": 1400
+    },
+    {
+      "path": "evidence/additional-baseline/source.json",
+      "sha256": "83059d01a4564f3816b690052b23cf37dcddffb2cbc7cddecb6d4e406898921f",
+      "size": 579
+    },
+    {
+      "path": "evidence/additional-baseline/traceability.json",
+      "sha256": "b47b3396a35edc50d57b3d722f4f1d5b906352d3284a2da40c267a83b48ba8f6",
+      "size": 1041
+    },
+    {
+      "path": "evidence/additional-baseline/unit-before.json",
+      "sha256": "1cb57d28d3c6cb4e95391968eb224318296ab5d1b0fd7b365976c937cb747d91",
+      "size": 160
+    },
+    {
+      "path": "evidence/additional-baseline/unit-before.txt",
+      "sha256": "e85230f0348b9a6f0500430d094522d9e9cb637bb8d294da5f36437a6bda80b5",
+      "size": 2523
+    },
+    {
+      "path": "evidence/additional-native-tool-versions.json",
+      "sha256": "a58d6d66acb63289aaf2ec1ae7a2666d0da993aaee3038d766136240dbd4c645",
+      "size": 261
+    },
+    {
+      "path": "evidence/additional-patch-options.json",
+      "sha256": "8a79d696ca6634861316d0991dc31d072cf12929c39c69828915d281829b636d",
+      "size": 1873
+    },
+    {
+      "path": "evidence/additional-preservation-browser-binding.json",
+      "sha256": "4c02e29930f5d2e48c6d210a82cbb7a893dd690a8321f3bb702edcec681affa6",
+      "size": 1161
+    },
+    {
+      "path": "evidence/additional-results-final.json",
+      "sha256": "7c3964c33abd041e0bc21e94963e237a08f6c1db1534a835eab78cffc3cb8296",
+      "size": 1147
+    },
+    {
+      "path": "evidence/additional-standalone-fixture.json",
+      "sha256": "100192e86b7ed53f2692bff467a2de487ffb5593ed1e0c18238982fc7ae49135",
+      "size": 251
+    },
+    {
+      "path": "evidence/additional-standalone-sync.json",
+      "sha256": "6fea2334dab16e366ec7ca3a65b69ca8b66cb82178a4173e3107be1730325a97",
+      "size": 1043
+    },
+    {
+      "path": "evidence/additional-standalone-unit-final.json",
+      "sha256": "b7bc5fde0dcb70b5b6a1d0783760992539c234ee2d28c5b99aa58cefa503ec0b",
+      "size": 155
+    },
+    {
+      "path": "evidence/additional-standalone-unit-final.txt",
+      "sha256": "76033bfac570edcafc9fe7d59e9cbb0295b2a89ca8eff82bb05828f5c933a1f7",
+      "size": 8278
+    },
+    {
+      "path": "evidence/additional-unit-scoped.json",
+      "sha256": "b70a7dbd751c9634eb6d715b1ce394ff48fe541c7ea556ad9615eff71b95a7fe",
+      "size": 160
+    },
+    {
+      "path": "evidence/additional-unit-scoped.txt",
+      "sha256": "f96cbb1d155d3cf4bad99e6ca47ba8a0953a4a36cf85c51b2adee9c2b350aff8",
+      "size": 2063
+    },
+    {
+      "path": "evidence/additional-validation-0.txt",
+      "sha256": "c6d941b947f9bc8a4e3791adda572d49ecd114f6c42127cf314bb4a76d6c84d9",
+      "size": 8293
+    },
+    {
+      "path": "evidence/additional-validation-1.txt",
+      "sha256": "8f095098e23e2741c41618f8e64d86cc7ee2edfe464a4cecffb499493d3ddcae",
+      "size": 102
+    },
+    {
+      "path": "evidence/additional-validation-2.txt",
+      "sha256": "6ddd422a8451e34060c2f46a10c7c8493071f8a813ea17d1f53c96f1ae57da25",
+      "size": 63
+    },
+    {
+      "path": "evidence/additional-validation-3.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "path": "evidence/additional-validation-4.txt",
+      "sha256": "1a4c877dbc0da896a107f71d157de64d2f316270477e80b6b14d9087259d11ed",
+      "size": 42
+    },
+    {
+      "path": "evidence/additional-validation-5.txt",
+      "sha256": "cf29b5725a466b42aaa43454f2ba9936625eb234bd55f7224a6bfec6ae2345d8",
+      "size": 8851
+    },
+    {
+      "path": "evidence/additional-validation-commands.json",
+      "sha256": "dbfd7b568366d931fb8c86aff29f9e20b57c2d88b26a235f0f24094e806a3673",
+      "size": 1414
+    },
+    {
+      "path": "evidence/baseline/aletheia-works-formicarium-0.1.0-rc.1.tgz",
+      "sha256": "969e9fab854d4499da1d38087bd601b65042b6d50b086c8fc8ddaefd0752f810",
+      "size": 232440
+    },
+    {
+      "path": "evidence/baseline/candidate.json",
+      "sha256": "4106bd15d820fe7d0b1aac0b8c79875a958d0345f24e902e86bc0b26be0aba92",
+      "size": 8314
+    },
+    {
+      "path": "evidence/baseline/identity.json",
+      "sha256": "46620b4ae8f20dd4cd2b3353bdcb39b45ea42787c88021638d3d6ff771c2ac40",
+      "size": 288
+    },
+    {
+      "path": "evidence/baseline/runner.json",
+      "sha256": "e7a0a01f374afc9d6708bf2c6e4edcf532e7ecff806c9a5d62135ed4d89b0236",
+      "size": 264
+    },
+    {
+      "path": "evidence/baseline/source/.github/workflows/test-e2e.yml",
+      "sha256": "25b3bca6e7335bf68f69fd4610c71a213aaee9703b3151b84c25cb20bb8bfdb4",
+      "size": 7135
+    },
+    {
+      "path": "evidence/baseline/source/.github/workflows/test-terrarium.yml",
+      "sha256": "d900640ddd1f78cd7d76e9f9235e9fa796bbaf3824d9bc33d2559e136f2eefd0",
+      "size": 913
+    },
+    {
+      "path": "evidence/baseline/source/.gitignore",
+      "sha256": "e3b35027426abdc471d80b63a471fb99ca341dad23e25aaa0d19a5c25d6d0023",
+      "size": 3875
+    },
+    {
+      "path": "evidence/baseline/source/mise.toml",
+      "sha256": "29b08b1aa7c5b28bc15d53d5e0c549a55adb2fc5e95cd8d6047d85ec6491375e",
+      "size": 4752
+    },
+    {
+      "path": "evidence/baseline/source/packages/terrarium/README.md",
+      "sha256": "d58eef52b44dff0ad9769f3554f339aa211034f9cb12edb24f130cdc3b3aef54",
+      "size": 5351
+    },
+    {
+      "path": "evidence/baseline/source/packages/terrarium/bun.lock",
+      "sha256": "53bc3cac94f293d06ae422ec7bfb178eed52b84f7dc5ffb0d145e7e000e9ddda",
+      "size": 8211
+    },
+    {
+      "path": "evidence/baseline/source/packages/terrarium/package.json",
+      "sha256": "c42914d9cc3532f1f4033eb911627a5adcee3ca309af3fdb0373614a84659bb3",
+      "size": 1946
+    },
+    {
+      "path": "evidence/baseline/source/packages/terrarium/playwright.config.ts",
+      "sha256": "75dbe29d9386227a822c653f89882dd4e5d65c6774f96fb8f3cf618b1e3d1ef3",
+      "size": 1209
+    },
+    {
+      "path": "evidence/baseline/source/packages/terrarium/playwright.formicarium.config.ts",
+      "sha256": "dbad6a2b91d8916a18c7ede260cbb2049e2ed728ebdaa72d4737837f83ac5775",
+      "size": 1074
+    },
+    {
+      "path": "evidence/baseline/source/packages/terrarium/src/catalog.ts",
+      "sha256": "bb2110ecb7b26ade9e90483172eaf8b0a9c91a1d43e0dd4d02a3dc4e0dc2cc02",
+      "size": 3610
+    },
+    {
+      "path": "evidence/baseline/source/packages/terrarium/src/formicarium-session.ts",
+      "sha256": "c7470b3dee713952f4a1255644d3034ce36391ae0eb61a9bb22fb554ff185cf9",
+      "size": 9802
+    },
+    {
+      "path": "evidence/baseline/source/packages/terrarium/src/generated/xterm-css.ts",
+      "sha256": "0fc1b01494f328cdbb3ef38d7d3374433d1fbe5a7563f361a68e89a743762ea8",
+      "size": 7547
+    },
+    {
+      "path": "evidence/baseline/source/packages/terrarium/src/index.ts",
+      "sha256": "893f931912430ad3459a76ccf2fe66f511112c6274409092616efce4ddb78c47",
+      "size": 686
+    },
+    {
+      "path": "evidence/baseline/source/packages/terrarium/src/npm.ts",
+      "sha256": "8d8e7549b8eaf08404f48cb40edf73fbf5fcd99b1de8f13ce7cf47922f4a5aff",
+      "size": 692
+    },
+    {
+      "path": "evidence/baseline/source/packages/terrarium/src/session.ts",
+      "sha256": "39f0d1800ecc391633fbf68cc37b0134dce0fe6d2ff34d92561105dee8bb1d9c",
+      "size": 9869
+    },
+    {
+      "path": "evidence/baseline/source/packages/terrarium/src/terminal.ts",
+      "sha256": "492a31374236087c0163e6d9cba0094a33a20fcb960773ac9c56864053677df2",
+      "size": 15646
+    },
+    {
+      "path": "evidence/baseline/source/packages/terrarium/tests/formicarium-assets.test.ts",
+      "sha256": "7fb123eb761380ac2b624f9d121da33883d7e8c1d14b003e9f96c087e0e5fbf5",
+      "size": 7580
+    },
+    {
+      "path": "evidence/baseline/source/packages/terrarium/tests/formicarium-catalog.test.ts",
+      "sha256": "16cd04d3f0f02e95b85492bd2954c81b6185070aec97206d1ffa94d99e274c9a",
+      "size": 5489
+    },
+    {
+      "path": "evidence/baseline/source/scripts/assemble-pages.sh",
+      "sha256": "bd044bf66bd5729a15cbe9486c2ce45ecab14dbd2394f6d62648337974d4954d",
+      "size": 2114
+    },
+    {
+      "path": "evidence/baseline/source/scripts/stage-formicarium.mjs",
+      "sha256": "42a475d0ba6aca4b04e5c713697a0e024ff90085b236093b720a7c20d6c8bd15",
+      "size": 7753
+    },
+    {
+      "path": "evidence/baseline/source.json",
+      "sha256": "45d0e717dda135b77aa4d5f114253f8b216bd784dd38289f2f1f449d5dcb0688",
+      "size": 2919
+    },
+    {
+      "path": "evidence/baseline/u3-package-v1.manifest.json",
+      "sha256": "ba2f4ced257067a4c2aa64c9841b04a04f332e4812bcd369bab0d2807b310aef",
+      "size": 5353
+    },
+    {
+      "path": "evidence/baseline-existing-failures.json",
+      "sha256": "f878222354f9542b6cd5f0ace2bbc5f22c4485da433f54df382429b05fc3a0b4",
+      "size": 1160
+    },
+    {
+      "path": "evidence/baseline-existing-failures.txt",
+      "sha256": "a01d3c51dfb5719ebf1cc0eb501ef8b42550912f96d002540ebd9cddf46fde8e",
+      "size": 2539
+    },
+    {
+      "path": "evidence/browser-current.txt",
+      "sha256": "a4db4f03120ec0d5e4ef8b2afc3a672ffb35e4077029dcd9bb3442793d97bf78",
+      "size": 6937
+    },
+    {
+      "path": "evidence/browser-final-source.txt",
+      "sha256": "31f57e5b228c3eb396d0c39e6e774092d80650427123c8b9dd45d4652e088a65",
+      "size": 6937
+    },
+    {
+      "path": "evidence/browser-legacy-final-source.txt",
+      "sha256": "ec8797299d9115a623460ed97b5760486640c31a062e039d87d0089e6c08a244",
+      "size": 5285
+    },
+    {
+      "path": "evidence/browser-legacy-final.txt",
+      "sha256": "c4959bf41501e7b417f3572e9a307424a36820b91843e16082dbcc42655424d9",
+      "size": 5286
+    },
+    {
+      "path": "evidence/browser-legacy.txt",
+      "sha256": "2be2d30812a5ed7f1d8e58401cdb45fa29242279b0a945bb2ff09a4cc18a60ff",
+      "size": 13784
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/.last-run.json",
+      "sha256": "789586acfea023fc585665e9a59e3ae1ea6e1f1da6c25a0e5afd75de3129a4a2",
+      "size": 2252
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-iframe-iframe--4c6f5-ins-and-guest-marker-oracle-chromium/error-context.md",
+      "sha256": "dac5e5a10eae9671010664959bae01e972b7a787a04f06e72d67c74f4a81be3b",
+      "size": 5600
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-iframe-iframe--4c6f5-ins-and-guest-marker-oracle-chromium/trace.zip",
+      "sha256": "c35f2c4c1c56fa74c7df34c1a461825730beb7220084902243e958c22f2160d8",
+      "size": 4841
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-iframe-iframe--4c6f5-ins-and-guest-marker-oracle-firefox/error-context.md",
+      "sha256": "c9c328c07dec3d26820d03dc30134b7a0d524ff02ce5645044ab58163999a8bc",
+      "size": 1595
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-iframe-iframe--4c6f5-ins-and-guest-marker-oracle-firefox/trace.zip",
+      "sha256": "ea0ceae631943592fe553366ad440f8b511318742c3e004f86b6bec232ac6b1c",
+      "size": 2489
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-iframe-iframe--4c6f5-ins-and-guest-marker-oracle-webkit/error-context.md",
+      "sha256": "94f18f078749e118234fd4cd944120e06475d49a2fb05e577e7e290890cfafe3",
+      "size": 1570
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-iframe-iframe--4c6f5-ins-and-guest-marker-oracle-webkit/trace.zip",
+      "sha256": "f4f2fc49659228d97f0e4f7a08bbde434e42d688bb00192f61ea852e89d36717",
+      "size": 2487
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-iframe-iframe--60d07-ins-and-guest-marker-oracle-chromium/error-context.md",
+      "sha256": "9db3cfbd8ed41f1f73c85bf289d85c4910bdeb8e085735a54047b013a41ead27",
+      "size": 5601
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-iframe-iframe--60d07-ins-and-guest-marker-oracle-chromium/trace.zip",
+      "sha256": "abdf69f00b13be878e60946555179efcb0fdca774340acddde3447b72f915ae1",
+      "size": 4838
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-iframe-iframe--60d07-ins-and-guest-marker-oracle-firefox/error-context.md",
+      "sha256": "dc12a33bf20deb69240f704d6076d5b11fc622d5b6560e9887da1be10b93722f",
+      "size": 1596
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-iframe-iframe--60d07-ins-and-guest-marker-oracle-firefox/trace.zip",
+      "sha256": "1e82f1f46f9166334f60318e8db9ef737ef419ac4ffe168700a88184d72683f9",
+      "size": 2499
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-iframe-iframe--60d07-ins-and-guest-marker-oracle-webkit/error-context.md",
+      "sha256": "5db0dc30d94d7564dc849a505cdb421c6a9087aa6c039198b1629f7bd573c763",
+      "size": 1571
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-iframe-iframe--60d07-ins-and-guest-marker-oracle-webkit/trace.zip",
+      "sha256": "640396ec1d3655d396fd3ee7b528d4a8c7336d57d9ee9fa2e1426cef7509183b",
+      "size": 2497
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-iframe-iframe--64345-ins-and-guest-marker-oracle-chromium/error-context.md",
+      "sha256": "97cc6136bcb5a35e5c847224ccb468a57da0630ea7541abe37dd6d6b8cfbcd5b",
+      "size": 5606
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-iframe-iframe--64345-ins-and-guest-marker-oracle-chromium/trace.zip",
+      "sha256": "232f38c2c737fdd79f8eae987db14215a4649747dca27171d098307a736acc93",
+      "size": 4847
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-iframe-iframe--64345-ins-and-guest-marker-oracle-firefox/error-context.md",
+      "sha256": "449669be2d56dede8bb3092e3c775f3c031744556c174918e317c1daa88da960",
+      "size": 1601
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-iframe-iframe--64345-ins-and-guest-marker-oracle-firefox/trace.zip",
+      "sha256": "f8118734bbcb0ea3f8a3c1e6d11aef1de40ff7f68c8980d08eb9e53fb0ff16f0",
+      "size": 2506
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-iframe-iframe--64345-ins-and-guest-marker-oracle-webkit/error-context.md",
+      "sha256": "f2bc060736dca55112634a0333650df5c31d349d2a17f171c7c386475c40ecf9",
+      "size": 1576
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-iframe-iframe--64345-ins-and-guest-marker-oracle-webkit/trace.zip",
+      "sha256": "ac4ae60de10b2356d90387e54fdfa83397b85696a5527d60a7ae88c7711b4e75",
+      "size": 2487
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-iframe-invalid-04c11-ins-never-connect-or-notify-chromium/error-context.md",
+      "sha256": "8ab77294b4330371897642e48793f704aa211894a06416bd3601b06189bafeae",
+      "size": 5607
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-iframe-invalid-04c11-ins-never-connect-or-notify-chromium/trace.zip",
+      "sha256": "c8ab888b54dcd36b30529e3f49cec57be42bcfaaa6a425b47d3a362425cb9411",
+      "size": 4859
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-iframe-invalid-04c11-ins-never-connect-or-notify-firefox/error-context.md",
+      "sha256": "0eee1c66be298fef18f03a67578ca409ffd9e1ac13d38818cfcb8a6e2c7a6805",
+      "size": 1602
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-iframe-invalid-04c11-ins-never-connect-or-notify-firefox/trace.zip",
+      "sha256": "a0b54dd38f382bd2e4754515a944874501c9c20db0fa65da2a3a41848387c724",
+      "size": 2524
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-iframe-invalid-04c11-ins-never-connect-or-notify-webkit/error-context.md",
+      "sha256": "1120cee8153cb136150642a8550ff054ba80cf9fdda39eefc53ed98d7e8fdec0",
+      "size": 1577
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-iframe-invalid-04c11-ins-never-connect-or-notify-webkit/trace.zip",
+      "sha256": "e08726f8e1324d66cc085cf978339889aa08a849e1b2e20244df0269b7d4ccdd",
+      "size": 2501
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-iframe-unappro-aa768-s-even-when-syntax-is-valid-chromium/error-context.md",
+      "sha256": "2dcaefabd09afa92a7a003e3cfc644a9d3961e9d6a55fb9cea58de8a0088c94f",
+      "size": 5620
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-iframe-unappro-aa768-s-even-when-syntax-is-valid-chromium/trace.zip",
+      "sha256": "c0bd31ba9760d90c3ba4c2cee57624bce7691425fa77052701b8df7cf56cd8e0",
+      "size": 4861
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-iframe-unappro-aa768-s-even-when-syntax-is-valid-firefox/error-context.md",
+      "sha256": "841d1bfa96e7b9ddca2fb398ca6a841503342652be9d63a554b3e82ae74b127e",
+      "size": 1615
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-iframe-unappro-aa768-s-even-when-syntax-is-valid-firefox/trace.zip",
+      "sha256": "92b6e415886e9068a9c03431e72262b8a577537dd287c6441855a9eec656eabc",
+      "size": 2532
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-iframe-unappro-aa768-s-even-when-syntax-is-valid-webkit/error-context.md",
+      "sha256": "5c72bb5bb1d5dc1239513206397e7b4dbdedb6b0b335be6e3748a24661390ec2",
+      "size": 1590
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-iframe-unappro-aa768-s-even-when-syntax-is-valid-webkit/trace.zip",
+      "sha256": "e6bf20384c702d69951de238858a99deacc4fc54497d21b84f846b883d224b9d",
+      "size": 2507
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-terminal-boot--fdabd-t-creating-any-guest-Worker-chromium/error-context.md",
+      "sha256": "3a586ebbb46571c3dcf69e54978e9d5c98c84b7fd1b8e25c10d7317616f12de7",
+      "size": 5601
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-terminal-boot--fdabd-t-creating-any-guest-Worker-chromium/trace.zip",
+      "sha256": "595aac36846352300c316c47d960592097588af01f53dc2207e96087588f98e4",
+      "size": 4846
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-terminal-boot--fdabd-t-creating-any-guest-Worker-firefox/error-context.md",
+      "sha256": "0d396b57397da6f0831d84e85c6de6bb05d954b7438c19e8c13a2320d0b358c4",
+      "size": 1596
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-terminal-boot--fdabd-t-creating-any-guest-Worker-firefox/trace.zip",
+      "sha256": "b487e83bc72e666a9c2f23cf3b8cd52caa20be2271891a5d15f370ffaa8f60a0",
+      "size": 2501
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-terminal-boot--fdabd-t-creating-any-guest-Worker-webkit/error-context.md",
+      "sha256": "6ea7379c5025a8890b9d89fbf7bf2dc1dfc49cff5664fc6dfe6ebecbd2224c9c",
+      "size": 1571
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-terminal-boot--fdabd-t-creating-any-guest-Worker-webkit/trace.zip",
+      "sha256": "31b59627c31e6537e86728e14d4aadde27a241db17bc35f85429175554aa5d4b",
+      "size": 2493
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-terminal-disco-91dd4-creates-independent-session-chromium/error-context.md",
+      "sha256": "3a8a9b2594161470884df860ba4e78254355abd3134e9adb72493a11fb6817b2",
+      "size": 5611
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-terminal-disco-91dd4-creates-independent-session-chromium/trace.zip",
+      "sha256": "3f90438c274cafa14ae87f25dbd4b5054e683fc59358a399df022caf63d4a4c2",
+      "size": 4848
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-terminal-disco-91dd4-creates-independent-session-firefox/error-context.md",
+      "sha256": "52dff9370e60164efcfa1196080190a8bc4a719e51f50e8dd2f35f64a8283e6b",
+      "size": 1606
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-terminal-disco-91dd4-creates-independent-session-firefox/trace.zip",
+      "sha256": "cef1639e5fca33d7d9fc727689af265cae8a07a0fb2c1392111f2c7c05db2e62",
+      "size": 2510
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-terminal-disco-91dd4-creates-independent-session-webkit/error-context.md",
+      "sha256": "2da174ebfc30222cf91ca1536c075e8859d071a45e4158c9c9010d6ab4faeb90",
+      "size": 1581
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-terminal-disco-91dd4-creates-independent-session-webkit/trace.zip",
+      "sha256": "3cbc651739e7075b47a2f31c191eb18b5d49c74dd1efb05b5c7d52967b61c731",
+      "size": 2505
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-terminal-empty-dc056-nd-have-no-added-exit-event-chromium/error-context.md",
+      "sha256": "322713bd19cfb9afa798b836107afa3a52f0556d885edabe48f8b6ee6ed0c54e",
+      "size": 5593
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-terminal-empty-dc056-nd-have-no-added-exit-event-chromium/trace.zip",
+      "sha256": "30e89a3c4d948f9b2a121ed383a62f79c5cfbdd493d4b6c74b18e2d8a12e8d14",
+      "size": 4852
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-terminal-empty-dc056-nd-have-no-added-exit-event-firefox/error-context.md",
+      "sha256": "3e96cf8b343295a355a7ed7a87d50d7bcf9399c7d0c98f744f92bbb11ea9bfe3",
+      "size": 1588
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-terminal-empty-dc056-nd-have-no-added-exit-event-firefox/trace.zip",
+      "sha256": "9d2aab56956a3259667ea737d08ac093e05e3d1ebb62d6a4875a4357b5ba0772",
+      "size": 2499
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-terminal-empty-dc056-nd-have-no-added-exit-event-webkit/error-context.md",
+      "sha256": "34f33879a53b49b5a0b1c88f4ea3f456fa06eddd12fc338ed5e9b4b88bb3f355",
+      "size": 1563
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-terminal-empty-dc056-nd-have-no-added-exit-event-webkit/trace.zip",
+      "sha256": "dea908ab13519424fa143e2f92a7cbca875d5b22787ea819852126d5db9ea8eb",
+      "size": 2491
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-terminal-keybo-defdf--preserve-terminal-controls-chromium/error-context.md",
+      "sha256": "53b68a1b677b45f1d477f1800ad6fbe71acc2b44a43e2cc2b549efde65d912b2",
+      "size": 5613
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-terminal-keybo-defdf--preserve-terminal-controls-chromium/trace.zip",
+      "sha256": "94807e896bfba07b44e95ed6ecec2728f873aa3c27bea4a8b37af9fb88bebe22",
+      "size": 4846
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-terminal-keybo-defdf--preserve-terminal-controls-firefox/error-context.md",
+      "sha256": "e0338d0c26f13b54f69f71408ae3b28dcb1eaa880be5f528c8d04af91624999f",
+      "size": 1608
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-terminal-keybo-defdf--preserve-terminal-controls-firefox/trace.zip",
+      "sha256": "91572ea4d3b830ebbd02116790639a3a5e92381789d166287164ce77b5d6ac53",
+      "size": 2506
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-terminal-keybo-defdf--preserve-terminal-controls-webkit/error-context.md",
+      "sha256": "8042ba5fec69786dbec34a5968f10646017a211c0b57e4b7344603d0e1b5ecf6",
+      "size": 1583
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-terminal-keybo-defdf--preserve-terminal-controls-webkit/trace.zip",
+      "sha256": "3a7bb3095c6b82715b498b4f6507345561155cf923570293cedc2e23b19c79e4",
+      "size": 2496
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-terminal-lates-0e073-s-and-actual-Worker-version-chromium/error-context.md",
+      "sha256": "ebf8eca8bf020de3c718caa39197adf89f97c148a5059ffe399dcd21e972e1e3",
+      "size": 5595
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-terminal-lates-0e073-s-and-actual-Worker-version-chromium/trace.zip",
+      "sha256": "f4d6212dc923ddb411b09a37d453581bfec3ae57180d87d8098378083db4718a",
+      "size": 4853
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-terminal-lates-0e073-s-and-actual-Worker-version-firefox/error-context.md",
+      "sha256": "463f70ecf17d261750565fa74c6e538f434015792983f2f99a556b5ee77d7901",
+      "size": 1590
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-terminal-lates-0e073-s-and-actual-Worker-version-firefox/trace.zip",
+      "sha256": "b95b42df27934284c2f6c8eed17ce6585aa1ba9f317324bcd9e7b953c940d595",
+      "size": 2504
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-terminal-lates-0e073-s-and-actual-Worker-version-webkit/error-context.md",
+      "sha256": "be61284a7caf89ad815f27022ca64fa6a5f324638345a4d70509ed7855cc0b8e",
+      "size": 1565
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-terminal-lates-0e073-s-and-actual-Worker-version-webkit/trace.zip",
+      "sha256": "168be02682aee79b492fce2bfdc6e488e0fa67267b4354274554793ad863c6b2",
+      "size": 2492
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-terminal-lates-745fc-ntime-actual-Worker-version-chromium/error-context.md",
+      "sha256": "c228723aa5124211f8114fd05ddfd6669bc144a651fdd7385ad6214d18954155",
+      "size": 5595
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-terminal-lates-745fc-ntime-actual-Worker-version-chromium/trace.zip",
+      "sha256": "b41f66d3f351b0994e0dbe75268c268aab95af41c4b63a2711fad4c1fa564eb7",
+      "size": 4848
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-terminal-lates-745fc-ntime-actual-Worker-version-firefox/error-context.md",
+      "sha256": "41cf82922da618c9c69023aa0e3972b1d145bc3ac55d47e3d5944fc58633c135",
+      "size": 1590
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-terminal-lates-745fc-ntime-actual-Worker-version-firefox/trace.zip",
+      "sha256": "5e7b2d10e19a0ecd031b97e9e8209d55440857e608a02ff9d6cfa940e8dca1c2",
+      "size": 2505
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-terminal-lates-745fc-ntime-actual-Worker-version-webkit/error-context.md",
+      "sha256": "1176508d39e5261558c78b215e0893cc8637e16f8283472fe1878ce88ab6b7c1",
+      "size": 1565
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-terminal-lates-745fc-ntime-actual-Worker-version-webkit/trace.zip",
+      "sha256": "1eda25eabda2ea4d024e9db17119312d3e4a31f71bbee9dbf34fa88c6f72ef49",
+      "size": 2494
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-terminal-neste-28655-fore-and-after-actual-guest-chromium/error-context.md",
+      "sha256": "73c28af9b34bf29c95891466df6bffc69aa768c4a62e2798ab515fe3de18c89b",
+      "size": 5597
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-terminal-neste-28655-fore-and-after-actual-guest-chromium/trace.zip",
+      "sha256": "0c5437f31d7dbdc5a526b2026f7f5d2a0da62770f4585413ad3b03a17c0c27da",
+      "size": 4856
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-terminal-neste-28655-fore-and-after-actual-guest-firefox/error-context.md",
+      "sha256": "5f769d45ef347fc905793c3fc18d2603439d0a56ec3b02382e9018797d77cf69",
+      "size": 1592
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-terminal-neste-28655-fore-and-after-actual-guest-firefox/trace.zip",
+      "sha256": "a0104e143a52a9a9f4a7f968209c02974a41bf4947409b328edb5883fcd9db62",
+      "size": 2500
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-terminal-neste-28655-fore-and-after-actual-guest-webkit/error-context.md",
+      "sha256": "2371bcae0d8eafd00a07f1f51f58d32579eb2312a84c563954940e4c623fad67",
+      "size": 1567
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-terminal-neste-28655-fore-and-after-actual-guest-webkit/trace.zip",
+      "sha256": "6d61836c14b1a7be35dfe9199e275bad2b5d412edb843ad3e98d75efb9a8cfa9",
+      "size": 2493
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-terminal-norma-ca5e7-x-error-once-queue-recovers-chromium/error-context.md",
+      "sha256": "1c356cdd095526aaa0fc28f202597b0ece06edcb95efbdff7507faed189f3bdc",
+      "size": 5606
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-terminal-norma-ca5e7-x-error-once-queue-recovers-chromium/trace.zip",
+      "sha256": "f833c51be6444f021775def9ce3d6fa7deef6692228e91d57abf0adf4cf2941c",
+      "size": 4851
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-terminal-norma-ca5e7-x-error-once-queue-recovers-firefox/error-context.md",
+      "sha256": "f16c102ee3fc571600aac36918899fd0ad679419ad61ee6e3be7488526253db3",
+      "size": 1601
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-terminal-norma-ca5e7-x-error-once-queue-recovers-firefox/trace.zip",
+      "sha256": "5e7bb972b8f8d7f62e5cd7bb6bbfc1ea42d29cb5ecba9811c2bab12882b4070b",
+      "size": 2509
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-terminal-norma-ca5e7-x-error-once-queue-recovers-webkit/error-context.md",
+      "sha256": "1a37bcd57a2e97cca6f2ee662af11a28a0ae136b2c36f5957fdfbf5c47f25aa9",
+      "size": 1576
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-terminal-norma-ca5e7-x-error-once-queue-recovers-webkit/trace.zip",
+      "sha256": "817301b65d74127f1ea8fa64dd4ad777467205574bd2f09d17adf56fb805bccb",
+      "size": 2492
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-terminal-run-a-0c92d-retain-serial-command-order-chromium/error-context.md",
+      "sha256": "4167d5fd094ff678152c8deb4dc1e09cdb77af467b6ec404a7d380893c423e98",
+      "size": 5600
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-terminal-run-a-0c92d-retain-serial-command-order-chromium/trace.zip",
+      "sha256": "11c7a1af65cc0a72f18a3951163b4f1db95439ec84cc00e1f7311979f679d6e9",
+      "size": 4833
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-terminal-run-a-0c92d-retain-serial-command-order-firefox/error-context.md",
+      "sha256": "3f91eee5c7db546c4ab3b459524a7dfe6bfa04af698f520e9ee565aaa10c3932",
+      "size": 1595
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-terminal-run-a-0c92d-retain-serial-command-order-firefox/trace.zip",
+      "sha256": "1f4e32ded9f3ea42b1a9f2da7b957dc2601d1071c27b1c99a646875edc641922",
+      "size": 2506
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-terminal-run-a-0c92d-retain-serial-command-order-webkit/error-context.md",
+      "sha256": "16b7ee55f02511ba73f005c6190d3011909d663549e1811d6b848949a896fcc2",
+      "size": 1570
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-terminal-run-a-0c92d-retain-serial-command-order-webkit/trace.zip",
+      "sha256": "7454e5d3927ed0919ffcb356a12bf6e0b4fafd92a283d67806d870cd3be0efba",
+      "size": 2485
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-terminal-tool--938e5-or-queued-run-notifications-chromium/error-context.md",
+      "sha256": "0839acde49221b44a9e45ad1c6da114b6de4b1b5f3ecb0edc71a2a379c6fed25",
+      "size": 5612
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-terminal-tool--938e5-or-queued-run-notifications-chromium/trace.zip",
+      "sha256": "693df1a07b4338f995c8aec066e8ce107e30fbbad517cd616389f995b24cfb9d",
+      "size": 4859
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-terminal-tool--938e5-or-queued-run-notifications-firefox/error-context.md",
+      "sha256": "16b808440ebc2442a809d22e32a8c8d978c1dc736442472ed8f8ad091667466e",
+      "size": 1607
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-terminal-tool--938e5-or-queued-run-notifications-firefox/trace.zip",
+      "sha256": "7b86c9c1ebbc5064bd7ee02569d2f8c04d7147bf20be67ff187b49709df17d03",
+      "size": 2506
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-terminal-tool--938e5-or-queued-run-notifications-webkit/error-context.md",
+      "sha256": "26e21779181d739ee2c4a3e004f848e294c03f913445b6579eddb62eabbc8161",
+      "size": 1582
+    },
+    {
+      "path": "evidence/browser-sandbox-failure/formicarium-terminal-tool--938e5-or-queued-run-notifications-webkit/trace.zip",
+      "sha256": "6098390e9b76722d001e17093363e36ae1757bc8e007c0a8fa1aa2dc86046854",
+      "size": 2490
+    },
+    {
+      "path": "evidence/browser-standalone-final.txt",
+      "sha256": "16ceac6d6ad862d53304f7f28a5b541b900339855d4723acee5783d8d4c58a3d",
+      "size": 6937
+    },
+    {
+      "path": "evidence/browser-standalone.txt",
+      "sha256": "8f6a8ddba8db604d101c7f2009e7927e23db0004263c0cf8782483c1f84ff4dd",
+      "size": 11216
+    },
+    {
+      "path": "evidence/candidate-final.json",
+      "sha256": "e36f94b0b6f3ccbde1252e0e1e5cb14eee5e4bc11220115ba5be4f1bdfec8f41",
+      "size": 21371
+    },
+    {
+      "path": "evidence/evidence-manifest-final.json",
+      "sha256": "89fdedde6ac8a340fbd3511505dd8ce06d23b979679a4ea00473feeaec97f5d2",
+      "size": 37396
+    },
+    {
+      "path": "evidence/existing-unit-shell-cause.json",
+      "sha256": "575c48790ca6305374f5ba70bb19f54740a1ad03722eba3957b729f3b5f99ade",
+      "size": 566
+    },
+    {
+      "path": "evidence/final-config-list-corrected.txt",
+      "sha256": "523fde8857ea270ac5f062bca87338ecedd4e080f81e2fa3371c69f842112527",
+      "size": 5553
+    },
+    {
+      "path": "evidence/final-config-list.txt",
+      "sha256": "b23f4d213beebbaffebd591f4c22efbdfc78a35fd150b587fb48bb9d200dce59",
+      "size": 54
+    },
+    {
+      "path": "evidence/final-layer-0.txt",
+      "sha256": "8f095098e23e2741c41618f8e64d86cc7ee2edfe464a4cecffb499493d3ddcae",
+      "size": 102
+    },
+    {
+      "path": "evidence/final-layer-1.txt",
+      "sha256": "d960296e43151817a2e993ab62308f0b6340b86908be00e72b9329e432c393a2",
+      "size": 3958
+    },
+    {
+      "path": "evidence/final-layer-2.txt",
+      "sha256": "76af9f2579cedaf15abbea2ab1fece73bdea71e727ecf69892fd1cde926f1b7e",
+      "size": 43
+    },
+    {
+      "path": "evidence/final-layer-3.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "path": "evidence/final-layer-4.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "path": "evidence/final-layer-5.txt",
+      "sha256": "2b9ef4adb8878334f0439be935f7fec9a68ec8407e36b580a3f82adf55df44ce",
+      "size": 333
+    },
+    {
+      "path": "evidence/final-layer-commands.json",
+      "sha256": "f801b4bcad6a6d8b0480ab80555099e300be573aac14191604d90d03aa9bdf4d",
+      "size": 1361
+    },
+    {
+      "path": "evidence/final-validation-0.txt",
+      "sha256": "f77ed73d23359d170320ad32742eb423a27bfbe07069c9277d01bb954992eb71",
+      "size": 3957
+    },
+    {
+      "path": "evidence/final-validation-1.txt",
+      "sha256": "a408c519b9a391b3851b6f2b63e03a4120dbcff0b99f332138200d872dd830af",
+      "size": 176
+    },
+    {
+      "path": "evidence/final-validation-2.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "path": "evidence/final-validation-commands.json",
+      "sha256": "34189f70f07ecd5be5ae1f25a77d7ce5c5a86451926300c1273a57e1fe143e2c",
+      "size": 844
+    },
+    {
+      "path": "evidence/input-archive.json",
+      "sha256": "2c4e815196967bc2afc5331922174e55e50ec59b8c6a4087f92d5f9fb0ac1e27",
+      "size": 246
+    },
+    {
+      "path": "evidence/jj-original-unit-binding.json",
+      "sha256": "5fd62a92a845a08de1c72b54632a38ede874d2a6962920c218ffc46992a2630e",
+      "size": 1150
+    },
+    {
+      "path": "evidence/legacy-input-binding.json",
+      "sha256": "56aee3f8b85c61650a6a9023f79cfb8e01be80df404691e399ae0d90f45dd2da",
+      "size": 697
+    },
+    {
+      "path": "evidence/legacy-published-builds.json",
+      "sha256": "48bb381cf9c78447c55c069f99af550ab7c7bd00b3328a138165408772731541",
+      "size": 1345
+    },
+    {
+      "path": "evidence/post-format-0.txt",
+      "sha256": "8f095098e23e2741c41618f8e64d86cc7ee2edfe464a4cecffb499493d3ddcae",
+      "size": 102
+    },
+    {
+      "path": "evidence/post-format-1.txt",
+      "sha256": "65d330eab099aa3519eb0c580de8fe1ffe69f698b0f514ca7932e6464f3f04cd",
+      "size": 3958
+    },
+    {
+      "path": "evidence/post-format-2.txt",
+      "sha256": "6ddd422a8451e34060c2f46a10c7c8493071f8a813ea17d1f53c96f1ae57da25",
+      "size": 63
+    },
+    {
+      "path": "evidence/post-format-3.txt",
+      "sha256": "f01c80a245c8ba0323add54e661bc72b05598359aa5aa00b2ac4f8979c820851",
+      "size": 44
+    },
+    {
+      "path": "evidence/post-format-browser-binding.json",
+      "sha256": "629cd10a57f67a0a52bbf1039878f328735c3f94e6fd830e60e8859138d43375",
+      "size": 676
+    },
+    {
+      "path": "evidence/post-format-commands.json",
+      "sha256": "c1bd2a76d1a1e7afd2dae11143d301f1cbe63e22356ca1e6846b8cdba1bae7ae",
+      "size": 1410
+    },
+    {
+      "path": "evidence/prechange-existing-unit.json",
+      "sha256": "fd9fb18809b26a58eed3d5d3f2a4c37141af4cd44c9fdf0e74e61b94fa3cd378",
+      "size": 409
+    },
+    {
+      "path": "evidence/prechange-existing-unit.txt",
+      "sha256": "11419a0507784db9371be747064ef54bb9003f537087777b2998390324b69752",
+      "size": 3772
+    },
+    {
+      "path": "evidence/preservation-final.json",
+      "sha256": "a1641e3bc17e0269bd4e4f477392305f0f10564b27de9c9e3a5e0d8de1fb9ef9",
+      "size": 414
+    },
+    {
+      "path": "evidence/readme-final-lint.txt",
+      "sha256": "ab5e22dadc433aee561554dabc44577758298dcc42b625c9554e0d707c77f22f",
+      "size": 43
+    },
+    {
+      "path": "evidence/results-final.json",
+      "sha256": "44606bd08c83f87745d34a12efcf0fac17c681068b63fc0c222ba0f2735ee4c8",
+      "size": 2040
+    },
+    {
+      "path": "evidence/source-final.json",
+      "sha256": "e85d8ef4dfbba4fee42916442f298563ec2182848cfa1034df8e5a54c5e89536",
+      "size": 4990
+    },
+    {
+      "path": "evidence/source-shell-fix-final.json",
+      "sha256": "92702945be1be824ed84fb84f159338160d505d06869d90d9f3929e92e7736fd",
+      "size": 8727
+    },
+    {
+      "path": "evidence/standalone-0.txt",
+      "sha256": "c638335430342b9ba51330e1f7da8e8f2c4964bd543cb41c24edeb7610ad6605",
+      "size": 3014
+    },
+    {
+      "path": "evidence/standalone-1.txt",
+      "sha256": "1db3d74edcb42b6d8c63c7d07c88ff4f5c2b9899d41f84a281dfef178a1453b1",
+      "size": 290
+    },
+    {
+      "path": "evidence/standalone-2.txt",
+      "sha256": "8f095098e23e2741c41618f8e64d86cc7ee2edfe464a4cecffb499493d3ddcae",
+      "size": 102
+    },
+    {
+      "path": "evidence/standalone-3.txt",
+      "sha256": "35c0c7e498ce350ea58f26820e88d3a8327b33d0b33ead23e34fc0fbbe28b448",
+      "size": 9436
+    },
+    {
+      "path": "evidence/standalone-4.txt",
+      "sha256": "6ddd422a8451e34060c2f46a10c7c8493071f8a813ea17d1f53c96f1ae57da25",
+      "size": 63
+    },
+    {
+      "path": "evidence/standalone-5.txt",
+      "sha256": "0fb1e1f03bf34772d322a4e85dcc38f6f4cca0dfa1ce252686e3ff57a1a1828e",
+      "size": 5994
+    },
+    {
+      "path": "evidence/standalone-6.txt",
+      "sha256": "40eac160de61cd6caf7410853c60755375794cd9594539e4a0425821dd8b9680",
+      "size": 117
+    },
+    {
+      "path": "evidence/standalone-commands.json",
+      "sha256": "ccb5d5a2fdee19b3cd8b4774813f7e54db51f508104e239eba21cebfa4b4e688",
+      "size": 1686
+    },
+    {
+      "path": "evidence/standalone-final-assembly.txt",
+      "sha256": "d8fcf3fa59d40a06d979669f0e35fc8a25df8b53dc6797a32d4ebb4b985254dc",
+      "size": 5994
+    },
+    {
+      "path": "evidence/standalone-final-config-sync.json",
+      "sha256": "d595a3f8eeafb8cc4cfd5776ca8c682694935273f011e4048ace522776dd0568",
+      "size": 503
+    },
+    {
+      "path": "evidence/standalone-final-source-binding.json",
+      "sha256": "6b27455ab3e08aa2ba753ba8298b72461bc4213daa65d8ea39f3d85136465d2a",
+      "size": 5091
+    },
+    {
+      "path": "evidence/standalone-format-sync.json",
+      "sha256": "559783ec7dc080071197a189f714585fef00550af84595a9f9ed03a12c16bd6f",
+      "size": 2118
+    },
+    {
+      "path": "evidence/standalone-last-sync.json",
+      "sha256": "38643734daae59d33f944fc7ad9db870cd577afb58fbe61ef459ebcc73dba4f5",
+      "size": 541
+    },
+    {
+      "path": "evidence/standalone-manifest.json",
+      "sha256": "89254d28cfcf7c1ffc7b064effe052a4444f330cf66e9d43776dfc6721b52130",
+      "size": 13823
+    },
+    {
+      "path": "evidence/standalone-sync.json",
+      "sha256": "2c9181c474b619dce1774cc763ec7bbdf5eb534eecc8dfb43eb7999a7d81e6fd",
+      "size": 2487
+    },
+    {
+      "path": "evidence/step3.json",
+      "sha256": "de88ea8ea531fed6c894737850290926f79294a8ead3f1b45ed695cb34ee8b90",
+      "size": 170
+    },
+    {
+      "path": "evidence/unit-current.json",
+      "sha256": "5c5fc63cbaf20f8079fbc63653cc6f5fdd4deff4765031edb580b42fdbda6613",
+      "size": 96
+    },
+    {
+      "path": "evidence/unit-current.txt",
+      "sha256": "dd46f0062dbeef38a0c6146aff1bcda7673cee3bdf87b6caaba762c973d90a92",
+      "size": 8902
+    },
+    {
+      "path": "evidence/unit-final-source.json",
+      "sha256": "04ee8c4af26ee7b993c2714782d894f1c31e30ba7333b476c1f100211fde100a",
+      "size": 145
+    },
+    {
+      "path": "evidence/unit-final-source.txt",
+      "sha256": "a6a501c5805a059bc73d5e15cba3d1241c24a24c67e5d66e0e8a87beb36bac22",
+      "size": 8894
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+[
+  {
+    "path": "/Users/mutoakio/Documents/formicarium/.artifacts/u3-coverage-v1/inventory.json",
+    "sha256": "5c432f703852271e809f92be405d92bdc5f37ea6a1a06c12b663385fc0cd5a9d",
+    "mtimeUtc": "2026-10-08T00:53:37.931346+00:00"
+  },
+  {
+    "path": "/Users/mutoakio/Documents/formicarium/.artifacts/u3-coverage-v1/report.json",
+    "sha256": "a79a80b16d5e58e82de908212314e81037e9a11e35eead4dc8ced65fc70030f2",
+    "mtimeUtc": "2026-10-08T00:57:30.986355+00:00"
+  },
+  {
+    "path": "/Users/mutoakio/Documents/formicarium/.artifacts/u3-coverage-v1/receipts/node.json",
+    "sha256": "0aa22c9105b44f7dd6c3bd294a4347cd3e6498558f227c9b4358a32a88a127d7",
+    "mtimeUtc": "2026-10-08T00:57:24.241894+00:00"
+  },
+  {
+    "path": "/Users/mutoakio/Documents/formicarium/.artifacts/u3-evidence-v1/identity.json",
+    "sha256": "70d476183cfecd6af1f67ecbac77cc8c32c2deb8a11a185f6e122218d05d4ef4",
+    "mtimeUtc": "2026-10-08T00:58:00.956252+00:00"
+  },
+  {
+    "path": "/Users/mutoakio/Documents/formicarium/scripts/terrarium/coverage.mjs",
+    "sha256": "872bc75bf349f545e0c439032176a7d2100636ec53f87eb0a4eb438a6251167a",
+    "mtimeUtc": "2026-10-08T00:57:58.156401+00:00"
+  },
+  {
+    "path": "/Users/mutoakio/Documents/formicarium/tests/terrarium/coverage.test.mjs",
+    "sha256": "65c43d0727c97b404e49c1c61213721fad548d41b6be7491ac24f46eab3a087a",
+    "mtimeUtc": "2026-10-08T00:57:05.181659+00:00"
+  },
+  {
+    "path": "/Users/mutoakio/Documents/formicarium/scripts/guest-distribution/stage.mjs",
+    "sha256": "fc6f749d35a64517945d7a0e503e4bd26ec5d4fd53baf2992bacf26372527ef4",
+    "mtimeUtc": "2026-10-07T23:35:13.944478+00:00"
+  },
+  {
+    "path": "/Users/mutoakio/Documents/formicarium/.artifacts/u1-coverage-v9/coverage-report.json",
+    "sha256": "e78c8ede081496c30131a537ccd73c9f7a81d3afb52a0632b1f84c2267fd212d",
+    "mtimeUtc": "2026-10-07T19:17:25.796443+00:00"
+  }
+]

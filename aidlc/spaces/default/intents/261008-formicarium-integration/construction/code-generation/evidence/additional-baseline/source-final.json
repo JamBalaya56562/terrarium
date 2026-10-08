@@ -1,0 +1,128 @@
+[
+  {
+    "path": "scripts/prepare-formicarium.mjs",
+    "beforeSha256": null,
+    "afterSha256": "51c3c2ee098b341ef5a15ce0c33dab7c3b8b282e496afd6b0a64bbe9022a1fbb",
+    "oldBytesAvailable": false,
+    "newFile": true
+  },
+  {
+    "path": "integration/formicarium-inputs.json",
+    "beforeSha256": null,
+    "afterSha256": "24ff31a8c69aae32ada473fb5b5e9e7c3b1078cff582056ebefbbc7436f7f348",
+    "oldBytesAvailable": false,
+    "newFile": true
+  },
+  {
+    "path": "packages/terrarium/tests/formicarium-inputs.test.ts",
+    "beforeSha256": null,
+    "afterSha256": "75bf3bb43306a2e699af4517f5d0929b2e1ec7ddc0f245f043b92e0e59ee0eba",
+    "oldBytesAvailable": false,
+    "newFile": true
+  },
+  {
+    "path": "packages/terrarium/package.json",
+    "beforeSha256": "c42914d9cc3532f1f4033eb911627a5adcee3ca309af3fdb0373614a84659bb3",
+    "afterSha256": "d21fa37bac3640c86e7af86e990f1bec5773a3aa41cc079e7e0333d2856eebc8",
+    "oldBytesAvailable": true,
+    "newFile": false
+  },
+  {
+    "path": "packages/terrarium/bun.lock",
+    "beforeSha256": "53bc3cac94f293d06ae422ec7bfb178eed52b84f7dc5ffb0d145e7e000e9ddda",
+    "afterSha256": "8ab0766fa259eebbc980a5551011f9942bbe59b954d31df814c6a3482860eb8f",
+    "oldBytesAvailable": true,
+    "newFile": false
+  },
+  {
+    "path": "mise.toml",
+    "beforeSha256": "29b08b1aa7c5b28bc15d53d5e0c549a55adb2fc5e95cd8d6047d85ec6491375e",
+    "afterSha256": "74cc26ac5a2f93ff55cb396de003d21c724a003983484efaca074887568ccdc9",
+    "oldBytesAvailable": true,
+    "newFile": false
+  },
+  {
+    "path": "scripts/stage-formicarium.mjs",
+    "beforeSha256": "42a475d0ba6aca4b04e5c713697a0e024ff90085b236093b720a7c20d6c8bd15",
+    "afterSha256": "6962b14e5de42b1b28af1759686cc4160e3e74f60850e51d9ea52543f1743dec",
+    "oldBytesAvailable": true,
+    "newFile": false
+  },
+  {
+    "path": "scripts/assemble-pages.sh",
+    "beforeSha256": "bd044bf66bd5729a15cbe9486c2ce45ecab14dbd2394f6d62648337974d4954d",
+    "afterSha256": "181f5f8495e19632d79b853438bb0f960c048b94ce060ab538be1c1a2a43850a",
+    "oldBytesAvailable": true,
+    "newFile": false
+  },
+  {
+    "path": "packages/terrarium/playwright.config.ts",
+    "beforeSha256": "75dbe29d9386227a822c653f89882dd4e5d65c6774f96fb8f3cf618b1e3d1ef3",
+    "afterSha256": "1cf519301eae5ff7f565bb8f70266ca71fded90e40c4b90839d2e41f6e8beaf1",
+    "oldBytesAvailable": true,
+    "newFile": false
+  },
+  {
+    "path": "packages/terrarium/playwright.formicarium.config.ts",
+    "beforeSha256": "dbad6a2b91d8916a18c7ede260cbb2049e2ed728ebdaa72d4737837f83ac5775",
+    "afterSha256": "6bf3a0bbfe327536efee30f83db75a189febac83466af79d4b1136a98832f9a1",
+    "oldBytesAvailable": true,
+    "newFile": false
+  },
+  {
+    "path": "packages/terrarium/src/catalog.ts",
+    "beforeSha256": "bb2110ecb7b26ade9e90483172eaf8b0a9c91a1d43e0dd4d02a3dc4e0dc2cc02",
+    "afterSha256": "452b007bd46c51f9ca3ac1a11557a09a3bb15cbd1235973a75018e243c430904",
+    "oldBytesAvailable": true,
+    "newFile": false
+  },
+  {
+    "path": "packages/terrarium/src/formicarium-session.ts",
+    "beforeSha256": "c7470b3dee713952f4a1255644d3034ce36391ae0eb61a9bb22fb554ff185cf9",
+    "afterSha256": "c4b85c57526f18a7d83dbbc91856b6e421d5af19d4ad86d116de83e2d9f4b104",
+    "oldBytesAvailable": true,
+    "newFile": false
+  },
+  {
+    "path": "packages/terrarium/src/terminal.ts",
+    "beforeSha256": "492a31374236087c0163e6d9cba0094a33a20fcb960773ac9c56864053677df2",
+    "afterSha256": "1f22e8081a647fb9abe4b4fbb58114b9841c3df16c3fa7cb206fa7c902cef8a7",
+    "oldBytesAvailable": true,
+    "newFile": false
+  },
+  {
+    "path": "packages/terrarium/tests/formicarium-assets.test.ts",
+    "beforeSha256": "7fb123eb761380ac2b624f9d121da33883d7e8c1d14b003e9f96c087e0e5fbf5",
+    "afterSha256": "67ad8fa275d875106ad98001aa35fd03b2b7e9a4bfa1686195637f167d5cc9f4",
+    "oldBytesAvailable": true,
+    "newFile": false
+  },
+  {
+    "path": "packages/terrarium/tests/formicarium-catalog.test.ts",
+    "beforeSha256": "16cd04d3f0f02e95b85492bd2954c81b6185070aec97206d1ffa94d99e274c9a",
+    "afterSha256": "e8da7dc1cf83f1dde3938460253a106ed8a56e32f771b83ed58e6d71747976b9",
+    "oldBytesAvailable": true,
+    "newFile": false
+  },
+  {
+    "path": "packages/terrarium/README.md",
+    "beforeSha256": "d58eef52b44dff0ad9769f3554f339aa211034f9cb12edb24f130cdc3b3aef54",
+    "afterSha256": "121d0c99644e2c5cd16b3292462ca1a6fdfb78b07426d2e35fcc16639b069320",
+    "oldBytesAvailable": true,
+    "newFile": false
+  },
+  {
+    "path": ".github/workflows/test-terrarium.yml",
+    "beforeSha256": "d900640ddd1f78cd7d76e9f9235e9fa796bbaf3824d9bc33d2559e136f2eefd0",
+    "afterSha256": "5c59e63bd525548e6e899488df76ed3dd462ad3251b7927a234f1de41d96eb38",
+    "oldBytesAvailable": true,
+    "newFile": false
+  },
+  {
+    "path": ".github/workflows/test-e2e.yml",
+    "beforeSha256": "25b3bca6e7335bf68f69fd4610c71a213aaee9703b3151b84c25cb20bb8bfdb4",
+    "afterSha256": "6acc3919bdce23e723da5df977a709f7e591a755e6d0bb7f1ea09b79aa3326ce",
+    "oldBytesAvailable": true,
+    "newFile": false
+  }
+]

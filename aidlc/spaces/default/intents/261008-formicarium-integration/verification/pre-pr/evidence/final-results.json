@@ -1,0 +1,40 @@
+{
+  "lint": {
+    "exitCode": 0,
+    "command": "mise run lint:all"
+  },
+  "ciTerrarium": {
+    "exitCode": 0,
+    "command": "FORMICARIUM_INPUTS_DIR=<fixed-input-directory> mise run ci:terrarium",
+    "unitPassed": 85,
+    "failed": 0
+  },
+  "formicarium": {
+    "exitCode": 0,
+    "passed": 45,
+    "skipped": 0,
+    "command": "TERRARIUM_BUN=<mise-bun> TERRARIUM_SITE_DIR=<dedicated-candidate> mise exec -- bun x playwright test --config playwright.formicarium.config.ts --workers=1 --retries=0"
+  },
+  "legacy": {
+    "exitCode": 0,
+    "passed": 34,
+    "skipped": 2,
+    "skipReason": "Existing credentialless iframe behavior is Chromium-only"
+  },
+  "traceability": {
+    "covered": 18,
+    "missing": 0
+  },
+  "evidence": {
+    "assemble-formicarium.txt": "6863b986e4f72ee29f81a914baa45a1454edcc84d8bcd6785396c6078dee0c87",
+    "browser-commands.json": "3d71251155a656ff63f33aec1f6181a8288c2d09d182a28f57f0cadd7d98ae0d",
+    "browser-formicarium-final.txt": "3b6da406a1dc1411beb25eabb56c618ba6058935518f7f7a5876ebe51f3a1cfe",
+    "browser-formicarium.txt": "74b6711b30b7df7af55b482baab2002081057a9695ffea7f1ce2b38fcb233f3b",
+    "browser-legacy.txt": "446cb63dd6aa45185249599c0e89665b239488c361db6279087e1d96ac6c38ce",
+    "ci-terrarium.txt": "4c04733823cb22be3209c2b9d2825eccfafaf53c6f0bac1b456c0285b9bd5eb8",
+    "lint.txt": "13da592b896c14ceca97131f0c35c87318caec0b1d4eea8b6a14a8423866b57b",
+    "preservation.json": "7f04dd1c9ec1567eddf5f6247bfd917bbfa6cb9b10c856e580b138423f540a57",
+    "source-inventory.json": "747c8ac304c043ceaf854c4b27ce733fc1b49188ba6c250ff933c8e10dfd308b",
+    "traceability-resolution.json": "6b446c0ee6b179d566fe1db45d248e49fc2fd74d9dc170d9e72e6693d65b69bf"
+  }
+}

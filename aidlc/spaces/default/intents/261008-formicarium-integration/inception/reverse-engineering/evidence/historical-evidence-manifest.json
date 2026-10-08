@@ -1,0 +1,357 @@
+[
+  {
+    "absolutePath": "/Users/mutoakio/Documents/formicarium/.artifacts/u3-evidence-v1/identity.json",
+    "sha256": "70d476183cfecd6af1f67ecbac77cc8c32c2deb8a11a185f6e122218d05d4ef4",
+    "size": 13312
+  },
+  {
+    "absolutePath": "/Users/mutoakio/Documents/formicarium/.artifacts/u3-package-v1/aletheia-works-formicarium-0.1.0-rc.1.tgz",
+    "sha256": "969e9fab854d4499da1d38087bd601b65042b6d50b086c8fc8ddaefd0752f810",
+    "size": 232440
+  },
+  {
+    "absolutePath": "/Users/mutoakio/Documents/formicarium/.artifacts/u3-package-v1.manifest.json",
+    "sha256": "ba2f4ced257067a4c2aa64c9841b04a04f332e4812bcd369bab0d2807b310aef",
+    "size": 5353
+  },
+  {
+    "absolutePath": "/Users/mutoakio/Documents/formicarium/aidlc/spaces/default/intents/261006-npm-terrarium-release/construction/u3-terrarium-integration/code-generation/code-generation-plan.md",
+    "sha256": "1f2e6e44d7e5354104c35a3007a6f4cbc6638aef4e7ba1ccf24cd9be24fb1c8c",
+    "size": 16658
+  },
+  {
+    "absolutePath": "/Users/mutoakio/Documents/formicarium/aidlc/spaces/default/intents/261006-npm-terrarium-release/construction/u3-terrarium-integration/code-generation/code-generation-questions.md",
+    "sha256": "b33700b04ec1a8ed2a725e0b31b8f6477266a7ddcaeb04743aed1b909d277e95",
+    "size": 624
+  },
+  {
+    "absolutePath": "/Users/mutoakio/Documents/formicarium/aidlc/spaces/default/intents/261006-npm-terrarium-release/construction/u3-terrarium-integration/code-generation/code-summary.md",
+    "sha256": "c983cbb6efcf854a53db4d2fe25d3b21d97c13dd12ae96d227efa0f59aa01bf1",
+    "size": 2260
+  },
+  {
+    "absolutePath": "/Users/mutoakio/Documents/formicarium/aidlc/spaces/default/intents/261006-npm-terrarium-release/construction/u3-terrarium-integration/code-generation/source-manifest.json",
+    "sha256": "27194bc51f13646419225685563949967f793b85afa435acd50503ccc5a61211",
+    "size": 2888
+  },
+  {
+    "absolutePath": "/Users/mutoakio/Documents/formicarium/aidlc/spaces/default/intents/261006-npm-terrarium-release/construction/u3-terrarium-integration/code-generation/traceability.json",
+    "sha256": "7e4166dbaa45e1f82679b99361b91d527a29ac324bf175ebfeaee5f0cb0742db",
+    "size": 7146
+  },
+  {
+    "absolutePath": "/Users/mutoakio/Documents/formicarium/aidlc/spaces/default/intents/261006-npm-terrarium-release/construction/u3-terrarium-integration/code-generation/traceability.md",
+    "sha256": "80a53732b283771cb062e771c6ecf80475180b2602ee82936eec354800a890c7",
+    "size": 1134
+  },
+  {
+    "absolutePath": "/Users/mutoakio/Documents/formicarium/aidlc/spaces/default/intents/261006-npm-terrarium-release/construction/u3-terrarium-integration/code-generation/unit-test-instructions.md",
+    "sha256": "d96a669a2badde4bad840a80491bfd7e37209a124ccadf076856e59951d026dc",
+    "size": 5081
+  },
+  {
+    "absolutePath": "/Users/mutoakio/Documents/formicarium/aidlc/spaces/default/intents/261006-npm-terrarium-release/construction/u3-terrarium-integration/code-generation/verification/browser-red-v1/chromium-missing-isolation.md",
+    "sha256": "47dab09f9ebc325d302a9149ddfeec48e3f53e4997a1b80af67e70aca2553e9c",
+    "size": 8174
+  },
+  {
+    "absolutePath": "/Users/mutoakio/Documents/formicarium/aidlc/spaces/default/intents/261006-npm-terrarium-release/construction/u3-terrarium-integration/code-generation/verification/browser-red-v1/firefox-cross-origin.md",
+    "sha256": "15134e18ef3a8f4aad5c6963cb22b66df223b0c0cb38988ee04aef011eebee2d",
+    "size": 7804
+  },
+  {
+    "absolutePath": "/Users/mutoakio/Documents/formicarium/aidlc/spaces/default/intents/261006-npm-terrarium-release/construction/u3-terrarium-integration/code-generation/verification/browser-red-v1/firefox-missing-isolation.md",
+    "sha256": "454e342dcc8a06e10d8aaf478afc01bc13a47c27e77e98c5537cd621f00283ae",
+    "size": 7809
+  },
+  {
+    "absolutePath": "/Users/mutoakio/Documents/formicarium/aidlc/spaces/default/intents/261006-npm-terrarium-release/construction/u3-terrarium-integration/code-generation/verification/browser-red-v1/webkit-cross-origin.md",
+    "sha256": "15134e18ef3a8f4aad5c6963cb22b66df223b0c0cb38988ee04aef011eebee2d",
+    "size": 7804
+  },
+  {
+    "absolutePath": "/Users/mutoakio/Documents/formicarium/aidlc/spaces/default/intents/261006-npm-terrarium-release/construction/u3-terrarium-integration/code-generation/verification/browser-red-v1/webkit-missing-isolation.md",
+    "sha256": "454e342dcc8a06e10d8aaf478afc01bc13a47c27e77e98c5537cd621f00283ae",
+    "size": 7809
+  },
+  {
+    "absolutePath": "/Users/mutoakio/Documents/formicarium/aidlc/spaces/default/intents/261006-npm-terrarium-release/construction/u3-terrarium-integration/code-generation/verification/latest-pitchfork.json",
+    "sha256": "c7a0e8aa02ebf315cba90f1d73a9bc3090f25686361469309e5ce5b875ce302f",
+    "size": 1202
+  },
+  {
+    "absolutePath": "/Users/mutoakio/Documents/formicarium/aidlc/spaces/default/intents/261006-npm-terrarium-release/construction/u3-terrarium-integration/code-generation/verification/layer1-2.json",
+    "sha256": "1a302026265b0b94c8fa611724b6949400d7bb562cdde0cf5c442cc4c69d5738",
+    "size": 2822
+  },
+  {
+    "absolutePath": "/Users/mutoakio/Documents/formicarium/aidlc/spaces/default/intents/261006-npm-terrarium-release/construction/u3-terrarium-integration/code-generation/verification/quote-regression.json",
+    "sha256": "3a56144eb89bcb21aa591d2f237b05310f70e9c087a938b47150fc5d8347e2b6",
+    "size": 1240
+  },
+  {
+    "absolutePath": "/Users/mutoakio/Documents/formicarium/aidlc/spaces/default/intents/261006-npm-terrarium-release/construction/u3-terrarium-integration/code-generation/verification/repository-boundary-recovery.md",
+    "sha256": "dd98347c8a4b442bbafc0513fcc70d4ba0bafbd592d29ba6e4b77691b41242b0",
+    "size": 2239
+  },
+  {
+    "absolutePath": "/Users/mutoakio/Documents/formicarium/aidlc/spaces/default/intents/261006-npm-terrarium-release/construction/u3-terrarium-integration/code-generation/verification/source-evidence-inventory.json",
+    "sha256": "0f8d72f2efe98ec2f2649a57a38836d98f1f1cdbab7fb1e3ba367d5e5f0dfa12",
+    "size": 8518
+  },
+  {
+    "absolutePath": "/Users/mutoakio/Documents/formicarium/.artifacts/u3-coverage-v1/browser-results/.last-run.json",
+    "sha256": "91d1c43004802cd49950d78eb11c8fa7d05da8ffffe219a8b13b2f561bc00903",
+    "size": 45
+  },
+  {
+    "absolutePath": "/Users/mutoakio/Documents/formicarium/.artifacts/u3-coverage-v1/browser-results/formicarium-iframe-iframe--4c6f5-ins-and-guest-marker-oracle-chromium/coverage-realms.json",
+    "sha256": "9eee2a7360165c76fb64eecf60b4d3d9c61b5b9e4460bec5ac1df96180198e48",
+    "size": 176968
+  },
+  {
+    "absolutePath": "/Users/mutoakio/Documents/formicarium/.artifacts/u3-coverage-v1/browser-results/formicarium-iframe-iframe--4c6f5-ins-and-guest-marker-oracle-firefox/coverage-realms.json",
+    "sha256": "b63987eb907132679597836d8993e0ee93659e57f5e738d2f0db1ee50f4cf528",
+    "size": 176967
+  },
+  {
+    "absolutePath": "/Users/mutoakio/Documents/formicarium/.artifacts/u3-coverage-v1/browser-results/formicarium-iframe-iframe--4c6f5-ins-and-guest-marker-oracle-webkit/coverage-realms.json",
+    "sha256": "a44fb911df6b18cd8fa8685513358acdc39d2f126f28d1cc61fcbde5b3b60f5a",
+    "size": 176966
+  },
+  {
+    "absolutePath": "/Users/mutoakio/Documents/formicarium/.artifacts/u3-coverage-v1/browser-results/formicarium-iframe-iframe--60d07-ins-and-guest-marker-oracle-chromium/coverage-realms.json",
+    "sha256": "0a6c90419b1810adca6c514c63cfd92a539ceada49816b2d068a2300360a05c4",
+    "size": 176969
+  },
+  {
+    "absolutePath": "/Users/mutoakio/Documents/formicarium/.artifacts/u3-coverage-v1/browser-results/formicarium-iframe-iframe--60d07-ins-and-guest-marker-oracle-firefox/coverage-realms.json",
+    "sha256": "e6834b5a25d40931c17f03cf146aea6b5239e4ff05df55e09ceb2de410c2ce56",
+    "size": 120632
+  },
+  {
+    "absolutePath": "/Users/mutoakio/Documents/formicarium/.artifacts/u3-coverage-v1/browser-results/formicarium-iframe-iframe--60d07-ins-and-guest-marker-oracle-webkit/coverage-realms.json",
+    "sha256": "6a6a03e4420371c51faf2df1d740ea2624e646f0bfb695da2a7d41e18d9ec146",
+    "size": 120631
+  },
+  {
+    "absolutePath": "/Users/mutoakio/Documents/formicarium/.artifacts/u3-coverage-v1/browser-results/formicarium-iframe-iframe--64345-ins-and-guest-marker-oracle-chromium/coverage-realms.json",
+    "sha256": "c57c57dd1cc73ce28651323cf44251bd27471422328bb34783518b081c58e777",
+    "size": 120638
+  },
+  {
+    "absolutePath": "/Users/mutoakio/Documents/formicarium/.artifacts/u3-coverage-v1/browser-results/formicarium-iframe-iframe--64345-ins-and-guest-marker-oracle-firefox/coverage-realms.json",
+    "sha256": "50ba30044bad774229365ca9eccc404da47218fef4645e94d263d580564afde4",
+    "size": 120637
+  },
+  {
+    "absolutePath": "/Users/mutoakio/Documents/formicarium/.artifacts/u3-coverage-v1/browser-results/formicarium-iframe-iframe--64345-ins-and-guest-marker-oracle-webkit/coverage-realms.json",
+    "sha256": "75829e57329ab670fe6244b5a69b5fc2acc6d81065606e3343379957b5bdee77",
+    "size": 120636
+  },
+  {
+    "absolutePath": "/Users/mutoakio/Documents/formicarium/.artifacts/u3-coverage-v1/browser-results/formicarium-iframe-invalid-04c11-ins-never-connect-or-notify-chromium/coverage-realms.json",
+    "sha256": "cb21c987fcb552c28e5b21ecca6123a6ca0a7eb77c9944e7313536153d73c281",
+    "size": 120639
+  },
+  {
+    "absolutePath": "/Users/mutoakio/Documents/formicarium/.artifacts/u3-coverage-v1/browser-results/formicarium-iframe-invalid-04c11-ins-never-connect-or-notify-firefox/coverage-realms.json",
+    "sha256": "2db1186db4db2888af84ca3ee653c9659193b0fc3a6e13cfb3a61800c04c0c3f",
+    "size": 120638
+  },
+  {
+    "absolutePath": "/Users/mutoakio/Documents/formicarium/.artifacts/u3-coverage-v1/browser-results/formicarium-iframe-invalid-04c11-ins-never-connect-or-notify-webkit/coverage-realms.json",
+    "sha256": "791c982a659059b60097e0ba31cf40d437244f3820c0fd310f449e90ec219f55",
+    "size": 120637
+  },
+  {
+    "absolutePath": "/Users/mutoakio/Documents/formicarium/.artifacts/u3-coverage-v1/browser-results/formicarium-iframe-unappro-aa768-s-even-when-syntax-is-valid-chromium/coverage-realms.json",
+    "sha256": "bb23de03843b277eff801477c5ec9fc6d7297858f5bf89cb4d05c363363ee1cd",
+    "size": 176972
+  },
+  {
+    "absolutePath": "/Users/mutoakio/Documents/formicarium/.artifacts/u3-coverage-v1/browser-results/formicarium-iframe-unappro-aa768-s-even-when-syntax-is-valid-firefox/coverage-realms.json",
+    "sha256": "59e4f4df054f2859f7ad4ded0ff26ca37ca24532bf130552a5c564c7a01a04ad",
+    "size": 120650
+  },
+  {
+    "absolutePath": "/Users/mutoakio/Documents/formicarium/.artifacts/u3-coverage-v1/browser-results/formicarium-iframe-unappro-aa768-s-even-when-syntax-is-valid-webkit/coverage-realms.json",
+    "sha256": "9cdb99bf3232ba16449e795705e08b01e0d96ae75fd2dc232f28d43e231394b7",
+    "size": 120649
+  },
+  {
+    "absolutePath": "/Users/mutoakio/Documents/formicarium/.artifacts/u3-coverage-v1/browser-results/formicarium-terminal-boot--fdabd-t-creating-any-guest-Worker-chromium/coverage-realms.json",
+    "sha256": "5d82d3aab00be176b8345e2faa1cdb744c6831df2248c98f06876ad819cd057a",
+    "size": 102346
+  },
+  {
+    "absolutePath": "/Users/mutoakio/Documents/formicarium/.artifacts/u3-coverage-v1/browser-results/formicarium-terminal-boot--fdabd-t-creating-any-guest-Worker-firefox/coverage-realms.json",
+    "sha256": "63025b5cc3988f38dedf97d63984c46528df3d731fed89d12cff6808976e0d1e",
+    "size": 102345
+  },
+  {
+    "absolutePath": "/Users/mutoakio/Documents/formicarium/.artifacts/u3-coverage-v1/browser-results/formicarium-terminal-boot--fdabd-t-creating-any-guest-Worker-webkit/coverage-realms.json",
+    "sha256": "d206629c2a82c957cb12806dd8f7dcd9f4077a733e9e83d3378413577223ac52",
+    "size": 102344
+  },
+  {
+    "absolutePath": "/Users/mutoakio/Documents/formicarium/.artifacts/u3-coverage-v1/browser-results/formicarium-terminal-disco-91dd4-creates-independent-session-chromium/coverage-realms.json",
+    "sha256": "bc7e02a648bfba3f8d18db0594364e418152566b600bde0f2e3627590e3eaf3f",
+    "size": 158737
+  },
+  {
+    "absolutePath": "/Users/mutoakio/Documents/formicarium/.artifacts/u3-coverage-v1/browser-results/formicarium-terminal-disco-91dd4-creates-independent-session-firefox/coverage-realms.json",
+    "sha256": "b515eb4f2b49e443ffa8cf8ae74058dedc85a65f9929d029479cebbcc5abeb8d",
+    "size": 158735
+  },
+  {
+    "absolutePath": "/Users/mutoakio/Documents/formicarium/.artifacts/u3-coverage-v1/browser-results/formicarium-terminal-disco-91dd4-creates-independent-session-webkit/coverage-realms.json",
+    "sha256": "7e2a0b65c0895469a0dda90bfb62e1759e753951ffa0860a4bda778bd72d0743",
+    "size": 158735
+  },
+  {
+    "absolutePath": "/Users/mutoakio/Documents/formicarium/.artifacts/u3-coverage-v1/browser-results/formicarium-terminal-empty-dc056-nd-have-no-added-exit-event-chromium/coverage-realms.json",
+    "sha256": "7f2ab74906d1d45b30739f16910c46d6668e900e74529aac19061b94660db18c",
+    "size": 158647
+  },
+  {
+    "absolutePath": "/Users/mutoakio/Documents/formicarium/.artifacts/u3-coverage-v1/browser-results/formicarium-terminal-empty-dc056-nd-have-no-added-exit-event-firefox/coverage-realms.json",
+    "sha256": "03cd54b4994726a30efdda1e77f2e8fae1cdd26d1fa17cba22b7dc5f241002fe",
+    "size": 158646
+  },
+  {
+    "absolutePath": "/Users/mutoakio/Documents/formicarium/.artifacts/u3-coverage-v1/browser-results/formicarium-terminal-empty-dc056-nd-have-no-added-exit-event-webkit/coverage-realms.json",
+    "sha256": "52609f868891fc1a8b22abb2ec1254b871b53af65544a3426108370247e8bb5c",
+    "size": 158645
+  },
+  {
+    "absolutePath": "/Users/mutoakio/Documents/formicarium/.artifacts/u3-coverage-v1/browser-results/formicarium-terminal-keybo-defdf--preserve-terminal-controls-chromium/coverage-realms.json",
+    "sha256": "30a892fbc752ce1e4e5c2fc7065e9e9e1599ad74411f31a473fb84e5faaef852",
+    "size": 158685
+  },
+  {
+    "absolutePath": "/Users/mutoakio/Documents/formicarium/.artifacts/u3-coverage-v1/browser-results/formicarium-terminal-keybo-defdf--preserve-terminal-controls-firefox/coverage-realms.json",
+    "sha256": "67777ff7d4e6a91bfa1d7b8f56fb577651e95f1ad83689d96861db246a4143e1",
+    "size": 158684
+  },
+  {
+    "absolutePath": "/Users/mutoakio/Documents/formicarium/.artifacts/u3-coverage-v1/browser-results/formicarium-terminal-keybo-defdf--preserve-terminal-controls-webkit/coverage-realms.json",
+    "sha256": "91077019cc10af65e2b1b61ef543f654247c62035237cfc5089cc8c6efd2ac68",
+    "size": 158683
+  },
+  {
+    "absolutePath": "/Users/mutoakio/Documents/formicarium/.artifacts/u3-coverage-v1/browser-results/formicarium-terminal-lates-0e073-s-and-actual-Worker-version-chromium/coverage-realms.json",
+    "sha256": "4f7232583f0903966e6cc0550cce5072f849505e9671cb0e49468b11bc57f964",
+    "size": 158677
+  },
+  {
+    "absolutePath": "/Users/mutoakio/Documents/formicarium/.artifacts/u3-coverage-v1/browser-results/formicarium-terminal-lates-0e073-s-and-actual-Worker-version-firefox/coverage-realms.json",
+    "sha256": "71619c3467a142e0eae9d923d07b3358e091b81c185abce8ba5904a69db3e735",
+    "size": 158678
+  },
+  {
+    "absolutePath": "/Users/mutoakio/Documents/formicarium/.artifacts/u3-coverage-v1/browser-results/formicarium-terminal-lates-0e073-s-and-actual-Worker-version-webkit/coverage-realms.json",
+    "sha256": "8166017e177b82fd3a91e1e76cb46eca4cf0b8285eeb0899f22da0c202e23f80",
+    "size": 158675
+  },
+  {
+    "absolutePath": "/Users/mutoakio/Documents/formicarium/.artifacts/u3-coverage-v1/browser-results/formicarium-terminal-lates-745fc-ntime-actual-Worker-version-chromium/coverage-realms.json",
+    "sha256": "103ab284e02dc4fd9d8d038531e0cf5994234e1a07574b39a1e89095cb9359d6",
+    "size": 158679
+  },
+  {
+    "absolutePath": "/Users/mutoakio/Documents/formicarium/.artifacts/u3-coverage-v1/browser-results/formicarium-terminal-lates-745fc-ntime-actual-Worker-version-firefox/coverage-realms.json",
+    "sha256": "41480d1c56b260030e1847cb17d0455299adc5d732e85d990c673d05f7b44d21",
+    "size": 158678
+  },
+  {
+    "absolutePath": "/Users/mutoakio/Documents/formicarium/.artifacts/u3-coverage-v1/browser-results/formicarium-terminal-lates-745fc-ntime-actual-Worker-version-webkit/coverage-realms.json",
+    "sha256": "9db09837fc6b9f316897cde0a46b2439342f67e26275cc4b3f87963d011aeaeb",
+    "size": 158677
+  },
+  {
+    "absolutePath": "/Users/mutoakio/Documents/formicarium/.artifacts/u3-coverage-v1/browser-results/formicarium-terminal-neste-28655-fore-and-after-actual-guest-chromium/coverage-realms.json",
+    "sha256": "45725fcee02b16be093e8d3e7eccc771e36a0c499a9165c7156423ebc5dd52d8",
+    "size": 158690
+  },
+  {
+    "absolutePath": "/Users/mutoakio/Documents/formicarium/.artifacts/u3-coverage-v1/browser-results/formicarium-terminal-neste-28655-fore-and-after-actual-guest-firefox/coverage-realms.json",
+    "sha256": "24d0161a2d9ef737bc15140a28e76b79074c158a7e0229a2b95b16e12cef1b46",
+    "size": 158691
+  },
+  {
+    "absolutePath": "/Users/mutoakio/Documents/formicarium/.artifacts/u3-coverage-v1/browser-results/formicarium-terminal-neste-28655-fore-and-after-actual-guest-webkit/coverage-realms.json",
+    "sha256": "026a3f456b6f08b7e780dc455d6a3a602b80ef66efd9ed6203c0135ab787822a",
+    "size": 158688
+  },
+  {
+    "absolutePath": "/Users/mutoakio/Documents/formicarium/.artifacts/u3-coverage-v1/browser-results/formicarium-terminal-norma-ca5e7-x-error-once-queue-recovers-chromium/coverage-realms.json",
+    "sha256": "f5b7dcd47683de34293cd45a9c10441e18bae5079379f34c98d5a3a9e8a84987",
+    "size": 158688
+  },
+  {
+    "absolutePath": "/Users/mutoakio/Documents/formicarium/.artifacts/u3-coverage-v1/browser-results/formicarium-terminal-norma-ca5e7-x-error-once-queue-recovers-firefox/coverage-realms.json",
+    "sha256": "5a59cbb1b1c7fd0f5ea2398e870262074f7a8fd326f54ccd8bdd26d8de74bcf0",
+    "size": 158689
+  },
+  {
+    "absolutePath": "/Users/mutoakio/Documents/formicarium/.artifacts/u3-coverage-v1/browser-results/formicarium-terminal-norma-ca5e7-x-error-once-queue-recovers-webkit/coverage-realms.json",
+    "sha256": "1b95ba0bd39a2cb462ce9cc0f5322957a74b8ed0f4e05a8ebeb26c2893f3db1c",
+    "size": 158686
+  },
+  {
+    "absolutePath": "/Users/mutoakio/Documents/formicarium/.artifacts/u3-coverage-v1/browser-results/formicarium-terminal-run-a-0c92d-retain-serial-command-order-chromium/coverage-realms.json",
+    "sha256": "97783c90bbeb5e0eaca5b4c2984317227090c232d5f7aa35e112f9408da101d0",
+    "size": 158667
+  },
+  {
+    "absolutePath": "/Users/mutoakio/Documents/formicarium/.artifacts/u3-coverage-v1/browser-results/formicarium-terminal-run-a-0c92d-retain-serial-command-order-firefox/coverage-realms.json",
+    "sha256": "5c3b0b58db5d32621951d6626622e0b5c6883291cb7fb44b745e16266fe18852",
+    "size": 158666
+  },
+  {
+    "absolutePath": "/Users/mutoakio/Documents/formicarium/.artifacts/u3-coverage-v1/browser-results/formicarium-terminal-run-a-0c92d-retain-serial-command-order-webkit/coverage-realms.json",
+    "sha256": "3b86c8e356f268ea3e44afd9efb6689bf1a862aef81986193de8c88f3ebeff88",
+    "size": 158665
+  },
+  {
+    "absolutePath": "/Users/mutoakio/Documents/formicarium/.artifacts/u3-coverage-v1/browser-results/formicarium-terminal-tool--938e5-or-queued-run-notifications-chromium/coverage-realms.json",
+    "sha256": "189c36626df67b90901e9d177ec8124d8808d3d085734a3d84c45fc24abe664d",
+    "size": 158694
+  },
+  {
+    "absolutePath": "/Users/mutoakio/Documents/formicarium/.artifacts/u3-coverage-v1/browser-results/formicarium-terminal-tool--938e5-or-queued-run-notifications-firefox/coverage-realms.json",
+    "sha256": "46f016cd6d271051b27865b285e33780428fcb318899aabd96244d768ee8153a",
+    "size": 158693
+  },
+  {
+    "absolutePath": "/Users/mutoakio/Documents/formicarium/.artifacts/u3-coverage-v1/browser-results/formicarium-terminal-tool--938e5-or-queued-run-notifications-webkit/coverage-realms.json",
+    "sha256": "cb03937387dc38f6be6ffdd9f9de22f7a10fd16287f8c7f0a5504636ead8f03c",
+    "size": 158692
+  },
+  {
+    "absolutePath": "/Users/mutoakio/Documents/formicarium/.artifacts/u3-coverage-v1/coverage-final.json",
+    "sha256": "9cdf165e07ca483fb2dabbd76e6828794d49fbeed52eac6a041d040813815819",
+    "size": 996203
+  },
+  {
+    "absolutePath": "/Users/mutoakio/Documents/formicarium/.artifacts/u3-coverage-v1/inventory.json",
+    "sha256": "5c432f703852271e809f92be405d92bdc5f37ea6a1a06c12b663385fc0cd5a9d",
+    "size": 1124886
+  },
+  {
+    "absolutePath": "/Users/mutoakio/Documents/formicarium/.artifacts/u3-coverage-v1/node-raw.json",
+    "sha256": "3d4b516575588e08edb6699086aaa88f57219cc09d21e8173d7394517396eefc",
+    "size": 61617
+  },
+  {
+    "absolutePath": "/Users/mutoakio/Documents/formicarium/.artifacts/u3-coverage-v1/receipts/node.json",
+    "sha256": "0aa22c9105b44f7dd6c3bd294a4347cd3e6498558f227c9b4358a32a88a127d7",
+    "size": 179134
+  },
+  {
+    "absolutePath": "/Users/mutoakio/Documents/formicarium/.artifacts/u3-coverage-v1/report.json",
+    "sha256": "a79a80b16d5e58e82de908212314e81037e9a11e35eead4dc8ced65fc70030f2",
+    "size": 154284
+  }
+]

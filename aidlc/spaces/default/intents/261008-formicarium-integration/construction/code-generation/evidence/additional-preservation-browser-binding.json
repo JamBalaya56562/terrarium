@@ -1,0 +1,31 @@
+{
+  "candidateHashesUnchanged": {
+    "original": "3e3401c5a93bca5c7635d2ba0761bd72125b3421319c6ce054b178e011602983",
+    "dedicated": "f0f2c8d7fa1890dff594108062369cfa0e0333b07ae44554dd7303fbfdac01b4",
+    "legacy": "c6abc67b210491631c305e8cdcedd4dfb5f7b567c1011bea1256c1bfba068098"
+  },
+  "tarballSha256": "969e9fab854d4499da1d38087bd601b65042b6d50b086c8fc8ddaefd0752f810",
+  "manifestSha256": "ba2f4ced257067a4c2aa64c9841b04a04f332e4812bcd369bab0d2807b310aef",
+  "browserBundle": {
+    "version": "20261008020852",
+    "expectedSha256": "70d84444ec59708f0ce094c0ee849d136fa2a5c263857331852e3779f43b61ca",
+    "actualSha256": "70d84444ec59708f0ce094c0ee849d136fa2a5c263857331852e3779f43b61ca",
+    "unchanged": true,
+    "command": [
+      "/Users/mutoakio/.local/share/mise/installs/bun/1.4.2/bin/bun",
+      "build",
+      "packages/terrarium/src/index.ts",
+      "--outfile",
+      ".vendor/additional-bundle-proof.mjs",
+      "--format",
+      "esm",
+      "--target",
+      "browser",
+      "--minify",
+      "--define",
+      "__TERRARIUM_VERSION__=\"20261008020852\""
+    ]
+  },
+  "priorBrowserResults": "results-final.json",
+  "browserRerun": false
+}

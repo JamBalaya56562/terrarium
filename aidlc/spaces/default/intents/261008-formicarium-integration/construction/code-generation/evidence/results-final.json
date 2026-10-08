@@ -1,0 +1,53 @@
+{
+  "testingContract": "sha256:bb76c1b22f8307be6e5780d50cabab891684449d5b164bd0e825e9e4e5c61e5b",
+  "allUnit": {
+    "pass": 79,
+    "fail": 2,
+    "total": 81,
+    "exitCode": 1,
+    "log": "unit-final-source.txt"
+  },
+  "scopedIntegrationUnit": {
+    "pass": 36,
+    "fail": 0,
+    "log": "final-validation-0.txt"
+  },
+  "dedicated": {
+    "pass": 45,
+    "fail": 0,
+    "skip": 0,
+    "exitCode": 0,
+    "log": "browser-final-source.txt",
+    "site": "/private/tmp/terrarium-standalone-s00po458/.vendor/site-formicarium",
+    "candidateSha256": "f0f2c8d7fa1890dff594108062369cfa0e0333b07ae44554dd7303fbfdac01b4",
+    "projects": [
+      "chromium",
+      "firefox",
+      "webkit"
+    ],
+    "command": "TERRARIUM_BUN=<mise which bun> TERRARIUM_SITE_DIR=<absolute dedicated site> mise exec node@26 -- bun x playwright test --config playwright.formicarium.config.ts --workers=1 --retries=0"
+  },
+  "legacy": {
+    "pass": 34,
+    "fail": 0,
+    "skip": 2,
+    "exitCode": 0,
+    "log": "browser-legacy-final-source.txt",
+    "site": "/private/tmp/terrarium-standalone-s00po458/.vendor/site-legacy",
+    "candidateSha256": "c6abc67b210491631c305e8cdcedd4dfb5f7b567c1011bea1256c1bfba068098",
+    "projects": [
+      "chromium",
+      "firefox",
+      "webkit"
+    ],
+    "skipReason": "existing Chromium-only credentialless iframe cases in Firefox/WebKit; not counted as passed",
+    "command": "TERRARIUM_BUN=<mise which bun> TERRARIUM_SITE_DIR=<absolute legacy site> mise exec node@26 -- bun x playwright test --config playwright.config.ts --workers=1 --retries=0"
+  },
+  "remoteCI": "not run; fixed URL deployment unconfigured",
+  "sourceSha256": "e85d8ef4dfbba4fee42916442f298563ec2182848cfa1034df8e5a54c5e89536",
+  "configFormatting": "after runtime runs config-only mechanical formatting synchronized and list/lint checked",
+  "nativeEnvironmentFailures": [
+    "vendor failure leaves no Cargo marker and retries an already applied tool patch",
+    "pitchfork ref resolution > resolves a pull request through its head endpoint"
+  ]
+}

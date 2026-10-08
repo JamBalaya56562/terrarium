@@ -1,0 +1,42 @@
+[
+  {
+    "command": [
+      "mise",
+      "exec",
+      "node@26",
+      "--",
+      "bun",
+      "test",
+      "./tests/formicarium-inputs.test.ts",
+      "./tests/formicarium-session.test.ts",
+      "./tests/formicarium-catalog.test.ts",
+      "./tests/formicarium-assets.test.ts"
+    ],
+    "cwd": "/private/tmp/terrarium-standalone-s00po458/packages/terrarium",
+    "exitCode": 0
+  },
+  {
+    "command": [
+      "mise",
+      "exec",
+      "--",
+      "rumdl",
+      "check",
+      "packages/terrarium/README.md"
+    ],
+    "cwd": "/Users/mutoakio/Documents/terrarium",
+    "exitCode": 1
+  },
+  {
+    "command": [
+      "mise",
+      "exec",
+      "--",
+      "actionlint",
+      ".github/workflows/test-terrarium.yml",
+      ".github/workflows/test-e2e.yml"
+    ],
+    "cwd": "/Users/mutoakio/Documents/terrarium",
+    "exitCode": 0
+  }
+]

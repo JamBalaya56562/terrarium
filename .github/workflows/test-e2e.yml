@@ -12,8 +12,33 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  pitchfork-ref:
+    name: Resolve latest stable pitchfork
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    outputs:
+      ref: ${{ steps.pitchfork-ref.outputs.name }}
+      commit: ${{ steps.pitchfork-ref.outputs.commit }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Setup mise (jq)
+        uses: jdx/mise-action@2d8d4cafcbd33be2ea37d2b6f5ad595363d1f1ca # v5.1.1
+        with:
+          install_args: jq
+      - name: Resolve latest stable pitchfork once
+        id: pitchfork-ref
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: bash scripts/resolve-ref.sh pitchfork latest >> "$GITHUB_OUTPUT"
+
   pitchfork-build:
-    name: Build pitchfork v2.29.0
+    needs: pitchfork-ref
+    name: Build latest stable pitchfork
+    outputs:
+      ref: ${{ needs.pitchfork-ref.outputs.ref }}
+      commit: ${{ needs.pitchfork-ref.outputs.commit }}
     runs-on: ubuntu-latest
     timeout-minutes: 240
     env:
@@ -26,14 +51,14 @@ jobs:
         run: |
           echo "EMSDK=$RUNNER_TEMP/emsdk" >> "$GITHUB_ENV"
           echo "CARGO_TARGET_DIR=$RUNNER_TEMP/pitchfork-target" >> "$GITHUB_ENV"
-      - name: Cache the fixed pitchfork build
+      - name: Cache the resolved pitchfork build
         id: pitchfork
         uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
         with:
           path: ${{ runner.temp }}/out/
           # Include the build's script dependencies and linker inputs; unrelated
           # fetch, staging and lint scripts do not change the compiled artifact.
-          key: pitchfork-${{ runner.os }}-cfdea79f1d52b8449c0b99b29a03d9e771cd8ec3-${{ env.EMSDK_VERSION }}-${{ hashFiles('patches/**', 'runtime/syscalls.c', 'runtime/libterrarium.js', 'scripts/build-pitchfork.sh', 'scripts/emscripten-env.sh', 'scripts/patch-rust-src.sh', 'scripts/vendor-patched.sh', '.github/workflows/test-e2e.yml') }}
+          key: pitchfork-${{ runner.os }}-${{ needs.pitchfork-ref.outputs.commit }}-${{ env.EMSDK_VERSION }}-${{ hashFiles('patches/**', 'runtime/syscalls.c', 'runtime/libterrarium.js', 'scripts/build-pitchfork.sh', 'scripts/emscripten-env.sh', 'scripts/patch-rust-src.sh', 'scripts/vendor-patched.sh') }}
       - name: Install Ninja
         if: steps.pitchfork.outputs.cache-hit != 'true'
         run: sudo apt-get update -qq && sudo apt-get install -y -qq ninja-build
@@ -54,11 +79,11 @@ jobs:
         run: |
           toolchain=$(basename patches/toolchain/rust-std-*.patch .patch)
           rustup toolchain install "${toolchain#rust-std-}" --profile minimal --component rust-src --target wasm32-unknown-emscripten
-      - name: Download the fixed pitchfork source
+      - name: Download the resolved pitchfork source
         if: steps.pitchfork.outputs.cache-hit != 'true'
         run: |
           mkdir -p ../src
-          curl -fsSL https://codeload.github.com/jdx/pitchfork/tar.gz/cfdea79f1d52b8449c0b99b29a03d9e771cd8ec3 | tar -xz -C ../src --strip-components=1
+          curl -fsSL https://codeload.github.com/jdx/pitchfork/tar.gz/${{ needs.pitchfork-ref.outputs.commit }} | tar -xz -C ../src --strip-components=1
       - name: Restore cargo cache
         if: steps.pitchfork.outputs.cache-hit != 'true'
         uses: actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
@@ -66,7 +91,7 @@ jobs:
           path: |
             ~/.cargo/registry
             ${{ env.CARGO_TARGET_DIR }}
-          key: cargo-pitchfork-${{ runner.os }}-${{ hashFiles('patches/**') }}-cfdea79f1d52b8449c0b99b29a03d9e771cd8ec3
+          key: cargo-pitchfork-${{ runner.os }}-${{ hashFiles('patches/**') }}-${{ needs.pitchfork-ref.outputs.commit }}
           restore-keys: cargo-pitchfork-${{ runner.os }}-${{ hashFiles('patches/**') }}-
       - name: Build
         if: steps.pitchfork.outputs.cache-hit != 'true'
@@ -78,12 +103,12 @@ jobs:
           path: |
             ~/.cargo/registry
             ${{ env.CARGO_TARGET_DIR }}
-          key: cargo-pitchfork-${{ runner.os }}-${{ hashFiles('patches/**') }}-cfdea79f1d52b8449c0b99b29a03d9e771cd8ec3-${{ github.run_id }}-${{ github.run_attempt }}
+          key: cargo-pitchfork-${{ runner.os }}-${{ hashFiles('patches/**') }}-${{ needs.pitchfork-ref.outputs.commit }}-${{ github.run_id }}-${{ github.run_attempt }}
       - name: Check the build artifacts
         run: test -s "$RUNNER_TEMP/out/pitchfork.js" && test -s "$RUNNER_TEMP/out/pitchfork.wasm"
       - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
-          name: pitchfork-v2.29.0
+          name: pitchfork-${{ needs.pitchfork-ref.outputs.ref }}
           path: ${{ runner.temp }}/out/
           retention-days: 7
 
@@ -92,6 +117,9 @@ jobs:
     name: E2E (${{ matrix.browser }})
     runs-on: ubuntu-latest
     timeout-minutes: 30
+    env:
+      TERRARIUM_PITCHFORK_REF: ${{ needs.pitchfork-build.outputs.ref }}
+      TERRARIUM_PITCHFORK_COMMIT: ${{ needs.pitchfork-build.outputs.commit }}
     strategy:
       fail-fast: false
       matrix:
@@ -107,7 +135,15 @@ jobs:
           install: true
           cache: true
           experimental: true
-          install_args: bun jq
+          install_args: bun node jq
+
+      - name: Prepare fixed formicarium inputs
+        working-directory: .
+        env:
+          FORMICARIUM_INPUTS_URL: ${{ vars.FORMICARIUM_INPUTS_URL || 'https://raw.githubusercontent.com/Marukome0743/terrarium/c670296b2ebed05f2e8156a74fede29604ec8c95/inputs.tar.gz' }}
+        run: |
+          : "${FORMICARIUM_INPUTS_URL:?Configure the fixed formicarium input archive URL}"
+          bun scripts/prepare-formicarium.mjs --url "$FORMICARIUM_INPUTS_URL"
 
       - name: Install dependencies
         working-directory: packages/terrarium
@@ -115,7 +151,7 @@ jobs:
 
       - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
         with:
-          name: pitchfork-v2.29.0
+          name: pitchfork-${{ needs.pitchfork-build.outputs.ref }}
           path: ${{ runner.temp }}/pitchfork
 
       # The tests run the published v2.6.1 build of aube, a tag that never
@@ -124,10 +160,12 @@ jobs:
       - name: Fetch the v2.6.1 build and assemble the site
         run: |
           bash scripts/fetch-builds.sh v2.6.1
-          TERRARIUM_COMMIT=cfdea79f1d52b8449c0b99b29a03d9e771cd8ec3 \
-            bash scripts/stage-web.sh pitchfork v2.29.0 "$RUNNER_TEMP/pitchfork"
+          TERRARIUM_PITCHFORK_BUILD="$RUNNER_TEMP/pitchfork" bash scripts/prepare-pitchfork-e2e.sh
           bash scripts/stage-web.sh
-          mise run site:build
+          bash scripts/assemble-pages.sh .vendor/site-legacy legacy
+          bash scripts/assemble-pages.sh .vendor/site-formicarium formicarium
+          sha256sum .vendor/site-legacy/web/terrarium.mjs .vendor/site-formicarium/web/terrarium.mjs
+          sha256sum packages/terrarium/src/{terminal,formicarium-session,catalog}.ts
 
       - name: Cache Playwright system packages (${{ matrix.browser }})
         uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
@@ -153,7 +191,13 @@ jobs:
 
       - name: Run Playwright suite (${{ matrix.browser }})
         working-directory: packages/terrarium
-        run: bun run test:e2e -- --project=${{ matrix.browser }}
+        run: |
+          TERRARIUM_BUN=$(command -v bun)
+          export TERRARIUM_BUN
+          export TERRARIUM_SITE_DIR="$GITHUB_WORKSPACE/.vendor/site-legacy"
+          bun run test:e2e -- --project=${{ matrix.browser }}
+          export TERRARIUM_SITE_DIR="$GITHUB_WORKSPACE/.vendor/site-formicarium"
+          bunx playwright test --config playwright.formicarium.config.ts --project=${{ matrix.browser }} --workers=1 --retries=0
 
       - name: Upload Playwright report on failure
         if: failure()

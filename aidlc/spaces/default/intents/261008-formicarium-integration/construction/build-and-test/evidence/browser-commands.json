@@ -1,0 +1,58 @@
+[
+  {
+    "mode": "formicarium",
+    "cwd": "/Users/mutoakio/Documents/terrarium/packages/terrarium",
+    "argv": [
+      "mise",
+      "exec",
+      "node@26",
+      "--",
+      "bun",
+      "x",
+      "playwright",
+      "test",
+      "--config",
+      "playwright.formicarium.config.ts",
+      "e2e/formicarium-terminal.spec.ts",
+      "e2e/formicarium-iframe.spec.ts",
+      "--workers=1",
+      "--retries=0"
+    ],
+    "env": {
+      "TERRARIUM_BUN": "/Users/mutoakio/.local/share/mise/installs/bun/latest/bin/bun",
+      "TERRARIUM_SITE_DIR": "/Users/mutoakio/Documents/terrarium/.vendor/build-test-formicarium"
+    },
+    "exitCode": 0,
+    "seconds": 59.543,
+    "log": "browser-formicarium.txt",
+    "sha256": "890d4bc539f7fbb6ee5d2c5f21904a92d7b170ea67d982046916ed2df183de72"
+  },
+  {
+    "mode": "legacy",
+    "cwd": "/Users/mutoakio/Documents/terrarium/packages/terrarium",
+    "argv": [
+      "mise",
+      "exec",
+      "node@26",
+      "--",
+      "bun",
+      "x",
+      "playwright",
+      "test",
+      "--config",
+      "playwright.config.ts",
+      "e2e/terminal.spec.ts",
+      "e2e/pitchfork.spec.ts",
+      "--workers=1",
+      "--retries=0"
+    ],
+    "env": {
+      "TERRARIUM_BUN": "/Users/mutoakio/.local/share/mise/installs/bun/latest/bin/bun",
+      "TERRARIUM_SITE_DIR": "/Users/mutoakio/Documents/terrarium/.vendor/build-test-legacy"
+    },
+    "exitCode": 0,
+    "seconds": 151.534,
+    "log": "browser-legacy.txt",
+    "sha256": "482f9a33f8af33485cebbb0acb23e023157c97a449ff59f85464ec9df666dc8e"
+  }
+]

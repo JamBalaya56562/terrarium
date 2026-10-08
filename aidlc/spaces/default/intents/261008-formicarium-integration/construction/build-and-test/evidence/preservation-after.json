@@ -1,0 +1,21 @@
+[
+  {
+    "name": "original",
+    "sha256": "3e3401c5a93bca5c7635d2ba0761bd72125b3421319c6ce054b178e011602983",
+    "sameFileSetAndBytes": true
+  },
+  {
+    "name": "dedicated",
+    "sha256": "f0f2c8d7fa1890dff594108062369cfa0e0333b07ae44554dd7303fbfdac01b4",
+    "sameFileSetAndBytes": true
+  },
+  {
+    "name": "legacy",
+    "sha256": "c6abc67b210491631c305e8cdcedd4dfb5f7b567c1011bea1256c1bfba068098",
+    "sameFileSetAndBytes": true
+  },
+  {
+    "fixedInputFiles": 16,
+    "allMatch": true
+  }
+]

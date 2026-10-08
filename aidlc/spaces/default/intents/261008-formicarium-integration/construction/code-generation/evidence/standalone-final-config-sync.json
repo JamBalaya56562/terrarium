@@ -1,0 +1,12 @@
+[
+  {
+    "path": "packages/terrarium/playwright.config.ts",
+    "tempBeforeSha256": "5d0cf100932a314c986ab50eede0b1d9ac2618a2e40b5ee76366ae513f2095f6",
+    "currentSha256": "1cf519301eae5ff7f565bb8f70266ca71fded90e40c4b90839d2e41f6e8beaf1"
+  },
+  {
+    "path": "packages/terrarium/playwright.formicarium.config.ts",
+    "tempBeforeSha256": "91e43cbcfc942166a0def1b11c41356ced2c0b97db24d1416f23a57e71fdb2c6",
+    "currentSha256": "6bf3a0bbfe327536efee30f83db75a189febac83466af79d4b1136a98832f9a1"
+  }
+]

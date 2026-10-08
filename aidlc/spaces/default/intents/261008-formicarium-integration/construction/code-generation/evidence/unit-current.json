@@ -1,0 +1,1 @@
+{"command": "mise exec node@26 -- bun test ./tests", "cwd": "packages/terrarium", "exitCode": 1}

@@ -1,0 +1,26 @@
+[
+  {
+    "path": "scripts/resolve-ref.sh",
+    "beforeSha256": "9e938232d8b71028c0dacfeb7e76e492e501f33d2ab536184b073680ca5a20eb",
+    "afterSha256": "464eccd8b4fec7276062cb86890817b12217ef706d8b44925c7c876199366797",
+    "identical": true
+  },
+  {
+    "path": "scripts/build-pitchfork.sh",
+    "beforeSha256": "860167c19be18c2a4bea0235652d49c60daa1b914e81aa69c2b24b6efd40becf",
+    "afterSha256": "37e6e276e06cb59b08a7033b7298e92314932d6fa28a1a8d24e8996eb1351c4d",
+    "identical": true
+  },
+  {
+    "path": "packages/terrarium/tests/pitchfork-runtime.test.ts",
+    "beforeSha256": "6e515c8e723b3dcfc646b23c48a82b5a64b4c24a937eca14aa95b764262dec34",
+    "afterSha256": "5ae79117d9e1da4056918457d6d68b3102150d105c0b91280fbb91ab7992513e",
+    "identical": true
+  },
+  {
+    "path": "packages/terrarium/tests/pitchfork-build-retry.test.ts",
+    "beforeSha256": "8545c27702064a3b814d6a9de1bc1c3d51d6a606800b024af3ef2c1521646c57",
+    "afterSha256": "c7d59699e09c474178fac6e40300b72bb0c8b3415b2c7fad0a66e7c334b8af09",
+    "identical": true
+  }
+]

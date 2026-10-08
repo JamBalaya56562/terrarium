@@ -1,0 +1,134 @@
+[
+  {
+    "path": "scripts/prepare-formicarium.mjs",
+    "expected": "51c3c2ee098b341ef5a15ce0c33dab7c3b8b282e496afd6b0a64bbe9022a1fbb",
+    "actual": "51c3c2ee098b341ef5a15ce0c33dab7c3b8b282e496afd6b0a64bbe9022a1fbb",
+    "match": true
+  },
+  {
+    "path": "integration/formicarium-inputs.json",
+    "expected": "24ff31a8c69aae32ada473fb5b5e9e7c3b1078cff582056ebefbbc7436f7f348",
+    "actual": "24ff31a8c69aae32ada473fb5b5e9e7c3b1078cff582056ebefbbc7436f7f348",
+    "match": true
+  },
+  {
+    "path": "packages/terrarium/tests/formicarium-inputs.test.ts",
+    "expected": "75bf3bb43306a2e699af4517f5d0929b2e1ec7ddc0f245f043b92e0e59ee0eba",
+    "actual": "75bf3bb43306a2e699af4517f5d0929b2e1ec7ddc0f245f043b92e0e59ee0eba",
+    "match": true
+  },
+  {
+    "path": "packages/terrarium/package.json",
+    "expected": "d21fa37bac3640c86e7af86e990f1bec5773a3aa41cc079e7e0333d2856eebc8",
+    "actual": "d21fa37bac3640c86e7af86e990f1bec5773a3aa41cc079e7e0333d2856eebc8",
+    "match": true
+  },
+  {
+    "path": "packages/terrarium/bun.lock",
+    "expected": "8ab0766fa259eebbc980a5551011f9942bbe59b954d31df814c6a3482860eb8f",
+    "actual": "8ab0766fa259eebbc980a5551011f9942bbe59b954d31df814c6a3482860eb8f",
+    "match": true
+  },
+  {
+    "path": "mise.toml",
+    "expected": "74cc26ac5a2f93ff55cb396de003d21c724a003983484efaca074887568ccdc9",
+    "actual": "74cc26ac5a2f93ff55cb396de003d21c724a003983484efaca074887568ccdc9",
+    "match": true
+  },
+  {
+    "path": "scripts/stage-formicarium.mjs",
+    "expected": "6962b14e5de42b1b28af1759686cc4160e3e74f60850e51d9ea52543f1743dec",
+    "actual": "6962b14e5de42b1b28af1759686cc4160e3e74f60850e51d9ea52543f1743dec",
+    "match": true
+  },
+  {
+    "path": "scripts/assemble-pages.sh",
+    "expected": "181f5f8495e19632d79b853438bb0f960c048b94ce060ab538be1c1a2a43850a",
+    "actual": "181f5f8495e19632d79b853438bb0f960c048b94ce060ab538be1c1a2a43850a",
+    "match": true
+  },
+  {
+    "path": "packages/terrarium/playwright.config.ts",
+    "expected": "1cf519301eae5ff7f565bb8f70266ca71fded90e40c4b90839d2e41f6e8beaf1",
+    "actual": "1cf519301eae5ff7f565bb8f70266ca71fded90e40c4b90839d2e41f6e8beaf1",
+    "match": true
+  },
+  {
+    "path": "packages/terrarium/playwright.formicarium.config.ts",
+    "expected": "6bf3a0bbfe327536efee30f83db75a189febac83466af79d4b1136a98832f9a1",
+    "actual": "6bf3a0bbfe327536efee30f83db75a189febac83466af79d4b1136a98832f9a1",
+    "match": true
+  },
+  {
+    "path": "packages/terrarium/src/catalog.ts",
+    "expected": "452b007bd46c51f9ca3ac1a11557a09a3bb15cbd1235973a75018e243c430904",
+    "actual": "452b007bd46c51f9ca3ac1a11557a09a3bb15cbd1235973a75018e243c430904",
+    "match": true
+  },
+  {
+    "path": "packages/terrarium/src/formicarium-session.ts",
+    "expected": "c4b85c57526f18a7d83dbbc91856b6e421d5af19d4ad86d116de83e2d9f4b104",
+    "actual": "c4b85c57526f18a7d83dbbc91856b6e421d5af19d4ad86d116de83e2d9f4b104",
+    "match": true
+  },
+  {
+    "path": "packages/terrarium/src/terminal.ts",
+    "expected": "1f22e8081a647fb9abe4b4fbb58114b9841c3df16c3fa7cb206fa7c902cef8a7",
+    "actual": "1f22e8081a647fb9abe4b4fbb58114b9841c3df16c3fa7cb206fa7c902cef8a7",
+    "match": true
+  },
+  {
+    "path": "packages/terrarium/tests/formicarium-assets.test.ts",
+    "expected": "67ad8fa275d875106ad98001aa35fd03b2b7e9a4bfa1686195637f167d5cc9f4",
+    "actual": "67ad8fa275d875106ad98001aa35fd03b2b7e9a4bfa1686195637f167d5cc9f4",
+    "match": true
+  },
+  {
+    "path": "packages/terrarium/tests/formicarium-catalog.test.ts",
+    "expected": "e8da7dc1cf83f1dde3938460253a106ed8a56e32f771b83ed58e6d71747976b9",
+    "actual": "e8da7dc1cf83f1dde3938460253a106ed8a56e32f771b83ed58e6d71747976b9",
+    "match": true
+  },
+  {
+    "path": "packages/terrarium/README.md",
+    "expected": "121d0c99644e2c5cd16b3292462ca1a6fdfb78b07426d2e35fcc16639b069320",
+    "actual": "121d0c99644e2c5cd16b3292462ca1a6fdfb78b07426d2e35fcc16639b069320",
+    "match": true
+  },
+  {
+    "path": ".github/workflows/test-terrarium.yml",
+    "expected": "5c59e63bd525548e6e899488df76ed3dd462ad3251b7927a234f1de41d96eb38",
+    "actual": "5c59e63bd525548e6e899488df76ed3dd462ad3251b7927a234f1de41d96eb38",
+    "match": true
+  },
+  {
+    "path": ".github/workflows/test-e2e.yml",
+    "expected": "6acc3919bdce23e723da5df977a709f7e591a755e6d0bb7f1ea09b79aa3326ce",
+    "actual": "6acc3919bdce23e723da5df977a709f7e591a755e6d0bb7f1ea09b79aa3326ce",
+    "match": true
+  },
+  {
+    "path": "scripts/resolve-ref.sh",
+    "expected": "464eccd8b4fec7276062cb86890817b12217ef706d8b44925c7c876199366797",
+    "actual": "464eccd8b4fec7276062cb86890817b12217ef706d8b44925c7c876199366797",
+    "match": true
+  },
+  {
+    "path": "scripts/build-pitchfork.sh",
+    "expected": "37e6e276e06cb59b08a7033b7298e92314932d6fa28a1a8d24e8996eb1351c4d",
+    "actual": "37e6e276e06cb59b08a7033b7298e92314932d6fa28a1a8d24e8996eb1351c4d",
+    "match": true
+  },
+  {
+    "path": "packages/terrarium/tests/pitchfork-runtime.test.ts",
+    "expected": "5ae79117d9e1da4056918457d6d68b3102150d105c0b91280fbb91ab7992513e",
+    "actual": "5ae79117d9e1da4056918457d6d68b3102150d105c0b91280fbb91ab7992513e",
+    "match": true
+  },
+  {
+    "path": "packages/terrarium/tests/pitchfork-build-retry.test.ts",
+    "expected": "c7d59699e09c474178fac6e40300b72bb0c8b3415b2c7fad0a66e7c334b8af09",
+    "actual": "c7d59699e09c474178fac6e40300b72bb0c8b3415b2c7fad0a66e7c334b8af09",
+    "match": true
+  }
+]

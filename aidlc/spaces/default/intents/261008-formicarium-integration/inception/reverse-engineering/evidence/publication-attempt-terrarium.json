@@ -1,0 +1,11 @@
+{
+  "command": "aidlc engine workspace codekb-publish --repo terrarium --staged aidlc/spaces/default/intents/261008-formicarium-integration/.aidlc-engine/codekb-stage-terrarium/ --paths packages/terrarium,web,scripts,mise.toml,runtime,fixtures,.github/workflows --expect-store sha256:4d205ab2d1234dbeede10c16e16d6bf03e1d4fbbe712587d2d897ec310f57a21 --expect-source tree:76efb44aefed2e76a08d778719bb86e84c822aaf9fc6261de591e000fb3e8423 --json",
+  "exit_code": 1,
+  "refusal_count": 1,
+  "error": "codekb-publish: snapshot paths do not cover candidate analyzed path \"packages/terrarium/src/formicarium-session.ts\"; take a fresh codekb-snapshot over the complete candidate scope",
+  "retry_attempted": false,
+  "publication_completed": false,
+  "shared_store_changed": false,
+  "candidate_preserved": "aidlc/spaces/default/intents/261008-formicarium-integration/.aidlc-engine/codekb-stage-terrarium",
+  "reason_no_retry": "Documentation gives comma-separated snapshot paths but does not document repair for directory snapshot coverage rejection. Original directory snapshot recheck returned identical source/store generations. Mint returned unknown. No generation substitution or guessed retry."
+}
