@@ -1,0 +1,10 @@
+{
+  "name": "public-build",
+  "command": "FORMICARIUM_INPUTS_ROOT=.vendor/formicarium-inputs-public-rc1 mise run terrarium:formicarium-build",
+  "cwd": "/Users/mutoakio/Documents/terrarium",
+  "chunk_id": "214e9f",
+  "wall_time_seconds": 0.000015,
+  "original_token_count": 92,
+  "output": "[terrarium:formicarium-build] $ cd packages/terrarium && bun run typecheck\n$ bun run gen && tsc -p tsconfig.json --noEmit && tsc -p tests/tsconfig.json\n$ bun scripts/gen-css.ts\n[terrarium:formicarium-build] $ bash scripts/assemble-pages.sh .vendor/site-formicarium\n$ bun scripts/gen-css.ts\nBundled 19 modules in 27ms\n\n  terrarium.mjs  0.40 MB  (entry point)\n\n{\"version\":\"20261010124712299\",\"mode\":\"formicarium\",\"attempt_id\":\"1791636433043-92ce84a4-0339-4f30-aa6a-e71f1b44d78f\",\"recordPath\":\"/Users/mutoakio/Documents/terrarium/.vendor/.site-formicarium.transactions/1791636433043-92ce84a4-0339-4f30-aa6a-e71f1b44d78f/record.json\"}\n",
+  "exit_code": 0
+}

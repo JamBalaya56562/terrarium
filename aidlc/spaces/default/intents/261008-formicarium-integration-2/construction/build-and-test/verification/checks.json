@@ -1,0 +1,250 @@
+[
+  {
+    "name": "targeted-1",
+    "command": [
+      "/bin/bash",
+      "-c",
+      "mise exec -- bun test ./packages/terrarium/tests/formicarium-session.test.ts ./packages/terrarium/tests/formicarium-catalog.test.ts ./packages/terrarium/tests/formicarium-assets.test.ts"
+    ],
+    "cwd": "/Users/mutoakio/Documents/terrarium",
+    "started": "2026-10-08T12:09:55.848465+00:00",
+    "finished": "2026-10-08T12:09:58.601532+00:00",
+    "exit": 0,
+    "log": "targeted-1.log",
+    "logSha256": "855f9c7062cbf11011349f9ed41a64424f2e5c079cd83ba5cc10e4b43a9b8e66"
+  },
+  {
+    "name": "targeted-2",
+    "command": [
+      "/bin/bash",
+      "-c",
+      "mise exec -- bun test ./packages/terrarium/tests/candidate-transaction.test.ts"
+    ],
+    "cwd": "/Users/mutoakio/Documents/terrarium",
+    "started": "2026-10-08T12:09:58.602629+00:00",
+    "finished": "2026-10-08T12:10:00.504980+00:00",
+    "exit": 0,
+    "log": "targeted-2.log",
+    "logSha256": "970942686f727cf20a12b364af412be9d3dd5f78eaf484e8397f3e8f565c38f5"
+  },
+  {
+    "name": "targeted-3",
+    "command": [
+      "/bin/bash",
+      "-c",
+      "mise exec -- bun test ./packages/terrarium/tests/formicarium-assets.test.ts"
+    ],
+    "cwd": "/Users/mutoakio/Documents/terrarium",
+    "started": "2026-10-08T12:10:00.509726+00:00",
+    "finished": "2026-10-08T12:10:04.688514+00:00",
+    "exit": 0,
+    "log": "targeted-3.log",
+    "logSha256": "49d602a2f7d012352c5dc06b821feabbee8011201a8e66f9455eee05cde6a6e6"
+  },
+  {
+    "name": "targeted-4",
+    "command": [
+      "/bin/bash",
+      "-c",
+      "mise exec -- bun test ./packages/terrarium/tests/assemble-candidate.test.ts"
+    ],
+    "cwd": "/Users/mutoakio/Documents/terrarium",
+    "started": "2026-10-08T12:10:04.689379+00:00",
+    "finished": "2026-10-08T12:10:08.384475+00:00",
+    "exit": 0,
+    "log": "targeted-4.log",
+    "logSha256": "1ad7e5e7012bdd0b3105a983354f994b18f21e32da1e8ea062e207b9c60a3b28"
+  },
+  {
+    "name": "targeted-5",
+    "command": [
+      "/bin/bash",
+      "-c",
+      "FORMICARIUM_INPUTS_ROOT=.vendor/formicarium-inputs-integration-2 mise exec -- bun test ./packages/terrarium/tests/formicarium-inputs.test.ts"
+    ],
+    "cwd": "/Users/mutoakio/Documents/terrarium",
+    "started": "2026-10-08T12:10:08.388786+00:00",
+    "finished": "2026-10-08T12:10:09.948641+00:00",
+    "exit": 0,
+    "log": "targeted-5.log",
+    "logSha256": "d1d6187b19f4ab6dd2eb369a33d5d08397c2c943ef0289edd451cf931625d1b5"
+  },
+  {
+    "name": "targeted-6",
+    "command": [
+      "/bin/bash",
+      "-c",
+      "mise exec -- bun test ./packages/terrarium/tests/candidate-transaction.test.ts ./packages/terrarium/tests/assemble-candidate.test.ts"
+    ],
+    "cwd": "/Users/mutoakio/Documents/terrarium",
+    "started": "2026-10-08T12:10:09.949524+00:00",
+    "finished": "2026-10-08T12:10:13.245428+00:00",
+    "exit": 0,
+    "log": "targeted-6.log",
+    "logSha256": "4f4ff8a3fd8fd6b46e92ef3f698f7ab989a716fefdc97839f09c86de9f20a985"
+  },
+  {
+    "name": "targeted-7",
+    "command": [
+      "/bin/bash",
+      "-c",
+      "FORMICARIUM_INPUTS_ROOT=.vendor/formicarium-inputs-integration-2 mise exec -- bun test ./packages/terrarium/tests/candidate-transaction.test.ts ./packages/terrarium/tests/assemble-candidate.test.ts"
+    ],
+    "cwd": "/Users/mutoakio/Documents/terrarium",
+    "started": "2026-10-08T12:10:13.246096+00:00",
+    "finished": "2026-10-08T12:10:16.211753+00:00",
+    "exit": 0,
+    "log": "targeted-7.log",
+    "logSha256": "f34de0d20229a21fe09d418eccb55a7b5cbdcb511f8e68970085798c6d68656a"
+  },
+  {
+    "name": "lint",
+    "command": [
+      "mise",
+      "run",
+      "lint:all"
+    ],
+    "cwd": "/Users/mutoakio/Documents/terrarium",
+    "started": "2026-10-08T12:10:16.212390+00:00",
+    "finished": "2026-10-08T12:10:17.465712+00:00",
+    "exit": 0,
+    "log": "lint.log",
+    "logSha256": "663151e9bacb87a4a035fedf1a9a8a15a931c3f6b00a020a0f6eb4a2387012ff"
+  },
+  {
+    "name": "typecheck",
+    "command": [
+      "mise",
+      "exec",
+      "--",
+      "bun",
+      "run",
+      "typecheck"
+    ],
+    "cwd": "/Users/mutoakio/Documents/terrarium/packages/terrarium",
+    "started": "2026-10-08T12:10:17.466533+00:00",
+    "finished": "2026-10-08T12:10:18.547313+00:00",
+    "exit": 0,
+    "log": "typecheck.log",
+    "logSha256": "8f095098e23e2741c41618f8e64d86cc7ee2edfe464a4cecffb499493d3ddcae"
+  },
+  {
+    "name": "test",
+    "command": [
+      "mise",
+      "exec",
+      "--",
+      "bun",
+      "run",
+      "test"
+    ],
+    "cwd": "/Users/mutoakio/Documents/terrarium/packages/terrarium",
+    "started": "2026-10-08T12:10:18.547924+00:00",
+    "finished": "2026-10-08T12:10:30.691993+00:00",
+    "exit": 0,
+    "log": "test.log",
+    "logSha256": "0d6fb0f97ffdcb742a755a144d91a36341d03ad28e8fd66795f0ec1981429cec"
+  },
+  {
+    "name": "build",
+    "command": [
+      "mise",
+      "exec",
+      "--",
+      "bun",
+      "run",
+      "build"
+    ],
+    "cwd": "/Users/mutoakio/Documents/terrarium/packages/terrarium",
+    "started": "2026-10-08T12:10:30.693065+00:00",
+    "finished": "2026-10-08T12:10:31.316264+00:00",
+    "exit": 0,
+    "log": "build.log",
+    "logSha256": "6ddd422a8451e34060c2f46a10c7c8493071f8a813ea17d1f53c96f1ae57da25"
+  },
+  {
+    "name": "assembly-formicarium",
+    "command": [
+      "mise",
+      "exec",
+      "--",
+      "bash",
+      "scripts/assemble-pages.sh",
+      ".vendor/site-formicarium-integration-2-bt"
+    ],
+    "cwd": "/Users/mutoakio/Documents/terrarium",
+    "started": "2026-10-08T12:10:31.317489+00:00",
+    "finished": "2026-10-08T12:10:33.065450+00:00",
+    "exit": 0,
+    "log": "assembly-formicarium.log",
+    "logSha256": "48af2ee160688462a9b483148942fa85ac8d2cafa15f4024daad4f1220a369de"
+  },
+  {
+    "name": "assembly-legacy",
+    "command": [
+      "mise",
+      "exec",
+      "--",
+      "bash",
+      "scripts/assemble-pages.sh",
+      ".vendor/site-legacy-integration-2-bt",
+      "legacy"
+    ],
+    "cwd": "/Users/mutoakio/Documents/terrarium",
+    "started": "2026-10-08T12:10:33.066445+00:00",
+    "finished": "2026-10-08T12:10:33.482154+00:00",
+    "exit": 0,
+    "log": "assembly-legacy.log",
+    "logSha256": "5ec26041e386da34fa7760fad1033a69e8533c7475710242c1704799009284d8"
+  },
+  {
+    "name": "browser-formicarium",
+    "command": [
+      "mise",
+      "exec",
+      "--",
+      "bun",
+      "x",
+      "playwright",
+      "test",
+      "--config",
+      "playwright.formicarium.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=json",
+      "--output",
+      "/Users/mutoakio/Documents/terrarium/aidlc/spaces/default/intents/261008-formicarium-integration-2/construction/build-and-test/verification/formicarium-results"
+    ],
+    "cwd": "/Users/mutoakio/Documents/terrarium/packages/terrarium",
+    "started": "2026-10-08T12:10:33.526254+00:00",
+    "finished": "2026-10-08T12:13:12.550793+00:00",
+    "exit": 0,
+    "log": "browser-formicarium.log",
+    "logSha256": "a989a55269f827cbf0bc3d7c1db85af0dda1fbc59198b277f573dbe1844e3666"
+  },
+  {
+    "name": "browser-legacy",
+    "command": [
+      "mise",
+      "exec",
+      "--",
+      "bun",
+      "x",
+      "playwright",
+      "test",
+      "--config",
+      "playwright.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=json",
+      "--output",
+      "/Users/mutoakio/Documents/terrarium/aidlc/spaces/default/intents/261008-formicarium-integration-2/construction/build-and-test/verification/legacy-results"
+    ],
+    "cwd": "/Users/mutoakio/Documents/terrarium/packages/terrarium",
+    "started": "2026-10-08T12:13:12.565544+00:00",
+    "finished": "2026-10-08T12:16:31.972960+00:00",
+    "exit": 0,
+    "log": "browser-legacy.log",
+    "logSha256": "9b1a8230294a6e34b4b78e2a472800a708bad440fd571fa28a8d9bc3c01cbf73"
+  }
+]

@@ -1,0 +1,6 @@
+{
+  "command": "mise exec -- biome check scripts/fetch-formicarium-rc.mjs scripts/verify-formicarium-rc.mjs packages/terrarium/package.json packages/terrarium/tests/formicarium-rc-identity.test.ts",
+  "cwd": "/Users/mutoakio/Documents/terrarium",
+  "exit": 0,
+  "output": "Checked 4 files in 31ms. No fixes applied.\n"
+}

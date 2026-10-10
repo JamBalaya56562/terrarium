@@ -1,23 +1,34 @@
 import { createHash } from 'node:crypto';
-import { lstat, mkdir, readFile, realpath, writeFile } from 'node:fs/promises';
+import { lstat, readFile, realpath, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
+import {
+  candidateFile,
+  candidateTransaction,
+} from './candidate-transaction.mjs';
 import { INPUT_ROOT, verifyInputs } from './prepare-formicarium.mjs';
+import {
+  RC_NAME,
+  RC_TARBALL,
+  RC_VERSION,
+  verifyInstalledRc,
+} from './verify-formicarium-rc.mjs';
 
 export const RUNTIME_FILES = Object.freeze([
-  'runtime/public.mjs',
-  'runtime/errors.mjs',
-  'runtime/validation.mjs',
-  'runtime/state.mjs',
-  'runtime/lifecycle.mjs',
-  'runtime/protocol.mjs',
-  'runtime/worker-execution.mjs',
-  'runtime/core.mjs',
-  'runtime/guest-io.mjs',
-  'runtime/node/api.mjs',
-  'runtime/node/package-worker.mjs',
-  'runtime/web/api.mjs',
-  'runtime/web/package-worker.mjs',
+  'runtime/contracts.js',
+  'runtime/public.js',
+  'runtime/errors.js',
+  'runtime/validation.js',
+  'runtime/state.js',
+  'runtime/lifecycle.js',
+  'runtime/protocol.js',
+  'runtime/worker-execution.js',
+  'runtime/core.js',
+  'runtime/guest-io.js',
+  'runtime/node/api.js',
+  'runtime/node/package-worker.js',
+  'runtime/web/api.js',
+  'runtime/web/package-worker.js',
   'types/index.d.ts',
   'types/node.d.ts',
   'types/browser.d.ts',
@@ -29,7 +40,7 @@ export const RUNTIME_FILES = Object.freeze([
   'README.md',
   'package.json',
 ]);
-const MODULES = ['manifest.mjs', 'fixtures.mjs', 'resolver.mjs'];
+const MODULES = ['manifest.js', 'fixtures.js', 'resolver.js'];
 const sha = (bytes) => createHash('sha256').update(bytes).digest('hex');
 const json = async (filename) => JSON.parse(await readFile(filename, 'utf8'));
 
@@ -47,6 +58,25 @@ async function regular(root, relative) {
 
 async function runtimeInputs(packageRoot, manifestPath) {
   const manifest = await json(manifestPath);
+  if (manifest.publishedRc) {
+    const identity = await verifyInstalledRc({
+      packageRoot,
+      tarballPath: path.join(
+        path.dirname(manifestPath),
+        path.basename(RC_TARBALL),
+      ),
+      metadata: {
+        name: RC_NAME,
+        version: RC_VERSION,
+        dist: {
+          integrity: manifest.publishedRc.integrity,
+          tarball: manifest.publishedRc.tarballUrl,
+        },
+      },
+    });
+    if (manifest.publishedRc.tarballSha256 !== identity.tarballSha256)
+      throw new Error('published RC manifest tarball mismatch');
+  }
   if (
     manifest.package !== '@aletheia-works/formicarium' ||
     manifest.blinkSourceDirty !== false ||
@@ -105,10 +135,10 @@ async function guestInputs(guestSite, resolverRoot) {
     })),
   );
   const { validateBuild, resolveAssetUrl } = await import(
-    pathToFileURL(path.join(resolverRoot, 'manifest.mjs')).href
+    pathToFileURL(path.join(resolverRoot, 'manifest.js')).href
   );
   const { validateProvenance, validateGuestElf } = await import(
-    pathToFileURL(path.join(resolverRoot, 'resolver.mjs')).href
+    pathToFileURL(path.join(resolverRoot, 'resolver.js')).href
   );
   const boundary = 'https://stage.invalid/web/';
   const files = new Map();
@@ -149,6 +179,9 @@ async function guestInputs(guestSite, resolverRoot) {
 
 async function optionalJson(filename, fallback) {
   try {
+    const info = await lstat(filename);
+    if (!info.isFile() || info.isSymbolicLink())
+      throw new Error(`regular metadata file required: ${filename}`);
     return await json(filename);
   } catch (error) {
     if (error.code !== 'ENOENT') throw error;
@@ -157,77 +190,124 @@ async function optionalJson(filename, fallback) {
 }
 
 /** Validate every advertised ref and the exact installed pack before writing. */
-export async function stageFormicarium({
-  webRoot,
+export async function prepareFormicarium({
   packageRoot,
   packageManifest,
   guestSite,
   resolverRoot,
+  fixedInputIdentity,
 }) {
   const runtime = await runtimeInputs(packageRoot, packageManifest);
   const guests = await guestInputs(guestSite, resolverRoot);
-  const oldTools = await optionalJson(path.join(webRoot, 'tools.json'), {});
-  const oldBuilds = await optionalJson(path.join(webRoot, 'dist/builds.json'), {
-    builds: {},
+  const packageManifestSha256 = sha(await readFile(packageManifest));
+  return {
+    inputIdentity:
+      fixedInputIdentity ??
+      sha(
+        Buffer.from(
+          JSON.stringify({
+            packageManifestSha256,
+            files: [...runtime.files, ...guests.modules, ...guests.files]
+              .map(({ relative, bytes }) => ({
+                path: relative,
+                sha256: sha(bytes),
+              }))
+              .sort((a, b) => a.path.localeCompare(b.path)),
+            tools: guests.tools,
+            builds: guests.manifest,
+          }),
+        ),
+      ),
+    async stage(webRoot, checkpoint = async () => {}) {
+      const oldTools = await optionalJson(path.join(webRoot, 'tools.json'), {});
+      const oldBuilds = await optionalJson(
+        path.join(webRoot, 'dist/builds.json'),
+        {
+          builds: {},
+        },
+      );
+      // Preserve metadata for unrelated tools. Target tools use the complete verified catalogue.
+      const tools = { ...oldTools, ...guests.tools };
+      const builds = {
+        ...oldBuilds,
+        ...guests.manifest,
+        builds: { ...oldBuilds.builds, ...guests.manifest.builds },
+      };
+      const files = [
+        ...runtime.files,
+        ...guests.modules,
+        ...guests.files,
+        {
+          relative: 'tools.json',
+          bytes: Buffer.from(`${JSON.stringify(tools, null, 2)}\n`),
+        },
+        {
+          relative: 'dist/builds.json',
+          bytes: Buffer.from(`${JSON.stringify(builds, null, 2)}\n`),
+        },
+      ];
+      for (const entry of files) {
+        const target = await candidateFile(webRoot, entry.relative);
+        await writeFile(target, entry.bytes);
+        await checkpoint('stage-write', { target });
+      }
+      const receipt = {
+        schemaVersion: 1,
+        installedVersion: runtime.manifest.version,
+        packageManifestSha256,
+        files: files.map(({ relative, bytes }) => ({
+          path: relative,
+          sha256: sha(bytes),
+        })),
+        guests: Object.entries(guests.manifest.builds).flatMap(([tool, refs]) =>
+          Object.entries(refs).map(([ref, build]) => ({
+            tool,
+            ref,
+            commit: build.source.commit,
+            guestSha256: build.guest.sha256,
+          })),
+        ),
+        publishedRc: runtime.manifest.publishedRc,
+        status: runtime.manifest.publishedRc
+          ? 'published RC staged; execution acceptance recorded separately'
+          : 'local-pack-only; published RC acceptance unverified',
+      };
+      await writeFile(
+        await candidateFile(webRoot, 'formicarium-stage.json'),
+        `${JSON.stringify(receipt, null, 2)}\n`,
+      );
+      return receipt;
+    },
+  };
+}
+
+export async function stageFormicarium(options) {
+  const prepared = await prepareFormicarium(options);
+  const completed = await candidateTransaction({
+    destination: options.webRoot,
+    protectedPaths: [
+      process.env.TERRARIUM_PROTECTED_SITE,
+      options.packageRoot,
+      options.guestSite,
+      options.resolverRoot,
+    ],
+    inputIdentity: prepared.inputIdentity,
+    seedExisting: true,
+    checkpoint: options.checkpoint,
+    build: (work) => prepared.stage(work, options.checkpoint),
   });
-  // Preserve metadata for unrelated tools. Target tools use the complete verified catalogue.
-  const tools = { ...oldTools, ...guests.tools };
-  const builds = {
-    ...oldBuilds,
-    ...guests.manifest,
-    builds: { ...oldBuilds.builds, ...guests.manifest.builds },
-  };
-  const files = [
-    ...runtime.files,
-    ...guests.modules,
-    ...guests.files,
-    {
-      relative: 'tools.json',
-      bytes: Buffer.from(`${JSON.stringify(tools, null, 2)}\n`),
-    },
-    {
-      relative: 'dist/builds.json',
-      bytes: Buffer.from(`${JSON.stringify(builds, null, 2)}\n`),
-    },
-  ];
-  for (const entry of files) {
-    const target = path.join(webRoot, entry.relative);
-    await mkdir(path.dirname(target), { recursive: true });
-    await writeFile(target, entry.bytes);
-  }
-  const receipt = {
-    schemaVersion: 1,
-    installedVersion: runtime.manifest.version,
-    packageManifestSha256: sha(await readFile(packageManifest)),
-    files: files.map(({ relative, bytes }) => ({
-      path: relative,
-      sha256: sha(bytes),
-    })),
-    guests: Object.entries(guests.manifest.builds).flatMap(([tool, refs]) =>
-      Object.entries(refs).map(([ref, build]) => ({
-        tool,
-        ref,
-        commit: build.source.commit,
-        guestSha256: build.guest.sha256,
-      })),
-    ),
-    status: 'local-pack-only; published RC acceptance unverified',
-  };
-  await writeFile(
-    path.join(webRoot, 'formicarium-stage.json'),
-    `${JSON.stringify(receipt, null, 2)}\n`,
-  );
-  return receipt;
+  return completed.result;
 }
 
 export async function explicitInputs() {
   const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
   const inputs = process.env.FORMICARIUM_INPUTS_ROOT ?? INPUT_ROOT;
-  await verifyInputs(inputs);
+  const verified = await verifyInputs(inputs);
   const descriptor = await json(
     path.join(root, 'integration/formicarium-inputs.json'),
   );
   const options = {
+    fixedInputIdentity: verified.normalizedDescriptorSha256,
     packageRoot: path.join(
       root,
       'packages/terrarium/node_modules/@aletheia-works/formicarium',
@@ -236,6 +316,14 @@ export async function explicitInputs() {
     guestSite: path.join(inputs, descriptor.guestSite),
     resolverRoot: path.join(inputs, descriptor.resolver),
   };
+  if (descriptor.publishedRc) {
+    const manifest = await json(options.packageManifest);
+    if (
+      JSON.stringify(manifest.publishedRc) !==
+      JSON.stringify(descriptor.publishedRc)
+    )
+      throw new Error('published RC manifest identity mismatch');
+  }
   // All validation occurs before assembly removes or writes its output.
   await runtimeInputs(options.packageRoot, options.packageManifest);
   await guestInputs(options.guestSite, options.resolverRoot);

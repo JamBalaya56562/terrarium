@@ -1,0 +1,96 @@
+[
+  {
+    "name": "typecheck",
+    "command": [
+      "mise",
+      "exec",
+      "--",
+      "bun",
+      "run",
+      "typecheck"
+    ],
+    "cwd": "/Users/mutoakio/Documents/terrarium/packages/terrarium",
+    "started": "2026-10-08T10:38:16.900064+00:00",
+    "finished": "2026-10-08T10:38:17.402187+00:00",
+    "exit": 0,
+    "log": "typecheck-final.log"
+  },
+  {
+    "name": "unit",
+    "command": [
+      "mise",
+      "exec",
+      "--",
+      "bun",
+      "run",
+      "test"
+    ],
+    "cwd": "/Users/mutoakio/Documents/terrarium/packages/terrarium",
+    "started": "2026-10-08T10:38:17.402765+00:00",
+    "finished": "2026-10-08T10:38:21.181227+00:00",
+    "exit": 1,
+    "log": "unit-final.log"
+  },
+  {
+    "name": "build",
+    "command": [
+      "mise",
+      "exec",
+      "--",
+      "bun",
+      "run",
+      "build"
+    ],
+    "cwd": "/Users/mutoakio/Documents/terrarium/packages/terrarium",
+    "started": "2026-10-08T10:38:21.181696+00:00",
+    "finished": "2026-10-08T10:38:21.350593+00:00",
+    "exit": 0,
+    "log": "build-final.log"
+  },
+  {
+    "name": "lint",
+    "command": [
+      "mise",
+      "run",
+      "lint:all"
+    ],
+    "cwd": "/Users/mutoakio/Documents/terrarium",
+    "started": "2026-10-08T10:38:21.350900+00:00",
+    "finished": "2026-10-08T10:38:22.020545+00:00",
+    "exit": 1,
+    "log": "lint-final.log"
+  },
+  {
+    "name": "assembly-formicarium",
+    "command": [
+      "mise",
+      "exec",
+      "--",
+      "bash",
+      "scripts/assemble-pages.sh",
+      ".vendor/site-formicarium-integration-2-final"
+    ],
+    "cwd": "/Users/mutoakio/Documents/terrarium",
+    "started": "2026-10-08T10:38:22.021033+00:00",
+    "finished": "2026-10-08T10:38:22.841890+00:00",
+    "exit": 0,
+    "log": "assembly-formicarium-final.log"
+  },
+  {
+    "name": "assembly-legacy",
+    "command": [
+      "mise",
+      "exec",
+      "--",
+      "bash",
+      "scripts/assemble-pages.sh",
+      ".vendor/site-legacy-integration-2-final",
+      "legacy"
+    ],
+    "cwd": "/Users/mutoakio/Documents/terrarium",
+    "started": "2026-10-08T10:38:22.842264+00:00",
+    "finished": "2026-10-08T10:38:23.063760+00:00",
+    "exit": 0,
+    "log": "assembly-legacy-final.log"
+  }
+]

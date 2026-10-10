@@ -38,57 +38,60 @@
     {
       "path": "guests/dist/builds.json",
       "size": 3558,
-      "sha256": "bbbd4ee2e8bf19a8bd24f639018f4519a6be42a6c40caf489f630fe7b63f0be3"
+      "sha256": "0377f69859e2fb98160cdafeebf44c8199b60f63dfd8ae3e244161d515d170d2"
     },
     {
-      "path": "guests/dist/pitchfork/65f9a59988b5d3b353880d9109a73e3666bdd58fda9b0ccc8b18d1c1340c915b/build-info.json",
-      "size": 1048,
-      "sha256": "29e1adac2ee1308ed31a1903b9796ceae16431239733a325aa918051b77515b8"
+      "path": "guests/dist/pitchfork/1e8d2cbbd4fbfa46deb8c024e62368762d88b1e34a9fa75f0e8079207164dbbd/build-info.json",
+      "size": 1141,
+      "sha256": "6a1eedbda36acfadf448a1e0ce2a1d6236d5bbca70d8950b6177777310daccdd"
     },
     {
-      "path": "guests/dist/pitchfork/65f9a59988b5d3b353880d9109a73e3666bdd58fda9b0ccc8b18d1c1340c915b/fixture-70fa4ab004890168522fa83941f86a1e0a28818246b6a065e4b0ef685e8035b3.json",
+      "path": "guests/dist/pitchfork/1e8d2cbbd4fbfa46deb8c024e62368762d88b1e34a9fa75f0e8079207164dbbd/fixture-70fa4ab004890168522fa83941f86a1e0a28818246b6a065e4b0ef685e8035b3.json",
       "size": 151,
       "sha256": "081abc73542d06df09d28cdad88bfda1628634ab5482a3f8238134a25951583a"
     },
     {
-      "path": "guests/dist/pitchfork/65f9a59988b5d3b353880d9109a73e3666bdd58fda9b0ccc8b18d1c1340c915b/guest",
-      "size": 39689200,
-      "sha256": "f30395a418e526e939350cc87e03d43c92d1aa0a0b0b104130761a8b8daa841e"
+      "path": "guests/dist/pitchfork/1e8d2cbbd4fbfa46deb8c024e62368762d88b1e34a9fa75f0e8079207164dbbd/guest",
+      "size": 39596008,
+      "sha256": "67bcb90c31e8525f95f49c9ef5ff9b6526f36e79471f4804bc533b192a772a23"
     },
     {
       "path": "guests/tools.json",
-      "size": 361,
-      "sha256": "a5c43898b08be774f136a0a7243614e278d2949d9183ee2070bb5b70adb3d82d"
+      "size": 207,
+      "sha256": "64a712e6ed381694d69cb434bba07b5f5e49daf13a7238709e039b3f2e96cae4"
     },
     {
       "path": "package/aletheia-works-formicarium-0.1.0-rc.1.tgz",
-      "size": 232440,
-      "sha256": "969e9fab854d4499da1d38087bd601b65042b6d50b086c8fc8ddaefd0752f810"
+      "size": 234396,
+      "sha256": "8334d7f14c31109e5be3ec90147aa02105d8d839c4c79eccc1c25cb88eabbb3a"
     },
     {
       "path": "package/manifest.json",
-      "size": 5353,
-      "sha256": "ba2f4ced257067a4c2aa64c9841b04a04f332e4812bcd369bab0d2807b310aef"
+      "size": 3713,
+      "sha256": "b57fef8c92fac70d47b4997caf4dca622a012a5788422dc0d1a7db469d04f97c"
     },
     {
-      "path": "resolver/fixtures.mjs",
-      "size": 5027,
-      "sha256": "3ae3a6e923afe3514294991965d2cef9502c3d8388ec1932f8394c95897292ce"
+      "path": "resolver/fixtures.js",
+      "size": 5718,
+      "sha256": "9e5eee286d91bdf887b9c68a27ab05b582fcd03b9cf115507dd155ad44e1200b"
     },
     {
-      "path": "resolver/manifest.mjs",
-      "size": 5415,
-      "sha256": "e03ee62d8b438806a2ca50e687ed66562c4415a571edc9a71717e9b5784f2bf5"
+      "path": "resolver/manifest.js",
+      "size": 6389,
+      "sha256": "09c3f9ea51d0d7a11cdfbcc28904701d9d669bce7a157a6896506a7ea5a3bd87"
     },
     {
-      "path": "resolver/resolver.mjs",
-      "size": 5323,
-      "sha256": "aab15f45b4e355d453c39532393728221299d656b8dfd47826380dc6a070feec"
+      "path": "resolver/resolver.js",
+      "size": 5994,
+      "sha256": "34b6e1b9f497a4e0eb1fb8d15db752a6096fc27d7dceeac4c5f598a2db237efd"
     }
   ],
+  "publishedRc": {
+    "integrity": "sha512-SIFbXU1QkxXDATkE0M1Prm65Kq+Q2SkwnDyBwRf/ejEd3mADZT5uueETF+r0AAl4nuDRqbbSkBc7K/fHclwICA==",
+    "tarballSha256": "8334d7f14c31109e5be3ec90147aa02105d8d839c4c79eccc1c25cb88eabbb3a",
+    "tarballUrl": "https://registry.npmjs.org/@aletheia-works/formicarium/-/formicarium-0.1.0-rc.1.tgz"
+  },
   "distribution": {
-    "url": "https://raw.githubusercontent.com/Marukome0743/terrarium/c670296b2ebed05f2e8156a74fede29604ec8c95/inputs.tar.gz",
-    "archiveSha256": "00abfc608106c8b4a17bd973b4a948b0aa1fa23c713ac22ad62e5a4571c75d01",
-    "commit": "c670296b2ebed05f2e8156a74fede29604ec8c95"
+    "archiveSha256": "f8b5493047389bc4033dee2608070cc4636c43006877145f0be27f72f11348c4"
   }
 }

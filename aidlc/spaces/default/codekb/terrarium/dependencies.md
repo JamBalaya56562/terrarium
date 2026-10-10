@@ -1,14 +1,68 @@
-# 依存関係（現行 focus）
+# 公開RC受入れ focused scan: dependencies
 
 ## External Dependencies
 
-`@aletheia-works/formicarium` 0.1.0-rc.1 は package.json と lock の絶対 Mac tarball path を参照する。browser createSession とルート public types を消費する。tarball SHA/manifest SHA は timestamp に保存。その他 JS version は technology-stack 参照。
+package.json/bun.lockのformicarium依存は file:../../.vendor/formicarium-inputs-repair-v1/package/aletheia-works-formicarium-0.1.0-rc.1.tgz。npm registry版を導入済みとは言えない。lockにlocal tarball SHA512 integrityがあるが公開npm integrityの証拠ではない。
+
+固定descriptorのtarball SHA256は ebe7e5cf6efcd26914e9016ebbd31df1d59812f5cfcfc71b874672c01109dc35（size234537）。今回期待する公開npm SHA256は 8334d7f14c31109e5be3ec90147aa02105d8d839c4c79eccc1c25cb88eabbb3a。名前/version一致だけではbytes一致にならない。
 
 ## Internal Dependencies
 
-terminal → Catalog/Formicarium Session → public formicarium/browser。resolver は `base/formicarium-guest-distribution/resolver.mjs` を dynamic import。staging → installed package ＋兄弟 package manifest/resolver ＋ `FORMICARIUM_GUEST_SITE`。assets tests も兄弟 resolver を import するため独立 checkout だけでは完結しない。
+terminal→catalog/adapter、adapter→public formicarium/browser + resolver dynamic import。staging→installed package + fixed manifest/resolver/guest site。prepare→descriptor exact16files。
 
 ## Compatibility Boundaries
+
+公開RCのnpmメタデータ・tarball取得・integrity/SHA256計算・実installed bytesとの結合が必要。既存descriptor/manifestがlocal pack bytesを固定しているのでnpm依存だけ変更するとstage digest照合で拒否し得る。guest/resolver入力はruntime npm packageと別配布でありそのまま保持し、必要なidentity変更のみ後続で検証する。
+
+根拠: [今回の開発者解析](../../intents/261010-formicarium-rc-acceptanc/inception/reverse-engineering/developer-scan.md)。今回の調査は静的解析のみで、npm取得・導入確認・受入れ試験は未実行。
+
+## 保持した前store本文（historical）
+
+以下は前intentの本文を保持した履歴であり、今回の公開RC実導入・再試験結果ではない。未再読の深いcoverageはshallowへ降格する。
+
+## 現解析: dependencies
+
+### 現在の依存と供給条件
+
+formicarium0.1.0-rc.1は相対file tarballの開発入力で公開RC受入れではない。stagingはinstalled packageと固定resolver/guest/provenanceを消費する。4workflowはFORMICARIUM_INPUTS_URLを明示必須とし、旧URL fallbackはない。descriptor全16path/size/SHA検証をinstall前に実行する。遠隔URL供給/到達性・遠隔CI・公開RCは未検証。
+
+根拠: [今回の解析と検証](../../intents/261008-formicarium-integration-2/construction/code-generation/code-summary.md)。
+
+### 保持した過去の解析（historical）
+
+以下は以前の本文・identityを保持した区画であり、今回の現解析や成功結果の代用ではない。
+
+### 依存関係
+
+#### External Dependencies
+
+formicarium0.1.0-rc.1の相対file tarballは.vendor/formicarium-inputs-repair-v1以下を参照する開発入力。registry publish可能と判断しない。その他宣言範囲はtechnology-stack参照。
+
+#### Internal Dependencies
+
+terminal → catalog/adapterまたはlegacy Session。adapter → formicarium/browser public SessionとC3 resolver。stagingはinstalled packageの24固定filesとC3 manifest.js/fixtures.js/resolver.js、全advertised refsのguest/fixture/build-infoを検証して配置する。fixed descriptorは16filesのpath/size/SHAを持つ。
+
+#### Compatibility Boundaries
+
+現在のci:terrarium/ci:e2eはfrozen install前に固定archive prepareを要求し、CIは専用formicarium候補とlegacy候補を組立てる。旧storeの絶対tarball・CI入力欠落記述は履歴であり現在の結論に使わない。prepare実装・URL到達性は今回未精査。Emscriptenとstatic-muslを暗黙互換とは扱わずsame-origin Worker条件を維持する。
+
+根拠: [開発者引継ぎ](../../intents/261008-formicarium-integration-2/inception/reverse-engineering/developer-scan.md)。深い解析の個別23pathは[解析時点](reverse-engineering-timestamp.md)、証跡の適用性は[品質](code-quality-assessment.md)。
+
+#### Preserved Prior Store (historical; not current verification)
+
+以下は前storeの文章を保存した履歴。今回範囲外の深い解析はshallowへ降格した。「現行」「確認済み」等は元intent時点の表現で、今回のfresh合格・承認を意味しない。上の今回評価を優先する。
+
+##### 依存関係（現行 focus）
+
+#### Historical 1: External Dependencies
+
+`@aletheia-works/formicarium` 0.1.0-rc.1 は package.json と lock の絶対 Mac tarball path を参照する。browser createSession とルート public types を消費する。tarball SHA/manifest SHA は timestamp に保存。その他 JS version は technology-stack 参照。
+
+#### Historical 2: Internal Dependencies
+
+terminal → Catalog/Formicarium Session → public formicarium/browser。resolver は `base/formicarium-guest-distribution/resolver.mjs` を dynamic import。staging → installed package ＋兄弟 package manifest/resolver ＋ `FORMICARIUM_GUEST_SITE`。assets tests も兄弟 resolver を import するため独立 checkout だけでは完結しない。
+
+#### Historical 3: Compatibility Boundaries
 
 assemble-pages は常時 staging を呼ぶが既存 site:build/旧 E2E workflow は guest-site env を供給しない。既存 Emscripten .js/.wasm catalog と static-musl guest/digest/provenance 配布は暗黙に互換と扱わない。same-origin Worker を要求し、base URL のみで跨 origin 対応とは主張しない。CI入力供給はConstructionで具体化する: immutable package/resolver/guest distributionを入力として固定し、絶対tarball/兄弟pathをportableな契約へ接続する。今回候補のretained assetsは確認済みで、将来のproducer増分追加は別修正対象。
 
@@ -16,13 +70,13 @@ assemble-pages は常時 staging を呼ぶが既存 site:build/旧 E2E workflow 
 
 再調査根拠: exact25 snapshot 後の全25ファイル再読・raw SHA25/25一致、直前のimported source/candidate再比較64/64一致。[再調査記録](../../intents/261008-formicarium-integration/inception/reverse-engineering/evidence/exact-scope-rescan-verification.json)。今回新規テスト実行なし。
 
-## Prior Knowledge (historical, shallow outside current focus)
+#### Prior Knowledge (historical, shallow outside current focus)
 
 以下は `261004-pitchfork-continuation` の記述を保持したもの。旧 deep coverage は UNVERIFIED のため今回の verified deep 範囲に継承しない。現行 focus については上の記述を優先する。
 
-## 依存関係
+#### Historical 4: 依存関係
 
-### External Dependencies
+##### Historical 5: External Dependencies
 
 ドキュメント根拠: package manifest と開発者のパッチ一覧。宣言範囲であり実際の解決バージョンとは区別する。
 
@@ -36,10 +90,10 @@ assemble-pages は常時 staging を呼ぶが既存 site:build/旧 E2E workflow 
 
 クレートパッチ一覧: dirs 6/7、if-addrs 0.15.0、interprocess 2.4.4、reqwest 0.13.1、ring 0.17.14、libc 0.2.186、mio 1.2.2/1.2.3、nix 0.31.3、tokio 1.53.1。Rust std と pitchfork v2.29.0 のパッチもある。外部 Cargo.lock の完全な推移グラフは未解析。
 
-### Internal Dependencies
+##### Historical 6: Internal Dependencies
 
 ページと iframe は端末要素を利用し、要素は Catalog/Session と xterm を利用する。Node runner は Session を共有する。ツールビルドは std/tool/crate patch を適用し、staging が配布メタデータを作り、Catalog が消費する。責務とリスクは [component-inventory.md](component-inventory.md)。
 
-### Compatibility Boundaries
+##### Historical 7: Compatibility Boundaries
 
 `vendor-patched.sh` は Cargo.lock に合わせて crate patch を選び、同名クレートの複数 version は別 key と `package` で扱う。pitchfork tool patch は最新ファイルを選ぶため、v2.29.0 以外の ref 互換は未検証。

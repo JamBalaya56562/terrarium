@@ -1,0 +1,138 @@
+{
+  "stage": "code-generation",
+  "unit": null,
+  "upstream_ids": [
+    "FR1",
+    "FR2",
+    "FR3",
+    "FR4",
+    "FR5",
+    "FR6",
+    "FR7",
+    "FR8",
+    "NFR1",
+    "NFR2",
+    "NFR3",
+    "NFR4",
+    "NFR5",
+    "BR1.1",
+    "BR1.2",
+    "BR1.3",
+    "BR2.1",
+    "BR2.2",
+    "BR3.1",
+    "BR3.2",
+    "BR3.3"
+  ],
+  "coverage": [
+    {
+      "id": "FR1",
+      "status": "OK",
+      "target": "packages/terrarium/tests/formicarium-session.test.ts"
+    },
+    {
+      "id": "FR2",
+      "status": "OK",
+      "target": "packages/terrarium/tests/formicarium-catalog.test.ts"
+    },
+    {
+      "id": "FR3",
+      "status": "OK",
+      "target": "packages/terrarium/e2e/formicarium-iframe.spec.ts"
+    },
+    {
+      "id": "FR4",
+      "status": "OK",
+      "target": "packages/terrarium/tests/candidate-transaction.test.ts"
+    },
+    {
+      "id": "FR5",
+      "status": "OK",
+      "target": "scripts/candidate-transaction.mjs"
+    },
+    {
+      "id": "FR6",
+      "status": "UNRESOLVED",
+      "target": "packages/terrarium/tests/formicarium-inputs.test.ts"
+    },
+    {
+      "id": "FR7",
+      "status": "PENDING"
+    },
+    {
+      "id": "FR8",
+      "status": "PENDING"
+    },
+    {
+      "id": "NFR1",
+      "status": "OK",
+      "target": "scripts/candidate-transaction.mjs"
+    },
+    {
+      "id": "NFR2",
+      "status": "OK",
+      "target": "packages/terrarium/tests/formicarium-assets.test.ts"
+    },
+    {
+      "id": "NFR3",
+      "status": "OK",
+      "target": "scripts/assemble-candidate.mjs"
+    },
+    {
+      "id": "NFR4",
+      "status": "OK",
+      "target": "packages/terrarium/tests/candidate-transaction.test.ts"
+    },
+    {
+      "id": "NFR5",
+      "status": "OK",
+      "target": "packages/terrarium/e2e/terminal.spec.ts"
+    },
+    {
+      "id": "BR1.1",
+      "status": "OK",
+      "target": "packages/terrarium/tests/formicarium-catalog.test.ts"
+    },
+    {
+      "id": "BR1.2",
+      "status": "OK",
+      "target": "packages/terrarium/tests/formicarium-session.test.ts"
+    },
+    {
+      "id": "BR1.3",
+      "status": "OK",
+      "target": "packages/terrarium/e2e/formicarium-iframe.spec.ts"
+    },
+    {
+      "id": "BR2.1",
+      "status": "OK",
+      "target": "packages/terrarium/tests/formicarium-assets.test.ts"
+    },
+    {
+      "id": "BR2.2",
+      "status": "OK",
+      "target": "packages/terrarium/tests/candidate-transaction.test.ts"
+    },
+    {
+      "id": "BR3.1",
+      "status": "PENDING"
+    },
+    {
+      "id": "BR3.2",
+      "status": "UNRESOLVED",
+      "target": "packages/terrarium/tests/formicarium-inputs.test.ts"
+    },
+    {
+      "id": "BR3.3",
+      "status": "PENDING"
+    }
+  ],
+  "verification": {
+    "current": "aidlc/spaces/default/intents/261008-formicarium-integration-2/construction/code-generation/verification-preservation-fixes",
+    "sourceInventorySha256": "3cb41e963e835125f2ce82a7f534f113a0c31ba27038eb0409b1af0a5423b3ac",
+    "formalReview": "pending independent re-review",
+    "unresolved": [
+      "R03 global lint 370 issues; stale CodeKB CAS limitation retained"
+    ]
+  }
+}

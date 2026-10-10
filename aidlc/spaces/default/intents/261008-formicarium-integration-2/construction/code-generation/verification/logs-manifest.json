@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "sourceInventorySha256": "2dc7d0bf32d4ccdac73fc6e240f9e0cf92e6f82533a504fc99047640d7d22bfa",
+  "files": [
+    {
+      "path": "verification/assembly-formicarium-final.log",
+      "size": 390,
+      "sha256": "cec5d7787ea923191dc45110c7924dc3833dabce60a98e004c5a875cdce69eaa"
+    },
+    {
+      "path": "verification/assembly-formicarium.log",
+      "size": 384,
+      "sha256": "20a75c58009f4733573b319d7086bdb9fac6283d7d0dd95059b3d168d98bcab3"
+    },
+    {
+      "path": "verification/assembly-legacy-final.log",
+      "size": 380,
+      "sha256": "c65a4c722582d0dd8df6461582bacdf10e173a486cc3358df36654f437cce06c"
+    },
+    {
+      "path": "verification/assembly-legacy.log",
+      "size": 374,
+      "sha256": "bc205419254b49bc53fa10c26ab14a83a725e0959d904d86d68689fd4bb53ccb"
+    },
+    {
+      "path": "verification/build-final.log",
+      "size": 63,
+      "sha256": "6ddd422a8451e34060c2f46a10c7c8493071f8a813ea17d1f53c96f1ae57da25"
+    },
+    {
+      "path": "verification/build.log",
+      "size": 63,
+      "sha256": "6ddd422a8451e34060c2f46a10c7c8493071f8a813ea17d1f53c96f1ae57da25"
+    },
+    {
+      "path": "verification/formicarium-browser.log",
+      "size": 198894,
+      "sha256": "3a88c47972ad8c8d33998b4a648ad8d6591dd672acdf697c7ccd1b051f9e78f7"
+    },
+    {
+      "path": "verification/formicarium-final-browser.log",
+      "size": 6943,
+      "sha256": "69184d657df10a7dcd6600d0f76f9017fb8066ff35f029fe24edaa6eddf27725"
+    },
+    {
+      "path": "verification/formicarium-host-browser.log",
+      "size": 6944,
+      "sha256": "f56169bcba3d9b262ec3b13e5625c5bc369f194c4dad0acdd78a53da7bfbb755"
+    },
+    {
+      "path": "verification/legacy-browser.log",
+      "size": 157581,
+      "sha256": "00eb0b4863c56c32d5989e86f2e3e1ec16290d29e49ac9f4e17d75fd76b91d5e"
+    },
+    {
+      "path": "verification/legacy-final-browser.log",
+      "size": 5283,
+      "sha256": "42c49a5cb16cc8a1e99431ad7be8f8d02f74bbb288aec2558f34a29a0629d4b4"
+    },
+    {
+      "path": "verification/legacy-host-browser.log",
+      "size": 5283,
+      "sha256": "be2e96f80ed404d1f7c18e9e7a2a5163e5f014abd2d2409e66ba25cb87dec10f"
+    },
+    {
+      "path": "verification/lint-final.log",
+      "size": 102466,
+      "sha256": "b090ae12bf9b326a1c616f407f18bd5d23d41493a48e17772aa9d53112b06a98"
+    },
+    {
+      "path": "verification/lint.log",
+      "size": 7597,
+      "sha256": "5e3c2cf2c962a94cf9ebbe17a910a279e9e187a78bb9da2a210fd0dfa945a724"
+    },
+    {
+      "path": "verification/typecheck-final.log",
+      "size": 102,
+      "sha256": "8f095098e23e2741c41618f8e64d86cc7ee2edfe464a4cecffb499493d3ddcae"
+    },
+    {
+      "path": "verification/typecheck.log",
+      "size": 102,
+      "sha256": "8f095098e23e2741c41618f8e64d86cc7ee2edfe464a4cecffb499493d3ddcae"
+    },
+    {
+      "path": "verification/unit-final.log",
+      "size": 12873,
+      "sha256": "b3c365934cf1a3fa2ab165b52670d9fee66e7580cb2a23c7bb47dee9a0a5e87e"
+    },
+    {
+      "path": "verification/unit.log",
+      "size": 12788,
+      "sha256": "2572e6be185bf3de427ea861d39334f54602e79c1d71450df9a3fc9178ebe002"
+    }
+  ]
+}

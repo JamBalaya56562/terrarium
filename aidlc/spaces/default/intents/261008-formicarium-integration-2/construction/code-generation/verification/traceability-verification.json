@@ -1,0 +1,28 @@
+{
+  "referencesChecked": 15,
+  "missing": [],
+  "requirementsEnumerated": [
+    "FR1",
+    "FR2",
+    "FR3",
+    "FR4",
+    "FR5",
+    "FR6",
+    "FR7",
+    "FR8",
+    "NFR1",
+    "NFR2",
+    "NFR3",
+    "NFR4",
+    "NFR5",
+    "BR1.1",
+    "BR1.2",
+    "BR1.3",
+    "BR2.1",
+    "BR2.2",
+    "BR3.1",
+    "BR3.2",
+    "BR3.3"
+  ],
+  "limitations": "standard sensor per-Unit path does not apply to this no-Unit record; unresolved/pending IDs are not success claims"
+}

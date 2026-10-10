@@ -1,0 +1,12 @@
+{
+  "preservedPaths": 424,
+  "changedPaths": [],
+  "cacheUnchanged": true,
+  "authoredNegativeExit": 1,
+  "qualityRulesUnchanged": true,
+  "addedExclusions": [
+    "intent verification*/**/*results/**/error-context.md",
+    "intent **/reviews/review-*.md"
+  ],
+  "authoredCodeKBApplicationExcluded": false
+}

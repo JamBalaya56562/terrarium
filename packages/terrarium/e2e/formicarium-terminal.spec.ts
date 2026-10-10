@@ -65,11 +65,11 @@ test('latest pitchfork uses common runtime actual Worker version', async ({
   test.setTimeout(600_000);
   expect(await open(page, '?tool=pitchfork')).toMatchObject({
     tool: 'pitchfork',
-    ref: 'v2.30.1',
+    ref: 'v2.30.0',
   });
   expect(await run(page, 'pitchfork --version')).toMatchObject({
     code: 0,
-    output: 'pitchfork 2.30.1\n',
+    output: 'pitchfork 2.30.0\n',
   });
 });
 test('nested cwd keeps /work sibling before and after actual guest', async ({
@@ -203,7 +203,7 @@ test('tool switch resets attributes and suppresses prior queued run notification
     () =>
       (document.querySelector('terrarium-terminal') as TerrariumTerminal).ready,
   );
-  expect(ready).toMatchObject({ tool: 'pitchfork', ref: 'v2.30.1' });
+  expect(ready).toMatchObject({ tool: 'pitchfork', ref: 'v2.30.0' });
   expect(
     await page.evaluate(() =>
       ['ref', 'fixture', 'cwd', 'run'].map((name) =>
@@ -250,7 +250,7 @@ test('boot error rejects ready once without creating any guest Worker', async ({
 }) => {
   const requests: string[] = [];
   page.on('request', (request) => {
-    if (request.url().includes('package-worker.mjs'))
+    if (request.url().includes('package-worker.js'))
       requests.push(request.url());
   });
   await page.goto(`${SITE}/element.html?ref=not-published`);

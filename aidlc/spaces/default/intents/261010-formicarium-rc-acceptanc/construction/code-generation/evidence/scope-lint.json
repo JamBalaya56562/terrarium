@@ -1,0 +1,6 @@
+{
+  "command": "mise exec -- biome check scripts/verify-formicarium-rc.mjs scripts/prepare-formicarium-rc-inputs.mjs scripts/accept-formicarium-node.mjs scripts/stage-formicarium.mjs packages/terrarium/tests/formicarium-rc-identity.test.ts packages/terrarium/tests/formicarium-node-acceptance.test.ts integration/formicarium-inputs.json packages/terrarium/package.json",
+  "cwd": "/Users/mutoakio/Documents/terrarium",
+  "exit": 0,
+  "output": "Checked 8 files in 36ms. No fixes applied.\n"
+}

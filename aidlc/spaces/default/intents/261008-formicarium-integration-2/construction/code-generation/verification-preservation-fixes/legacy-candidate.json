@@ -1,0 +1,125 @@
+{
+  "destination": ".vendor/site-legacy-integration-2-r2",
+  "version": "integration2-r2-20261008",
+  "inventorySha256": "1785fff9556bd303ff9668e3319dd452e383b9945d693318320f227a670a9d4a",
+  "inventory": [
+    {
+      "path": ".nojekyll",
+      "kind": "file",
+      "size": 0,
+      "digest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "LICENSE",
+      "kind": "file",
+      "size": 11357,
+      "digest": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "index.html",
+      "kind": "file",
+      "size": 208,
+      "digest": "8445d22d6898ed00ce4263042f187aba69815ffe09f7416a8af7e8f841dea04d"
+    },
+    {
+      "path": "web",
+      "kind": "directory"
+    },
+    {
+      "path": "web/coi-serviceworker.js",
+      "kind": "file",
+      "size": 4678,
+      "digest": "d12bd536e27e39a773d7dc7adb1a1167d24002293e97ac81c995fb00cf8d4d5a"
+    },
+    {
+      "path": "web/dist",
+      "kind": "directory"
+    },
+    {
+      "path": "web/dist/aube",
+      "kind": "directory"
+    },
+    {
+      "path": "web/dist/aube/v2.6.1",
+      "kind": "directory"
+    },
+    {
+      "path": "web/dist/aube/v2.6.1/aube.js",
+      "kind": "file",
+      "size": 119914,
+      "digest": "efac1c643527f2229dbe801929dbd9693bdad321150474e0e6023f54841db3ab"
+    },
+    {
+      "path": "web/dist/aube/v2.6.1/aube.wasm",
+      "kind": "file",
+      "size": 19856043,
+      "digest": "c167246a005f50b72fcad44ab6b67b4f520179428bb3f46463691f5fe7b00981"
+    },
+    {
+      "path": "web/dist/builds.json",
+      "kind": "file",
+      "size": 694,
+      "digest": "cc38b05de0aaaa5228fa987300cfef643c178d9ed5c960569b19b72b5aa5c5b2"
+    },
+    {
+      "path": "web/dist/fixtures",
+      "kind": "directory"
+    },
+    {
+      "path": "web/dist/fixtures/aube-local-deps.json",
+      "kind": "file",
+      "size": 366,
+      "digest": "2a2b3bbf5995be2f20fb8fe7a5e29b0ca1c733db9b491bfef991a408a7a7bc44"
+    },
+    {
+      "path": "web/dist/fixtures/pitchfork-basic.json",
+      "kind": "file",
+      "size": 151,
+      "digest": "081abc73542d06df09d28cdad88bfda1628634ab5482a3f8238134a25951583a"
+    },
+    {
+      "path": "web/dist/pitchfork",
+      "kind": "directory"
+    },
+    {
+      "path": "web/dist/pitchfork/v2.29.0",
+      "kind": "directory"
+    },
+    {
+      "path": "web/dist/pitchfork/v2.29.0/pitchfork.js",
+      "kind": "file",
+      "size": 126047,
+      "digest": "4bf0ea2764e2ba3c5650cb577f5c66156af5a76cd682691d1d8f4e07875b8fb1"
+    },
+    {
+      "path": "web/dist/pitchfork/v2.29.0/pitchfork.wasm",
+      "kind": "file",
+      "size": 20389228,
+      "digest": "16f335ef529b2fa7815cc6201030b01538ef76d9b52478746dc4df62161b8cee"
+    },
+    {
+      "path": "web/index.html",
+      "kind": "file",
+      "size": 1803,
+      "digest": "c1ebb07aa527fcc5addf2237fbb5c847ad8e46789cc9e973e90caec4d2a3ec4f"
+    },
+    {
+      "path": "web/terminal.mjs",
+      "kind": "file",
+      "size": 6432,
+      "digest": "e8e57724f9b3fe01a845df79d96ecf90d600f3a195d88264e204c4e87ae7b722"
+    },
+    {
+      "path": "web/terrarium.mjs",
+      "kind": "file",
+      "size": 399030,
+      "digest": "4552c1c134b8cc078c3ed268e6281fc85f5fb93e5246b006ac0d991dc5b71a8e"
+    },
+    {
+      "path": "web/tools.json",
+      "kind": "file",
+      "size": 359,
+      "digest": "eb5afc893a0ca1d4cbf282bd98b675184836bb1dcef1f2d9c81c6a51b96da112"
+    }
+  ]
+}

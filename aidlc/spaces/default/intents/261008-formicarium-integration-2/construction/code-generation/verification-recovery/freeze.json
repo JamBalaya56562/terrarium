@@ -1,0 +1,25 @@
+{
+  "frozenAt": "2026-10-08T11:53:04.082987+00:00",
+  "sourceInventorySha256": "b70c328cf9d309a18a6dc06eccde0817b0c3a78bf6f7b513ea4cb159beee2f99",
+  "sourcePaths": 78,
+  "sourceSetAndBytesStable": true,
+  "preservedPaths": 424,
+  "preservedChangedPaths": [],
+  "cacheSetAndBytesStable": true,
+  "writes": [
+    "mise.toml",
+    ".rumdl.toml",
+    "CodeKB9 via official CAS",
+    "code-summary.md",
+    "source-manifest.json",
+    "traceability.json",
+    "plan Step19–23 checkboxes",
+    "verification-recovery/**",
+    "new archive copies/evidence only"
+  ],
+  "pending": [
+    "Step24 root coordinated inventories and formal review",
+    "Step25 approvals Build and Test U3"
+  ],
+  "rootCoordination": "No more worker edits or snapshot mutations after this freeze"
+}

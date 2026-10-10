@@ -1,0 +1,12 @@
+{
+  "destination": "packages/terrarium/src/generated",
+  "inventorySha256": "a33b9c924690f26c513e847f09a8f1fdf3d3244dda9c6854592da26008cc54e1",
+  "files": [
+    {
+      "path": "xterm-css.ts",
+      "kind": "file",
+      "size": 7547,
+      "digest": "0fc1b01494f328cdbb3ef38d7d3374433d1fbe5a7563f361a68e89a743762ea8"
+    }
+  ]
+}

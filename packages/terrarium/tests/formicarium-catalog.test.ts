@@ -190,7 +190,7 @@ describe('catalogue to C3 boundary', () => {
   test('public assets reference actual same-site worker and a coherent installed package', () => {
     const assets = formicariumAssets('https://site.invalid/web/');
     expect(String(assets.workerURL)).toBe(
-      'https://site.invalid/web/formicarium/runtime/web/package-worker.mjs',
+      'https://site.invalid/web/formicarium/runtime/web/package-worker.js',
     );
     expect(String(assets.loaderURL)).toBe(
       'https://site.invalid/web/formicarium/assets/blink.mjs',

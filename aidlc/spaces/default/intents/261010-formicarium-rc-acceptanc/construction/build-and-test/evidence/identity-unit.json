@@ -1,0 +1,10 @@
+{
+  "name": "identity-unit",
+  "command": "mise exec -- bun test tests/formicarium-rc-identity.test.ts",
+  "cwd": "/Users/mutoakio/Documents/terrarium/packages/terrarium",
+  "chunk_id": "80979b",
+  "wall_time_seconds": 0.314187125,
+  "exit_code": 0,
+  "original_token_count": 114,
+  "output": "bun test v1.4.2 (744846f84)\n\ntests/formicarium-rc-identity.test.ts:\n(pass) actual published pack matches installed files and fixed lock identity [30.59ms]\n(pass) wrong version refuses [12.03ms]\n(pass) wrong registry integrity refuses [6.98ms]\n(pass) wrong compressed tarball SHA256 refuses [6.38ms]\n(pass) installed file drift refuses even when the package version matches [15.05ms]\n\n 5 pass\n 0 fail\n 5 expect() calls\nRan 5 tests across 1 file. [121.00ms]\n"
+}

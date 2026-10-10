@@ -1,0 +1,31 @@
+{
+  "repo": "terrarium",
+  "store": "aidlc/spaces/default/codekb/terrarium/",
+  "paths": [
+    "packages/terrarium/src/formicarium-session.ts",
+    "packages/terrarium/src/catalog.ts",
+    "packages/terrarium/src/session.ts",
+    "packages/terrarium/src/terminal.ts",
+    "packages/terrarium/src/index.ts",
+    "packages/terrarium/src/npm.ts",
+    "packages/terrarium/package.json",
+    "packages/terrarium/tsconfig.json",
+    "packages/terrarium/tests/tsconfig.json",
+    "packages/terrarium/README.md",
+    "packages/terrarium/tests/formicarium-session.test.ts",
+    "packages/terrarium/tests/formicarium-catalog.test.ts",
+    "packages/terrarium/tests/formicarium-assets.test.ts",
+    "packages/terrarium/e2e/formicarium-terminal.spec.ts",
+    "packages/terrarium/e2e/formicarium-iframe.spec.ts",
+    "packages/terrarium/playwright.formicarium.config.ts",
+    "scripts/stage-formicarium.mjs",
+    "scripts/assemble-pages.sh",
+    "integration/formicarium-inputs.json",
+    "web/terminal.mjs",
+    "mise.toml",
+    ".github/workflows/test-terrarium.yml",
+    ".github/workflows/test-e2e.yml"
+  ],
+  "store_generation": "sha256:0ace83eb81490535ab205d9cdcd90b00ccdb9fbc406ea4f1b2bd45886a1d9850",
+  "source_fingerprint": "git:45c63a70612811c0e0267d5b00bba9c37d138085"
+}

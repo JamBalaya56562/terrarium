@@ -1,0 +1,11 @@
+{
+  "bun": "1.4.2",
+  "node": "v26.9.0",
+  "tools": "mise managed",
+  "browserContext": "host",
+  "CI": "1",
+  "workers": 1,
+  "retries": 0,
+  "formicariumInputRoot": "/Users/mutoakio/Documents/terrarium/.vendor/formicarium-inputs-integration-2",
+  "version": "integration2-bt-20261008"
+}

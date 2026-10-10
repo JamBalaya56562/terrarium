@@ -1,0 +1,73 @@
+[
+  {
+    "name": "lint",
+    "command": [
+      "mise",
+      "run",
+      "lint:all"
+    ],
+    "cwd": "/Users/mutoakio/Documents/terrarium",
+    "start": "2026-10-08T11:50:07.858120+00:00",
+    "finished": "2026-10-08T11:50:08.385413+00:00",
+    "exit": 1,
+    "log": "lint.log"
+  },
+  {
+    "name": "typecheck",
+    "command": [
+      "mise",
+      "exec",
+      "--",
+      "bun",
+      "run",
+      "typecheck"
+    ],
+    "cwd": "/Users/mutoakio/Documents/terrarium/packages/terrarium",
+    "start": "2026-10-08T11:50:08.386307+00:00",
+    "finished": "2026-10-08T11:50:09.092834+00:00",
+    "exit": 0,
+    "log": "typecheck.log"
+  },
+  {
+    "name": "unit",
+    "command": [
+      "mise",
+      "exec",
+      "--",
+      "bun",
+      "run",
+      "test"
+    ],
+    "cwd": "/Users/mutoakio/Documents/terrarium/packages/terrarium",
+    "start": "2026-10-08T11:50:09.093393+00:00",
+    "finished": "2026-10-08T11:50:15.522668+00:00",
+    "exit": 0,
+    "log": "unit.log"
+  },
+  {
+    "name": "build",
+    "command": [
+      "mise",
+      "exec",
+      "--",
+      "bun",
+      "run",
+      "build"
+    ],
+    "cwd": "/Users/mutoakio/Documents/terrarium/packages/terrarium",
+    "start": "2026-10-08T11:50:15.523108+00:00",
+    "finished": "2026-10-08T11:50:15.737482+00:00",
+    "exit": 0,
+    "log": "build.log"
+  },
+  {
+    "name": "lint-after-archive-classification",
+    "command": [
+      "mise",
+      "run",
+      "lint:all"
+    ],
+    "exit": 0,
+    "log": "lint-after-archive-classification.log"
+  }
+]

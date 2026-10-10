@@ -1,0 +1,6 @@
+{
+  "command": "mise exec -- node --input-type=module -e '<launch installed playwright browsers and browser.version()>'",
+  "cwd": "packages/terrarium",
+  "exit": 0,
+  "output": "{\"node\":\"v26.11.1\",\"chromium\":\"153.0.8010.12\",\"firefox\":\"155.0\",\"webkit\":\"26.6\"}\n"
+}

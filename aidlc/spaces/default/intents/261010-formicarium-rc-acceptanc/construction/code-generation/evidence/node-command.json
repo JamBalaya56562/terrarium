@@ -1,0 +1,6 @@
+{
+  "command": "mise exec -- node scripts/accept-formicarium-node.mjs --inputs .vendor/formicarium-inputs-public-rc1 --output aidlc/spaces/default/intents/261010-formicarium-rc-acceptanc/construction/code-generation/evidence/node-acceptance.json",
+  "cwd": "/Users/mutoakio/Documents/terrarium",
+  "exit": 0,
+  "output": "N4: pass\nN1: pass\nN2: pass\nN3: pass\nN5: pass\nN6: pass\n{\"pass\":6,\"fail\":0,\"skip\":0}\n"
+}

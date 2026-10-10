@@ -1,0 +1,74 @@
+[
+  {
+    "sourcePath": "aidlc/spaces/default/codekb/terrarium/api-documentation.md",
+    "archivePath": "aidlc/spaces/default/intents/261008-formicarium-integration-2/construction/code-generation/archive/20261008T120000Z-codekb-before-recovery/evidence/api-documentation.md",
+    "originalSha256": "60bac9772b1799c7f466bdc54e5fe40071795f7ee32b458495bfd930da87bcd6",
+    "historicalBodyAndIdentityEqual": true,
+    "differences": "heading hierarchy/labels, blanks, old scope fence text only",
+    "publishedSnapshotSource": "git:f8c0130d7fa6b4a4b88457cb71299a8c07e896f6"
+  },
+  {
+    "sourcePath": "aidlc/spaces/default/codekb/terrarium/architecture.md",
+    "archivePath": "aidlc/spaces/default/intents/261008-formicarium-integration-2/construction/code-generation/archive/20261008T120000Z-codekb-before-recovery/evidence/architecture.md",
+    "originalSha256": "2db33bef623d3064326fdef0c53c69a2d601604201cb83c6dee6225670af51bf",
+    "historicalBodyAndIdentityEqual": true,
+    "differences": "heading hierarchy/labels, blanks, old scope fence text only",
+    "publishedSnapshotSource": "git:f8c0130d7fa6b4a4b88457cb71299a8c07e896f6"
+  },
+  {
+    "sourcePath": "aidlc/spaces/default/codekb/terrarium/business-overview.md",
+    "archivePath": "aidlc/spaces/default/intents/261008-formicarium-integration-2/construction/code-generation/archive/20261008T120000Z-codekb-before-recovery/evidence/business-overview.md",
+    "originalSha256": "96f5dbe65168245875bf137546fe6402191e7052df6718a1c14ad08a969ebb3d",
+    "historicalBodyAndIdentityEqual": true,
+    "differences": "heading hierarchy/labels, blanks, old scope fence text only",
+    "publishedSnapshotSource": "git:f8c0130d7fa6b4a4b88457cb71299a8c07e896f6"
+  },
+  {
+    "sourcePath": "aidlc/spaces/default/codekb/terrarium/code-quality-assessment.md",
+    "archivePath": "aidlc/spaces/default/intents/261008-formicarium-integration-2/construction/code-generation/archive/20261008T120000Z-codekb-before-recovery/evidence/code-quality-assessment.md",
+    "originalSha256": "077d96e92357b397b89d68f881b3c3270c5688455bba97de01f177d3eaa48fb9",
+    "historicalBodyAndIdentityEqual": true,
+    "differences": "heading hierarchy/labels, blanks, old scope fence text only",
+    "publishedSnapshotSource": "git:f8c0130d7fa6b4a4b88457cb71299a8c07e896f6"
+  },
+  {
+    "sourcePath": "aidlc/spaces/default/codekb/terrarium/code-structure.md",
+    "archivePath": "aidlc/spaces/default/intents/261008-formicarium-integration-2/construction/code-generation/archive/20261008T120000Z-codekb-before-recovery/evidence/code-structure.md",
+    "originalSha256": "c98969d3f31aa6780fcfdf809fef7dfd4642eadbfcea7afa46d13874f603632b",
+    "historicalBodyAndIdentityEqual": true,
+    "differences": "heading hierarchy/labels, blanks, old scope fence text only",
+    "publishedSnapshotSource": "git:f8c0130d7fa6b4a4b88457cb71299a8c07e896f6"
+  },
+  {
+    "sourcePath": "aidlc/spaces/default/codekb/terrarium/component-inventory.md",
+    "archivePath": "aidlc/spaces/default/intents/261008-formicarium-integration-2/construction/code-generation/archive/20261008T120000Z-codekb-before-recovery/evidence/component-inventory.md",
+    "originalSha256": "624952252ecbfeab6255a6d6abfa2263613310b7e4ff64009cf4a717110ba217",
+    "historicalBodyAndIdentityEqual": true,
+    "differences": "heading hierarchy/labels, blanks, old scope fence text only",
+    "publishedSnapshotSource": "git:f8c0130d7fa6b4a4b88457cb71299a8c07e896f6"
+  },
+  {
+    "sourcePath": "aidlc/spaces/default/codekb/terrarium/dependencies.md",
+    "archivePath": "aidlc/spaces/default/intents/261008-formicarium-integration-2/construction/code-generation/archive/20261008T120000Z-codekb-before-recovery/evidence/dependencies.md",
+    "originalSha256": "43d1f18f1945328acb46b7767d3b66869fb0ef0076f7b701a522b62dec5a2dc5",
+    "historicalBodyAndIdentityEqual": true,
+    "differences": "heading hierarchy/labels, blanks, old scope fence text only",
+    "publishedSnapshotSource": "git:f8c0130d7fa6b4a4b88457cb71299a8c07e896f6"
+  },
+  {
+    "sourcePath": "aidlc/spaces/default/codekb/terrarium/reverse-engineering-timestamp.md",
+    "archivePath": "aidlc/spaces/default/intents/261008-formicarium-integration-2/construction/code-generation/archive/20261008T120000Z-codekb-before-recovery/evidence/reverse-engineering-timestamp.md",
+    "originalSha256": "31f18be4393c6611b440f5420fd8b6583ad2b4620ad8213fb191901a3d21ffa8",
+    "historicalBodyAndIdentityEqual": true,
+    "differences": "heading hierarchy/labels, blanks, old scope fence text only",
+    "publishedSnapshotSource": "git:f8c0130d7fa6b4a4b88457cb71299a8c07e896f6"
+  },
+  {
+    "sourcePath": "aidlc/spaces/default/codekb/terrarium/technology-stack.md",
+    "archivePath": "aidlc/spaces/default/intents/261008-formicarium-integration-2/construction/code-generation/archive/20261008T120000Z-codekb-before-recovery/evidence/technology-stack.md",
+    "originalSha256": "6825ae18d696218363941b272c75d882ba378a5fe86acdd631d1b2de438ec5b3",
+    "historicalBodyAndIdentityEqual": true,
+    "differences": "heading hierarchy/labels, blanks, old scope fence text only",
+    "publishedSnapshotSource": "git:f8c0130d7fa6b4a4b88457cb71299a8c07e896f6"
+  }
+]

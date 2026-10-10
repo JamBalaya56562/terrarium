@@ -1,0 +1,85 @@
+{
+  "stage": "code-generation",
+  "unit": null,
+  "version": 1,
+  "writes": [
+    {
+      "path": "scripts/candidate-transaction.mjs"
+    },
+    {
+      "path": "scripts/assemble-candidate.mjs"
+    },
+    {
+      "path": "scripts/stage-formicarium.mjs"
+    },
+    {
+      "path": "scripts/assemble-pages.sh"
+    },
+    {
+      "path": "packages/terrarium/tests/candidate-transaction.test.ts"
+    },
+    {
+      "path": "packages/terrarium/tests/assemble-candidate.test.ts"
+    },
+    {
+      "path": "packages/terrarium/tests/formicarium-assets.test.ts"
+    },
+    {
+      "path": "packages/terrarium/README.md"
+    },
+    {
+      "path": "packages/terrarium/src/generated/"
+    },
+    {
+      "path": "packages/terrarium/dist/"
+    },
+    {
+      "path": ".github/workflows/test-terrarium.yml"
+    },
+    {
+      "path": ".github/workflows/test-e2e.yml"
+    },
+    {
+      "path": ".github/workflows/pages.yml"
+    },
+    {
+      "path": ".github/workflows/publish-terrarium.yml"
+    },
+    {
+      "path": "packages/terrarium/tests/formicarium-inputs.test.ts"
+    },
+    {
+      "path": "mise.toml"
+    },
+    {
+      "path": ".rumdl.toml"
+    },
+    {
+      "path": "aidlc/spaces/default/codekb/terrarium/code-quality-assessment.md"
+    },
+    {
+      "path": "aidlc/spaces/default/codekb/terrarium/architecture.md"
+    },
+    {
+      "path": "aidlc/spaces/default/codekb/terrarium/api-documentation.md"
+    },
+    {
+      "path": "aidlc/spaces/default/codekb/terrarium/technology-stack.md"
+    },
+    {
+      "path": "aidlc/spaces/default/codekb/terrarium/dependencies.md"
+    },
+    {
+      "path": "aidlc/spaces/default/codekb/terrarium/component-inventory.md"
+    },
+    {
+      "path": "aidlc/spaces/default/codekb/terrarium/business-overview.md"
+    },
+    {
+      "path": "aidlc/spaces/default/codekb/terrarium/code-structure.md"
+    },
+    {
+      "path": "aidlc/spaces/default/codekb/terrarium/reverse-engineering-timestamp.md"
+    }
+  ]
+}

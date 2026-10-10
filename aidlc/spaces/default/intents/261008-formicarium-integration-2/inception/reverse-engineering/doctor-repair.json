@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-08",
+  "operation": "入力キャッシュの未解決HEADを持つリポジトリを可逆的に退避",
+  "backup": "/private/tmp/terrarium-ci-inputs-repository-ndrykdz5/formicarium-ci-inputs",
+  "cache": ".vendor/formicarium-ci-inputs",
+  "preservedFiles": {
+    "README.md": "74cf7b161db1c3baecdcb1a0a1aab570325ed0c0e8ddd1dad0989ce5122f078a",
+    "inputs.tar.gz": "00abfc608106c8b4a17bd973b4a948b0aa1fa23c713ac22ad62e5a4571c75d01"
+  },
+  "byteEqualityVerified": true,
+  "graphCompile": "exit 0、runtime-graph-missing警告は残存",
+  "configRefresh": "進行中の2workflowを理由に拒否。AGENTS.mdは保持",
+  "doctorAfter": { "exitCode": 0, "problems": 0, "warnings": 3 },
+  "remainingWarnings": ["AGENTS.mdの独自変更", "未コミットの作業記録", "runtime-graph-missing"],
+  "publicationPushOrPR": false
+}

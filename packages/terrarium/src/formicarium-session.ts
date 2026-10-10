@@ -66,7 +66,7 @@ export async function resolveChoice(
     resolve ??
     ((
       await import(
-        new URL('formicarium-guest-distribution/resolver.mjs', base).href
+        new URL('formicarium-guest-distribution/resolver.js', base).href
       )
     ).resolveGuest as GuestResolver);
   const selected = await resolver({
@@ -95,7 +95,7 @@ export function formicariumAssets(
   return {
     loaderURL: new URL('assets/blink.mjs', root),
     wasmURL: new URL('assets/blink.wasm', root),
-    workerURL: new URL('runtime/web/package-worker.mjs', root),
+    workerURL: new URL('runtime/web/package-worker.js', root),
     buildInfoURL: new URL('assets/build-info.json', root),
   };
 }

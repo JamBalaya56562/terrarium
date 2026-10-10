@@ -1,0 +1,26 @@
+[
+  {
+    "name": "formicarium",
+    "command": [
+      "mise",
+      "exec",
+      "--",
+      "bun",
+      "x",
+      "playwright",
+      "test",
+      "--config",
+      "playwright.formicarium.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list",
+      "--output",
+      "/Users/mutoakio/Documents/terrarium/aidlc/spaces/default/intents/261008-formicarium-integration-2/construction/code-generation/verification/formicarium-final-results"
+    ],
+    "candidate": "/Users/mutoakio/Documents/terrarium/.vendor/site-formicarium-integration-2-final",
+    "started": "2026-10-08T10:38:48.111017+00:00",
+    "finished": "2026-10-08T10:40:11.641801+00:00",
+    "exit": 0,
+    "log": "formicarium-final-browser.log"
+  }
+]

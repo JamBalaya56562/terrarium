@@ -1,0 +1,2679 @@
+{
+  "before": [
+    {
+      "path": ".rumdl_cache/.gitignore",
+      "sha256": "886326fd4fb542bf10a939d0701a10e84216f59a0d9b6865e7b52a2323685c51"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/005ce2030577e706809e80e9968dc5b51705d3c4dbc50916e5b29f4ad0caad92_7d5c87054840f975.json",
+      "sha256": "adb4c6e5ca77170f9efef37d73bae482b3785f3eaf15797669a7d151bc372daa"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/01359f42b776604d06a440750e1e115ee8770efd3a5539d4a3c18d31cb7202a9_7d5c87054840f975.json",
+      "sha256": "630d9154e8f4152d417e4f036b50724cdfc80c7e615ccd8b6225db29ebae21a9"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/029b1b4967a7462e43965731d9e75111d669f3956aef02b0d4f4de447a2faaa2_7d5c87054840f975.json",
+      "sha256": "e48832f23d144acd1b0c9453f429909de0fd33dc4f2dcda1f8da57811f03a580"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/0395b92f9d6927e22a013ab96c284414133dd91a733aae50072e1d458047f046_7d5c87054840f975.json",
+      "sha256": "6edd1b9c0257cc7491c08aa58c2a620686f8b4a1df8b8a8030b189b35b75e3ae"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/0395b92f9d6927e22a013ab96c284414133dd91a733aae50072e1d458047f046_938013f60b1f879d.json",
+      "sha256": "9d06d9e1b39891b779cfca127317cb5cbdbd779110b649dda4d56272b4347446"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/065df6628e33d066f6145eab8592fe03cb00313ea7eff10a95cfcc697d8dcaa8_7d5c87054840f975.json",
+      "sha256": "359a8b9cd921de75307d76f1470eaa1837138001d94a4eacfe2814b44fcdb4a7"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/06cdc1313adfe4c3cf4006b654c4846e83a8ef0e3094f4942b0c49f248ae67b6_7d5c87054840f975.json",
+      "sha256": "dfd911eb461b1c87618225ebadffed5335bb5d17620bd6ca0d725f9e274d41ff"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/06e37789b2b88eef12fde93ad05af925da48ee7664e9d7ce188a5d605e9c4eb0_7d5c87054840f975.json",
+      "sha256": "7e14710d7f02de695b659a01cbbb83cd81917ea0c4e7ceb8e70d6d1e338a3332"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/096ce3829487a9e2879707fa4f1f3908552b009e09ce2c190bb8f18376255eaf_7d5c87054840f975.json",
+      "sha256": "bca291a4ad3f1630c1dadebf48c57dcaf56ccbb0fa76b981f105a783ca9c26ad"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/0b2576e6d39ea81aaf50247f63308340760ada6453cf92d4d04723668cd91a40_7d5c87054840f975.json",
+      "sha256": "df123f5f84ce1a468d005f09c974ac6421ce5940a1996014fc83342130af6bc6"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/0cf81a4889ef062e9ab000aef347de2c65f5a219922f659e893c31bcf810c1a7_7d5c87054840f975.json",
+      "sha256": "90d8de12600f67937518eb9034eb3a99e64086ca27d67403b5f2f230281eda66"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/0e9c5aa0131068372ab690f5a25a0b2c6e0499cda941586fbafdb07fc28d27c2_7d5c87054840f975.json",
+      "sha256": "b345e259b393fe2e0926e4d9e1c932dd64bdb66f70ffa8572626c523613be66b"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/0e9c5aa0131068372ab690f5a25a0b2c6e0499cda941586fbafdb07fc28d27c2_938013f60b1f879d.json",
+      "sha256": "b466ccde3661f29c9c2effdaa1c93fd13abf2919f8766b73440927977f1384f0"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/0edce4db5bdfdf509d67ad643723445321d33bc65dbf45eb507b95162cf018e3_7d5c87054840f975.json",
+      "sha256": "a8f58933a7bd364a2625c9b56a35ff8d8a0658ae5b652e8ca836376a30eb81bb"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/0f2d1b1d74269a475439f90aabbff5feeb030093841a25e43abfa736c099949f_7d5c87054840f975.json",
+      "sha256": "14bd0c0fb0bebc8d955a94f937a580c3732d4664192d13579e41852fa2774425"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/0f30b5dfc5e613ac0b2d06a88c0212c52d8682dac8f10cfd5a68e9f1855f0f5b_938013f60b1f879d.json",
+      "sha256": "5e6709c0fefc6940e8b191c34cff8b104eb59bfe3c1afa479255e3a2137504ba"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/1051c2ce6fdff7436ba4f41d326667cadccc950bafa625997f09d0ea8d09b020_7d5c87054840f975.json",
+      "sha256": "aabcc00d8c1591b8ac9e609b0992104448de3cfa23530b2ae083f8eace22d1a6"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/1051c2ce6fdff7436ba4f41d326667cadccc950bafa625997f09d0ea8d09b020_938013f60b1f879d.json",
+      "sha256": "d805fa2edc44741e1dbbebddb1e78ed258ce150f0a034573dcbb2bc9ff6567b0"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/1082da97b2c3da690b69c3de90c64b66a7d5a18ab6ca1c52ad8545216f389f60_7d5c87054840f975.json",
+      "sha256": "6628ba8a9674c6439bfafc12f545b6b16b089ca0b5d2b3baba6b2cf98ab84db2"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/10bf6b989d646a374bd5b59c33dd21ec0d0d0a80c836fc77d8a824c6bb8122ae_7d5c87054840f975.json",
+      "sha256": "467ff0da3c04b068c76224324c1819c33e86049c4676aa3b1fb5181d0aff96d9"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/11f4b23ece29bfae301615cf8f502a8216936d7ab8b4c25f679019d419eede36_7d5c87054840f975.json",
+      "sha256": "c446156825fa96e84db8442c462ed76c1a1bb241f0ef7005c551c18f91dddd54"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/137e122723a05869cf373b1ba5ebd39d65a91b5ebda39db3561825ff031e385c_7d5c87054840f975.json",
+      "sha256": "ac9b37949d03853aea346514720d1dd824f274c4bde240ab28a9ded03c480623"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/137e122723a05869cf373b1ba5ebd39d65a91b5ebda39db3561825ff031e385c_938013f60b1f879d.json",
+      "sha256": "609001524b2ae7f1255bf8ac8d485aeeda7de61422aa892ef4d90139c0c551ba"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/1441dcff7b09971cc10482c72a7ea1a83a0a1c1f0497d36c15d78cba1086c3d1_7d5c87054840f975.json",
+      "sha256": "0b0a7c0c5f3beeb0d7e2aafd66e9706f3c6a3c5a1cc09e3530aa3dc15a079796"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/149043d700a26e12ce82273094b018eb71c4fae1e094507364c091cba34c919f_7d5c87054840f975.json",
+      "sha256": "84f9749dc2c535a29e3a22949e5fae1e4597ebd263f922a96d7142e4f3e8a53f"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/149043d700a26e12ce82273094b018eb71c4fae1e094507364c091cba34c919f_938013f60b1f879d.json",
+      "sha256": "d1e3cec84be5918ad3a57ffd9644d9f9d04443893d036169b0be8e8d4bf21052"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/170c79e974412590b03da652ec8d9cc3919273e2829bd476fae6c31ac130dc25_7d5c87054840f975.json",
+      "sha256": "9b349f066e8f60259141c85e98226b3441d2f9b6eb41773ca15406d6c05f7683"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/1719c78bcb33fb82a69f637a3942cbe45316bace1f2d766e910b538fdc2a72ce_7d5c87054840f975.json",
+      "sha256": "3cecaf5d6f2c16bc0084cb71fc7dec37a68f4c8721c6a416faa9d39f8d67017c"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/1719c78bcb33fb82a69f637a3942cbe45316bace1f2d766e910b538fdc2a72ce_938013f60b1f879d.json",
+      "sha256": "20904f322611b7349fbee0adc63de1d8c43b578a86abb49a3ae67b6f47ffd317"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/1762f4915a85841deb3a7f239fe349b2624b23e4a9b5968d65ba26ff3c9e88bd_7d5c87054840f975.json",
+      "sha256": "8ae7dd5c07f638597282ad09b953c24c310fcf6e15fbab839ec27cdf3c42bbf3"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/179ec856df36a4f2ca5c98069cf65cfb20ba62891b709bad96f59799ecac89ae_7d5c87054840f975.json",
+      "sha256": "8577e9d2e9ae049e43ed705c034dfacb1d1e45e1c6b7a4fd4b85df479a263114"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/183d59f6df0904a3219edd5a1d9552840b781bf2ae86d16d90d60984dd5a92f0_7d5c87054840f975.json",
+      "sha256": "3e2d5a79f8513a4025c2b808d066f685ce56152ff053ceb54909f5612590152e"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/183d59f6df0904a3219edd5a1d9552840b781bf2ae86d16d90d60984dd5a92f0_938013f60b1f879d.json",
+      "sha256": "d8ab64d122471a387cb810cf6bc504b55cd59f1fe2cf8ffc03638337a5cf7a46"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/19026f28dc94188535ba3bd0ddb48dc2fd41adc17a219ab44da65e8596cd59c3_7d5c87054840f975.json",
+      "sha256": "e0dc9654f761856595f4f5db76b4c2774ac68105514c6e39dfe256f8a757ad0f"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/19026f28dc94188535ba3bd0ddb48dc2fd41adc17a219ab44da65e8596cd59c3_938013f60b1f879d.json",
+      "sha256": "58672d532e2a1fa85ef0d96b2e2dd4574d0d14577ac4219b9bff3a12c81fa472"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/1a12f783afd3ee6f445115f9b4285daa66fe3401a826a388b20124093504449d_7d5c87054840f975.json",
+      "sha256": "b6250061ce0ef995f783556eecb90a58d43c759be85a69590ccd5586e0e9f455"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/1ae2d25132df61ca6a3a07f7e63bed607f892c7c31e9a1f67d4f947efd93d14d_7d5c87054840f975.json",
+      "sha256": "e9380f69c39b711b0bb3c10958e11a1c57347d4f369cd23b85b1c870f8abdd55"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/1ba46e48fe9c8b7d5a4b407d9cf5304d47ef9bc8ded2e2a61ec067df72b385ba_7d5c87054840f975.json",
+      "sha256": "263fa68d6b8d25aa91ce3bd3633c30a169619eaa081f4df4219eb9ae36224f4e"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/1ba6b7fa16258de88c68d3b392395482906308212cb0c09d3bd2eafae492b90b_7d5c87054840f975.json",
+      "sha256": "9308a0ec8c7ff40daa8908a000bde9e69c16bacaffc801b34466a2e5f6a74db1"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/1ba6b7fa16258de88c68d3b392395482906308212cb0c09d3bd2eafae492b90b_938013f60b1f879d.json",
+      "sha256": "897575ccfee3fbbcb6276fe58ee956ce9b28496e6312d8a4978f5dd25d714faf"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/1bcc9d3464b8f3e5e6d897742609a48fc2fa1d56fddf0194b1f3a2ddee897858_7d5c87054840f975.json",
+      "sha256": "e872ae6fd9d5bd9e7b4a7f932a85a060c9c6e7bb45cbfecf8fd6a34684ef4cb0"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/1c291981e513a70f5e2137866b8191edff393db94c1ca618978750d7fe8c3001_7d5c87054840f975.json",
+      "sha256": "b7687ec29f78115489e7df0eecd3521683d87854968ea7b9cccd952d2a793885"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/1c4d0ef03d7ac6dbbdcd6890b42a4cf4880ccd2e8a949e01fa83aa9c5505544e_938013f60b1f879d.json",
+      "sha256": "a6aca1260da184c4af4e9c520123fe6a544586594a54dd1ef572709ea9e1e05f"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/1e39ab2610a5cf1d2df38aef82a807ae053d741316f1ad09f291af1a367ac800_7d5c87054840f975.json",
+      "sha256": "3ec9979e9e8880bed1bad9d11b66cb9e6c270cb7a165b373a272df27c3906056"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/1e39ab2610a5cf1d2df38aef82a807ae053d741316f1ad09f291af1a367ac800_938013f60b1f879d.json",
+      "sha256": "859643c740f94ae1fe91b12fe54e49d8ca83bc1e96d30d342dcece8cc18d30da"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/20c78e5e9cef3b6028ba56e36217286cc70fd7f8bab2385a29c026ee19e1439a_7d5c87054840f975.json",
+      "sha256": "a8769b44a436b7b02ce5803ba5cf243af15637f4e7d68512633340687ec03b45"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/22469ee27f1bba18d9c3854de60e7f9e61e6e31a2fcc2d80917a4c5033bd8ef5_7d5c87054840f975.json",
+      "sha256": "2d5a59ac3ec2f3efea20bbb644d793762fc4cc3f274154fc4f94ca8d1410c36d"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/22f4196fdaa76e0dd18a892add704b5c13ddb96998edd434845eb104f34e69bf_7d5c87054840f975.json",
+      "sha256": "3c8d608a3d557a1fd30fdaaaf08fc0ace8dc2899613d1c4f1349b225baf01fdb"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/22f4196fdaa76e0dd18a892add704b5c13ddb96998edd434845eb104f34e69bf_938013f60b1f879d.json",
+      "sha256": "860c2360b78e6ff42a9b70ac5c050a629fdd50d6b3fed2178fdebe76fd37228f"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/23a85568b694594a34af770bfeb97fb616f69e624a2726db96dbdd9cbff58fa2_7d5c87054840f975.json",
+      "sha256": "560edf0c10e6eeb4a5040bc2f4163e03407e0189130702716d900cca69dca0c4"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/23f6e453b5471ab897be52fc00520473b342ac870455b9ce4082f8a9c8626b03_7d5c87054840f975.json",
+      "sha256": "74b4bb01697b01381da410adf468589c74ed294c19ae67366e045f9a1f9b9aad"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/25f27a0989007cb898a20ae0de5b64dfd0d87998c7596fb3919780be294b72f4_938013f60b1f879d.json",
+      "sha256": "e2721f5f470def3fd0bb2be91f1262f9d43d50d2c1b981cff1ee02507e6dbc9f"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/27b2a6a79f7ca19b8fe5d917bc83e7be33813f1842fd30367cefe9d4376681d1_7d5c87054840f975.json",
+      "sha256": "2a4cef41d8113f439fbdfba99984ea4510d0f69e4291c6141a98c1d26b161831"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/280b85e4ebbbf60e8eee0914949ded4d88b07f7becbc6bbccd3abb064cd62f09_7d5c87054840f975.json",
+      "sha256": "e8b77bbf31b3287498575348e455597adff3e7e006fa0ba1bf0d25d5cb4641ca"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/28b34d801ba7ba5a7d20ebd567005f989546d432ad8f8e6dae48796307147584_7d5c87054840f975.json",
+      "sha256": "a03e1a49c94962cbd0b173dce43eced7594c0476abc30c55b1e674b2ad497e0d"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/28b34d801ba7ba5a7d20ebd567005f989546d432ad8f8e6dae48796307147584_938013f60b1f879d.json",
+      "sha256": "36760cfebfac597ef3da05d25eb5a729d88b8e54f499cdc9ff62f11cdf6becdd"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/28e787f5a4d3aba284f577736b1c7d0835312ffa5b4fb7d0fd5eb16a972424ba_7d5c87054840f975.json",
+      "sha256": "4a3f05c251986491618b75c297d93cc4c46c98b60ef4057fb821a4efba754c29"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/293f5dafc1faa91775799ca55db435b2a53ec3c47f25bba10504a24598355979_7d5c87054840f975.json",
+      "sha256": "0a4d1f18205fc07e44487bb9ed74f17015505a507a63d3f11d6e33d3dd25c28b"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/2c9193d60b9f6dee2b90dd8eafbb18eef43638d2271e6d93c51b7cfee99b78ea_7d5c87054840f975.json",
+      "sha256": "7224c3b4f7a2209370186b556752a3b258abf6f98e88d39f831b51b13e3ebbaa"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/2cb7c8204665067d1b180fdf98488069fe9127cdde889300fdd2b43e6bf99379_7d5c87054840f975.json",
+      "sha256": "3ab3b4ec393b1ec77d767b156699c3a2e78658c48470eb249338bfa8f885c540"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/2ccf1e17bc8360c82ac931f3d48c7151496763571291925574da7048e3f52b3c_7d5c87054840f975.json",
+      "sha256": "df16f4d6dc44c65825081321a23333c40cba19779b96da5b587d2e1cc24fb75f"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/2d3a46ab317e8a5a2f1e1610e4c5e65340c5886a5f7e1f57ffeb6d0fb4d6fc42_7d5c87054840f975.json",
+      "sha256": "3e3a5c7da967391dcc67d44fcd3a687203d6c09dec6a327c634cbd83673a4b9a"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/2e57186f70e121e75b89f2c01dadfdccacb55a14d0cdb6a6fd259d970e968261_7d5c87054840f975.json",
+      "sha256": "1a8c5fc554f2d53fa80cee2d1a8f7a4d43c8b6fb29245208bafb9e393c60c61c"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/2e57186f70e121e75b89f2c01dadfdccacb55a14d0cdb6a6fd259d970e968261_938013f60b1f879d.json",
+      "sha256": "74970fce9a5d186fd8d2f41f7861cc55f95180ff76c7e0f3bea9bc11d2031695"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/2f73d818634c3d34c74a1a2abcae89a47a5fe08ae6f4f9291fd5ced1275e0540_7d5c87054840f975.json",
+      "sha256": "baa4f529f5f664ba4466751f60a25af845d1316f302a0c0d63a5f6660a7b1f72"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/2f73d818634c3d34c74a1a2abcae89a47a5fe08ae6f4f9291fd5ced1275e0540_938013f60b1f879d.json",
+      "sha256": "d3a74971ca12067de085be1cce889f07b27d3903cfb2ea7eec727dca7ecec613"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/2faaa43d748526e4453e4505936c2b8ff3c6653edf5b2ac38fd4a207e5c38e1d_7d5c87054840f975.json",
+      "sha256": "76d8da74534654ce6bc4a7a14b4fd7ce42fc924d5f300c4f733e26bcea73d128"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/32321ca62c4f764edf34d9f1b862533ed2962323b8ba545be870ff45e8c0befe_7d5c87054840f975.json",
+      "sha256": "1abf8bcb150fa21f3124bc84a6256b6bad20bbc262c6783794e35a14f49e587f"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/324fa3fdbb3de90f948226cb0a5e2331a7d6318efa5f50524b4b17e8d9d09e4c_7d5c87054840f975.json",
+      "sha256": "8e1091b23d4e55633a4d4dd4c431e7d16ebf38449aa24e783d63ab5be414fae1"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/32cca8a6f3c96d9b331ef02140a8343da422bfe796eb45050a2392cc1d9543c9_7d5c87054840f975.json",
+      "sha256": "ea32b12aec921205f156899e1a70695a1f6fa522adc992760063221b319520d9"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/32cca8a6f3c96d9b331ef02140a8343da422bfe796eb45050a2392cc1d9543c9_938013f60b1f879d.json",
+      "sha256": "9115f3a9004e1de9a65af078fb0d1e8ff60887a2f2aa5cfcf347e0e13179c2a9"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/33b58863ea765c27447459d7aefcb70f218f1b17f61401ed03163ccd4afa4b86_7d5c87054840f975.json",
+      "sha256": "26708900990818314fd63218f00d64e785ce4139a7ea4fd7e3dd88eb90ec21ff"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/340288826bf05ec4335f41819727f5ad0b6997a4440c67cd0aca00de605a702d_7d5c87054840f975.json",
+      "sha256": "c9d1879c1a2601a2b88a503af35e808587ce7c9a8beabc0b79dede5fa6a12871"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/3584bd70e9effbd38d928eaf9f5fcd3d50957c96dd1a1b70ef58aa2e2f503f13_7d5c87054840f975.json",
+      "sha256": "5f8d3d33713e22353946c4a47446a46cd92cb4703885dbe518a0abf19f759f17"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/359dd5e2492555b091735ef5d9104c4d12ead11ed473383a21eda9e46655ad19_7d5c87054840f975.json",
+      "sha256": "56f014c2fb40d1485b5fe973734112c1515cb90d29c1fb64edabbc5d08db9d28"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/359dd5e2492555b091735ef5d9104c4d12ead11ed473383a21eda9e46655ad19_938013f60b1f879d.json",
+      "sha256": "148209a2ffeb1fd1fe8d8e7ff5ab31420b405a2c8014560d606fa19dc1831325"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/3868424e02e29b15f386debf8b2e66471a1aef92deafd03122cf3e809e7a0afc_7d5c87054840f975.json",
+      "sha256": "b6980a8f965c3e35ef040c4a7af0f3e4026b76ba41dc50b4c397e9ea13f78edd"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/38aac2615cc510b1219f3c04cf48c0028a1c7898a2d031ff43068ea61046b03c_7d5c87054840f975.json",
+      "sha256": "5876ca0a7f9cd33ad14217c1dd729afd596ba1e7ad50a9417d449c43d4683390"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/39739fa05744c4de8fa1c81c9ec3be84ed9622e37bf72c549279bf133cd8fd84_7d5c87054840f975.json",
+      "sha256": "459d1868dcd57badfa190ac269075c518ce3051f07619db7085a228ace309d9a"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/3a3e5e88bcdc95c221c8b602943560e4ad4a9bb8d921946eb15c6bfe140a892d_7d5c87054840f975.json",
+      "sha256": "0b1ac3289a2fc6308c01a5da5a6e17b7f9d225b45c1ca56eb602bfbcaea97d1e"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/3a3e5e88bcdc95c221c8b602943560e4ad4a9bb8d921946eb15c6bfe140a892d_938013f60b1f879d.json",
+      "sha256": "aa534e487cac193e0b3100ef6e46fc4949594490b90a1cdbbc8c2f4e0ec4b120"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/3a872acd7fb49d79a06663288276e9e3d65d37703d59a7be8cbec7adf49125db_7d5c87054840f975.json",
+      "sha256": "e87b4f2a19051cd3900828ad47a1355182113cf1e08d05e9b84b676f9f110db5"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/3b705f3c801e7ab0cede5d19987c60bc6265b483e6f874d5472748c005947248_7d5c87054840f975.json",
+      "sha256": "7b42eeae8c02df6a620b8496fa9364bbf3da8e40b829ba70df5463b46895dc46"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/3e31d4edd3449034658087539609b1995ede4f9565e3be403a599d25cd5b89a9_7d5c87054840f975.json",
+      "sha256": "e41c254a27f1f46d76394fae75144c944adbec269656e31921ad3ba6bd71798f"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/3eb3d093ace22d956f89121514999c74696f4c555cb8688397381e17a2d01f8b_7d5c87054840f975.json",
+      "sha256": "191590759530c2853338af7175977ceb233775f6ede21322f8215e24c26d9f0e"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/3f4ca3ee17f01f1c0524a252c4289fe01b8a6495f115da18724bbd5637e2463a_7d5c87054840f975.json",
+      "sha256": "e29a5b49f33c887c74c990035ba802d9663d9a572c5f6bf58daf4e058dedb651"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/40518238ce4bbb66dd3199e9ea78b9fb5227d6069df07573facc8f30eb8a3993_7d5c87054840f975.json",
+      "sha256": "f83a2e1c9d00b16f245aa52c0308c66832d4576ed95f16450051a47712450968"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/405af8e03d27091baa6b1227158e22f9179cd5be4169bd367157726cf4ee422f_7d5c87054840f975.json",
+      "sha256": "e97fa1eafba11e94284ff1054151e652a2e7ef58a69d2a4a34d628b0a01070b8"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/40cc0ed87271a36d3c085dff41db02860e883b1a5cc5421269d94ca3ada0f38f_7d5c87054840f975.json",
+      "sha256": "bd8a5b61f64f2df4e74b93cf7fec819baffe2546fc07819df012efb58eeb2775"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/42a0a10a5c358e8cfe4040802e63b52d1b7462de9debec2f05382a64ec271cc9_7d5c87054840f975.json",
+      "sha256": "2897c258ee0e6bbee546e6fcd1205c98b3422c532c1e423b8d13b18dd65d10da"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/42a0a10a5c358e8cfe4040802e63b52d1b7462de9debec2f05382a64ec271cc9_938013f60b1f879d.json",
+      "sha256": "9c2584e2f346c9172e15732d4b8eb100008a5b38503ad1552ed3284dd04ae69e"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/433bbfb84e7b618df6e243b8f53dd449fb1e8865bb6764a8420b35b9ec59e7ef_7d5c87054840f975.json",
+      "sha256": "75a2d9512b93e8b842c1a23b5febb08565b6fc0b1cdd1aafb5dc2f260e8b97af"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/43ba353eab55ca95c1b6420f5f683c257185689d7a2feceb47da93f4c0339529_7d5c87054840f975.json",
+      "sha256": "e18ee6f509b36682a8b90cf1af7df0bba27275709c81865e100f01a6d737fb5d"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/44ae0e43370299febaef65bc3fa765ec5b1628ee2e19eb77d3ee16572f9a676b_7d5c87054840f975.json",
+      "sha256": "05a8b8cb20728a085f2565cc9e633d99a687d7b63830e7168d27bc488e1898c3"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/451ce18fba5f6d6b45d2f45cb9c8d7b61dee00b810fc4db72c5bc6b3c3dab982_7d5c87054840f975.json",
+      "sha256": "c426d6ae2232b7305085daa117f8d02e04314ce29db17fe836e370c03adcbcc1"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/46cba6dfaf5aa17a1559e2ff27108fd63a7c3533940a87de14b1ad838cb84683_7d5c87054840f975.json",
+      "sha256": "5e31208770f699cdaea4b55fbea3d331bf668fddd6f70bc6cfda7259123fa658"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/487eaffe9167a25a76ccda2b892f1bf8fbc8cce2dcf44a97829fa1058f1d8246_7d5c87054840f975.json",
+      "sha256": "006a98b347234a4e8ff3a3794fd0727350d4140f3cb35a084b4cce431fbe0186"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/487eaffe9167a25a76ccda2b892f1bf8fbc8cce2dcf44a97829fa1058f1d8246_938013f60b1f879d.json",
+      "sha256": "f2f6cc5add56c03be6d686f272460338bf305b75fa6d9a207b00d6837c4d1fa1"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/49dadcb1b214ca99301ddc57c7615a191900b571f7dc1f4a21a1b3360e88eb82_7d5c87054840f975.json",
+      "sha256": "27e6e4ac03df1f115fac49bcdf75cd090248542e3a35e6e3ff8b5b7b5ea284bd"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/4a2e9605a83774fd9197aa0ae3c756330da39bf1e17edf9670a555ac12d9cd83_7d5c87054840f975.json",
+      "sha256": "e004ae38b1946729c61d05eb1853d5f7e36b33196a976c204f1ad358e0a83934"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/4abd5699138542f559acfbc7bbc98fd7c57bf5336b24b60dd1933bea00d6dd54_7d5c87054840f975.json",
+      "sha256": "9ca7a748a580589a66fcba143645ff6b61a8d4026134e75cbfcb6cd088ac591f"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/4b76528da9b4a97a4962b02e153115ce66726c950ea3697260abd0c02fe16883_7d5c87054840f975.json",
+      "sha256": "c757f47bc8bb98b8e26ef67e1e16ab3456dc04fc09f9a274fe7a3684a547e8a3"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/4bc9ec210f7af2cda094868fc505df8cc48524a25d04b769afae7d15fd648973_7d5c87054840f975.json",
+      "sha256": "61a676bd29e559e5eb19010357f669fc7996b13663c2d15ac8525cb7f972ea5c"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/4c56bc39d144c982bbb52f19239db673fe3ea70e7d0397dab81549612413ceb6_7d5c87054840f975.json",
+      "sha256": "cfbdc35b1d1436169b74a0125778084c6ade07e58cc28b7e0492192672753a77"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/4c56bc39d144c982bbb52f19239db673fe3ea70e7d0397dab81549612413ceb6_938013f60b1f879d.json",
+      "sha256": "554217509a7ea219838de3e2b3c4e28a4fec6b6e540dc34fde3ee4e819fa519c"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/4cd8ef4142818530a2b35129cb935ad32df1136e5ccc8cc0cff25627729c05a5_7d5c87054840f975.json",
+      "sha256": "00187f8aa2d14c004b30e60d64bd652d3f102f4f138b337dace331b5186cc664"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/4f40051a8ca4db7a2879130cc6c4030831ff942cf156ed6b065eadd9c263245a_7d5c87054840f975.json",
+      "sha256": "e322ca3ac8b8cafc65c0f19c3f8417e7ea2891fb7391112c81eb93eb88b914ff"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/500e6446c93b042529a9a93f574d02d347353e514d5c47fec32c983c65079d3a_7d5c87054840f975.json",
+      "sha256": "1fd8caa588d0b1d04d4a917e4701ad0ca1ce865b786c01ddc5a72fae17e9c603"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/501e22d9d1f2c46b02c15c36a81735e022e977d198b5f94caf2cecfc968924cf_7d5c87054840f975.json",
+      "sha256": "2b8e315d0c56107c750b9ae5af75ebfb47544f2af18079af32d835a28cf405e9"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/50275feec0f8ac7d4d70332517ad9ecb5fad4f0d5e75c7402ae0798781beec1a_7d5c87054840f975.json",
+      "sha256": "1a0b2811e941ce58dd3be9a91347f8b41c4409138ce6b020e977670997d76ab0"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/513a8f975a94942267cae43e7f1b24026d250430db1f0210e4245a329e8dda54_7d5c87054840f975.json",
+      "sha256": "7055b4ca3f4f64076124992931ce0240575ada2edaad8d1d3e558e1abefa7ce0"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/52482692e02e9c5964a6296ccdfca39a105af412ec178b714a4610563362df7f_7d5c87054840f975.json",
+      "sha256": "825a0572df6a05547550eb2d5f75c78e9cecf5fa01dda604029ef8e3acbba469"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/53f023f12bc415fd8322a574138ee9714d959ee2ae91e8543c72007bd9f69a8a_7d5c87054840f975.json",
+      "sha256": "50bd1a02b1daf9965c20aa23a25d6f32f6d901461c705d9a3e729227031437b1"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/53f023f12bc415fd8322a574138ee9714d959ee2ae91e8543c72007bd9f69a8a_938013f60b1f879d.json",
+      "sha256": "b4b4cf9ba6d9edb3e7f9db960073ec73e32341ced5c3e3f1c1341e8ad3588342"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/544aba428d6861ef91e01379725de585008662e55668937143d231ed37609231_7d5c87054840f975.json",
+      "sha256": "5cb2b883e8657ab7c603827bd3a2b913a40369318747c22c194b5f0193c3088e"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/5457ba9eeae06034984aa3b93c73c76676c0abdc1a4045b92925c1d364bb447f_7d5c87054840f975.json",
+      "sha256": "ec9ab2b36c42b7b05eef4e50d8569cf64c4ad0322e795dd5276bbb5d2092f8af"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/55e61bc0f2155278b973125cc91ec4124575cd84573943ffa08d98b94ee6a985_938013f60b1f879d.json",
+      "sha256": "6bb2587fb5e10442f0aa7ec8caceeb05e61552d80e3952357cc96fe10e082605"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/562305d70508b08cd6743cc85841a4654e6a093a329727fe8c8daf8e0f846998_7d5c87054840f975.json",
+      "sha256": "d92a70815c5a72c7a837a7a4843522b04de69de23119f9cf4e85d2c4f2636406"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/562305d70508b08cd6743cc85841a4654e6a093a329727fe8c8daf8e0f846998_938013f60b1f879d.json",
+      "sha256": "6e0dcf109045beeaf0f372096073f50667d455a242f78f8d92b7eb81d07dc9e1"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/5694448a26e446a86e5088a0a9c641523ba5d0d138e6dbf24cf94dfbe162b5e0_7d5c87054840f975.json",
+      "sha256": "60f76d882f11efd858e8bc8101bad424a2f4964d812e7ad2646ccadff4934ee2"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/56977586de469607d2fe0672a2197a9fcd37d69905bbd8094491077f06d44072_7d5c87054840f975.json",
+      "sha256": "246886ac779bf607f8affe83fda10e4913e44b6b3c78b2b08f3751c5cfe6befc"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/57df860e305b19a42814a59b9c3f8b10dfdafd29f20de62821bc084fab368511_7d5c87054840f975.json",
+      "sha256": "ba185ae46bda60c1a624627bac0852634a4b7ea066da7b82e52172405b2bfe75"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/582d2f6fc34377280bfe9d4f91b6c84c0ae1113988dedcf5fec860a5a9f4bb00_7d5c87054840f975.json",
+      "sha256": "5d35b2116b50fe95ce38bb4ca0b8ad7140d1d846ee57fc83598133f49eb9b9b9"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/586cfaf95dd8c60f684b109a2026f884db690805575555f87f29049eea117130_7d5c87054840f975.json",
+      "sha256": "8b867998f80226e2dbc9f464a880e43aae8f8444ec32954625dfa277a0d51af6"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/599ef5c3e3f25868f95b34d2b20f6ce5298c5f99445d1996798da56e75a56238_7d5c87054840f975.json",
+      "sha256": "ff07690d523fefc9a1984c6c04d65cfb4e68a30ab4455b07e4f8d6e3238bc119"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/599ef5c3e3f25868f95b34d2b20f6ce5298c5f99445d1996798da56e75a56238_938013f60b1f879d.json",
+      "sha256": "fd8e28d401f4f7e19428594c5d2e3b9616d6bbdf34566e14f0040000605c6713"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/5a02dc568541d2a42f686c328676d604cfc76426f3ee00f4466b3fbb53b59645_7d5c87054840f975.json",
+      "sha256": "c2999e1d43f447a90507c40b5bd101b82949d5680c95c8860bf4c06d96a9ee6f"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/5a08c13c88af8a90e62f72e472344c289d6ac0f6f7fb5925ccdf858437da4e65_7d5c87054840f975.json",
+      "sha256": "5010efeed1314ccb213f21b7436652ca603b21b81f7ae084bf90df87574303b2"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/5b2b34bf2f5677b6b015ee7fe74e6f13bffee912061b74834bd59acf8862bc9f_7d5c87054840f975.json",
+      "sha256": "28f48e8f8b88ec4c089f08f66b405dda57a678bf29d097f7a536f2f0e948e576"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/5b2b34bf2f5677b6b015ee7fe74e6f13bffee912061b74834bd59acf8862bc9f_938013f60b1f879d.json",
+      "sha256": "9e0fb9eaf4075e1ffca4bc417a3c27744c2c990b4ff6e749d64e2ea9844f54bc"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/5ea26b8661b983d2ea1bce7b111a35afae44b75ecb2eb5757bec275efd956619_7d5c87054840f975.json",
+      "sha256": "959bcf230a7ca1d57934b7c5278eb466f2e4a53371c17cebbb3267f78ca6a23a"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/5eb31c70eda3d561ba6e2bf90ee525d174a493aed06ca081c3a25ece23ed1321_7d5c87054840f975.json",
+      "sha256": "61e72144adef6ec3446fa84a5b68ececa9c99c5348a4c490ead4fb112419e914"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/5fc51f8ad4ae12bf179cfe34b47313eb4b592504a65ff28dcbecb7184be215ba_7d5c87054840f975.json",
+      "sha256": "00feb8245911bd92f48b08987914a8964edb52c3ef46a64101f6ae8b61a6b287"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/5fdf7d994a1edf3810cc5e93739c952a6ebf01d294c1baf580e33a5d58c749fb_7d5c87054840f975.json",
+      "sha256": "bc4d12918d2ac0e1aa717427e261c77cb7b8581478b9ec92f5c961fe81200fd7"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/5fdf7d994a1edf3810cc5e93739c952a6ebf01d294c1baf580e33a5d58c749fb_938013f60b1f879d.json",
+      "sha256": "4f90dc05e5407f6d27c9c9ee2f803d0ba8981de3a9a76e62ece784bb9366c714"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/603006a44ffdf7605b339cfaae3eff7f884535ae8898178db08a83f9c49c5d9f_7d5c87054840f975.json",
+      "sha256": "6821c6745facc858dcda831156c60bb345dff3da6157e0bbbd4d065194a5802f"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/603006a44ffdf7605b339cfaae3eff7f884535ae8898178db08a83f9c49c5d9f_938013f60b1f879d.json",
+      "sha256": "cffe34afeb46e3849d336a20f06eca38a973b895bb753dae8c0e3f240c31e3e6"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/606fcf6fa77a317e1dc63fcfeaa40852730b2512106adcdea2afb66489c3684e_7d5c87054840f975.json",
+      "sha256": "f093ebf3660469dcf8cddc155b741e9f3d0e55ad8d845f45af34ee817de53cfa"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/614dae9af586cf35079a4d94d89e2e4e15a732bda7fb886cdecddd10de681e28_7d5c87054840f975.json",
+      "sha256": "74f8121a31b4a4dfce6131664c693ffcb5cb2083e4f183d9859629e41cd3ad51"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/614dae9af586cf35079a4d94d89e2e4e15a732bda7fb886cdecddd10de681e28_938013f60b1f879d.json",
+      "sha256": "b45d2bf93b04a156eaf437749c12acc60d69422e0c14d2597fc351603d81aa4e"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/623b4ebb8d5ca5c7703e16791c5260d6cb637b43f8fddebeaa8e7ac684f13e6d_7d5c87054840f975.json",
+      "sha256": "4ccba1f699b7e6b6b22f979d9a3fdf6d5c5b8fcceb8e2bcc99eaf80c2c0c7062"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/6455f3b582c14f6db6d61c521bf578578c5181d25a3534486781dfb17ff5a806_7d5c87054840f975.json",
+      "sha256": "cdd8988ec9d83333a5a740516a08e56b32baaa27d713811eaedbdaf109d2469a"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/64d3ca2855bdbf17676a04af5c451fc521cfe5aac03dcad6faff75ce3222c56c_7d5c87054840f975.json",
+      "sha256": "7f10905e71528250794cd6f98a9c3b3acb7459f79fc6932d8a1c3124c86c8451"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/6538da2f4df413e1ec714bc7ff9d7fc51ae784415eb1777c347e4878ba6498ad_7d5c87054840f975.json",
+      "sha256": "e4fd6805e1542ea26bf68a8cbfca0a772647d2524dbcacc3463ac1fbc2653a7b"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/660a3d64c4e00c918e52d5756f7e5716206f7db4c4c4518b8d119e5ba76f7c46_7d5c87054840f975.json",
+      "sha256": "51dc481865530458c3379996c1c987d0149169dd1b8297feb78cd7cc8b308e97"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/669a22bfe658f72d6facd8d218603edd7d4d806bc7080bc093ade2b506020340_7d5c87054840f975.json",
+      "sha256": "51071637dc80d8a8b7bce967f84c9f6b00c367e7a7e8c52a07a484b9dd09529c"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/669a22bfe658f72d6facd8d218603edd7d4d806bc7080bc093ade2b506020340_938013f60b1f879d.json",
+      "sha256": "6e686766b28dfdc86b19046fc10acf49dceaf8faf4dde091603b30c2fa1f492b"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/66fabe02f50964dd6e71e6004c163cdf74fb9cb97909e3a8e14bd5e718f9552e_7d5c87054840f975.json",
+      "sha256": "62b88795b0d9849b99ac939797b74f671b8433628494d078f77e754ff374398b"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/6756c768028e80abeaef12f764c0f4a717f0c90c02e79eccf1c44d215150ca39_7d5c87054840f975.json",
+      "sha256": "97ce505503fce0086f8c4dde81b8b92b6aa19eae04d041f89ea52ff19cb19e89"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/6782ebf0021b3f7d6cf6f1545beacd441fc869441447e08406af7b3a6333050b_938013f60b1f879d.json",
+      "sha256": "ce72b4cced2df26503d3671d94d73e9fb4bab3ddf09098118909a276aa52e2ce"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/679426f09994da09469aea1efe02e8355b5f5deaa1b4ffea5b413ba51fec0dc4_7d5c87054840f975.json",
+      "sha256": "7531fa8c3b9d8c41592e70a2c0368a0b708e29149a2b120f5ebb3c82226dfdf5"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/67f01a9cd11ae50e1b15ab368fb3cd12c7967c70e9092c386f00269f0cc048ae_7d5c87054840f975.json",
+      "sha256": "fb1d8049f8862e3c99452beea321ebe8a7440e07ed923c6149f2c663bb36a20c"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/687803bb3e6ab60d2c015c26bb5a4fcbbcdda28500d872a66f64a00f9376bc69_7d5c87054840f975.json",
+      "sha256": "4c658fcc5e3b9499fc508b4cc6d9a219d03785d81479eb9589f7419aacf84f42"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/687c55d359e0386eae21fdce0e1e3c1fec3d2ae946bf41e221bb2f3d59b6927b_7d5c87054840f975.json",
+      "sha256": "23920d4227e72adba94dd702408dc153de7a7401d1a10053ffb815abd204deb0"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/6932f76f8b18fbf2a9238e484d4c867192e500d6d83ca4564869ac70c350e9df_7d5c87054840f975.json",
+      "sha256": "3577cab7825c75ee0afe938322ea65fa62e5d85c46258cc75d79561b9199c2ab"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/696c3d1eedfa101f9578fb64cfe10e99cebff7e6cee39d92cf958fed9d77e2e2_7d5c87054840f975.json",
+      "sha256": "4c29869c2680efaae04f78d30052923e6e6e4aa253c64d571169f7a93d14d863"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/69c90db5eaaa551afa7332498748911f83979076c38ca2c51869db21e30a94c7_7d5c87054840f975.json",
+      "sha256": "a3406851de43bb13058b976f90e4920b0eb34d548d05fbe570c56d37c20aec99"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/6a1edc55ab25e0e43fe430cc45ab3e42244acc2a4e74d9d49adae80fca39549c_7d5c87054840f975.json",
+      "sha256": "02f5a16d2b5e9e6a4677f4c769d687c006dab06cc90569251b1dffeab3f7de00"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/6b1fafaadc5b7c9a218f6e16014641662282f1db7c99147f41302efe95d32a76_7d5c87054840f975.json",
+      "sha256": "4c935f3f3ec9d74060f83383951e2339fe64540ea417fa894d3b5ca01567e29a"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/6d27dc1419075cd7cba93332e7183ccdb19881c3997e0a28ca904a5d63ed9a84_7d5c87054840f975.json",
+      "sha256": "31ffc87a55c7e1b01b9dc089553a8fec31d87424732aecd98300781fb90eae85"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/6dceea9fa81a8c96d981d23e73f5bb7101d34b30c8b47bab544eb056473536de_7d5c87054840f975.json",
+      "sha256": "df127598dc18c554e4e591c065902b2de9d08b6048266c948f57024be1171880"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/6dda08a82df780a35317ecf96d50313a23e17f38b5065a03029185b3c477c514_7d5c87054840f975.json",
+      "sha256": "eb164e26d181a8bf1f1eea1c31b48434ac8939d088d62f9f023103038ed4485c"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/6e9cc4b42a9b8cde82c1a5bb469bdf20416c9ad414231386929a9d69cfeb63ba_938013f60b1f879d.json",
+      "sha256": "bee1b6d30ce7904c397778a7c0db022d26e70509913f962db897d6da88baf2c9"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/7029e60a63434ad3cb637fce960cc712197a5bb90a6662de98d504c7f2bb3489_7d5c87054840f975.json",
+      "sha256": "e514b3d04b6b7cd0c436602aec01b9f876bdd51817102492732d9df7685345ae"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/7078a9efcdd6af6d0c0f3124ac1761ecef4656ec0cef4e823825c40ea064516c_7d5c87054840f975.json",
+      "sha256": "08fa7efe5a951fdbcfd00c21f1fd766f01a18a32603f901aae229878b264707c"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/72ad7449c320f29e2560f83c739a136f275628b01fec33338713504fd01eff42_7d5c87054840f975.json",
+      "sha256": "39430568fbce0f1c508b8a291a832a9827a2d658a9d0c6b686930b393fed1952"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/73a67d617c28688e3910f1010382bbcc924d968af93d1bf4da4f41443f8130b2_7d5c87054840f975.json",
+      "sha256": "f422c60836f76b53dbd021a882edebf854d4639cdc9455de172ffe3890ebb1f0"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/73a67d617c28688e3910f1010382bbcc924d968af93d1bf4da4f41443f8130b2_938013f60b1f879d.json",
+      "sha256": "bbfff0a4ef34674d7a6cb833667bdd1f89e6a7f5f30d8aeb29daa5cd6ff68d40"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/74a5725310e68cef95bb8d42afb625d81a2722ed0a08cda9d27bbfa283e54a56_7d5c87054840f975.json",
+      "sha256": "e155df63fd2477c81279431ec0e61b109cb86116891adf716f4d5a5bcbcd4595"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/74c50c8f21e2c062bc9898e5f613f620c324f510102a6472a9d930c8f6790aa7_7d5c87054840f975.json",
+      "sha256": "ef1d0b6e33b38e948bb30eb0ba7d39fa10e9da5a81a4dce280d34912d18af035"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/74c50c8f21e2c062bc9898e5f613f620c324f510102a6472a9d930c8f6790aa7_938013f60b1f879d.json",
+      "sha256": "e1118c31c8434db914e23d20594f68cf9c3c0ccff4145fd7b444a7be0d157d0c"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/75e8f0b7b2a12b8cc1b9d420cc89a35bad53362c06e8beea6ed52a19deef52a1_7d5c87054840f975.json",
+      "sha256": "9d2e87c22851e9647157e341a3404f926aa80fbc8a4cb7f83ee8f21bfc4da1ea"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/76a6a0a2972de2e9f9384260ac4e7544b6465d68d32b46f67ed80780feb14a50_7d5c87054840f975.json",
+      "sha256": "84cff320efe4552e275c7b39948bed7f04ff85aae328d079412abc503c86368e"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/770fde5a8aeffcc6fb54d177a34b77affa359188aa8b5bdc6b621dff9477c9ac_7d5c87054840f975.json",
+      "sha256": "f6ef252a6a1f0ae943fda289bb5f68b0250d714633cf87abef7406ee62e35133"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/7719fa7e6e01a68f95e086a42af010903e6014f586e2db42d3918d114f340311_7d5c87054840f975.json",
+      "sha256": "fe08c3754a7aff6666cff543324aedddc28602df97c43d169aed4e4ddf7d4991"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/7b960b6713e5f6690d3650d9c73e6146e6202e003ad3cbfcd45ec84f8b8dd5b4_7d5c87054840f975.json",
+      "sha256": "4e53040bace2a59f552846609bd83eb3df1fb91b7b9019500d95618db6992312"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/7c70930166f167717599e3738f55134f4fee47e9800a75a2acf5addce8c2018d_7d5c87054840f975.json",
+      "sha256": "583dd9367857c35b1dcf2cca866bd9445a5d99adff71379368f0798299843072"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/7d7b3af665187336affab0bea03a56ef0763de32e632b37baed98121421540fc_7d5c87054840f975.json",
+      "sha256": "9780e28311c0a28e29d1c5097e90bcaac552bb24b104b188655810e0fee5c083"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/7ed6b4adf0e1fa4ef2cfe309692e384f8d0e1b5b6fa7e5685a4ab46199920a7e_7d5c87054840f975.json",
+      "sha256": "521ba4bacd6ef432c124bb48e69cc5e6ce57ec19c8131aa905f8dccb68f9aa53"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/8043a2e5c4cdaf5be879a1ae905f0c47cd66ea5058ff06545b0f031434fcff96_7d5c87054840f975.json",
+      "sha256": "c966c4fb7ace9c4fcc3aff41fc3cb5d1629a69cd6c14bebf32f020bbf6cb726e"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/81bcdbb4a83f1bdcabe935f579d61a96bf453557b6c0e9f8628f615b9b399db3_7d5c87054840f975.json",
+      "sha256": "556de6f3e27a24c25e3fe30abf2463a12efc7771fbb1e10b4d449066019464aa"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/81df34ed99dcacfcf60ae1ffdbc3c2193c0845e5b4346da00ffa33d54b274d62_938013f60b1f879d.json",
+      "sha256": "b4284e8e3094dac452da16c9f5e52366870a1413f2dda848b210979fb8835a58"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/8201eaa3fbeaaae67201c885e6122a5d9576bdc9ff37c8c1826c2204e778181d_7d5c87054840f975.json",
+      "sha256": "ded1cfa49f453f42af24a20e3e5ece69beedd2649b4363effc9ac39b5d820d44"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/82381380ab81d72d3ea03f79a4e8edcfe8d292bfa2aa48f31fbc97f7c6515315_7d5c87054840f975.json",
+      "sha256": "8be10d82f7e8a1aa1530005e9bd88550ad39830676195c27d54d9358326b5be6"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/83442f2b891db2752ebbf8cc13891fd039c950dce2992cecba8080ea90dcc0f6_7d5c87054840f975.json",
+      "sha256": "1985bf08e8e7f1e33cd9c3069bfc665e7a8d4988dd1a6b7cdc6f7081250698dc"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/84834c81ae0565546e04898d0934cbf6a88e1c9b3ee62d06c4a30fc821611e0f_7d5c87054840f975.json",
+      "sha256": "a87c61f4d9a97bec2c24186da65467bd8f71c57467bf85077498c8e1e005f76b"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/85afc687b56a2fb5abb8360c848628e2c77a349957e75ae5abae6358846e1245_7d5c87054840f975.json",
+      "sha256": "9f34e8a12025b0b043261826fbbd1c513d8dbf4ae24bfd583619858d0d270a65"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/8652a909640300b7ef109328e3743e86ef441beaedaf1df13e478119f5eac123_7d5c87054840f975.json",
+      "sha256": "f8667ca25067d7a46e50bb4d4dc76b694ef41ccfda509337c3320416a6d1162f"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/8788ecd03f2ac5a1c2ef709edc21de0c55711f9b6565d0bd7756f5d603d8b25d_7d5c87054840f975.json",
+      "sha256": "37cf44961aec37cea77bc9555bb204e356dace84e8c3b08ec9a8bae0d3c648af"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/8788ecd03f2ac5a1c2ef709edc21de0c55711f9b6565d0bd7756f5d603d8b25d_938013f60b1f879d.json",
+      "sha256": "d87d1f6d9c837f113a760a5f609cecde5c0585af52f6c4694d822573e59c839c"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/893ab9fbc83e8f2b4dddfe9c79feac3663abb908bfd30f98e110a09f2ceb6ff7_7d5c87054840f975.json",
+      "sha256": "b56fe79ad9775796294d82f5bd757c48018acfb93c98608352a166ebf2968c65"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/8a24fa6b9b82f72f6d1002e962aae50b31b25fd465703693728e5cfcaf3c415b_7d5c87054840f975.json",
+      "sha256": "ebedbe8cbeb29f22a0ddbba2c98073910c35316988728846e608fb9ecf9f8e27"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/8a24fa6b9b82f72f6d1002e962aae50b31b25fd465703693728e5cfcaf3c415b_938013f60b1f879d.json",
+      "sha256": "c6088fb926ec5cc03a4c30f7361e2c5ef000dc3f47478130a87ffaa7e4caae7a"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/8a9c7f1b0cb8c54db4a0601bcd40e51e5e492c5bd027c3f55029355a1de5b397_7d5c87054840f975.json",
+      "sha256": "1f9a6263655b9525ef65e8286c0261dea5092f9118d76dc7fb881f35e27321b2"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/8a9c7f1b0cb8c54db4a0601bcd40e51e5e492c5bd027c3f55029355a1de5b397_938013f60b1f879d.json",
+      "sha256": "635dc554b9effa73d9e4ab11cc6848b2f0f59c1d8e41305efaf8fcc9efbda144"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/8c784d890a17a78326b652de2039781f317644d6f023ebec1d20a234f83a64ce_7d5c87054840f975.json",
+      "sha256": "7b8b34a45418ff128eeb5a253360af3d819a81f9be4c9affc51a9ba5530188ea"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/8cbb929b6fda03230fe4747a7e0eb7ebf6703726cd202c3115085a9bbe66c83e_7d5c87054840f975.json",
+      "sha256": "ef8a89d3cf678f9607fddc95c6e7ea4b22a2b6970375c4f3086ac2f4fea4493e"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/8e29827bb6b4e8fe8fb1ec38b5d1aab38506d3119fb231b0c4753cdd739f163a_7d5c87054840f975.json",
+      "sha256": "e90aa5feea55ecae3668458b541ebce6b61bde9b627a24fb644af29139cb27e8"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/9109111df3d042174324594cb46dc43a9b0f9c56ffd65a8dcd0027d3d9017b54_7d5c87054840f975.json",
+      "sha256": "6646568020fd95eab59d103df25ae8b848341ec7f38dfc838e08e0b78d6fa6ed"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/920a7ef98ed2d56dee3613159ec305724c9b84627fa6312e32029378f6b62072_7d5c87054840f975.json",
+      "sha256": "8e8ea0d5ecc3927d15f182ef34003fa46bd3798975e1a94f0267537ff4000210"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/9474d57c991a1573c2ae6a1b6005ade88faf5d8956774249beeb41cf2a7f1d11_7d5c87054840f975.json",
+      "sha256": "02a7d5eaf9df23b215a25634e3b417e6d54f98a0d56a76b8e108e43e334410ce"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/94d7dd2e7cee3e03dd067797c068e3e46f1fd704413f225dd8dd301d180291f4_7d5c87054840f975.json",
+      "sha256": "e56f942ab6bbe8447f3405f830f0b59bc121711eda2f5700cb9c8bd187c7b695"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/961e8bfec20439e1c4ecb35df26788b560ea1ad8fe910e27754a55092e0ae09d_7d5c87054840f975.json",
+      "sha256": "b8e002e713c31d59a82088ac62df83974d8b4644c6123d376ff73f03097236e2"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/98056629db1d9ec72d6fdb33a09de218ee062e074554c86807c207141208e152_7d5c87054840f975.json",
+      "sha256": "0f69ff7e3dafc769e0f52bc07cc6d0ad6efcf153de5b946b784366e874b6ef14"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/987354d8e6f479be650a22bd701c25a5d0dff179339ccaf704d5653ac2dc3f63_7d5c87054840f975.json",
+      "sha256": "e5657aa94f8cc1e09a7a72b1fbf6bb1ff812f29844d71db74db1956d4b6bd94a"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/987354d8e6f479be650a22bd701c25a5d0dff179339ccaf704d5653ac2dc3f63_938013f60b1f879d.json",
+      "sha256": "40b89619ce7b60217fd6b927eb0727c0078893d1bee880f606fb88c4131df159"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/993d9e71cc827cc926654b248e5a65bcd44f8109aa62061a25083bc58ef65294_7d5c87054840f975.json",
+      "sha256": "dfddb578b0d4666db96b39531d0e93a8ef368fae1173579d2cd3c0e341d0b3f7"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/9ab261b354f77c1af4ff182b12fa77e23efcb42790efc47f3764c54c6dab6f8f_7d5c87054840f975.json",
+      "sha256": "ad38be959382a65639b22a0a4d2dcf040b035d1f147119a5622ce3e60efd0dd2"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/9b7387a15609f0dff1105c7c0026e3f8d4cf986c137cb3b398d4d3cf7451f890_7d5c87054840f975.json",
+      "sha256": "0db71198efd9efeaefb4722734fc0acb812ed92c61abbc7a3639e615214857e8"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/9c05c68252e62457160c95d13ba5ec415d51c8347c29e7f06c45981f48c8295f_7d5c87054840f975.json",
+      "sha256": "f60ef96c9d87c0c82d0f769b3c4ca76dca6a58b16dfd21a29ec9ce8e8e025714"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/9c05c68252e62457160c95d13ba5ec415d51c8347c29e7f06c45981f48c8295f_938013f60b1f879d.json",
+      "sha256": "f3c757d8a7d426f9c02446516fb63aabffa8f3d6af627b9914ea44b95c664bfd"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/9c1d6efa07a41f4b9966876672ae2815e3f59afcb4a3cd1f605f3c83e5d1ce34_7d5c87054840f975.json",
+      "sha256": "9871f76d9e81beb298cace9374ad562574535b6f00476d888290a1bb6f522978"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/9d47473af1d6e69af617ca221a00d5f66b6c01754c07b6f9883aa114dd2a8f82_7d5c87054840f975.json",
+      "sha256": "6ebda423f035aadb9f3840dc8f7149dd6f550fa6faef625e873bcb8cd8a43199"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/9fcda48a180fbcc21c67412e8910b58d6c08a7c79c7102f9eae2197ac55e5743_7d5c87054840f975.json",
+      "sha256": "45b3f07bca9af358a9c9ad49a6be83f28fd5d86953a6b96beeb1bd82d44647b7"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/a1d5242e1c44c49a527dc8c2305524c2c266b050000cd45a4e66f74f223a224d_7d5c87054840f975.json",
+      "sha256": "e052c11c5e40ad32f023000abd57c4524aaebb86099c06f44f3ffd9dc46103b5"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/a41dffd57e47aed5f8e8dbe1c149cbf777b0ac00d530bd791f3915ef90edca70_7d5c87054840f975.json",
+      "sha256": "7cd8b1d2bf6e0d7183c22c2fe7c2b9290fe4d782ccbe4ff6c399ad509986efe9"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/a44eeaba58e62db817e0b075a75033413cc0f53dbf8979345007cba75d6cd983_7d5c87054840f975.json",
+      "sha256": "25f9e933bf1e342a3ab290715f384d038ed6094a3cffcc7c4556e8cf51ba0fff"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/a44eeaba58e62db817e0b075a75033413cc0f53dbf8979345007cba75d6cd983_938013f60b1f879d.json",
+      "sha256": "0be04103ba4026fb6abd3ae4552e32f5349c43c5ae347b99058be31f22ca1107"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/a465f1e2cadcc1110ce2a64713129c6aeb91d547a92b0bf7667e619395b90092_7d5c87054840f975.json",
+      "sha256": "4ac5a4d8b52b557794b448e47fe7ed3965bee9e43dd458ddae83de77573c39e1"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/a47f09a0544dfe5b62a9c317161774de0b0402152436703ebf31d2920b85adf5_7d5c87054840f975.json",
+      "sha256": "e6888f89dcf539ba5c189df4be1bc6e6393f2411160503ca18133b684d3ecdfb"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/a5290608f6a694d5d840981e90b34746b327cf44c12b64df5b584a59b319c44a_7d5c87054840f975.json",
+      "sha256": "436b6ec036ca470dc6d753790514a8b537beb2dd7206f1d3b84169b5d02f7a3f"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/a5312eb4248f324adfc3132ebe4cb4822782651fc42296acfa3167334ff23e9d_7d5c87054840f975.json",
+      "sha256": "564edf430454c1579beb7a977e2f2df2addf6e465a49dd1d5ef64c58af9a7cf8"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/a86113f5bdfe7e8c41a5992791d2b4e5c59ab7aa25673588c4e2ff325d0cc6c3_7d5c87054840f975.json",
+      "sha256": "877d2f1378b82fd6ac423701d65d74b4fb59451d8a50b6c4e5b9ec484b09dddb"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/a95e7e2390dd29d50e49a7a524b3e7f05218da99fd76e471180afab0a4530e97_7d5c87054840f975.json",
+      "sha256": "bebb5d8c14080b4dce695cec2ae885e040df1872e7997b16965501a64c20d084"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/a974798c719ce8e230da83cccc8fb66808c1f4b76a3ce674be247f165b0cc832_7d5c87054840f975.json",
+      "sha256": "5b9cfc57f3f5c24cd242e4d1f73fd0a7d9d33450c9df9a9b68e3f93417fcf930"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/ad10e9dd1893ce94671bd7d8257dc9d176f83ba3d28c3334014bf5d1ff022b6d_7d5c87054840f975.json",
+      "sha256": "bc7cfd95ca4e193c67cd99a518b561f95fb38f05fecd197747629fd808f73f46"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/ade3be3726310475c2a2d255b86bcd1a1fccdbb5d8c5dc74f1260ba87a8625cd_7d5c87054840f975.json",
+      "sha256": "4c39db61bccbaadd6dd00173f2369358579d455140fd3af30b3381f5b65dcc62"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/ae9204d073c93b9edd10a985bfc729adca735866819b55ab68ae703e30724cde_7d5c87054840f975.json",
+      "sha256": "39a276bac2998b5d8b45e871aba38b4e85052c8f309d894ffe85ae440d8958e3"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/aeb042bde872e0becba63748713cd4cfc1e7d7465c6d4f0aa0b670b2a496c8f5_7d5c87054840f975.json",
+      "sha256": "12a85ba40f4b368b73f4326f57721de27a8646a18ea8a3ede5084fdedc0d562a"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/aecc9022a42f8caf75b5e4916f169278e7cb441d28e0c3e337c790b01a1b0dd9_7d5c87054840f975.json",
+      "sha256": "5a02a7a87ce7afa30cba1f55afd194a317ccfa7c570a59eff0b7dcca7febbd1d"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/affcda0e31963b3625fd2163707bfdf30af3e798cebc533e2679a2049bf18b2e_7d5c87054840f975.json",
+      "sha256": "17bc747f3f1249bfe92716fb350184d63d0a0bcbf68e13c4246417d1cfb5a2e4"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/b1131dabe79fb47fe561bed2ef69b4b0849038085696dc5c5b2f4dc6749940fa_7d5c87054840f975.json",
+      "sha256": "1e773af9bc0710fe9531ee671e9913e748859f3ed8b180f21be9fe10e2cd34bc"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/b1378f8de0d5b41527541fe13124c1603f953de59b5a1051e97f21d2465bf8d0_7d5c87054840f975.json",
+      "sha256": "5d244a69066363c976b91389d70ad2d28140c94942bfaee92039471fa0f7e1fd"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/b1378f8de0d5b41527541fe13124c1603f953de59b5a1051e97f21d2465bf8d0_938013f60b1f879d.json",
+      "sha256": "efe0380b31c11e17b44ec68733b6d8a86427a10bf1e6fcc536ff32443ee65c4a"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/b159bdc812b5223861f811b9ee3d7cde1ea919bdabc5c2b3397fb730ba9b65a7_7d5c87054840f975.json",
+      "sha256": "8d76c5e859f3f7e915be49141bdd5919996f47b3e17016ae76375765ee651211"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/b159bdc812b5223861f811b9ee3d7cde1ea919bdabc5c2b3397fb730ba9b65a7_938013f60b1f879d.json",
+      "sha256": "0479cc12c1ba8c45ff1c5c3d0bc3c18de26bef449d3809e6f4294fa1dca09110"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/b245f1f7ddab6a50ebeffe463ba0e8c979abd2a3f5fb53ee6c30843b8ac5025d_7d5c87054840f975.json",
+      "sha256": "366d778de9345e055bdfe262e89b7bd18ffaf29bfdabae5aa66a7e3dde401d5b"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/b3afe5a51e46294fa48d324a64aac2b88ac7998e67fea29d961ef133ba358597_7d5c87054840f975.json",
+      "sha256": "b7187611a06a1154fb4d4f1b974538a44904d4f836c6ae80555966f9ca06c2f8"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/b3afe5a51e46294fa48d324a64aac2b88ac7998e67fea29d961ef133ba358597_938013f60b1f879d.json",
+      "sha256": "5eaffd02b158e30c835b1d32ed400b79ee1d1c2847cf6a30783b985eb19bf0dd"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/b5aa8453c1dd37ab9169f78482ee551f40b2dd0f99800a50c1fec35c533e0285_7d5c87054840f975.json",
+      "sha256": "97a1d84b0bcb9ec056b83cb173a73d764b56c83f6316f86697ba8531a94bfc9a"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/b6862b229a65456fe9123d6d646a7c6ff4b2431a4ce9f6a9dbba2f6fcffe87b3_7d5c87054840f975.json",
+      "sha256": "f5f1d1eb4cd4d828667b40139396eb094867e453f1d16014b9d1523dd4fe5a76"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/b77c1500442d0cfc333214f53ffbc41d9259041633d8ba9a3b3341170dc7dd78_7d5c87054840f975.json",
+      "sha256": "509e027fd8459930c36b895fae5bdbb4559d906fdd2f1a038587b13be2ba1e6a"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/b77c1500442d0cfc333214f53ffbc41d9259041633d8ba9a3b3341170dc7dd78_938013f60b1f879d.json",
+      "sha256": "9665b858d001eb7d1e4999dcd79d7749b04d3eee3dab42d1414e20427f27c3c8"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/b8161abb911df0eab79790668a537a83537a497ba5b190bd1853a179f5437f38_7d5c87054840f975.json",
+      "sha256": "f92381ce1909de9c61b8cfe6b7e9429551507a423b6f71472305b3a9ae5eac27"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/b82d30c5da3ca13877b4dcfc8d11a99ce87ac01fe8c6ad6374d48e0bb3eaa710_7d5c87054840f975.json",
+      "sha256": "e68b98ea4541edc05dc73108a6707f04529779cc456365b2cfd229e144acdc94"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/b8e353db3e14264448544f25fac0cd94caf76bf620c58f68df33744d6f76c552_7d5c87054840f975.json",
+      "sha256": "be306597bcd438d84fa6008883811018bced29fdbe28df1441997533de27323e"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/b98c6eb1384e5545d9bce47c5ff75c2cf6a50cb9646a5ab52c6258f46c4cbb2b_7d5c87054840f975.json",
+      "sha256": "0a0ba068eaa805f386ddffcd5a26a4d4426dc56fbd3e08ee6a3e60964ba35a6a"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/ba064c92c7859a4a974adf11746addf673e211988657a82e417468a7444e5786_7d5c87054840f975.json",
+      "sha256": "cd8276441427671746df5dce117676031e422fd3b1c48876f8d31977e55a0bcc"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/bac204b238372f623f81c01528f30ae7b760f473bac97d837ee114f2552198ed_7d5c87054840f975.json",
+      "sha256": "81dc07573b9fcc9c3283191bb670d10a1f420cb9eaf0fd87a100951036cd7d98"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/bc76516440ad2a2fc6c286459b5dfccdcec43cc4a6975f3c071d50de1a1f9703_7d5c87054840f975.json",
+      "sha256": "b1829ed7ac28eec8dc860a805f75b24ff831a8c10114c25efef1b9683dd95e7b"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/bc76516440ad2a2fc6c286459b5dfccdcec43cc4a6975f3c071d50de1a1f9703_938013f60b1f879d.json",
+      "sha256": "b39f3a10da4e4c8e8d879c393a1e97319b6d487236dc6fcc39165f6e83680923"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/be6da329fe3b0cb9cb82fa2572a0b8b533888fe141b938c717163160f2d64abf_7d5c87054840f975.json",
+      "sha256": "6181b5c1a7c1f517a36c0297654400ec589e25a3bdeb8ab6f144a0d15e751303"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/bf09960ca15cf3a5e584d95f03587444c774faf2ec4b7d802774496338a10bfd_7d5c87054840f975.json",
+      "sha256": "2716b288e17b780a1511ee7e7f22cc1cc14c896d8c12217f6732069f17249078"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/bf56f53a4f23ffe156266b15a2cf823780fdf9e846bb38062c4d4d5236bc34ab_7d5c87054840f975.json",
+      "sha256": "1e9a1d0585389286067eef27bc46e0dbeb3cd5886300581395b5949cf0522e8d"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/c06ccdb5b19523f1f9dcb3813d97e6b9a34f5a123cf6a633c12bf20aee9dbacb_7d5c87054840f975.json",
+      "sha256": "cc0081d20bc03421e748b8296e216c746e0697bc53e77f3e1dd44f44b4e62cee"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/c078a15513af1eeafb6af78426e4923fcba50331d329c0468b98298144327bfd_7d5c87054840f975.json",
+      "sha256": "540be090c0d7dc8d3d945226c06dba19db1686dbdf6e19cd4909438c956dff42"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/c078a15513af1eeafb6af78426e4923fcba50331d329c0468b98298144327bfd_938013f60b1f879d.json",
+      "sha256": "323645a73a84d46080ea128344c7d4cbfed21f336e3fc1b36a359f35e4954308"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/c1426ecf3437d1d6ca7678eb5c251f85ebe673b247f50ddeb591e40d4af5b804_7d5c87054840f975.json",
+      "sha256": "3d56c571086fd6470ff1e5648274cfe01b8afa218cfd4cca9a0a3c6881df7474"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/c1426ecf3437d1d6ca7678eb5c251f85ebe673b247f50ddeb591e40d4af5b804_938013f60b1f879d.json",
+      "sha256": "a1af0c20100fdeb6d7f36f43264723af1663fec0e0ac206c3f0025fec5227f46"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/c3dd219ef4dcf2b4a2479d034af3e69d04c38af164e156ab03add0c5ebffb6b8_7d5c87054840f975.json",
+      "sha256": "a5f96ef5568802b3c4a89e5c775a9e98274c8079b4406fe821d1806ffbdc8b0e"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/c3dd219ef4dcf2b4a2479d034af3e69d04c38af164e156ab03add0c5ebffb6b8_938013f60b1f879d.json",
+      "sha256": "21cd856ecc9af28bcbc12653fa42a3d5607ffaceccb326160396d1f12106eec3"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/c43b4e79232aba700f29dc90819763a67261617ddf5ba3a8e6fe8bb1970a48d6_7d5c87054840f975.json",
+      "sha256": "64aa42015a4c8a8b76b6d12d8e524b8dcf45868e8d20c4ae4bc80675a1a510ab"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/c4ce248d45d247330f082bf0a1495a0332cf95bbb9f0cd9455e23aea311a7442_7d5c87054840f975.json",
+      "sha256": "09f348d8483237742715b35c402af709cf54e53f6b80af267519ad4ad293b900"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/c5834075fc711c79244ad32963177d8ef7019e354dfdc701ecfd943ba93da3f3_7d5c87054840f975.json",
+      "sha256": "1e22d7a3923d05c4c1792d47264eac497a7345367e2427a1d31880d384179602"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/c5afe9ecc2d3fadf22c15c380835616eff81ac89a59a32c8a012371382af7394_7d5c87054840f975.json",
+      "sha256": "1faaa1d40a4809632e658a11f717a5b05d45b5931493c094dfe0e88efce1ed21"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/c5ec4231e7ded7334289afa6d2d52d6b9c2be2ccdd8ecf92fa1200961825dbb9_7d5c87054840f975.json",
+      "sha256": "392611951d9a5d7e39014717eb010f75cc593f43167c2e922a476cb16712a72a"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/c5ec4231e7ded7334289afa6d2d52d6b9c2be2ccdd8ecf92fa1200961825dbb9_938013f60b1f879d.json",
+      "sha256": "6781118859c9f06cba1139669633c891ebe72256d4234c047d83644324e0ee06"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/c7d15dde25b4bccfd70e7180a9da062aada185c3ca8b2592dbdedb8a810d5926_7d5c87054840f975.json",
+      "sha256": "c419109c62eb79a1381165bb4e4a7fed6a13fa45b191db5042e580e72f659f3e"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/c7d15dde25b4bccfd70e7180a9da062aada185c3ca8b2592dbdedb8a810d5926_938013f60b1f879d.json",
+      "sha256": "529883f9b5666559c11af802c98f915bdfbd39f75e40684c9128d72c925cc3ea"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/c835e3115f38407d547514fe71075a21b5e80271fae490b640f4665c1e810127_7d5c87054840f975.json",
+      "sha256": "bfc2c4a06ae0a054a282ffde8948eceeac37fe5a25ad3823c5bbf75c59830f55"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/c872c4349e7cc05bf2ad717d8cf5a4186628d9372b6eade8297613191c608080_7d5c87054840f975.json",
+      "sha256": "067b8431c9ec269631f26731aaf96cdd1b5bc014d8c1cfcfa019e4e4cba64b3e"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/c9b7acb2c544d38cc06166707be34f76c3ea631e1ab09f7f86a01ac1cc73f69a_7d5c87054840f975.json",
+      "sha256": "62df7f3d95a7e8be35ddb3b9caa2522f793f8767a86b86b8a6b987b1013b1407"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/ca64f9c0363c269368bf2ac37e82924910b5ed34c67530b8ee8f8fd63c642d57_7d5c87054840f975.json",
+      "sha256": "ff2521eb2a9b627ca3bb422ed08b3baeab1bde2f93340b8cc6e63c9f23a10326"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/cae93a1691c20bfb0a4dd4498bcf9d04a467a82fe3332ec72dcd39af1aabad12_7d5c87054840f975.json",
+      "sha256": "a7477f9e1a6af30e134f53c6fc0072b24f2ebd3c26033d5fed5bc672c7b37fd4"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/caf3929e7b1fac603ac1abda7951ad983d3b15339cb0bb073bf3e9356f493325_7d5c87054840f975.json",
+      "sha256": "f465846b570060614e6f5d12993cdfaa83f4f40fefdb24cdd4a04528db43e30f"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/cb497faa90e7f2e6aebe96d884f639eb31d7bbed943e37cb137438d44b8bd46b_7d5c87054840f975.json",
+      "sha256": "72230883ec5549a3750c498a8dcc39b210417f2328c7730a5f570c665dd21c7d"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/cd48057ecba4613da577bff15cbb098d9ae3f11edd796ace8156be9c2fb44638_7d5c87054840f975.json",
+      "sha256": "d9bd2bf12e86f9cc7049bc1c308eb6c7a03e00cc042441d01db8396be1ad92d4"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/cd48057ecba4613da577bff15cbb098d9ae3f11edd796ace8156be9c2fb44638_938013f60b1f879d.json",
+      "sha256": "03d35c782d823d0b9f62b16d6d08a191f661843d8cff80c4e95e11c5946f7e2a"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/cd5ad4666009ce97e1e21ca0a3d5bec895dcdd59cf0cd7c1f298535da5bc81d5_7d5c87054840f975.json",
+      "sha256": "c84ea4e6a6d8df34712ebdde562c07818b201d652c43119673f11e6a31c17001"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/cd76efc05207b35384a6600c9457bb63607fb4221a03236b796e39159af1b992_7d5c87054840f975.json",
+      "sha256": "27382aad02c1a14149ad4d1d20df7533282d3d2e15a81ac96e1116970ab311a5"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/ce1c32aa4216de4c2ddeade098628cbd477bf51826e1ab3f4093b1f99f4a7339_7d5c87054840f975.json",
+      "sha256": "bbc1b3ca8e393dc07b8aa578915697e3e8b4619a3a5b13b65fcb1171757a286d"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/ce1c32aa4216de4c2ddeade098628cbd477bf51826e1ab3f4093b1f99f4a7339_938013f60b1f879d.json",
+      "sha256": "e37d71bc0711ab79f1b1479cac24157b44e6a3ad10f10c96045fd3a2baa0aa50"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/cf2e3542c168c05f75e3e7380052959c76dd2470be0ef519d16aa442c53629d6_7d5c87054840f975.json",
+      "sha256": "6cb574327307611a5de5b17fa40e8ba15404e38fcd4ad2dcf9cc623d6810a690"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/cfb8f83bb217432c9dbedc5b238deea9ba1cb02cc85b1c4e560439135089fb2d_7d5c87054840f975.json",
+      "sha256": "9700464b9260f64cc35ea763230b718c08c88ed6ae0bbb1166a53b5d84ac48f3"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/d09fc1e2cf940e6c7ff8417fbb7f3488e55fcd024c43ef8f902548f0a34b10b3_7d5c87054840f975.json",
+      "sha256": "410c1115d3cf29acd5ba0c5d4a1cca2f90a80966ffef59d57da433f0b92ce356"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/d09fc1e2cf940e6c7ff8417fbb7f3488e55fcd024c43ef8f902548f0a34b10b3_938013f60b1f879d.json",
+      "sha256": "59c930c1de4aae2b61c9c0f42de3873b4d83fc9a39f19a216efe2b06e424f14f"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/d0dd48588444e4fd4eb76f5b2788ee17dd65da0593d76a4a647a7748af275b67_7d5c87054840f975.json",
+      "sha256": "480d20d933510edc69867a960df496e657c1e137bd8ef761f18974f53d4a7d0a"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/d1f5d22b8afaa593a50abd741c1ed370f4c0ba5b2413d2f90e2d8a57ac834c75_7d5c87054840f975.json",
+      "sha256": "f1da901eda5f1902e4708b3497d3691a2c84bc4a0473949c1149230c87141a2b"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/d4594576ca7cbb42cb89a9f7eca5d81ec86cdf752346121231163b7b402ab1bf_7d5c87054840f975.json",
+      "sha256": "7521374e341ae51622389d151645d625ad31c729e43e935cf70216cec48cc0ac"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/d4594576ca7cbb42cb89a9f7eca5d81ec86cdf752346121231163b7b402ab1bf_938013f60b1f879d.json",
+      "sha256": "96f484a28e6cc30eb645fbfb59f136c7d061c8635f2d91e8b13de59f7d615888"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/d7141fcb547be430792401b6731484d0c8209d63719f182ea9e39fa1bd186743_938013f60b1f879d.json",
+      "sha256": "24179291016a50610565600a7515814a185a0d3cdb66d45173e2af45b71b17e0"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/d7578fc8bc933bba8433633523681f386eb9974d62c9fae878010c6ecd375252_7d5c87054840f975.json",
+      "sha256": "a87aea367cdb48b7d97b1aab099019b31a73cc4de67452db1983921535174f32"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/d7578fc8bc933bba8433633523681f386eb9974d62c9fae878010c6ecd375252_938013f60b1f879d.json",
+      "sha256": "f6480ddf8d865a4b483c5e17063aba62991909ff0bd5ae92226661966d69a6d7"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/d9137ef6a63572ed475c8401d4a94f290a2adf5756a4d1c542189aa4ca5356e2_7d5c87054840f975.json",
+      "sha256": "23cce87ccd0cba49eaea4b04f7dfce338881665f11ab6d1008a1c485b9d89a2b"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/d93aab310496fe35547ad91db2174257933fe9e03b2833dab28026be7991f2b3_7d5c87054840f975.json",
+      "sha256": "ebcdf37b2184d0c260ebc61b063f342c1c7d3c832b7301ea2b43df3a3dc039bc"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/d95ed5430415e83552a65be8b3a27283733b84befbf10ba3cfa1417ced8155cd_7d5c87054840f975.json",
+      "sha256": "2da5626605331c488b693c0deb31aad3f1d9acc5317d14656b7f03f32f020c20"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/d95ed5430415e83552a65be8b3a27283733b84befbf10ba3cfa1417ced8155cd_938013f60b1f879d.json",
+      "sha256": "44701cdceccc48a818d52ffbd72a64cb0f4fcd512c002afe3682989ae1490d3d"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/da53d58ebbbada789504eb13e31ab2f43a5c80adde0f99ec5e501f4dc7bc6c83_7d5c87054840f975.json",
+      "sha256": "f27e7354164d15fc25b77d67fd0956627ea71a8d9cf9c677ef6cecb29afcaaf7"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/da53d58ebbbada789504eb13e31ab2f43a5c80adde0f99ec5e501f4dc7bc6c83_938013f60b1f879d.json",
+      "sha256": "89fe07e4c5ca48bffc7f0d0a1cb9bf6c938cfff5865a9b36006af176d50146ce"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/da8acf0b22ebf836456115ff13fa56ea4943ace01dcf25e4c34b338b87ec397c_7d5c87054840f975.json",
+      "sha256": "818fa8d1cc47314196b19a82beec1036f5b2201f0eb16d34af5f21a23ab77262"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/dce983a4c8c6a3d5f69d65d94e80d4a9fc4336985a3122e1287c4447b9828cbd_7d5c87054840f975.json",
+      "sha256": "5a656101ea1e76398b9e5dedf5fa7e84d0d7324dc74a8d6fa6cfdd38d5938212"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/e00cfd908b75dece166c2ecc0908043bf16ad9dfe991d79e66b08a5053d4ce92_7d5c87054840f975.json",
+      "sha256": "72bd20228595ec4c676b909ffc9771b14f0cd9b692b5ace3496b0d8d0f59f981"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/e0bcad63e2a60887de21fa40f5fdcd22a3884c4e4b00eada70b6b7d64d108d4a_7d5c87054840f975.json",
+      "sha256": "5a84138e53457ab3387a8913aaab4dba8fbe8bc7b0e0e87960e5645ad676922c"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/e178cb1580dfa9ced355b8f98e3e203e83ea1bc70655cefb225f07753db9669e_7d5c87054840f975.json",
+      "sha256": "94282de4b3a5edb69e7d2d72dba05f2949501dfdbc6789d87b3b907e8f3da818"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/e3559c4877036120855c7632aba1480806592d89cc29dd41a77f47a54ae8a647_7d5c87054840f975.json",
+      "sha256": "2336f4cb47aa33f3a658a92f5091064de7e16e3ef3ad572590626614e6130f42"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/e4df188d34f0812478af758bf432ba0a516385953e05245d3fbe6ea13ffc7850_7d5c87054840f975.json",
+      "sha256": "24f64bd610de0b82417c42ae59f3dd095ce916f8b05c251d215645d8a4f421d7"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/e4df188d34f0812478af758bf432ba0a516385953e05245d3fbe6ea13ffc7850_938013f60b1f879d.json",
+      "sha256": "e3b223c37f32e684423392dd096615223cb98413edce6aa17ce85bbcae36b63e"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/e8c6a077dacb50177df85c48072f94dd403fe2a6ebe3dfc9646b0e7e9b6acf8c_7d5c87054840f975.json",
+      "sha256": "afa45a02eb95a6de56c597b080a57088260391ae4b762e0c3ded1e4605179120"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/e8c6a077dacb50177df85c48072f94dd403fe2a6ebe3dfc9646b0e7e9b6acf8c_938013f60b1f879d.json",
+      "sha256": "d169c8cf811829e998055acff98b97f0db10872a3c0c5c7f434967bb4cc1ef2b"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/e9ed38b07d808ea321bba0789f5dca9e00a595ee6a97d74e10463a902700a198_938013f60b1f879d.json",
+      "sha256": "c97576a398afa8b7b0897f5831f5dd2a256b93dec3e20832ee663b1fa918f67c"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/ecf8083a400859f73bd5cbec346b45f784e6b386f08085f572304aa17401b214_7d5c87054840f975.json",
+      "sha256": "f61c3a72e414a9b6960ba8671146a92dd7d83b08afeb6459a3e63b05198ed22c"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/eeb527385c45a050cc229500d49348cc8c1120d83032ac3ad0b9e8ba427161b8_7d5c87054840f975.json",
+      "sha256": "52cbe1ff7d7bc4f8f5d4ef319ae5b2a6277b98b2248ac462ddc2d5dfdf606971"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/ef5541ba8eb3a87589284fc52d523c9a76b49a5dc76000f2bc2d1d39b60ff3c3_7d5c87054840f975.json",
+      "sha256": "b15885a680fe443dcb5f04567d751b8509b948bd27b7f285c3e606ce92f7a14f"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/eff15b2b1b6480e13228c2738258710c29c36ccfdd78b5e68c45f1420b0bbd59_7d5c87054840f975.json",
+      "sha256": "0e531e95957e5034c1a99aa65d10a72a23e0d1857e18f530cd1944498addf242"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/eff85e843b960c7e4e250e623b45a1143d942c4fcb6e97a0669a5b391913a355_7d5c87054840f975.json",
+      "sha256": "6bbc252acb50727ceb483656f313f5f9f308bc462c989a348e76badf19e40ffa"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/f0586ef6070b722ea715cae066f14e3e93d4d5c7f00be7c1770b6057555eecf6_7d5c87054840f975.json",
+      "sha256": "e38c54741d5ebc0e60938af95f3504f628174806affb0d66d697ca4a88da30a9"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/f090eeddde8cfd4ef8902cfa51f280190e9d76d01c7ca2dee274d5d200b52ada_7d5c87054840f975.json",
+      "sha256": "1ce829e9e395c916771647d3c39b77c384522ee962fffc44dc3f77f1df744c74"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/f198a6cf742e909e3cff1f7e156ba293ca003566f3791e74c519cb59105c5265_7d5c87054840f975.json",
+      "sha256": "65697a7a29b2bef68a94402a8d5248a2ac58532b8fa3903b25e414209f1922c2"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/f29b3b3c8dfe05ebb0ff9b0b75824498a1b838bab6033c5a13280df0679a7ede_7d5c87054840f975.json",
+      "sha256": "2bf9d0a9dcc2726aaa3b6fa41f1e4e22e8f85b1e8912c1d3b3c2fe7d5cb1a4c4"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/f327a7747ce85dbdb369c88441d38ed0cf57f342383f148978e8989c12431023_7d5c87054840f975.json",
+      "sha256": "be1dd410fa539c6d6d08f7a342c8658a9a5d2c9b006b92755b9cf34b9bf54593"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/f8b5998cf99e208a0792a3e6d2e1578e21a0093642e0358171c7e0de0cec99d8_7d5c87054840f975.json",
+      "sha256": "c525f3c0bc281be007499676788f97269c748549d356a32a549966141059a2fa"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/f94cbccfffcd51f0f923e8de6b5168fbc3af3dbcd1469e828118dc02e97d9ac6_7d5c87054840f975.json",
+      "sha256": "b01f248a08066fece29a5ea5c7ff0aa1445db4bf62e38ca3fb303d62248cff07"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/fa73e790b7a77be4b594970100aa502aebdab9833c6211f0826944b5dcc7fde5_7d5c87054840f975.json",
+      "sha256": "801c3a79d5bea8a8d07d8b9e0d43e587a37fa464e9b727f8cdb573e1a58f4ec6"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/fabd232542afbf82bc42a007d4e83db8ba28d3a457424a02e2bf0f24ddfda921_7d5c87054840f975.json",
+      "sha256": "c278ba578c26b45985d9a78729f197a69c1d11841f4ce63cdf955889ad3f7c52"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/fabd232542afbf82bc42a007d4e83db8ba28d3a457424a02e2bf0f24ddfda921_938013f60b1f879d.json",
+      "sha256": "d489a84980c48fb9d9853c81081fe9a87b25e332075a1749ceb10d40eb7fb1d0"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/fe128c4404eaf3f25c6b2acce6512bf150a1e51313c8848c05e0c76b7c092fdf_7d5c87054840f975.json",
+      "sha256": "a683bc1058088488c7c4d942c98f11b379278c7a6b048577d8a9b7b224368055"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/ff6b749efe94fce8671a17abde9778ade39ea7e0a1773f9a8b73948322f9379d_7d5c87054840f975.json",
+      "sha256": "55fcaefcda3cda8f439dfbc4fa997c45fafac847d3faa930cd96dbbf856ca641"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/ff8386cbf085e26792b3dabb341a881617943e0ba4c9c69215b0012b484892c0_7d5c87054840f975.json",
+      "sha256": "c52efd2257fa816d0d4d830f9b81c88c70a5b0a7b0bd08b3d98484574a790b83"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/ff8386cbf085e26792b3dabb341a881617943e0ba4c9c69215b0012b484892c0_938013f60b1f879d.json",
+      "sha256": "521836616d4d68e5cf9a84298080bd3b0fc1555ffd8fb2c5ac0d0e74825649bf"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/ff96423a3962ba427ab04b87d7a950f046411693c9c7d58c497d18cc43fa2a03_7d5c87054840f975.json",
+      "sha256": "1c547fef826adcabc91919450e536097b8f703f7af77dbfd09652c1c000201df"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/ffcf359347db5eff2e6314429aad4fa652cfba524dd9ee108fb1e15822480d27_7d5c87054840f975.json",
+      "sha256": "29d3e30b3840beca868ecbae699b49f7b5e8f0ca85bdff08b9a6524c6303a226"
+    },
+    {
+      "path": ".rumdl_cache/CACHEDIR.TAG",
+      "sha256": "679d7958b9e2b3969cd82020477f6d5d039d6bd271aeb731dd3769629b49eb06"
+    },
+    {
+      "path": ".rumdl_cache/workspace_index.bin",
+      "sha256": "bbe0b12064ca20bba61f9721c7f23c1370a647bcc577163a0cff93cff6c21cd0"
+    }
+  ],
+  "after": [
+    {
+      "path": ".rumdl_cache/.gitignore",
+      "sha256": "886326fd4fb542bf10a939d0701a10e84216f59a0d9b6865e7b52a2323685c51"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/005ce2030577e706809e80e9968dc5b51705d3c4dbc50916e5b29f4ad0caad92_7d5c87054840f975.json",
+      "sha256": "adb4c6e5ca77170f9efef37d73bae482b3785f3eaf15797669a7d151bc372daa"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/01359f42b776604d06a440750e1e115ee8770efd3a5539d4a3c18d31cb7202a9_7d5c87054840f975.json",
+      "sha256": "630d9154e8f4152d417e4f036b50724cdfc80c7e615ccd8b6225db29ebae21a9"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/029b1b4967a7462e43965731d9e75111d669f3956aef02b0d4f4de447a2faaa2_7d5c87054840f975.json",
+      "sha256": "e48832f23d144acd1b0c9453f429909de0fd33dc4f2dcda1f8da57811f03a580"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/0395b92f9d6927e22a013ab96c284414133dd91a733aae50072e1d458047f046_7d5c87054840f975.json",
+      "sha256": "6edd1b9c0257cc7491c08aa58c2a620686f8b4a1df8b8a8030b189b35b75e3ae"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/0395b92f9d6927e22a013ab96c284414133dd91a733aae50072e1d458047f046_938013f60b1f879d.json",
+      "sha256": "9d06d9e1b39891b779cfca127317cb5cbdbd779110b649dda4d56272b4347446"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/065df6628e33d066f6145eab8592fe03cb00313ea7eff10a95cfcc697d8dcaa8_7d5c87054840f975.json",
+      "sha256": "359a8b9cd921de75307d76f1470eaa1837138001d94a4eacfe2814b44fcdb4a7"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/06cdc1313adfe4c3cf4006b654c4846e83a8ef0e3094f4942b0c49f248ae67b6_7d5c87054840f975.json",
+      "sha256": "dfd911eb461b1c87618225ebadffed5335bb5d17620bd6ca0d725f9e274d41ff"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/06e37789b2b88eef12fde93ad05af925da48ee7664e9d7ce188a5d605e9c4eb0_7d5c87054840f975.json",
+      "sha256": "7e14710d7f02de695b659a01cbbb83cd81917ea0c4e7ceb8e70d6d1e338a3332"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/096ce3829487a9e2879707fa4f1f3908552b009e09ce2c190bb8f18376255eaf_7d5c87054840f975.json",
+      "sha256": "bca291a4ad3f1630c1dadebf48c57dcaf56ccbb0fa76b981f105a783ca9c26ad"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/0b2576e6d39ea81aaf50247f63308340760ada6453cf92d4d04723668cd91a40_7d5c87054840f975.json",
+      "sha256": "df123f5f84ce1a468d005f09c974ac6421ce5940a1996014fc83342130af6bc6"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/0cf81a4889ef062e9ab000aef347de2c65f5a219922f659e893c31bcf810c1a7_7d5c87054840f975.json",
+      "sha256": "90d8de12600f67937518eb9034eb3a99e64086ca27d67403b5f2f230281eda66"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/0e9c5aa0131068372ab690f5a25a0b2c6e0499cda941586fbafdb07fc28d27c2_7d5c87054840f975.json",
+      "sha256": "b345e259b393fe2e0926e4d9e1c932dd64bdb66f70ffa8572626c523613be66b"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/0e9c5aa0131068372ab690f5a25a0b2c6e0499cda941586fbafdb07fc28d27c2_938013f60b1f879d.json",
+      "sha256": "b466ccde3661f29c9c2effdaa1c93fd13abf2919f8766b73440927977f1384f0"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/0edce4db5bdfdf509d67ad643723445321d33bc65dbf45eb507b95162cf018e3_7d5c87054840f975.json",
+      "sha256": "a8f58933a7bd364a2625c9b56a35ff8d8a0658ae5b652e8ca836376a30eb81bb"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/0f2d1b1d74269a475439f90aabbff5feeb030093841a25e43abfa736c099949f_7d5c87054840f975.json",
+      "sha256": "14bd0c0fb0bebc8d955a94f937a580c3732d4664192d13579e41852fa2774425"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/0f30b5dfc5e613ac0b2d06a88c0212c52d8682dac8f10cfd5a68e9f1855f0f5b_938013f60b1f879d.json",
+      "sha256": "5e6709c0fefc6940e8b191c34cff8b104eb59bfe3c1afa479255e3a2137504ba"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/1051c2ce6fdff7436ba4f41d326667cadccc950bafa625997f09d0ea8d09b020_7d5c87054840f975.json",
+      "sha256": "aabcc00d8c1591b8ac9e609b0992104448de3cfa23530b2ae083f8eace22d1a6"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/1051c2ce6fdff7436ba4f41d326667cadccc950bafa625997f09d0ea8d09b020_938013f60b1f879d.json",
+      "sha256": "d805fa2edc44741e1dbbebddb1e78ed258ce150f0a034573dcbb2bc9ff6567b0"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/1082da97b2c3da690b69c3de90c64b66a7d5a18ab6ca1c52ad8545216f389f60_7d5c87054840f975.json",
+      "sha256": "6628ba8a9674c6439bfafc12f545b6b16b089ca0b5d2b3baba6b2cf98ab84db2"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/10bf6b989d646a374bd5b59c33dd21ec0d0d0a80c836fc77d8a824c6bb8122ae_7d5c87054840f975.json",
+      "sha256": "467ff0da3c04b068c76224324c1819c33e86049c4676aa3b1fb5181d0aff96d9"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/11f4b23ece29bfae301615cf8f502a8216936d7ab8b4c25f679019d419eede36_7d5c87054840f975.json",
+      "sha256": "c446156825fa96e84db8442c462ed76c1a1bb241f0ef7005c551c18f91dddd54"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/137e122723a05869cf373b1ba5ebd39d65a91b5ebda39db3561825ff031e385c_7d5c87054840f975.json",
+      "sha256": "ac9b37949d03853aea346514720d1dd824f274c4bde240ab28a9ded03c480623"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/137e122723a05869cf373b1ba5ebd39d65a91b5ebda39db3561825ff031e385c_938013f60b1f879d.json",
+      "sha256": "609001524b2ae7f1255bf8ac8d485aeeda7de61422aa892ef4d90139c0c551ba"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/1441dcff7b09971cc10482c72a7ea1a83a0a1c1f0497d36c15d78cba1086c3d1_7d5c87054840f975.json",
+      "sha256": "0b0a7c0c5f3beeb0d7e2aafd66e9706f3c6a3c5a1cc09e3530aa3dc15a079796"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/149043d700a26e12ce82273094b018eb71c4fae1e094507364c091cba34c919f_7d5c87054840f975.json",
+      "sha256": "84f9749dc2c535a29e3a22949e5fae1e4597ebd263f922a96d7142e4f3e8a53f"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/149043d700a26e12ce82273094b018eb71c4fae1e094507364c091cba34c919f_938013f60b1f879d.json",
+      "sha256": "d1e3cec84be5918ad3a57ffd9644d9f9d04443893d036169b0be8e8d4bf21052"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/170c79e974412590b03da652ec8d9cc3919273e2829bd476fae6c31ac130dc25_7d5c87054840f975.json",
+      "sha256": "9b349f066e8f60259141c85e98226b3441d2f9b6eb41773ca15406d6c05f7683"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/1719c78bcb33fb82a69f637a3942cbe45316bace1f2d766e910b538fdc2a72ce_7d5c87054840f975.json",
+      "sha256": "3cecaf5d6f2c16bc0084cb71fc7dec37a68f4c8721c6a416faa9d39f8d67017c"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/1719c78bcb33fb82a69f637a3942cbe45316bace1f2d766e910b538fdc2a72ce_938013f60b1f879d.json",
+      "sha256": "20904f322611b7349fbee0adc63de1d8c43b578a86abb49a3ae67b6f47ffd317"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/1762f4915a85841deb3a7f239fe349b2624b23e4a9b5968d65ba26ff3c9e88bd_7d5c87054840f975.json",
+      "sha256": "8ae7dd5c07f638597282ad09b953c24c310fcf6e15fbab839ec27cdf3c42bbf3"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/179ec856df36a4f2ca5c98069cf65cfb20ba62891b709bad96f59799ecac89ae_7d5c87054840f975.json",
+      "sha256": "8577e9d2e9ae049e43ed705c034dfacb1d1e45e1c6b7a4fd4b85df479a263114"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/183d59f6df0904a3219edd5a1d9552840b781bf2ae86d16d90d60984dd5a92f0_7d5c87054840f975.json",
+      "sha256": "3e2d5a79f8513a4025c2b808d066f685ce56152ff053ceb54909f5612590152e"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/183d59f6df0904a3219edd5a1d9552840b781bf2ae86d16d90d60984dd5a92f0_938013f60b1f879d.json",
+      "sha256": "d8ab64d122471a387cb810cf6bc504b55cd59f1fe2cf8ffc03638337a5cf7a46"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/19026f28dc94188535ba3bd0ddb48dc2fd41adc17a219ab44da65e8596cd59c3_7d5c87054840f975.json",
+      "sha256": "e0dc9654f761856595f4f5db76b4c2774ac68105514c6e39dfe256f8a757ad0f"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/19026f28dc94188535ba3bd0ddb48dc2fd41adc17a219ab44da65e8596cd59c3_938013f60b1f879d.json",
+      "sha256": "58672d532e2a1fa85ef0d96b2e2dd4574d0d14577ac4219b9bff3a12c81fa472"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/1a12f783afd3ee6f445115f9b4285daa66fe3401a826a388b20124093504449d_7d5c87054840f975.json",
+      "sha256": "b6250061ce0ef995f783556eecb90a58d43c759be85a69590ccd5586e0e9f455"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/1ae2d25132df61ca6a3a07f7e63bed607f892c7c31e9a1f67d4f947efd93d14d_7d5c87054840f975.json",
+      "sha256": "e9380f69c39b711b0bb3c10958e11a1c57347d4f369cd23b85b1c870f8abdd55"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/1ba46e48fe9c8b7d5a4b407d9cf5304d47ef9bc8ded2e2a61ec067df72b385ba_7d5c87054840f975.json",
+      "sha256": "263fa68d6b8d25aa91ce3bd3633c30a169619eaa081f4df4219eb9ae36224f4e"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/1ba6b7fa16258de88c68d3b392395482906308212cb0c09d3bd2eafae492b90b_7d5c87054840f975.json",
+      "sha256": "9308a0ec8c7ff40daa8908a000bde9e69c16bacaffc801b34466a2e5f6a74db1"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/1ba6b7fa16258de88c68d3b392395482906308212cb0c09d3bd2eafae492b90b_938013f60b1f879d.json",
+      "sha256": "897575ccfee3fbbcb6276fe58ee956ce9b28496e6312d8a4978f5dd25d714faf"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/1bcc9d3464b8f3e5e6d897742609a48fc2fa1d56fddf0194b1f3a2ddee897858_7d5c87054840f975.json",
+      "sha256": "e872ae6fd9d5bd9e7b4a7f932a85a060c9c6e7bb45cbfecf8fd6a34684ef4cb0"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/1c291981e513a70f5e2137866b8191edff393db94c1ca618978750d7fe8c3001_7d5c87054840f975.json",
+      "sha256": "b7687ec29f78115489e7df0eecd3521683d87854968ea7b9cccd952d2a793885"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/1c4d0ef03d7ac6dbbdcd6890b42a4cf4880ccd2e8a949e01fa83aa9c5505544e_938013f60b1f879d.json",
+      "sha256": "a6aca1260da184c4af4e9c520123fe6a544586594a54dd1ef572709ea9e1e05f"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/1e39ab2610a5cf1d2df38aef82a807ae053d741316f1ad09f291af1a367ac800_7d5c87054840f975.json",
+      "sha256": "3ec9979e9e8880bed1bad9d11b66cb9e6c270cb7a165b373a272df27c3906056"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/1e39ab2610a5cf1d2df38aef82a807ae053d741316f1ad09f291af1a367ac800_938013f60b1f879d.json",
+      "sha256": "859643c740f94ae1fe91b12fe54e49d8ca83bc1e96d30d342dcece8cc18d30da"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/20c78e5e9cef3b6028ba56e36217286cc70fd7f8bab2385a29c026ee19e1439a_7d5c87054840f975.json",
+      "sha256": "a8769b44a436b7b02ce5803ba5cf243af15637f4e7d68512633340687ec03b45"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/22469ee27f1bba18d9c3854de60e7f9e61e6e31a2fcc2d80917a4c5033bd8ef5_7d5c87054840f975.json",
+      "sha256": "2d5a59ac3ec2f3efea20bbb644d793762fc4cc3f274154fc4f94ca8d1410c36d"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/22f4196fdaa76e0dd18a892add704b5c13ddb96998edd434845eb104f34e69bf_7d5c87054840f975.json",
+      "sha256": "3c8d608a3d557a1fd30fdaaaf08fc0ace8dc2899613d1c4f1349b225baf01fdb"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/22f4196fdaa76e0dd18a892add704b5c13ddb96998edd434845eb104f34e69bf_938013f60b1f879d.json",
+      "sha256": "860c2360b78e6ff42a9b70ac5c050a629fdd50d6b3fed2178fdebe76fd37228f"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/23a85568b694594a34af770bfeb97fb616f69e624a2726db96dbdd9cbff58fa2_7d5c87054840f975.json",
+      "sha256": "560edf0c10e6eeb4a5040bc2f4163e03407e0189130702716d900cca69dca0c4"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/23f6e453b5471ab897be52fc00520473b342ac870455b9ce4082f8a9c8626b03_7d5c87054840f975.json",
+      "sha256": "74b4bb01697b01381da410adf468589c74ed294c19ae67366e045f9a1f9b9aad"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/25f27a0989007cb898a20ae0de5b64dfd0d87998c7596fb3919780be294b72f4_938013f60b1f879d.json",
+      "sha256": "e2721f5f470def3fd0bb2be91f1262f9d43d50d2c1b981cff1ee02507e6dbc9f"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/27b2a6a79f7ca19b8fe5d917bc83e7be33813f1842fd30367cefe9d4376681d1_7d5c87054840f975.json",
+      "sha256": "2a4cef41d8113f439fbdfba99984ea4510d0f69e4291c6141a98c1d26b161831"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/280b85e4ebbbf60e8eee0914949ded4d88b07f7becbc6bbccd3abb064cd62f09_7d5c87054840f975.json",
+      "sha256": "e8b77bbf31b3287498575348e455597adff3e7e006fa0ba1bf0d25d5cb4641ca"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/28b34d801ba7ba5a7d20ebd567005f989546d432ad8f8e6dae48796307147584_7d5c87054840f975.json",
+      "sha256": "a03e1a49c94962cbd0b173dce43eced7594c0476abc30c55b1e674b2ad497e0d"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/28b34d801ba7ba5a7d20ebd567005f989546d432ad8f8e6dae48796307147584_938013f60b1f879d.json",
+      "sha256": "36760cfebfac597ef3da05d25eb5a729d88b8e54f499cdc9ff62f11cdf6becdd"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/28e787f5a4d3aba284f577736b1c7d0835312ffa5b4fb7d0fd5eb16a972424ba_7d5c87054840f975.json",
+      "sha256": "4a3f05c251986491618b75c297d93cc4c46c98b60ef4057fb821a4efba754c29"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/293f5dafc1faa91775799ca55db435b2a53ec3c47f25bba10504a24598355979_7d5c87054840f975.json",
+      "sha256": "0a4d1f18205fc07e44487bb9ed74f17015505a507a63d3f11d6e33d3dd25c28b"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/2c9193d60b9f6dee2b90dd8eafbb18eef43638d2271e6d93c51b7cfee99b78ea_7d5c87054840f975.json",
+      "sha256": "7224c3b4f7a2209370186b556752a3b258abf6f98e88d39f831b51b13e3ebbaa"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/2cb7c8204665067d1b180fdf98488069fe9127cdde889300fdd2b43e6bf99379_7d5c87054840f975.json",
+      "sha256": "3ab3b4ec393b1ec77d767b156699c3a2e78658c48470eb249338bfa8f885c540"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/2ccf1e17bc8360c82ac931f3d48c7151496763571291925574da7048e3f52b3c_7d5c87054840f975.json",
+      "sha256": "df16f4d6dc44c65825081321a23333c40cba19779b96da5b587d2e1cc24fb75f"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/2d3a46ab317e8a5a2f1e1610e4c5e65340c5886a5f7e1f57ffeb6d0fb4d6fc42_7d5c87054840f975.json",
+      "sha256": "3e3a5c7da967391dcc67d44fcd3a687203d6c09dec6a327c634cbd83673a4b9a"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/2e57186f70e121e75b89f2c01dadfdccacb55a14d0cdb6a6fd259d970e968261_7d5c87054840f975.json",
+      "sha256": "1a8c5fc554f2d53fa80cee2d1a8f7a4d43c8b6fb29245208bafb9e393c60c61c"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/2e57186f70e121e75b89f2c01dadfdccacb55a14d0cdb6a6fd259d970e968261_938013f60b1f879d.json",
+      "sha256": "74970fce9a5d186fd8d2f41f7861cc55f95180ff76c7e0f3bea9bc11d2031695"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/2f73d818634c3d34c74a1a2abcae89a47a5fe08ae6f4f9291fd5ced1275e0540_7d5c87054840f975.json",
+      "sha256": "baa4f529f5f664ba4466751f60a25af845d1316f302a0c0d63a5f6660a7b1f72"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/2f73d818634c3d34c74a1a2abcae89a47a5fe08ae6f4f9291fd5ced1275e0540_938013f60b1f879d.json",
+      "sha256": "d3a74971ca12067de085be1cce889f07b27d3903cfb2ea7eec727dca7ecec613"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/2faaa43d748526e4453e4505936c2b8ff3c6653edf5b2ac38fd4a207e5c38e1d_7d5c87054840f975.json",
+      "sha256": "76d8da74534654ce6bc4a7a14b4fd7ce42fc924d5f300c4f733e26bcea73d128"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/32321ca62c4f764edf34d9f1b862533ed2962323b8ba545be870ff45e8c0befe_7d5c87054840f975.json",
+      "sha256": "1abf8bcb150fa21f3124bc84a6256b6bad20bbc262c6783794e35a14f49e587f"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/324fa3fdbb3de90f948226cb0a5e2331a7d6318efa5f50524b4b17e8d9d09e4c_7d5c87054840f975.json",
+      "sha256": "8e1091b23d4e55633a4d4dd4c431e7d16ebf38449aa24e783d63ab5be414fae1"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/32cca8a6f3c96d9b331ef02140a8343da422bfe796eb45050a2392cc1d9543c9_7d5c87054840f975.json",
+      "sha256": "ea32b12aec921205f156899e1a70695a1f6fa522adc992760063221b319520d9"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/32cca8a6f3c96d9b331ef02140a8343da422bfe796eb45050a2392cc1d9543c9_938013f60b1f879d.json",
+      "sha256": "9115f3a9004e1de9a65af078fb0d1e8ff60887a2f2aa5cfcf347e0e13179c2a9"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/33b58863ea765c27447459d7aefcb70f218f1b17f61401ed03163ccd4afa4b86_7d5c87054840f975.json",
+      "sha256": "26708900990818314fd63218f00d64e785ce4139a7ea4fd7e3dd88eb90ec21ff"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/340288826bf05ec4335f41819727f5ad0b6997a4440c67cd0aca00de605a702d_7d5c87054840f975.json",
+      "sha256": "c9d1879c1a2601a2b88a503af35e808587ce7c9a8beabc0b79dede5fa6a12871"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/3584bd70e9effbd38d928eaf9f5fcd3d50957c96dd1a1b70ef58aa2e2f503f13_7d5c87054840f975.json",
+      "sha256": "5f8d3d33713e22353946c4a47446a46cd92cb4703885dbe518a0abf19f759f17"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/359dd5e2492555b091735ef5d9104c4d12ead11ed473383a21eda9e46655ad19_7d5c87054840f975.json",
+      "sha256": "56f014c2fb40d1485b5fe973734112c1515cb90d29c1fb64edabbc5d08db9d28"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/359dd5e2492555b091735ef5d9104c4d12ead11ed473383a21eda9e46655ad19_938013f60b1f879d.json",
+      "sha256": "148209a2ffeb1fd1fe8d8e7ff5ab31420b405a2c8014560d606fa19dc1831325"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/3868424e02e29b15f386debf8b2e66471a1aef92deafd03122cf3e809e7a0afc_7d5c87054840f975.json",
+      "sha256": "b6980a8f965c3e35ef040c4a7af0f3e4026b76ba41dc50b4c397e9ea13f78edd"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/38aac2615cc510b1219f3c04cf48c0028a1c7898a2d031ff43068ea61046b03c_7d5c87054840f975.json",
+      "sha256": "5876ca0a7f9cd33ad14217c1dd729afd596ba1e7ad50a9417d449c43d4683390"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/39739fa05744c4de8fa1c81c9ec3be84ed9622e37bf72c549279bf133cd8fd84_7d5c87054840f975.json",
+      "sha256": "459d1868dcd57badfa190ac269075c518ce3051f07619db7085a228ace309d9a"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/3a3e5e88bcdc95c221c8b602943560e4ad4a9bb8d921946eb15c6bfe140a892d_7d5c87054840f975.json",
+      "sha256": "0b1ac3289a2fc6308c01a5da5a6e17b7f9d225b45c1ca56eb602bfbcaea97d1e"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/3a3e5e88bcdc95c221c8b602943560e4ad4a9bb8d921946eb15c6bfe140a892d_938013f60b1f879d.json",
+      "sha256": "aa534e487cac193e0b3100ef6e46fc4949594490b90a1cdbbc8c2f4e0ec4b120"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/3a872acd7fb49d79a06663288276e9e3d65d37703d59a7be8cbec7adf49125db_7d5c87054840f975.json",
+      "sha256": "e87b4f2a19051cd3900828ad47a1355182113cf1e08d05e9b84b676f9f110db5"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/3b705f3c801e7ab0cede5d19987c60bc6265b483e6f874d5472748c005947248_7d5c87054840f975.json",
+      "sha256": "7b42eeae8c02df6a620b8496fa9364bbf3da8e40b829ba70df5463b46895dc46"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/3e31d4edd3449034658087539609b1995ede4f9565e3be403a599d25cd5b89a9_7d5c87054840f975.json",
+      "sha256": "e41c254a27f1f46d76394fae75144c944adbec269656e31921ad3ba6bd71798f"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/3eb3d093ace22d956f89121514999c74696f4c555cb8688397381e17a2d01f8b_7d5c87054840f975.json",
+      "sha256": "191590759530c2853338af7175977ceb233775f6ede21322f8215e24c26d9f0e"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/3f4ca3ee17f01f1c0524a252c4289fe01b8a6495f115da18724bbd5637e2463a_7d5c87054840f975.json",
+      "sha256": "e29a5b49f33c887c74c990035ba802d9663d9a572c5f6bf58daf4e058dedb651"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/40518238ce4bbb66dd3199e9ea78b9fb5227d6069df07573facc8f30eb8a3993_7d5c87054840f975.json",
+      "sha256": "f83a2e1c9d00b16f245aa52c0308c66832d4576ed95f16450051a47712450968"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/405af8e03d27091baa6b1227158e22f9179cd5be4169bd367157726cf4ee422f_7d5c87054840f975.json",
+      "sha256": "e97fa1eafba11e94284ff1054151e652a2e7ef58a69d2a4a34d628b0a01070b8"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/40cc0ed87271a36d3c085dff41db02860e883b1a5cc5421269d94ca3ada0f38f_7d5c87054840f975.json",
+      "sha256": "bd8a5b61f64f2df4e74b93cf7fec819baffe2546fc07819df012efb58eeb2775"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/42a0a10a5c358e8cfe4040802e63b52d1b7462de9debec2f05382a64ec271cc9_7d5c87054840f975.json",
+      "sha256": "2897c258ee0e6bbee546e6fcd1205c98b3422c532c1e423b8d13b18dd65d10da"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/42a0a10a5c358e8cfe4040802e63b52d1b7462de9debec2f05382a64ec271cc9_938013f60b1f879d.json",
+      "sha256": "9c2584e2f346c9172e15732d4b8eb100008a5b38503ad1552ed3284dd04ae69e"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/433bbfb84e7b618df6e243b8f53dd449fb1e8865bb6764a8420b35b9ec59e7ef_7d5c87054840f975.json",
+      "sha256": "75a2d9512b93e8b842c1a23b5febb08565b6fc0b1cdd1aafb5dc2f260e8b97af"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/43ba353eab55ca95c1b6420f5f683c257185689d7a2feceb47da93f4c0339529_7d5c87054840f975.json",
+      "sha256": "e18ee6f509b36682a8b90cf1af7df0bba27275709c81865e100f01a6d737fb5d"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/44ae0e43370299febaef65bc3fa765ec5b1628ee2e19eb77d3ee16572f9a676b_7d5c87054840f975.json",
+      "sha256": "05a8b8cb20728a085f2565cc9e633d99a687d7b63830e7168d27bc488e1898c3"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/451ce18fba5f6d6b45d2f45cb9c8d7b61dee00b810fc4db72c5bc6b3c3dab982_7d5c87054840f975.json",
+      "sha256": "c426d6ae2232b7305085daa117f8d02e04314ce29db17fe836e370c03adcbcc1"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/46cba6dfaf5aa17a1559e2ff27108fd63a7c3533940a87de14b1ad838cb84683_7d5c87054840f975.json",
+      "sha256": "5e31208770f699cdaea4b55fbea3d331bf668fddd6f70bc6cfda7259123fa658"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/487eaffe9167a25a76ccda2b892f1bf8fbc8cce2dcf44a97829fa1058f1d8246_7d5c87054840f975.json",
+      "sha256": "006a98b347234a4e8ff3a3794fd0727350d4140f3cb35a084b4cce431fbe0186"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/487eaffe9167a25a76ccda2b892f1bf8fbc8cce2dcf44a97829fa1058f1d8246_938013f60b1f879d.json",
+      "sha256": "f2f6cc5add56c03be6d686f272460338bf305b75fa6d9a207b00d6837c4d1fa1"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/49dadcb1b214ca99301ddc57c7615a191900b571f7dc1f4a21a1b3360e88eb82_7d5c87054840f975.json",
+      "sha256": "27e6e4ac03df1f115fac49bcdf75cd090248542e3a35e6e3ff8b5b7b5ea284bd"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/4a2e9605a83774fd9197aa0ae3c756330da39bf1e17edf9670a555ac12d9cd83_7d5c87054840f975.json",
+      "sha256": "e004ae38b1946729c61d05eb1853d5f7e36b33196a976c204f1ad358e0a83934"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/4abd5699138542f559acfbc7bbc98fd7c57bf5336b24b60dd1933bea00d6dd54_7d5c87054840f975.json",
+      "sha256": "9ca7a748a580589a66fcba143645ff6b61a8d4026134e75cbfcb6cd088ac591f"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/4b76528da9b4a97a4962b02e153115ce66726c950ea3697260abd0c02fe16883_7d5c87054840f975.json",
+      "sha256": "c757f47bc8bb98b8e26ef67e1e16ab3456dc04fc09f9a274fe7a3684a547e8a3"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/4bc9ec210f7af2cda094868fc505df8cc48524a25d04b769afae7d15fd648973_7d5c87054840f975.json",
+      "sha256": "61a676bd29e559e5eb19010357f669fc7996b13663c2d15ac8525cb7f972ea5c"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/4c56bc39d144c982bbb52f19239db673fe3ea70e7d0397dab81549612413ceb6_7d5c87054840f975.json",
+      "sha256": "cfbdc35b1d1436169b74a0125778084c6ade07e58cc28b7e0492192672753a77"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/4c56bc39d144c982bbb52f19239db673fe3ea70e7d0397dab81549612413ceb6_938013f60b1f879d.json",
+      "sha256": "554217509a7ea219838de3e2b3c4e28a4fec6b6e540dc34fde3ee4e819fa519c"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/4cd8ef4142818530a2b35129cb935ad32df1136e5ccc8cc0cff25627729c05a5_7d5c87054840f975.json",
+      "sha256": "00187f8aa2d14c004b30e60d64bd652d3f102f4f138b337dace331b5186cc664"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/4f40051a8ca4db7a2879130cc6c4030831ff942cf156ed6b065eadd9c263245a_7d5c87054840f975.json",
+      "sha256": "e322ca3ac8b8cafc65c0f19c3f8417e7ea2891fb7391112c81eb93eb88b914ff"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/500e6446c93b042529a9a93f574d02d347353e514d5c47fec32c983c65079d3a_7d5c87054840f975.json",
+      "sha256": "1fd8caa588d0b1d04d4a917e4701ad0ca1ce865b786c01ddc5a72fae17e9c603"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/501e22d9d1f2c46b02c15c36a81735e022e977d198b5f94caf2cecfc968924cf_7d5c87054840f975.json",
+      "sha256": "2b8e315d0c56107c750b9ae5af75ebfb47544f2af18079af32d835a28cf405e9"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/50275feec0f8ac7d4d70332517ad9ecb5fad4f0d5e75c7402ae0798781beec1a_7d5c87054840f975.json",
+      "sha256": "1a0b2811e941ce58dd3be9a91347f8b41c4409138ce6b020e977670997d76ab0"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/513a8f975a94942267cae43e7f1b24026d250430db1f0210e4245a329e8dda54_7d5c87054840f975.json",
+      "sha256": "7055b4ca3f4f64076124992931ce0240575ada2edaad8d1d3e558e1abefa7ce0"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/52482692e02e9c5964a6296ccdfca39a105af412ec178b714a4610563362df7f_7d5c87054840f975.json",
+      "sha256": "825a0572df6a05547550eb2d5f75c78e9cecf5fa01dda604029ef8e3acbba469"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/53f023f12bc415fd8322a574138ee9714d959ee2ae91e8543c72007bd9f69a8a_7d5c87054840f975.json",
+      "sha256": "50bd1a02b1daf9965c20aa23a25d6f32f6d901461c705d9a3e729227031437b1"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/53f023f12bc415fd8322a574138ee9714d959ee2ae91e8543c72007bd9f69a8a_938013f60b1f879d.json",
+      "sha256": "b4b4cf9ba6d9edb3e7f9db960073ec73e32341ced5c3e3f1c1341e8ad3588342"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/544aba428d6861ef91e01379725de585008662e55668937143d231ed37609231_7d5c87054840f975.json",
+      "sha256": "5cb2b883e8657ab7c603827bd3a2b913a40369318747c22c194b5f0193c3088e"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/5457ba9eeae06034984aa3b93c73c76676c0abdc1a4045b92925c1d364bb447f_7d5c87054840f975.json",
+      "sha256": "ec9ab2b36c42b7b05eef4e50d8569cf64c4ad0322e795dd5276bbb5d2092f8af"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/55e61bc0f2155278b973125cc91ec4124575cd84573943ffa08d98b94ee6a985_938013f60b1f879d.json",
+      "sha256": "6bb2587fb5e10442f0aa7ec8caceeb05e61552d80e3952357cc96fe10e082605"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/562305d70508b08cd6743cc85841a4654e6a093a329727fe8c8daf8e0f846998_7d5c87054840f975.json",
+      "sha256": "d92a70815c5a72c7a837a7a4843522b04de69de23119f9cf4e85d2c4f2636406"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/562305d70508b08cd6743cc85841a4654e6a093a329727fe8c8daf8e0f846998_938013f60b1f879d.json",
+      "sha256": "6e0dcf109045beeaf0f372096073f50667d455a242f78f8d92b7eb81d07dc9e1"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/5694448a26e446a86e5088a0a9c641523ba5d0d138e6dbf24cf94dfbe162b5e0_7d5c87054840f975.json",
+      "sha256": "60f76d882f11efd858e8bc8101bad424a2f4964d812e7ad2646ccadff4934ee2"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/56977586de469607d2fe0672a2197a9fcd37d69905bbd8094491077f06d44072_7d5c87054840f975.json",
+      "sha256": "246886ac779bf607f8affe83fda10e4913e44b6b3c78b2b08f3751c5cfe6befc"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/57df860e305b19a42814a59b9c3f8b10dfdafd29f20de62821bc084fab368511_7d5c87054840f975.json",
+      "sha256": "ba185ae46bda60c1a624627bac0852634a4b7ea066da7b82e52172405b2bfe75"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/582d2f6fc34377280bfe9d4f91b6c84c0ae1113988dedcf5fec860a5a9f4bb00_7d5c87054840f975.json",
+      "sha256": "5d35b2116b50fe95ce38bb4ca0b8ad7140d1d846ee57fc83598133f49eb9b9b9"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/586cfaf95dd8c60f684b109a2026f884db690805575555f87f29049eea117130_7d5c87054840f975.json",
+      "sha256": "8b867998f80226e2dbc9f464a880e43aae8f8444ec32954625dfa277a0d51af6"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/599ef5c3e3f25868f95b34d2b20f6ce5298c5f99445d1996798da56e75a56238_7d5c87054840f975.json",
+      "sha256": "ff07690d523fefc9a1984c6c04d65cfb4e68a30ab4455b07e4f8d6e3238bc119"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/599ef5c3e3f25868f95b34d2b20f6ce5298c5f99445d1996798da56e75a56238_938013f60b1f879d.json",
+      "sha256": "fd8e28d401f4f7e19428594c5d2e3b9616d6bbdf34566e14f0040000605c6713"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/5a02dc568541d2a42f686c328676d604cfc76426f3ee00f4466b3fbb53b59645_7d5c87054840f975.json",
+      "sha256": "c2999e1d43f447a90507c40b5bd101b82949d5680c95c8860bf4c06d96a9ee6f"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/5a08c13c88af8a90e62f72e472344c289d6ac0f6f7fb5925ccdf858437da4e65_7d5c87054840f975.json",
+      "sha256": "5010efeed1314ccb213f21b7436652ca603b21b81f7ae084bf90df87574303b2"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/5b2b34bf2f5677b6b015ee7fe74e6f13bffee912061b74834bd59acf8862bc9f_7d5c87054840f975.json",
+      "sha256": "28f48e8f8b88ec4c089f08f66b405dda57a678bf29d097f7a536f2f0e948e576"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/5b2b34bf2f5677b6b015ee7fe74e6f13bffee912061b74834bd59acf8862bc9f_938013f60b1f879d.json",
+      "sha256": "9e0fb9eaf4075e1ffca4bc417a3c27744c2c990b4ff6e749d64e2ea9844f54bc"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/5ea26b8661b983d2ea1bce7b111a35afae44b75ecb2eb5757bec275efd956619_7d5c87054840f975.json",
+      "sha256": "959bcf230a7ca1d57934b7c5278eb466f2e4a53371c17cebbb3267f78ca6a23a"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/5eb31c70eda3d561ba6e2bf90ee525d174a493aed06ca081c3a25ece23ed1321_7d5c87054840f975.json",
+      "sha256": "61e72144adef6ec3446fa84a5b68ececa9c99c5348a4c490ead4fb112419e914"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/5fc51f8ad4ae12bf179cfe34b47313eb4b592504a65ff28dcbecb7184be215ba_7d5c87054840f975.json",
+      "sha256": "00feb8245911bd92f48b08987914a8964edb52c3ef46a64101f6ae8b61a6b287"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/5fdf7d994a1edf3810cc5e93739c952a6ebf01d294c1baf580e33a5d58c749fb_7d5c87054840f975.json",
+      "sha256": "bc4d12918d2ac0e1aa717427e261c77cb7b8581478b9ec92f5c961fe81200fd7"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/5fdf7d994a1edf3810cc5e93739c952a6ebf01d294c1baf580e33a5d58c749fb_938013f60b1f879d.json",
+      "sha256": "4f90dc05e5407f6d27c9c9ee2f803d0ba8981de3a9a76e62ece784bb9366c714"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/603006a44ffdf7605b339cfaae3eff7f884535ae8898178db08a83f9c49c5d9f_7d5c87054840f975.json",
+      "sha256": "6821c6745facc858dcda831156c60bb345dff3da6157e0bbbd4d065194a5802f"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/603006a44ffdf7605b339cfaae3eff7f884535ae8898178db08a83f9c49c5d9f_938013f60b1f879d.json",
+      "sha256": "cffe34afeb46e3849d336a20f06eca38a973b895bb753dae8c0e3f240c31e3e6"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/606fcf6fa77a317e1dc63fcfeaa40852730b2512106adcdea2afb66489c3684e_7d5c87054840f975.json",
+      "sha256": "f093ebf3660469dcf8cddc155b741e9f3d0e55ad8d845f45af34ee817de53cfa"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/614dae9af586cf35079a4d94d89e2e4e15a732bda7fb886cdecddd10de681e28_7d5c87054840f975.json",
+      "sha256": "74f8121a31b4a4dfce6131664c693ffcb5cb2083e4f183d9859629e41cd3ad51"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/614dae9af586cf35079a4d94d89e2e4e15a732bda7fb886cdecddd10de681e28_938013f60b1f879d.json",
+      "sha256": "b45d2bf93b04a156eaf437749c12acc60d69422e0c14d2597fc351603d81aa4e"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/623b4ebb8d5ca5c7703e16791c5260d6cb637b43f8fddebeaa8e7ac684f13e6d_7d5c87054840f975.json",
+      "sha256": "4ccba1f699b7e6b6b22f979d9a3fdf6d5c5b8fcceb8e2bcc99eaf80c2c0c7062"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/6455f3b582c14f6db6d61c521bf578578c5181d25a3534486781dfb17ff5a806_7d5c87054840f975.json",
+      "sha256": "cdd8988ec9d83333a5a740516a08e56b32baaa27d713811eaedbdaf109d2469a"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/64d3ca2855bdbf17676a04af5c451fc521cfe5aac03dcad6faff75ce3222c56c_7d5c87054840f975.json",
+      "sha256": "7f10905e71528250794cd6f98a9c3b3acb7459f79fc6932d8a1c3124c86c8451"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/6538da2f4df413e1ec714bc7ff9d7fc51ae784415eb1777c347e4878ba6498ad_7d5c87054840f975.json",
+      "sha256": "e4fd6805e1542ea26bf68a8cbfca0a772647d2524dbcacc3463ac1fbc2653a7b"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/660a3d64c4e00c918e52d5756f7e5716206f7db4c4c4518b8d119e5ba76f7c46_7d5c87054840f975.json",
+      "sha256": "51dc481865530458c3379996c1c987d0149169dd1b8297feb78cd7cc8b308e97"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/669a22bfe658f72d6facd8d218603edd7d4d806bc7080bc093ade2b506020340_7d5c87054840f975.json",
+      "sha256": "51071637dc80d8a8b7bce967f84c9f6b00c367e7a7e8c52a07a484b9dd09529c"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/669a22bfe658f72d6facd8d218603edd7d4d806bc7080bc093ade2b506020340_938013f60b1f879d.json",
+      "sha256": "6e686766b28dfdc86b19046fc10acf49dceaf8faf4dde091603b30c2fa1f492b"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/66fabe02f50964dd6e71e6004c163cdf74fb9cb97909e3a8e14bd5e718f9552e_7d5c87054840f975.json",
+      "sha256": "62b88795b0d9849b99ac939797b74f671b8433628494d078f77e754ff374398b"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/6756c768028e80abeaef12f764c0f4a717f0c90c02e79eccf1c44d215150ca39_7d5c87054840f975.json",
+      "sha256": "97ce505503fce0086f8c4dde81b8b92b6aa19eae04d041f89ea52ff19cb19e89"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/6782ebf0021b3f7d6cf6f1545beacd441fc869441447e08406af7b3a6333050b_938013f60b1f879d.json",
+      "sha256": "ce72b4cced2df26503d3671d94d73e9fb4bab3ddf09098118909a276aa52e2ce"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/679426f09994da09469aea1efe02e8355b5f5deaa1b4ffea5b413ba51fec0dc4_7d5c87054840f975.json",
+      "sha256": "7531fa8c3b9d8c41592e70a2c0368a0b708e29149a2b120f5ebb3c82226dfdf5"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/67f01a9cd11ae50e1b15ab368fb3cd12c7967c70e9092c386f00269f0cc048ae_7d5c87054840f975.json",
+      "sha256": "fb1d8049f8862e3c99452beea321ebe8a7440e07ed923c6149f2c663bb36a20c"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/687803bb3e6ab60d2c015c26bb5a4fcbbcdda28500d872a66f64a00f9376bc69_7d5c87054840f975.json",
+      "sha256": "4c658fcc5e3b9499fc508b4cc6d9a219d03785d81479eb9589f7419aacf84f42"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/687c55d359e0386eae21fdce0e1e3c1fec3d2ae946bf41e221bb2f3d59b6927b_7d5c87054840f975.json",
+      "sha256": "23920d4227e72adba94dd702408dc153de7a7401d1a10053ffb815abd204deb0"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/6932f76f8b18fbf2a9238e484d4c867192e500d6d83ca4564869ac70c350e9df_7d5c87054840f975.json",
+      "sha256": "3577cab7825c75ee0afe938322ea65fa62e5d85c46258cc75d79561b9199c2ab"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/696c3d1eedfa101f9578fb64cfe10e99cebff7e6cee39d92cf958fed9d77e2e2_7d5c87054840f975.json",
+      "sha256": "4c29869c2680efaae04f78d30052923e6e6e4aa253c64d571169f7a93d14d863"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/69c90db5eaaa551afa7332498748911f83979076c38ca2c51869db21e30a94c7_7d5c87054840f975.json",
+      "sha256": "a3406851de43bb13058b976f90e4920b0eb34d548d05fbe570c56d37c20aec99"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/6a1edc55ab25e0e43fe430cc45ab3e42244acc2a4e74d9d49adae80fca39549c_7d5c87054840f975.json",
+      "sha256": "02f5a16d2b5e9e6a4677f4c769d687c006dab06cc90569251b1dffeab3f7de00"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/6b1fafaadc5b7c9a218f6e16014641662282f1db7c99147f41302efe95d32a76_7d5c87054840f975.json",
+      "sha256": "4c935f3f3ec9d74060f83383951e2339fe64540ea417fa894d3b5ca01567e29a"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/6d27dc1419075cd7cba93332e7183ccdb19881c3997e0a28ca904a5d63ed9a84_7d5c87054840f975.json",
+      "sha256": "31ffc87a55c7e1b01b9dc089553a8fec31d87424732aecd98300781fb90eae85"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/6dceea9fa81a8c96d981d23e73f5bb7101d34b30c8b47bab544eb056473536de_7d5c87054840f975.json",
+      "sha256": "df127598dc18c554e4e591c065902b2de9d08b6048266c948f57024be1171880"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/6dda08a82df780a35317ecf96d50313a23e17f38b5065a03029185b3c477c514_7d5c87054840f975.json",
+      "sha256": "eb164e26d181a8bf1f1eea1c31b48434ac8939d088d62f9f023103038ed4485c"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/6e9cc4b42a9b8cde82c1a5bb469bdf20416c9ad414231386929a9d69cfeb63ba_938013f60b1f879d.json",
+      "sha256": "bee1b6d30ce7904c397778a7c0db022d26e70509913f962db897d6da88baf2c9"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/7029e60a63434ad3cb637fce960cc712197a5bb90a6662de98d504c7f2bb3489_7d5c87054840f975.json",
+      "sha256": "e514b3d04b6b7cd0c436602aec01b9f876bdd51817102492732d9df7685345ae"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/7078a9efcdd6af6d0c0f3124ac1761ecef4656ec0cef4e823825c40ea064516c_7d5c87054840f975.json",
+      "sha256": "08fa7efe5a951fdbcfd00c21f1fd766f01a18a32603f901aae229878b264707c"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/72ad7449c320f29e2560f83c739a136f275628b01fec33338713504fd01eff42_7d5c87054840f975.json",
+      "sha256": "39430568fbce0f1c508b8a291a832a9827a2d658a9d0c6b686930b393fed1952"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/73a67d617c28688e3910f1010382bbcc924d968af93d1bf4da4f41443f8130b2_7d5c87054840f975.json",
+      "sha256": "f422c60836f76b53dbd021a882edebf854d4639cdc9455de172ffe3890ebb1f0"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/73a67d617c28688e3910f1010382bbcc924d968af93d1bf4da4f41443f8130b2_938013f60b1f879d.json",
+      "sha256": "bbfff0a4ef34674d7a6cb833667bdd1f89e6a7f5f30d8aeb29daa5cd6ff68d40"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/74a5725310e68cef95bb8d42afb625d81a2722ed0a08cda9d27bbfa283e54a56_7d5c87054840f975.json",
+      "sha256": "e155df63fd2477c81279431ec0e61b109cb86116891adf716f4d5a5bcbcd4595"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/74c50c8f21e2c062bc9898e5f613f620c324f510102a6472a9d930c8f6790aa7_7d5c87054840f975.json",
+      "sha256": "ef1d0b6e33b38e948bb30eb0ba7d39fa10e9da5a81a4dce280d34912d18af035"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/74c50c8f21e2c062bc9898e5f613f620c324f510102a6472a9d930c8f6790aa7_938013f60b1f879d.json",
+      "sha256": "e1118c31c8434db914e23d20594f68cf9c3c0ccff4145fd7b444a7be0d157d0c"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/75e8f0b7b2a12b8cc1b9d420cc89a35bad53362c06e8beea6ed52a19deef52a1_7d5c87054840f975.json",
+      "sha256": "9d2e87c22851e9647157e341a3404f926aa80fbc8a4cb7f83ee8f21bfc4da1ea"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/76a6a0a2972de2e9f9384260ac4e7544b6465d68d32b46f67ed80780feb14a50_7d5c87054840f975.json",
+      "sha256": "84cff320efe4552e275c7b39948bed7f04ff85aae328d079412abc503c86368e"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/770fde5a8aeffcc6fb54d177a34b77affa359188aa8b5bdc6b621dff9477c9ac_7d5c87054840f975.json",
+      "sha256": "f6ef252a6a1f0ae943fda289bb5f68b0250d714633cf87abef7406ee62e35133"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/7719fa7e6e01a68f95e086a42af010903e6014f586e2db42d3918d114f340311_7d5c87054840f975.json",
+      "sha256": "fe08c3754a7aff6666cff543324aedddc28602df97c43d169aed4e4ddf7d4991"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/7b960b6713e5f6690d3650d9c73e6146e6202e003ad3cbfcd45ec84f8b8dd5b4_7d5c87054840f975.json",
+      "sha256": "4e53040bace2a59f552846609bd83eb3df1fb91b7b9019500d95618db6992312"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/7c70930166f167717599e3738f55134f4fee47e9800a75a2acf5addce8c2018d_7d5c87054840f975.json",
+      "sha256": "583dd9367857c35b1dcf2cca866bd9445a5d99adff71379368f0798299843072"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/7d7b3af665187336affab0bea03a56ef0763de32e632b37baed98121421540fc_7d5c87054840f975.json",
+      "sha256": "9780e28311c0a28e29d1c5097e90bcaac552bb24b104b188655810e0fee5c083"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/7ed6b4adf0e1fa4ef2cfe309692e384f8d0e1b5b6fa7e5685a4ab46199920a7e_7d5c87054840f975.json",
+      "sha256": "521ba4bacd6ef432c124bb48e69cc5e6ce57ec19c8131aa905f8dccb68f9aa53"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/8043a2e5c4cdaf5be879a1ae905f0c47cd66ea5058ff06545b0f031434fcff96_7d5c87054840f975.json",
+      "sha256": "c966c4fb7ace9c4fcc3aff41fc3cb5d1629a69cd6c14bebf32f020bbf6cb726e"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/81bcdbb4a83f1bdcabe935f579d61a96bf453557b6c0e9f8628f615b9b399db3_7d5c87054840f975.json",
+      "sha256": "556de6f3e27a24c25e3fe30abf2463a12efc7771fbb1e10b4d449066019464aa"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/81df34ed99dcacfcf60ae1ffdbc3c2193c0845e5b4346da00ffa33d54b274d62_938013f60b1f879d.json",
+      "sha256": "b4284e8e3094dac452da16c9f5e52366870a1413f2dda848b210979fb8835a58"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/8201eaa3fbeaaae67201c885e6122a5d9576bdc9ff37c8c1826c2204e778181d_7d5c87054840f975.json",
+      "sha256": "ded1cfa49f453f42af24a20e3e5ece69beedd2649b4363effc9ac39b5d820d44"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/82381380ab81d72d3ea03f79a4e8edcfe8d292bfa2aa48f31fbc97f7c6515315_7d5c87054840f975.json",
+      "sha256": "8be10d82f7e8a1aa1530005e9bd88550ad39830676195c27d54d9358326b5be6"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/83442f2b891db2752ebbf8cc13891fd039c950dce2992cecba8080ea90dcc0f6_7d5c87054840f975.json",
+      "sha256": "1985bf08e8e7f1e33cd9c3069bfc665e7a8d4988dd1a6b7cdc6f7081250698dc"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/84834c81ae0565546e04898d0934cbf6a88e1c9b3ee62d06c4a30fc821611e0f_7d5c87054840f975.json",
+      "sha256": "a87c61f4d9a97bec2c24186da65467bd8f71c57467bf85077498c8e1e005f76b"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/85afc687b56a2fb5abb8360c848628e2c77a349957e75ae5abae6358846e1245_7d5c87054840f975.json",
+      "sha256": "9f34e8a12025b0b043261826fbbd1c513d8dbf4ae24bfd583619858d0d270a65"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/8652a909640300b7ef109328e3743e86ef441beaedaf1df13e478119f5eac123_7d5c87054840f975.json",
+      "sha256": "f8667ca25067d7a46e50bb4d4dc76b694ef41ccfda509337c3320416a6d1162f"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/8788ecd03f2ac5a1c2ef709edc21de0c55711f9b6565d0bd7756f5d603d8b25d_7d5c87054840f975.json",
+      "sha256": "37cf44961aec37cea77bc9555bb204e356dace84e8c3b08ec9a8bae0d3c648af"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/8788ecd03f2ac5a1c2ef709edc21de0c55711f9b6565d0bd7756f5d603d8b25d_938013f60b1f879d.json",
+      "sha256": "d87d1f6d9c837f113a760a5f609cecde5c0585af52f6c4694d822573e59c839c"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/893ab9fbc83e8f2b4dddfe9c79feac3663abb908bfd30f98e110a09f2ceb6ff7_7d5c87054840f975.json",
+      "sha256": "b56fe79ad9775796294d82f5bd757c48018acfb93c98608352a166ebf2968c65"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/8a24fa6b9b82f72f6d1002e962aae50b31b25fd465703693728e5cfcaf3c415b_7d5c87054840f975.json",
+      "sha256": "ebedbe8cbeb29f22a0ddbba2c98073910c35316988728846e608fb9ecf9f8e27"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/8a24fa6b9b82f72f6d1002e962aae50b31b25fd465703693728e5cfcaf3c415b_938013f60b1f879d.json",
+      "sha256": "c6088fb926ec5cc03a4c30f7361e2c5ef000dc3f47478130a87ffaa7e4caae7a"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/8a9c7f1b0cb8c54db4a0601bcd40e51e5e492c5bd027c3f55029355a1de5b397_7d5c87054840f975.json",
+      "sha256": "1f9a6263655b9525ef65e8286c0261dea5092f9118d76dc7fb881f35e27321b2"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/8a9c7f1b0cb8c54db4a0601bcd40e51e5e492c5bd027c3f55029355a1de5b397_938013f60b1f879d.json",
+      "sha256": "635dc554b9effa73d9e4ab11cc6848b2f0f59c1d8e41305efaf8fcc9efbda144"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/8c784d890a17a78326b652de2039781f317644d6f023ebec1d20a234f83a64ce_7d5c87054840f975.json",
+      "sha256": "7b8b34a45418ff128eeb5a253360af3d819a81f9be4c9affc51a9ba5530188ea"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/8cbb929b6fda03230fe4747a7e0eb7ebf6703726cd202c3115085a9bbe66c83e_7d5c87054840f975.json",
+      "sha256": "ef8a89d3cf678f9607fddc95c6e7ea4b22a2b6970375c4f3086ac2f4fea4493e"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/8e29827bb6b4e8fe8fb1ec38b5d1aab38506d3119fb231b0c4753cdd739f163a_7d5c87054840f975.json",
+      "sha256": "e90aa5feea55ecae3668458b541ebce6b61bde9b627a24fb644af29139cb27e8"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/9109111df3d042174324594cb46dc43a9b0f9c56ffd65a8dcd0027d3d9017b54_7d5c87054840f975.json",
+      "sha256": "6646568020fd95eab59d103df25ae8b848341ec7f38dfc838e08e0b78d6fa6ed"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/920a7ef98ed2d56dee3613159ec305724c9b84627fa6312e32029378f6b62072_7d5c87054840f975.json",
+      "sha256": "8e8ea0d5ecc3927d15f182ef34003fa46bd3798975e1a94f0267537ff4000210"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/9474d57c991a1573c2ae6a1b6005ade88faf5d8956774249beeb41cf2a7f1d11_7d5c87054840f975.json",
+      "sha256": "02a7d5eaf9df23b215a25634e3b417e6d54f98a0d56a76b8e108e43e334410ce"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/94d7dd2e7cee3e03dd067797c068e3e46f1fd704413f225dd8dd301d180291f4_7d5c87054840f975.json",
+      "sha256": "e56f942ab6bbe8447f3405f830f0b59bc121711eda2f5700cb9c8bd187c7b695"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/961e8bfec20439e1c4ecb35df26788b560ea1ad8fe910e27754a55092e0ae09d_7d5c87054840f975.json",
+      "sha256": "b8e002e713c31d59a82088ac62df83974d8b4644c6123d376ff73f03097236e2"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/98056629db1d9ec72d6fdb33a09de218ee062e074554c86807c207141208e152_7d5c87054840f975.json",
+      "sha256": "0f69ff7e3dafc769e0f52bc07cc6d0ad6efcf153de5b946b784366e874b6ef14"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/987354d8e6f479be650a22bd701c25a5d0dff179339ccaf704d5653ac2dc3f63_7d5c87054840f975.json",
+      "sha256": "e5657aa94f8cc1e09a7a72b1fbf6bb1ff812f29844d71db74db1956d4b6bd94a"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/987354d8e6f479be650a22bd701c25a5d0dff179339ccaf704d5653ac2dc3f63_938013f60b1f879d.json",
+      "sha256": "40b89619ce7b60217fd6b927eb0727c0078893d1bee880f606fb88c4131df159"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/993d9e71cc827cc926654b248e5a65bcd44f8109aa62061a25083bc58ef65294_7d5c87054840f975.json",
+      "sha256": "dfddb578b0d4666db96b39531d0e93a8ef368fae1173579d2cd3c0e341d0b3f7"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/9ab261b354f77c1af4ff182b12fa77e23efcb42790efc47f3764c54c6dab6f8f_7d5c87054840f975.json",
+      "sha256": "ad38be959382a65639b22a0a4d2dcf040b035d1f147119a5622ce3e60efd0dd2"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/9b7387a15609f0dff1105c7c0026e3f8d4cf986c137cb3b398d4d3cf7451f890_7d5c87054840f975.json",
+      "sha256": "0db71198efd9efeaefb4722734fc0acb812ed92c61abbc7a3639e615214857e8"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/9c05c68252e62457160c95d13ba5ec415d51c8347c29e7f06c45981f48c8295f_7d5c87054840f975.json",
+      "sha256": "f60ef96c9d87c0c82d0f769b3c4ca76dca6a58b16dfd21a29ec9ce8e8e025714"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/9c05c68252e62457160c95d13ba5ec415d51c8347c29e7f06c45981f48c8295f_938013f60b1f879d.json",
+      "sha256": "f3c757d8a7d426f9c02446516fb63aabffa8f3d6af627b9914ea44b95c664bfd"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/9c1d6efa07a41f4b9966876672ae2815e3f59afcb4a3cd1f605f3c83e5d1ce34_7d5c87054840f975.json",
+      "sha256": "9871f76d9e81beb298cace9374ad562574535b6f00476d888290a1bb6f522978"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/9d47473af1d6e69af617ca221a00d5f66b6c01754c07b6f9883aa114dd2a8f82_7d5c87054840f975.json",
+      "sha256": "6ebda423f035aadb9f3840dc8f7149dd6f550fa6faef625e873bcb8cd8a43199"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/9fcda48a180fbcc21c67412e8910b58d6c08a7c79c7102f9eae2197ac55e5743_7d5c87054840f975.json",
+      "sha256": "45b3f07bca9af358a9c9ad49a6be83f28fd5d86953a6b96beeb1bd82d44647b7"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/a1d5242e1c44c49a527dc8c2305524c2c266b050000cd45a4e66f74f223a224d_7d5c87054840f975.json",
+      "sha256": "e052c11c5e40ad32f023000abd57c4524aaebb86099c06f44f3ffd9dc46103b5"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/a41dffd57e47aed5f8e8dbe1c149cbf777b0ac00d530bd791f3915ef90edca70_7d5c87054840f975.json",
+      "sha256": "7cd8b1d2bf6e0d7183c22c2fe7c2b9290fe4d782ccbe4ff6c399ad509986efe9"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/a44eeaba58e62db817e0b075a75033413cc0f53dbf8979345007cba75d6cd983_7d5c87054840f975.json",
+      "sha256": "25f9e933bf1e342a3ab290715f384d038ed6094a3cffcc7c4556e8cf51ba0fff"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/a44eeaba58e62db817e0b075a75033413cc0f53dbf8979345007cba75d6cd983_938013f60b1f879d.json",
+      "sha256": "0be04103ba4026fb6abd3ae4552e32f5349c43c5ae347b99058be31f22ca1107"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/a465f1e2cadcc1110ce2a64713129c6aeb91d547a92b0bf7667e619395b90092_7d5c87054840f975.json",
+      "sha256": "4ac5a4d8b52b557794b448e47fe7ed3965bee9e43dd458ddae83de77573c39e1"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/a47f09a0544dfe5b62a9c317161774de0b0402152436703ebf31d2920b85adf5_7d5c87054840f975.json",
+      "sha256": "e6888f89dcf539ba5c189df4be1bc6e6393f2411160503ca18133b684d3ecdfb"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/a5290608f6a694d5d840981e90b34746b327cf44c12b64df5b584a59b319c44a_7d5c87054840f975.json",
+      "sha256": "436b6ec036ca470dc6d753790514a8b537beb2dd7206f1d3b84169b5d02f7a3f"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/a5312eb4248f324adfc3132ebe4cb4822782651fc42296acfa3167334ff23e9d_7d5c87054840f975.json",
+      "sha256": "564edf430454c1579beb7a977e2f2df2addf6e465a49dd1d5ef64c58af9a7cf8"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/a86113f5bdfe7e8c41a5992791d2b4e5c59ab7aa25673588c4e2ff325d0cc6c3_7d5c87054840f975.json",
+      "sha256": "877d2f1378b82fd6ac423701d65d74b4fb59451d8a50b6c4e5b9ec484b09dddb"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/a95e7e2390dd29d50e49a7a524b3e7f05218da99fd76e471180afab0a4530e97_7d5c87054840f975.json",
+      "sha256": "bebb5d8c14080b4dce695cec2ae885e040df1872e7997b16965501a64c20d084"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/a974798c719ce8e230da83cccc8fb66808c1f4b76a3ce674be247f165b0cc832_7d5c87054840f975.json",
+      "sha256": "5b9cfc57f3f5c24cd242e4d1f73fd0a7d9d33450c9df9a9b68e3f93417fcf930"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/ad10e9dd1893ce94671bd7d8257dc9d176f83ba3d28c3334014bf5d1ff022b6d_7d5c87054840f975.json",
+      "sha256": "bc7cfd95ca4e193c67cd99a518b561f95fb38f05fecd197747629fd808f73f46"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/ade3be3726310475c2a2d255b86bcd1a1fccdbb5d8c5dc74f1260ba87a8625cd_7d5c87054840f975.json",
+      "sha256": "4c39db61bccbaadd6dd00173f2369358579d455140fd3af30b3381f5b65dcc62"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/ae9204d073c93b9edd10a985bfc729adca735866819b55ab68ae703e30724cde_7d5c87054840f975.json",
+      "sha256": "39a276bac2998b5d8b45e871aba38b4e85052c8f309d894ffe85ae440d8958e3"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/aeb042bde872e0becba63748713cd4cfc1e7d7465c6d4f0aa0b670b2a496c8f5_7d5c87054840f975.json",
+      "sha256": "12a85ba40f4b368b73f4326f57721de27a8646a18ea8a3ede5084fdedc0d562a"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/aecc9022a42f8caf75b5e4916f169278e7cb441d28e0c3e337c790b01a1b0dd9_7d5c87054840f975.json",
+      "sha256": "5a02a7a87ce7afa30cba1f55afd194a317ccfa7c570a59eff0b7dcca7febbd1d"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/affcda0e31963b3625fd2163707bfdf30af3e798cebc533e2679a2049bf18b2e_7d5c87054840f975.json",
+      "sha256": "17bc747f3f1249bfe92716fb350184d63d0a0bcbf68e13c4246417d1cfb5a2e4"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/b1131dabe79fb47fe561bed2ef69b4b0849038085696dc5c5b2f4dc6749940fa_7d5c87054840f975.json",
+      "sha256": "1e773af9bc0710fe9531ee671e9913e748859f3ed8b180f21be9fe10e2cd34bc"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/b1378f8de0d5b41527541fe13124c1603f953de59b5a1051e97f21d2465bf8d0_7d5c87054840f975.json",
+      "sha256": "5d244a69066363c976b91389d70ad2d28140c94942bfaee92039471fa0f7e1fd"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/b1378f8de0d5b41527541fe13124c1603f953de59b5a1051e97f21d2465bf8d0_938013f60b1f879d.json",
+      "sha256": "efe0380b31c11e17b44ec68733b6d8a86427a10bf1e6fcc536ff32443ee65c4a"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/b159bdc812b5223861f811b9ee3d7cde1ea919bdabc5c2b3397fb730ba9b65a7_7d5c87054840f975.json",
+      "sha256": "8d76c5e859f3f7e915be49141bdd5919996f47b3e17016ae76375765ee651211"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/b159bdc812b5223861f811b9ee3d7cde1ea919bdabc5c2b3397fb730ba9b65a7_938013f60b1f879d.json",
+      "sha256": "0479cc12c1ba8c45ff1c5c3d0bc3c18de26bef449d3809e6f4294fa1dca09110"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/b245f1f7ddab6a50ebeffe463ba0e8c979abd2a3f5fb53ee6c30843b8ac5025d_7d5c87054840f975.json",
+      "sha256": "366d778de9345e055bdfe262e89b7bd18ffaf29bfdabae5aa66a7e3dde401d5b"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/b3afe5a51e46294fa48d324a64aac2b88ac7998e67fea29d961ef133ba358597_7d5c87054840f975.json",
+      "sha256": "b7187611a06a1154fb4d4f1b974538a44904d4f836c6ae80555966f9ca06c2f8"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/b3afe5a51e46294fa48d324a64aac2b88ac7998e67fea29d961ef133ba358597_938013f60b1f879d.json",
+      "sha256": "5eaffd02b158e30c835b1d32ed400b79ee1d1c2847cf6a30783b985eb19bf0dd"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/b5aa8453c1dd37ab9169f78482ee551f40b2dd0f99800a50c1fec35c533e0285_7d5c87054840f975.json",
+      "sha256": "97a1d84b0bcb9ec056b83cb173a73d764b56c83f6316f86697ba8531a94bfc9a"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/b6862b229a65456fe9123d6d646a7c6ff4b2431a4ce9f6a9dbba2f6fcffe87b3_7d5c87054840f975.json",
+      "sha256": "f5f1d1eb4cd4d828667b40139396eb094867e453f1d16014b9d1523dd4fe5a76"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/b77c1500442d0cfc333214f53ffbc41d9259041633d8ba9a3b3341170dc7dd78_7d5c87054840f975.json",
+      "sha256": "509e027fd8459930c36b895fae5bdbb4559d906fdd2f1a038587b13be2ba1e6a"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/b77c1500442d0cfc333214f53ffbc41d9259041633d8ba9a3b3341170dc7dd78_938013f60b1f879d.json",
+      "sha256": "9665b858d001eb7d1e4999dcd79d7749b04d3eee3dab42d1414e20427f27c3c8"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/b8161abb911df0eab79790668a537a83537a497ba5b190bd1853a179f5437f38_7d5c87054840f975.json",
+      "sha256": "f92381ce1909de9c61b8cfe6b7e9429551507a423b6f71472305b3a9ae5eac27"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/b82d30c5da3ca13877b4dcfc8d11a99ce87ac01fe8c6ad6374d48e0bb3eaa710_7d5c87054840f975.json",
+      "sha256": "e68b98ea4541edc05dc73108a6707f04529779cc456365b2cfd229e144acdc94"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/b8e353db3e14264448544f25fac0cd94caf76bf620c58f68df33744d6f76c552_7d5c87054840f975.json",
+      "sha256": "be306597bcd438d84fa6008883811018bced29fdbe28df1441997533de27323e"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/b98c6eb1384e5545d9bce47c5ff75c2cf6a50cb9646a5ab52c6258f46c4cbb2b_7d5c87054840f975.json",
+      "sha256": "0a0ba068eaa805f386ddffcd5a26a4d4426dc56fbd3e08ee6a3e60964ba35a6a"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/ba064c92c7859a4a974adf11746addf673e211988657a82e417468a7444e5786_7d5c87054840f975.json",
+      "sha256": "cd8276441427671746df5dce117676031e422fd3b1c48876f8d31977e55a0bcc"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/bac204b238372f623f81c01528f30ae7b760f473bac97d837ee114f2552198ed_7d5c87054840f975.json",
+      "sha256": "81dc07573b9fcc9c3283191bb670d10a1f420cb9eaf0fd87a100951036cd7d98"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/bc76516440ad2a2fc6c286459b5dfccdcec43cc4a6975f3c071d50de1a1f9703_7d5c87054840f975.json",
+      "sha256": "b1829ed7ac28eec8dc860a805f75b24ff831a8c10114c25efef1b9683dd95e7b"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/bc76516440ad2a2fc6c286459b5dfccdcec43cc4a6975f3c071d50de1a1f9703_938013f60b1f879d.json",
+      "sha256": "b39f3a10da4e4c8e8d879c393a1e97319b6d487236dc6fcc39165f6e83680923"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/be6da329fe3b0cb9cb82fa2572a0b8b533888fe141b938c717163160f2d64abf_7d5c87054840f975.json",
+      "sha256": "6181b5c1a7c1f517a36c0297654400ec589e25a3bdeb8ab6f144a0d15e751303"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/bf09960ca15cf3a5e584d95f03587444c774faf2ec4b7d802774496338a10bfd_7d5c87054840f975.json",
+      "sha256": "2716b288e17b780a1511ee7e7f22cc1cc14c896d8c12217f6732069f17249078"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/bf56f53a4f23ffe156266b15a2cf823780fdf9e846bb38062c4d4d5236bc34ab_7d5c87054840f975.json",
+      "sha256": "1e9a1d0585389286067eef27bc46e0dbeb3cd5886300581395b5949cf0522e8d"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/c06ccdb5b19523f1f9dcb3813d97e6b9a34f5a123cf6a633c12bf20aee9dbacb_7d5c87054840f975.json",
+      "sha256": "cc0081d20bc03421e748b8296e216c746e0697bc53e77f3e1dd44f44b4e62cee"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/c078a15513af1eeafb6af78426e4923fcba50331d329c0468b98298144327bfd_7d5c87054840f975.json",
+      "sha256": "540be090c0d7dc8d3d945226c06dba19db1686dbdf6e19cd4909438c956dff42"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/c078a15513af1eeafb6af78426e4923fcba50331d329c0468b98298144327bfd_938013f60b1f879d.json",
+      "sha256": "323645a73a84d46080ea128344c7d4cbfed21f336e3fc1b36a359f35e4954308"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/c1426ecf3437d1d6ca7678eb5c251f85ebe673b247f50ddeb591e40d4af5b804_7d5c87054840f975.json",
+      "sha256": "3d56c571086fd6470ff1e5648274cfe01b8afa218cfd4cca9a0a3c6881df7474"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/c1426ecf3437d1d6ca7678eb5c251f85ebe673b247f50ddeb591e40d4af5b804_938013f60b1f879d.json",
+      "sha256": "a1af0c20100fdeb6d7f36f43264723af1663fec0e0ac206c3f0025fec5227f46"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/c3dd219ef4dcf2b4a2479d034af3e69d04c38af164e156ab03add0c5ebffb6b8_7d5c87054840f975.json",
+      "sha256": "a5f96ef5568802b3c4a89e5c775a9e98274c8079b4406fe821d1806ffbdc8b0e"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/c3dd219ef4dcf2b4a2479d034af3e69d04c38af164e156ab03add0c5ebffb6b8_938013f60b1f879d.json",
+      "sha256": "21cd856ecc9af28bcbc12653fa42a3d5607ffaceccb326160396d1f12106eec3"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/c43b4e79232aba700f29dc90819763a67261617ddf5ba3a8e6fe8bb1970a48d6_7d5c87054840f975.json",
+      "sha256": "64aa42015a4c8a8b76b6d12d8e524b8dcf45868e8d20c4ae4bc80675a1a510ab"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/c4ce248d45d247330f082bf0a1495a0332cf95bbb9f0cd9455e23aea311a7442_7d5c87054840f975.json",
+      "sha256": "09f348d8483237742715b35c402af709cf54e53f6b80af267519ad4ad293b900"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/c5834075fc711c79244ad32963177d8ef7019e354dfdc701ecfd943ba93da3f3_7d5c87054840f975.json",
+      "sha256": "1e22d7a3923d05c4c1792d47264eac497a7345367e2427a1d31880d384179602"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/c5afe9ecc2d3fadf22c15c380835616eff81ac89a59a32c8a012371382af7394_7d5c87054840f975.json",
+      "sha256": "1faaa1d40a4809632e658a11f717a5b05d45b5931493c094dfe0e88efce1ed21"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/c5ec4231e7ded7334289afa6d2d52d6b9c2be2ccdd8ecf92fa1200961825dbb9_7d5c87054840f975.json",
+      "sha256": "392611951d9a5d7e39014717eb010f75cc593f43167c2e922a476cb16712a72a"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/c5ec4231e7ded7334289afa6d2d52d6b9c2be2ccdd8ecf92fa1200961825dbb9_938013f60b1f879d.json",
+      "sha256": "6781118859c9f06cba1139669633c891ebe72256d4234c047d83644324e0ee06"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/c7d15dde25b4bccfd70e7180a9da062aada185c3ca8b2592dbdedb8a810d5926_7d5c87054840f975.json",
+      "sha256": "c419109c62eb79a1381165bb4e4a7fed6a13fa45b191db5042e580e72f659f3e"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/c7d15dde25b4bccfd70e7180a9da062aada185c3ca8b2592dbdedb8a810d5926_938013f60b1f879d.json",
+      "sha256": "529883f9b5666559c11af802c98f915bdfbd39f75e40684c9128d72c925cc3ea"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/c835e3115f38407d547514fe71075a21b5e80271fae490b640f4665c1e810127_7d5c87054840f975.json",
+      "sha256": "bfc2c4a06ae0a054a282ffde8948eceeac37fe5a25ad3823c5bbf75c59830f55"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/c872c4349e7cc05bf2ad717d8cf5a4186628d9372b6eade8297613191c608080_7d5c87054840f975.json",
+      "sha256": "067b8431c9ec269631f26731aaf96cdd1b5bc014d8c1cfcfa019e4e4cba64b3e"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/c9b7acb2c544d38cc06166707be34f76c3ea631e1ab09f7f86a01ac1cc73f69a_7d5c87054840f975.json",
+      "sha256": "62df7f3d95a7e8be35ddb3b9caa2522f793f8767a86b86b8a6b987b1013b1407"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/ca64f9c0363c269368bf2ac37e82924910b5ed34c67530b8ee8f8fd63c642d57_7d5c87054840f975.json",
+      "sha256": "ff2521eb2a9b627ca3bb422ed08b3baeab1bde2f93340b8cc6e63c9f23a10326"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/cae93a1691c20bfb0a4dd4498bcf9d04a467a82fe3332ec72dcd39af1aabad12_7d5c87054840f975.json",
+      "sha256": "a7477f9e1a6af30e134f53c6fc0072b24f2ebd3c26033d5fed5bc672c7b37fd4"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/caf3929e7b1fac603ac1abda7951ad983d3b15339cb0bb073bf3e9356f493325_7d5c87054840f975.json",
+      "sha256": "f465846b570060614e6f5d12993cdfaa83f4f40fefdb24cdd4a04528db43e30f"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/cb497faa90e7f2e6aebe96d884f639eb31d7bbed943e37cb137438d44b8bd46b_7d5c87054840f975.json",
+      "sha256": "72230883ec5549a3750c498a8dcc39b210417f2328c7730a5f570c665dd21c7d"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/cd48057ecba4613da577bff15cbb098d9ae3f11edd796ace8156be9c2fb44638_7d5c87054840f975.json",
+      "sha256": "d9bd2bf12e86f9cc7049bc1c308eb6c7a03e00cc042441d01db8396be1ad92d4"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/cd48057ecba4613da577bff15cbb098d9ae3f11edd796ace8156be9c2fb44638_938013f60b1f879d.json",
+      "sha256": "03d35c782d823d0b9f62b16d6d08a191f661843d8cff80c4e95e11c5946f7e2a"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/cd5ad4666009ce97e1e21ca0a3d5bec895dcdd59cf0cd7c1f298535da5bc81d5_7d5c87054840f975.json",
+      "sha256": "c84ea4e6a6d8df34712ebdde562c07818b201d652c43119673f11e6a31c17001"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/cd76efc05207b35384a6600c9457bb63607fb4221a03236b796e39159af1b992_7d5c87054840f975.json",
+      "sha256": "27382aad02c1a14149ad4d1d20df7533282d3d2e15a81ac96e1116970ab311a5"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/ce1c32aa4216de4c2ddeade098628cbd477bf51826e1ab3f4093b1f99f4a7339_7d5c87054840f975.json",
+      "sha256": "bbc1b3ca8e393dc07b8aa578915697e3e8b4619a3a5b13b65fcb1171757a286d"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/ce1c32aa4216de4c2ddeade098628cbd477bf51826e1ab3f4093b1f99f4a7339_938013f60b1f879d.json",
+      "sha256": "e37d71bc0711ab79f1b1479cac24157b44e6a3ad10f10c96045fd3a2baa0aa50"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/cf2e3542c168c05f75e3e7380052959c76dd2470be0ef519d16aa442c53629d6_7d5c87054840f975.json",
+      "sha256": "6cb574327307611a5de5b17fa40e8ba15404e38fcd4ad2dcf9cc623d6810a690"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/cfb8f83bb217432c9dbedc5b238deea9ba1cb02cc85b1c4e560439135089fb2d_7d5c87054840f975.json",
+      "sha256": "9700464b9260f64cc35ea763230b718c08c88ed6ae0bbb1166a53b5d84ac48f3"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/d09fc1e2cf940e6c7ff8417fbb7f3488e55fcd024c43ef8f902548f0a34b10b3_7d5c87054840f975.json",
+      "sha256": "410c1115d3cf29acd5ba0c5d4a1cca2f90a80966ffef59d57da433f0b92ce356"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/d09fc1e2cf940e6c7ff8417fbb7f3488e55fcd024c43ef8f902548f0a34b10b3_938013f60b1f879d.json",
+      "sha256": "59c930c1de4aae2b61c9c0f42de3873b4d83fc9a39f19a216efe2b06e424f14f"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/d0dd48588444e4fd4eb76f5b2788ee17dd65da0593d76a4a647a7748af275b67_7d5c87054840f975.json",
+      "sha256": "480d20d933510edc69867a960df496e657c1e137bd8ef761f18974f53d4a7d0a"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/d1f5d22b8afaa593a50abd741c1ed370f4c0ba5b2413d2f90e2d8a57ac834c75_7d5c87054840f975.json",
+      "sha256": "f1da901eda5f1902e4708b3497d3691a2c84bc4a0473949c1149230c87141a2b"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/d4594576ca7cbb42cb89a9f7eca5d81ec86cdf752346121231163b7b402ab1bf_7d5c87054840f975.json",
+      "sha256": "7521374e341ae51622389d151645d625ad31c729e43e935cf70216cec48cc0ac"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/d4594576ca7cbb42cb89a9f7eca5d81ec86cdf752346121231163b7b402ab1bf_938013f60b1f879d.json",
+      "sha256": "96f484a28e6cc30eb645fbfb59f136c7d061c8635f2d91e8b13de59f7d615888"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/d7141fcb547be430792401b6731484d0c8209d63719f182ea9e39fa1bd186743_938013f60b1f879d.json",
+      "sha256": "24179291016a50610565600a7515814a185a0d3cdb66d45173e2af45b71b17e0"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/d7578fc8bc933bba8433633523681f386eb9974d62c9fae878010c6ecd375252_7d5c87054840f975.json",
+      "sha256": "a87aea367cdb48b7d97b1aab099019b31a73cc4de67452db1983921535174f32"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/d7578fc8bc933bba8433633523681f386eb9974d62c9fae878010c6ecd375252_938013f60b1f879d.json",
+      "sha256": "f6480ddf8d865a4b483c5e17063aba62991909ff0bd5ae92226661966d69a6d7"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/d9137ef6a63572ed475c8401d4a94f290a2adf5756a4d1c542189aa4ca5356e2_7d5c87054840f975.json",
+      "sha256": "23cce87ccd0cba49eaea4b04f7dfce338881665f11ab6d1008a1c485b9d89a2b"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/d93aab310496fe35547ad91db2174257933fe9e03b2833dab28026be7991f2b3_7d5c87054840f975.json",
+      "sha256": "ebcdf37b2184d0c260ebc61b063f342c1c7d3c832b7301ea2b43df3a3dc039bc"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/d95ed5430415e83552a65be8b3a27283733b84befbf10ba3cfa1417ced8155cd_7d5c87054840f975.json",
+      "sha256": "2da5626605331c488b693c0deb31aad3f1d9acc5317d14656b7f03f32f020c20"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/d95ed5430415e83552a65be8b3a27283733b84befbf10ba3cfa1417ced8155cd_938013f60b1f879d.json",
+      "sha256": "44701cdceccc48a818d52ffbd72a64cb0f4fcd512c002afe3682989ae1490d3d"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/da53d58ebbbada789504eb13e31ab2f43a5c80adde0f99ec5e501f4dc7bc6c83_7d5c87054840f975.json",
+      "sha256": "f27e7354164d15fc25b77d67fd0956627ea71a8d9cf9c677ef6cecb29afcaaf7"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/da53d58ebbbada789504eb13e31ab2f43a5c80adde0f99ec5e501f4dc7bc6c83_938013f60b1f879d.json",
+      "sha256": "89fe07e4c5ca48bffc7f0d0a1cb9bf6c938cfff5865a9b36006af176d50146ce"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/da8acf0b22ebf836456115ff13fa56ea4943ace01dcf25e4c34b338b87ec397c_7d5c87054840f975.json",
+      "sha256": "818fa8d1cc47314196b19a82beec1036f5b2201f0eb16d34af5f21a23ab77262"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/dce983a4c8c6a3d5f69d65d94e80d4a9fc4336985a3122e1287c4447b9828cbd_7d5c87054840f975.json",
+      "sha256": "5a656101ea1e76398b9e5dedf5fa7e84d0d7324dc74a8d6fa6cfdd38d5938212"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/e00cfd908b75dece166c2ecc0908043bf16ad9dfe991d79e66b08a5053d4ce92_7d5c87054840f975.json",
+      "sha256": "72bd20228595ec4c676b909ffc9771b14f0cd9b692b5ace3496b0d8d0f59f981"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/e0bcad63e2a60887de21fa40f5fdcd22a3884c4e4b00eada70b6b7d64d108d4a_7d5c87054840f975.json",
+      "sha256": "5a84138e53457ab3387a8913aaab4dba8fbe8bc7b0e0e87960e5645ad676922c"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/e178cb1580dfa9ced355b8f98e3e203e83ea1bc70655cefb225f07753db9669e_7d5c87054840f975.json",
+      "sha256": "94282de4b3a5edb69e7d2d72dba05f2949501dfdbc6789d87b3b907e8f3da818"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/e3559c4877036120855c7632aba1480806592d89cc29dd41a77f47a54ae8a647_7d5c87054840f975.json",
+      "sha256": "2336f4cb47aa33f3a658a92f5091064de7e16e3ef3ad572590626614e6130f42"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/e4df188d34f0812478af758bf432ba0a516385953e05245d3fbe6ea13ffc7850_7d5c87054840f975.json",
+      "sha256": "24f64bd610de0b82417c42ae59f3dd095ce916f8b05c251d215645d8a4f421d7"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/e4df188d34f0812478af758bf432ba0a516385953e05245d3fbe6ea13ffc7850_938013f60b1f879d.json",
+      "sha256": "e3b223c37f32e684423392dd096615223cb98413edce6aa17ce85bbcae36b63e"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/e8c6a077dacb50177df85c48072f94dd403fe2a6ebe3dfc9646b0e7e9b6acf8c_7d5c87054840f975.json",
+      "sha256": "afa45a02eb95a6de56c597b080a57088260391ae4b762e0c3ded1e4605179120"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/e8c6a077dacb50177df85c48072f94dd403fe2a6ebe3dfc9646b0e7e9b6acf8c_938013f60b1f879d.json",
+      "sha256": "d169c8cf811829e998055acff98b97f0db10872a3c0c5c7f434967bb4cc1ef2b"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/e9ed38b07d808ea321bba0789f5dca9e00a595ee6a97d74e10463a902700a198_938013f60b1f879d.json",
+      "sha256": "c97576a398afa8b7b0897f5831f5dd2a256b93dec3e20832ee663b1fa918f67c"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/ecf8083a400859f73bd5cbec346b45f784e6b386f08085f572304aa17401b214_7d5c87054840f975.json",
+      "sha256": "f61c3a72e414a9b6960ba8671146a92dd7d83b08afeb6459a3e63b05198ed22c"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/eeb527385c45a050cc229500d49348cc8c1120d83032ac3ad0b9e8ba427161b8_7d5c87054840f975.json",
+      "sha256": "52cbe1ff7d7bc4f8f5d4ef319ae5b2a6277b98b2248ac462ddc2d5dfdf606971"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/ef5541ba8eb3a87589284fc52d523c9a76b49a5dc76000f2bc2d1d39b60ff3c3_7d5c87054840f975.json",
+      "sha256": "b15885a680fe443dcb5f04567d751b8509b948bd27b7f285c3e606ce92f7a14f"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/eff15b2b1b6480e13228c2738258710c29c36ccfdd78b5e68c45f1420b0bbd59_7d5c87054840f975.json",
+      "sha256": "0e531e95957e5034c1a99aa65d10a72a23e0d1857e18f530cd1944498addf242"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/eff85e843b960c7e4e250e623b45a1143d942c4fcb6e97a0669a5b391913a355_7d5c87054840f975.json",
+      "sha256": "6bbc252acb50727ceb483656f313f5f9f308bc462c989a348e76badf19e40ffa"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/f0586ef6070b722ea715cae066f14e3e93d4d5c7f00be7c1770b6057555eecf6_7d5c87054840f975.json",
+      "sha256": "e38c54741d5ebc0e60938af95f3504f628174806affb0d66d697ca4a88da30a9"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/f090eeddde8cfd4ef8902cfa51f280190e9d76d01c7ca2dee274d5d200b52ada_7d5c87054840f975.json",
+      "sha256": "1ce829e9e395c916771647d3c39b77c384522ee962fffc44dc3f77f1df744c74"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/f198a6cf742e909e3cff1f7e156ba293ca003566f3791e74c519cb59105c5265_7d5c87054840f975.json",
+      "sha256": "65697a7a29b2bef68a94402a8d5248a2ac58532b8fa3903b25e414209f1922c2"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/f29b3b3c8dfe05ebb0ff9b0b75824498a1b838bab6033c5a13280df0679a7ede_7d5c87054840f975.json",
+      "sha256": "2bf9d0a9dcc2726aaa3b6fa41f1e4e22e8f85b1e8912c1d3b3c2fe7d5cb1a4c4"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/f327a7747ce85dbdb369c88441d38ed0cf57f342383f148978e8989c12431023_7d5c87054840f975.json",
+      "sha256": "be1dd410fa539c6d6d08f7a342c8658a9a5d2c9b006b92755b9cf34b9bf54593"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/f8b5998cf99e208a0792a3e6d2e1578e21a0093642e0358171c7e0de0cec99d8_7d5c87054840f975.json",
+      "sha256": "c525f3c0bc281be007499676788f97269c748549d356a32a549966141059a2fa"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/f94cbccfffcd51f0f923e8de6b5168fbc3af3dbcd1469e828118dc02e97d9ac6_7d5c87054840f975.json",
+      "sha256": "b01f248a08066fece29a5ea5c7ff0aa1445db4bf62e38ca3fb303d62248cff07"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/fa73e790b7a77be4b594970100aa502aebdab9833c6211f0826944b5dcc7fde5_7d5c87054840f975.json",
+      "sha256": "801c3a79d5bea8a8d07d8b9e0d43e587a37fa464e9b727f8cdb573e1a58f4ec6"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/fabd232542afbf82bc42a007d4e83db8ba28d3a457424a02e2bf0f24ddfda921_7d5c87054840f975.json",
+      "sha256": "c278ba578c26b45985d9a78729f197a69c1d11841f4ce63cdf955889ad3f7c52"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/fabd232542afbf82bc42a007d4e83db8ba28d3a457424a02e2bf0f24ddfda921_938013f60b1f879d.json",
+      "sha256": "d489a84980c48fb9d9853c81081fe9a87b25e332075a1749ceb10d40eb7fb1d0"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/fe128c4404eaf3f25c6b2acce6512bf150a1e51313c8848c05e0c76b7c092fdf_7d5c87054840f975.json",
+      "sha256": "a683bc1058088488c7c4d942c98f11b379278c7a6b048577d8a9b7b224368055"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/ff6b749efe94fce8671a17abde9778ade39ea7e0a1773f9a8b73948322f9379d_7d5c87054840f975.json",
+      "sha256": "55fcaefcda3cda8f439dfbc4fa997c45fafac847d3faa930cd96dbbf856ca641"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/ff8386cbf085e26792b3dabb341a881617943e0ba4c9c69215b0012b484892c0_7d5c87054840f975.json",
+      "sha256": "c52efd2257fa816d0d4d830f9b81c88c70a5b0a7b0bd08b3d98484574a790b83"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/ff8386cbf085e26792b3dabb341a881617943e0ba4c9c69215b0012b484892c0_938013f60b1f879d.json",
+      "sha256": "521836616d4d68e5cf9a84298080bd3b0fc1555ffd8fb2c5ac0d0e74825649bf"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/ff96423a3962ba427ab04b87d7a950f046411693c9c7d58c497d18cc43fa2a03_7d5c87054840f975.json",
+      "sha256": "1c547fef826adcabc91919450e536097b8f703f7af77dbfd09652c1c000201df"
+    },
+    {
+      "path": ".rumdl_cache/0.2.78/ffcf359347db5eff2e6314429aad4fa652cfba524dd9ee108fb1e15822480d27_7d5c87054840f975.json",
+      "sha256": "29d3e30b3840beca868ecbae699b49f7b5e8f0ca85bdff08b9a6524c6303a226"
+    },
+    {
+      "path": ".rumdl_cache/CACHEDIR.TAG",
+      "sha256": "679d7958b9e2b3969cd82020477f6d5d039d6bd271aeb731dd3769629b49eb06"
+    },
+    {
+      "path": ".rumdl_cache/workspace_index.bin",
+      "sha256": "bbe0b12064ca20bba61f9721c7f23c1370a647bcc577163a0cff93cff6c21cd0"
+    }
+  ],
+  "setAndBytesUnchanged": true
+}

@@ -140,10 +140,11 @@ jobs:
       - name: Prepare fixed formicarium inputs
         working-directory: .
         env:
-          FORMICARIUM_INPUTS_URL: ${{ vars.FORMICARIUM_INPUTS_URL || 'https://raw.githubusercontent.com/Marukome0743/terrarium/c670296b2ebed05f2e8156a74fede29604ec8c95/inputs.tar.gz' }}
+          FORMICARIUM_INPUTS_URL: ${{ vars.FORMICARIUM_INPUTS_URL || 'https://raw.githubusercontent.com/Marukome0743/terrarium/74baa1101ebf6d8fc310ea70de3ddc071a87c01f/inputs.tar.gz' }}
         run: |
           : "${FORMICARIUM_INPUTS_URL:?Configure the fixed formicarium input archive URL}"
           bun scripts/prepare-formicarium.mjs --url "$FORMICARIUM_INPUTS_URL"
+          node scripts/fetch-formicarium-rc.mjs
 
       - name: Install dependencies
         working-directory: packages/terrarium

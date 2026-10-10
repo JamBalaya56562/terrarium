@@ -1,0 +1,65 @@
+[
+  {
+    "file": "api-documentation.md",
+    "bodyAndIdentitiesPreserved": true,
+    "scopeBlockPreserved": true,
+    "beforeSha256": "60bac9772b1799c7f466bdc54e5fe40071795f7ee32b458495bfd930da87bcd6",
+    "candidateSha256": "e811e1133800de647e5150ed339bcd733c00f4c6b27f31d09164fb9cf7d93de1"
+  },
+  {
+    "file": "architecture.md",
+    "bodyAndIdentitiesPreserved": true,
+    "scopeBlockPreserved": true,
+    "beforeSha256": "2db33bef623d3064326fdef0c53c69a2d601604201cb83c6dee6225670af51bf",
+    "candidateSha256": "477ac22fb33ecbabc055e7aabb26aac8581de329ef5c29b61152ec9323a5199b"
+  },
+  {
+    "file": "business-overview.md",
+    "bodyAndIdentitiesPreserved": true,
+    "scopeBlockPreserved": true,
+    "beforeSha256": "96f5dbe65168245875bf137546fe6402191e7052df6718a1c14ad08a969ebb3d",
+    "candidateSha256": "9ccd4d26eb65fa1d77507e7c8eb8e42848288d8f3b72b91637ab4776949d4647"
+  },
+  {
+    "file": "code-quality-assessment.md",
+    "bodyAndIdentitiesPreserved": true,
+    "scopeBlockPreserved": true,
+    "beforeSha256": "077d96e92357b397b89d68f881b3c3270c5688455bba97de01f177d3eaa48fb9",
+    "candidateSha256": "297e9b9663d2533515c741c281583f73462ead77c8f85e50bd8185f60660abb2"
+  },
+  {
+    "file": "code-structure.md",
+    "bodyAndIdentitiesPreserved": true,
+    "scopeBlockPreserved": true,
+    "beforeSha256": "c98969d3f31aa6780fcfdf809fef7dfd4642eadbfcea7afa46d13874f603632b",
+    "candidateSha256": "efbc5ac9b8908d358cd3d8d1a1216013086753af9858156a680d98671f84e1e3"
+  },
+  {
+    "file": "component-inventory.md",
+    "bodyAndIdentitiesPreserved": true,
+    "scopeBlockPreserved": true,
+    "beforeSha256": "624952252ecbfeab6255a6d6abfa2263613310b7e4ff64009cf4a717110ba217",
+    "candidateSha256": "14a8e301beb8b5e554bc39b3b5a1c57d50c7f8474db3b9c9be7762d91c54a8e2"
+  },
+  {
+    "file": "dependencies.md",
+    "bodyAndIdentitiesPreserved": true,
+    "scopeBlockPreserved": true,
+    "beforeSha256": "43d1f18f1945328acb46b7767d3b66869fb0ef0076f7b701a522b62dec5a2dc5",
+    "candidateSha256": "1a7a237657f8d6368ea5aac8b398ffb9569d39cdc784e39b64c351a7edfb4bde"
+  },
+  {
+    "file": "reverse-engineering-timestamp.md",
+    "bodyAndIdentitiesPreserved": true,
+    "scopeBlockPreserved": true,
+    "beforeSha256": "31f18be4393c6611b440f5420fd8b6583ad2b4620ad8213fb191901a3d21ffa8",
+    "candidateSha256": "6d572bfbd1ead93f9b80e027aa908ff27a273ebf53f0de1bbd413481d550deeb"
+  },
+  {
+    "file": "technology-stack.md",
+    "bodyAndIdentitiesPreserved": true,
+    "scopeBlockPreserved": true,
+    "beforeSha256": "6825ae18d696218363941b272c75d882ba378a5fe86acdd631d1b2de438ec5b3",
+    "candidateSha256": "ce942c34072fbba0e254876ad43d2e0958c0d1cc0f0dd0ee98bf795828ad3ba7"
+  }
+]

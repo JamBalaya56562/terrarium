@@ -1,0 +1,138 @@
+{
+  "stage": "code-generation",
+  "unit": null,
+  "upstream_ids": [
+    "FR1",
+    "FR2",
+    "FR3",
+    "FR4",
+    "FR5",
+    "FR6",
+    "FR7",
+    "FR8",
+    "NFR1",
+    "NFR2",
+    "NFR3",
+    "NFR4",
+    "NFR5",
+    "BR1.1",
+    "BR1.2",
+    "BR1.3",
+    "BR2.1",
+    "BR2.2",
+    "BR3.1",
+    "BR3.2",
+    "BR3.3"
+  ],
+  "coverage": [
+    {
+      "id": "FR1",
+      "status": "OK",
+      "target": "packages/terrarium/tests/formicarium-session.test.ts"
+    },
+    {
+      "id": "FR2",
+      "status": "OK",
+      "target": "packages/terrarium/tests/formicarium-catalog.test.ts"
+    },
+    {
+      "id": "FR3",
+      "status": "OK",
+      "target": "packages/terrarium/e2e/formicarium-iframe.spec.ts"
+    },
+    {
+      "id": "FR4",
+      "status": "OK",
+      "target": "packages/terrarium/tests/candidate-transaction.test.ts"
+    },
+    {
+      "id": "FR5",
+      "status": "OK",
+      "target": "scripts/candidate-transaction.mjs"
+    },
+    {
+      "id": "FR6",
+      "status": "OK",
+      "target": "aidlc/spaces/default/intents/261008-formicarium-integration-2/construction/code-generation/verification-recovery/checks.json"
+    },
+    {
+      "id": "FR7",
+      "status": "PENDING"
+    },
+    {
+      "id": "FR8",
+      "status": "PENDING"
+    },
+    {
+      "id": "NFR1",
+      "status": "OK",
+      "target": "scripts/candidate-transaction.mjs"
+    },
+    {
+      "id": "NFR2",
+      "status": "OK",
+      "target": "packages/terrarium/tests/formicarium-assets.test.ts"
+    },
+    {
+      "id": "NFR3",
+      "status": "OK",
+      "target": "scripts/assemble-candidate.mjs"
+    },
+    {
+      "id": "NFR4",
+      "status": "OK",
+      "target": "packages/terrarium/tests/candidate-transaction.test.ts"
+    },
+    {
+      "id": "NFR5",
+      "status": "OK",
+      "target": "packages/terrarium/e2e/terminal.spec.ts"
+    },
+    {
+      "id": "BR1.1",
+      "status": "OK",
+      "target": "packages/terrarium/tests/formicarium-catalog.test.ts"
+    },
+    {
+      "id": "BR1.2",
+      "status": "OK",
+      "target": "packages/terrarium/tests/formicarium-session.test.ts"
+    },
+    {
+      "id": "BR1.3",
+      "status": "OK",
+      "target": "packages/terrarium/e2e/formicarium-iframe.spec.ts"
+    },
+    {
+      "id": "BR2.1",
+      "status": "OK",
+      "target": "packages/terrarium/tests/formicarium-assets.test.ts"
+    },
+    {
+      "id": "BR2.2",
+      "status": "OK",
+      "target": "packages/terrarium/tests/candidate-transaction.test.ts"
+    },
+    {
+      "id": "BR3.1",
+      "status": "PENDING"
+    },
+    {
+      "id": "BR3.2",
+      "status": "OK",
+      "target": "aidlc/spaces/default/intents/261008-formicarium-integration-2/construction/code-generation/verification-recovery/checks.json"
+    },
+    {
+      "id": "BR3.3",
+      "status": "PENDING"
+    }
+  ],
+  "verification": {
+    "current": "aidlc/spaces/default/intents/261008-formicarium-integration-2/construction/code-generation/verification-recovery",
+    "sourceInventorySha256": "b70c328cf9d309a18a6dc06eccde0817b0c3a78bf6f7b513ea4cb159beee2f99",
+    "formalReview": "pending new independent review and request/complete/register inventory equality",
+    "unresolved": [
+      "remote supply/CI acceptance unverified; Build and Test and U3 pending"
+    ]
+  }
+}

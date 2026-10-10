@@ -1,0 +1,68 @@
+{
+  "destination": "web/dist",
+  "inventorySha256": "8ff0ea9d08a2f7a8c41e40b546839d12c839e83a2bfa247a62872796fbc5d7bb",
+  "files": [
+    {
+      "path": "aube",
+      "kind": "directory"
+    },
+    {
+      "path": "aube/v2.6.1",
+      "kind": "directory"
+    },
+    {
+      "path": "aube/v2.6.1/aube.js",
+      "kind": "file",
+      "size": 119914,
+      "digest": "efac1c643527f2229dbe801929dbd9693bdad321150474e0e6023f54841db3ab"
+    },
+    {
+      "path": "aube/v2.6.1/aube.wasm",
+      "kind": "file",
+      "size": 19856043,
+      "digest": "c167246a005f50b72fcad44ab6b67b4f520179428bb3f46463691f5fe7b00981"
+    },
+    {
+      "path": "builds.json",
+      "kind": "file",
+      "size": 694,
+      "digest": "cc38b05de0aaaa5228fa987300cfef643c178d9ed5c960569b19b72b5aa5c5b2"
+    },
+    {
+      "path": "fixtures",
+      "kind": "directory"
+    },
+    {
+      "path": "fixtures/aube-local-deps.json",
+      "kind": "file",
+      "size": 366,
+      "digest": "2a2b3bbf5995be2f20fb8fe7a5e29b0ca1c733db9b491bfef991a408a7a7bc44"
+    },
+    {
+      "path": "fixtures/pitchfork-basic.json",
+      "kind": "file",
+      "size": 151,
+      "digest": "081abc73542d06df09d28cdad88bfda1628634ab5482a3f8238134a25951583a"
+    },
+    {
+      "path": "pitchfork",
+      "kind": "directory"
+    },
+    {
+      "path": "pitchfork/v2.29.0",
+      "kind": "directory"
+    },
+    {
+      "path": "pitchfork/v2.29.0/pitchfork.js",
+      "kind": "file",
+      "size": 126047,
+      "digest": "4bf0ea2764e2ba3c5650cb577f5c66156af5a76cd682691d1d8f4e07875b8fb1"
+    },
+    {
+      "path": "pitchfork/v2.29.0/pitchfork.wasm",
+      "kind": "file",
+      "size": 20389228,
+      "digest": "16f335ef529b2fa7815cc6201030b01538ef76d9b52478746dc4df62161b8cee"
+    }
+  ]
+}

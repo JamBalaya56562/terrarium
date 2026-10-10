@@ -1,0 +1,6 @@
+{
+  "command": "mise exec -- bun test tests/formicarium-rc-identity.test.ts",
+  "cwd": "/Users/mutoakio/Documents/terrarium/packages/terrarium",
+  "exit": 0,
+  "output": "bun test v1.4.2 (744846f84)\n\ntests/formicarium-rc-identity.test.ts:\n(pass) actual published pack matches installed files and fixed lock identity [30.50ms]\n(pass) wrong version refuses [5.78ms]\n(pass) wrong registry integrity refuses [6.54ms]\n(pass) wrong compressed tarball SHA256 refuses [3.31ms]\n(pass) installed file drift refuses even when the package version matches [13.15ms]\n\n 5 pass\n 0 fail\n 5 expect() calls\nRan 5 tests across 1 file. [118.00ms]\n"
+}

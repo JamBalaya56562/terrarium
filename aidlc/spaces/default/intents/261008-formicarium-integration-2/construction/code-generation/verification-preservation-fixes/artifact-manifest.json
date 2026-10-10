@@ -1,0 +1,112 @@
+[
+  {
+    "path": "aidlc/spaces/default/intents/261008-formicarium-integration-2/construction/code-generation/verification-preservation-fixes/assembly-formicarium-final.log",
+    "size": 391,
+    "sha256": "d135141d8cac5e92f657245c4ea27c26612e8d3a1b208df3243f699843028c26"
+  },
+  {
+    "path": "aidlc/spaces/default/intents/261008-formicarium-integration-2/construction/code-generation/verification-preservation-fixes/assembly-legacy-final.log",
+    "size": 380,
+    "sha256": "60553b0722b58a2c69c7c58dcfb78deedac9719fd3888bb4ee6ca7cadd8a6bae"
+  },
+  {
+    "path": "aidlc/spaces/default/intents/261008-formicarium-integration-2/construction/code-generation/verification-preservation-fixes/browsers-host.json",
+    "size": 1477,
+    "sha256": "113da8da69c3547b693c8aa201d608fe499e723d33d9d03fb0e29dbc0f807a97"
+  },
+  {
+    "path": "aidlc/spaces/default/intents/261008-formicarium-integration-2/construction/code-generation/verification-preservation-fixes/build-final.log",
+    "size": 63,
+    "sha256": "6ddd422a8451e34060c2f46a10c7c8493071f8a813ea17d1f53c96f1ae57da25"
+  },
+  {
+    "path": "aidlc/spaces/default/intents/261008-formicarium-integration-2/construction/code-generation/verification-preservation-fixes/checks-final.json",
+    "size": 2196,
+    "sha256": "a9b7c74c0233dd8cd53b4ccfeb37cc12d22437b57ee678cafca0df9ab6915424"
+  },
+  {
+    "path": "aidlc/spaces/default/intents/261008-formicarium-integration-2/construction/code-generation/verification-preservation-fixes/formicarium-candidate.json",
+    "size": 12183,
+    "sha256": "c239573355b6e66b6169f5cdb63d20b63f2343da09875fda38f275603db7e45c"
+  },
+  {
+    "path": "aidlc/spaces/default/intents/261008-formicarium-integration-2/construction/code-generation/verification-preservation-fixes/formicarium-host-browser.log",
+    "size": 6934,
+    "sha256": "d11e201c931cb992998824293f725dc63ee893c41b785f8beb8635283131d384"
+  },
+  {
+    "path": "aidlc/spaces/default/intents/261008-formicarium-integration-2/construction/code-generation/verification-preservation-fixes/formicarium-host-results/.last-run.json",
+    "size": 45,
+    "sha256": "91d1c43004802cd49950d78eb11c8fa7d05da8ffffe219a8b13b2f561bc00903"
+  },
+  {
+    "path": "aidlc/spaces/default/intents/261008-formicarium-integration-2/construction/code-generation/verification-preservation-fixes/input-identity.json",
+    "size": 3578,
+    "sha256": "7d110756f1a573d987d5959b5577623a8a2032e125c70b6791ec7b9d639a5512"
+  },
+  {
+    "path": "aidlc/spaces/default/intents/261008-formicarium-integration-2/construction/code-generation/verification-preservation-fixes/legacy-candidate.json",
+    "size": 3407,
+    "sha256": "0803caae909303607ce6022a013a50056362c9f1fa1ae344e3892078253a937f"
+  },
+  {
+    "path": "aidlc/spaces/default/intents/261008-formicarium-integration-2/construction/code-generation/verification-preservation-fixes/legacy-host-browser.log",
+    "size": 5283,
+    "sha256": "5ed44762cb836008813641c19ee6a5ea9997bb0a2f092eab0b2982cd28894716"
+  },
+  {
+    "path": "aidlc/spaces/default/intents/261008-formicarium-integration-2/construction/code-generation/verification-preservation-fixes/legacy-host-results/.last-run.json",
+    "size": 45,
+    "sha256": "91d1c43004802cd49950d78eb11c8fa7d05da8ffffe219a8b13b2f561bc00903"
+  },
+  {
+    "path": "aidlc/spaces/default/intents/261008-formicarium-integration-2/construction/code-generation/verification-preservation-fixes/lint-classification.json",
+    "size": 692,
+    "sha256": "8b9e73e9ac55c7f4afe9a21b9d9790dafea84ee01c5c25b4e840cffabdf482f0"
+  },
+  {
+    "path": "aidlc/spaces/default/intents/261008-formicarium-integration-2/construction/code-generation/verification-preservation-fixes/lint-final.log",
+    "size": 101473,
+    "sha256": "013fb03902035cf524794eb066c919bfdedaf49f34b13df958b81c7c56ee429a"
+  },
+  {
+    "path": "aidlc/spaces/default/intents/261008-formicarium-integration-2/construction/code-generation/verification-preservation-fixes/lint-freeze.log",
+    "size": 101430,
+    "sha256": "2b27bf33436507744f35be70c5f16643c3788f0b318683313b4f3f656a37eba7"
+  },
+  {
+    "path": "aidlc/spaces/default/intents/261008-formicarium-integration-2/construction/code-generation/verification-preservation-fixes/old-candidate-records.json",
+    "size": 17630,
+    "sha256": "3f3357be454476badda39eecb9c500d1c0361a6a903e475964efd602f92132f1"
+  },
+  {
+    "path": "aidlc/spaces/default/intents/261008-formicarium-integration-2/construction/code-generation/verification-preservation-fixes/prior-code-summary.txt",
+    "size": 9135,
+    "sha256": "68a95d6ec5e2241b9888a2670509ae0f9b0018134c6ca6788b94f8b6732be916"
+  },
+  {
+    "path": "aidlc/spaces/default/intents/261008-formicarium-integration-2/construction/code-generation/verification-preservation-fixes/source-inventory.json",
+    "size": 11782,
+    "sha256": "0e7d1b9d0e79f6dc07d8bfd509fc39cde3c31ad1b9dce0ebed0fe8d88c95d993"
+  },
+  {
+    "path": "aidlc/spaces/default/intents/261008-formicarium-integration-2/construction/code-generation/verification-preservation-fixes/stability.json",
+    "size": 1146,
+    "sha256": "11d70231034cab27e1b32a1dd2b40550e880fd311dc444c3e8f73417d5484d63"
+  },
+  {
+    "path": "aidlc/spaces/default/intents/261008-formicarium-integration-2/construction/code-generation/verification-preservation-fixes/typecheck-final.log",
+    "size": 102,
+    "sha256": "8f095098e23e2741c41618f8e64d86cc7ee2edfe464a4cecffb499493d3ddcae"
+  },
+  {
+    "path": "aidlc/spaces/default/intents/261008-formicarium-integration-2/construction/code-generation/verification-preservation-fixes/unit-final.log",
+    "size": 13104,
+    "sha256": "c42255b86b324c065212a0ee370a0a36a56c0a471f74bc1d7ad8671d113bfe58"
+  },
+  {
+    "path": "aidlc/spaces/default/intents/261008-formicarium-integration-2/construction/code-generation/verification-preservation-fixes/writes.json",
+    "size": 784,
+    "sha256": "cff0cc437fd47dd6f5ff7d18c7fb4f089366fd3555ffe0d39850781625835850"
+  }
+]

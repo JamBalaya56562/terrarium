@@ -1,0 +1,10 @@
+{
+  "name": "rc-prepare",
+  "command": "mise run terrarium:rc:prepare",
+  "cwd": "/Users/mutoakio/Documents/terrarium",
+  "chunk_id": "0da14a",
+  "wall_time_seconds": 0.000008,
+  "original_token_count": 270,
+  "output": "[terrarium:rc:prepare] $ node scripts/fetch-formicarium-rc.mjs\nnpm notice\nnpm notice New major version of npm available! 11.20.0 -> 12.2.0\nnpm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0\nnpm notice To update run: npm install -g npm@12.2.0\nnpm notice\n{\n  \"name\": \"@aletheia-works/formicarium\",\n  \"version\": \"0.1.0-rc.1\",\n  \"tarballSha256\": \"8334d7f14c31109e5be3ec90147aa02105d8d839c4c79eccc1c25cb88eabbb3a\",\n  \"integrity\": \"sha512-SIFbXU1QkxXDATkE0M1Prm65Kq+Q2SkwnDyBwRf/ejEd3mADZT5uueETF+r0AAl4nuDRqbbSkBc7K/fHclwICA==\",\n  \"tarballUrl\": \"https://registry.npmjs.org/@aletheia-works/formicarium/-/formicarium-0.1.0-rc.1.tgz\",\n  \"target\": \"/Users/mutoakio/Documents/terrarium/.vendor/formicarium-rc-acceptance/aletheia-works-formicarium-0.1.0-rc.1.tgz\",\n  \"source\": \"verified existing npm pack\",\n  \"commands\": [\n    [\n      \"npm\",\n      \"view\",\n      \"@aletheia-works/formicarium@0.1.0-rc.1\",\n      \"name\",\n      \"version\",\n      \"dist\",\n      \"--json\",\n      \"--registry=https://registry.npmjs.org\",\n      \"--cache=/Users/mutoakio/Documents/terrarium/.vendor/formicarium-rc-acceptance/.npm-pack-F9ZREO/cache\"\n    ]\n  ]\n}\n",
+  "exit_code": 0
+}

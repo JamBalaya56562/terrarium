@@ -1,0 +1,49 @@
+{
+  "timestamp": "2026-10-08T10:58:21.365362+00:00",
+  "sourceInventorySha256": "e40fb1c70e32dd63d9ac1e8896be8692c6ac394ed44279e68b7b2d8d09f4b99e",
+  "sourceChanged": [],
+  "liveCodekbUnchanged": true,
+  "logs": [
+    {
+      "path": "build.log",
+      "size": 63,
+      "sha256": "6ddd422a8451e34060c2f46a10c7c8493071f8a813ea17d1f53c96f1ae57da25"
+    },
+    {
+      "path": "codekb-candidate-lint.log",
+      "size": 44,
+      "sha256": "98aa074313b9e6f7b34d6ab948da266b897f83b8b60bc1da8572e46c191afd2f"
+    },
+    {
+      "path": "codekb-publish.log",
+      "size": 205,
+      "sha256": "d1fde6b1cf77351e9ec452792647b248777bc0da541a53fd6611b2114c4676ca"
+    },
+    {
+      "path": "inputs.log",
+      "size": 1348,
+      "sha256": "a97df80c7d9828f2fb765a2776dfb756c11d8f58edc08ae28c55ef67d6661e23"
+    },
+    {
+      "path": "lint-final.log",
+      "size": 101203,
+      "sha256": "23c97865c86ede0175eadb458f60d9969b9aff7bec7bef27048a784181324abc"
+    },
+    {
+      "path": "lint.log",
+      "size": 102459,
+      "sha256": "1712489dbdf8d15b17db072b0180437c2cf2e94baa7925c3391f59e66cb7bb90"
+    },
+    {
+      "path": "typecheck.log",
+      "size": 102,
+      "sha256": "8f095098e23e2741c41618f8e64d86cc7ee2edfe464a4cecffb499493d3ddcae"
+    },
+    {
+      "path": "unit.log",
+      "size": 12483,
+      "sha256": "daf913c7d25c9aa6cf0786e1d758f557ab65853221af6c48ca443ae5a8c2bc29"
+    }
+  ],
+  "limit": "CodeKB stale CAS refused once; no re-mint, re-analysis, direct write or retry; global lint remains nonzero"
+}

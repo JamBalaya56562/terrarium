@@ -1,0 +1,21 @@
+{
+  "priorChangedPaths": [
+    "packages/terrarium/tests/formicarium-inputs.test.ts"
+  ],
+  "addedInventoryPaths": [
+    ".github/workflows/pages.yml",
+    ".github/workflows/publish-terrarium.yml",
+    ".github/workflows/test-e2e.yml",
+    ".github/workflows/test-terrarium.yml"
+  ],
+  "additionalWrites": [
+    ".github/workflows/test-terrarium.yml",
+    ".github/workflows/test-e2e.yml",
+    ".github/workflows/pages.yml",
+    ".github/workflows/publish-terrarium.yml",
+    "packages/terrarium/tests/formicarium-inputs.test.ts"
+  ],
+  "candidateImpact": false,
+  "browserSourcesUnchanged": true,
+  "classification": "four workflow supply policy changes and one unit test; no bundled/browser/server/runtime source or input descriptor changes; existing final browser results apply only to unchanged candidate bytes, remote CI remains unverified"
+}

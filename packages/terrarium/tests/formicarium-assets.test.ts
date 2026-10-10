@@ -14,6 +14,7 @@ interface StageInput {
   packageManifest: string;
   guestSite: string;
   resolverRoot: string;
+  checkpoint?: (point: string) => Promise<void>;
 }
 interface StageReceipt {
   installedVersion: string;
@@ -143,9 +144,10 @@ async function fixture() {
     path.join(guestSite, 'dist/builds.json'),
     json({ schemaVersion: 1, builds }),
   );
-  const resolverRoot = path.resolve(
-    import.meta.dir,
-    '../../../.vendor/formicarium-inputs/resolver',
+  const resolverRoot = path.join(
+    process.env.FORMICARIUM_INPUTS_ROOT ??
+      path.resolve(import.meta.dir, '../../../.vendor/formicarium-inputs'),
+    'resolver',
   );
   return {
     root,
@@ -174,7 +176,7 @@ describe('candidate assets staging', () => {
       receipt.files.filter((entry: { path: string }) =>
         entry.path.startsWith('formicarium/runtime/'),
       ),
-    ).toHaveLength(13);
+    ).toHaveLength(14);
   });
   test('preserves unrelated tools and legacy source/upstream_pr/built_at metadata', async () => {
     const input = await fixture();
@@ -204,7 +206,7 @@ describe('candidate assets staging', () => {
   });
   test('missing installed worker rejects before staged output exists', async () => {
     const input = await fixture();
-    await rm(path.join(input.packageRoot, 'runtime/web/package-worker.mjs'));
+    await rm(path.join(input.packageRoot, 'runtime/web/package-worker.js'));
     await expect(stageFormicarium(input)).rejects.toThrow();
     await expect(
       readFile(path.join(input.webRoot, 'formicarium-stage.json')),
@@ -212,7 +214,7 @@ describe('candidate assets staging', () => {
   });
   test('changed installed package digest rejects', async () => {
     const input = await fixture();
-    await save(path.join(input.packageRoot, 'runtime/core.mjs'), 'modified');
+    await save(path.join(input.packageRoot, 'runtime/core.js'), 'modified');
     await expect(stageFormicarium(input)).rejects.toThrow(
       'package digest mismatch',
     );
@@ -253,7 +255,7 @@ describe('candidate assets staging', () => {
   test('copied resolver modules retain exact frozen source bytes', async () => {
     const input = await fixture();
     await stageFormicarium(input);
-    for (const name of ['manifest.mjs', 'fixtures.mjs', 'resolver.mjs']) {
+    for (const name of ['manifest.js', 'fixtures.js', 'resolver.js']) {
       expect(
         await readFile(
           path.join(input.webRoot, 'formicarium-guest-distribution', name),
@@ -261,4 +263,41 @@ describe('candidate assets staging', () => {
       ).toEqual(await readFile(path.join(input.resolverRoot, name)));
     }
   });
+});
+
+for (const old of [true, false]) {
+  test(`partial asset write fails without changing candidate (old=${old})`, async () => {
+    const input = await fixture();
+    const { candidateInventory } = await import(
+      new URL('../../../scripts/candidate-transaction.mjs', import.meta.url)
+        .href
+    );
+    if (old) await save(path.join(input.webRoot, 'preserved'), 'old candidate');
+    const before = await candidateInventory(input.webRoot);
+    await expect(
+      stageFormicarium({
+        ...input,
+        checkpoint: async (point) => {
+          if (point === 'stage-write') throw new Error('partial stage write');
+        },
+      }),
+    ).rejects.toThrow('partial stage write');
+    expect(await candidateInventory(input.webRoot)).toEqual(before);
+    await stageFormicarium(input);
+  });
+}
+test('existing output symlink cannot redirect staging writes outside candidate', async () => {
+  const input = await fixture();
+  const { symlink } = await import('node:fs/promises');
+  const outside = path.join(input.root, 'outside');
+  await mkdir(outside);
+  await save(path.join(outside, 'package.json'), 'outside');
+  await mkdir(input.webRoot);
+  await symlink(outside, path.join(input.webRoot, 'formicarium'));
+  await expect(stageFormicarium(input)).rejects.toThrow(
+    'unsafe candidate output parent',
+  );
+  expect(await readFile(path.join(outside, 'package.json'), 'utf8')).toBe(
+    'outside',
+  );
 });

@@ -1,0 +1,77 @@
+# 現解析: code-structure
+
+## 現在のコード構造
+
+packageのsrcはCatalog・legacy Session・非公開formicarium adapter・端末要素・exportsを分離する。scripts/stage-formicarium.mjsは24package filesとresolver3modules、全広告refを検証してstageする。assemble-pages.shはassemble-candidate.mjsを呼び、web copy・bundle・stamp・root entryを一つのtransactionで確定する。candidate-transaction.mjsがinventory・履歴・lock・復旧を所有する。固定16入力descriptorと4workflowの明示URL guardが供給境界である。
+
+根拠: [今回の解析と検証](../../intents/261008-formicarium-integration-2/construction/code-generation/code-summary.md)。
+
+## 保持した過去の解析（historical）
+
+以下は以前の本文・identityを保持した区画であり、今回の現解析や成功結果の代用ではない。
+
+## コード構造
+
+### Package Organization
+
+packages/terrariumはsrcのadapter/catalog/session/element/exports、testsのunitとe2eのbrowser契約を持つ。scripts/stage-formicarium.mjsは検証と配置、assemble-pages.shはlegacy/formicarium別候補の組立、integration/formicarium-inputs.jsonは固定入力、web/terminal.mjsはpage/iframe接続。miseと二つのtest workflowsがprepare、型・unit・build・browserを接続する。完全なdeep一覧はtimestampのみ。
+
+### Code Patterns
+
+public APIの内部adapter、typed unionとcompile-only負例、promise queue recovery、generation guard、digest/provenance validation。legacy Sessionの互換面は今回読取対象で、runtime内部や他のscriptは浅い所在確認に留めた。
+
+根拠: [開発者引継ぎ](../../intents/261008-formicarium-integration-2/inception/reverse-engineering/developer-scan.md)。深い解析の個別23pathは[解析時点](reverse-engineering-timestamp.md)、証跡の適用性は[品質](code-quality-assessment.md)。
+
+### Preserved Prior Store (historical; not current verification)
+
+以下は前storeの文章を保存した履歴。今回範囲外の深い解析はshallowへ降格した。「現行」「確認済み」等は元intent時点の表現で、今回のfresh合格・承認を意味しない。上の今回評価を優先する。
+
+#### コード構造（focused merge）
+
+### Historical 1: Package Organization
+
+| 深い解析の分類 | 所在・責務 |
+| --- | --- |
+| 接続 | `src/formicarium-session.ts`、`catalog.ts` |
+| 要素・exports | `src/terminal.ts`、`index.ts`、`npm.ts` |
+| 配置 | `scripts/stage-formicarium.mjs`、`assemble-pages.sh` |
+| ページ・iframe | `web/terminal.mjs` |
+| 依存・型 | package/lock/JSR/TS configs、`mise.toml` |
+| 検証 | formicarium unit suites、Playwright config、element/iframe/server/host fixtures |
+| CI | `test-terrarium.yml`、`test-e2e.yml` |
+
+ファイル単位の完全な deep 一覧は timestamp に一度だけ記録する。runtime/fixtures/その他 scripts/legacy Session と旧 tests は shallow。
+
+### Historical 2: Code Patterns
+
+public Session を注入可能な adapter、型による公開契約、単調 output sequence、queue recovery、接続世代で lifecycle を制御する。legacy のファイル保持方式は下記の旧記録であり今回再検証しない。
+
+根拠: [開発者スキャン](../../intents/261008-formicarium-integration/inception/reverse-engineering/developer-scan.md)。現在の深い解析範囲は [解析時点](reverse-engineering-timestamp.md)、検証証拠と制約は [品質](code-quality-assessment.md)。
+
+再調査根拠: exact25 snapshot 後の全25ファイル再読・raw SHA25/25一致、直前のimported source/candidate再比較64/64一致。[再調査記録](../../intents/261008-formicarium-integration/inception/reverse-engineering/evidence/exact-scope-rescan-verification.json)。今回新規テスト実行なし。
+
+### Prior Knowledge (historical, shallow outside current focus)
+
+以下は `261004-pitchfork-continuation` の記述を保持したもの。旧 deep coverage は UNVERIFIED のため今回の verified deep 範囲に継承しない。現行 focus については上の記述を優先する。
+
+### Historical 3: コード構造
+
+#### Historical 4: Package Organization
+
+ドキュメント根拠: 開発者スキャンのリポジトリ一覧。深い読取範囲は [reverse-engineering-timestamp.md](reverse-engineering-timestamp.md)。
+
+| パス | 分類・目的 |
+| --- | --- |
+| `packages/terrarium/` | TypeScript パッケージ、Catalog、Session、端末要素、unit/E2E |
+| `web/` | 静的ページ、iframe 入口、ツール登録、サービスワーカー |
+| `runtime/` | C syscall、Emscripten JS 補完、Node runner |
+| `scripts/` | ref 解決、コンパイル、vendoring、staging、サイト組立 |
+| `patches/` | Rust std、依存クレート、ツール自身のパッチ |
+| `fixtures/` | 初期ファイルと記録コマンド |
+| `.github/` / `mise-tasks/` | CI と検証タスク |
+| `infra/` | OpenTofu 設定（一覧のみ） |
+| `aidlc/` / ハーネス各ディレクトリ | ワークフロー・判断・知識 |
+
+#### Historical 5: Code Patterns
+
+Catalog の JSON 契約、Session の Tool/FS インターフェース、ツール別アダプターを境界とする。依存関係は [dependencies.md](dependencies.md)。AI-DLC 設定追加と pitchfork 実装は別変更として保持する。

@@ -3,7 +3,7 @@ actionlint = "latest"
 biome = "latest"
 bun = "latest"
 jq = "latest"
-node = "26.9.0"
+node = "26.11.1"
 opentofu = "latest"
 rumdl = "latest"
 shellcheck = "latest"
@@ -45,7 +45,7 @@ run = "tombi format"
 
 [tasks."markdown:check"]
 description = "rumdl — Markdown lint (read-only)"
-run = "rumdl check ."
+run = "rumdl check --no-cache ."
 
 [tasks."markdown:check:fix"]
 description = "rumdl — apply Markdown autofix (in-place)"
@@ -89,6 +89,7 @@ run = "bash scripts/assemble-pages.sh .site"
 description = "Test aube v2.6.1 and the latest stable pitchfork build in all browsers"
 run = [
   'bun scripts/prepare-formicarium.mjs --from "$FORMICARIUM_INPUTS_DIR"',
+  "node scripts/fetch-formicarium-rc.mjs",
   "cd packages/terrarium && bun install --frozen-lockfile",
   "bash scripts/fetch-builds.sh v2.6.1",
   "bash scripts/prepare-pitchfork-e2e.sh",
@@ -102,7 +103,7 @@ run = [
 [tasks."ci:terrarium"]
 description = "Local equivalent of test-terrarium.yml"
 dir = "packages/terrarium"
-run = ["bun ../../scripts/prepare-formicarium.mjs --from \"$FORMICARIUM_INPUTS_DIR\"", "bun install --frozen-lockfile", "bun run typecheck", "bun run test", "bun run build"]
+run = ["bun ../../scripts/prepare-formicarium.mjs --from \"$FORMICARIUM_INPUTS_DIR\" --output \"${FORMICARIUM_INPUTS_ROOT:-../../.vendor/formicarium-inputs}\"", "node ../../scripts/fetch-formicarium-rc.mjs", "bun install --frozen-lockfile", "bun run typecheck", "bun run test", "bun run build"]
 
 # ── Infra ─────────────────────────────────────────────────────────────
 
@@ -120,7 +121,7 @@ run = "tofu plan"
 description = "Format the OpenTofu files (in-place)"
 run = "tofu fmt -recursive infra"
 
-# Unit-scoped common runtime integration. Local pack is not a published RC.
+# Unit-scoped common runtime integration with the pinned public RC.
 [tasks."terrarium:formicarium-unit"]
 description = "Test the public formicarium adapter and distribution boundaries"
 dir = "packages/terrarium"
@@ -138,3 +139,7 @@ run = "TERRARIUM_BUN=$(command -v bun) TERRARIUM_SITE_DIR=$(pwd)/../../.vendor/s
 [tasks."terrarium:inputs"]
 description = "Verify an explicit fixed formicarium input directory before installation"
 run = 'bun scripts/prepare-formicarium.mjs --from "$FORMICARIUM_INPUTS_DIR"'
+
+[tasks."terrarium:rc:prepare"]
+description = "Acquire the pinned npm RC tarball and verify SHA256 and integrity before tests"
+run = "node scripts/fetch-formicarium-rc.mjs"

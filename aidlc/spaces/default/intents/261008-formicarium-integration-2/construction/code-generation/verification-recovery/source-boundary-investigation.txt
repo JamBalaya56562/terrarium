@@ -1,0 +1,1 @@
+要求11:20:31Z source963bed26...、拒否11:23:39Z。レビュー中11:23:22Z rumdl cache indexと新JSON変更、旧workspace-941b21b49881.tsvがignored cache325entriesを含む。要求時全件inventoryがないためcacheのみ原因とは断定しない。拒否後git index11:24:13Zのjj snapshotと区別。今回公式--no-cacheでcache集合/bytes不変を確認しguard/指紋計算法変更なし。旧レビューreceiptの再登録や付替えなし。

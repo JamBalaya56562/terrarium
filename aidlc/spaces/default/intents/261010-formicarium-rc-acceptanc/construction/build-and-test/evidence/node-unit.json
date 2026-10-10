@@ -1,0 +1,10 @@
+{
+  "name": "node-unit",
+  "command": "mise exec -- bun test tests/formicarium-node-acceptance.test.ts",
+  "cwd": "/Users/mutoakio/Documents/terrarium/packages/terrarium",
+  "chunk_id": "5a8869",
+  "wall_time_seconds": 0.28601125,
+  "exit_code": 0,
+  "original_token_count": 83,
+  "output": "bun test v1.4.2 (744846f84)\n\ntests/formicarium-node-acceptance.test.ts:\n(pass) successful output and exit aggregate as pass [0.07ms]\n(pass) nonzero exit fails the successful command contract [0.29ms]\n(pass) unexpected output fails even with exit zero [0.01ms]\n\n 3 pass\n 0 fail\n 3 expect() calls\nRan 3 tests across 1 file. [53.00ms]\n"
+}

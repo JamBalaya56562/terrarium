@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "tarball": "package/aletheia-works-formicarium-0.1.0-rc.1.tgz",
+  "packageManifest": "package/manifest.json",
+  "resolver": "resolver",
+  "guestSite": "guests",
+  "files": [
+    {
+      "path": "guests/dist/aube/5a75abb5b2ff53ed9b89f85a9695e29fa8dae3a4fda6f25046f39ac04a413d92/build-info.json",
+      "size": 1112,
+      "sha256": "994ad5923dcd8383c887228987b3cf656a541bc658747d4ce76e6f219b90f5fd"
+    },
+    {
+      "path": "guests/dist/aube/5a75abb5b2ff53ed9b89f85a9695e29fa8dae3a4fda6f25046f39ac04a413d92/fixture-e6149f95eadefc92a559dd4f39b4836064a087b2f95c954bf13b6b786c8798f3.json",
+      "size": 366,
+      "sha256": "17e2c1f140570536c0fd73f9d91cc12b9b4aaa76361c2396b611005966989454"
+    },
+    {
+      "path": "guests/dist/aube/5a75abb5b2ff53ed9b89f85a9695e29fa8dae3a4fda6f25046f39ac04a413d92/guest",
+      "size": 36497472,
+      "sha256": "d973c97da25ed13e49943b0836c88fd5d9e51ac422faa5b38a3df997ad1ceef9"
+    },
+    {
+      "path": "guests/dist/aube/83a42e281acf38e98fbbddf590e77746dcb9dfdb12cce4b27d1eb1926e1e5b5d/build-info.json",
+      "size": 1112,
+      "sha256": "18248d1d2cfdd3933b5608ea795bc78473e2d400791c8d5204d63be9755102d5"
+    },
+    {
+      "path": "guests/dist/aube/83a42e281acf38e98fbbddf590e77746dcb9dfdb12cce4b27d1eb1926e1e5b5d/fixture-e6149f95eadefc92a559dd4f39b4836064a087b2f95c954bf13b6b786c8798f3.json",
+      "size": 366,
+      "sha256": "17e2c1f140570536c0fd73f9d91cc12b9b4aaa76361c2396b611005966989454"
+    },
+    {
+      "path": "guests/dist/aube/83a42e281acf38e98fbbddf590e77746dcb9dfdb12cce4b27d1eb1926e1e5b5d/guest",
+      "size": 36948544,
+      "sha256": "c7d7d13692d01c5f6adc5511c40adc6b3769080b7c433b44c411a3e52ebcd99e"
+    },
+    {
+      "path": "guests/dist/builds.json",
+      "size": 3558,
+      "sha256": "0377f69859e2fb98160cdafeebf44c8199b60f63dfd8ae3e244161d515d170d2"
+    },
+    {
+      "path": "guests/dist/pitchfork/1e8d2cbbd4fbfa46deb8c024e62368762d88b1e34a9fa75f0e8079207164dbbd/build-info.json",
+      "size": 1141,
+      "sha256": "6a1eedbda36acfadf448a1e0ce2a1d6236d5bbca70d8950b6177777310daccdd"
+    },
+    {
+      "path": "guests/dist/pitchfork/1e8d2cbbd4fbfa46deb8c024e62368762d88b1e34a9fa75f0e8079207164dbbd/fixture-70fa4ab004890168522fa83941f86a1e0a28818246b6a065e4b0ef685e8035b3.json",
+      "size": 151,
+      "sha256": "081abc73542d06df09d28cdad88bfda1628634ab5482a3f8238134a25951583a"
+    },
+    {
+      "path": "guests/dist/pitchfork/1e8d2cbbd4fbfa46deb8c024e62368762d88b1e34a9fa75f0e8079207164dbbd/guest",
+      "size": 39596008,
+      "sha256": "67bcb90c31e8525f95f49c9ef5ff9b6526f36e79471f4804bc533b192a772a23"
+    },
+    {
+      "path": "guests/tools.json",
+      "size": 207,
+      "sha256": "64a712e6ed381694d69cb434bba07b5f5e49daf13a7238709e039b3f2e96cae4"
+    },
+    {
+      "path": "package/aletheia-works-formicarium-0.1.0-rc.1.tgz",
+      "size": 234537,
+      "sha256": "ebe7e5cf6efcd26914e9016ebbd31df1d59812f5cfcfc71b874672c01109dc35"
+    },
+    {
+      "path": "package/manifest.json",
+      "size": 5648,
+      "sha256": "5c3d9b9ece32945c137ad8a5c34a85f7da3af5bd2e0343d7fa3d544895091538"
+    },
+    {
+      "path": "resolver/fixtures.js",
+      "size": 5718,
+      "sha256": "9e5eee286d91bdf887b9c68a27ab05b582fcd03b9cf115507dd155ad44e1200b"
+    },
+    {
+      "path": "resolver/manifest.js",
+      "size": 6389,
+      "sha256": "09c3f9ea51d0d7a11cdfbcc28904701d9d669bce7a157a6896506a7ea5a3bd87"
+    },
+    {
+      "path": "resolver/resolver.js",
+      "size": 5994,
+      "sha256": "34b6e1b9f497a4e0eb1fb8d15db752a6096fc27d7dceeac4c5f598a2db237efd"
+    }
+  ]
+}

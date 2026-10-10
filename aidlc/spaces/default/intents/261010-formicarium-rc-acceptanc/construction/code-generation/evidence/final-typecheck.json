@@ -1,0 +1,6 @@
+{
+  "command": "mise exec -- bun run typecheck",
+  "cwd": "/Users/mutoakio/Documents/terrarium/packages/terrarium",
+  "exit": 0,
+  "output": "$ bun run gen && tsc -p tsconfig.json --noEmit && tsc -p tests/tsconfig.json\n$ bun scripts/gen-css.ts\n"
+}

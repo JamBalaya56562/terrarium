@@ -1,0 +1,1 @@
+"formicariumの公開RC @aletheia-works/formicarium@0.1.0-rc.1 を使った受入れ検証を進めてください。バージョンを固定してnpmから取得し、実際に導入したパッケージのversion・integrity・tarball SHA256を確認してください。期待するSHA256は 8334d7f14c31109e5be3ec90147aa02105d8d839c4c79eccc1c25cb88eabbb3a です。Node・Chromium・Firefox・WebKitで受入れ試験を再実行し、コマンド・結果・terrariumの差分を記録してください。公開・push・PR作成は不要です。"

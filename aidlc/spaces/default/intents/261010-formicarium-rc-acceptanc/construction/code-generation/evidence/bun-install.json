@@ -1,0 +1,6 @@
+{
+  "command": "mise exec -- bun install",
+  "cwd": "packages/terrarium",
+  "exit": 0,
+  "output": "bun install v1.4.2 (744846f84)\nResolving dependencies\nResolved, downloaded and extracted [4]\nSaved lockfile\n\nChecked 12 installs across 32 packages (no changes) [387.00ms]\n"
+}

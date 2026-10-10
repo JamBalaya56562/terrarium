@@ -1,0 +1,21 @@
+{
+  "priorSourceInventory": "aidlc/spaces/default/intents/261008-formicarium-integration-2/construction/code-generation/verification-preservation-fixes/source-inventory.json",
+  "priorChangedPaths": [
+    "mise.toml"
+  ],
+  "changedBehaviorOrBrowserSources": [],
+  "additionalPaths": [
+    ".rumdl.toml",
+    "CodeKB9 Markdown"
+  ],
+  "applicability": "r2 browser source/config/server/bundle inputs unchanged; mise markdown task only differs; confirm candidate inventories separately",
+  "dedicated": {
+    "pass": 45,
+    "exit": 0
+  },
+  "legacy": {
+    "pass": 34,
+    "skip": 2,
+    "exit": 0
+  }
+}

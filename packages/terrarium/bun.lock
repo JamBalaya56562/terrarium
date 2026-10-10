@@ -5,7 +5,7 @@
     "": {
       "name": "@aletheia-works/terrarium",
       "dependencies": {
-        "@aletheia-works/formicarium": "file:../../.vendor/formicarium-inputs/package/aletheia-works-formicarium-0.1.0-rc.1.tgz",
+        "@aletheia-works/formicarium": "0.1.0-rc.1",
         "@xterm/addon-fit": "^0.11.0",
         "@xterm/xterm": "^6.0.0",
       },
@@ -17,7 +17,7 @@
     },
   },
   "packages": {
-    "@aletheia-works/formicarium": ["@aletheia-works/formicarium@../../.vendor/formicarium-inputs/package/aletheia-works-formicarium-0.1.0-rc.1.tgz", {}, "sha512-G4c4Ou70cbbGN1K6e/mBKMZzgKrWiQ7r/6MjUPJoZdn/o+HumJVuWVgkcH9c/vqTMPxFxNfkUrvOzMfwArfY+w=="],
+    "@aletheia-works/formicarium": ["@aletheia-works/formicarium@0.1.0-rc.1", "", {}, "sha512-SIFbXU1QkxXDATkE0M1Prm65Kq+Q2SkwnDyBwRf/ejEd3mADZT5uueETF+r0AAl4nuDRqbbSkBc7K/fHclwICA=="],
 
     "@playwright/test": ["@playwright/test@1.63.0", "", { "dependencies": { "playwright": "1.63.0" }, "bin": { "playwright": "cli.js" } }, "sha512-oxMK4vllB9RK5NQ2l1pq1IfOf2AvnEuj/vYGDj0H2nMtmtZpKtCwt/l00GEO6xjGfpBNAvjovvYdCm50dRQkpQ=="],
 

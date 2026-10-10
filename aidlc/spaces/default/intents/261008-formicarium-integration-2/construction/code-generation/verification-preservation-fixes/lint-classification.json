@@ -1,0 +1,26 @@
+{
+  "exit": 1,
+  "total": 370,
+  "files": 91,
+  "categories": [
+    {
+      "kind": "live CodeKB",
+      "issues": 45,
+      "status": "R03 unresolved; stale CAS; retry not authorized"
+    },
+    {
+      "kind": "preserved previous sandbox browser diagnostics",
+      "issues": 324,
+      "status": "R03 unresolved; original evidence unchanged"
+    },
+    {
+      "kind": "official review tool-produced copy",
+      "issues": 1,
+      "path": "aidlc/spaces/default/intents/261008-formicarium-integration-2/construction/code-generation/reviews/review-01.md",
+      "line": 11,
+      "rule": "MD056",
+      "status": "outside worker ownership; preserved"
+    }
+  ],
+  "log": "lint-final.log"
+}

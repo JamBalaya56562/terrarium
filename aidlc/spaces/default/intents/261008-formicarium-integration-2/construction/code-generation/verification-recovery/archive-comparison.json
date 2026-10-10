@@ -1,0 +1,27 @@
+[
+  {
+    "path": "code-generation-plan.md",
+    "sha256": "a67d56a8490d326ee3cbfb09ef91cd1f45d7b0e4b8952d136ee5e575241ffe46",
+    "copyEqual": true
+  },
+  {
+    "path": "code-summary.md",
+    "sha256": "a8c0705b78f91f8ce8345c3618654fccffa56b640ae2615017de0d58dbb48e96",
+    "copyEqual": true
+  },
+  {
+    "path": "source-manifest.json",
+    "sha256": "19f03678890b56c792ee03cb39355ef7959f4b28c17ff588680ca5384e9b6f05",
+    "copyEqual": true
+  },
+  {
+    "path": "traceability.json",
+    "sha256": "7f1aa935e7bd976d4f77c3588c75fcaa4a5059a35c6e9f52770338d3509ce34b",
+    "copyEqual": true
+  },
+  {
+    "path": "unit-test-instructions.md",
+    "sha256": "87569f28d5be2685c42bcd1e7ea746cc06641b4ecdad9b9ac54b15ecf187c761",
+    "copyEqual": true
+  }
+]

@@ -1,0 +1,23 @@
+{
+  "applicationModified": [
+    "scripts/candidate-transaction.mjs",
+    "scripts/assemble-candidate.mjs",
+    "packages/terrarium/tests/candidate-transaction.test.ts",
+    "packages/terrarium/tests/assemble-candidate.test.ts",
+    "packages/terrarium/README.md"
+  ],
+  "generated": [
+    "packages/terrarium/src/generated/",
+    "packages/terrarium/dist/",
+    ".vendor/site-formicarium-integration-2-r2/",
+    ".vendor/site-legacy-integration-2-r2/"
+  ],
+  "recordModified": [
+    "code-summary.md",
+    "source-manifest.json",
+    "traceability.json",
+    "code-generation-plan.md (checkboxes15–18 only)"
+  ],
+  "recordCreated": "aidlc/spaces/default/intents/261008-formicarium-integration-2/construction/code-generation/verification-preservation-fixes/**",
+  "deletions": []
+}

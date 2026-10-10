@@ -1,0 +1,9 @@
+{
+  "command": "FORMICARIUM_RC_TARBALL=/Users/mutoakio/Documents/terrarium/.vendor/formicarium-rc-fresh-review-r01/aletheia-works-formicarium-0.1.0-rc.1.tgz mise exec -- bun test tests/formicarium-rc-identity.test.ts",
+  "cwd": "/Users/mutoakio/Documents/terrarium/packages/terrarium",
+  "chunk_id": "241e1f",
+  "wall_time_seconds": 0.013193542,
+  "exit_code": 0,
+  "original_token_count": 114,
+  "output": "bun test v1.4.2 (744846f84)\n\ntests/formicarium-rc-identity.test.ts:\n(pass) actual published pack matches installed files and fixed lock identity [11.96ms]\n(pass) wrong version refuses [2.93ms]\n(pass) wrong registry integrity refuses [2.69ms]\n(pass) wrong compressed tarball SHA256 refuses [2.37ms]\n(pass) installed file drift refuses even when the package version matches [5.03ms]\n\n 5 pass\n 0 fail\n 5 expect() calls\nRan 5 tests across 1 file. [39.00ms]\n"
+}

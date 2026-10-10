@@ -39,14 +39,15 @@
     "gen": "bun scripts/gen-css.ts",
     "build": "bun run gen && tsc -p tsconfig.json",
     "typecheck": "bun run gen && tsc -p tsconfig.json --noEmit && tsc -p tests/tsconfig.json",
-    "test": "bun run gen && bun test tests",
+    "test:prepare": "node ../../scripts/fetch-formicarium-rc.mjs",
+    "test": "bun run test:prepare && bun run gen && bun test tests",
     "prepublishOnly": "bun run build",
     "test:e2e": "playwright test"
   },
   "dependencies": {
     "@xterm/addon-fit": "^0.11.0",
     "@xterm/xterm": "^6.0.0",
-    "@aletheia-works/formicarium": "file:../../.vendor/formicarium-inputs/package/aletheia-works-formicarium-0.1.0-rc.1.tgz"
+    "@aletheia-works/formicarium": "0.1.0-rc.1"
   },
   "devDependencies": {
     "@playwright/test": "^1.63.0",

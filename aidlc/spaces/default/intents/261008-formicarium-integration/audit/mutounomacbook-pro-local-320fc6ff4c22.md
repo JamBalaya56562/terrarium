@@ -1765,3 +1765,10 @@
 **State Validity**: valid
 
 ---
+
+## Session End
+**Timestamp**: 2026-10-08T09:30:36Z
+**Event**: SESSION_ENDED
+**Reason**: inferred — Codex has no SessionEnd event (D-4); reconciled at next SessionStart. Prior session 01a1195c-5278-7c60-8af6-6dddbb45ebfa last seen 2026-10-08T03:26:56.647Z.
+
+---

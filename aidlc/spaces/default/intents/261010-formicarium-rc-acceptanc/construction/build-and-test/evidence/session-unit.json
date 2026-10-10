@@ -1,0 +1,10 @@
+{
+  "name": "session-unit",
+  "command": "mise exec -- bun test tests/formicarium-session.test.ts",
+  "cwd": "/Users/mutoakio/Documents/terrarium/packages/terrarium",
+  "chunk_id": "9dc19f",
+  "wall_time_seconds": 0.243578,
+  "exit_code": 0,
+  "original_token_count": 345,
+  "output": "bun test v1.4.2 (744846f84)\n\ntests/formicarium-session.test.ts:\n(pass) public C1 command adapter > permitted literal quote adjacency preserves baseline splitArgs tokens [3.80ms]\n(pass) public C1 command adapter > seeds /work before selected nested cwd and preserves sibling and modes [8.11ms]\n(pass) public C1 command adapter > passes guest args env timeout and retains raw result without duplicate display [0.24ms]\n(pass) public C1 command adapter > decodes split UTF8 separately in callback sequence [1.77ms]\n(pass) public C1 command adapter > failed-run partial output appears once and queue accepts next command [2.45ms]\n(pass) public C1 command adapter > empty unknown literal quoting and unsupported shell syntax [0.26ms]\n(pass) public C1 command adapter > ls default option path empty direct children file symlink and missing [1.01ms]\n(pass) public C1 command adapter > rm removes dir recursively and link only, preserves hardlink peer, rejects roots [0.80ms]\n(pass) public C1 command adapter > cd/cat missing failures retain baseline output and keep cwd synchronized [0.25ms]\n(pass) public C1 command adapter > copy changes are isolated reset restores seed and selected cwd sessions independent [3.81ms]\n(pass) public C1 command adapter > legacy exported Session and Tool remain usable [0.47ms]\n\n 11 pass\n 0 fail\n 59 expect() calls\nRan 11 tests across 1 file. [52.00ms]\n"
+}

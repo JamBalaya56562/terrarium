@@ -1,0 +1,6 @@
+{
+  "command": "mise exec -- tombi format --check mise.toml",
+  "cwd": "/Users/mutoakio/Documents/terrarium",
+  "exit": 0,
+  "output": "Warning: failed to save to cache: /Users/mutoakio/.cache/tombi/https/www.schemastore.org/api/json/catalog.json, reason: Operation not permitted (os error 1)\nWarning: failed to save to cache: /Users/mutoakio/.cache/tombi/https/mise.jdx.dev/schema/mise.json, reason: Operation not permitted (os error 1)\n1 file did not need formatting\n"
+}

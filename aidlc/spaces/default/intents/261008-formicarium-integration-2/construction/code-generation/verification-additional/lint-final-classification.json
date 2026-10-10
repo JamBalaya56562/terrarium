@@ -1,0 +1,9 @@
+{
+  "issueCount": 369,
+  "files": 90,
+  "byCategory": {
+    "initial-browser-error-context": 324,
+    "CodeKB": 45
+  },
+  "sourceLog": "lint-final.log"
+}

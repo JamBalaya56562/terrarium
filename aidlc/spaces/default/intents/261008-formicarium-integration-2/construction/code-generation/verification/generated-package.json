@@ -1,0 +1,178 @@
+{
+  "destination": "packages/terrarium/dist",
+  "inventorySha256": "1d4c1519a79c874ece97e8fc794079c45ec747f5206fe5f693cb3d3d4f0ef893",
+  "files": [
+    {
+      "path": "catalog.d.ts",
+      "kind": "file",
+      "size": 1851,
+      "digest": "bf6ba4a7bb732b45e845a6789077c5618f25ff8430d0df347432c6fad8bf3d05"
+    },
+    {
+      "path": "catalog.d.ts.map",
+      "kind": "file",
+      "size": 1680,
+      "digest": "6724848ccd0753e118884524fcbbda87e5dd532eaa7dffc4e4a036eb83a0569c"
+    },
+    {
+      "path": "catalog.js",
+      "kind": "file",
+      "size": 2435,
+      "digest": "ad57a306ce5e5c1d940d28863c1e9a15ee5ae0a378ef474f4624acf94d29aaa5"
+    },
+    {
+      "path": "catalog.js.map",
+      "kind": "file",
+      "size": 2848,
+      "digest": "8a9b2887003c5fa0ce94653d5e440cc533aa06b1389250a87144702ec51dad87"
+    },
+    {
+      "path": "formicarium-session.d.ts",
+      "kind": "file",
+      "size": 2340,
+      "digest": "90b5c7733b03c3062f83cd606e0bfa7b7034f64f3a696d89b3ab4d8d4b6265d7"
+    },
+    {
+      "path": "formicarium-session.d.ts.map",
+      "kind": "file",
+      "size": 2251,
+      "digest": "8f58e6800edfc6e5200c03f88db372c4bbc892c539d58a1e3da042b3e2bdf47a"
+    },
+    {
+      "path": "formicarium-session.js",
+      "kind": "file",
+      "size": 10652,
+      "digest": "67c1c37aa4e5d04aea08519d0ed42ae511ae5b2da42fb2da9e3bf6534f9784a9"
+    },
+    {
+      "path": "formicarium-session.js.map",
+      "kind": "file",
+      "size": 10024,
+      "digest": "0d3aa73b4f2bf87eb63bb8dbafac285862c80c3c1d7f55cf6d568297944a3897"
+    },
+    {
+      "path": "generated",
+      "kind": "directory"
+    },
+    {
+      "path": "generated/xterm-css.d.ts",
+      "kind": "file",
+      "size": 86,
+      "digest": "33c9a7dabe38966f16ef4799cdafdbca7a88f9ce519963907dc652502bb09670"
+    },
+    {
+      "path": "generated/xterm-css.d.ts.map",
+      "kind": "file",
+      "size": 173,
+      "digest": "54fe6e48a0185e61b16055a12153488e90c23792b32d60aec1fd1f37395ffcf2"
+    },
+    {
+      "path": "generated/xterm-css.js",
+      "kind": "file",
+      "size": 7576,
+      "digest": "d0d4f8a48b0cdfa7158569b67d6450d7f49f270297afa28becaf7b05e46eb206"
+    },
+    {
+      "path": "generated/xterm-css.js.map",
+      "kind": "file",
+      "size": 191,
+      "digest": "04a778999b6db359dc375073df8033c6854a2595253c6da42af9687d461f3391"
+    },
+    {
+      "path": "index.d.ts",
+      "kind": "file",
+      "size": 422,
+      "digest": "01808d2ab8fd1516cd54c3243dd4a16b8199f5365490f24eb9226dc8fac0386e"
+    },
+    {
+      "path": "index.d.ts.map",
+      "kind": "file",
+      "size": 463,
+      "digest": "64217bcece9059445e9848e3fb5b070797bba1e44d316f17cc4e5fd07551ea6c"
+    },
+    {
+      "path": "index.js",
+      "kind": "file",
+      "size": 481,
+      "digest": "241612644b16c6e8fa258db34bd9f7e066cc131b388973dde7d1b6f2516e645c"
+    },
+    {
+      "path": "index.js.map",
+      "kind": "file",
+      "size": 328,
+      "digest": "9e2207603f8a84185780c241861e7a1688e8dcbfceb36d97a053bbef76766e56"
+    },
+    {
+      "path": "npm.d.ts",
+      "kind": "file",
+      "size": 466,
+      "digest": "78cab9a0ce876d0e1b7dc0995529048f13bdcfea07936304d19c673d4b4e7f28"
+    },
+    {
+      "path": "npm.d.ts.map",
+      "kind": "file",
+      "size": 434,
+      "digest": "50d8a6b10666cc657aa302f019d00da970c060c1439fddbd7a5e6a5ce6f449f0"
+    },
+    {
+      "path": "npm.js",
+      "kind": "file",
+      "size": 330,
+      "digest": "274e56321f7df00e80d816e7e336b79e39fad699a76d692d8c890a9195df6132"
+    },
+    {
+      "path": "npm.js.map",
+      "kind": "file",
+      "size": 169,
+      "digest": "8d92ee5248bc0eedaf575ca98c9a5b77f698b45bcbe5d1fca167c9c66a578916"
+    },
+    {
+      "path": "session.d.ts",
+      "kind": "file",
+      "size": 3079,
+      "digest": "3f268bfef921779ff49fa04e06a248eddd2e5d00e52bddff5b04b2a899819270"
+    },
+    {
+      "path": "session.d.ts.map",
+      "kind": "file",
+      "size": 2884,
+      "digest": "f359a093a1a18edf11d2871abb8f8bca694228b768797455b8f8ce6829baa1f1"
+    },
+    {
+      "path": "session.js",
+      "kind": "file",
+      "size": 8585,
+      "digest": "1be0b62ea7d6d69f59079da667e0f3b14114cac6839555a83f8e067ae385a04f"
+    },
+    {
+      "path": "session.js.map",
+      "kind": "file",
+      "size": 9448,
+      "digest": "161772e9cfe36a517053834f1c75a721e681cb20333d60fd8fc1644df1c6db67"
+    },
+    {
+      "path": "terminal.d.ts",
+      "kind": "file",
+      "size": 1586,
+      "digest": "548dc55c90f68bcbf373a4060e113ef5feeee997e19bfbcb1b21d9f231dbb48a"
+    },
+    {
+      "path": "terminal.d.ts.map",
+      "kind": "file",
+      "size": 1190,
+      "digest": "80bbe5abace6ff3d2af21b2aae4b21b6db76751c9e5814114386dec9ec72bbe2"
+    },
+    {
+      "path": "terminal.js",
+      "kind": "file",
+      "size": 16430,
+      "digest": "67a1252576f5817f309070987b9f854e5b0f2bbaddaa1584d0ed8ad36c61e2d1"
+    },
+    {
+      "path": "terminal.js.map",
+      "kind": "file",
+      "size": 14844,
+      "digest": "b12d52098b19eee6989688f7a53571ee764ac73c1a1b3da094d480810bee221f"
+    }
+  ]
+}

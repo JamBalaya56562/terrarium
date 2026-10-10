@@ -1,0 +1,328 @@
+{
+  "schemaVersion": 1,
+  "captured": "2026-10-08T10:39:19.205529+00:00",
+  "head": "0aa94fde1e33230efb96e8763f0fa811ce1cdd80",
+  "inventorySha256": "2dc7d0bf32d4ccdac73fc6e240f9e0cf92e6f82533a504fc99047640d7d22bfa",
+  "files": [
+    {
+      "path": "integration/formicarium-inputs.json",
+      "size": 3573,
+      "sha256": "3af5b67cd5ae9e6d78b3335571d68d20bf746e4daab64316f2ddfab3b3721be3"
+    },
+    {
+      "path": "mise.toml",
+      "size": 5797,
+      "sha256": "b96b54e32a21a2773f42fb465a61936b281cb2e922d9f9166e12bb0088a87ce1"
+    },
+    {
+      "path": "packages/terrarium/README.md",
+      "size": 10781,
+      "sha256": "442a860d5b24f1a782274179433a82604185ea1f7552957a7a4ec4a2c3b2b001"
+    },
+    {
+      "path": "packages/terrarium/bun.lock",
+      "size": 8187,
+      "sha256": "f381bdcdda55023bc5c4604cfe6389fc9ce04761d6871bb6697780fab97a40ca"
+    },
+    {
+      "path": "packages/terrarium/e2e/formicarium-iframe.spec.ts",
+      "size": 7038,
+      "sha256": "51687aa30a69c4e4a2975edf922bfb712a66af839fe7ec179a6222bf3307b114"
+    },
+    {
+      "path": "packages/terrarium/e2e/formicarium-serve.ts",
+      "size": 1696,
+      "sha256": "48cc36cbf0563e927759b354ebe838bc812c37eebd8af61e4ba160af4cda3073"
+    },
+    {
+      "path": "packages/terrarium/e2e/formicarium-terminal.spec.ts",
+      "size": 8597,
+      "sha256": "982f0e75eac3103e398c08dee22ccc9f8849fc7429345ea4f4dd03d1d227cbd1"
+    },
+    {
+      "path": "packages/terrarium/e2e/host/element.html",
+      "size": 516,
+      "sha256": "cdab89367d41f7aba1ef1256bca92d721880eaf42d9f90d44c139c96a286aa36"
+    },
+    {
+      "path": "packages/terrarium/e2e/host/formicarium/element.html",
+      "size": 902,
+      "sha256": "af1dd2a54e8693ff1cc57c7faae23195eacbb4c6a77ab752471f606da8a4735a"
+    },
+    {
+      "path": "packages/terrarium/e2e/host/formicarium/iframe.html",
+      "size": 1113,
+      "sha256": "ee60eac343b45113f00e1a66aac0d09194852ecaadfdef1aa2191b19d39174de"
+    },
+    {
+      "path": "packages/terrarium/e2e/host/iframe.html",
+      "size": 752,
+      "sha256": "b43fd3b3359817824f67b16133b23aee66be51e3b9a3258e70731adac0949438"
+    },
+    {
+      "path": "packages/terrarium/e2e/host/pitchfork-element.html",
+      "size": 425,
+      "sha256": "f663b2335fa2408a1a0c17e68f74791ea04ef54cb4c9d933c8043e987e3ee540"
+    },
+    {
+      "path": "packages/terrarium/e2e/host/pitchfork-iframe.html",
+      "size": 743,
+      "sha256": "d55080a04e74f7d14af8f636d2c70b3caf88af6fb5f23ffee0e4d119e0d90cc4"
+    },
+    {
+      "path": "packages/terrarium/e2e/host/plain/element.html",
+      "size": 529,
+      "sha256": "e3a5d6656347cdda1cdb4c5e4f1788a87ef8006824563b3f6f75229dacd00c1a"
+    },
+    {
+      "path": "packages/terrarium/e2e/host/plain/pitchfork-element.html",
+      "size": 469,
+      "sha256": "893f9703f95c6e2356dac197a3a1043f35451c20e02ed887204e88bb6fa7a4bb"
+    },
+    {
+      "path": "packages/terrarium/e2e/pitchfork.spec.ts",
+      "size": 6515,
+      "sha256": "92c521cee28eae59fd8bb9e2c1ff8f519ad6bda89d5c10a845d9884783bba5a0"
+    },
+    {
+      "path": "packages/terrarium/e2e/serve.ts",
+      "size": 1634,
+      "sha256": "85f78b90e31a2f52dc399c31aeb7584139a318fe820e1e21ff2b5a6ef1f76682"
+    },
+    {
+      "path": "packages/terrarium/e2e/terminal.spec.ts",
+      "size": 4013,
+      "sha256": "98d4b2813efe8a4dd090f4626f4cd094403f8c9fe4df13e1c44f60dea9b02bb3"
+    },
+    {
+      "path": "packages/terrarium/package.json",
+      "size": 1934,
+      "sha256": "080f30e4725d2254a15e87108a43a05623008711e7c62b1204625e9a42b128cd"
+    },
+    {
+      "path": "packages/terrarium/playwright.config.ts",
+      "size": 1487,
+      "sha256": "1cf519301eae5ff7f565bb8f70266ca71fded90e40c4b90839d2e41f6e8beaf1"
+    },
+    {
+      "path": "packages/terrarium/playwright.formicarium.config.ts",
+      "size": 1236,
+      "sha256": "6bf3a0bbfe327536efee30f83db75a189febac83466af79d4b1136a98832f9a1"
+    },
+    {
+      "path": "packages/terrarium/src/catalog.ts",
+      "size": 3641,
+      "sha256": "452b007bd46c51f9ca3ac1a11557a09a3bb15cbd1235973a75018e243c430904"
+    },
+    {
+      "path": "packages/terrarium/src/formicarium-session.ts",
+      "size": 10888,
+      "sha256": "10ddff46882843453a7d35e5231bdc307a272bab41b4a3640d8fd1a61d3002a2"
+    },
+    {
+      "path": "packages/terrarium/src/index.ts",
+      "size": 686,
+      "sha256": "893f931912430ad3459a76ccf2fe66f511112c6274409092616efce4ddb78c47"
+    },
+    {
+      "path": "packages/terrarium/src/npm.ts",
+      "size": 692,
+      "sha256": "8d8e7549b8eaf08404f48cb40edf73fbf5fcd99b1de8f13ce7cf47922f4a5aff"
+    },
+    {
+      "path": "packages/terrarium/src/session.ts",
+      "size": 9869,
+      "sha256": "39f0d1800ecc391633fbf68cc37b0134dce0fe6d2ff34d92561105dee8bb1d9c"
+    },
+    {
+      "path": "packages/terrarium/src/terminal.ts",
+      "size": 16182,
+      "sha256": "1f22e8081a647fb9abe4b4fbb58114b9841c3df16c3fa7cb206fa7c902cef8a7"
+    },
+    {
+      "path": "packages/terrarium/tests/assemble-candidate.test.ts",
+      "size": 4648,
+      "sha256": "e45b23001cd70b67ccb2b540c30b5236214e80078012acffea799f1ff901c812"
+    },
+    {
+      "path": "packages/terrarium/tests/candidate-transaction.test.ts",
+      "size": 8668,
+      "sha256": "7c7e66d915ed9592f42c517200e5fb8460787c8f9e1717e833e79cddfa36562e"
+    },
+    {
+      "path": "packages/terrarium/tests/catalog.test.ts",
+      "size": 5244,
+      "sha256": "8e96bc4bbcb4a6bf7ff60bbb82cbe7f0e08321b87632003be020b62a60ac4f8c"
+    },
+    {
+      "path": "packages/terrarium/tests/fake-tool.ts",
+      "size": 5076,
+      "sha256": "59956ac303ec4fb64b482d884050ef2b4246d5b8be11be22b0f2ca8acab99ab0"
+    },
+    {
+      "path": "packages/terrarium/tests/formicarium-assets.test.ts",
+      "size": 9938,
+      "sha256": "e6003555cb4cbb40e2c82d947500bd6b6f7e4cae82d2e3241209c038705bd894"
+    },
+    {
+      "path": "packages/terrarium/tests/formicarium-catalog.test.ts",
+      "size": 6893,
+      "sha256": "77e15e46ae76e80caf5513beb7542156579754814e79fd6fe53499f891f3f8d7"
+    },
+    {
+      "path": "packages/terrarium/tests/formicarium-inputs.test.ts",
+      "size": 7922,
+      "sha256": "5b93f8be611a26d040033d97b9b2344de6e4b91c38c35b03dac4db6f83729ac2"
+    },
+    {
+      "path": "packages/terrarium/tests/formicarium-session.test.ts",
+      "size": 13109,
+      "sha256": "0189cf498658964d1af592805d9c8b87d39d0099b47fa8e7c80ffb10cf77bffb"
+    },
+    {
+      "path": "packages/terrarium/tests/pages-build-artifacts.test.ts",
+      "size": 2660,
+      "sha256": "9c354876128ce4824cf8937d3edcafd1454fceb77d97f3343dcc4de2474ccce8"
+    },
+    {
+      "path": "packages/terrarium/tests/pitchfork-build-retry.test.ts",
+      "size": 7962,
+      "sha256": "c7d59699e09c474178fac6e40300b72bb0c8b3415b2c7fad0a66e7c334b8af09"
+    },
+    {
+      "path": "packages/terrarium/tests/pitchfork-runtime.test.ts",
+      "size": 14436,
+      "sha256": "afb7cd7a0c3ccca5d76a3240e4fd92036189ef31c76f384e40b7e59bb04c6d61"
+    },
+    {
+      "path": "packages/terrarium/tests/session.test.ts",
+      "size": 6272,
+      "sha256": "c5ea1ab23c1a32043269b6b293b3a6ebf3505ea1602376ae11ad3884ed335216"
+    },
+    {
+      "path": "packages/terrarium/tests/tsconfig.json",
+      "size": 254,
+      "sha256": "5bf6fd0243b94250276ef3950299a3ae7966096d69b483b19c419552e3c8e5f6"
+    },
+    {
+      "path": "packages/terrarium/tsconfig.json",
+      "size": 638,
+      "sha256": "9d8d458cf9eca294df1f0302fa85f74aacb7534327c1dbbf8250dc58c81906b8"
+    },
+    {
+      "path": "runtime/libterrarium.js",
+      "size": 4193,
+      "sha256": "e7a4d7a1b4d0cbf2a0f8001c4172fba2ed8b6957f94f84281f91ce4d1ab36176"
+    },
+    {
+      "path": "runtime/run-node.mjs",
+      "size": 1910,
+      "sha256": "7202f7ce8ce84dddc00000c727328035e9acb117422bde24bf4fd64f451be8d8"
+    },
+    {
+      "path": "runtime/syscalls.c",
+      "size": 371,
+      "sha256": "913690d72f737e80eca0da3c8014cd65b148c03af4c77e4144d77334f1db3007"
+    },
+    {
+      "path": "scripts/assemble-candidate.mjs",
+      "size": 5265,
+      "sha256": "0c701b3960c24e971d31c23c2cc5bc6a428d603e485e82599f3a70d9c5ae08ad"
+    },
+    {
+      "path": "scripts/assemble-pages.sh",
+      "size": 341,
+      "sha256": "44f157396ba2d3b189732f1fc22d0a03662d986e492a705eb64c7f09dc88a518"
+    },
+    {
+      "path": "scripts/build-aube.sh",
+      "size": 2466,
+      "sha256": "a9228be2bada3d1ab901876f172723a6e06f93b9afa32b1e6721db4c4bacf3fc"
+    },
+    {
+      "path": "scripts/build-pitchfork.sh",
+      "size": 2222,
+      "sha256": "830a311523e2577b23669b9730921027a19cd52099f6342591e852df558f9dcd"
+    },
+    {
+      "path": "scripts/candidate-transaction.mjs",
+      "size": 12634,
+      "sha256": "19384c4f1f21b5d4d4fb96647900349914d7475e11443a6fad07055ed708a862"
+    },
+    {
+      "path": "scripts/check-pitchfork-runtime.mjs",
+      "size": 6828,
+      "sha256": "0300e13217ac3971ea598c4f91eefd30171f3791d91ad400d2d057cfbbd3de1c"
+    },
+    {
+      "path": "scripts/emscripten-env.sh",
+      "size": 2827,
+      "sha256": "b66716ee0c14c27489b6336bccc95b3ed4704524ca82cf5dc6166658037c540d"
+    },
+    {
+      "path": "scripts/fetch-builds.sh",
+      "size": 1131,
+      "sha256": "45ce211279cbecba3a8bbf99803ab9f8e418e2ad3a76f3c89234d160660ffdce"
+    },
+    {
+      "path": "scripts/load-builds.sh",
+      "size": 920,
+      "sha256": "bdd41b27b87dfd2f7a70cb1966e1a0eeb44835c2025092dc8b2444a2c8caf514"
+    },
+    {
+      "path": "scripts/patch-rust-src.sh",
+      "size": 834,
+      "sha256": "ba86bf22ee435160c96f5a5a2590b8170ba6d5385708ff05d8074a7002ab4404"
+    },
+    {
+      "path": "scripts/prepare-formicarium.mjs",
+      "size": 8523,
+      "sha256": "2adc9f2c376965ad291c0a0b0d6221b8ff6e146b5d097c0ffbaba4ba1438d0cf"
+    },
+    {
+      "path": "scripts/prepare-pitchfork-e2e.sh",
+      "size": 1341,
+      "sha256": "ae7415f5d6eac9262214eb99f3a9a990eca250cb2e878eb9b1d388ae23a77fd9"
+    },
+    {
+      "path": "scripts/resolve-ref.sh",
+      "size": 2014,
+      "sha256": "a31a17251600a195a79f0e5a3958e3d5f2768edc595ed113a80b9991ecf35544"
+    },
+    {
+      "path": "scripts/stage-formicarium.mjs",
+      "size": 10555,
+      "sha256": "3cc0d765148bc567c07d6ad5e1bd89efdaba1e9c9f899d3354bd20323643edda"
+    },
+    {
+      "path": "scripts/stage-web.sh",
+      "size": 2957,
+      "sha256": "ba8b7e95baa3b9bbaef7878d572bbc142412d23525613e2a852d534dca9c089f"
+    },
+    {
+      "path": "scripts/vendor-patched.sh",
+      "size": 1546,
+      "sha256": "18a1622522ce95d13f79799ce9b0e6befd26b0875638f870c50af2712f3c8d34"
+    },
+    {
+      "path": "web/coi-serviceworker.js",
+      "size": 4678,
+      "sha256": "d12bd536e27e39a773d7dc7adb1a1167d24002293e97ac81c995fb00cf8d4d5a"
+    },
+    {
+      "path": "web/index.html",
+      "size": 1776,
+      "sha256": "76090d04749bed484b8323807cf3d850014b68e7bd7077e4888a7a036b018a23"
+    },
+    {
+      "path": "web/terminal.mjs",
+      "size": 6405,
+      "sha256": "c492bbefc5128bb37bfb0118abbf024f00194c31dd8264f3c0662af0bbb22c12"
+    },
+    {
+      "path": "web/tools.json",
+      "size": 359,
+      "sha256": "eb5afc893a0ca1d4cbf282bd98b675184836bb1dcef1f2d9c81c6a51b96da112"
+    }
+  ]
+}

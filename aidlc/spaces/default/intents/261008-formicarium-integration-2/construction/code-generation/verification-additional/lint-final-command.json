@@ -1,0 +1,11 @@
+{
+  "command": [
+    "mise",
+    "run",
+    "lint:all"
+  ],
+  "started": "2026-10-08T10:57:58.697975+00:00",
+  "finished": "2026-10-08T10:57:59.150526+00:00",
+  "exit": 1,
+  "log": "lint-final.log"
+}

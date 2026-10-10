@@ -1,0 +1,50 @@
+[
+  {
+    "name": "formicarium",
+    "command": [
+      "mise",
+      "exec",
+      "--",
+      "bun",
+      "x",
+      "playwright",
+      "test",
+      "--config",
+      "playwright.formicarium.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list",
+      "--output",
+      "/Users/mutoakio/Documents/terrarium/aidlc/spaces/default/intents/261008-formicarium-integration-2/construction/code-generation/verification-preservation-fixes/formicarium-host-results"
+    ],
+    "candidate": "/Users/mutoakio/Documents/terrarium/.vendor/site-formicarium-integration-2-r2",
+    "started": "2026-10-08T11:15:26.333885+00:00",
+    "finished": "2026-10-08T11:18:17.813767+00:00",
+    "exit": 0,
+    "log": "formicarium-host-browser.log"
+  },
+  {
+    "name": "legacy",
+    "command": [
+      "mise",
+      "exec",
+      "--",
+      "bun",
+      "x",
+      "playwright",
+      "test",
+      "--config",
+      "playwright.config.ts",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list",
+      "--output",
+      "/Users/mutoakio/Documents/terrarium/aidlc/spaces/default/intents/261008-formicarium-integration-2/construction/code-generation/verification-preservation-fixes/legacy-host-results"
+    ],
+    "candidate": "/Users/mutoakio/Documents/terrarium/.vendor/site-legacy-integration-2-r2",
+    "started": "2026-10-08T11:15:26.337978+00:00",
+    "finished": "2026-10-08T11:19:31.982216+00:00",
+    "exit": 0,
+    "log": "legacy-host-browser.log"
+  }
+]

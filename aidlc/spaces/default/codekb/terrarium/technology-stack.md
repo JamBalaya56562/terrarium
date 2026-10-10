@@ -1,10 +1,54 @@
-# 技術スタック（現行 focus）
+# 公開RC受入れ focused scan: technology-stack
 
 ## Languages and Toolchain
 
-TypeScript/JavaScript、Web Components、browser Worker、Bun/TypeScript/mise を使用。package 0.1.0。mise tools は latest 指定で厳密 pin ではない。インストール済み version・脆弱性調査は行っていない。
+TypeScript/JavaScript、Custom Elements、Worker、Bun/tsc/mise。mise Node宣言は26.11.1、Bun等latest。package engines Node>=24/Bun>=1.2.0。実インストールversion確認は後続受入れ工程。
 
 ## Frameworks and Libraries
+
+宣言: xterm ^6.0.0、addon-fit ^0.11.0、Playwright ^1.63.0、TypeScript ^7.0.2、Bun types ^1.4.2。formicariumはlocal RC tarball依存。詳しい供給identityはdependencies。
+
+根拠: [今回の開発者解析](../../intents/261010-formicarium-rc-acceptanc/inception/reverse-engineering/developer-scan.md)。今回の調査は静的解析のみで、npm取得・導入確認・受入れ試験は未実行。
+
+## 保持した前store本文（historical）
+
+以下は前intentの本文を保持した履歴であり、今回の公開RC実導入・再試験結果ではない。未再読の深いcoverageはshallowへ降格する。
+
+## 現解析: technology-stack
+
+### 現在の技術スタック
+
+TypeScript/JavaScript、Bun runner/bundle、strict tsc、Custom Elements、Worker、xterm、Playwright三ブラウザ。manifest宣言はxterm ^6.0.0、addon-fit ^0.11.0、Playwright ^1.63.0、TypeScript ^7.0.2。miseのmarkdown:checkは公式rumdl check --no-cache .を使用する。インストール済み依存の脆弱性精査や外部Blink実装解析は今回範囲外。
+
+根拠: [今回の解析と検証](../../intents/261008-formicarium-integration-2/construction/code-generation/code-summary.md)。
+
+### 保持した過去の解析（historical）
+
+以下は以前の本文・identityを保持した区画であり、今回の現解析や成功結果の代用ではない。
+
+### 技術スタック
+
+#### Languages and Toolchain
+
+TypeScript/JavaScript、Custom Elements/Shadow DOM、Worker/SAB、Bun、tsc、mise。package 0.1.0、mise Node26.9.0、Bun/linterはlatest。外部Blink runtime内部は今回のdeep対象外。
+
+#### Frameworks and Libraries
+
+宣言範囲: xterm ^6.0.0、addon-fit ^0.11.0、Playwright ^1.63.0、Bun types ^1.4.2、TypeScript ^7.0.2。今回lockのresolved versionsは未精査。formicarium0.1.0-rc.1は相対file tarball依存で公開RC受入れとは区別する。
+
+根拠: [開発者引継ぎ](../../intents/261008-formicarium-integration-2/inception/reverse-engineering/developer-scan.md)。深い解析の個別23pathは[解析時点](reverse-engineering-timestamp.md)、証跡の適用性は[品質](code-quality-assessment.md)。
+
+#### Preserved Prior Store (historical; not current verification)
+
+以下は前storeの文章を保存した履歴。今回範囲外の深い解析はshallowへ降格した。「現行」「確認済み」等は元intent時点の表現で、今回のfresh合格・承認を意味しない。上の今回評価を優先する。
+
+##### 技術スタック（現行 focus）
+
+#### Historical 1: Languages and Toolchain
+
+TypeScript/JavaScript、Web Components、browser Worker、Bun/TypeScript/mise を使用。package 0.1.0。mise tools は latest 指定で厳密 pin ではない。インストール済み version・脆弱性調査は行っていない。
+
+#### Historical 2: Frameworks and Libraries
 
 現行 lock 解決: xterm 6.0.0、addon-fit 0.11.0、Playwright 1.63.0、TypeScript 7.0.2、Bun types 1.4.2。formicarium 0.1.0-rc.1 は local tarball dependency であり公開済み RC の証明ではない。旧 Emscripten toolchain 記録は shallow/historical として保持する。
 
@@ -12,13 +56,13 @@ TypeScript/JavaScript、Web Components、browser Worker、Bun/TypeScript/mise �
 
 再調査根拠: exact25 snapshot 後の全25ファイル再読・raw SHA25/25一致、直前のimported source/candidate再比較64/64一致。[再調査記録](../../intents/261008-formicarium-integration/inception/reverse-engineering/evidence/exact-scope-rescan-verification.json)。今回新規テスト実行なし。
 
-## Prior Knowledge (historical, shallow outside current focus)
+#### Prior Knowledge (historical, shallow outside current focus)
 
 以下は `261004-pitchfork-continuation` の記述を保持したもの。旧 deep coverage は UNVERIFIED のため今回の verified deep 範囲に継承しない。現行 focus については上の記述を優先する。
 
-## 技術スタック
+#### Historical 3: 技術スタック
 
-### Languages and Toolchain
+##### Historical 4: Languages and Toolchain
 
 ドキュメント根拠: スキャンで読まれた manifest／CI。現在のインストール済みバージョンを示す表ではない。
 
@@ -33,6 +77,6 @@ TypeScript/JavaScript、Web Components、browser Worker、Bun/TypeScript/mise �
 | mise / jj | タスクとツール管理／SCM |
 | OpenTofu / GitHub Actions / Pages | リポジトリ設定／CI／静的配布 |
 
-### Frameworks and Libraries
+##### Historical 5: Frameworks and Libraries
 
 JS 依存の宣言範囲は [dependencies.md](dependencies.md)。外部ツールの今回の対象は pitchfork v2.29.0。パッケージ自身は `@aletheia-works/terrarium` 0.1.0。

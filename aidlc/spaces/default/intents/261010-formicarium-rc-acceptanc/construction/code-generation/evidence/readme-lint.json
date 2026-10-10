@@ -1,0 +1,6 @@
+{
+  "command": "mise exec -- rumdl check --no-cache packages/terrarium/README.md",
+  "cwd": "/Users/mutoakio/Documents/terrarium",
+  "exit": 0,
+  "output": "\nSuccess: No issues found in 1 file (12ms)\n"
+}

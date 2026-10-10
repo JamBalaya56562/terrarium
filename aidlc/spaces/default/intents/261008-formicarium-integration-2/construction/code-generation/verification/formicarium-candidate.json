@@ -1,0 +1,386 @@
+{
+  "destination": ".vendor/site-formicarium-integration-2-final",
+  "inventorySha256": "cf6baa5ff3d64ae8323b6ad4bf8aa7b54d34f21b816a800c8e8db73d1ce09fb8",
+  "files": [
+    {
+      "path": ".nojekyll",
+      "kind": "file",
+      "size": 0,
+      "digest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "LICENSE",
+      "kind": "file",
+      "size": 11357,
+      "digest": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "index.html",
+      "kind": "file",
+      "size": 208,
+      "digest": "8445d22d6898ed00ce4263042f187aba69815ffe09f7416a8af7e8f841dea04d"
+    },
+    {
+      "path": "web",
+      "kind": "directory"
+    },
+    {
+      "path": "web/coi-serviceworker.js",
+      "kind": "file",
+      "size": 4678,
+      "digest": "d12bd536e27e39a773d7dc7adb1a1167d24002293e97ac81c995fb00cf8d4d5a"
+    },
+    {
+      "path": "web/dist",
+      "kind": "directory"
+    },
+    {
+      "path": "web/dist/aube",
+      "kind": "directory"
+    },
+    {
+      "path": "web/dist/aube/5a75abb5b2ff53ed9b89f85a9695e29fa8dae3a4fda6f25046f39ac04a413d92",
+      "kind": "directory"
+    },
+    {
+      "path": "web/dist/aube/5a75abb5b2ff53ed9b89f85a9695e29fa8dae3a4fda6f25046f39ac04a413d92/build-info.json",
+      "kind": "file",
+      "size": 1112,
+      "digest": "994ad5923dcd8383c887228987b3cf656a541bc658747d4ce76e6f219b90f5fd"
+    },
+    {
+      "path": "web/dist/aube/5a75abb5b2ff53ed9b89f85a9695e29fa8dae3a4fda6f25046f39ac04a413d92/fixture-e6149f95eadefc92a559dd4f39b4836064a087b2f95c954bf13b6b786c8798f3.json",
+      "kind": "file",
+      "size": 366,
+      "digest": "17e2c1f140570536c0fd73f9d91cc12b9b4aaa76361c2396b611005966989454"
+    },
+    {
+      "path": "web/dist/aube/5a75abb5b2ff53ed9b89f85a9695e29fa8dae3a4fda6f25046f39ac04a413d92/guest",
+      "kind": "file",
+      "size": 36497472,
+      "digest": "d973c97da25ed13e49943b0836c88fd5d9e51ac422faa5b38a3df997ad1ceef9"
+    },
+    {
+      "path": "web/dist/aube/83a42e281acf38e98fbbddf590e77746dcb9dfdb12cce4b27d1eb1926e1e5b5d",
+      "kind": "directory"
+    },
+    {
+      "path": "web/dist/aube/83a42e281acf38e98fbbddf590e77746dcb9dfdb12cce4b27d1eb1926e1e5b5d/build-info.json",
+      "kind": "file",
+      "size": 1112,
+      "digest": "18248d1d2cfdd3933b5608ea795bc78473e2d400791c8d5204d63be9755102d5"
+    },
+    {
+      "path": "web/dist/aube/83a42e281acf38e98fbbddf590e77746dcb9dfdb12cce4b27d1eb1926e1e5b5d/fixture-e6149f95eadefc92a559dd4f39b4836064a087b2f95c954bf13b6b786c8798f3.json",
+      "kind": "file",
+      "size": 366,
+      "digest": "17e2c1f140570536c0fd73f9d91cc12b9b4aaa76361c2396b611005966989454"
+    },
+    {
+      "path": "web/dist/aube/83a42e281acf38e98fbbddf590e77746dcb9dfdb12cce4b27d1eb1926e1e5b5d/guest",
+      "kind": "file",
+      "size": 36948544,
+      "digest": "c7d7d13692d01c5f6adc5511c40adc6b3769080b7c433b44c411a3e52ebcd99e"
+    },
+    {
+      "path": "web/dist/aube/v2.6.1",
+      "kind": "directory"
+    },
+    {
+      "path": "web/dist/aube/v2.6.1/aube.js",
+      "kind": "file",
+      "size": 119914,
+      "digest": "efac1c643527f2229dbe801929dbd9693bdad321150474e0e6023f54841db3ab"
+    },
+    {
+      "path": "web/dist/aube/v2.6.1/aube.wasm",
+      "kind": "file",
+      "size": 19856043,
+      "digest": "c167246a005f50b72fcad44ab6b67b4f520179428bb3f46463691f5fe7b00981"
+    },
+    {
+      "path": "web/dist/builds.json",
+      "kind": "file",
+      "size": 3581,
+      "digest": "53e9287c7a7cc944ae773077c45ac40749794f6416686b2106212336fe01ad2c"
+    },
+    {
+      "path": "web/dist/fixtures",
+      "kind": "directory"
+    },
+    {
+      "path": "web/dist/fixtures/aube-local-deps.json",
+      "kind": "file",
+      "size": 366,
+      "digest": "2a2b3bbf5995be2f20fb8fe7a5e29b0ca1c733db9b491bfef991a408a7a7bc44"
+    },
+    {
+      "path": "web/dist/fixtures/pitchfork-basic.json",
+      "kind": "file",
+      "size": 151,
+      "digest": "081abc73542d06df09d28cdad88bfda1628634ab5482a3f8238134a25951583a"
+    },
+    {
+      "path": "web/dist/pitchfork",
+      "kind": "directory"
+    },
+    {
+      "path": "web/dist/pitchfork/1e8d2cbbd4fbfa46deb8c024e62368762d88b1e34a9fa75f0e8079207164dbbd",
+      "kind": "directory"
+    },
+    {
+      "path": "web/dist/pitchfork/1e8d2cbbd4fbfa46deb8c024e62368762d88b1e34a9fa75f0e8079207164dbbd/build-info.json",
+      "kind": "file",
+      "size": 1141,
+      "digest": "6a1eedbda36acfadf448a1e0ce2a1d6236d5bbca70d8950b6177777310daccdd"
+    },
+    {
+      "path": "web/dist/pitchfork/1e8d2cbbd4fbfa46deb8c024e62368762d88b1e34a9fa75f0e8079207164dbbd/fixture-70fa4ab004890168522fa83941f86a1e0a28818246b6a065e4b0ef685e8035b3.json",
+      "kind": "file",
+      "size": 151,
+      "digest": "081abc73542d06df09d28cdad88bfda1628634ab5482a3f8238134a25951583a"
+    },
+    {
+      "path": "web/dist/pitchfork/1e8d2cbbd4fbfa46deb8c024e62368762d88b1e34a9fa75f0e8079207164dbbd/guest",
+      "kind": "file",
+      "size": 39596008,
+      "digest": "67bcb90c31e8525f95f49c9ef5ff9b6526f36e79471f4804bc533b192a772a23"
+    },
+    {
+      "path": "web/dist/pitchfork/v2.29.0",
+      "kind": "directory"
+    },
+    {
+      "path": "web/dist/pitchfork/v2.29.0/pitchfork.js",
+      "kind": "file",
+      "size": 126047,
+      "digest": "4bf0ea2764e2ba3c5650cb577f5c66156af5a76cd682691d1d8f4e07875b8fb1"
+    },
+    {
+      "path": "web/dist/pitchfork/v2.29.0/pitchfork.wasm",
+      "kind": "file",
+      "size": 20389228,
+      "digest": "16f335ef529b2fa7815cc6201030b01538ef76d9b52478746dc4df62161b8cee"
+    },
+    {
+      "path": "web/formicarium",
+      "kind": "directory"
+    },
+    {
+      "path": "web/formicarium/LICENSE",
+      "kind": "file",
+      "size": 11357,
+      "digest": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "web/formicarium/README.md",
+      "kind": "file",
+      "size": 21808,
+      "digest": "1a945dff56712564d1b35754e0fbff0025dafe93e341be4b4b5a8ff87461d059"
+    },
+    {
+      "path": "web/formicarium/THIRD_PARTY_NOTICES.md",
+      "kind": "file",
+      "size": 13724,
+      "digest": "d32c992ea64eceb5112ddb82669f57a2545dabe2b8e8fa0fe0ec1e7a1f14a840"
+    },
+    {
+      "path": "web/formicarium/assets",
+      "kind": "directory"
+    },
+    {
+      "path": "web/formicarium/assets/blink.mjs",
+      "kind": "file",
+      "size": 132512,
+      "digest": "cc321bca8c33c074421fd8b41ad5e7a6ce088fb4b7d50dc8204d23b97a53764e"
+    },
+    {
+      "path": "web/formicarium/assets/blink.wasm",
+      "kind": "file",
+      "size": 455584,
+      "digest": "a6cadd6a988f7dc8ba7e43dbfe527cc77a6dbd58567eba9c55ba4e3c433982a2"
+    },
+    {
+      "path": "web/formicarium/assets/build-info.json",
+      "kind": "file",
+      "size": 861,
+      "digest": "58ce693eaf3b8f7f963b0e547fa738f45fdc6d9057f9b328b76e271b2a5514d5"
+    },
+    {
+      "path": "web/formicarium/package.json",
+      "kind": "file",
+      "size": 1268,
+      "digest": "ee9f07e43f8386937181f15f8096211cf66de5941243b1c93034f30b52566a11"
+    },
+    {
+      "path": "web/formicarium/runtime",
+      "kind": "directory"
+    },
+    {
+      "path": "web/formicarium/runtime/contracts.js",
+      "kind": "file",
+      "size": 469,
+      "digest": "763c6dfb7acc0aa00b7bc707b55594c70d183f56a20b1a4be9fef97a6e7f8272"
+    },
+    {
+      "path": "web/formicarium/runtime/core.js",
+      "kind": "file",
+      "size": 13653,
+      "digest": "9b91b55d7b4fe4b67b8cd3eca4e9d972da7094a41bf06f1c734454d425e7ae4f"
+    },
+    {
+      "path": "web/formicarium/runtime/errors.js",
+      "kind": "file",
+      "size": 1476,
+      "digest": "931dbc6f0567388505b81160402523928cd588588f5943687412e761c55822f9"
+    },
+    {
+      "path": "web/formicarium/runtime/guest-io.js",
+      "kind": "file",
+      "size": 17922,
+      "digest": "05667db5c3db93b906b1cdeb93a2545474585d97ee0d624d3a6ceaa446b4796d"
+    },
+    {
+      "path": "web/formicarium/runtime/lifecycle.js",
+      "kind": "file",
+      "size": 8730,
+      "digest": "680d3658862df18eafcf4bea48b113bf680533d7580b39d882ba013612db4658"
+    },
+    {
+      "path": "web/formicarium/runtime/node",
+      "kind": "directory"
+    },
+    {
+      "path": "web/formicarium/runtime/node/api.js",
+      "kind": "file",
+      "size": 3579,
+      "digest": "39e18102fc201b9ddff1b6bad1aee14f78b67a6c0e78941498c68b1aeb949148"
+    },
+    {
+      "path": "web/formicarium/runtime/node/package-worker.js",
+      "kind": "file",
+      "size": 2471,
+      "digest": "9be11c0516949a98b62b74fe787f14aabe459a7a3011c18ba3d2c90bf8c925c1"
+    },
+    {
+      "path": "web/formicarium/runtime/protocol.js",
+      "kind": "file",
+      "size": 3913,
+      "digest": "b27f34d8b2b09a445c5e0a90248ac685ca5fa273a6d396acc6363930f3817eca"
+    },
+    {
+      "path": "web/formicarium/runtime/public.js",
+      "kind": "file",
+      "size": 364,
+      "digest": "dc3a533b4d243121d0b401215a9a30755e5ca2d64673552ccdd88c3fc4c27229"
+    },
+    {
+      "path": "web/formicarium/runtime/state.js",
+      "kind": "file",
+      "size": 3610,
+      "digest": "0c79fcfa566b584838e31c5410f5892888bb28558cd34bdedcbe80d3f9a16ecb"
+    },
+    {
+      "path": "web/formicarium/runtime/validation.js",
+      "kind": "file",
+      "size": 9143,
+      "digest": "c06e80d288d9c7552193764a158d59d5f97341fab03282daaea71bc46f745ba0"
+    },
+    {
+      "path": "web/formicarium/runtime/web",
+      "kind": "directory"
+    },
+    {
+      "path": "web/formicarium/runtime/web/api.js",
+      "kind": "file",
+      "size": 9514,
+      "digest": "7a9815837f89205094dc432c4bda1661b444defbd373a95009616211e8ab614c"
+    },
+    {
+      "path": "web/formicarium/runtime/web/package-worker.js",
+      "kind": "file",
+      "size": 3037,
+      "digest": "12e72d9ba65d12cde39922f1ebf38cad711efc4e42e053f0eb9851447ce540f3"
+    },
+    {
+      "path": "web/formicarium/runtime/worker-execution.js",
+      "kind": "file",
+      "size": 2832,
+      "digest": "53fbe0d3d45f9474db1f52168346920cbf8bb084c98d92b8e4de9bfc3d9d4be8"
+    },
+    {
+      "path": "web/formicarium/types",
+      "kind": "directory"
+    },
+    {
+      "path": "web/formicarium/types/browser.d.ts",
+      "kind": "file",
+      "size": 134,
+      "digest": "eb4d20af4024dd1df109896d469076e209ee125d3d9b91f72c0f92f1481b97ba"
+    },
+    {
+      "path": "web/formicarium/types/index.d.ts",
+      "kind": "file",
+      "size": 1933,
+      "digest": "63378133908f6a8771f1259f748b425729d81e3777c2730319d8f52e8ea86ae9"
+    },
+    {
+      "path": "web/formicarium/types/node.d.ts",
+      "kind": "file",
+      "size": 134,
+      "digest": "eb4d20af4024dd1df109896d469076e209ee125d3d9b91f72c0f92f1481b97ba"
+    },
+    {
+      "path": "web/formicarium-guest-distribution",
+      "kind": "directory"
+    },
+    {
+      "path": "web/formicarium-guest-distribution/fixtures.js",
+      "kind": "file",
+      "size": 5718,
+      "digest": "9e5eee286d91bdf887b9c68a27ab05b582fcd03b9cf115507dd155ad44e1200b"
+    },
+    {
+      "path": "web/formicarium-guest-distribution/manifest.js",
+      "kind": "file",
+      "size": 6389,
+      "digest": "09c3f9ea51d0d7a11cdfbcc28904701d9d669bce7a157a6896506a7ea5a3bd87"
+    },
+    {
+      "path": "web/formicarium-guest-distribution/resolver.js",
+      "kind": "file",
+      "size": 5994,
+      "digest": "34b6e1b9f497a4e0eb1fb8d15db752a6096fc27d7dceeac4c5f598a2db237efd"
+    },
+    {
+      "path": "web/formicarium-stage.json",
+      "kind": "file",
+      "size": 7076,
+      "digest": "8a31e7f58a1e66bc3dcd1ddb1a38a4b8cdb8805d34bb44a20ef8bfd6ea3ed239"
+    },
+    {
+      "path": "web/index.html",
+      "kind": "file",
+      "size": 1800,
+      "digest": "c3ae656a97caff12605d89d1ed242fe44f6009515b560a51bd942c58fc7d79e5"
+    },
+    {
+      "path": "web/terminal.mjs",
+      "kind": "file",
+      "size": 6429,
+      "digest": "6defdde4b21e299edee3ac988766b1ae592a1e6d7df7d6cb669cdd98c08d41e1"
+    },
+    {
+      "path": "web/terrarium.mjs",
+      "kind": "file",
+      "size": 399027,
+      "digest": "990534caead78fb9c0862be6bec114984aaafec489b3fb924566b172e71a7a2e"
+    },
+    {
+      "path": "web/tools.json",
+      "kind": "file",
+      "size": 207,
+      "digest": "64a712e6ed381694d69cb434bba07b5f5e49daf13a7238709e039b3f2e96cae4"
+    }
+  ]
+}

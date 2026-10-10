@@ -1,0 +1,33 @@
+{
+  "timestamp": "2026-10-08T10:41:17.446620+00:00",
+  "baseline_runner": {
+    "command": "mise exec -- bun test packages/terrarium/tests/formicarium-session.test.ts packages/terrarium/tests/formicarium-catalog.test.ts packages/terrarium/tests/formicarium-assets.test.ts",
+    "exit": 1,
+    "reason": "default resolver absent; non-./ paths also selected historical baseline tests"
+  },
+  "concrete_runner": {
+    "command": "FORMICARIUM_INPUTS_ROOT=<workspace>/.vendor/formicarium-inputs-integration-2 mise exec -- bun test ./packages/terrarium/tests/formicarium-session.test.ts ./packages/terrarium/tests/formicarium-catalog.test.ts ./packages/terrarium/tests/formicarium-assets.test.ts",
+    "exit": 0,
+    "passed": 27,
+    "failed": 0,
+    "assertions": 149
+  },
+  "cache_archive": {
+    "path": ".vendor/formicarium-ci-inputs/inputs.tar.gz",
+    "sha256": "00abfc608106c8b4a17bd973b4a948b0aa1fa23c713ac22ad62e5a4571c75d01",
+    "status": "historical archive not used; differs from current descriptor"
+  },
+  "input_preparation": {
+    "source": ".vendor/formicarium-inputs-repair-v1",
+    "destination": ".vendor/formicarium-inputs-integration-2",
+    "files": 16,
+    "normalizedDescriptorSha256": "396cd5552bf09beea42e0769701e0be43faf566a7bf6f91092d19d420c41a855",
+    "unchanged_source": true
+  },
+  "versions": {
+    "bun": "1.4.2",
+    "node": "v26.9.0",
+    "biome": "Version: 2.5.15",
+    "rumdl": "rumdl 0.2.78"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "frozenAt": "2026-10-08T11:20:04.486499+00:00",
+  "sourceInventorySha256": "3cb41e963e835125f2ce82a7f534f113a0c31ba27038eb0409b1af0a5423b3ac",
+  "sourceArtifactsFrozen": true,
+  "globalLintExit": 1,
+  "globalLintIssues": 370,
+  "formalReview": "root pending",
+  "files": [
+    {
+      "path": "aidlc/spaces/default/intents/261008-formicarium-integration-2/construction/code-generation/code-summary.md",
+      "sha256": "a8c0705b78f91f8ce8345c3618654fccffa56b640ae2615017de0d58dbb48e96"
+    },
+    {
+      "path": "aidlc/spaces/default/intents/261008-formicarium-integration-2/construction/code-generation/source-manifest.json",
+      "sha256": "19f03678890b56c792ee03cb39355ef7959f4b28c17ff588680ca5384e9b6f05"
+    },
+    {
+      "path": "aidlc/spaces/default/intents/261008-formicarium-integration-2/construction/code-generation/traceability.json",
+      "sha256": "7f1aa935e7bd976d4f77c3588c75fcaa4a5059a35c6e9f52770338d3509ce34b"
+    },
+    {
+      "path": "aidlc/spaces/default/intents/261008-formicarium-integration-2/construction/code-generation/code-generation-plan.md",
+      "sha256": "a67d56a8490d326ee3cbfb09ef91cd1f45d7b0e4b8952d136ee5e575241ffe46"
+    }
+  ]
+}

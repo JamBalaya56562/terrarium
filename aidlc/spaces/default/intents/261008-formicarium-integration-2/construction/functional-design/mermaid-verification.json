@@ -1,0 +1,10 @@
+{
+  "checked_at": "2026-10-08T10:15:06.264477+00:00",
+  "command": "mise exec -- bun /private/tmp/terrarium-functional-mermaid/check.mjs",
+  "parser": "mermaid@12.1.0",
+  "exit_code": 0,
+  "diagram": "erDiagram\n  CHOICE ||--o{ RUN : selects\n  INPUT_SET ||--o{ CANDIDATE : produces\n  CANDIDATE ||--o{ EVIDENCE : identifies\n  CHOICE ||--o| CANDIDATE : resolves",
+  "result": {
+    "valid": true
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "command": "mise exec -- node scripts/fetch-formicarium-rc.mjs --output .vendor/formicarium-rc-corrupt-review-r01",
+  "cwd": "/Users/mutoakio/Documents/terrarium",
+  "expectedExit": "nonzero",
+  "exit": 1,
+  "output": "npm notice\nnpm notice New major version of npm available! 11.20.0 -> 12.2.0\nnpm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0\nnpm notice To update run: npm install -g npm@12.2.0\nnpm notice\nfile:///Users/mutoakio/Documents/terrarium/scripts/verify-formicarium-rc.mjs:31\n  if (tarballSha256 !== RC_SHA256) throw new Error('tarball SHA256 mismatch');\n                                         ^\n\nError: tarball SHA256 mismatch\n    at verifyTarball (file:///Users/mutoakio/Documents/terrarium/scripts/verify-formicarium-rc.mjs:31:42)\n    at fetchRc (file:///Users/mutoakio/Documents/terrarium/scripts/fetch-formicarium-rc.mjs:50:12)\n    at async file:///Users/mutoakio/Documents/terrarium/scripts/fetch-formicarium-rc.mjs:90:30\n\nNode.js v26.11.1\n",
+  "preservationCheck": {
+    "exit": 0,
+    "output": "corrupt input rejected and bytes retained\n"
+  }
+}

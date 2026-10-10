@@ -102,10 +102,12 @@ Per unit: [TBD]
 - **Lifecycle Phase**: CONSTRUCTION
 - **Current Stage**: code-generation
 - **Next Stage**: build-and-test
-- **Status**: Running
-- **Last Updated**: 2026-10-05T00:44:54Z
+- **Status**: Archived
+- **Last Updated**: 2026-10-10T13:11:48Z
 
 - **Construction Autonomy Mode**: autonomous
+
+- **Archived From**: Running
 
 ## Session Resume Point
 - **Last Completed Stage**: units-generation

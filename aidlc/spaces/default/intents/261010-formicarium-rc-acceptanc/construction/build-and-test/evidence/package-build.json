@@ -1,0 +1,10 @@
+{
+  "name": "package-build",
+  "command": "mise exec -- bun run build",
+  "cwd": "/Users/mutoakio/Documents/terrarium/packages/terrarium",
+  "chunk_id": "b116a0",
+  "wall_time_seconds": 0.439424792,
+  "exit_code": 0,
+  "original_token_count": 16,
+  "output": "$ bun run gen && tsc -p tsconfig.json\n$ bun scripts/gen-css.ts\n"
+}

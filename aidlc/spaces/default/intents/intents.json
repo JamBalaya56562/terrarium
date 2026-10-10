@@ -4,7 +4,7 @@
     "slug": "pitchfork-continuation",
     "dirName": "261004-pitchfork-continuation",
     "scope": "pitchfork-continuation",
-    "status": "in-flight"
+    "status": "archived"
   },
   {
     "uuid": "01a11910-8ce7-7ef0-8d2d-4afb40b934d5",
@@ -12,5 +12,20 @@
     "dirName": "261008-formicarium-integration",
     "scope": "express",
     "status": "complete"
+  },
+  {
+    "uuid": "01a11ad8-e25f-7d51-8173-1e839c909560",
+    "slug": "formicarium-integration",
+    "dirName": "261008-formicarium-integration-2",
+    "scope": "express",
+    "status": "complete"
+  },
+  {
+    "uuid": "01a12598-22c3-7cb6-8862-1f37461fc65a",
+    "slug": "formicarium-rc-acceptanc",
+    "dirName": "261010-formicarium-rc-acceptanc",
+    "scope": "poc",
+    "status": "complete",
+    "request": "0c3a16bc"
   }
 ]

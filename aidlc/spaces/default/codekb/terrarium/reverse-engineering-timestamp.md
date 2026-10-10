@@ -1,4 +1,46 @@
-# 解析時点
+# Reverse Engineering Timestamp
+
+## Run Record
+
+- Date: 2026-10-10 (Asia/Tokyo)
+- Commit: 8f4ba0d97716eace8430bcb8bc6a210dd4ab29a0 (jj read-only recorded commit; scan includes working-copy source)
+- Focused scan; Minimal; brownfield. No package install/test execution.
+- Pre-scan snapshot store_generation: sha256:72007b143a712a8f7e6ff05857253a523474dbacc075065621467a9419e461ea
+- Pre-scan source_fingerprint: git:a457c5b41a0069e8361c3e861167e62d1104e69c
+- Snapshot coverage repair: root captured a fresh snapshot over the exact 20 individual analyzed paths below, with unchanged store_generation. After that snapshot this developer re-read all 20 files successfully (20 cat commands, exit 0), then rechecked the same implementation and test conclusions. The earlier broad-directory snapshot is superseded, not used as publication provenance.
+- Prior store STALE: only this run's individual files are deep; unverifiable prior coverage stays shallow.
+
+## Preserved Prior Run Records
+
+## 現解析: reverse-engineering-timestamp
+
+### 今回の解析時点
+
+2026-10-08 UTC、Focused scan、Minimal、Brownfield。正式snapshot後に現在の30個別pathを実読した。範囲は下のScope of Analysis、raw SHAは新verification-recovery/codekb-source30.jsonに保存する。未読の旧深掘りはshallowへ降格する。新しい解析であり旧fingerprintの付替えではない。
+
+根拠: [今回の解析と検証](../../intents/261008-formicarium-integration-2/construction/code-generation/code-summary.md)。
+
+### 保持した過去の解析（historical）
+
+以下は以前の本文・identityを保持した区画であり、今回の現解析や成功結果の代用ではない。
+
+### 解析時点
+
+- 2026-10-08（Asia/Tokyo）、Focused scan、Minimal、Brownfield。
+- active intent: 261008-formicarium-integration-2。未コミット差分を含み単一commit全面解析とは主張しない。
+- prior store UNVERIFIED。現在developerの個別23pathのみdeepとして記録し旧深掘り未再読をshallowへ降格。
+- pre-scan store_generation: sha256:2ba3cefe4b5821a588fe0a4f3deead33b19d9324cccb67252dba1db15c24f3fc。
+- pre-scan source_fingerprint: git:6cbeaedce987b9631bd8735fbfaeb62afb58d23b。
+- fingerprintはexact23についてread-only mint出力をそのまま使用。今回pre-scan snapshotは同じexact23個別pathで取得し、その後developerが全23filesを再読した。取得時刻は2026-10-08T09:50:45.970036+00:00。リポジトリ修復後の最新git表現snapshotに対応する再読。以前のdirectory shorthandおよびtree表現snapshotは今回候補のprovenanceに使わない。23bytes SHAは全一致。
+- developer handoffが旧証跡10digest一致、25source drift、CT-1後続解消を確認。新規test実行なし、正式レビュー未実施。
+
+根拠: [開発者引継ぎ](../../intents/261008-formicarium-integration-2/inception/reverse-engineering/developer-scan.md)。深い解析の個別23pathは[解析時点](reverse-engineering-timestamp.md)、証跡の適用性は[品質](code-quality-assessment.md)。
+
+#### Preserved Prior Store (historical; not current verification)
+
+以下は前storeの文章を保存した履歴。今回範囲外の深い解析はshallowへ降格した。「現行」「確認済み」等は元intent時点の表現で、今回のfresh合格・承認を意味しない。上の今回評価を優先する。
+
+##### Historical 1: 解析時点
 
 - 日付: 2026-10-08（Asia/Tokyo）、intent `261008-formicarium-integration`、Minimal、Brownfield、Focused scan。
 - 根拠: 再調査済み developer-scan.md、evidence/revision-snapshot.json、reconsideration-proof.json、直前のimported evidenceの原本/コピー。
@@ -9,11 +51,11 @@
 - 初回 directory snapshot `tree:76efb44aefed2e76a08d778719bb86e84c822aaf9fc6261de591e000fb3e8423` は scan-snapshot.json に履歴として保持。対象集合の差による fingerprint の別値はソース変更を意味しない。
 - mint は `unknown`（exit 0）を返した。そのまま保持しCodeKB自動CURRENTとは主張しない。ただし独立のtree/raw SHA/digest/receipt照合で、直前のimported execution evidenceの現ソース適用性は確認済み。鮮度不明と同一視しない。
 
-## Fresh Evidence Applicability
+#### Fresh Evidence Applicability
 
 [reconsideration-proof.json](../../intents/261008-formicarium-integration/inception/reverse-engineering/evidence/reconsideration-proof.json): sameExactTree=true、source25/25、imported64/64、fixed23、installed23、receipt46 binding一致、candidate digest/sourceIdentity独立再計算一致。U3 collectorと今回retained assets懸念は解消、CI/general producerはConstruction、実配布受入れとarchitecture決定は別。詳細は[品質](code-quality-assessment.md)。
 
-## Preserved Evidence Identities
+#### Preserved Evidence Identities
 
 対象・計算法の違う identity を置換/同一視しない。source31/31、直前のimported source20＋candidate44 =64/64 raw SHA一致。直前の実行結果を現行bytesへ適用できる。今回新規test実行とは主張しない。
 
@@ -27,9 +69,9 @@
 | coverage sourceIdentity | `10e59a2ce434302860783e7d0436efda25e21ab2d5a22354d0a06f6f9c23b9f6` |
 | historical baselineCommit | `60dd0dc448f3a67d226dc8a3c6b3afcf4709823d`（現HEADの代用にしない） |
 
-## Prior Analysis Metadata (historical)
+#### Prior Analysis Metadata (historical)
 
-## 解析時点
+#### Historical 2: 解析時点
 
 - 日付: 2026-10-05（Asia/Tokyo）。
 - Intent: `261004-pitchfork-continuation`、Minimal、Brownfield。
@@ -37,9 +79,9 @@
 - 事前 snapshot: paths `./`、store generation `none`、source `git:7b6abe574efc7eac5a860778eaf89ea7a873cdf2`。
 - 一覧は広く、深い読取は下記17ファイル。未コミット変更を含むため単一 commit の完全解析ではない。
 
-### Scope of Analysis
+##### Historical Scope of Analysis
 
-```yaml
+```text
 scope_version: 1
 kind: partial
 intent: 261008-formicarium-integration
@@ -109,4 +151,265 @@ shallow:
     - .agents/
     - web/index.html
     - .github/workflows/
+```
+
+#### Historical previous Scope of Analysis
+
+```text
+scope_version: 1
+kind: partial
+intent: 261008-formicarium-integration-2
+fingerprint: 6cbeaedce987b9631bd8735fbfaeb62afb58d23b
+analyzed:
+  paths:
+    - packages/terrarium/src/formicarium-session.ts
+    - packages/terrarium/src/catalog.ts
+    - packages/terrarium/src/session.ts
+    - packages/terrarium/src/terminal.ts
+    - packages/terrarium/src/index.ts
+    - packages/terrarium/src/npm.ts
+    - packages/terrarium/package.json
+    - packages/terrarium/tsconfig.json
+    - packages/terrarium/tests/tsconfig.json
+    - packages/terrarium/README.md
+    - packages/terrarium/tests/formicarium-session.test.ts
+    - packages/terrarium/tests/formicarium-catalog.test.ts
+    - packages/terrarium/tests/formicarium-assets.test.ts
+    - packages/terrarium/e2e/formicarium-terminal.spec.ts
+    - packages/terrarium/e2e/formicarium-iframe.spec.ts
+    - packages/terrarium/playwright.formicarium.config.ts
+    - scripts/stage-formicarium.mjs
+    - scripts/assemble-pages.sh
+    - integration/formicarium-inputs.json
+    - web/terminal.mjs
+    - mise.toml
+    - .github/workflows/test-terrarium.yml
+    - .github/workflows/test-e2e.yml
+  components:
+    - Formicarium command adapter
+    - Build catalog
+    - Legacy Session compatibility boundary
+    - Terrarium terminal element
+    - Standalone and iframe bridge
+    - Formicarium asset staging
+    - Site assembly
+    - Formicarium integration tests
+    - Package build and test configuration
+    - Fixed integration input descriptor
+    - Package and E2E CI integration
+shallow:
+  paths:
+    - packages/terrarium/bun.lock
+    - packages/terrarium/jsr.json
+    - packages/terrarium/e2e/formicarium-serve.ts
+    - packages/terrarium/e2e/host/formicarium/element.html
+    - packages/terrarium/e2e/host/formicarium/iframe.html
+    - packages/terrarium/playwright.config.ts
+    - web/tools.json
+    - scripts/build-pitchfork.sh
+    - scripts/resolve-ref.sh
+    - scripts/vendor-patched.sh
+    - scripts/stage-web.sh
+    - runtime/run-node.mjs
+    - patches/tools/pitchfork-2.29.0.patch
+    - fixtures/sessions/pitchfork-basic.txt
+    - .github/workflows/pages.yml
+    - biome.json
+    - packages/terrarium/tests/
+    - packages/terrarium/e2e/
+    - runtime/
+    - patches/
+    - scripts/
+    - fixtures/
+    - web/
+    - infra/
+    - .github/
+    - mise-tasks/
+    - aidlc/
+    - .codex/
+    - .claude/
+    - .agents/
+    - web/index.html
+    - .github/workflows/
+    - packages/terrarium/e2e/host/
+    - packages/terrarium/src/generated/
+    - integration/
+```
+
+### Historical scope retained
+
+```text
+scope_version: 1
+kind: partial
+intent: 261008-formicarium-integration-2
+fingerprint: f8c0130d7fa6b4a4b88457cb71299a8c07e896f6
+analyzed:
+  paths:
+    - packages/terrarium/src/formicarium-session.ts
+    - packages/terrarium/src/catalog.ts
+    - packages/terrarium/src/session.ts
+    - packages/terrarium/src/terminal.ts
+    - packages/terrarium/src/index.ts
+    - packages/terrarium/src/npm.ts
+    - packages/terrarium/package.json
+    - packages/terrarium/tsconfig.json
+    - packages/terrarium/tests/tsconfig.json
+    - packages/terrarium/README.md
+    - packages/terrarium/tests/formicarium-session.test.ts
+    - packages/terrarium/tests/formicarium-catalog.test.ts
+    - packages/terrarium/tests/formicarium-assets.test.ts
+    - packages/terrarium/e2e/formicarium-terminal.spec.ts
+    - packages/terrarium/e2e/formicarium-iframe.spec.ts
+    - packages/terrarium/playwright.formicarium.config.ts
+    - scripts/stage-formicarium.mjs
+    - scripts/assemble-pages.sh
+    - integration/formicarium-inputs.json
+    - web/terminal.mjs
+    - mise.toml
+    - .github/workflows/test-terrarium.yml
+    - .github/workflows/test-e2e.yml
+    - scripts/candidate-transaction.mjs
+    - scripts/assemble-candidate.mjs
+    - packages/terrarium/tests/candidate-transaction.test.ts
+    - packages/terrarium/tests/assemble-candidate.test.ts
+    - packages/terrarium/tests/formicarium-inputs.test.ts
+    - .github/workflows/pages.yml
+    - .github/workflows/publish-terrarium.yml
+  components:
+    - Formicarium command adapter
+    - Build catalog
+    - Legacy Session compatibility boundary
+    - Terrarium terminal element
+    - Standalone and iframe bridge
+    - Formicarium asset staging
+    - Site assembly
+    - Formicarium integration tests
+    - Package build and test configuration
+    - Fixed integration input descriptor
+    - Package and E2E CI integration
+    - Candidate transaction
+    - Whole site assembly
+shallow:
+  paths:
+    - packages/terrarium/bun.lock
+    - packages/terrarium/jsr.json
+    - packages/terrarium/e2e/formicarium-serve.ts
+    - packages/terrarium/e2e/host/formicarium/element.html
+    - packages/terrarium/e2e/host/formicarium/iframe.html
+    - packages/terrarium/playwright.config.ts
+    - web/tools.json
+    - scripts/build-pitchfork.sh
+    - scripts/resolve-ref.sh
+    - scripts/vendor-patched.sh
+    - scripts/stage-web.sh
+    - runtime/run-node.mjs
+    - patches/tools/pitchfork-2.29.0.patch
+    - fixtures/sessions/pitchfork-basic.txt
+    - .github/workflows/pages.yml
+    - biome.json
+    - packages/terrarium/tests/
+    - packages/terrarium/e2e/
+    - runtime/
+    - patches/
+    - scripts/
+    - fixtures/
+    - web/
+    - infra/
+    - .github/
+    - mise-tasks/
+    - aidlc/
+    - .codex/
+    - .claude/
+    - .agents/
+    - web/index.html
+    - .github/workflows/
+    - packages/terrarium/e2e/host/
+    - packages/terrarium/src/generated/
+    - integration/
+```
+
+### Scope of Analysis
+
+```yaml
+scope_version: 1
+kind: partial
+intent: 261010-formicarium-rc-acceptanc
+fingerprint: a457c5b41a0069e8361c3e861167e62d1104e69c
+analyzed:
+  paths:
+    - packages/terrarium/src/formicarium-session.ts
+    - packages/terrarium/src/catalog.ts
+    - packages/terrarium/src/terminal.ts
+    - packages/terrarium/package.json
+    - packages/terrarium/README.md
+    - packages/terrarium/tests/formicarium-session.test.ts
+    - packages/terrarium/tests/formicarium-assets.test.ts
+    - packages/terrarium/playwright.formicarium.config.ts
+    - packages/terrarium/e2e/formicarium-terminal.spec.ts
+    - packages/terrarium/e2e/formicarium-iframe.spec.ts
+    - packages/terrarium/e2e/formicarium-serve.ts
+    - scripts/prepare-formicarium.mjs
+    - scripts/stage-formicarium.mjs
+    - scripts/assemble-candidate.mjs
+    - scripts/candidate-transaction.mjs
+    - scripts/assemble-pages.sh
+    - integration/formicarium-inputs.json
+    - runtime/run-node.mjs
+    - web/terminal.mjs
+    - mise.toml
+  components:
+    - Formicarium command adapter
+    - Build catalog
+    - Terrarium terminal element
+    - Standalone and iframe bridge
+    - Formicarium asset staging
+    - Fixed integration input descriptor
+    - Candidate transaction
+    - Whole site assembly
+    - Formicarium integration tests
+    - Package build and test configuration
+    - Node Runner
+shallow:
+  paths:
+    - packages/terrarium/src/session.ts
+    - packages/terrarium/src/index.ts
+    - packages/terrarium/src/npm.ts
+    - packages/terrarium/tsconfig.json
+    - packages/terrarium/tests/tsconfig.json
+    - packages/terrarium/tests/formicarium-catalog.test.ts
+    - .github/workflows/test-terrarium.yml
+    - .github/workflows/test-e2e.yml
+    - packages/terrarium/tests/candidate-transaction.test.ts
+    - packages/terrarium/tests/assemble-candidate.test.ts
+    - packages/terrarium/tests/formicarium-inputs.test.ts
+    - .github/workflows/pages.yml
+    - .github/workflows/publish-terrarium.yml
+    - packages/terrarium/bun.lock
+    - packages/terrarium/jsr.json
+    - packages/terrarium/e2e/host/formicarium/element.html
+    - packages/terrarium/e2e/host/formicarium/iframe.html
+    - packages/terrarium/playwright.config.ts
+    - web/tools.json
+    - scripts/build-pitchfork.sh
+    - scripts/resolve-ref.sh
+    - scripts/vendor-patched.sh
+    - scripts/stage-web.sh
+    - patches/tools/pitchfork-2.29.0.patch
+    - fixtures/sessions/pitchfork-basic.txt
+    - biome.json
+    - packages/terrarium/tests/
+    - packages/terrarium/e2e/
+    - runtime/
+    - patches/
+    - scripts/
+    - fixtures/
+    - web/
+    - infra/
+    - .github/
+    - mise-tasks/
+    - web/index.html
+    - .github/workflows/
+    - packages/terrarium/e2e/host/
+    - integration/
+    - packages/terrarium/src/
 ```

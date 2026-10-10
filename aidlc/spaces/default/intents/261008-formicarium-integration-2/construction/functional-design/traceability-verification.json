@@ -1,0 +1,33 @@
+{
+  "checked_at": "2026-10-08T10:14:32.987886+00:00",
+  "upstream_ids": [
+    "FR1",
+    "FR2",
+    "FR3",
+    "FR4",
+    "FR5",
+    "FR6",
+    "FR7",
+    "FR8",
+    "NFR1",
+    "NFR2",
+    "NFR3",
+    "NFR4",
+    "NFR5"
+  ],
+  "rules": [
+    "BR1.1",
+    "BR1.2",
+    "BR1.3",
+    "BR2.1",
+    "BR2.2",
+    "BR3.1",
+    "BR3.2",
+    "BR3.3"
+  ],
+  "missing": [],
+  "invalid_targets": [],
+  "orphans": [],
+  "limitation": "標準 traceability sensor は Unit なしの正式出力パスを扱えない。これは代替のID対応検査であり、標準 sensor の成功とは報告しない。",
+  "pass": true
+}

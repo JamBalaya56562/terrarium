@@ -1,0 +1,95 @@
+[
+  {
+    "name": "inputs",
+    "command": [
+      "mise",
+      "exec",
+      "--",
+      "bun",
+      "test",
+      "./packages/terrarium/tests/formicarium-inputs.test.ts"
+    ],
+    "cwd": "/Users/mutoakio/Documents/terrarium",
+    "started": "2026-10-08T10:54:16.327228+00:00",
+    "finished": "2026-10-08T10:54:16.781056+00:00",
+    "exit": 0,
+    "log": "inputs.log"
+  },
+  {
+    "name": "typecheck",
+    "command": [
+      "mise",
+      "exec",
+      "--",
+      "bun",
+      "run",
+      "typecheck"
+    ],
+    "cwd": "/Users/mutoakio/Documents/terrarium/packages/terrarium",
+    "started": "2026-10-08T10:54:16.781548+00:00",
+    "finished": "2026-10-08T10:54:17.186078+00:00",
+    "exit": 0,
+    "log": "typecheck.log"
+  },
+  {
+    "name": "unit",
+    "command": [
+      "mise",
+      "exec",
+      "--",
+      "bun",
+      "run",
+      "test"
+    ],
+    "cwd": "/Users/mutoakio/Documents/terrarium/packages/terrarium",
+    "started": "2026-10-08T10:54:17.186461+00:00",
+    "finished": "2026-10-08T10:54:21.440391+00:00",
+    "exit": 0,
+    "log": "unit.log"
+  },
+  {
+    "name": "build",
+    "command": [
+      "mise",
+      "exec",
+      "--",
+      "bun",
+      "run",
+      "build"
+    ],
+    "cwd": "/Users/mutoakio/Documents/terrarium/packages/terrarium",
+    "started": "2026-10-08T10:54:21.440784+00:00",
+    "finished": "2026-10-08T10:54:21.603780+00:00",
+    "exit": 0,
+    "log": "build.log"
+  },
+  {
+    "name": "lint",
+    "command": [
+      "mise",
+      "run",
+      "lint:all"
+    ],
+    "cwd": "/Users/mutoakio/Documents/terrarium",
+    "started": "2026-10-08T10:54:21.604110+00:00",
+    "finished": "2026-10-08T10:54:21.994738+00:00",
+    "exit": 1,
+    "log": "lint.log"
+  },
+  {
+    "name": "codekb-candidate-lint",
+    "command": [
+      "mise",
+      "exec",
+      "--",
+      "rumdl",
+      "check",
+      "aidlc/spaces/default/intents/261008-formicarium-integration-2/.aidlc-engine/codekb-format-stage-terrarium"
+    ],
+    "cwd": "/Users/mutoakio/Documents/terrarium",
+    "started": "2026-10-08T10:54:21.995102+00:00",
+    "finished": "2026-10-08T10:54:22.049250+00:00",
+    "exit": 0,
+    "log": "codekb-candidate-lint.log"
+  }
+]

@@ -1,0 +1,20 @@
+{
+  "stage": "functional-design",
+  "upstream_ids": ["FR1", "FR2", "FR3", "FR4", "FR5", "FR6", "FR7", "FR8", "NFR1", "NFR2", "NFR3", "NFR4", "NFR5"],
+  "coverage": [
+    {"id": "FR1", "status": "OK", "target": "BR1.1, BR1.2"},
+    {"id": "FR2", "status": "OK", "target": "BR1.1"},
+    {"id": "FR3", "status": "OK", "target": "BR1.2, BR1.3"},
+    {"id": "FR4", "status": "OK", "target": "BR2.1, BR2.2"},
+    {"id": "FR5", "status": "OK", "target": "BR3.1"},
+    {"id": "FR6", "status": "OK", "target": "BR3.2"},
+    {"id": "FR7", "status": "OK", "target": "BR3.1"},
+    {"id": "FR8", "status": "OK", "target": "BR3.3"},
+    {"id": "NFR1", "status": "OK", "target": "BR3.2"},
+    {"id": "NFR2", "status": "OK", "target": "BR1.3, BR2.1"},
+    {"id": "NFR3", "status": "OK", "target": "BR3.1"},
+    {"id": "NFR4", "status": "OK", "target": "BR2.2, BR3.3"},
+    {"id": "NFR5", "status": "OK", "target": "BR3.2"}
+  ],
+  "reverse": []
+}

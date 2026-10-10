@@ -18,6 +18,9 @@ exclude = [
   "aidlc/spaces/*/intents/*/**/memory.md",
   "aidlc/spaces/*/intents/*/**/*-questions.md",
   "aidlc/spaces/*/intents/*/verification/**",
+  # Raw Playwright diagnostics and formal tool review copies preserve original bytes.
+  "aidlc/spaces/*/intents/*/**/verification*/**/*results/**/error-context.md",
+  "aidlc/spaces/*/intents/*/**/reviews/review-*.md",
   "**/CHANGELOG.md",
   "**/node_modules/**",
 ]

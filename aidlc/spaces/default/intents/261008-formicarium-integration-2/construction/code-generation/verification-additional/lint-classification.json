@@ -1,0 +1,13 @@
+{
+  "issueCount": 370,
+  "files": 91,
+  "byCategory": {
+    "initial-browser-error-context": 324,
+    "CodeKB": 45,
+    "other": 1
+  },
+  "otherPaths": [
+    "aidlc/spaces/default/intents/261008-formicarium-integration-2/construction/code-generation/code-summary.md"
+  ],
+  "sourceLog": "lint.log"
+}

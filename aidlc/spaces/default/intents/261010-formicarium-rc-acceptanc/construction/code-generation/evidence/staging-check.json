@@ -1,0 +1,6 @@
+{
+  "command": "FORMICARIUM_INPUTS_ROOT=/Users/mutoakio/Documents/terrarium/.vendor/formicarium-inputs-public-rc1 mise exec -- node scripts/stage-formicarium.mjs --check",
+  "cwd": "/Users/mutoakio/Documents/terrarium",
+  "exit": 0,
+  "output": "formicarium inputs and installed package verified\n"
+}

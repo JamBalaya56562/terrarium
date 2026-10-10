@@ -1,0 +1,6 @@
+{
+  "command": "mise exec -- npm view @aletheia-works/formicarium@0.1.0-rc.1 version dist --json --registry=https://registry.npmjs.org --cache=/private/tmp/terrarium-rc-npm-cache",
+  "cwd": "/Users/mutoakio/Documents/terrarium",
+  "exit": 0,
+  "output": "{\n  \"version\": \"0.1.0-rc.1\",\n  \"dist\": {\n    \"shasum\": \"03dc0862d4d9e562064c5381073be0863bcb8bb4\",\n    \"tarball\": \"https://registry.npmjs.org/@aletheia-works/formicarium/-/formicarium-0.1.0-rc.1.tgz\",\n    \"fileCount\": 24,\n    \"integrity\": \"sha512-SIFbXU1QkxXDATkE0M1Prm65Kq+Q2SkwnDyBwRf/ejEd3mADZT5uueETF+r0AAl4nuDRqbbSkBc7K/fHclwICA==\",\n    \"signatures\": [\n      {\n        \"sig\": \"MEUCIQCXzh/lZNGbod/JFZhOJmxv6efI9EeomY8NxKQFv5WCyQIgaYWR2muGmO5UpqRdrK2tpDi7Rr5Iqm9Vm4RHsy40jd8=\",\n        \"keyid\": \"SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U\"\n      },\n      {\n        \"keyid\": \"SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U\",\n        \"sig\": \"MEQCIEvrHYotOLkY7LglBZ0F4v4Zhy69zWnMn7+u5iXs6cOoAiBuBgpB7cdPHaxTkcaLSDlp84jVqPsd7UBuMg5LuWlJ0Q==\"\n      }\n    ],\n    \"attestations\": {\n      \"url\": \"https://registry.npmjs.org/-/npm/v1/attestations/@aletheia-works%2fformicarium@0.1.0-rc.1\",\n      \"provenance\": {\n        \"predicateType\": \"https://slsa.dev/provenance/v1\"\n      }\n    },\n    \"unpackedSize\": 719222\n  }\n}\n"
+}

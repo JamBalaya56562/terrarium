@@ -1,0 +1,8 @@
+{
+  "historicalInputRoot": "/Users/mutoakio/Documents/terrarium/.vendor/formicarium-inputs-repair-v1",
+  "historicalInputFilesStillMatchDescriptor": true,
+  "historicalInputDigest": "396cd5552bf09beea42e0769701e0be43faf566a7bf6f91092d19d420c41a855",
+  "cacheArchiveSha256": "00abfc608106c8b4a17bd973b4a948b0aa1fa23c713ac22ad62e5a4571c75d01",
+  "historicalCandidatesModified": false,
+  "scope": "worker writes only; historical approvals/audits are root-owned and not changed by worker"
+}

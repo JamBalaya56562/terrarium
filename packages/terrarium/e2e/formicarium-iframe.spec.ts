@@ -66,7 +66,7 @@ for (const condition of [
     });
     const workers: string[] = [];
     page.on('request', (request) => {
-      if (request.url().includes('runtime/web/package-worker.mjs'))
+      if (request.url().includes('runtime/web/package-worker.js'))
         workers.push(request.url());
     });
     const parentPath =
@@ -158,7 +158,7 @@ test('invalid opaque wildcard and unknown parent origins never connect or notify
   ]) {
     const workers: string[] = [];
     const observe = (request: { url(): string }) => {
-      if (request.url().includes('runtime/web/package-worker.mjs'))
+      if (request.url().includes('runtime/web/package-worker.js'))
         workers.push(request.url());
     };
     page.on('request', observe);
