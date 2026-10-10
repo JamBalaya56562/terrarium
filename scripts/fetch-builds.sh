@@ -4,6 +4,8 @@
 # with their entries of builds.json, so the site can be assembled and tested
 # without building aube (which takes the better part of an hour). Needs curl
 # and jq. TERRARIUM_SITE overrides where they come from.
+# These are Emscripten artifacts even when the published catalogue also
+# describes a formicarium guest; omit the guest selector from their legacy build metadata.
 set -euo pipefail
 root=$(cd "$(dirname "$0")/.." && pwd)
 site=${TERRARIUM_SITE:-https://aletheia-works.github.io/terrarium/web}
@@ -13,7 +15,7 @@ published=$(curl -fsSL "$site/dist/builds.json")
 manifest=$dist/builds.json
 [ -f "$manifest" ] || echo '{"schema_version":1,"builds":{}}' >"$manifest"
 for name in "$@"; do
-  entry=$(jq -e --arg n "$name" '.builds.aube[$n]' <<<"$published") ||
+  entry=$(jq -e --arg n "$name" '.builds.aube[$n] | if . == null then null else del(.guest) end' <<<"$published") ||
     { echo "fetch-builds: no published build \"$name\"" >&2; exit 1; }
   mkdir -p "$dist/aube/$name"
   for file in aube.js aube.wasm; do
